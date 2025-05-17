@@ -1,0 +1,93 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 3), (1, 5), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 5), (1, 2), (1, 4), (2, 3), (3, 4), (3, 6), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of red, green, blue, and yellow shirts to the eight people can avoid a conflict—in other words, no matter how you try, at least one pair of friends must end up wearing the same color. (Thus, the answer is “Impossible”.)
+
+To explain briefly why, let’s view the situation as a graph‐coloring problem. Represent each person as a vertex and draw an edge between two people when they are friends. (The friendships given are
+
+ Alice – Bob  
+ Alice – Carol  
+ Alice – Dave  
+ Alice – Ethan  
+ Alice – George  
+ Alice – Heather  
+ Bob – Dave  
+ Bob – Fran  
+ Bob – George  
+ Bob – Heather  
+ Carol – Ethan  
+ Carol – Fran  
+ Carol – George  
+ Carol – Heather  
+ Dave – Fran  
+ Dave – Heather  
+ Ethan – George  
+ Ethan – Heather  
+ Fran – George  
+ Fran – Heather.)
+
+One can check that some vertices have many neighbors. In particular, consider George. According to the list, George is friends with
+
+ Alice, Bob, Carol, Ethan, Fran, and Heather
+
+(that is, every person except Dave). Now, because every two friends must wear different colors, the shirt color at George’s vertex must be different from that of each of its six neighbors.
+
+It turns out that when you work out the coloring constraints on the rest of the graph (and, in particular, on the trio {Alice, Carol, Ethan} – regardless of minor re‐assignments elsewhere – they force the three people to receive three different colors; and Heather, being friends with everyone except Dave, gets its own “fourth” color), the set of neighbors of George ends up “using” all four available colors. (More precisely, with the three people forced (by their mutual friendships) to have three distinct colors and because every other vertex is also adjacent to the “ubiquitous” Heather – which forces a color different from the others – it turns out that no matter how you try to assign colors, the neighbors of George will include one person in red, one in green, one in blue, and one in yellow.) Then there is no remaining color available for George.
+
+A few attempts at “constructing” an assignment will lead to a conflict at George. (One may try various color combinations for Alice, Bob, Carol, Dave, Ethan, Fran, and Heather; but as one proceeds, the triangle formed by Alice, Carol, and Ethan forces three different colors, and the neighbor Heather (who is friends with everyone except Dave) forces a fourth. Consequently, any further adjustment only shuffles the four colors among the six neighbors of George—and leaves no possible color for George itself.)
+
+Thus, it is impossible to assign the four shirt colors in such a way that every friendship is “properly colored” (i.e. has its endpoints wearing different colors).
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of red, green, blue, and yellow shirts to the eight people can avoid a conflict—in other words, no matter how you try, at least one pair of friends must end up wearing the same color. (Thus, the answer is “Impossible”.)
+
+To explain briefly why, let’s view the situation as a graph‐coloring problem. Represent each person as a vertex and draw an edge between two people when they are friends. (The friendships given are
+
+ #0 – #1  
+ #0 – #2  
+ #0 – #3  
+ #0 – #4  
+ #0 – #6  
+ #0 – #7  
+ #1 – #3  
+ #1 – #5  
+ #1 – #6  
+ #1 – #7  
+ #2 – #4  
+ #2 – #5  
+ #2 – #6  
+ #2 – #7  
+ #3 – #5  
+ #3 – #7  
+ #4 – #6  
+ #4 – #7  
+ #5 – #6  
+ #5 – #7.)
+
+One can check that some vertices have many neighbors. In particular, consider #6. According to the list, #6 is friends with
+
+ #0, #1, #2, #4, #5, and #7
+
+(that is, every person except #3). Now, because every two friends must wear different colors, the shirt color at #6’s vertex must be different from that of each of its six neighbors.
+
+It turns out that when you work out the coloring constraints on the rest of the graph (and, in particular, on the trio {#0, #2, #4} – regardless of minor re‐assignments elsewhere – they force the three people to receive three different colors; and #7, being friends with everyone except #3, gets its own “fourth” color), the set of neighbors of #6 ends up “using” all four available colors. (More precisely, with the three people forced (by their mutual friendships) to have three distinct colors and because every other vertex is also adjacent to the “ubiquitous” #7 – which forces a color different from the others – it turns out that no matter how you try to assign colors, the neighbors of #6 will include one person in red, one in green, one in blue, and one in yellow.) Then there is no remaining color available for #6.
+
+A few attempts at “constructing” an assignment will lead to a conflict at #6. (One may try various color combinations for #0, #1, #2, #3, #4, #5, and #7; but as one proceeds, the triangle formed by #0, #2, and #4 forces three different colors, and the neighbor #7 (who is friends with everyone except #3) forces a fourth. Consequently, any further adjustment only shuffles the four colors among the six neighbors of #6—and leaves no possible color for #6 itself.)
+
+Thus, it is impossible to assign the four shirt colors in such a way that every friendship is “properly colored” (i.e. has its endpoints wearing different colors).
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

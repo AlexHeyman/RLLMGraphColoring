@@ -1,0 +1,51 @@
+Edges: [(0, 1), (0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (0, 10), (0, 11), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (2, 4), (2, 6), (2, 7), (2, 8), (2, 10), (2, 11), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8), (3, 10), (4, 5), (4, 7), (4, 8), (4, 9), (4, 11), (5, 6), (5, 7), (5, 8), (5, 9), (6, 7), (6, 8), (6, 9), (6, 10), (6, 11), (7, 8), (7, 9), (7, 10), (8, 10), (8, 11), (9, 11)]
+
+Complement: [(0, 2), (0, 3), (0, 9), (1, 11), (2, 3), (2, 5), (2, 9), (3, 9), (3, 11), (4, 6), (4, 10), (5, 10), (5, 11), (7, 11), (8, 9), (9, 10), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We start by setting up a “friendship‐graph” (each person is a vertex, and an edge connects two people if they are friends) using the relationships given. For example, Alice is friends with Bob, Ethan, Fran, George, Heather, Irene, Kathy, and Larry. In particular, notice the following:
+
+• Alice’s friends include Bob, Ethan, Fran, George, Heather, and Irene.  
+• Bob’s friends include (among others) Alice, and Carol, Dave, Ethan, Fran, George, Heather, Irene, Jack, and Kathy.  
+• Ethan is friends with Alice, Bob, Carol, Dave, Fran, Heather, Irene, Jack, and Larry.  
+• Fran is friends with Alice, Bob, Dave, Ethan, George, Heather, Irene, and Jack.  
+• George is friends with Alice, Bob, Carol, Dave, Fran, Heather, Irene, Jack, Kathy, and Larry.  
+• Heather is friends with Alice, Bob, Carol, Dave, Ethan, Fran, George, Irene, Jack, and Kathy.  
+• Irene is friends with Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather, Kathy, and Larry.
+
+Let’s focus on the group consisting of {Alice, Bob, Ethan, Fran, George, Heather, Irene}. Check that every pair among these seven people are friends (for instance, Alice is friends with each of Bob, Ethan, Fran, George, Heather, and Irene, and each of those is also mutually friends with one another as can be verified from the list). In graph theory, this set forms a clique—that is, all seven are mutually adjacent. 
+
+Because a clique requires that every member receive a different color in any proper coloring, these seven people would need seven different colors. However, there are only six available shirt colors (red, green, blue, yellow, orange, and purple).
+
+Thus, no matter how you try to assign the colors, at least one person in that seven‐clique would have to share a color with a friend—a situation that is not allowed.
+
+Impossible
+
+---
+Numericized:
+---
+
+We start by setting up a “friendship‐graph” (each person is a vertex, and an edge connects two people if they are friends) using the relationships given. For example, #0 is friends with #1, #4, #5, #6, #7, #8, #10, and #11. In particular, notice the following:
+
+• #0’s friends include #1, #4, #5, #6, #7, and #8.  
+• #1’s friends include (among others) #0, and #2, #3, #4, #5, #6, #7, #8, #9, and #10.  
+• #4 is friends with #0, #1, #2, #3, #5, #7, #8, #9, and #11.  
+• #5 is friends with #0, #1, #3, #4, #6, #7, #8, and #9.  
+• #6 is friends with #0, #1, #2, #3, #5, #7, #8, #9, #10, and #11.  
+• #7 is friends with #0, #1, #2, #3, #4, #5, #6, #8, #9, and #10.  
+• #8 is friends with #0, #1, #2, #3, #4, #5, #6, #7, #10, and #11.
+
+Let’s focus on the group consisting of {#0, #1, #4, #5, #6, #7, #8}. Check that every pair among these seven people are friends (for instance, #0 is friends with each of #1, #4, #5, #6, #7, and #8, and each of those is also mutually friends with one another as can be verified from the list). In graph theory, this set forms a clique—that is, all seven are mutually adjacent. 
+
+Because a clique requires that every member receive a different color in any proper coloring, these seven people would need seven different colors. However, there are only six available shirt colors (red, green, blue, yellow, orange, and purple).
+
+Thus, no matter how you try to assign the colors, at least one person in that seven‐clique would have to share a color with a friend—a situation that is not allowed.
+
+Impossible
+
+---
+
+Manually assessed false edges: 4,6

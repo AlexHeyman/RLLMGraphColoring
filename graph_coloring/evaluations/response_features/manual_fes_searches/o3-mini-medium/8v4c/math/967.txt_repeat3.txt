@@ -1,0 +1,43 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 5), (2, 4), (2, 5), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no valid assignment of the four colors (red, green, blue, yellow) to the eight vertices is possible if every edge must join vertices of different colors.
+
+One way to reach that conclusion is to “zoom‐in” on vertex 3 and its neighbors.
+
+Notice that vertex 3 is adjacent to the vertices 
+  0, 1, 2, 6, 7
+(as seen by the edges (0,3), (1,3), (2,3), (3,6), (3,7)). Thus, whatever colors we choose, the color at vertex 3 must differ from whichever colors are used on vertices 0, 1, 2, 6, and 7.
+
+Let’s examine the constraints on the neighbors:
+ • Vertices 6 and 7 are “high‐degree” vertices. In fact, 6 is adjacent to 0, 1, 2, 3, 4, 5, and 7, and 7 is adjacent to 0, 1, 2, 3, 4, 5, and 6. In particular, each of 6 and 7 is adjacent to 0, 1, and 2.
+ • Vertices 0, 1, and 2 have the following extra constraint: there is an edge (1,2) so vertices 1 and 2 must have different colors. (Note that there is no edge between 0 and 1 and between 0 and 2.)
+
+Because vertices 6 and 7 are adjacent to 0, 1, and 2, none of the colors that appear on 0, 1, or 2 can be used on 6 or 7. Also, since 6 and 7 are adjacent to one another, they must receive different colors. Thus, even if we try to “pack” the five vertices 0, 1, 2, 6, and 7 into as few colors as possible, let’s see what happens:
+
+1. The best we could do for vertices 0, 1, and 2 is to use only two distinct colors (for example, take vertex 0 = A, vertex 1 = B, and vertex 2 = A with A ≠ B; note that 1 and 2 are adjacent so they must be different, and 0 is free to repeat a color since it is not adjacent to 1 or 2).
+
+2. Now, consider vertex 6. It is adjacent to 0, 1, and 2 so its color cannot be A or B. Thus the only possibilities for 6 are the remaining two colors (say C and D).
+
+3. Similarly, vertex 7 (also adjacent to 0, 1, and 2) must use one of the two colors not in {A,B}. But because 6 and 7 are adjacent it is forced to choose the color not chosen by 6. In other words, vertices 6 and 7 end up using the two distinct colors C and D.
+
+4. Consequently, the set of colors that occur among the neighbors of vertex 3 becomes {A, B, C, D} – that is, all four available colors.
+
+Because vertex 3 is adjacent to vertices with all four different colors, there is no color left for vertex 3.
+
+One might try to “mix it up” and use three distinct colors among 0, 1, and 2 (or any other combination), but a brief check shows that if 0, 1, and 2 use three distinct colors then vertex 6 (which must differ from all three) is forced to take the fourth color. Then vertex 7, being adjacent to 0, 1, and 2, is also forced to use the fourth color—but 6 and 7 are adjacent, so that is not allowed.
+
+Thus, regardless of how we try to assign colors, vertex 3 ends up with neighbors that use all four colors, leaving no valid color for vertex 3.
+
+Therefore, the graph cannot be colored with red, green, blue, and yellow so that no two adjacent vertices share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 6,7

@@ -1,0 +1,87 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 5), (2, 4), (2, 5), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+Let the 8 people be the vertices of a graph G = (V, E), where V = {Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather}. Let an edge (u, v) exist in E if person u and person v are friends. We are given 4 colors (Red, Green, Blue, Yellow) and we want to assign a color to each vertex such that no two adjacent vertices have the same color. This is a graph coloring problem where we need to determine if the graph G is 4-colorable.
+
+First, let's list the friendships (edges) for each person (vertex):
+Alice (A): D, E, F, G, H
+Bob (B): C, D, E, G, H
+Carol (C): B, D, G, H
+Dave (D): A, B, C, E, G, H
+Ethan (E): A, B, D, G, H
+Fran (F): A, G, H
+George (G): A, B, C, D, E, F, H
+Heather (H): A, B, C, D, E, F, G
+
+A graph G requires at least k colors if it contains a clique of size k (a subgraph Kk where all pairs of vertices are connected by an edge). We need to check if G contains a clique of size 5 (K5), because if it does, it would require at least 5 colors, making a 4-coloring impossible.
+
+Let's examine the subset of vertices {Alice, Dave, Ethan, George, Heather}. Let's check if they form a K5 clique:
+1.  Alice's friends include D, E, G, H. So Alice is connected to D, E, G, H.
+2.  Dave's friends include A, C, E, G, H. So Dave is connected to A, E, G, H. (Dave is also friends with B and C).
+3.  Ethan's friends include A, B, D, G, H. So Ethan is connected to A, D, G, H. (Ethan is also friends with B).
+4.  George's friends include A, B, C, D, E, F, H. So George is connected to A, D, E, H. (George is also friends with B, C, F).
+5.  Heather's friends include A, B, C, D, E, F, G. So Heather is connected to A, D, E, G. (Heather is also friends with B, C, F).
+
+Let's verify all the pairs within the set {A, D, E, G, H}:
+- A is friends with D, E, G, H. (4 edges: AD, AE, AG, AH) - Confirmed.
+- D is friends with A, E, G, H. (Need to check DE, DG, DH) Dave's friends list includes A, B, C, E, G, H. So D is friends with E, G, H. - Confirmed.
+- E is friends with A, D, G, H. (Need to check EG, EH) Ethan's friends list includes A, B, D, G, H. So E is friends with G, H. - Confirmed.
+- G is friends with A, D, E, H. (Need to check GH) George's friends list includes A, B, C, D, E, F, H. So G is friends with H. - Confirmed.
+- H is friends with A, D, E, G. (All checks covered by symmetry G-H) Heather's friends list includes A, B, C, D, E, F, G. So H is friends with G. - Confirmed.
+
+All pairs of vertices in the set {Alice, Dave, Ethan, George, Heather} are connected by an edge. This means that this set of 5 people forms a K5 clique in the friendship graph.
+
+In any valid coloring of a graph, all vertices in a clique must be assigned different colors. Since there is a clique of size 5, we need at least 5 distinct colors to color the graph G.
+However, we only have 4 colors available (Red, Green, Blue, Yellow).
+Therefore, it is impossible to assign a shirt color to each person such that no two friends wear the same color shirt.
+
+Impossible
+
+---
+Numericized:
+---
+
+Let the 8 people be the vertices of a graph G = (V, E), where V = {#0, #1, #2, #3, #4, #5, #6, #7}. Let an edge (u, v) exist in E if person u and person v are friends. We are given 4 colors (Red, Green, Blue, Yellow) and we want to assign a color to each vertex such that no two adjacent vertices have the same color. This is a graph coloring problem where we need to determine if the graph G is 4-colorable.
+
+First, let's list the friendships (edges) for each person (vertex):
+#0 (A): D, E, F, G, H
+#1 (B): C, D, E, G, H
+#2 (C): B, D, G, H
+#3 (D): A, B, C, E, G, H
+#4 (E): A, B, D, G, H
+#5 (F): A, G, H
+#6 (G): A, B, C, D, E, F, H
+#7 (H): A, B, C, D, E, F, G
+
+A graph G requires at least k colors if it contains a clique of size k (a subgraph Kk where all pairs of vertices are connected by an edge). We need to check if G contains a clique of size 5 (K5), because if it does, it would require at least 5 colors, making a 4-coloring impossible.
+
+Let's examine the subset of vertices {#0, #3, #4, #6, #7}. Let's check if they form a K5 clique:
+1.  #0's friends include D, E, G, H. So #0 is connected to D, E, G, H.
+2.  #3's friends include A, C, E, G, H. So #3 is connected to A, E, G, H. (#3 is also friends with B and C).
+3.  #4's friends include A, B, D, G, H. So #4 is connected to A, D, G, H. (#4 is also friends with B).
+4.  #6's friends include A, B, C, D, E, F, H. So #6 is connected to A, D, E, H. (#6 is also friends with B, C, F).
+5.  #7's friends include A, B, C, D, E, F, G. So #7 is connected to A, D, E, G. (#7 is also friends with B, C, F).
+
+Let's verify all the pairs within the set {A, D, E, G, H}:
+- A is friends with D, E, G, H. (4 edges: AD, AE, AG, AH) - Confirmed.
+- D is friends with A, E, G, H. (Need to check DE, DG, DH) #3's friends list includes A, B, C, E, G, H. So D is friends with E, G, H. - Confirmed.
+- E is friends with A, D, G, H. (Need to check EG, EH) #4's friends list includes A, B, D, G, H. So E is friends with G, H. - Confirmed.
+- G is friends with A, D, E, H. (Need to check GH) #6's friends list includes A, B, C, D, E, F, H. So G is friends with H. - Confirmed.
+- H is friends with A, D, E, G. (All checks covered by symmetry G-H) #7's friends list includes A, B, C, D, E, F, G. So H is friends with G. - Confirmed.
+
+All pairs of vertices in the set {#0, #3, #4, #6, #7} are connected by an edge. This means that this set of 5 people forms a K5 clique in the friendship graph.
+
+In any valid coloring of a graph, all vertices in a clique must be assigned different colors. Since there is a clique of size 5, we need at least 5 distinct colors to color the graph G.
+However, we only have 4 colors available (Red, Green, Blue, Yellow).
+Therefore, it is impossible to assign a shirt color to each person such that no two friends wear the same color shirt.
+
+Impossible
+
+---
+
+Manually assessed false edges: 6,7

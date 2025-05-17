@@ -1,0 +1,55 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 9), (0, 10), (0, 11), (1, 3), (1, 4), (1, 5), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (2, 3), (2, 5), (2, 6), (2, 7), (2, 9), (2, 10), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8), (3, 10), (3, 11), (4, 5), (4, 6), (4, 9), (4, 10), (4, 11), (5, 6), (5, 7), (5, 8), (5, 9), (5, 11), (6, 8), (6, 9), (6, 10), (6, 11), (7, 8), (7, 9), (7, 10), (7, 11), (8, 10), (8, 11), (9, 11), (10, 11)]
+
+Complement: [(0, 2), (0, 7), (0, 8), (1, 2), (1, 6), (2, 4), (2, 8), (2, 11), (3, 9), (4, 7), (4, 8), (5, 10), (6, 7), (8, 9), (9, 10)]
+
+Evaluation: impossible incorrect
+
+---
+
+We start by noting that the partygoers’ friendship network can be modeled as a graph where each person is a vertex and an edge connects two people if they are friends. The condition that no one wants to wear the same color shirt as any friend is equivalent to properly coloring the vertices of the graph (i.e. adjacent vertices must have different colors).
+
+The available colors are Red, Green, Blue, Yellow, Orange, and Purple—a total of 6 colors. For a graph to be 6‐colorable, its chromatic number must be 6 or less. One important lower bound for the chromatic number is the size of the largest clique (a set of vertices every two of which are adjacent).
+
+Looking at the list of friendships, one can identify the following set of 7 people:
+  Bob, Dave, Fran, Heather, Irene, Kathy, Larry
+
+Checking every friendship in this group shows:
+• Bob is friends with Dave, Fran, Heather, Irene, Kathy, and Larry.
+• Dave is friends with Bob, Fran, Heather, Irene, Kathy, and Larry.
+• Fran is friends with Bob, Dave, Heather, Irene, Kathy, and Larry.
+• Heather is friends with Bob, Dave, Fran, Irene, Kathy, and Larry.
+• Irene is friends with Bob, Dave, Fran, Heather, Kathy, and Larry.
+• Kathy is friends with Bob, Dave, Fran, Heather, Irene, and Larry.
+• Larry is friends with Bob, Dave, Fran, Heather, Irene, and Kathy.
+
+Since every pair among these 7 people is friends, they form a complete subgraph (clique) of size 7. In any proper coloring, the vertices of a clique must all have different colors—in this case, we would need 7 distinct colors. Because only 6 colors are available, it is impossible to assign a color to each person in such a way that no pair of friends share the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We start by noting that the partygoers’ friendship network can be modeled as a graph where each person is a vertex and an edge connects two people if they are friends. The condition that no one wants to wear the same color shirt as any friend is equivalent to properly coloring the vertices of the graph (i.e. adjacent vertices must have different colors).
+
+The available colors are Red, Green, Blue, Yellow, Orange, and Purple—a total of 6 colors. For a graph to be 6‐colorable, its chromatic number must be 6 or less. One important lower bound for the chromatic number is the size of the largest clique (a set of vertices every two of which are adjacent).
+
+Looking at the list of friendships, one can identify the following set of 7 people:
+  #1, #3, #5, #7, #8, #10, #11
+
+Checking every friendship in this group shows:
+• #1 is friends with #3, #5, #7, #8, #10, and #11.
+• #3 is friends with #1, #5, #7, #8, #10, and #11.
+• #5 is friends with #1, #3, #7, #8, #10, and #11.
+• #7 is friends with #1, #3, #5, #8, #10, and #11.
+• #8 is friends with #1, #3, #5, #7, #10, and #11.
+• #10 is friends with #1, #3, #5, #7, #8, and #11.
+• #11 is friends with #1, #3, #5, #7, #8, and #10.
+
+Since every pair among these 7 people is friends, they form a complete subgraph (clique) of size 7. In any proper coloring, the vertices of a clique must all have different colors—in this case, we would need 7 distinct colors. Because only 6 colors are available, it is impossible to assign a color to each person in such a way that no pair of friends share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 5,10

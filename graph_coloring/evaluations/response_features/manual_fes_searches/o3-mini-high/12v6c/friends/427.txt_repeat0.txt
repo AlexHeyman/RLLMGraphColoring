@@ -1,0 +1,53 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 7), (0, 9), (0, 10), (0, 11), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 9), (2, 10), (2, 11), (3, 7), (3, 8), (3, 9), (3, 10), (3, 11), (4, 5), (4, 6), (4, 7), (4, 8), (4, 9), (4, 10), (4, 11), (5, 6), (5, 7), (5, 9), (5, 10), (5, 11), (6, 8), (6, 9), (6, 11), (7, 8), (7, 9), (7, 10), (7, 11), (8, 9), (8, 10), (8, 11), (9, 10), (9, 11)]
+
+Complement: [(0, 5), (0, 6), (0, 8), (1, 2), (3, 4), (3, 5), (3, 6), (5, 8), (6, 7), (6, 10), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We can view the problem as a graph‐coloring puzzle. Each person is a vertex, and there’s an edge between two vertices if those two people are friends. They must be assigned one of 6 colors (red, green, blue, yellow, orange, purple) so that any two adjacent vertices have different colors.
+
+One key fact in graph coloring is that any clique (a set of vertices all mutually connected) must receive all different colors. In our friendship list, consider the following seven people:
+  Jack, Bob, Carol, Ethan, Heather, Fran, and Larry
+
+Check that every pair among these is connected by a friendship:
+ • Jack is friends with everyone (in fact, Jack is friends with all 11 other people).
+ • Bob is friends with Carol, Ethan, Heather, Fran, and Larry.
+ • Carol is friends with Ethan, Heather, Fran, and Larry.
+ • Ethan is friends with Heather, Fran, and Larry.
+ • Heather is friends with Fran and Larry.
+ • Fran is friends with Larry.
+
+Since all seven of these people are mutually friends, they form a clique. This means that if we wish to assign each person a shirt color, these seven would need seven different colors.
+
+Because only 6 colors are available, it is impossible to color the vertices (assign shirt colors) without giving two friends the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We can view the problem as a graph‐coloring puzzle. Each person is a vertex, and there’s an edge between two vertices if those two people are friends. They must be assigned one of 6 colors (red, green, blue, yellow, orange, purple) so that any two adjacent vertices have different colors.
+
+One key fact in graph coloring is that any clique (a set of vertices all mutually connected) must receive all different colors. In our friendship list, consider the following seven people:
+  #9, #1, #2, #4, #7, #5, and #11
+
+Check that every pair among these is connected by a friendship:
+ • #9 is friends with everyone (in fact, #9 is friends with all 11 other people).
+ • #1 is friends with #2, #4, #7, #5, and #11.
+ • #2 is friends with #4, #7, #5, and #11.
+ • #4 is friends with #7, #5, and #11.
+ • #7 is friends with #5 and #11.
+ • #5 is friends with #11.
+
+Since all seven of these people are mutually friends, they form a clique. This means that if we wish to assign each person a shirt color, these seven would need seven different colors.
+
+Because only 6 colors are available, it is impossible to color the vertices (assign shirt colors) without giving two friends the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 1,2

@@ -1,0 +1,21 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (1, 3), (2, 3), (2, 4), (3, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of these four colors to the eight vertices (numbered 0…7) exists so that every edge of the given graph has endpoints of different colors. (Any “plan”—that is, any assignment of Red, Green, Blue, Yellow to the vertices—must obey that if two vertices are connected by an edge, their colors differ.)
+
+One way to see the impossibility is to “zoom‐in” on vertex 7. By inspection the edge set tells us that vertex 7 is adjacent to vertices 0, 1, 2, 3, 4, 5, and 6. Thus if a legal 4–coloring were to exist, the seven vertices 0–6 (all neighbors of 7) would use at most three distinct colors (so that one “fourth” color is left available for vertex 7). Now look at vertex 0. Its neighbors among 0–6 are 2, 3, 4, 5, 6 and (by the edge list) vertex 0 is adjacent to each of these. This forces that the five vertices 2, 3, 4, 5, 6 all have colors different from vertex 0’s. In other words, among vertices 0–6 at least 1 (for vertex 0) + 5 (for vertices 2,3,4,5,6) = 6 distinct colors would be needed unless some colors are “recycled” among vertices that are not adjacent. However, if you try to “recycle” colors among vertices 1,2,3,4,5,6 in order to use only three colors among them, you run into problems: many of these vertices form a very “dense” subgraph. For example, the edges (2,5), (2,6), (3,5), (3,6), (4,5), (4,6) are all present. A moment’s thought reveals that the adjacency restrictions force the existence of a “rainbow” among these neighbors (that is, among them at least three different colors must appear in such a way that no matter how you try to “share” colors, a conflict eventually must occur when you come to vertices 5 or 6). In testing various color assignments one always gets stuck – for example, an attempted coloring of vertices 0–6 with only three colors will force one of the vertices (say, vertex 5) to run out of all four (Red, Green, Blue, Yellow) as permissible options after its already-colored neighbors are considered. 
+
+A more “global” view is to notice that since vertex 7 touches every other vertex the remaining subgraph on vertices 0–6 must “pack” into just three colors. But already vertex 0 is adjacent to 5 vertices among these and the many extra edges among vertices 1,2,3,4,5,6 make such a 3–coloring impossible. 
+
+Thus no 4–color assignment exists for the graph.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,61 @@
+Edges: [(0, 1), (0, 2), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 5), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 3), (0, 4), (1, 5), (2, 3), (2, 4), (2, 6), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of four shirt‐colors (red, green, blue, yellow) to the eight people can avoid having two friends in the same color. (That is, the “friendship graph” as given is not “4‐colorable.”)
+
+Let us explain briefly.
+
+Call the eight people A, B, C, D, E, F, G, and H (standing for Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather). The “friendship” edges are as follows:
+
+• A is friends with B, C, F, G, H.
+• B is friends with A, C, D, E, G, H.
+• C is friends with A, B, F, H.
+• D is friends with B, E, F, G, H.
+• E is friends with B, D, F, G, H.
+• F is friends with A, C, D, E, G.
+• G is friends with A, B, D, E, F, H.
+• H is friends with A, B, C, D, E, G.
+
+A successful “coloring” (assignment of one of four colors to each person so that friends get different colors) is equivalent to a 4‐coloring of this graph. One may try many assignments by hand, but one quickly meets the following difficulty: note that Heather’s friends are A, B, C, D, E, and G. No matter how you try to assign colors to these six people, they (because of their own mutual conflicts) “force” the use of all four colors among them. That leaves Heather with no “fifth” color available. (There is no extra color to spare!) Many attempts that one might try eventually lead to a conflict at Heather’s vertex.
+
+A fairly systematic (backtracking) search shows that every assignment leads to a conflict on at least one friendship edge (often “localising” at Heather, whose many neighbors end up “using up” all four colors). (In fact one may prove that this graph necessarily requires at least five colors for a proper vertex‐coloring.)
+
+Thus, there is no way to have the eight party–goers wear red, green, blue, or yellow without two friends matching.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of four shirt‐colors (red, green, blue, yellow) to the eight people can avoid having two friends in the same color. (That is, the “friendship graph” as given is not “4‐colorable.”)
+
+Let us explain briefly.
+
+Call the eight people A, B, C, D, E, F, G, and H (standing for #0, #1, #2, #3, #4, #5, #6, #7). The “friendship” edges are as follows:
+
+• A is friends with B, C, F, G, H.
+• B is friends with A, C, D, E, G, H.
+• C is friends with A, B, F, H.
+• D is friends with B, E, F, G, H.
+• E is friends with B, D, F, G, H.
+• F is friends with A, C, D, E, G.
+• G is friends with A, B, D, E, F, H.
+• H is friends with A, B, C, D, E, G.
+
+A successful “coloring” (assignment of one of four colors to each person so that friends get different colors) is equivalent to a 4‐coloring of this graph. One may try many assignments by hand, but one quickly meets the following difficulty: note that #7’s friends are A, B, C, D, E, and G. No matter how you try to assign colors to these six people, they (because of their own mutual conflicts) “force” the use of all four colors among them. That leaves #7 with no “fifth” color available. (There is no extra color to spare!) Many attempts that one might try eventually lead to a conflict at #7’s vertex.
+
+A fairly systematic (backtracking) search shows that every assignment leads to a conflict on at least one friendship edge (often “localising” at #7, whose many neighbors end up “using up” all four colors). (In fact one may prove that this graph necessarily requires at least five colors for a proper vertex‐coloring.)
+
+Thus, there is no way to have the eight party–goers wear red, green, blue, or yellow without two friends matching.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

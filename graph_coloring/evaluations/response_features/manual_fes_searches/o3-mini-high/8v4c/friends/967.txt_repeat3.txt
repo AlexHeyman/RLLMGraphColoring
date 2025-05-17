@@ -1,0 +1,75 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 5), (2, 4), (2, 5), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We begin by modeling the situation as a graph where the people are vertices and there is an edge between two people if they are friends (and thus cannot wear the same color). The given friendships are:
+
+• Alice: friends with Dave, Ethan, Fran, George, Heather  
+• Bob: friends with Carol, Dave, Ethan, George, Heather  
+• Carol: friends with Dave, George, Heather  
+• Dave: friends with Ethan, George, Heather  
+• Ethan: friends with George, Heather  
+• Fran: friends with George, Heather  
+
+(And by symmetry, if person X is friends with person Y then Y is friends with X.)
+
+Notice that, for example, Bob is friends not only with Carol, Dave, Ethan, George, and Heather but Carol is also friends with Bob, Dave, George, and Heather. In fact, consider the group {Bob, Carol, Dave, George, Heather}. Checking every pair shows that:
+ – Bob and Carol are friends.
+ – Bob and Dave are friends.
+ – Bob and George are friends.
+ – Bob and Heather are friends.
+ – Carol and Dave are friends.
+ – Carol and George are friends.
+ – Carol and Heather are friends.
+ – Dave and George are friends.
+ – Dave and Heather are friends.
+ – George and Heather are friends.
+Thus these five form a clique (a set of vertices every two of which are connected).
+
+Since a clique of size 5 means that all five people must wear different colors, at least 5 colors are needed. But there are only 4 available colors (red, green, blue, yellow). 
+
+Therefore, it is impossible to assign the shirts so that no two friends share the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We begin by modeling the situation as a graph where the people are vertices and there is an edge between two people if they are friends (and thus cannot wear the same color). The given friendships are:
+
+• #0: friends with #3, #4, #5, #6, #7  
+• #1: friends with #2, #3, #4, #6, #7  
+• #2: friends with #3, #6, #7  
+• #3: friends with #4, #6, #7  
+• #4: friends with #6, #7  
+• #5: friends with #6, #7  
+
+(And by symmetry, if person X is friends with person Y then Y is friends with X.)
+
+Notice that, for example, #1 is friends not only with #2, #3, #4, #6, and #7 but #2 is also friends with #1, #3, #6, and #7. In fact, consider the group {#1, #2, #3, #6, #7}. Checking every pair shows that:
+ – #1 and #2 are friends.
+ – #1 and #3 are friends.
+ – #1 and #6 are friends.
+ – #1 and #7 are friends.
+ – #2 and #3 are friends.
+ – #2 and #6 are friends.
+ – #2 and #7 are friends.
+ – #3 and #6 are friends.
+ – #3 and #7 are friends.
+ – #6 and #7 are friends.
+Thus these five form a clique (a set of vertices every two of which are connected).
+
+Since a clique of size 5 means that all five people must wear different colors, at least 5 colors are needed. But there are only 4 available colors (red, green, blue, yellow). 
+
+Therefore, it is impossible to assign the shirts so that no two friends share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 6,7

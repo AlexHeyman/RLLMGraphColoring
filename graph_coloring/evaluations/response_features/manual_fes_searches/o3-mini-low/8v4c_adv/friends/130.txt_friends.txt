@@ -1,0 +1,83 @@
+Edges: [(0, 1), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (4, 5), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 2), (0, 3), (1, 5), (3, 6), (3, 7), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that by looking carefully at the friendship relationships one may identify a set of 5 people all pair‐wise friends – which forces any “proper” assignment (one in which no two friends share the same shirt color) to use at least 5 different colors. Since only 4 colors are available, a valid assignment is impossible.
+
+Let’s explain.
+
+List the eight people and their friends (each friendship is bidirectional):
+
+• Alice is friends with Bob, Ethan, Fran, George, Heather.
+• Bob is friends with Alice, Carol, Dave, Ethan, George, Heather.
+• Carol is friends with Bob, Dave, Ethan, Fran, George, Heather.
+• Dave is friends with Bob, Carol, Ethan, Fran.
+• Ethan is friends with Alice, Bob, Carol, Dave, Fran, George, Heather.
+• Fran is friends with Alice, Carol, Dave, Ethan, George.
+• George is friends with Alice, Bob, Carol, Ethan, Fran, Heather.
+• Heather is friends with Alice, Bob, Carol, Ethan, George.
+
+Now, consider the following five people: Bob, Carol, Ethan, George, and Heather. Check that each pair among these five are friends:
+
+1. Bob – Carol: given.
+2. Bob – Ethan: given.
+3. Bob – George: given.
+4. Bob – Heather: given.
+5. Carol – Ethan: given.
+6. Carol – George: given.
+7. Carol – Heather: given.
+8. Ethan – George: given.
+9. Ethan – Heather: given.
+10. George – Heather: given.
+
+All possible pairs appear in the friendship list. Thus, these five people form a clique (complete subgraph) of 5 participants. In any valid coloring of a graph, a clique with 5 vertices requires 5 different colors because every vertex in a clique is adjacent to every other vertex. Since we only have 4 colors available, it is impossible to color (i.e. assign shirt colors to) these five individuals without having two friends wearing the same color.
+
+Therefore, no assignment exists.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that by looking carefully at the friendship relationships one may identify a set of 5 people all pair‐wise friends – which forces any “proper” assignment (one in which no two friends share the same shirt color) to use at least 5 different colors. Since only 4 colors are available, a valid assignment is impossible.
+
+Let’s explain.
+
+List the eight people and their friends (each friendship is bidirectional):
+
+• #0 is friends with #1, #4, #5, #6, #7.
+• #1 is friends with #0, #2, #3, #4, #6, #7.
+• #2 is friends with #1, #3, #4, #5, #6, #7.
+• #3 is friends with #1, #2, #4, #5.
+• #4 is friends with #0, #1, #2, #3, #5, #6, #7.
+• #5 is friends with #0, #2, #3, #4, #6.
+• #6 is friends with #0, #1, #2, #4, #5, #7.
+• #7 is friends with #0, #1, #2, #4, #6.
+
+Now, consider the following five people: #1, #2, #4, #6, and #7. Check that each pair among these five are friends:
+
+1. #1 – #2: given.
+2. #1 – #4: given.
+3. #1 – #6: given.
+4. #1 – #7: given.
+5. #2 – #4: given.
+6. #2 – #6: given.
+7. #2 – #7: given.
+8. #4 – #6: given.
+9. #4 – #7: given.
+10. #6 – #7: given.
+
+All possible pairs appear in the friendship list. Thus, these five people form a clique (complete subgraph) of 5 participants. In any valid coloring of a graph, a clique with 5 vertices requires 5 different colors because every vertex in a clique is adjacent to every other vertex. Since we only have 4 colors available, it is impossible to color (i.e. assign shirt colors to) these five individuals without having two friends wearing the same color.
+
+Therefore, no assignment exists.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,57 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 3), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We start by modeling the situation as a graph where each person is a vertex and an edge between two vertices means those two people are friends. The given friendships are:
+
+• Alice: connected to Dave, Ethan, Fran, George, Heather.
+• Bob: connected to Carol, Ethan, Fran, George, Heather.
+• Carol: connected to Bob, Dave, Ethan, Fran, George, Heather.
+• Dave: connected to Alice, Carol, Ethan, Fran, George, Heather.
+• Ethan: connected to Alice, Bob, Carol, Dave, George, Heather.
+• Fran: connected to Alice, Bob, Carol, Dave, George, Heather.
+• George: connected to Alice, Bob, Carol, Dave, Ethan, Fran, Heather.
+• Heather: connected to Alice, Bob, Carol, Dave, Ethan, Fran, George.
+
+When trying to assign one of the four shirt colors (red, green, blue, yellow) to each person so that no two friends wear the same color, we are effectively asking if the graph is 4‑colorable.
+
+Notice that in our graph there is a clique (a set of vertices where every pair is connected by an edge) consisting of, for example, {Alice, Dave, Ethan, George, Heather}. In this clique every vertex is adjacent to every other, which means that if you had a clique of 5 people you would need 5 different colors so that all adjacent vertices have different colors.
+
+Since a graph cannot be colored with fewer colors than the size of its largest clique, and here we have a clique of size 5, at least 5 colors are necessary.
+
+Thus, with only 4 shirt color options, it is impossible to assign colors to the 8 people in a way that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We start by modeling the situation as a graph where each person is a vertex and an edge between two vertices means those two people are friends. The given friendships are:
+
+• #0: connected to #3, #4, #5, #6, #7.
+• #1: connected to #2, #4, #5, #6, #7.
+• #2: connected to #1, #3, #4, #5, #6, #7.
+• #3: connected to #0, #2, #4, #5, #6, #7.
+• #4: connected to #0, #1, #2, #3, #6, #7.
+• #5: connected to #0, #1, #2, #3, #6, #7.
+• #6: connected to #0, #1, #2, #3, #4, #5, #7.
+• #7: connected to #0, #1, #2, #3, #4, #5, #6.
+
+When trying to assign one of the four shirt colors (red, green, blue, yellow) to each person so that no two friends wear the same color, we are effectively asking if the graph is 4‑colorable.
+
+Notice that in our graph there is a clique (a set of vertices where every pair is connected by an edge) consisting of, for example, {#0, #3, #4, #6, #7}. In this clique every vertex is adjacent to every other, which means that if you had a clique of 5 people you would need 5 different colors so that all adjacent vertices have different colors.
+
+Since a graph cannot be colored with fewer colors than the size of its largest clique, and here we have a clique of size 5, at least 5 colors are necessary.
+
+Thus, with only 4 shirt color options, it is impossible to assign colors to the 8 people in a way that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

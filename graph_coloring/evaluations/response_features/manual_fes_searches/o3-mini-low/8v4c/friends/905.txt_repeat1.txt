@@ -1,0 +1,39 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 1), (0, 5), (2, 3), (2, 4), (2, 5), (2, 6), (4, 5), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign four different colors to the eight people, one person is “over‐constrained” by their friends and will have no legal color available.
+
+In our graph the people are the vertices and an “edge” joins two people whenever they are friends. One may check that the friends of George are exactly 
+  Alice, Bob, Dave, Ethan, Fran, and Heather.
+If we look closer, one finds that there is a subgroup among these—specifically Bob, Dave, Ethan, and Heather—that are all mutually friends. (For example, Bob is friends with Dave, Ethan, and Heather; Dave is friends with Ethan and Heather; and Ethan is friends with Heather.) Thus Bob, Dave, Ethan, and Heather form a complete subgraph on 4 vertices (a “K4”). In any proper coloring of a graph the vertices of a K4 must all receive different colors. Since there are only four colors, Bob, Dave, Ethan, and Heather must use all four colors.
+
+Now look at George. He is friends with Bob, Dave, Ethan, and Heather (among others) so that already every one of the four colors has been “taken” by one friend of George. This leaves no available color for George himself. (Even if one tries to reassign colors to other vertices elsewhere, this K4 forces the four colors on George’s four friends, leaving no fourth color for George.) 
+
+Thus, there is no way to assign red, green, blue, and yellow to the 8 people so that no two friends share the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign four different colors to the eight people, one person is “over‐constrained” by their friends and will have no legal color available.
+
+In our graph the people are the vertices and an “edge” joins two people whenever they are friends. One may check that the friends of #6 are exactly 
+  #0, #1, #3, #4, #5, and #7.
+If we look closer, one finds that there is a subgroup among these—specifically #1, #3, #4, and #7—that are all mutually friends. (For example, #1 is friends with #3, #4, and #7; #3 is friends with #4 and #7; and #4 is friends with #7.) Thus #1, #3, #4, and #7 form a complete subgraph on 4 vertices (a “K4”). In any proper coloring of a graph the vertices of a K4 must all receive different colors. Since there are only four colors, #1, #3, #4, and #7 must use all four colors.
+
+Now look at #6. He is friends with #1, #3, #4, and #7 (among others) so that already every one of the four colors has been “taken” by one friend of #6. This leaves no available color for #6 himself. (Even if one tries to reassign colors to other vertices elsewhere, this K4 forces the four colors on #6’s four friends, leaving no fourth color for #6.) 
+
+Thus, there is no way to assign red, green, blue, and yellow to the 8 people so that no two friends share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

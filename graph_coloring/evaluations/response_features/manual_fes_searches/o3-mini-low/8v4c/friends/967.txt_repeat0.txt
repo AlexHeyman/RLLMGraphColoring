@@ -1,0 +1,41 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 5), (2, 4), (2, 5), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We first analyze the friendship network. Labeling the eight people as vertices with an edge between any two who are friends, notice the following set of people: Alice, Dave, Ethan, George, and Heather. Checking the list, we see that:
+
+• Alice is friends with Dave, Ethan, George, and Heather.
+• Dave is friends with Ethan, George, and Heather.
+• Ethan is friends with George and Heather.
+• George is friends with Heather.
+
+Thus, every pair in this set is connected (either directly noted or implied by the friendship list). This means that the five vertices form a clique (i.e. a complete subgraph K₅). In any proper graph coloring, a clique with k vertices requires at least k different colors to assign to its vertices so that no two adjacent vertices share the same color.
+
+Since our clique has five people, that means that we would need at least 5 colors. However, we only have 4 shirt colors available (red, green, blue, yellow). Therefore, it is impossible to assign the shirts so that no pair of friends wears the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We first analyze the friendship network. Labeling the eight people as vertices with an edge between any two who are friends, notice the following set of people: #0, #3, #4, #6, and #7. Checking the list, we see that:
+
+• #0 is friends with #3, #4, #6, and #7.
+• #3 is friends with #4, #6, and #7.
+• #4 is friends with #6 and #7.
+• #6 is friends with #7.
+
+Thus, every pair in this set is connected (either directly noted or implied by the friendship list). This means that the five vertices form a clique (i.e. a complete subgraph K₅). In any proper graph coloring, a clique with k vertices requires at least k different colors to assign to its vertices so that no two adjacent vertices share the same color.
+
+Since our clique has five people, that means that we would need at least 5 colors. However, we only have 4 shirt colors available (red, green, blue, yellow). Therefore, it is impossible to assign the shirts so that no pair of friends wears the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

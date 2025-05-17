@@ -1,0 +1,21 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 5), (0, 6), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (0, 7), (1, 2), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four colors (Red, Green, Blue, Yellow) to vertices 0–7 can “proper‐color” the graph (so that every edge has endpoints of different colors). In our investigation we attempted many plausible assignments and always ended up “trapped” by a vertex for which all four colors already appear on its already–colored neighbors. (Any correct answer should conclude that the desired assignment is impossible.) 
+
+Below is one (partial) line of reasoning. For example, one may start by assigning vertex 0 the color Red. Since 0 is adjacent to vertices 1, 2, 4, 5 and 6, none of those may receive Red. One might then try to “save” colors by having vertices 1 and 2 share a color (say, Green) so that later vertices – which are highly interconnected – might be easier to assign. However, after several steps one finds that some vertex (for instance vertex 6, which is adjacent to 0, 1, 2, 3, 4 and 5) has all four colors used among its neighbors, leaving no available color. (Other natural orders of the vertices lead to the same sort of blockade.) 
+
+A careful case–analysis shows that no matter how one begins the coloring, some vertex is forced into a conflict. 
+
+Thus, since every attempt to 4–color the vertices fails, the proper coloring does not exist.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

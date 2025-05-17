@@ -1,0 +1,97 @@
+Edges: [(0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 5), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 1), (0, 4), (2, 3), (2, 4), (2, 6), (3, 5), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of red, green, blue, and yellow shirts to the eight people can avoid at least one pair of friends wearing the same color.
+
+One way to “encode” the problem is to view the eight people as vertices in a graph and add an edge between two vertices whenever those two people are friends. Then what we are being asked is: is the graph 4‐colorable, if the colors available are red, green, blue, and yellow?
+
+Let us label the vertices as follows:
+ • A = Alice
+ • B = Bob
+ • C = Carol
+ • D = Dave
+ • E = Ethan
+ • F = Fran
+ • G = George
+ • H = Heather
+
+The friendships (edges) are:
+ • A is adjacent to C, D, F, G, H.
+ • B is adjacent to C, D, E, F, G, H.
+ • C is adjacent to A, B, F, H.
+ • D is adjacent to A, B, E, G, H.
+ • E is adjacent to B, D, F, G, H.
+ • F is adjacent to A, B, C, E, G.
+ • G is adjacent to A, B, D, E, F.
+ • H is adjacent to A, B, C, D, E.
+
+Notice that both A and B are “universal” in the sense that nearly every other vertex is adjacent to at least one of them. In particular, every vertex other than A and B is joined to at least one of A or B. Thus if we try “fixing” colors for A and B (say, red and green, respectively) then none of the other vertices C, D, E, F, G, and H may use red or green. This forces all of those six vertices to use one of only the remaining two colors (blue and yellow).
+
+However, if you look closely at the subgraph induced by C, D, E, F, G, and H (together with the extra edges not involving A or B), you will find the following additional adjacencies:
+ • C is joined to F and H.
+ • D is joined to E, G, and H.
+ • E is joined to F, G, and H.
+ • F is joined to G.
+ • (plus the symmetric edges to those listed)
+
+A two‐coloring (using only blue and yellow) of a graph is equivalent to asking whether the graph is bipartite. One may check – by trying to assign, say, blue to C and then following through the edges (e.g. C–F forces F to yellow, C–H forces H to yellow, then D must be chosen, and so on) – that this induced subgraph is not bipartite. In every attempt one eventually finds a conflict.
+
+Since the six vertices must be assigned colors from only two available choices but they interact in a way that makes a 2–coloring impossible, one sees that no proper assignment of four colors to the eight vertices exists.
+
+Thus, it is impossible to choose shirt colors for Alice, Bob, Carol, Dave, Ethan, Fran, George, and Heather so that no pair of friends wears the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of red, green, blue, and yellow shirts to the eight people can avoid at least one pair of friends wearing the same color.
+
+One way to “encode” the problem is to view the eight people as vertices in a graph and add an edge between two vertices whenever those two people are friends. Then what we are being asked is: is the graph 4‐colorable, if the colors available are red, green, blue, and yellow?
+
+Let us label the vertices as follows:
+ • A = #0
+ • B = #1
+ • C = #2
+ • D = #3
+ • E = #4
+ • F = #5
+ • G = #6
+ • H = #7
+
+The friendships (edges) are:
+ • A is adjacent to C, D, F, G, H.
+ • B is adjacent to C, D, E, F, G, H.
+ • C is adjacent to A, B, F, H.
+ • D is adjacent to A, B, E, G, H.
+ • E is adjacent to B, D, F, G, H.
+ • F is adjacent to A, B, C, E, G.
+ • G is adjacent to A, B, D, E, F.
+ • H is adjacent to A, B, C, D, E.
+
+Notice that both A and B are “universal” in the sense that nearly every other vertex is adjacent to at least one of them. In particular, every vertex other than A and B is joined to at least one of A or B. Thus if we try “fixing” colors for A and B (say, red and green, respectively) then none of the other vertices C, D, E, F, G, and H may use red or green. This forces all of those six vertices to use one of only the remaining two colors (blue and yellow).
+
+However, if you look closely at the subgraph induced by C, D, E, F, G, and H (together with the extra edges not involving A or B), you will find the following additional adjacencies:
+ • C is joined to F and H.
+ • D is joined to E, G, and H.
+ • E is joined to F, G, and H.
+ • F is joined to G.
+ • (plus the symmetric edges to those listed)
+
+A two‐coloring (using only blue and yellow) of a graph is equivalent to asking whether the graph is bipartite. One may check – by trying to assign, say, blue to C and then following through the edges (e.g. C–F forces F to yellow, C–H forces H to yellow, then D must be chosen, and so on) – that this induced subgraph is not bipartite. In every attempt one eventually finds a conflict.
+
+Since the six vertices must be assigned colors from only two available choices but they interact in a way that makes a 2–coloring impossible, one sees that no proper assignment of four colors to the eight vertices exists.
+
+Thus, it is impossible to choose shirt colors for #0, #1, #2, #3, #4, #5, #6, and #7 so that no pair of friends wears the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

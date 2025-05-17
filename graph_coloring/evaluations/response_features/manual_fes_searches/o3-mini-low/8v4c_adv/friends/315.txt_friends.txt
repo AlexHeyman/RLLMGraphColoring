@@ -1,0 +1,41 @@
+Edges: [(0, 2), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 3), (1, 3), (2, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+Notice that the friendships among the 8 people form a graph, and the condition is that no two friends may wear shirts of the same color. In other words, we need to color the vertices of the graph with 4 colors (red, green, blue, yellow) so that adjacent vertices receive different colors.
+
+Closer inspection of the friendships shows that there is a set of 5 people—namely, Alice, Carol, Fran, George, and Heather—that are all pairwise friends. For example, the information tells us:
+ • Alice is friends with Carol, Fran, George, and Heather.
+ • Carol is friends with Alice, Fran, George, and Heather.
+ • Fran is friends with Alice, Carol, George, and Heather.
+ • George is friends with Alice, Carol, Fran, and Heather.
+ • Heather is friends with Alice, Carol, Fran, and George.
+
+This set of 5 forms a complete subgraph (a clique of size 5). In any clique of size n, all vertices are adjacent to each other, which forces the use of n different colors. Here, with 5 people all mutually adjacent, you would need 5 colors. Since only 4 colors are available, it is impossible to assign a shirt color to each person without having at least one pair of friends share the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+Notice that the friendships among the 8 people form a graph, and the condition is that no two friends may wear shirts of the same color. In other words, we need to color the vertices of the graph with 4 colors (red, green, blue, yellow) so that adjacent vertices receive different colors.
+
+Closer inspection of the friendships shows that there is a set of 5 people—namely, #0, #2, #5, #6, and #7—that are all pairwise friends. For example, the information tells us:
+ • #0 is friends with #2, #5, #6, and #7.
+ • #2 is friends with #0, #5, #6, and #7.
+ • #5 is friends with #0, #2, #6, and #7.
+ • #6 is friends with #0, #2, #5, and #7.
+ • #7 is friends with #0, #2, #5, and #6.
+
+This set of 5 forms a complete subgraph (a clique of size 5). In any clique of size n, all vertices are adjacent to each other, which forces the use of n different colors. Here, with 5 people all mutually adjacent, you would need 5 colors. Since only 4 colors are available, it is impossible to assign a shirt color to each person without having at least one pair of friends share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

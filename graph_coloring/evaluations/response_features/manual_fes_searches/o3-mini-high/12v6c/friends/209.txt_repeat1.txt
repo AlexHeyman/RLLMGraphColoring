@@ -1,0 +1,91 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 7), (0, 9), (0, 10), (0, 11), (1, 3), (1, 5), (1, 6), (1, 8), (1, 9), (1, 11), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 10), (3, 5), (3, 7), (3, 8), (3, 10), (3, 11), (4, 5), (4, 6), (4, 8), (4, 9), (4, 10), (4, 11), (5, 6), (5, 8), (5, 9), (5, 10), (5, 11), (6, 8), (6, 9), (6, 10), (6, 11), (7, 8), (7, 9), (7, 10), (7, 11), (8, 9), (8, 10), (8, 11), (9, 10), (9, 11)]
+
+Complement: [(0, 6), (0, 8), (1, 2), (1, 4), (1, 7), (1, 10), (2, 9), (2, 11), (3, 4), (3, 6), (3, 9), (4, 7), (5, 7), (6, 7), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the six colors
+ Red, Green, Blue, Yellow, Orange, and Purple
+to the 12 people can have the property that no one wears the same color as a friend.
+
+A careful look at the “friendship graph” reveals the following (using the abbreviations A = Alice, B = Bob, C = Carol, D = Dave, E = Ethan, F = Fran, G = George, H = Heather, I = Irene, J = Jack, K = Kathy, and L = Larry):
+
+• A is friends with {B, C, D, E, F, H, J, K, L}.
+• B is friends with {A, D, F, G, I, J, L}.
+• C is friends with {A, D, E, F, G, H, I, K}.
+• D is friends with {A, B, C, F, H, I, K, L}.
+• E is friends with {A, C, F, G, I, J, K, L}.
+• F is friends with {A, B, C, D, E, G, I, J, K, L} (so F “misses” only H).
+• G is friends with {B, C, E, F, I, J, K, L}.
+• H is friends with {A, C, D, I, J, K, L} (so H “misses” B, E, F, and G).
+• I is friends with {B, C, D, E, F, G, H, J, K, L} (so I “misses” only A).
+• J is friends with {A, B, E, F, G, H, I, K, L} (so J “misses” only C and D).
+• K is friends with {A, C, D, E, F, G, H, I, J, L} (so K “misses” only B).
+• L is friends with {A, B, D, E, F, G, H, I, J, K} (so L “misses” only C).
+
+An important observation is the following. Look at Larry’s set of friends, which is
+ {A, B, D, E, F, G, H, I, J, K}.
+Within this set one may check that the six people {E, F, G, I, J, K} all are mutually friends. For example:
+ • E (Ethan) is friends with F, G, I, J, and K.
+ • F (Fran) is friends with E, G, I, J, and K.
+ • I, J, and K likewise are each friends with the other four among these six,
+ and G is friends with each of E, F, I, J, and K.
+Thus {E, F, G, I, J, K} is a clique of size 6.
+
+Now, in any proper coloring of a graph the vertices of a clique must all have different colors. In our situation the clique {E, F, G, I, J, K} must therefore use six distinct colors—the very six colors available (Red, Green, Blue, Yellow, Orange, Purple).
+
+But Larry (L) is friends with each vertex of that clique. This means that in any assignment of colors in which the six members of the clique all get different colors (which they must) Larry is adjacent to people wearing every one of the six colors. Then no matter what color one might try to assign to Larry, it would match the color worn by a friend.
+
+Because Larry has, among his friends, a clique of size 6 using all the available colors, there is no way to assign a color to him without matching one of his friends.
+
+Therefore, no valid assignment of the six shirt‐colors exists.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of the six colors
+ Red, Green, Blue, Yellow, Orange, and Purple
+to the 12 people can have the property that no one wears the same color as a friend.
+
+A careful look at the “friendship graph” reveals the following (using the abbreviations A = #0, B = #1, C = #2, D = #3, E = #4, F = #5, G = #6, H = #7, I = #8, J = #9, K = #10, and L = #11):
+
+• A is friends with {B, C, D, E, F, H, J, K, L}.
+• B is friends with {A, D, F, G, I, J, L}.
+• C is friends with {A, D, E, F, G, H, I, K}.
+• D is friends with {A, B, C, F, H, I, K, L}.
+• E is friends with {A, C, F, G, I, J, K, L}.
+• F is friends with {A, B, C, D, E, G, I, J, K, L} (so F “misses” only H).
+• G is friends with {B, C, E, F, I, J, K, L}.
+• H is friends with {A, C, D, I, J, K, L} (so H “misses” B, E, F, and G).
+• I is friends with {B, C, D, E, F, G, H, J, K, L} (so I “misses” only A).
+• J is friends with {A, B, E, F, G, H, I, K, L} (so J “misses” only C and D).
+• K is friends with {A, C, D, E, F, G, H, I, J, L} (so K “misses” only B).
+• L is friends with {A, B, D, E, F, G, H, I, J, K} (so L “misses” only C).
+
+An important observation is the following. Look at #11’s set of friends, which is
+ {A, B, D, E, F, G, H, I, J, K}.
+Within this set one may check that the six people {E, F, G, I, J, K} all are mutually friends. For example:
+ • E (#4) is friends with F, G, I, J, and K.
+ • F (#5) is friends with E, G, I, J, and K.
+ • I, J, and K likewise are each friends with the other four among these six,
+ and G is friends with each of E, F, I, J, and K.
+Thus {E, F, G, I, J, K} is a clique of size 6.
+
+Now, in any proper coloring of a graph the vertices of a clique must all have different colors. In our situation the clique {E, F, G, I, J, K} must therefore use six distinct colors—the very six colors available (Red, Green, Blue, Yellow, Orange, Purple).
+
+But #11 (L) is friends with each vertex of that clique. This means that in any assignment of colors in which the six members of the clique all get different colors (which they must) #11 is adjacent to people wearing every one of the six colors. Then no matter what color one might try to assign to #11, it would match the color worn by a friend.
+
+Because #11 has, among his friends, a clique of size 6 using all the available colors, there is no way to assign a color to him without matching one of his friends.
+
+Therefore, no valid assignment of the six shirt‐colors exists.
+
+Impossible
+
+---
+
+Manually assessed false edges: 10,11

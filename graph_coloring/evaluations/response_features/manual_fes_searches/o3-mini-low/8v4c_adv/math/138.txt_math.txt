@@ -1,0 +1,37 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 7)]
+
+Complement: [(0, 2), (1, 3), (1, 5), (2, 5), (3, 5), (5, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how we try to assign four colors, one vertex (namely vertex 6) ends up “trapped” because it is adjacent to vertices covering all 4 colors.
+
+Let’s sketch an argument.
+
+Step 1. Notice the following edges:
+ • Vertex 0 is connected to 1, 3, 4, 5, 6, and 7.
+ • Vertex 1 is connected to 0, 2, 4, 6, and 7.
+ • Vertex 4 is connected to 0, 1, 2, 3, 5, 6, and 7.
+ • Vertex 7 is connected to 0, 1, 2, 3, 4, 5, and 6.
+
+Thus, the four vertices 0, 1, 4, and 7 form a clique; that is, every pair of these vertices is connected by an edge. In any proper coloring these four must receive four different colors. For concreteness, suppose
+  0 → Red
+  1 → Green
+  4 → Blue
+  7 → Yellow
+
+Step 2. Now consider vertex 6. Its list of neighbors (given by the edge list) is:
+  6 is adjacent to 0, 1, 2, 3, 4, and 7.
+That means 6 is adjacent to vertices with colors Red (vertex 0), Green (vertex 1), Blue (vertex 4), and Yellow (vertex 7). Even if the other two neighbors (vertices 2 and 3) might repeat one of these colors, vertex 6 already “sees” all four colors in its neighborhood.
+
+Step 3. Since vertex 6 is adjacent to four vertices with different colors, there is no color left among Red, Green, Blue, and Yellow that can be given to 6. Hence no proper 4‐coloring exists.
+
+We conclude that it is impossible to color every vertex with red, green, blue, or yellow so that no two adjacent vertices receive the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

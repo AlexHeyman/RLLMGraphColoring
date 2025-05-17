@@ -1,0 +1,59 @@
+Edges: [(0, 1), (0, 3), (0, 5), (0, 7), (0, 8), (0, 10), (0, 11), (1, 2), (1, 4), (1, 5), (1, 6), (1, 9), (1, 11), (2, 3), (2, 6), (2, 7), (2, 8), (2, 9), (2, 10), (2, 11), (3, 4), (3, 5), (3, 6), (3, 7), (3, 9), (3, 10), (3, 11), (4, 5), (4, 9), (4, 10), (4, 11), (5, 6), (5, 7), (5, 8), (5, 9), (5, 10), (5, 11), (6, 7), (6, 8), (6, 9), (6, 10), (6, 11), (7, 8), (7, 9), (7, 10), (7, 11), (8, 10), (8, 11), (9, 10), (9, 11)]
+
+Complement: [(0, 2), (0, 4), (0, 6), (0, 9), (1, 3), (1, 7), (1, 8), (1, 10), (2, 4), (2, 5), (3, 8), (4, 6), (4, 7), (4, 8), (8, 9), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We can model the situation as a graph whose vertices are the 12 people and where an edge connects two people if they are friends. (Friendship here is assumed to be a symmetric relation.) Our goal is to assign one of 6 shirt colors (red, green, blue, yellow, orange, purple) to each person so that no two adjacent (“friends‐”) vertices share the same color—in other words, to “properly color” the graph using 6 colors.
+
+A fundamental fact from graph theory is that if the graph contains a clique (a set of vertices all pairwise connected) of size k, then at least k different colors are needed (since every pair of vertices in that clique must receive different colors). In our situation, if we can find a clique of 7 people the graph would have a chromatic number (minimum number of colors needed) of at least 7. This would make a 6‐coloring impossible.
+
+A look at the list of friendships shows that Larry is friends with everyone else. Thus Larry is a “universal” vertex. Now, if even a set of 6 people among the other 11 are all mutually friends, then when Larry (who is adjacent to every one of them) is added the resulting clique would have size 7.
+
+In fact, one may verify that the people 
+  Dave, Fran, George, Heather, Jack, and Kathy 
+form a clique. For example:
+ • Dave is friends with Fran, George, Heather, Jack, and Kathy.
+ • Fran is friends with Dave, George, Heather, Jack, and Kathy.
+ • George is friends with Dave, Fran, Heather, Jack, and Kathy.
+ • Heather is friends with Dave, Fran, George, Jack, and Kathy.
+ • Jack is friends with Dave, Fran, George, Heather, and Kathy.
+ • Kathy is friends with Dave, Fran, George, Heather, and Jack.
+
+Since all six are mutually connected, they form a clique of size 6. But because Larry is friends with everyone, adding Larry to this set produces a clique of 7.
+
+A clique of 7 means that at least 7 different colors would be needed so that no two people in that clique wear the same color. Since we only have 6 colors available, it is impossible to assign the colors as desired.
+
+Impossible
+
+---
+Numericized:
+---
+
+We can model the situation as a graph whose vertices are the 12 people and where an edge connects two people if they are friends. (Friendship here is assumed to be a symmetric relation.) Our goal is to assign one of 6 shirt colors (red, green, blue, yellow, orange, purple) to each person so that no two adjacent (“friends‐”) vertices share the same color—in other words, to “properly color” the graph using 6 colors.
+
+A fundamental fact from graph theory is that if the graph contains a clique (a set of vertices all pairwise connected) of size k, then at least k different colors are needed (since every pair of vertices in that clique must receive different colors). In our situation, if we can find a clique of 7 people the graph would have a chromatic number (minimum number of colors needed) of at least 7. This would make a 6‐coloring impossible.
+
+A look at the list of friendships shows that #11 is friends with everyone else. Thus #11 is a “universal” vertex. Now, if even a set of 6 people among the other 11 are all mutually friends, then when #11 (who is adjacent to every one of them) is added the resulting clique would have size 7.
+
+In fact, one may verify that the people 
+  #3, #5, #6, #7, #9, and #10 
+form a clique. For example:
+ • #3 is friends with #5, #6, #7, #9, and #10.
+ • #5 is friends with #3, #6, #7, #9, and #10.
+ • #6 is friends with #3, #5, #7, #9, and #10.
+ • #7 is friends with #3, #5, #6, #9, and #10.
+ • #9 is friends with #3, #5, #6, #7, and #10.
+ • #10 is friends with #3, #5, #6, #7, and #9.
+
+Since all six are mutually connected, they form a clique of size 6. But because #11 is friends with everyone, adding #11 to this set produces a clique of 7.
+
+A clique of 7 means that at least 7 different colors would be needed so that no two people in that clique wear the same color. Since we only have 6 colors available, it is impossible to assign the colors as desired.
+
+Impossible
+
+---
+
+Manually assessed false edges: 10,11

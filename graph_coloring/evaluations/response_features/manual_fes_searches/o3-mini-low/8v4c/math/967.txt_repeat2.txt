@@ -1,0 +1,27 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 5), (2, 4), (2, 5), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that the graph cannot be colored with four colors as required.
+
+Note that vertex 0 is adjacent to vertices 3, 4, 5, 6, and 7. In particular, notice that vertices 3, 4, 6, and 7 are all adjacent to one another:
+
+ • (3,4), (3,6), (3,7) are edges.
+ • (4,6), (4,7) are edges.
+ • (6,7) is an edge.
+
+Thus vertices 3, 4, 6, and 7 form a complete graph on 4 vertices (a K4). In any proper coloring of a K4, all four vertices must receive different colors.
+
+Now consider vertex 0. Because vertex 0 is adjacent to all of 3, 4, 6, and 7, its color must be different from each of the colors used on the K4. However, we only have four available colors. This means that even if we color the K4 using all four colors, there is no color left for vertex 0. (The fact that vertex 0 is also adjacent to vertex 5, and that vertex 5 is further adjacent to some vertices in the K4, only adds to the constraints.)
+
+Thus, a proper 4‐coloring is impossible.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

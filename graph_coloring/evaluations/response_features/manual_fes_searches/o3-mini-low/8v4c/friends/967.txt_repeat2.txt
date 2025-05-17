@@ -1,0 +1,41 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 5), (2, 4), (2, 5), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We first show that no assignment of the available four colors can work. (For clarity, think of “red,” “green,” “blue,” and “yellow” as color choices.) Notice that some of the people form a clique (a set of people each of whom is friends with every other person in the set). For example, consider the set {Alice, Dave, Ethan, George, Heather}. Checking the friendship list we see that
+
+  • Alice is friends with Dave, Ethan, George, and Heather.
+  • Dave is friends with Ethan, George, and Heather.
+  • Ethan is friends with George and Heather.
+  • George is friends with Heather.
+
+Thus every pair in {Alice, Dave, Ethan, George, Heather} are friends. In any valid assignment, no two people who are friends can have the same color—which means that each person in a clique must get a distinct color. Hence, a clique of 5 people would require 5 different colors.
+
+Since we only have 4 colors available, no arrangement can satisfy the requirement for even this clique. 
+
+Impossible
+
+---
+Numericized:
+---
+
+We first show that no assignment of the available four colors can work. (For clarity, think of “red,” “green,” “blue,” and “yellow” as color choices.) Notice that some of the people form a clique (a set of people each of whom is friends with every other person in the set). For example, consider the set {#0, #3, #4, #6, #7}. Checking the friendship list we see that
+
+  • #0 is friends with #3, #4, #6, and #7.
+  • #3 is friends with #4, #6, and #7.
+  • #4 is friends with #6 and #7.
+  • #6 is friends with #7.
+
+Thus every pair in {#0, #3, #4, #6, #7} are friends. In any valid assignment, no two people who are friends can have the same color—which means that each person in a clique must get a distinct color. Hence, a clique of 5 people would require 5 different colors.
+
+Since we only have 4 colors available, no arrangement can satisfy the requirement for even this clique. 
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

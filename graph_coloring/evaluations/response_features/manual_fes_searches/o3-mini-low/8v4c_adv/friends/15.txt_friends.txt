@@ -1,0 +1,43 @@
+Edges: [(0, 2), (0, 4), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 3), (0, 5), (1, 2), (2, 3), (3, 4), (3, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that it is impossible to assign the four available shirt‐colors to all eight people so that no pair of friends wears the same color.
+
+Let’s explain briefly.
+
+Call the four colors Red, Green, Blue, and Yellow. There are eight people (vertices) and the friendships form a graph. Two people who are friends (an edge connects them) must have different colors.
+
+If we list the people and their friendships the “graph” has two “central” vertices, George and Heather. In fact, George and Heather are each friends with every one of the other six people. (And they, too, are friends with each other.) This forces that none of the other 6 people (Alice, Bob, Carol, Dave, Ethan, and Fran) can use whichever colors are chosen for George and Heather. In other words, the 6 people are then restricted to the remaining two colors.
+
+But, among these 6 people there is a triangle (a cycle of three mutually-adjacent vertices). For example, look at Alice, Carol, and Ethan. (Alice is friends with Carol and Ethan; Carol is friends with Ethan as well.) In any proper 2‐coloring a triangle cannot be colored because two colors are not enough to color an odd cycle. Since these three are forced to choose from only the two “free” colors, they must have a conflict.
+
+Therefore it is not possible, with the given friendships and 4 available colors, to assign colors (shirt choices) so that no two friends share the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that it is impossible to assign the four available shirt‐colors to all eight people so that no pair of friends wears the same color.
+
+Let’s explain briefly.
+
+Call the four colors Red, Green, Blue, and Yellow. There are eight people (vertices) and the friendships form a graph. Two people who are friends (an edge connects them) must have different colors.
+
+If we list the people and their friendships the “graph” has two “central” vertices, #6 and #7. In fact, #6 and #7 are each friends with every one of the other six people. (And they, too, are friends with each other.) This forces that none of the other 6 people (#0, #1, #2, #3, #4, and #5) can use whichever colors are chosen for #6 and #7. In other words, the 6 people are then restricted to the remaining two colors.
+
+But, among these 6 people there is a triangle (a cycle of three mutually-adjacent vertices). For example, look at #0, #2, and #4. (#0 is friends with #2 and #4; #2 is friends with #4 as well.) In any proper 2‐coloring a triangle cannot be colored because two colors are not enough to color an odd cycle. Since these three are forced to choose from only the two “free” colors, they must have a conflict.
+
+Therefore it is not possible, with the given friendships and 4 available colors, to assign colors (shirt choices) so that no two friends share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

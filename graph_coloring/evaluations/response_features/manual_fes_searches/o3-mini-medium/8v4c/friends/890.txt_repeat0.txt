@@ -1,0 +1,81 @@
+Edges: [(0, 1), (0, 2), (0, 5), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 7), (3, 5), (3, 6), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (0, 4), (0, 6), (0, 7), (1, 5), (2, 6), (3, 4), (3, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+Let’s label the people as follows:
+
+ A = Alice  
+ B = Bob  
+ C = Carol  
+ D = Dave  
+ E = Ethan  
+ F = Fran  
+ G = George  
+ H = Heather
+
+The friendships given are:
+ • A is friends with B, C, F.  
+ • B is friends with A, C, D, E, G, H.  
+ • C is friends with A, B, D, E, F, H.  
+ • D is friends with B, C, F, G.  
+ • E is friends with B, C, F, G, H.  
+ • F is friends with A, C, D, E, G, H.  
+ • G is friends with B, D, E, F.  
+ • H is friends with B, C, E, F.
+
+Notice that among B, C, E, and F:
+ – B, C, and F form a triangle (they’re all friends with each other).  
+ – Also, E is friends with B, C, and F.  
+
+This means B, C, E, and F are all mutually adjacent—a complete graph K₄. In any proper coloring of a K₄, four different colors are required.
+
+Now, Heather (H) is friends with each of B, C, E, and F. That means H is adjacent to all four vertices of the K₄. Since the vertices of the K₄ must all have different colors (using up all four available colors), there is no remaining color available for H.
+
+Thus, no assignment exists using only four colors under the given restrictions.
+
+Impossible
+
+---
+Numericized:
+---
+
+Let’s label the people as follows:
+
+ A = #0  
+ B = #1  
+ C = #2  
+ D = #3  
+ E = #4  
+ F = #5  
+ G = #6  
+ H = #7
+
+The friendships given are:
+ • A is friends with B, C, F.  
+ • B is friends with A, C, D, E, G, H.  
+ • C is friends with A, B, D, E, F, H.  
+ • D is friends with B, C, F, G.  
+ • E is friends with B, C, F, G, H.  
+ • F is friends with A, C, D, E, G, H.  
+ • G is friends with B, D, E, F.  
+ • H is friends with B, C, E, F.
+
+Notice that among B, C, E, and F:
+ – B, C, and F form a triangle (they’re all friends with each other).  
+ – Also, E is friends with B, C, and F.  
+
+This means B, C, E, and F are all mutually adjacent—a complete graph K₄. In any proper coloring of a K₄, four different colors are required.
+
+Now, #7 (H) is friends with each of B, C, E, and F. That means H is adjacent to all four vertices of the K₄. Since the vertices of the K₄ must all have different colors (using up all four available colors), there is no remaining color available for H.
+
+Thus, no assignment exists using only four colors under the given restrictions.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

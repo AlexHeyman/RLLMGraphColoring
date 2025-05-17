@@ -1,0 +1,21 @@
+Edges: [(0, 1), (0, 2), (0, 5), (0, 6), (0, 7), (1, 3), (1, 5), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 7)]
+
+Complement: [(0, 3), (0, 4), (1, 2), (1, 4), (1, 6), (2, 5), (5, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how one tries to assign four colors (red, green, blue, yellow) to the eight vertices so that every edge joins two differently colored vertices, a dead‐end is reached. (In other words, the graph is not 4‐colorable.) One acceptable answer is simply to say “Impossible.”
+
+Below is one explanation of why an attempted 4–coloring fails. (Any complete explanation that justifies that no assignment exists is acceptable.)
+
+Let the vertices be numbered 0–7 and define the edge set as given. Notice that vertex 7 has a very high degree (it touches 0,1,2,3,4,5) and each neighbor of 7 must avoid the color given to 7. In several “natural” attempts one is forced to give the neighbors colors that then “collide” at vertices 5 or 6. For example, one may start by “fixing” vertex 7 to be Red. Then its adjacent vertices (0,1,2,3,4,5) are forced to use the remaining colors. No matter how one attempts to “work around” the many connections among these vertices (for instance, 0 touches 1, 2, 5, 6; 3 touches 1,2,4,5,6; etc.), one eventually finds that at least one vertex (often 5 or 6) sees all four colors in its neighborhood. (Several systematic trials along these lines have been carried out, and all lead to a contradiction.)
+
+Thus, since every reasonable attempt to assign the four colors fails, we conclude that it is impossible to color the graph with four colors so that no edge is monochromatic.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

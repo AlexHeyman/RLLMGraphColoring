@@ -1,0 +1,67 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (1, 4), (2, 5), (3, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign one of four shirt‐colors (red, green, blue, yellow) to the eight people while avoiding identical colors on any pair of friends, you run into a conflict. In fact, if you “read” the friendship list as a graph where each person is a vertex and each friendship is an edge, you can show that the graph requires at least five colors.
+
+One way to see this is to note the following from the list:
+
+• Alice is friends with Carol, Dave, Ethan, Fran, George, and Heather.
+• Carol is friends with (besides Alice and Bob) Dave, Ethan, George, and Heather.
+• George is friends with everyone except only Bob is missing one or two (and the list shows George is friends with all except that the only friendship not mentioned is Bob–Alice and Bob–Ethan are missing—but that does not matter here).
+• Heather is friends with everyone except Bob–Alice and Bob–Ethan are not all present either.
+
+Now look at the set {Alice, Carol, George, Heather}. Checking the list:
+ – Alice–Carol is a friendship.
+ – Alice–George is a friendship.
+ – Alice–Heather is a friendship.
+ – Carol–George is a friendship.
+ – Carol–Heather is a friendship.
+ – George–Heather is a friendship.
+Thus these four people form a clique of size 4. This already forces any proper assignment to give all four different shirt‐colors to these four individuals.
+
+Now note that Dave’s list of friends is:
+ Alice, Bob, Carol, Fran, George, and Heather.
+In particular, Dave is friends with four members of the clique {Alice, Carol, George, Heather} and so he cannot wear any of the four colors used by that clique. That means Dave would require a “fifth” shirt‐color. Since only four colors are available, a conflict is inevitable.
+
+Because any assignment would force Dave’s friends (specifically Alice, Carol, George, and Heather) to cover all four colors and then leave no legal color for Dave, it is impossible to schedule a four–color shirt plan for the party.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign one of four shirt‐colors (red, green, blue, yellow) to the eight people while avoiding identical colors on any pair of friends, you run into a conflict. In fact, if you “read” the friendship list as a graph where each person is a vertex and each friendship is an edge, you can show that the graph requires at least five colors.
+
+One way to see this is to note the following from the list:
+
+• #0 is friends with #2, #3, #4, #5, #6, and #7.
+• #2 is friends with (besides #0 and #1) #3, #4, #6, and #7.
+• #6 is friends with everyone except only #1 is missing one or two (and the list shows #6 is friends with all except that the only friendship not mentioned is #1–#0 and #1–#4 are missing—but that does not matter here).
+• #7 is friends with everyone except #1–#0 and #1–#4 are not all present either.
+
+Now look at the set {#0, #2, #6, #7}. Checking the list:
+ – #0–#2 is a friendship.
+ – #0–#6 is a friendship.
+ – #0–#7 is a friendship.
+ – #2–#6 is a friendship.
+ – #2–#7 is a friendship.
+ – #6–#7 is a friendship.
+Thus these four people form a clique of size 4. This already forces any proper assignment to give all four different shirt‐colors to these four individuals.
+
+Now note that #3’s list of friends is:
+ #0, #1, #2, #5, #6, and #7.
+In particular, #3 is friends with four members of the clique {#0, #2, #6, #7} and so he cannot wear any of the four colors used by that clique. That means #3 would require a “fifth” shirt‐color. Since only four colors are available, a conflict is inevitable.
+
+Because any assignment would force #3’s friends (specifically #0, #2, #6, and #7) to cover all four colors and then leave no legal color for #3, it is impossible to schedule a four–color shirt plan for the party.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

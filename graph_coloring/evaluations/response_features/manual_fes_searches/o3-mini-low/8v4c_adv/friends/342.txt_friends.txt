@@ -1,0 +1,45 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (2, 4), (3, 4), (3, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four shirt‐colors can be made so that no pair of friends wears the same color.
+
+One way to see the problem is to view the people as vertices in a graph and a friendship as an edge connecting two vertices. Then each person must be “colored” (assigned a shirt‐color) in such a way that no two adjacent vertices share the same color. (The available colors are red, green, blue, and yellow.)
+
+A careful look at the listed friendships reveals that some subsets of people form a clique (i.e. a set of vertices every two of which are adjacent). In particular, note that the set {Alice, Carol, Dave, George, Heather} is a clique. For instance:
+ • Alice is friends with Carol, Dave, George, and Heather.
+ • Carol is friends with Dave, George, and Heather.
+ • Dave is friends with George and Heather.
+ • George is friends with Heather.
+Thus all five of these people are mutually “linked” by friendship. In any proper coloring, every vertex in a clique must have a different color. So this clique requires at least 5 distinct colors.
+
+Because only four colors are available, it is impossible to assign a color to every person so that no pair of friends wears the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of the four shirt‐colors can be made so that no pair of friends wears the same color.
+
+One way to see the problem is to view the people as vertices in a graph and a friendship as an edge connecting two vertices. Then each person must be “colored” (assigned a shirt‐color) in such a way that no two adjacent vertices share the same color. (The available colors are red, green, blue, and yellow.)
+
+A careful look at the listed friendships reveals that some subsets of people form a clique (i.e. a set of vertices every two of which are adjacent). In particular, note that the set {#0, #2, #3, #6, #7} is a clique. For instance:
+ • #0 is friends with #2, #3, #6, and #7.
+ • #2 is friends with #3, #6, and #7.
+ • #3 is friends with #6 and #7.
+ • #6 is friends with #7.
+Thus all five of these people are mutually “linked” by friendship. In any proper coloring, every vertex in a clique must have a different color. So this clique requires at least 5 distinct colors.
+
+Because only four colors are available, it is impossible to assign a color to every person so that no pair of friends wears the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

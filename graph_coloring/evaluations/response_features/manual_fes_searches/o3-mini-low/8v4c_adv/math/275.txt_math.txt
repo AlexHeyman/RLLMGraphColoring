@@ -1,0 +1,43 @@
+Edges: [(0, 1), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 4), (1, 3), (1, 4), (3, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of four “colors” (in our case red, green, blue, yellow) to vertices 0–7 can avoid giving the same color to two vertices that share an edge.
+
+Many readers familiar with graph‐theoretic “coloring” problems might suspect that if the graph “looks” very highly connected then one might require more than four colors. (In fact, one might suspect that the “chromatic number” is at least 5.) One way to “see” why this may be true is to start by “fixing” a color on one vertex and then checking the forced “constraints” on its many neighbors, following several different possible routes. (You might attempt a back‐tracking search.) In every attempted course (a few are sketched below) we eventually come to a vertex where all four colors have already been “used up” among its neighbors. (In particular, several vertices end up “seeing” neighbors in all four colors, leaving no color available for them.)
+
+For example, one attempted assignment went as follows:
+
+• Start by letting vertex 0 = Red.
+ – Because 0 is adjacent to 1, 3, 5, 6, and 7 these must all get a non‐Red color.
+
+• Next, assign vertex 1 = Green.
+ – Vertex 1 touches 0, 2, 5, 6, and 7 (so far 0 is Red and 1 is Green).
+
+• Now choose vertex 2 = Blue.
+ – Vertex 2 is adjacent to 1, 3, 4, 5, 6, and 7 so it cannot be Green.
+  We chose Blue; then later its other neighbors will have restrictions based on this.
+
+• At vertex 3 (adjacent to 0, 2, 4, 6, 7) the colors Red and Blue are forbidden so pick, say, Yellow.
+
+• At vertex 4 (adjacent to 2, 3, 5, 6, 7) the colors Blue and Yellow are taken so we might try Red.
+  Now vertex 4 = Red.
+
+• Next vertex 5 (adjacent to 0, 1, 2, 4, 6, 7) sees neighbors colored Red (0 and 4), Green (1) and Blue (2), so there is one candidate color left: Yellow.
+  Thus vertex 5 = Yellow.
+
+• Finally, consider vertex 6. Its neighbors are 0 (Red), 1 (Green), 2 (Blue), 3 (Yellow), 4 (Red), and 5 (Yellow). In other words vertex 6 sees (at least) all four colors. There is no legal color for vertex 6.
+
+One might attempt to “fix” the problem by changing some earlier choices, but any route one tries eventually leads to a conflict somewhere in the graph. (A systematic search – either by hand or by computer – would show that no assignment of four colors exists which avoids a conflict on an edge.)
+
+Thus, the answer is that it is impossible with four colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,25 @@
+Edges: [(0, 1), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (5, 6), (6, 7)]
+
+Complement: [(0, 2), (0, 3), (1, 3), (1, 5), (2, 3), (4, 7), (5, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no legal assignment of four colors (red, green, blue, yellow) to vertices 0–7 exists so that every edge joins vertices of different colors.
+
+One way to “see” the difficulty is to notice that vertex 6 is a “universal neighbor” for all but one vertex. In fact, its neighbors are
+  0, 1, 2, 3, 4, 5, and 7.
+Thus whatever color is given to vertex 6 cannot appear on any of these seven vertices. In a four‐coloring the colors available are red, green, blue, and yellow. So if vertex 6 gets, say, “red” then the other seven vertices must be colored with the three colors {green, blue, yellow} only.
+
+So one is forced to “pack” vertices 0,1,2,3,4,5,7 into only three colors subject to the additional restrictions imposed by the edges among these vertices. (For example, vertex 0 is adjacent to 1, 4, 5, and 7; vertex 1 is adjacent to 0,2, 4, 6, 7; and so on.) A fairly detailed check – trying in various ways to assign the three colors – leads to a contradiction every time. One may for instance begin by “merging” two vertices that are not adjacent. A natural idea is to try to give vertices 0 and 2 the same color (since (0,2) is not an edge) and vertices 1 and 3 the same color (since (1,3) is not an edge). But then when one tries to color vertices 4, 5, and 7 it turns out that the constraints (all edges among these vertices and with 0,1,2,3) force the appearance of all four colors in the neighbor set of 6 – leaving no available color for vertex 6.
+
+Because vertex 6 “sees” (that is, is adjacent to) almost every other vertex, one must choose its color to be missing from the set used on {0,1,2,3,4,5,7}. But no matter how one tries to assign colors to those seven vertices the “internal” edges among them force the use of all four colors.
+
+Thus no proper four‐coloring exists.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

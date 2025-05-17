@@ -1,0 +1,37 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (6, 7)]
+
+Complement: [(0, 1), (1, 2), (2, 6), (2, 7), (3, 4), (5, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We first note that among the 8 people the following complete subgraph (clique) can be found. In particular, look at the set {Alice, Dave, Ethan, Fran, George}:
+
+• Alice is friends with Dave, Ethan, Fran, and George.
+• Dave, Ethan, Fran, and George are all pairwise friends (as given by the friendships among Dave, Ethan, Fran, and George).
+
+This means that {Dave, Ethan, Fran, George} is a K4 (a clique on 4 vertices), and because Alice is friends with each of them, the set {Alice, Dave, Ethan, Fran, George} forms a clique on 5 vertices (K5).
+
+Since a clique on 5 vertices requires 5 different colors (each vertex must have a distinct color from its four friends) but only 4 shirt colors are available, it is impossible to assign the 4 colors in a way that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We first note that among the 8 people the following complete subgraph (clique) can be found. In particular, look at the set {#0, #3, #4, #5, #6}:
+
+• #0 is friends with #3, #4, #5, and #6.
+• #3, #4, #5, and #6 are all pairwise friends (as given by the friendships among #3, #4, #5, and #6).
+
+This means that {#3, #4, #5, #6} is a K4 (a clique on 4 vertices), and because #0 is friends with each of them, the set {#0, #3, #4, #5, #6} forms a clique on 5 vertices (K5).
+
+Since a clique on 5 vertices requires 5 different colors (each vertex must have a distinct color from its four friends) but only 4 shirt colors are available, it is impossible to assign the 4 colors in a way that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

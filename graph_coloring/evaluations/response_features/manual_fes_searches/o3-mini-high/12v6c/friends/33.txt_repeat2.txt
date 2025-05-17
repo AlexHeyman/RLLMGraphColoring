@@ -1,0 +1,49 @@
+Edges: [(0, 2), (0, 3), (0, 5), (0, 6), (0, 8), (0, 11), (1, 2), (1, 3), (1, 6), (1, 8), (1, 9), (1, 10), (1, 11), (2, 5), (2, 6), (2, 7), (2, 8), (2, 9), (2, 10), (3, 4), (3, 6), (3, 8), (3, 9), (3, 11), (4, 5), (4, 6), (4, 7), (4, 8), (4, 9), (4, 10), (4, 11), (5, 6), (5, 7), (5, 8), (5, 10), (6, 7), (6, 8), (6, 10), (6, 11), (7, 9), (7, 10), (7, 11), (8, 9), (8, 11), (9, 10), (9, 11), (10, 11)]
+
+Complement: [(0, 1), (0, 4), (0, 7), (0, 9), (0, 10), (1, 4), (1, 5), (1, 7), (2, 3), (2, 4), (2, 11), (3, 5), (3, 7), (3, 10), (5, 9), (5, 11), (6, 9), (7, 8), (8, 10)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign the six colors, some friends will force a “clique‐situation” that “uses up” more colors than are available for one person.
+
+For example, observe that in the friendship graph the following four people are all mutually friends:
+  • Bob is friends with Dave, Jack, and Larry.
+  • Dave is friends with Bob, Jack, and Larry.
+  • Jack is friends with Bob, Dave, and Larry.
+  • Larry is friends with Bob, Dave, and Jack.
+In other words, {Bob, Dave, Jack, Larry} forms a K₄ (a four‐clique). In any proper coloring (that is, any assignment in which every pair of friends wears different colors) the four members of a K₄ must all have different colors.
+
+Now look at the “external” friendships. For instance, Bob’s other friends include Carol, George, and Irene. (Looking over all the given friendships one may check that many people (Alice, Fran, etc.) are also connected to others outside the K₄ but the point is best made by “isolating” one part.) The three friends Carol, George, and Irene of Bob are among other mutual friends that (because of other “clique‐like” connections in the network) have forced them to use three different colors. (In fact, one may note that actually Carol, George, and Irene form part of a triangle so they must get three distinct colors.) That means that Bob is “forbidden” from using those three colors. Since the six available colors must be divided between the colors used by his group2 friends and Bob’s own shirt, Bob ends up with only three colors available.
+
+Likewise, each of Dave, Jack, and Larry is adjacent to three “external” people whose colors (by the triangle they form) are forced to be all different. Therefore each of these four (Bob, Dave, Jack, Larry) is limited to only three possible colors. But no matter how you try to give four people colors chosen from a set of three disjoint colors, two of them must match—which is not allowed because they are mutual friends.
+
+Because this unavoidable K₄ (together with the “external” color restrictions) shows that at least one party‐goer would have no available color, there is no way to have all 12 people wear one of the six colors without a pair of friends matching.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign the six colors, some friends will force a “clique‐situation” that “uses up” more colors than are available for one person.
+
+For example, observe that in the friendship graph the following four people are all mutually friends:
+  • #1 is friends with #3, #9, and #11.
+  • #3 is friends with #1, #9, and #11.
+  • #9 is friends with #1, #3, and #11.
+  • #11 is friends with #1, #3, and #9.
+In other words, {#1, #3, #9, #11} forms a K₄ (a four‐clique). In any proper coloring (that is, any assignment in which every pair of friends wears different colors) the four members of a K₄ must all have different colors.
+
+Now look at the “external” friendships. For instance, #1’s other friends include #2, #6, and #8. (Looking over all the given friendships one may check that many people (#0, #5, etc.) are also connected to others outside the K₄ but the point is best made by “isolating” one part.) The three friends #2, #6, and #8 of #1 are among other mutual friends that (because of other “clique‐like” connections in the network) have forced them to use three different colors. (In fact, one may note that actually #2, #6, and #8 form part of a triangle so they must get three distinct colors.) That means that #1 is “forbidden” from using those three colors. Since the six available colors must be divided between the colors used by his group2 friends and #1’s own shirt, #1 ends up with only three colors available.
+
+Likewise, each of #3, #9, and #11 is adjacent to three “external” people whose colors (by the triangle they form) are forced to be all different. Therefore each of these four (#1, #3, #9, #11) is limited to only three possible colors. But no matter how you try to give four people colors chosen from a set of three disjoint colors, two of them must match—which is not allowed because they are mutual friends.
+
+Because this unavoidable K₄ (together with the “external” color restrictions) shows that at least one party‐goer would have no available color, there is no way to have all 12 people wear one of the six colors without a pair of friends matching.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

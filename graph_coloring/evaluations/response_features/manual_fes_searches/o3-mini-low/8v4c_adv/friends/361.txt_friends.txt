@@ -1,0 +1,51 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 3), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four colors (red, green, blue, yellow) to the eight people can avoid a clash on every friendship. (Any assignment must give every pair of friends different colors.) One way to “see” why is to first notice that some of the people are very “popular” in the sense that they are friends with almost everyone else. In fact, if you examine the list of friendships you’ll find that George and Heather are friends with everyone except (in each case) only one or two of the people. (For instance, neither Alice nor Bob is listed among Alice’s or Bob’s own friends, so it happens that Alice is not friends with Bob and — also by omission — Carol is not friends with Alice; similarly, Bob is not friends with Dave.) 
+
+A natural approach is to try to assign colors one by one. (For example, one might start by giving Alice a color and then “propagate” the restrictions to her five friends.) However, once one passes on to assignments for the people with many friends (and whose friends themselves are very “intertwined”) one quickly finds that no matter how the choices are made the last person to be colored will “see” all four colors used already among his or her friends and therefore be forced to clash with a friend.
+
+To explain in more detail (without getting lost in a maze of cases):
+
+1. The friendship network (if you draw a vertex for each person and an edge for every pair that is friends) comes very close to being “complete” on a large set of the vertices. In any proper coloring of a graph the vertex with the most highly–colored neighborhood must have at most three colors among its neighbors (so that it—even if its own color comes from the fourth color—avoids conflicts with every neighbor). In our network the “popular” vertices (George and Heather, for example) have as neighbors all the other seven people. In order for one of these vertices to have room for a fourth color not already used in its neighborhood, the seven people must share at most three colors. 
+
+2. One may then look (or “search by hand”) at the induced subgraph on the other seven vertices. (For example, suppose one tries to “save” a color for George by using only three colors on the remainder.) It turns out that no matter how one chooses these three colors, one of the remaining people (say, Heather or someone else) will eventually find that her friends have “used up” all three of those colors and she has none left from the four.
+
+3. No matter what order the assignments are made in, one is forced into a conflict at the end.
+
+Any attempted coloring using only four colors leads – after a short but case‐laden analysis – to a contradiction. (If you test a few “natural” assignments by hand, you will run into the problem that one “popular” person finds that her friends come in four different colors.)
+
+Thus, the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of the four colors (red, green, blue, yellow) to the eight people can avoid a clash on every friendship. (Any assignment must give every pair of friends different colors.) One way to “see” why is to first notice that some of the people are very “popular” in the sense that they are friends with almost everyone else. In fact, if you examine the list of friendships you’ll find that #6 and #7 are friends with everyone except (in each case) only one or two of the people. (For instance, neither #0 nor #1 is listed among #0’s or #1’s own friends, so it happens that #0 is not friends with #1 and — also by omission — #2 is not friends with #0; similarly, #1 is not friends with #3.) 
+
+A natural approach is to try to assign colors one by one. (For example, one might start by giving #0 a color and then “propagate” the restrictions to her five friends.) However, once one passes on to assignments for the people with many friends (and whose friends themselves are very “intertwined”) one quickly finds that no matter how the choices are made the last person to be colored will “see” all four colors used already among his or her friends and therefore be forced to clash with a friend.
+
+To explain in more detail (without getting lost in a maze of cases):
+
+1. The friendship network (if you draw a vertex for each person and an edge for every pair that is friends) comes very close to being “complete” on a large set of the vertices. In any proper coloring of a graph the vertex with the most highly–colored neighborhood must have at most three colors among its neighbors (so that it—even if its own color comes from the fourth color—avoids conflicts with every neighbor). In our network the “popular” vertices (#6 and #7, for example) have as neighbors all the other seven people. In order for one of these vertices to have room for a fourth color not already used in its neighborhood, the seven people must share at most three colors. 
+
+2. One may then look (or “search by hand”) at the induced subgraph on the other seven vertices. (For example, suppose one tries to “save” a color for #6 by using only three colors on the remainder.) It turns out that no matter how one chooses these three colors, one of the remaining people (say, #7 or someone else) will eventually find that her friends have “used up” all three of those colors and she has none left from the four.
+
+3. No matter what order the assignments are made in, one is forced into a conflict at the end.
+
+Any attempted coloring using only four colors leads – after a short but case‐laden analysis – to a contradiction. (If you test a few “natural” assignments by hand, you will run into the problem that one “popular” person finds that her friends come in four different colors.)
+
+Thus, the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,79 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 3), (2, 5), (2, 6), (2, 7), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how one tries to “color” (assign shirts to) the 8 people with the four available colors so that no two friends share the same color, one always runs into an unavoidable conflict. (Here “color” stands for shirt‐color and “proper coloring” means that whenever two people are friends their shirt colors differ.)
+
+Let us quickly describe the situation. Label the eight people as
+
+  A = Alice, B = Bob, C = Carol, D = Dave, E = Ethan, F = Fran, G = George, H = Heather.
+
+The given friendship “edges” are
+
+  A–D, A–E, A–F, A–G, A–H;
+  B–C, B–E, B–F, B–G, B–H;
+  C–D, C–E;
+  D–E, D–F, D–G, D–H;
+  E–G, E–H;
+  F–G, F–H.
+
+A valid assignment requires that if an edge connects two people then they must have different colors. (We have four colors: red, green, blue, yellow.)
+
+One way to “prove impossibility” is to try to build a coloring by “backtracking” (step‐by‐step assigning colors subject to the restrictions) and eventually one sees that by the time one comes to assign a color to Heather (H) the set of friends of H 
+  {A, B, D, E, F, G}
+already uses all four colors in every case that one is forced into by the interlocking restrictions.
+
+For example, one might begin by assigning a color to A (say red) and then proceed to assign colors to the others. But no matter what choices are made for B, C, D, E, F, and G – all of which “interact” heavily (in fact, one may show that the induced subgraph on {A, B, D, E, F, G} needs three colors, and even then the “missing” color is forced away by the many adjacent pairs) – when one comes to choose a color for H the list of colors already “used among H’s friends” is always all four colors. (Heather is friends with A, B, D, E, F, and G so that her “available list” is the complement of the colors used by these six. A short but careful case‐analysis shows that no choice on the earlier vertices can avoid having all four colors appear among those six.)
+
+One may work through several “branches” of the backtracking process – for example, setting
+  Alice = Red,
+  Bob = Green or Blue or Yellow,
+and so on – and in every branch one eventually finds that the restrictions force Heather’s set of neighbor‐colors to be {red, green, blue, yellow} so that there is no color left for Heather.
+
+Thus, there is no valid assignment of four colors (shirt colors) to the 8 people obeying the “no two friends are the same color” rule.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how one tries to “color” (assign shirts to) the 8 people with the four available colors so that no two friends share the same color, one always runs into an unavoidable conflict. (Here “color” stands for shirt‐color and “proper coloring” means that whenever two people are friends their shirt colors differ.)
+
+Let us quickly describe the situation. Label the eight people as
+
+  A = #0, B = #1, C = #2, D = #3, E = #4, F = #5, G = #6, H = #7.
+
+The given friendship “edges” are
+
+  A–D, A–E, A–F, A–G, A–H;
+  B–C, B–E, B–F, B–G, B–H;
+  C–D, C–E;
+  D–E, D–F, D–G, D–H;
+  E–G, E–H;
+  F–G, F–H.
+
+A valid assignment requires that if an edge connects two people then they must have different colors. (We have four colors: red, green, blue, yellow.)
+
+One way to “prove impossibility” is to try to build a coloring by “backtracking” (step‐by‐step assigning colors subject to the restrictions) and eventually one sees that by the time one comes to assign a color to #7 (H) the set of friends of H 
+  {A, B, D, E, F, G}
+already uses all four colors in every case that one is forced into by the interlocking restrictions.
+
+For example, one might begin by assigning a color to A (say red) and then proceed to assign colors to the others. But no matter what choices are made for B, C, D, E, F, and G – all of which “interact” heavily (in fact, one may show that the induced subgraph on {A, B, D, E, F, G} needs three colors, and even then the “missing” color is forced away by the many adjacent pairs) – when one comes to choose a color for H the list of colors already “used among H’s friends” is always all four colors. (#7 is friends with A, B, D, E, F, and G so that her “available list” is the complement of the colors used by these six. A short but careful case‐analysis shows that no choice on the earlier vertices can avoid having all four colors appear among those six.)
+
+One may work through several “branches” of the backtracking process – for example, setting
+  #0 = Red,
+  #1 = Green or Blue or Yellow,
+and so on – and in every branch one eventually finds that the restrictions force #7’s set of neighbor‐colors to be {red, green, blue, yellow} so that there is no color left for #7.
+
+Thus, there is no valid assignment of four colors (shirt colors) to the 8 people obeying the “no two friends are the same color” rule.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

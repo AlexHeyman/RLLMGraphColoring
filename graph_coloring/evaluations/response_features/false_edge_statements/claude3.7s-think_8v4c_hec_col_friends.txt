@@ -1,0 +1,998 @@
+104.txt friends
+
+Line 30
+Wait, there's something wrong with my matrix because I didn't list a friendship between Fran and George, but in my list, Fran is friends with George. Let me double check the original friendships:
+
+False edges:
+(5, 6) [Manual assessment: true positive]
+
+---
+
+108.txt friends
+
+Line 132
+- George is friends with Ethan, Dave, Fran, and Carol.
+
+False edges:
+(5, 6) [Manual assessment: true positive]
+
+Line 133
+- Dave is friends with Ethan, George, Fran, and Carol.
+
+False edges:
+(2, 3) [Manual assessment: true positive]
+
+---
+
+111.txt friends
+
+Line 298
+Dave is friends with Alice, Carol, Ethan, and Fran, so he can't use Red, Green, or Blue. He must use Yellow. But Dave is friends with George, who is Yellow. So we have a conflict.
+
+False edges:
+(3, 6) [Manual assessment: true positive]
+
+Line 379
+Fran is friends with Bob and Ethan, so she can't be Red or Green. Let's assign her Blue:
+
+False edges:
+(4, 5) [Manual assessment: N/A]
+
+Line 397
+But Heather is friends with Ethan, who is Green. So we have a conflict.
+
+False edges:
+(4, 7) [Manual assessment: N/A]
+
+---
+
+113.txt friends
+
+Line 27
+- George is friends with: Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: true positive]
+
+Line 115
+But this doesn't work, because Dave is friends with Carol, and they can't both wear Yellow.
+
+False edges:
+(2, 3) [Manual assessment: true positive]
+
+---
+
+114.txt friends
+
+Line 529
+Fran: Green... no, Fran is friends with Bob, who is Green. So, Fran: Blue... no, Fran is friends with Carol, who is Blue. So, Fran: Yellow... no, Fran is friends with Ethan, who is Yellow. So, Fran must be Red, but she's friends with Alice and Dave, both of whom are Red.
+
+False edges:
+(4, 5) [Manual assessment: true positive]
+
+---
+
+115.txt friends
+
+Line 11
+- George: friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: true positive]
+
+---
+
+118.txt friends
+
+Line 152
+- But Alice is friends with Dave, who we assigned Red. So there's a conflict.
+
+False edges:
+(0, 3) [Manual assessment: true positive]
+
+---
+
+121.txt friends
+
+Line 98
+3. Fran: Fran is friends with Dave and Bob, so Fran can't be Red or Green. So Fran is Blue.
+
+False edges:
+(1, 5) [Manual assessment: true positive]
+
+Line 99
+4. George: George is friends with Bob, Fran, and Dave, so George can't be Red, Blue, or Green. So George is Yellow.
+
+False edges:
+(3, 6) [Manual assessment: true positive]
+
+---
+
+124.txt friends
+
+Line 91
+But there's a problem: Ethan is friends with Bob (both green). So we need to choose a different color for Ethan. Ethan is friends with Alice (red), Carol (blue), and Dave (yellow). So Ethan can't be red, blue, yellow, or green. But these are all our available colors. So it seems like we've hit a roadblock.
+
+False edges:
+(1, 4) [Manual assessment: true positive]
+
+Line 295
+- George: George is connected to Dave and Ethan, so George can't be red or green. George is blue.
+
+False edges:
+(3, 6) [Manual assessment: true positive]
+
+---
+
+126.txt friends
+
+Line 77
+Wait, this is a problem. Ethan is friends with Carol who is also Blue. This is a contradiction.
+
+False edges:
+(2, 4) [Manual assessment: true positive]
+
+---
+
+127.txt friends
+
+Line 283
+But Carol is connected to Bob according to the problem. Let me review the connections again...
+
+False edges:
+(1, 2) [Manual assessment: true positive]
+
+---
+
+134.txt friends
+
+Line 39
+Ethan is friends with Alice (Red), Bob (Green), Carol (Blue), and Dave (Yellow). Since we've used all four colors, this is a problem.
+
+False edges:
+(3, 4) [Manual assessment: true positive]
+
+---
+
+135.txt friends
+
+Line 133
+Oops, that's a conflict too because Carol is already Blue and Fran is friends with Carol.
+
+False edges:
+(2, 5) [Manual assessment: true positive]
+
+Line 344
+Actually, I've been over-complicating this. Let me make sure Alice and Bob are friends or not:
+
+False edges:
+(0, 1) [Manual assessment: false positive]
+
+---
+
+139.txt friends
+
+Line 31
+Dave is connected to Alice (R), Bob (R), Carol (G), so Dave must be different.
+
+False edges:
+(2, 3) [Manual assessment: true positive]
+
+---
+
+151.txt friends
+
+Line 11
+- George is friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: true positive]
+
+---
+
+153.txt friends
+
+Line 196
+- Fran is friends with Alice, Bob, Carol, Dave, Heather, and Ethan, so Fran cannot be Yellow.
+
+False edges:
+(4, 5) [Manual assessment: true positive]
+
+---
+
+154.txt friends
+
+Line 177
+Wait, Fran can't be Blue because Dave is already Blue, and Dave and Fran are friends.
+
+False edges:
+(3, 5) [Manual assessment: true positive]
+
+Line 326
+However, I realized there's a problem. George (Yellow) is friends with Heather (Green), but George is also friends with Ethan (Yellow). It says "Dave is friends with Ethan, Dave is friends with George, Dave is friends with Heather, Ethan is friends with Heather, Fran is friends with George, Fran is friends with Heather, and George is friends with Heather." So everyone is friends with Heather except Bob. And George is friends with Ethan.
+
+False edges:
+(4, 6) [Manual assessment: true positive]
+
+---
+
+159.txt friends
+
+Line 211
+4. Dave: Yellow (doesn't work, Dave is friends with Carol)
+
+False edges:
+(2, 3) [Manual assessment: true positive]
+
+---
+
+16.txt friends
+
+Line 122
+Actually, revisiting the friendship relations, Bob IS friends with Dave according to the original list. I've been making an error. Let me try again with the correct understanding:
+
+False edges:
+(1, 3) [Manual assessment: true positive]
+
+---
+
+160.txt friends
+
+Line 481
+But this doesn't work either because Carol is already Blue, and Carol is friends with Fran.
+
+False edges:
+(2, 5) [Manual assessment: true positive]
+
+---
+
+161.txt friends
+
+Line 9
+- George is friends with Alice, Carol, Dave, Ethan, Fran, Heather (not Bob)
+
+False edges:
+(6, 7) [Manual assessment: true positive]
+
+Line 169
+4. Dave: Dave is friends with Alice, Bob, and Carol, so he can't be Red, Green, or Blue. Let's try Yellow.
+
+False edges:
+(2, 3) [Manual assessment: true positive]
+
+---
+
+168.txt friends
+
+Line 31
+Wait, I'm already running into a problem. Dave is friends with Alice, and they both have Green. Let me reconsider.
+
+False edges:
+(0, 3) [Manual assessment: true positive]
+
+---
+
+171.txt friends
+
+Line 171
+Bob can't have Color 1 (George) or Color 3 (Alice): Bob gets Color 2. Oh wait, Bob is friends with Dave who is already Color 2. This doesn't work.
+
+False edges:
+(1, 3) [Manual assessment: true positive]
+
+---
+
+183.txt friends
+
+Line 29
+Let's choose a color for Carol. Carol can't be green (because Bob is her friend), so she can be red, blue, or yellow. However, we know that Alice is red and Carol is friends with Alice, so Carol can't be red. So Carol can be blue or yellow. Let's choose blue.
+
+False edges:
+(0, 2) [Manual assessment: true positive]
+
+---
+
+187.txt friends
+
+Line 228
+- Ethan: Yellow is unavailable (because Dave is Yellow and Dave is friends with Ethan)
+
+False edges:
+(3, 4) [Manual assessment: true positive]
+
+---
+
+19.txt friends
+
+Line 44
+5. But Ethan is already using Blue, and Heather is friends with Ethan...
+
+False edges:
+(4, 7) [Manual assessment: true positive]
+
+Line 79
+   - Fran is adjacent to Carol, so skip.
+
+False edges:
+(2, 5) [Manual assessment: true positive]
+
+---
+
+190.txt friends
+
+Line 365
+Alice -- Bob
+
+False edges:
+(0, 1) [Manual assessment: false positive]
+
+Line 366
+Alice -- Heather
+
+False edges:
+(0, 7) [Manual assessment: false positive]
+
+Line 367
+Bob -- Ethan
+
+False edges:
+(1, 4) [Manual assessment: false positive]
+
+Line 368
+Bob -- Fran
+
+False edges:
+(1, 5) [Manual assessment: false positive]
+
+Line 369
+Carol -- Dave
+
+False edges:
+(2, 3) [Manual assessment: false positive]
+
+Line 370
+Dave -- Fran
+
+False edges:
+(3, 5) [Manual assessment: false positive]
+
+Line 371
+Ethan -- George
+
+False edges:
+(4, 6) [Manual assessment: false positive]
+
+---
+
+191.txt friends
+
+Line 45
+Wait, we have a problem. Ethan is friends with Alice, Bob, and Dave, who are already assigned Red, Green, and Yellow, respectively. The only color left is Blue, but we need to check if Ethan is friends with Carol, who has been assigned Blue. Yes, Ethan is friends with Carol.
+
+False edges:
+(2, 4) [Manual assessment: true positive]
+
+---
+
+192.txt friends
+
+Line 88
+- Fran is friends with: Alice, Bob, Dave, Ethan, George, Heather
+
+False edges:
+(5, 7) [Manual assessment: true positive]
+
+Line 366
+   But wait, Ethan is friends with Bob, who is already color 2. That's a conflict.
+
+False edges:
+(1, 4) [Manual assessment: true positive]
+
+---
+
+2.txt friends
+
+Line 197
+- Fran is friends with Ethan and George.
+
+False edges:
+(5, 6) [Manual assessment: true positive]
+
+---
+
+200.txt friends
+
+Line 468
+But Fran and George are friends, and they're both Red. So this doesn't work.
+
+False edges:
+(5, 6) [Manual assessment: true positive]
+
+---
+
+205.txt friends
+
+Line 40
+But wait, Ethan and Bob are friends, so they can't both be blue. Also, Fran and Alice are friends, so they can't both be green. So this coloring doesn't work.
+
+False edges:
+(0, 5) [Manual assessment: true positive]
+
+Line 494
+But wait... because Dave is friends with Ethan, they can't have the same color.
+
+False edges:
+(3, 4) [Manual assessment: true positive]
+
+---
+
+208.txt friends
+
+Line 321
+- Alice is friends with Carol
+
+False edges:
+(0, 2) [Manual assessment: false positive]
+
+Line 322
+- Bob is friends with Carol
+
+False edges:
+(1, 2) [Manual assessment: false positive]
+
+Line 323
+- Bob is friends with George
+
+False edges:
+(1, 6) [Manual assessment: false positive]
+
+Line 324
+- Dave is friends with Ethan
+
+False edges:
+(3, 4) [Manual assessment: false positive]
+
+Line 325
+- Dave is friends with Fran
+
+False edges:
+(3, 5) [Manual assessment: false positive]
+
+Line 326
+- Ethan is friends with Fran
+
+False edges:
+(4, 5) [Manual assessment: false positive]
+
+---
+
+215.txt friends
+
+Line 91
+- Ethan: Blue (Is this valid? No, Ethan is friends with Carol who is Blue. Let's try a different color.)
+
+False edges:
+(2, 4) [Manual assessment: true positive]
+
+---
+
+217.txt friends
+
+Line 536
+- Carol can't be Red (Ethan's color), Green (Bob, Fran, Heather's color), or Blue (Alice's color). So Carol must be Yellow. But Dave is already Yellow, and Carol is friends with Dave. This is a conflict.
+
+False edges:
+(2, 3) [Manual assessment: true positive]
+
+---
+
+218.txt friends
+
+Line 183
+Alice is adjacent to Dave, so skip.
+
+False edges:
+(0, 3) [Manual assessment: true positive]
+
+Line 404
+The problem is that Carol is friends with Alice (Green), Bob (Red), Fran (Blue), and Heather (Yellow). So, Carol can't be assigned any of the 4 colors, making it impossible to color the graph with 4 colors.
+
+False edges:
+(1, 2) [Manual assessment: true positive]
+
+---
+
+222.txt friends
+
+Line 89
+Wait, but Dave is friends with Carol who is Blue. So Dave can't be Blue either. Dave: Yellow
+
+False edges:
+(2, 3) [Manual assessment: true positive]
+
+---
+
+231.txt friends
+
+Line 11
+- George is friends with: Alice, Carol, Dave, Ethan, Fran, Heather (not Bob)
+
+False edges:
+(6, 7) [Manual assessment: true positive]
+
+Line 201
+  - But George is friends with all the people who have the colors Red, Blue, and Yellow. So George can only be Green. But is George friends with Bob, who is already Green? Looking at Bob's friends in the problem: "Bob is friends with Alice, Bob is friends with Carol, Bob is friends with Ethan, Bob is friends with Fran."
+
+False edges:
+(1, 6) [Manual assessment: false positive]
+
+---
+
+237.txt friends
+
+Line 507
+So, potential pairs of Alice's friends who can have the same color are: (Bob, Carol), (Bob, Ethan), (Dave, George), (Ethan, Heather), (George, Heather).
+
+False edges:
+(1, 2) [Manual assessment: false positive]
+(1, 4) [Manual assessment: false positive]
+(3, 6) [Manual assessment: false positive]
+(4, 7) [Manual assessment: false positive]
+(6, 7) [Manual assessment: false positive]
+
+---
+
+238.txt friends
+
+Line 12
+George's friends: Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: true positive]
+
+Line 193
+Alice -- Dave, Fran
+
+False edges:
+(0, 3) [Manual assessment: false positive]
+
+---
+
+247.txt friends
+
+Line 11
+- George is friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: true positive]
+
+---
+
+248.txt friends
+
+Line 143
+But wait, George is friends with Bob, and Bob is colored Green. So George can't be Green. Let me double-check if George and Bob are friends.
+
+False edges:
+(1, 6) [Manual assessment: true positive]
+
+---
+
+249.txt friends
+
+Line 177
+George is friends with: Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: true positive]
+
+---
+
+251.txt friends
+
+Line 10
+George is friends with: Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: true positive]
+
+---
+
+257.txt friends
+
+Line 143
+Finally, we have Bob and Heather left. But Bob is friends with Heather, so they need different colors. But we've already used all 4 colors. This suggests the problem might not have a solution with only 4 colors.
+
+False edges:
+(1, 7) [Manual assessment: true positive]
+
+---
+
+260.txt friends
+
+Line 345
+- Bob is friends with Dave, Fran, George, and Alice.
+
+False edges:
+(0, 1) [Manual assessment: true positive]
+
+---
+
+269.txt friends
+
+Line 141
+But Ethan is also Yellow, and Fran is friends with Ethan according to constraint 16 (Dave and Fran can't have the same color). Wait, that's not right. Let me check the friend list again.
+
+False edges:
+(4, 5) [Manual assessment: true positive]
+
+Line 366
+Dave: Blue (but Carol and Dave are friends, so this doesn't work)
+
+False edges:
+(2, 3) [Manual assessment: true positive]
+
+---
+
+271.txt friends
+
+Line 12
+George is friends with: Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: true positive]
+
+---
+
+282.txt friends
+
+Line 122
+Wait, but I already assigned Carol the color blue, and Carol and George are friends. This doesn't work.
+
+False edges:
+(2, 6) [Manual assessment: true positive]
+
+---
+
+283.txt friends
+
+Line 112
+But Heather is friends with Alice who is already wearing Green. So Heather needs a new color:
+
+False edges:
+(0, 7) [Manual assessment: true positive]
+
+Line 238
+Fran is friends with Alice (Red), Bob (Green), Carol (Green), Dave (Blue), and Ethan (Yellow). This means Fran needs a 5th color.
+
+False edges:
+(4, 5) [Manual assessment: true positive]
+
+---
+
+284.txt friends
+
+Line 98
+Fran is friends with Dave and Ethan, so Fran can't be Red or Green. Fran: Blue
+
+False edges:
+(3, 5) [Manual assessment: true positive]
+
+Line 107
+Bob is friends with Heather and Alice, so Bob can't be Red or Green. Bob: Blue
+
+False edges:
+(1, 7) [Manual assessment: true positive]
+
+---
+
+285.txt friends
+
+Line 333
+And Fran and Carol and Ethan are friends, so Fran can't be Blue.
+
+False edges:
+(2, 4) [Manual assessment: true positive]
+
+---
+
+286.txt friends
+
+Line 81
+From the matrix, George is not friends with Fran. But the problem statement says Fran is friends with George. Let me reread and count.
+
+False edges:
+(5, 6) [Manual assessment: true positive]
+
+Line 326
+- Alice (friends with Ethan and Heather): Not Red, not Green, so Blue. But Alice is friends with Carol, who is already Blue. Contradiction.
+
+False edges:
+(0, 2) [Manual assessment: true positive]
+
+---
+
+289.txt friends
+
+Line 11
+- George is friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: true positive]
+
+---
+
+302.txt friends
+
+Line 232
+- Bob is friends with Dave (is this given? Let me check...)
+
+False edges:
+(1, 3) [Manual assessment: true positive]
+
+Line 244
+- Carol is friends with Heather (is this given? Let me check...)
+
+False edges:
+(2, 7) [Manual assessment: true positive]
+
+---
+
+311.txt friends
+
+Line 61
+Bob is friends with Alice, Dave, Ethan, Fran: Need to check if Bob is friends with Dave. This isn't stated in the problem, so let's assume Bob and Dave aren't friends.
+
+False edges:
+(1, 3) [Manual assessment: false positive]
+
+---
+
+314.txt friends
+
+Line 439
+(Alice, Dave), (Alice, Ethan), (Bob, Dave), (Carol, George)
+
+False edges:
+(0, 3) [Manual assessment: false positive]
+(0, 4) [Manual assessment: false positive]
+(1, 3) [Manual assessment: false positive]
+(2, 6) [Manual assessment: false positive]
+
+---
+
+318.txt friends
+
+Line 45
+- But wait, Fran is friends with Dave, and we've already assigned Dave the color Blue. This is a conflict.
+
+False edges:
+(3, 5) [Manual assessment: true positive]
+
+---
+
+334.txt friends
+
+Line 211
+But Fran is friends with Alice, Bob, Carol, Dave, and Ethan, which means she can't use Red, Green, Blue, or Yellow. Since we only have 4 colors, this is impossible.
+
+False edges:
+(4, 5) [Manual assessment: true positive]
+
+---
+
+42.txt friends
+
+Line 12
+- George is friends with: Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: true positive]
+
+Line 125
+But wait, we just said Bob is Blue. And Bob is connected to Dave. So Dave can't be Blue. 
+
+False edges:
+(1, 3) [Manual assessment: true positive]
+
+Line 351
+Ethan can't be Blue, because he's friends with Bob and Dave. He can't be Green because he's friends with George. He can't be Red because he's friends with Heather. So Ethan must be Yellow. But is Ethan friends with Carol, who is also Yellow?
+
+False edges:
+(2, 4) [Manual assessment: false positive]
+
+---
+
+48.txt friends
+
+Line 177
+- Dave has neighbors George (Red), Heather (Green), Alice (Blue), and Ethan (not colored yet). So Dave can only be Yellow, but that conflicts with Carol being Yellow, and Carol is friends with Dave.
+
+False edges:
+(2, 3) [Manual assessment: true positive]
+
+Line 366
+But Dave is friends with Bob, so they can't both be Green.
+
+False edges:
+(1, 3) [Manual assessment: true positive]
+
+Line 377
+But Fran is friends with Dave, so they can't both be Yellow.
+
+False edges:
+(3, 5) [Manual assessment: true positive]
+
+---
+
+49.txt friends
+
+Line 28
+- Dave (friends with Fran) can't be Red. But Dave is also friends with Alice, Carol, and George. So Dave can't be Green or Yellow either. Let's try Blue. But that conflicts with Bob, and Bob is friends with Dave. So Dave can't be Blue either.
+
+False edges:
+(1, 3) [Manual assessment: true positive]
+
+Line 419
+But is Heather friends with Alice and Ethan, who are both Green? Let me check.
+
+False edges:
+(0, 7) [Manual assessment: false positive]
+(4, 7) [Manual assessment: false positive]
+
+---
+
+50.txt friends
+
+Line 36
+George: Friends with Alice, Bob, Dave, Ethan, Fran, Heather (6 friends)
+
+False edges:
+(6, 7) [Manual assessment: true positive]
+
+---
+
+51.txt friends
+
+Line 193
+So, George and Ethan ARE friends.
+
+False edges:
+(4, 6) [Manual assessment: true positive]
+
+---
+
+56.txt friends
+
+Line 69
+But now we have a problem: Heather is friends with Carol, and they both have Green. This is a violation of our constraint.
+
+False edges:
+(2, 7) [Manual assessment: true positive]
+
+---
+
+57.txt friends
+
+Line 262
+Wait, that's not right. Heather is adjacent to Carol, so they can't have the same color.
+
+False edges:
+(2, 7) [Manual assessment: true positive]
+
+---
+
+6.txt friends
+
+Line 14
+7. George is friends with Alice, Carol, Dave, Ethan, Fran, and Heather.
+
+False edges:
+(6, 7) [Manual assessment: true positive]
+
+---
+
+62.txt friends
+
+Line 64
+Ethan can't be Red (Alice) or Blue (Carol). So Ethan can be Green or Yellow. However, Ethan is friends with Dave who is Yellow, so let's assign Ethan: Green.
+
+False edges:
+(3, 4) [Manual assessment: true positive]
+
+---
+
+71.txt friends
+
+Line 100
+Wait, we need to check if Fran is friends with Alice or Dave, who are both Blue. Fran is friends with Alice, so Fran can't be Blue. Let's say Fran is Yellow.
+
+False edges:
+(0, 5) [Manual assessment: true positive]
+
+Line 172
+- George is friends with Alice, Bob, Heather, and Ethan.
+
+False edges:
+(4, 6) [Manual assessment: true positive]
+
+---
+
+75.txt friends
+
+Line 231
+3. Carol: Since Carol is friends with Alice and Bob, Carol can't be red or blue. Carol can be green or yellow. Let's say Carol is green.
+
+False edges:
+(1, 2) [Manual assessment: true positive]
+
+---
+
+84.txt friends
+
+Line 158
+8. Heather, being friends with Alice, Bob, Carol, Dave, Fran, and George, can't be Red, Green, Blue, Red (which is a repeat), Green (which is a repeat), or Blue (which is a repeat). So, Heather can only be Yellow. But Ethan is already Yellow, and Heather is friends with Ethan.
+
+False edges:
+(4, 7) [Manual assessment: true positive]
+
+---
+
+88.txt friends
+
+Line 132
+Dave is friends with Alice (Red), Carol (Blue), and Bob (Green), so he can't be Red, Blue, or Green. He can be Yellow.
+
+False edges:
+(1, 3) [Manual assessment: true positive]
+
+Line 227
+Actually, I just realized I made a mistake again by saying Fran is friends with Dave. Let me double-check the friendship list again:
+
+False edges:
+(3, 5) [Manual assessment: true positive]
+
+Line 467
+- Carol is friends with Heather, Fran, Alice, and Ethan. ❌
+
+False edges:
+(2, 4) [Manual assessment: true positive]
+
+---
+
+93.txt friends
+
+Line 102
+2. Heather: Since Heather is friends with Bob, Heather can't be Red. So Heather gets Green.
+
+False edges:
+(1, 7) [Manual assessment: true positive]
+
+---
+
+95.txt friends
+
+Line 174
+Wait, now we have a problem because Ethan is friends with Heather, and they're both blue. Let's backtrack and assign Ethan to something else. The only other option is yellow, but Ethan is also friends with Bob, who's yellow.
+
+False edges:
+(4, 7) [Manual assessment: true positive]
+
+---
+
+98.txt friends
+
+Line 28
+Fran: Green (but wait, Fran is friends with Bob, who is also wearing Green, so this won't work)
+
+False edges:
+(1, 5) [Manual assessment: true positive]
+
+Line 381
+- Since Carol is friends with Alice (note: I think I was previously confused), Carol cannot be Red.
+
+False edges:
+(0, 2) [Manual assessment: true positive]
+
+---
+

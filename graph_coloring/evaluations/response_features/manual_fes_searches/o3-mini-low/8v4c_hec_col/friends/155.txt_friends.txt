@@ -1,0 +1,71 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 7), (4, 5), (5, 6), (5, 7)]
+
+Complement: [(0, 5), (2, 3), (2, 5), (3, 6), (4, 6), (4, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you assign the four shirt‐colors to the eight people subject to the given “no two friends share a color” rule, you run into a contradiction.
+
+Let’s describe the situation. Label the four colors as Red, Green, Blue, and Yellow. The friendship relationships form the following “graph” (an edge means “is friends with”):
+
+ • Alice is friends with Bob, Carol, Dave, Ethan, George, Heather.  
+ • Bob is friends with Alice, Carol, Dave, Ethan, Fran, George, Heather.  
+ • Carol is friends with Alice, Bob, Ethan, George, Heather.  
+ • Dave is friends with Alice, Bob, Ethan, Fran, Heather.  
+ • Ethan is friends with Alice, Bob, Carol, Dave, Fran.  
+ • Fran is friends with Bob, Dave, Ethan, George, Heather.  
+ • George is friends with Alice, Bob, Carol, Fran.  
+ • Heather is friends with Alice, Bob, Carol, Dave, Fran.
+
+Notice that Bob (with 7 friends) and Alice (with 6 friends) have many friends among the others. In any valid shirt‐coloring the rule “no two friends share a color” forces each pair of these two to get different colors. So suppose without loss of generality that Bob gets Red and Alice gets Blue.
+
+Now consider the following:
+ • Carol is friends with both Bob (Red) and Alice (Blue), so Carol must use a color from {Green, Yellow}.  
+ • Likewise, Dave (friends with Bob and Alice) must choose from {Green, Yellow}.
+
+Thus Carol and Dave must “use up” the two remaining colors. Now look at Ethan. His friends are Alice (Blue), Bob (Red), Carol, Dave, and Fran. But because Carol and Dave have taken Green and Yellow (no matter in which order), Ethan sees all four colors already on his friends:
+  Red (Bob), Blue (Alice), Green (one of Carol/Dave), Yellow (the other one). 
+
+Thus Ethan, who is adjacent to these four people, would have no color left to choose from. No matter how one tinkers with the assignments, the constraints force the neighbors of Ethan to cover all the four colors.
+
+For this reason there is no way to assign a color to each person so that no two friends wear the same colored shirt.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you assign the four shirt‐colors to the eight people subject to the given “no two friends share a color” rule, you run into a contradiction.
+
+Let’s describe the situation. Label the four colors as Red, Green, Blue, and Yellow. The friendship relationships form the following “graph” (an edge means “is friends with”):
+
+ • #0 is friends with #1, #2, #3, #4, #6, #7.  
+ • #1 is friends with #0, #2, #3, #4, #5, #6, #7.  
+ • #2 is friends with #0, #1, #4, #6, #7.  
+ • #3 is friends with #0, #1, #4, #5, #7.  
+ • #4 is friends with #0, #1, #2, #3, #5.  
+ • #5 is friends with #1, #3, #4, #6, #7.  
+ • #6 is friends with #0, #1, #2, #5.  
+ • #7 is friends with #0, #1, #2, #3, #5.
+
+Notice that #1 (with 7 friends) and #0 (with 6 friends) have many friends among the others. In any valid shirt‐coloring the rule “no two friends share a color” forces each pair of these two to get different colors. So suppose without loss of generality that #1 gets Red and #0 gets Blue.
+
+Now consider the following:
+ • #2 is friends with both #1 (Red) and #0 (Blue), so #2 must use a color from {Green, Yellow}.  
+ • Likewise, #3 (friends with #1 and #0) must choose from {Green, Yellow}.
+
+Thus #2 and #3 must “use up” the two remaining colors. Now look at #4. His friends are #0 (Blue), #1 (Red), #2, #3, and #5. But because #2 and #3 have taken Green and Yellow (no matter in which order), #4 sees all four colors already on his friends:
+  Red (#1), Blue (#0), Green (one of #2/#3), Yellow (the other one). 
+
+Thus #4, who is adjacent to these four people, would have no color left to choose from. No matter how one tinkers with the assignments, the constraints force the neighbors of #4 to cover all the four colors.
+
+For this reason there is no way to assign a color to each person so that no two friends wear the same colored shirt.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

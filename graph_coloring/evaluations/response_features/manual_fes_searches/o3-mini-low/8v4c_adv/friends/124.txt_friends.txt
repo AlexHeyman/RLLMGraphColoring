@@ -1,0 +1,75 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 5), (0, 7), (1, 3), (1, 4), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (0, 6), (1, 2), (1, 5), (1, 6), (2, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four colors (red, green, blue, yellow) to the eight people – in such a way that every friend‐pair gets different colors – exists.
+
+Below we describe one way to see there is no valid coloring.
+
+Label the eight people as follows:
+  A = Alice, B = Bob, C = Carol, D = Dave, E = Ethan, F = Fran, G = George, and H = Heather.
+
+The friendship relations are given by:
+  A’s friends: B, C, E, F, H
+  B’s friends: A, D, E, H
+  C’s friends: A, D, E, G, H
+  D’s friends: B, C, E, F, G, H
+  E’s friends: A, B, C, D, F, G, H
+  F’s friends: A, D, E, G, H
+  G’s friends: C, D, E, F
+  H’s friends: A, B, C, D, E, F
+
+In any proper coloring each person must have a color different from each of their friends. In particular, notice Heather’s friends are A, B, C, D, E, and F. Since there are only four colors available, the six people who are friends with Heather must use at most three distinct colors for Heather to have an available fourth option. (If her six friends used all four colors among them—even if some colors are repeated—that would preclude Heather from using any color.) 
+
+One can check the graph’s structure forces these six vertices (A, B, C, D, E, F) to receive at least four distinct colors. For example, consider the following observations:
+  • A is adjacent to B, C, E, F.
+  • D is adjacent to B, C, E, F.
+Thus A and D cannot share a color (and indeed they have no edge between them so they could try to share), but then look at B and E: B is adjacent both to A (which might equal D) and E, and E is adjacent to D. In many attempts to “collapse” colors among these six, one runs into a conflict – in every valid partial coloring of the subgraph induced by A, B, C, D, E, and F (forced by the many interconnections among them) it turns out that four distinct colors appear. 
+
+Because—even under the best circumstances—the six friends of Heather end up using all four colors, it would then be impossible to assign Heather a color different from all her friends.
+
+Therefore, no color assignment exists satisfying the condition that no two friends wear the same colored shirt.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of the four colors (red, green, blue, yellow) to the eight people – in such a way that every friend‐pair gets different colors – exists.
+
+Below we describe one way to see there is no valid coloring.
+
+Label the eight people as follows:
+  A = #0, B = #1, C = #2, D = #3, E = #4, F = #5, G = #6, and H = #7.
+
+The friendship relations are given by:
+  A’s friends: B, C, E, F, H
+  B’s friends: A, D, E, H
+  C’s friends: A, D, E, G, H
+  D’s friends: B, C, E, F, G, H
+  E’s friends: A, B, C, D, F, G, H
+  F’s friends: A, D, E, G, H
+  G’s friends: C, D, E, F
+  H’s friends: A, B, C, D, E, F
+
+In any proper coloring each person must have a color different from each of their friends. In particular, notice #7’s friends are A, B, C, D, E, and F. Since there are only four colors available, the six people who are friends with #7 must use at most three distinct colors for #7 to have an available fourth option. (If her six friends used all four colors among them—even if some colors are repeated—that would preclude #7 from using any color.) 
+
+One can check the graph’s structure forces these six vertices (A, B, C, D, E, F) to receive at least four distinct colors. For example, consider the following observations:
+  • A is adjacent to B, C, E, F.
+  • D is adjacent to B, C, E, F.
+Thus A and D cannot share a color (and indeed they have no edge between them so they could try to share), but then look at B and E: B is adjacent both to A (which might equal D) and E, and E is adjacent to D. In many attempts to “collapse” colors among these six, one runs into a conflict – in every valid partial coloring of the subgraph induced by A, B, C, D, E, and F (forced by the many interconnections among them) it turns out that four distinct colors appear. 
+
+Because—even under the best circumstances—the six friends of #7 end up using all four colors, it would then be impossible to assign #7 a color different from all her friends.
+
+Therefore, no color assignment exists satisfying the condition that no two friends wear the same colored shirt.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

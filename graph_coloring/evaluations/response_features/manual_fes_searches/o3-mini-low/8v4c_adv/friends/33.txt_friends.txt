@@ -1,0 +1,73 @@
+Edges: [(0, 2), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 3), (0, 4), (1, 2), (2, 3), (3, 4), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We start by drawing the “friendship‐graph” on the eight people. (Two people share an edge if and only if they are friends.) The list of friendships is as follows:
+
+ • Alice is friends with Carol, Fran, George, and Heather.
+ • Bob is friends with Dave, Ethan, Fran, George, and Heather.
+ • Carol is friends with Alice, Ethan, Fran, George, and Heather.
+ • Dave is friends with Bob, Fran, George, and Heather.
+ • Ethan is friends with Bob, Carol, George, and Heather.
+ • Fran is friends with Alice, Bob, Carol, Dave, George, and Heather.
+ • George is friends with Alice, Bob, Carol, Dave, Ethan, Fran, and Heather.
+ • Heather is friends with Alice, Bob, Carol, Dave, Ethan, Fran, and George.
+
+An especially crucial observation is that the set {Bob, Fran, George, Heather} forms a clique—that is, every pair among these four are friends. (Check: Bob is friends with Fran, George, and Heather; Fran, George, and Heather are all pairwise friends.) In any graph coloring problem, if we have a clique of size k then k different colors are needed for that clique. Here, k = 4 so Bob, Fran, George, and Heather must all wear different colors. Since only four colors (red, green, blue, yellow) are available, the clique “uses up” all four colors.
+
+Now look at the remaining people, specifically Carol and Alice:
+ • Carol is friends with Fran, George, and Heather (all members of the clique) but not with Bob.
+ • Alice is friends with Fran, George, and Heather (again only three of the clique) and with Carol.
+
+Because Fran, George, and Heather wear, say, three distinct colors (whatever the assignment is among red, green, blue, yellow) the only color available to Carol would be the fourth color—the one assigned to Bob. So we would be forced to set:
+
+ Bob: (say) Red
+ Fran, George, Heather: the three other colors (green, blue, yellow in some order)
+ Carol: must then be Red (because her only option is the color not used among those three).
+
+But then turn to Alice, who is friends with Carol (now wearing Red) as well as with Fran, George, and Heather (who use green, blue, and yellow). That means every color is taken among the people with whom Alice is friends. Therefore, there is no available color for Alice, a contradiction.
+
+Since no matter how one assigns the four colors to the clique, both Carol and Alice (who must be assigned a color that is not seen among their friends) cannot be simultaneously accommodated, it is impossible to give everyone a shirt color so that no two friends share the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We start by drawing the “friendship‐graph” on the eight people. (Two people share an edge if and only if they are friends.) The list of friendships is as follows:
+
+ • #0 is friends with #2, #5, #6, and #7.
+ • #1 is friends with #3, #4, #5, #6, and #7.
+ • #2 is friends with #0, #4, #5, #6, and #7.
+ • #3 is friends with #1, #5, #6, and #7.
+ • #4 is friends with #1, #2, #6, and #7.
+ • #5 is friends with #0, #1, #2, #3, #6, and #7.
+ • #6 is friends with #0, #1, #2, #3, #4, #5, and #7.
+ • #7 is friends with #0, #1, #2, #3, #4, #5, and #6.
+
+An especially crucial observation is that the set {#1, #5, #6, #7} forms a clique—that is, every pair among these four are friends. (Check: #1 is friends with #5, #6, and #7; #5, #6, and #7 are all pairwise friends.) In any graph coloring problem, if we have a clique of size k then k different colors are needed for that clique. Here, k = 4 so #1, #5, #6, and #7 must all wear different colors. Since only four colors (red, green, blue, yellow) are available, the clique “uses up” all four colors.
+
+Now look at the remaining people, specifically #2 and #0:
+ • #2 is friends with #5, #6, and #7 (all members of the clique) but not with #1.
+ • #0 is friends with #5, #6, and #7 (again only three of the clique) and with #2.
+
+Because #5, #6, and #7 wear, say, three distinct colors (whatever the assignment is among red, green, blue, yellow) the only color available to #2 would be the fourth color—the one assigned to #1. So we would be forced to set:
+
+ #1: (say) Red
+ #5, #6, #7: the three other colors (green, blue, yellow in some order)
+ #2: must then be Red (because her only option is the color not used among those three).
+
+But then turn to #0, who is friends with #2 (now wearing Red) as well as with #5, #6, and #7 (who use green, blue, and yellow). That means every color is taken among the people with whom #0 is friends. Therefore, there is no available color for #0, a contradiction.
+
+Since no matter how one assigns the four colors to the clique, both #2 and #0 (who must be assigned a color that is not seen among their friends) cannot be simultaneously accommodated, it is impossible to give everyone a shirt color so that no two friends share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

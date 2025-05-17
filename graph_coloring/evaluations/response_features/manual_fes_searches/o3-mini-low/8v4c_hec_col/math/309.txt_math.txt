@@ -1,0 +1,37 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 7), (6, 7)]
+
+Complement: [(0, 2), (0, 7), (1, 7), (3, 4), (5, 6)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that there is no valid 4‐coloring of the graph. (In our answer we ultimately just output “Impossible”.)
+
+One way of “proving” impossibility is to “try” to assign colors and reach a contradiction. (Below is one attempt at doing so.)
+
+Assume we have four colors: Red, Green, Blue, and Yellow, and label the vertices 0–7 as in the problem. Notice that vertices 0, 1, and 2 are “high‐degree” nodes (their neighbors are, for instance, 
+
+  0: {1,3,4,5,6},
+  1: {0,2,3,4,5,6},
+  2: {1,3,4,5,6,7}). 
+
+A natural thought is to try “sharing” a color on nonadjacent vertices to “save” colors. For example, one might start by setting vertex 0 = Red and try to “recycle” Red onto vertex 2 since (0,2) is not an edge. One such attempt is as follows:
+
+  Let 0 = Red,
+  and then choose 1 = Blue (since 1 is adjacent to 0).
+
+  Since 0 and 1 are colored Red and Blue respectively and 2 is adjacent to 1 (so cannot be Blue) it is tempting to choose 2 = Red.
+  Then for vertex 3 (adjacent to 0 (Red), 1 (Blue) and 2 (Red)) the only choices are Green or Yellow. Say we choose 3 = Green.
+  Now, consider vertex 4. Its neighbors include 0 (Red), 1 (Blue) and 2 (Red) so it seemingly must get either Green or Yellow; say we choose 4 = Yellow.
+  Then look at vertex 5. Its neighbors include 0 (Red), 1 (Blue), 2 (Red), 3 (Green) and 4 (Yellow) – all four colors now occur in its neighborhood so no color is left for vertex 5.
+
+One might try other assignments (for instance, not “reusing” Red on 0 and 2) but every plausible arrangement eventually forces a situation (typically looking at a vertex like 5, 6, or 7 whose neighbors already include all four colors) that leaves no available option. After exhausting several natural assignments, one finds that no assignment of the four colors to the eight vertices can avoid a conflict on an edge.
+
+Thus, there is no way to color every vertex red, green, blue, or yellow so that no two adjacent vertices share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

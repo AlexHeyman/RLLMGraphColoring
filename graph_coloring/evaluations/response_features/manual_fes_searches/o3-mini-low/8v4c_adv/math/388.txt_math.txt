@@ -1,0 +1,21 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (2, 3), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 5), (1, 3), (1, 7), (2, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no valid 4–coloring exists for the given graph. In other words, it is impossible to assign to every vertex one of the four colors “Red”, “Green”, “Blue” and “Yellow” so that neighbors get different colors.
+
+Below is one (brief) justification.
+
+Let the vertices be labeled 0,1,…,7 and note that the edges make the graph “almost complete”. In fact vertex 0 is adjacent to 1,2,3,4,6,7 (its only non–neighbor is 5). In a similar way one may check that several vertices (and in particular vertices 6 and 7) have many neighbors. In any assignment any vertex such as 6 will have 6 neighbors. One may check that regardless of how we try to “save” colors, it always happens that the six neighbors of vertex 6 receive all four different colors. (For example, one natural greedy ordering leads to an assignment for vertices 0,1,2,3,4,5 in which the set of colors used among these is exactly {Red,Green,Blue,Yellow} – no matter in what order one proceeds, using the edge–constraints it turns out that every 4–color assignment forces vertex 6’s neighbors to have all four colors.) Then no color remains for vertex 6 (since the color of vertex 6 must differ from that of every one of its neighbors). A more detailed systematic search (or computer–assisted check) shows that no valid 4–coloring exists.
+
+Therefore the final answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

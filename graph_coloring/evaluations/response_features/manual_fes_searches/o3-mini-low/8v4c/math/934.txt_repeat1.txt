@@ -1,0 +1,25 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (2, 6), (2, 7), (3, 5), (3, 6), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 2), (0, 5), (1, 5), (1, 6), (1, 7), (2, 5), (3, 4), (3, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no proper 4‐coloring exists. In other words, no way can we assign one of four colors (Red, Green, Blue, Yellow) to every vertex so that every edge connects vertices of different colors. (Thus the answer is “Impossible”.)
+
+Below we describe one line of investigation that shows why no matter how one might try to “separate” the vertices into four color classes there is always a “bottleneck” – a “small” set of five vertices that “force” a conflict.
+
+One can begin by “fixing” a color at a vertex. For example, suppose we set vertex 0 = Red. Then because 0 is adjacent to 1, 3, 4, 6, and 7, none of those can be Red. Next, one may try to assign to vertex 1 one of the remaining colors (say Green) so that all edges from 1 (namely (1,0), (1,2), (1,3), (1,4)) are properly colored. Continuing in this fashion – assigning colors to vertices in some order and then checking the requirements for their neighbors – one finds that after setting a few colors the “web” of restrictions “tightens up” so that the last remaining vertex (or vertices) have all four colors forbidden by their already–colored neighbors.
+
+One may try several different initial choices. For instance, if one “starts” with 0 = Red and 1 = Green, then one is forced (by the constraints on edges such as (0,1), (1,2), (0,3), (0,4) and so on) eventually to assign the only remaining possible colors to vertices 2, 3, and 4. But then following the edges (2,7), (4,7), (0,7) one finds that vertex 7 – which is adjacent to vertices 0, 2, 4, 5, and 6 – ends up with no color available among the four.
+
+Numerous trials of “back‐tracking” assignments (changing the order of vertices and trying different color choices when a dead–end is reached) lead to the same conclusion. In every attempted 4–coloring the available choices “collapse” to a conflict at one or more vertices.
+
+Thus, we conclude that it is impossible to color the given graph with four colors so that all adjacent vertices receive different colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

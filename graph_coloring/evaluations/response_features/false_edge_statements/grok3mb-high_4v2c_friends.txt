@@ -1,0 +1,41 @@
+28.txt repeat1
+
+Line 116
+Bob is only connected to Alice, Carol only to Dave.
+
+False edges:
+(1, 2) [Manual assessment: false positive]
+
+---
+
+28.txt repeat3
+
+Line 116
+Bob is only connected to Alice, Carol only to Dave.
+
+False edges:
+(1, 2) [Manual assessment: false positive]
+
+---
+
+28.txt repeat4
+
+Line 116
+Bob is only connected to Alice, Carol only to Dave.
+
+False edges:
+(1, 2) [Manual assessment: false positive]
+
+---
+
+44.txt repeat2
+
+Line 90
+No other friendships, so Bob is only connected to Alice, Carol and Dave are connected to each other and to Alice.
+
+False edges:
+(1, 2) [Manual assessment: false positive]
+(1, 3) [Manual assessment: false positive]
+
+---
+

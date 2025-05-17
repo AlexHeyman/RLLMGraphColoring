@@ -1,0 +1,65 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 5), (1, 2), (3, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to “color‐the people” (where “color” means the shirt color) by assigning one of four colors to each person so that any two friends have different colors, you will always run into trouble. In other words, there is no way to assign red, green, blue, and yellow to the eight people so that every friendship gets “proper” (different‐color) endpoints.
+
+Below is one way to explain a reason why a solution cannot exist.
+
+Let the people be  
+ Alice, Bob, Carol, Dave, Ethan, Fran, George, and Heather
+
+and let the “friendship graph” be defined by the following (mutual) edges:
+ • Alice is friends with Carol, Dave, Ethan, George, and Heather.
+ • Bob is friends with Dave, Ethan, Fran, George, and Heather.
+ • Carol is friends with Alice, Dave, Ethan, Fran, George, and Heather.
+ • Dave is friends with Alice, Bob, Carol, Fran, George, and Heather.
+ • Ethan is friends with Alice, Bob, Carol, Fran, George, and Heather.
+ • Fran is friends with Bob, Carol, Dave, Ethan, George, and Heather.
+ • George is friends with Alice, Bob, Carol, Dave, Ethan, and Fran.
+ • Heather is friends with Alice, Bob, Carol, Dave, Ethan, and Fran.
+
+Notice in particular that the two “last‐born” vertices in the list, George and Heather, are each adjacent to the other six people (all except each other). Therefore, consider the set of six people {Alice, Bob, Carol, Dave, Ethan, Fran} who are all friends with both George and Heather. In any proper 4–coloring of the whole graph (that is, any assignment of the four shirt colors so that every pair of friends has different colors), the six people in {A, B, C, D, E, F} must receive colors so that when you finally try to choose a color for George (whose friends are exactly these six), the six colors used on its neighbors leave no “available” color. (The same happens when later you try to assign a color for Heather.)
+
+One might try to “save” a color by having one of the colors appear twice among neighbors. But if you carefully check the friendships among A, B, C, D, E, and F – which themselves force several different colors – it turns out that no matter what the assignment, the collection of colors used on that set always turns out to be all four colors. And then it is impossible to give George (or Heather) a color that is different from every one of his (or her) six friends.
+
+Thus, there is no way to assign red, green, blue, and yellow to the eight people so that friends wear different colors.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to “color‐the people” (where “color” means the shirt color) by assigning one of four colors to each person so that any two friends have different colors, you will always run into trouble. In other words, there is no way to assign red, green, blue, and yellow to the eight people so that every friendship gets “proper” (different‐color) endpoints.
+
+Below is one way to explain a reason why a solution cannot exist.
+
+Let the people be  
+ #0, #1, #2, #3, #4, #5, #6, and #7
+
+and let the “friendship graph” be defined by the following (mutual) edges:
+ • #0 is friends with #2, #3, #4, #6, and #7.
+ • #1 is friends with #3, #4, #5, #6, and #7.
+ • #2 is friends with #0, #3, #4, #5, #6, and #7.
+ • #3 is friends with #0, #1, #2, #5, #6, and #7.
+ • #4 is friends with #0, #1, #2, #5, #6, and #7.
+ • #5 is friends with #1, #2, #3, #4, #6, and #7.
+ • #6 is friends with #0, #1, #2, #3, #4, and #5.
+ • #7 is friends with #0, #1, #2, #3, #4, and #5.
+
+Notice in particular that the two “last‐born” vertices in the list, #6 and #7, are each adjacent to the other six people (all except each other). Therefore, consider the set of six people {#0, #1, #2, #3, #4, #5} who are all friends with both #6 and #7. In any proper 4–coloring of the whole graph (that is, any assignment of the four shirt colors so that every pair of friends has different colors), the six people in {A, B, C, D, E, F} must receive colors so that when you finally try to choose a color for #6 (whose friends are exactly these six), the six colors used on its neighbors leave no “available” color. (The same happens when later you try to assign a color for #7.)
+
+One might try to “save” a color by having one of the colors appear twice among neighbors. But if you carefully check the friendships among A, B, C, D, E, and F – which themselves force several different colors – it turns out that no matter what the assignment, the collection of colors used on that set always turns out to be all four colors. And then it is impossible to give #6 (or #7) a color that is different from every one of his (or her) six friends.
+
+Thus, there is no way to assign red, green, blue, and yellow to the eight people so that friends wear different colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

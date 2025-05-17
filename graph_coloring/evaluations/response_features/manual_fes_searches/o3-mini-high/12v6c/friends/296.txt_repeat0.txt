@@ -1,0 +1,105 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 6), (0, 7), (0, 8), (0, 9), (0, 10), (0, 11), (1, 3), (1, 5), (1, 6), (1, 7), (1, 8), (1, 10), (2, 3), (2, 4), (2, 6), (2, 8), (2, 9), (2, 10), (2, 11), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (3, 10), (4, 5), (4, 6), (4, 7), (4, 8), (4, 9), (4, 10), (5, 7), (5, 8), (5, 9), (5, 10), (5, 11), (6, 7), (6, 8), (6, 9), (6, 11), (7, 8), (7, 9), (7, 10), (8, 9), (8, 11), (9, 10), (9, 11), (10, 11)]
+
+Complement: [(0, 3), (0, 5), (1, 2), (1, 4), (1, 9), (1, 11), (2, 5), (2, 7), (3, 11), (4, 11), (5, 6), (6, 10), (7, 11), (8, 10)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to “assign” six shirt‐colors to the 12 people, if friends must wear different colors then one “problem person” (in fact, Jack) is forced to have all six colors on his friends—leaving none available for himself.
+
+Below is one way to “force the issue.” (Names are shown here only in outline; you do not have a shirt–assignment that works.)
+
+For example, look at the friends of Jack. (By the problem statement, Jack is friends with Alice, Carol, Dave, Ethan, Fran, George, Heather, Irene, Kathy, and Larry.) One may show that the following “forced” relations occur among just a suitable subset of Jack’s friends:
+
+• Because Alice is friends with both Carol and Ethan, and Carol is friends with Ethan as well (since Alice is friends with Carol, Alice is friends with Ethan, and Carol is friends with Ethan), the three—Alice, Carol, and Ethan—must get three different colors. (A “triangle” in the friendship graph always forces three different colors.)
+
+• Now, consider Dave. Although Dave is not friends with Alice, Dave is friends with both Carol and Ethan. Therefore Dave must avoid the colors used by Carol and Ethan. In a “best‐case” assignment Dave may “reuse” the color used by Alice. (That is, one may have Dave’s color equal to Alice’s.)
+
+• Next, Fran is friends with both Dave and Ethan. Even if Fran reuses the color already used by Carol, her color “appears in the set” already.
+
+So far (on a suitable four–person subset of Jack’s friends) the colors might be distributed as follows (using the six available colors Red, Blue, Green, Yellow, Orange, and Purple):
+
+  • Alice = Red  
+  • Carol = Blue  
+  • Ethan = Green  
+  • Dave = Red                         (this is allowed because Alice and Dave are not friends)  
+  • Fran = Blue                         (Fran is not friends with Carol, so reusing Blue is legal)
+
+Thus the “induced” set (Alice, Carol, Ethan, Dave, and Fran) uses only three colors: {Red, Blue, Green}.
+
+Now look at George. He is friends with all three of Alice, Carol, and Ethan. (In fact, by the list, George is friends with Alice, Bob, Carol, Dave, Ethan, … but here we focus on the ones “forced” by the triangle.) Because George sees Red, Blue, and Green there he cannot use any of those colors. So in any proper coloring George must take a “new” color; say, Yellow.
+
+Next, consider Heather. She is friends with Dave, Ethan, Fran, and also with George. This forces Heather to avoid the colors Red, Green, Blue, and (because of George) Yellow. So Heather must get one of the remaining two colors (Orange or Purple). (No matter which one you choose, it is “new” with respect to the other friends already.)
+
+Finally, Irene is friends with Alice, Carol, Dave, Ethan, Fran, George, and Heather. Since these already use Red, Blue, Green, Yellow, and (say, if Heather got Orange) then Irene must take the sixth color (for example, Purple).
+
+Thus—in a “best‐possible” scenario for saving colors—the following forced assignment may occur on a subset of the friends of Jack:
+
+  Alice = Red  
+  Carol = Blue  
+  Ethan = Green  
+  Dave = Red (reusing Red)  
+  Fran = Blue (reusing Blue)  
+  George = Yellow (a new color)  
+  Heather = Orange (a new color)  
+  Irene = Purple (the only color left)
+
+In this scenario Jack’s friends (in our list at least these eight of his ten friends) end up “covering” all six different colors. Since Jack must wear a color different from every friend’s color, there is no seventh color available for him.
+
+Because one vertex (Jack) is forced into having no available color, it is impossible to assign six colors to all 12 people so that no pair of friends is in the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to “assign” six shirt‐colors to the 12 people, if friends must wear different colors then one “problem person” (in fact, #9) is forced to have all six colors on his friends—leaving none available for himself.
+
+Below is one way to “force the issue.” (Names are shown here only in outline; you do not have a shirt–assignment that works.)
+
+For example, look at the friends of #9. (By the problem statement, #9 is friends with #0, #2, #3, #4, #5, #6, #7, #8, #10, and #11.) One may show that the following “forced” relations occur among just a suitable subset of #9’s friends:
+
+• Because #0 is friends with both #2 and #4, and #2 is friends with #4 as well (since #0 is friends with #2, #0 is friends with #4, and #2 is friends with #4), the three—#0, #2, and #4—must get three different colors. (A “triangle” in the friendship graph always forces three different colors.)
+
+• Now, consider #3. Although #3 is not friends with #0, #3 is friends with both #2 and #4. Therefore #3 must avoid the colors used by #2 and #4. In a “best‐case” assignment #3 may “reuse” the color used by #0. (That is, one may have #3’s color equal to #0’s.)
+
+• Next, #5 is friends with both #3 and #4. Even if #5 reuses the color already used by #2, her color “appears in the set” already.
+
+So far (on a suitable four–person subset of #9’s friends) the colors might be distributed as follows (using the six available colors Red, Blue, Green, Yellow, Orange, and Purple):
+
+  • #0 = Red  
+  • #2 = Blue  
+  • #4 = Green  
+  • #3 = Red                         (this is allowed because #0 and #3 are not friends)  
+  • #5 = Blue                         (#5 is not friends with #2, so reusing Blue is legal)
+
+Thus the “induced” set (#0, #2, #4, #3, and #5) uses only three colors: {Red, Blue, Green}.
+
+Now look at #6. He is friends with all three of #0, #2, and #4. (In fact, by the list, #6 is friends with #0, #1, #2, #3, #4, … but here we focus on the ones “forced” by the triangle.) Because #6 sees Red, Blue, and Green there he cannot use any of those colors. So in any proper coloring #6 must take a “new” color; say, Yellow.
+
+Next, consider #7. She is friends with #3, #4, #5, and also with #6. This forces #7 to avoid the colors Red, Green, Blue, and (because of #6) Yellow. So #7 must get one of the remaining two colors (Orange or Purple). (No matter which one you choose, it is “new” with respect to the other friends already.)
+
+Finally, #8 is friends with #0, #2, #3, #4, #5, #6, and #7. Since these already use Red, Blue, Green, Yellow, and (say, if #7 got Orange) then #8 must take the sixth color (for example, Purple).
+
+Thus—in a “best‐possible” scenario for saving colors—the following forced assignment may occur on a subset of the friends of #9:
+
+  #0 = Red  
+  #2 = Blue  
+  #4 = Green  
+  #3 = Red (reusing Red)  
+  #5 = Blue (reusing Blue)  
+  #6 = Yellow (a new color)  
+  #7 = Orange (a new color)  
+  #8 = Purple (the only color left)
+
+In this scenario #9’s friends (in our list at least these eight of his ten friends) end up “covering” all six different colors. Since #9 must wear a color different from every friend’s color, there is no seventh color available for him.
+
+Because one vertex (#9) is forced into having no available color, it is impossible to assign six colors to all 12 people so that no pair of friends is in the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

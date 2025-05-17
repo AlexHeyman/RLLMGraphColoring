@@ -1,0 +1,43 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 5), (1, 6), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 2), (1, 4), (1, 7), (3, 6), (4, 5)]
+
+Evaluation: impossible incorrect
+
+---
+
+Let’s first analyze the situation as a graph‐coloring problem. Each person is a vertex and an edge connects two people if they are friends. In this graph the vertices represent Alice, Bob, Carol, Dave, Ethan, Fran, George, and Heather, and the given list of friendships tells us which vertices are connected.
+
+We have four colors available (red, green, blue, and yellow), and the requirement is that adjacent vertices (i.e. two people who are friends) can’t share the same color.
+
+A crucial observation is that Fran is friends with Alice, Bob, Carol, and Dave. In other words, Fran is adjacent to all of these four people. However, in the graph the vertices for Alice, Bob, Carol, and Dave are also very “tightly knit.” In fact, if you check the friendships, you will see that:
+• Alice, Bob, Carol, and Dave form a complete subgraph (a “clique”) of four people (each one is friends with the other three).
+• A proper coloring of a clique of size 4 requires four different colors.
+
+Because Fran is friends with all four of these people, the four colors will all be “taken” by her neighbors. This would force Fran to take a color that is already present among her neighbors. Thus, even before assigning colors to George, Heather, Ethan, etc., we face an insurmountable obstacle.
+
+Since no assignment of 4 colors exists that avoids a conflict on the edge between Fran and any member of {Alice, Bob, Carol, Dave}, it is impossible to assign the shirts’ colors according to the given constraints.
+
+Impossible
+
+---
+Numericized:
+---
+
+Let’s first analyze the situation as a graph‐coloring problem. Each person is a vertex and an edge connects two people if they are friends. In this graph the vertices represent #0, #1, #2, #3, #4, #5, #6, and #7, and the given list of friendships tells us which vertices are connected.
+
+We have four colors available (red, green, blue, and yellow), and the requirement is that adjacent vertices (i.e. two people who are friends) can’t share the same color.
+
+A crucial observation is that #5 is friends with #0, #1, #2, and #3. In other words, #5 is adjacent to all of these four people. However, in the graph the vertices for #0, #1, #2, and #3 are also very “tightly knit.” In fact, if you check the friendships, you will see that:
+• #0, #1, #2, and #3 form a complete subgraph (a “clique”) of four people (each one is friends with the other three).
+• A proper coloring of a clique of size 4 requires four different colors.
+
+Because #5 is friends with all four of these people, the four colors will all be “taken” by her neighbors. This would force #5 to take a color that is already present among her neighbors. Thus, even before assigning colors to #6, #7, #4, etc., we face an insurmountable obstacle.
+
+Since no assignment of 4 colors exists that avoids a conflict on the edge between #5 and any member of {#0, #1, #2, #3}, it is impossible to assign the shirts’ colors according to the given constraints.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,61 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (0, 5), (1, 2), (2, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We first list the friendship relationships (treating friendship as a mutual relation):
+
+ • Alice is friends with Bob, Carol, Ethan, George, and Heather.
+ • Bob is friends with Alice, Dave, Ethan, Fran, George, and Heather.
+ • Carol is friends with Alice, Dave, Ethan, George, and Heather.
+ • Dave is friends with Bob, Carol, Ethan, Fran, George, and Heather.
+ • Ethan is friends with Alice, Bob, Carol, Dave, George, and Heather.
+ • Fran is friends with Bob, Dave, George, and Heather.
+ • George is friends with Alice, Bob, Carol, Dave, Ethan, Fran, and Heather.
+ • Heather is friends with Alice, Bob, Carol, Dave, Ethan, Fran, and George.
+
+Notice that every one of the six people in {Alice, Bob, Carol, Dave, Ethan, Fran} is friends with both George and Heather. This is the key observation.
+
+Because George and Heather must wear different colors (since they are friends), suppose George wears one color and Heather a different color. Then each of the remaining six people is adjacent to both George and Heather and is therefore forbidden from using those two colors. That leaves only two colors for them.
+
+Now, look at the friendships among the six. For example, among Alice, Bob, and Ethan there are the edges:
+ • Alice–Bob, Alice–Ethan, and Bob–Ethan.
+This forms a triangle (an odd cycle), which cannot be 2‐colored (i.e. assigned only two colors) without a conflict.
+
+Since every assignment forces the six people to choose from just two colors, and their friendship relations (which include an odd cycle) require at least three colors for a proper coloring, it is impossible to assign the four available shirt colors so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We first list the friendship relationships (treating friendship as a mutual relation):
+
+ • #0 is friends with #1, #2, #4, #6, and #7.
+ • #1 is friends with #0, #3, #4, #5, #6, and #7.
+ • #2 is friends with #0, #3, #4, #6, and #7.
+ • #3 is friends with #1, #2, #4, #5, #6, and #7.
+ • #4 is friends with #0, #1, #2, #3, #6, and #7.
+ • #5 is friends with #1, #3, #6, and #7.
+ • #6 is friends with #0, #1, #2, #3, #4, #5, and #7.
+ • #7 is friends with #0, #1, #2, #3, #4, #5, and #6.
+
+Notice that every one of the six people in {#0, #1, #2, #3, #4, #5} is friends with both #6 and #7. This is the key observation.
+
+Because #6 and #7 must wear different colors (since they are friends), suppose #6 wears one color and #7 a different color. Then each of the remaining six people is adjacent to both #6 and #7 and is therefore forbidden from using those two colors. That leaves only two colors for them.
+
+Now, look at the friendships among the six. For example, among #0, #1, and #4 there are the edges:
+ • #0–#1, #0–#4, and #1–#4.
+This forms a triangle (an odd cycle), which cannot be 2‐colored (i.e. assigned only two colors) without a conflict.
+
+Since every assignment forces the six people to choose from just two colors, and their friendship relations (which include an odd cycle) require at least three colors for a proper coloring, it is impossible to assign the four available shirt colors so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 6,7

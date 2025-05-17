@@ -1,0 +1,79 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 4), (1, 3), (2, 5), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We begin by interpreting the friendships as an undirected graph. The vertices are the 8 people, and an edge connects two people if they are friends. The given friendships are:
+
+• Alice is friends with Bob, Carol, Dave, Fran, George, Heather.
+• Bob is friends with Carol, Ethan, Fran, George, Heather (in addition to Alice).
+• Carol is friends with Dave, Ethan, George, Heather (in addition to Alice and Bob).
+• Dave is friends with Ethan, George, Heather (in addition to Alice and Carol).
+• Ethan is friends with George, Heather (in addition to Bob, Carol, and Dave).
+• Fran is friends with George, Heather (in addition to Alice and Bob).
+
+Let’s list each person’s neighbors:
+
+• Alice: Bob, Carol, Dave, Fran, George, Heather.  
+• Bob: Alice, Carol, Ethan, Fran, George, Heather.  
+• Carol: Alice, Bob, Dave, Ethan, George, Heather.  
+• Dave: Alice, Carol, Ethan, George, Heather.  
+• Ethan: Bob, Carol, Dave, George, Heather.  
+• Fran: Alice, Bob, George, Heather.  
+• George: Alice, Bob, Carol, Dave, Ethan, Fran, Heather.  
+• Heather: Alice, Bob, Carol, Dave, Ethan, Fran, George.
+
+Notice that both George and Heather are friends with everyone else. Now look at the set {Alice, Bob, Carol, George, Heather}. Among these, every two are friends:
+ – Alice is friends with Bob and Carol.
+ – Bob is friends with Alice and Carol.
+ – Both Alice, Bob, and Carol are also friends with George and Heather (since everyone is friends with George and Heather).
+ – And George and Heather are friends with each other.
+
+Thus, {Alice, Bob, Carol, George, Heather} forms a clique of 5 people. In any proper coloring (where friends must wear different colors), every person in a clique must have a different color. This clique forces the use of at least 5 different colors.
+
+Since only 4 colors (Red, Green, Blue, Yellow) are available, it is impossible to assign shirts to everyone under the given constraints.
+
+Impossible
+
+---
+Numericized:
+---
+
+We begin by interpreting the friendships as an undirected graph. The vertices are the 8 people, and an edge connects two people if they are friends. The given friendships are:
+
+• #0 is friends with #1, #2, #3, #5, #6, #7.
+• #1 is friends with #2, #4, #5, #6, #7 (in addition to #0).
+• #2 is friends with #3, #4, #6, #7 (in addition to #0 and #1).
+• #3 is friends with #4, #6, #7 (in addition to #0 and #2).
+• #4 is friends with #6, #7 (in addition to #1, #2, and #3).
+• #5 is friends with #6, #7 (in addition to #0 and #1).
+
+Let’s list each person’s neighbors:
+
+• #0: #1, #2, #3, #5, #6, #7.  
+• #1: #0, #2, #4, #5, #6, #7.  
+• #2: #0, #1, #3, #4, #6, #7.  
+• #3: #0, #2, #4, #6, #7.  
+• #4: #1, #2, #3, #6, #7.  
+• #5: #0, #1, #6, #7.  
+• #6: #0, #1, #2, #3, #4, #5, #7.  
+• #7: #0, #1, #2, #3, #4, #5, #6.
+
+Notice that both #6 and #7 are friends with everyone else. Now look at the set {#0, #1, #2, #6, #7}. Among these, every two are friends:
+ – #0 is friends with #1 and #2.
+ – #1 is friends with #0 and #2.
+ – Both #0, #1, and #2 are also friends with #6 and #7 (since everyone is friends with #6 and #7).
+ – And #6 and #7 are friends with each other.
+
+Thus, {#0, #1, #2, #6, #7} forms a clique of 5 people. In any proper coloring (where friends must wear different colors), every person in a clique must have a different color. This clique forces the use of at least 5 different colors.
+
+Since only 4 colors (Red, Green, Blue, Yellow) are available, it is impossible to assign shirts to everyone under the given constraints.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,45 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 1), (0, 5), (2, 3), (2, 4), (2, 5), (2, 6), (4, 5), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign one of four colors (red, green, blue, yellow) to the eight people, at least one person will be forced into a “corner” where all four colors are already “taken” by his or her friends. (If you do not believe it, follow the explanation below.)
+
+Let the people be vertices of a graph and “friendship” be an edge between two people. One may check from the list that the person Dave (for example) is friends with exactly these people:
+  Alice, Bob, Ethan, Fran, George, and Heather.
+
+Notice that aside from Ethan and Fran (whose colors we have not chosen yet) Dave is also friends with Alice, Bob, George, and Heather. These four—Alice, Bob, George, and Heather—are chosen from among people who are not all pair‐wise friends (for instance, Alice and Bob are not listed as friends) so one might hope to “reuse” a color. However, if you look at Ethan (who is Dave’s friend) his friends are:
+  Alice, Bob, Dave, George, and Heather.
+Thus, Ethan’s “neighborhood” consists of (at least) the four people Alice, Bob, George, and Heather. Even if you make the best effort to “recycle” colors among people that are not friends, you find that no matter what, one can show that the neighbors (combined with a forced color for Dave coming from his own neighbors) come to use all four colors. Then when it comes to coloring Ethan, there is no available color left that is different from all of his friends’ colors.
+
+A closer look (for the interested reader) shows that it is forced that for Dave the set of four people who are his friends and already “colored” must have three different colors, so that Dave takes the fourth color; then Ethan sees all four colors among his friends (the two “recycled” colors from Alice and Bob plus the two different colors coming from George and Heather, plus Dave’s color) and therefore no available option remains.
+
+Because no scheme can avoid such a “rainbow” around Ethan (and with a similar problem if you examine one of the other vertices), it is impossible to assign four colors to these eight people so that no pair of friends shares the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign one of four colors (red, green, blue, yellow) to the eight people, at least one person will be forced into a “corner” where all four colors are already “taken” by his or her friends. (If you do not believe it, follow the explanation below.)
+
+Let the people be vertices of a graph and “friendship” be an edge between two people. One may check from the list that the person #3 (for example) is friends with exactly these people:
+  #0, #1, #4, #5, #6, and #7.
+
+Notice that aside from #4 and #5 (whose colors we have not chosen yet) #3 is also friends with #0, #1, #6, and #7. These four—#0, #1, #6, and #7—are chosen from among people who are not all pair‐wise friends (for instance, #0 and #1 are not listed as friends) so one might hope to “reuse” a color. However, if you look at #4 (who is #3’s friend) his friends are:
+  #0, #1, #3, #6, and #7.
+Thus, #4’s “neighborhood” consists of (at least) the four people #0, #1, #6, and #7. Even if you make the best effort to “recycle” colors among people that are not friends, you find that no matter what, one can show that the neighbors (combined with a forced color for #3 coming from his own neighbors) come to use all four colors. Then when it comes to coloring #4, there is no available color left that is different from all of his friends’ colors.
+
+A closer look (for the interested reader) shows that it is forced that for #3 the set of four people who are his friends and already “colored” must have three different colors, so that #3 takes the fourth color; then #4 sees all four colors among his friends (the two “recycled” colors from #0 and #1 plus the two different colors coming from #6 and #7, plus #3’s color) and therefore no available option remains.
+
+Because no scheme can avoid such a “rainbow” around #4 (and with a similar problem if you examine one of the other vertices), it is impossible to assign four colors to these eight people so that no pair of friends shares the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,35 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 5), (2, 4), (2, 5), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We begin by noticing that every one of the “other” six people is friends with both George and Heather. (For example, Alice is friends with George and Heather; Bob is friends with George and Heather; and so on.) Because George and Heather are themselves friends (so must have different shirt‐colors), they will use two distinct colors out of the four available. That leaves only two colors available for each of the other six people. 
+
+However, when we look at the friendships among the remaining six—namely, Alice, Bob, Carol, Dave, Ethan, and Fran—we find that not all of them can get a color from a two–color palette. For example, consider the triangle formed by Alice, Dave, and Ethan (since the given friendships tell us that Alice is friends with Dave and Ethan and that Dave is also friends with Ethan). A triangle (a three–cycle) cannot be colored with only two colors. 
+
+More generally, though we have four colors overall, the fact that every one of these six is forced (by their friendship with both George and Heather) to avoid those two colors means they must choose from only two colors. And as soon as one finds an odd cycle (such as the triangle among Alice, Dave, and Ethan), it’s impossible to assign only two colors to that subgraph so that no two friends share the same color.
+
+Therefore, no matter how one tries to assign colors to all eight people it is impossible to avoid a conflict with the given restrictions.
+
+Impossible
+
+---
+Numericized:
+---
+
+We begin by noticing that every one of the “other” six people is friends with both #6 and #7. (For example, #0 is friends with #6 and #7; #1 is friends with #6 and #7; and so on.) Because #6 and #7 are themselves friends (so must have different shirt‐colors), they will use two distinct colors out of the four available. That leaves only two colors available for each of the other six people. 
+
+However, when we look at the friendships among the remaining six—namely, #0, #1, #2, #3, #4, and #5—we find that not all of them can get a color from a two–color palette. For example, consider the triangle formed by #0, #3, and #4 (since the given friendships tell us that #0 is friends with #3 and #4 and that #3 is also friends with #4). A triangle (a three–cycle) cannot be colored with only two colors. 
+
+More generally, though we have four colors overall, the fact that every one of these six is forced (by their friendship with both #6 and #7) to avoid those two colors means they must choose from only two colors. And as soon as one finds an odd cycle (such as the triangle among #0, #3, and #4), it’s impossible to assign only two colors to that subgraph so that no two friends share the same color.
+
+Therefore, no matter how one tries to assign colors to all eight people it is impossible to avoid a conflict with the given restrictions.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

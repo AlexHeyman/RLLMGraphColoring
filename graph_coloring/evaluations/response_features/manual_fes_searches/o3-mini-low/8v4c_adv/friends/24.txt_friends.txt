@@ -1,0 +1,75 @@
+Edges: [(0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (4, 5), (4, 6), (4, 7)]
+
+Complement: [(0, 1), (0, 4), (1, 5), (3, 6), (3, 7), (5, 6), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how the eight people choose from the four shirt colors, at least one person is forced into a conflict with a friend.
+
+Step 1. List the people and note their friendship relations:
+ • Alice is friends with: Carol, Dave, Fran, George, Heather.
+ • Bob is friends with: Carol, Dave, Ethan, George, Heather.
+ • Carol is friends with: Alice, Bob, Dave, Ethan, Fran, George, Heather.
+ • Dave is friends with: Alice, Bob, Carol, Ethan, Fran.
+ • Ethan is friends with: Bob, Carol, Dave, Fran, George, Heather.
+ • Fran is friends with: Alice, Carol, Dave, Ethan.
+ • George is friends with: Alice, Bob, Carol, Ethan, Heather.
+ • Heather is friends with: Alice, Bob, Carol, Ethan, George.
+
+Step 2. Notice a critical structure in this “friendship graph.” Focus on the clique (a set of mutual friends) formed by four people:
+ • Carol, Ethan, George, and Heather.
+Examine their relationships:
+ – Carol is friends with Ethan, George, and Heather.
+ – Ethan is friends with Carol, George, and Heather.
+ – George is friends with Carol, Ethan, and Heather.
+ – Heather is friends with Carol, Ethan, and George.
+Thus these four people form a complete subgraph. When using 4 colors, each of these must wear a different color.
+
+Step 3. Now, look at Bob’s friendships. Bob is friends with:
+ • Carol, Ethan, George, and Heather.
+Because Carol, Ethan, George, and Heather are all friends with each other, they must be assigned four different colors if they avoid conflicts. Bob, being friends with each one of those four, would then have no color available among the four choices.
+
+Conclusion:
+Since Bob would have no color he could choose that is different from all of his friends (because his friends already use all four colors), it is impossible to assign the four shirt colors to all eight people while avoiding color conflicts among friends.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how the eight people choose from the four shirt colors, at least one person is forced into a conflict with a friend.
+
+Step 1. List the people and note their friendship relations:
+ • #0 is friends with: #2, #3, #5, #6, #7.
+ • #1 is friends with: #2, #3, #4, #6, #7.
+ • #2 is friends with: #0, #1, #3, #4, #5, #6, #7.
+ • #3 is friends with: #0, #1, #2, #4, #5.
+ • #4 is friends with: #1, #2, #3, #5, #6, #7.
+ • #5 is friends with: #0, #2, #3, #4.
+ • #6 is friends with: #0, #1, #2, #4, #7.
+ • #7 is friends with: #0, #1, #2, #4, #6.
+
+Step 2. Notice a critical structure in this “friendship graph.” Focus on the clique (a set of mutual friends) formed by four people:
+ • #2, #4, #6, and #7.
+Examine their relationships:
+ – #2 is friends with #4, #6, and #7.
+ – #4 is friends with #2, #6, and #7.
+ – #6 is friends with #2, #4, and #7.
+ – #7 is friends with #2, #4, and #6.
+Thus these four people form a complete subgraph. When using 4 colors, each of these must wear a different color.
+
+Step 3. Now, look at #1’s friendships. #1 is friends with:
+ • #2, #4, #6, and #7.
+Because #2, #4, #6, and #7 are all friends with each other, they must be assigned four different colors if they avoid conflicts. #1, being friends with each one of those four, would then have no color available among the four choices.
+
+Conclusion:
+Since #1 would have no color he could choose that is different from all of his friends (because his friends already use all four colors), it is impossible to assign the four shirt colors to all eight people while avoiding color conflicts among friends.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

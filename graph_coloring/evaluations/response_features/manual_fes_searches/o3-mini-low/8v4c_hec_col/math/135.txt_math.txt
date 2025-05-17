@@ -1,0 +1,34 @@
+Edges: [(0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (4, 5), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 1), (0, 4), (1, 5), (2, 5), (3, 7), (4, 6), (4, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no valid 4‐coloring exists for the graph. (Any proper assignment of the 4 colors to the eight vertices that avoids giving neighboring vertices the same color would be a valid “plan”. In our case no such plan exists.)
+
+Below is one way to argue why a 4‐coloring is impossible.
+
+Labels of the vertices are 0 through 7 and the adjacency list is as follows:
+
+ 0: 2, 3, 5, 6, 7  
+ 1: 2, 3, 4, 6, 7  
+ 2: 0, 1, 3, 4, 6, 7  
+ 3: 0, 1, 2, 4, 5, 6  
+ 4: 1, 2, 3, 5  
+ 5: 0, 3, 4, 6, 7  
+ 6: 0, 1, 2, 3, 5, 7  
+ 7: 0, 1, 2, 5, 6
+
+A key observation is the following. Notice that vertex 6 is adjacent to vertices 0, 1, 2, 3, 5, and 7. In any proper coloring with four colors there are only four available colors. Vertex 0 (say we assign it “Red”) will already use one color. Then the five neighbors of vertex 6 must be colored using the remaining three colors. However, it turns out that the subgraph induced on vertices {0, 1, 2, 3, 5, 7} forces these five vertices to require four different colors. (In several attempted assignments one finds that regardless of how color repetitions are “forced” on nonadjacent vertices, the mutual connections – for instance, the triangle among vertices 1, 2, and 7 – guarantee that all three remaining colors appear among the neighbors, so that in total the neighbors of vertex 6 receive all four colors.)
+
+Since vertex 6 is adjacent to all six of these vertices, if its neighbors use all four colors there is no remaining color for vertex 6. (One might try to “save” a color for vertex 6 by forcing some of its neighbors to share a color. But because the induced subgraph on {1, 2, 5, 7} already contains a triangle – for example, the triangle on 1, 2, and 7 – it is impossible to color them with only two colors. No re‑assignment can bring the total number of colors seen among the neighbors of 6 down to three.)
+
+Because we reach a contradiction in every attempted coloring, we conclude that a proper 4‑coloring does not exist.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

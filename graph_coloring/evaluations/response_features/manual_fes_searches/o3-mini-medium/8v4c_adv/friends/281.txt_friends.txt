@@ -1,0 +1,87 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (2, 4), (3, 4), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We begin by modeling the eight people as vertices of a graph, with an edge connecting two people whenever they are friends. (Friendship is assumed to be mutual.) The friendships given are:
+
+ • Alice is friends with Bob, Dave, Ethan, Fran, George, and Heather.
+ • Bob is friends with Carol, Dave, Ethan, Fran, George, and Heather.
+ • Carol is friends with Dave, Fran, George, and Heather.
+ • Dave is friends with George and Heather.
+ • Ethan is friends with George and Heather.
+ • Fran is friends with George and Heather.
+
+(Any friendship mentioned one way is taken to be mutual.)
+
+Notice that the set {Alice, Bob, George, Heather} forms a clique. To check this:
+ – Alice and Bob are friends.
+ – Alice and George are friends.
+ – Alice and Heather are friends.
+ – Bob and George are friends.
+ – Bob and Heather are friends.
+ – George and Heather are friends.
+
+In any proper coloring of a graph the vertices of a clique must all have different colors. Since we only have four colors (red, green, blue, and yellow), the four members of this clique must each be assigned one of these four different colors.
+
+Now consider Dave. His friends include:
+ • Alice (a member of the clique),
+ • Bob (a member of the clique),
+ • George (a member of the clique),
+ • Heather (a member of the clique),
+ • Carol (whose color we have yet to decide).
+
+Even if we haven’t yet assigned Carol a color, Dave is already adjacent to all four members of the clique. Since the clique members cover all four colors, there would be no color left for Dave. (The same reasoning applies to Ethan and Fran, who are each also friends with all four clique members.)
+
+Thus, even before taking Carol’s assignment into account, the fact that Dave has friends in the clique forcing him to be adjacent to vertices of all four possible colors means that there is no way to select a color for Dave from the available four.
+
+Therefore, it is impossible to assign red, green, blue, or yellow shirts to all eight people so that none of them wears the same color as any of their friends.
+
+Impossible
+
+---
+Numericized:
+---
+
+We begin by modeling the eight people as vertices of a graph, with an edge connecting two people whenever they are friends. (Friendship is assumed to be mutual.) The friendships given are:
+
+ • #0 is friends with #1, #3, #4, #5, #6, and #7.
+ • #1 is friends with #2, #3, #4, #5, #6, and #7.
+ • #2 is friends with #3, #5, #6, and #7.
+ • #3 is friends with #6 and #7.
+ • #4 is friends with #6 and #7.
+ • #5 is friends with #6 and #7.
+
+(Any friendship mentioned one way is taken to be mutual.)
+
+Notice that the set {#0, #1, #6, #7} forms a clique. To check this:
+ – #0 and #1 are friends.
+ – #0 and #6 are friends.
+ – #0 and #7 are friends.
+ – #1 and #6 are friends.
+ – #1 and #7 are friends.
+ – #6 and #7 are friends.
+
+In any proper coloring of a graph the vertices of a clique must all have different colors. Since we only have four colors (red, green, blue, and yellow), the four members of this clique must each be assigned one of these four different colors.
+
+Now consider #3. His friends include:
+ • #0 (a member of the clique),
+ • #1 (a member of the clique),
+ • #6 (a member of the clique),
+ • #7 (a member of the clique),
+ • #2 (whose color we have yet to decide).
+
+Even if we haven’t yet assigned #2 a color, #3 is already adjacent to all four members of the clique. Since the clique members cover all four colors, there would be no color left for #3. (The same reasoning applies to #4 and #5, who are each also friends with all four clique members.)
+
+Thus, even before taking #2’s assignment into account, the fact that #3 has friends in the clique forcing him to be adjacent to vertices of all four possible colors means that there is no way to select a color for #3 from the available four.
+
+Therefore, it is impossible to assign red, green, blue, or yellow shirts to all eight people so that none of them wears the same color as any of their friends.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

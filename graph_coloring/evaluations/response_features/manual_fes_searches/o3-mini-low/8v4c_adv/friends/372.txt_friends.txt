@@ -1,0 +1,91 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (1, 3), (1, 5), (3, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of four colors (red, green, blue, yellow) to the eight people can “avoid a clash” on every friendship.
+
+To explain a little, label the people
+
+  A = Alice, B = Bob, C = Carol, D = Dave, E = Ethan, F = Fran, G = George, H = Heather.
+
+The “friendship” relations are given by the following pairs:
+
+  A is friends with B, D, E, F, G, H.
+  B is friends with A, C, E, G, H.
+  C is friends with B, D, E, F, G, H.
+  D is friends with A, C, F, G, H.
+  E is friends with A, B, C, F, G, H.
+  F is friends with A, C, D, E, G, H.
+  G is friends with A, B, C, D, E, F.
+  H is friends with A, B, C, D, E, F.
+
+Notice that the “neighbors” (that is, the persons who are friends) of a vertex are nearly “almost” all of the others. In particular, if one looks at the vertex G (George) the friends are A, B, C, D, E, F; and if we look at H (Heather) the friends are A, B, C, D, E, F as well. (Also, A and C are “central” in that they are connected to six people, and B, D, E, F are each connected to five or six others.)
+
+One natural idea is to try to “pair‐up” some people to reuse colors. For example, one might try giving A and C the same color (since they are not friends with each other) and giving B and D a second color. That immediately forces the six people who are friends with A and C to have none of that first color. Experimenting with one or two such assignments always leads to at least one person (always one of G or H) whose six friends force the use of all four colors on them.
+
+For example, one might try:
+
+  A = Red, C = Red
+  B = Blue, D = Blue
+
+Then look at person E (Ethan). Since E is friends with A (Red), B (Blue) and C (Red) it can only be either Green or Yellow. And Fran (F) is in the same boat. But because E and F are friends, they must get different colors. So say E = Green and F = Yellow.
+
+Now examine George (G). Its friends are A (Red), B (Blue), C (Red), D (Blue), E (Green), and F (Yellow) – every one of the four colors appears on its friends. Thus there is no color left for G.
+
+One can try fairly many variants along these lines. In every case one is forced into a situation where some vertex (in this example G or H) is adjacent to people wearing all four colors so that no valid color remains for that vertex. (Any “reshuffling” of colors still leads to the same unavoidable obstruction.)
+
+It turns out that one may show (by looking carefully at the list of adjacencies or by computer search in a “graph‐coloring” program) that the friendship graph defined above cannot be colored with only four colors in such a way that every edge has differently colored endpoints.
+
+Thus the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of four colors (red, green, blue, yellow) to the eight people can “avoid a clash” on every friendship.
+
+To explain a little, label the people
+
+  A = #0, B = #1, C = #2, D = #3, E = #4, F = #5, G = #6, H = #7.
+
+The “friendship” relations are given by the following pairs:
+
+  A is friends with B, D, E, F, G, H.
+  B is friends with A, C, E, G, H.
+  C is friends with B, D, E, F, G, H.
+  D is friends with A, C, F, G, H.
+  E is friends with A, B, C, F, G, H.
+  F is friends with A, C, D, E, G, H.
+  G is friends with A, B, C, D, E, F.
+  H is friends with A, B, C, D, E, F.
+
+Notice that the “neighbors” (that is, the persons who are friends) of a vertex are nearly “almost” all of the others. In particular, if one looks at the vertex G (#6) the friends are A, B, C, D, E, F; and if we look at H (#7) the friends are A, B, C, D, E, F as well. (Also, A and C are “central” in that they are connected to six people, and B, D, E, F are each connected to five or six others.)
+
+One natural idea is to try to “pair‐up” some people to reuse colors. For example, one might try giving A and C the same color (since they are not friends with each other) and giving B and D a second color. That immediately forces the six people who are friends with A and C to have none of that first color. Experimenting with one or two such assignments always leads to at least one person (always one of G or H) whose six friends force the use of all four colors on them.
+
+For example, one might try:
+
+  A = Red, C = Red
+  B = Blue, D = Blue
+
+Then look at person E (#4). Since E is friends with A (Red), B (Blue) and C (Red) it can only be either Green or Yellow. And #5 (F) is in the same boat. But because E and F are friends, they must get different colors. So say E = Green and F = Yellow.
+
+Now examine #6 (G). Its friends are A (Red), B (Blue), C (Red), D (Blue), E (Green), and F (Yellow) – every one of the four colors appears on its friends. Thus there is no color left for G.
+
+One can try fairly many variants along these lines. In every case one is forced into a situation where some vertex (in this example G or H) is adjacent to people wearing all four colors so that no valid color remains for that vertex. (Any “reshuffling” of colors still leads to the same unavoidable obstruction.)
+
+It turns out that one may show (by looking carefully at the list of adjacencies or by computer search in a “graph‐coloring” program) that the friendship graph defined above cannot be colored with only four colors in such a way that every edge has differently colored endpoints.
+
+Thus the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

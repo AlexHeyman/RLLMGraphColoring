@@ -1,0 +1,55 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (1, 5), (2, 6), (3, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how we try to assign the four shirt colors—red, green, blue, and yellow—it is impossible to avoid a conflict between friends.
+
+One way to see the problem is to look at a “clique” (a complete subgraph, all of whose vertices are pairwise friends) in the friendship graph. (Two people who are friends must have different shirt colors.) In our situation, observe that the following four people are all mutual friends:
+
+  Alice, Bob, Dave, and George
+
+Specifically,
+• Alice is friends with Bob, Dave, and George.
+• Bob is friends with Alice, Dave, and George.
+• Dave is friends with Alice, Bob, and George.
+• George is friends with Alice, Bob, and Dave.
+
+Because these four are each friends with each other, if they attend the party they must all each wear a different color. In other words, the clique {Alice, Bob, Dave, George} forces the use of four different colors.
+
+Now look at Heather. According to the list, Heather is friends with everyone except “herself.” In particular, she is friends with Alice, Bob, Dave, and George. That means Heather cannot wear any of the colors worn by Alice, Bob, Dave, or George. Since those four people already take all four available colors, Heather would have no color left to wear. (Even if we try to reassign colors among the other 7 people, the fact that there is a four‐person clique whose members must all have different colors forces a situation where every color is “blocked” for any vertex (person) that is adjacent to all four.)
+
+Thus, with only four shirt colors available, there is no way to assign colors so that no pair of friends wears the same color. 
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how we try to assign the four shirt colors—red, green, blue, and yellow—it is impossible to avoid a conflict between friends.
+
+One way to see the problem is to look at a “clique” (a complete subgraph, all of whose vertices are pairwise friends) in the friendship graph. (Two people who are friends must have different shirt colors.) In our situation, observe that the following four people are all mutual friends:
+
+  #0, #1, #3, and #6
+
+Specifically,
+• #0 is friends with #1, #3, and #6.
+• #1 is friends with #0, #3, and #6.
+• #3 is friends with #0, #1, and #6.
+• #6 is friends with #0, #1, and #3.
+
+Because these four are each friends with each other, if they attend the party they must all each wear a different color. In other words, the clique {#0, #1, #3, #6} forces the use of four different colors.
+
+Now look at #7. According to the list, #7 is friends with everyone except “herself.” In particular, she is friends with #0, #1, #3, and #6. That means #7 cannot wear any of the colors worn by #0, #1, #3, or #6. Since those four people already take all four available colors, #7 would have no color left to wear. (Even if we try to reassign colors among the other 7 people, the fact that there is a four‐person clique whose members must all have different colors forces a situation where every color is “blocked” for any vertex (person) that is adjacent to all four.)
+
+Thus, with only four shirt colors available, there is no way to assign colors so that no pair of friends wears the same color. 
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

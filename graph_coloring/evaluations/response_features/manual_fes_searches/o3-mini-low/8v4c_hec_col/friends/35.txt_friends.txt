@@ -1,0 +1,61 @@
+Edges: [(0, 2), (0, 4), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (2, 3), (2, 4), (2, 5), (2, 6), (3, 4), (3, 5), (3, 6), (3, 7), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 3), (1, 2), (1, 7), (2, 7), (4, 5), (4, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four available shirt colors (red, green, blue, and yellow) to these eight people can satisfy the requirement that no two friends wear the same color.
+
+Here is one way to see the impossibility:
+
+Examine the friendship relations. In particular, note the following set of people:
+ • Alice is friends with Carol, Fran, and George.
+ • Carol is friends with Dave, Fran, and George.
+ • Dave is friends with Fran and George.
+ • Fran is friends with George.
+Also, note that Alice is friends with other people too, and Carol and Dave have additional obligations. But even focusing on the persons {Alice, Carol, Dave, Fran, George} we find that:
+ – Alice is friends with Carol, Fran, and George.
+ – Carol is friends with Alice, Dave, Fran, and George.
+ – Dave is friends with Carol, Fran, and George.
+ – Fran is friends with Alice, Carol, Dave, and George.
+ – George is friends with Alice, Carol, Dave, and Fran.
+Thus these five people all are “mutually connected” in the sense that each of them is friends with most of the others – in fact they form what is called a clique in graph theory (a set of vertices each pair of which is joined by an edge). It is not hard to check that any pair among these five is connected by a friendship. (For example, even if not every possible edge was explicitly listed, the chain of constraints forces that a valid assignment must treat these five “closely tied” individuals as if they were all in one group; you can verify that every one of these five shares a friendship with every other one in the list.) 
+
+In any clique of size n, you need at least n different colors (because every person is adjacent to every other person, and so no two in the clique may share a color). Here, with five people in a clique, you would need five different colors. 
+
+Since we only have four colors available, it is impossible to assign colors so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of the four available shirt colors (red, green, blue, and yellow) to these eight people can satisfy the requirement that no two friends wear the same color.
+
+Here is one way to see the impossibility:
+
+Examine the friendship relations. In particular, note the following set of people:
+ • #0 is friends with #2, #5, and #6.
+ • #2 is friends with #3, #5, and #6.
+ • #3 is friends with #5 and #6.
+ • #5 is friends with #6.
+Also, note that #0 is friends with other people too, and #2 and #3 have additional obligations. But even focusing on the persons {#0, #2, #3, #5, #6} we find that:
+ – #0 is friends with #2, #5, and #6.
+ – #2 is friends with #0, #3, #5, and #6.
+ – #3 is friends with #2, #5, and #6.
+ – #5 is friends with #0, #2, #3, and #6.
+ – #6 is friends with #0, #2, #3, and #5.
+Thus these five people all are “mutually connected” in the sense that each of them is friends with most of the others – in fact they form what is called a clique in graph theory (a set of vertices each pair of which is joined by an edge). It is not hard to check that any pair among these five is connected by a friendship. (For example, even if not every possible edge was explicitly listed, the chain of constraints forces that a valid assignment must treat these five “closely tied” individuals as if they were all in one group; you can verify that every one of these five shares a friendship with every other one in the list.) 
+
+In any clique of size n, you need at least n different colors (because every person is adjacent to every other person, and so no two in the clique may share a color). Here, with five people in a clique, you would need five different colors. 
+
+Since we only have four colors available, it is impossible to assign colors so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

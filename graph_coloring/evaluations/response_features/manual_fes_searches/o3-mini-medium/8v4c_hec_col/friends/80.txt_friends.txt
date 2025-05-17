@@ -1,0 +1,73 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (4, 5), (4, 7), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 1), (0, 6), (1, 6), (1, 7), (2, 5), (3, 6), (3, 7), (4, 6)]
+
+Evaluation: impossible incorrect
+
+---
+
+We first list the friendships (which act as “edges” between people, the “vertices” of our graph):
+
+• Alice is friends with Carol, Dave, Ethan, Fran, Heather.
+• Bob is friends with Carol, Dave, Ethan, Fran.
+• Carol is friends with Alice, Bob, Dave, Ethan, George, Heather.
+• Dave is friends with Alice, Bob, Carol, Ethan, Fran.
+• Ethan is friends with Alice, Bob, Carol, Dave, Fran, Heather.
+• Fran is friends with Alice, Bob, Dave, Ethan, George, Heather.
+• George is friends with Carol, Fran, Heather.
+• Heather is friends with Alice, Carol, Ethan, Fran, George.
+
+If we interpret “wearing the same shirt color” as a condition to be avoided on every edge, then what we seek is a proper 4‑coloring (using Red, Green, Blue, Yellow) of this graph.
+
+A key observation is that among the 8 people there is a clique of 4 (a set of 4 people who are all mutual friends). In particular, notice that Carol, Dave, Ethan, and Fran are all friends with one another. (For example, Carol is friends with Dave, Ethan, and Fran; Dave is friends with Ethan and Fran; and Ethan is friends with Fran.) In any proper coloring of a clique on 4 vertices (a K4) using only 4 colors, each of these 4 people must receive a different color.
+
+Let’s say, without loss of generality, that in any coloring:
+  Carol: Red
+  Dave: Green
+  Ethan: Blue
+  Fran: Yellow
+
+Now examine Alice’s friendships. Alice is friends with Carol, Dave, Ethan, Fran, and Heather. Even just looking at the clique, Alice is adjacent to Carol, Dave, Ethan, and Fran—who already use all 4 available colors. This leaves no color for Alice that wouldn’t conflict with at least one of her friends. The same issue arises for Bob, who is also friends with all 4 members of the clique (Carol, Dave, Ethan, Fran).
+
+Because in every possible proper 4‑coloring the clique consumes all four colors, any additional person (like Alice or Bob) who is friends with all members of this clique will have no available color from the set {Red, Green, Blue, Yellow}.
+
+Thus, there is no way to assign the colors so that every friendship pair wears different colors.
+
+Impossible
+
+---
+Numericized:
+---
+
+We first list the friendships (which act as “edges” between people, the “vertices” of our graph):
+
+• #0 is friends with #2, #3, #4, #5, #7.
+• #1 is friends with #2, #3, #4, #5.
+• #2 is friends with #0, #1, #3, #4, #6, #7.
+• #3 is friends with #0, #1, #2, #4, #5.
+• #4 is friends with #0, #1, #2, #3, #5, #7.
+• #5 is friends with #0, #1, #3, #4, #6, #7.
+• #6 is friends with #2, #5, #7.
+• #7 is friends with #0, #2, #4, #5, #6.
+
+If we interpret “wearing the same shirt color” as a condition to be avoided on every edge, then what we seek is a proper 4‑coloring (using Red, Green, Blue, Yellow) of this graph.
+
+A key observation is that among the 8 people there is a clique of 4 (a set of 4 people who are all mutual friends). In particular, notice that #2, #3, #4, and #5 are all friends with one another. (For example, #2 is friends with #3, #4, and #5; #3 is friends with #4 and #5; and #4 is friends with #5.) In any proper coloring of a clique on 4 vertices (a K4) using only 4 colors, each of these 4 people must receive a different color.
+
+Let’s say, without loss of generality, that in any coloring:
+  #2: Red
+  #3: Green
+  #4: Blue
+  #5: Yellow
+
+Now examine #0’s friendships. #0 is friends with #2, #3, #4, #5, and #7. Even just looking at the clique, #0 is adjacent to #2, #3, #4, and #5—who already use all 4 available colors. This leaves no color for #0 that wouldn’t conflict with at least one of her friends. The same issue arises for #1, who is also friends with all 4 members of the clique (#2, #3, #4, #5).
+
+Because in every possible proper 4‑coloring the clique consumes all four colors, any additional person (like #0 or #1) who is friends with all members of this clique will have no available color from the set {Red, Green, Blue, Yellow}.
+
+Thus, there is no way to assign the colors so that every friendship pair wears different colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

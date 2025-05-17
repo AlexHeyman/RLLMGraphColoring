@@ -1,0 +1,55 @@
+Edges: [(0, 1), (0, 2), (0, 5), (0, 6), (0, 7), (0, 11), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (2, 3), (2, 4), (2, 6), (2, 7), (2, 8), (2, 10), (2, 11), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (3, 11), (4, 5), (4, 7), (4, 8), (4, 9), (5, 6), (5, 7), (5, 8), (5, 9), (5, 10), (5, 11), (6, 7), (6, 8), (6, 11), (7, 8), (7, 9), (7, 10), (7, 11), (8, 9), (9, 10), (9, 11), (10, 11)]
+
+Complement: [(0, 3), (0, 4), (0, 8), (0, 9), (0, 10), (1, 3), (2, 5), (2, 9), (3, 4), (3, 10), (4, 6), (4, 10), (4, 11), (6, 9), (6, 10), (8, 10), (8, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how one tries to assign shirts (colors) from the six choices, a conflict between close friends cannot be avoided. In fact, one may prove that a proper “friend‐differentiated” assignment would require at least seven different shirt colors.
+
+To explain briefly without all the details:
+
+• Every one of the 12 people is “friends” with at least one other. In particular, one person—Heather—is friends with everybody else. This forces Heather to use a color (say Red) that no one else may use.
+
+• That leaves the other 11 people to be colored with the remaining five colors. (Because if any of them were to use Red they would share the color with Heather, with whom they are all friends.)
+
+• A careful look at the friendships shows that among these 11 people there is a set of five (namely, Bob, Carol, Fran, George, and Irene) that all mutually know one another. (In a graph‐theoretic language, they form a clique of size 5.) This forces these five to use all five of the non‐Red colors.
+
+• Moreover, one may check that Larry (one of the 11) is friends not only with some members of that clique but also with Alice. In fact, the five people {Alice, Bob, Carol, Fran, George} are all mutually “close” in the sense that Bob, Carol, Fran, and George (being part of the clique) get four different colors and Alice—since she is friends with each of those four—is forced to use the one remaining color. In other words, no matter how you assign the five available colors to these five vertices, all five colors appear in Larry’s neighborhood.
+
+• Since Larry is adjacent (friends with) these five and a few others, every one of the five available colors already shows up among Larry’s friends. That would force Larry to “reuse” one of these colors, which is not allowed.
+
+Thus, when Heather uses one color (say Red) forcing everyone else to avoid it, the remaining 11 people would have to be colored with only five colors—but that is impossible because the friendships force a situation in which some person (Larry, in our example) sees all five colors on his friends.
+
+Because of this unavoidable “rainbow neighborhood” around Larry, there is no assignment of the six shirt colors to the 12 people making sure friends wear different colors.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how one tries to assign shirts (colors) from the six choices, a conflict between close friends cannot be avoided. In fact, one may prove that a proper “friend‐differentiated” assignment would require at least seven different shirt colors.
+
+To explain briefly without all the details:
+
+• Every one of the 12 people is “friends” with at least one other. In particular, one person—#7—is friends with everybody else. This forces #7 to use a color (say Red) that no one else may use.
+
+• That leaves the other 11 people to be colored with the remaining five colors. (Because if any of them were to use Red they would share the color with #7, with whom they are all friends.)
+
+• A careful look at the friendships shows that among these 11 people there is a set of five (namely, #1, #2, #5, #6, and #8) that all mutually know one another. (In a graph‐theoretic language, they form a clique of size 5.) This forces these five to use all five of the non‐Red colors.
+
+• Moreover, one may check that #11 (one of the 11) is friends not only with some members of that clique but also with #0. In fact, the five people {#0, #1, #2, #5, #6} are all mutually “close” in the sense that #1, #2, #5, and #6 (being part of the clique) get four different colors and #0—since she is friends with each of those four—is forced to use the one remaining color. In other words, no matter how you assign the five available colors to these five vertices, all five colors appear in #11’s neighborhood.
+
+• Since #11 is adjacent (friends with) these five and a few others, every one of the five available colors already shows up among #11’s friends. That would force #11 to “reuse” one of these colors, which is not allowed.
+
+Thus, when #7 uses one color (say Red) forcing everyone else to avoid it, the remaining 11 people would have to be colored with only five colors—but that is impossible because the friendships force a situation in which some person (#11, in our example) sees all five colors on his friends.
+
+Because of this unavoidable “rainbow neighborhood” around #11, there is no assignment of the six shirt colors to the 12 people making sure friends wear different colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: 2,5

@@ -1,0 +1,63 @@
+Edges: [(0, 1), (0, 4), (0, 5), (0, 6), (1, 2), (1, 4), (1, 5), (1, 6), (2, 3), (2, 5), (2, 6), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 7), (6, 7)]
+
+Complement: [(0, 2), (0, 3), (0, 7), (1, 3), (1, 7), (2, 4), (2, 7), (5, 6)]
+
+Evaluation: impossible incorrect
+
+---
+
+We first list the friendships as given:
+
+• Alice: Bob, Ethan, Fran, George  
+• Bob: Alice, Carol, Ethan, Fran, George  
+• Carol: Bob, Dave, Fran, George  
+• Dave: Carol, Ethan, Fran, George, Heather  
+• Ethan: Alice, Bob, Dave, Fran, George, Heather  
+• Fran: Alice, Bob, Carol, Dave, Ethan, Heather  
+• George: Alice, Bob, Carol, Dave, Ethan, Heather  
+• Heather: Dave, Ethan, Fran, George  
+
+Notice that if we look at the set {Alice, Bob, Ethan, Fran, George} the friendships include:
+ – Alice is friends with Bob, Ethan, Fran, and George  
+ – Bob is friends with Alice, Ethan, Fran, and George  
+ – Ethan is friends with Alice, Bob, Fran, and George  
+ – Fran is friends with Alice, Bob, Ethan, and George  
+ – George is friends with Alice, Bob, Ethan, and Fran  
+
+This means that these five people form a complete graph (K₅), where every pair is friends.
+
+In a complete graph of five vertices (K₅), every person must wear a different color from every other. Therefore, at least 5 distinct colors are needed. Since only 4 shirts colors (red, green, blue, yellow) are available, it is impossible to assign a shirt color to each person in such a way that no two friends share the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We first list the friendships as given:
+
+• #0: #1, #4, #5, #6  
+• #1: #0, #2, #4, #5, #6  
+• #2: #1, #3, #5, #6  
+• #3: #2, #4, #5, #6, #7  
+• #4: #0, #1, #3, #5, #6, #7  
+• #5: #0, #1, #2, #3, #4, #7  
+• #6: #0, #1, #2, #3, #4, #7  
+• #7: #3, #4, #5, #6  
+
+Notice that if we look at the set {#0, #1, #4, #5, #6} the friendships include:
+ – #0 is friends with #1, #4, #5, and #6  
+ – #1 is friends with #0, #4, #5, and #6  
+ – #4 is friends with #0, #1, #5, and #6  
+ – #5 is friends with #0, #1, #4, and #6  
+ – #6 is friends with #0, #1, #4, and #5  
+
+This means that these five people form a complete graph (K₅), where every pair is friends.
+
+In a complete graph of five vertices (K₅), every person must wear a different color from every other. Therefore, at least 5 distinct colors are needed. Since only 4 shirts colors (red, green, blue, yellow) are available, it is impossible to assign a shirt color to each person in such a way that no two friends share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

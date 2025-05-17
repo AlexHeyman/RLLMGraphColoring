@@ -1,0 +1,69 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 7)]
+
+Complement: [(0, 3), (1, 2), (1, 5), (2, 5), (5, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try, there is no assignment of the four colors Red, Green, Blue, and Yellow to the eight people that avoids a same‐color conflict on a friendship. (In other words, “Impossible”)
+
+Below is one explanation that shows why.
+
+Let us model the eight people as vertices in a graph and “friendship” as an edge connecting them. (The friendship relation is symmetric.) The graph has eight vertices {Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather} and the following edges (each pair appears only once):
+
+• Alice–Bob, Alice–Carol, Alice–Ethan, Alice–Fran, Alice–George, Alice–Heather  
+• Bob–Dave, Bob–Ethan, Bob–George, Bob–Heather  
+• Carol–Dave, Carol–Ethan, Carol–George, Carol–Heather  
+• Dave–Ethan, Dave–Fran, Dave–George, Dave–Heather  
+• Ethan–Fran, Ethan–George, Ethan–Heather  
+• Fran–Heather
+
+One obstacle arises from the vertex with the highest “friend‐degree”: Ethan. Notice that Ethan is friends with four people who come from the “first group” (Alice, Bob, Carol, Dave) – and these four people are not completely independent of one another. In any proper coloring it is always necessary (to “make room” for Ethan’s own color) that these four vertices do not use all four colors. That forces at least one duplication among them. But then look at George – who is friends with almost the same people as Ethan (in fact, George is friends with Alice, Bob, Carol, Dave and also with Ethan – plus Heather). Even if one tries to “save” a color for George by duplicating among the group {Alice, Bob, Carol, Dave, Ethan}, the very strong connections among these vertices and with Heather eventually force all four colors to appear among the neighbors of George (or Heather). One may try many assignments but they always run into a problem like the following (one possibility):
+
+• If one forces two of the first‐group vertices to share a color so that Ethan might dodge using a fourth color, then when one comes to assign a color to George (who is adjacent to all of them) there is no possible choice left.  
+• Alternatively, if one “spreads” the colors among those vertices so that every possible color appears, then Ethan has no available color.  
+• And trying to “save” a color for Heather (who is adjacent to nearly everyone) hits a similar impasse.
+
+A more rigorous (and a typical “graph‐theory”) argument can be made by showing that no function f from the vertex set {Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather} to {Red, Green, Blue, Yellow} can simultaneously satisfy f(u) ≠ f(v) for every edge uv in the list above.
+
+Since every attempt leads to a conflict, there is no 4–coloring of this friendship graph satisfying the condition that every person wears a shirt of a color different from that of every friend.
+
+Thus the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try, there is no assignment of the four colors Red, Green, Blue, and Yellow to the eight people that avoids a same‐color conflict on a friendship. (In other words, “Impossible”)
+
+Below is one explanation that shows why.
+
+Let us model the eight people as vertices in a graph and “friendship” as an edge connecting them. (The friendship relation is symmetric.) The graph has eight vertices {#0, #1, #2, #3, #4, #5, #6, #7} and the following edges (each pair appears only once):
+
+• #0–#1, #0–#2, #0–#4, #0–#5, #0–#6, #0–#7  
+• #1–#3, #1–#4, #1–#6, #1–#7  
+• #2–#3, #2–#4, #2–#6, #2–#7  
+• #3–#4, #3–#5, #3–#6, #3–#7  
+• #4–#5, #4–#6, #4–#7  
+• #5–#7
+
+One obstacle arises from the vertex with the highest “friend‐degree”: #4. Notice that #4 is friends with four people who come from the “first group” (#0, #1, #2, #3) – and these four people are not completely independent of one another. In any proper coloring it is always necessary (to “make room” for #4’s own color) that these four vertices do not use all four colors. That forces at least one duplication among them. But then look at #6 – who is friends with almost the same people as #4 (in fact, #6 is friends with #0, #1, #2, #3 and also with #4 – plus #7). Even if one tries to “save” a color for #6 by duplicating among the group {#0, #1, #2, #3, #4}, the very strong connections among these vertices and with #7 eventually force all four colors to appear among the neighbors of #6 (or #7). One may try many assignments but they always run into a problem like the following (one possibility):
+
+• If one forces two of the first‐group vertices to share a color so that #4 might dodge using a fourth color, then when one comes to assign a color to #6 (who is adjacent to all of them) there is no possible choice left.  
+• Alternatively, if one “spreads” the colors among those vertices so that every possible color appears, then #4 has no available color.  
+• And trying to “save” a color for #7 (who is adjacent to nearly everyone) hits a similar impasse.
+
+A more rigorous (and a typical “graph‐theory”) argument can be made by showing that no function f from the vertex set {#0, #1, #2, #3, #4, #5, #6, #7} to {Red, Green, Blue, Yellow} can simultaneously satisfy f(u) ≠ f(v) for every edge uv in the list above.
+
+Since every attempt leads to a conflict, there is no 4–coloring of this friendship graph satisfying the condition that every person wears a shirt of a color different from that of every friend.
+
+Thus the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

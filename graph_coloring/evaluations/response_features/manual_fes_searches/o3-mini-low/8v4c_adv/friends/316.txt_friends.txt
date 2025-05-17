@@ -1,0 +1,49 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (2, 5), (3, 4), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We start by noting that every one of the 8 people is connected by “friendship” to a number of the others. In our graph the vertices are people. (For instance, Heather is friends with everyone except Bob, Carol, etc. as given by the list.) In fact, if you write down exactly which pairs are friends you’ll see that two of the people (George and Heather) end up being very “popular” while the remaining 6 (Alice, Bob, Carol, Dave, Ethan, and Fran) have a slightly lighter friendship burden—but still a lot!
+
+An observation about the problem is that every person chooses one of 4 shirt colors (red, green, blue, yellow) and no two friends may share the same color. When we look at the friendship lists you’ll notice that both Alice and Bob are friends with Carol, Dave, Ethan, Fran, George, and Heather. This means that many of the people “at the party” share two common “unwelcome” colors from their very popular friends.
+
+To be a bit more systematic, let’s see what restrictions fall on the group of 6 people formed by {Alice, Bob, Carol, Dave, Ethan, Fran}. Notice that:
+ • Alice is friends with Carol, Dave, Ethan, and Fran.
+ • Bob is friends with Carol, Dave, Ethan, and Fran.
+In addition, these 6 people are each friends with both George and Heather. This forces that none of them can choose the colors assigned to George or Heather. So at first glance, it might seem that if we were to “reserve” two colors for George and Heather, the remaining 6 people would have only the two “other” colors available.
+
+One might think: “Maybe we can let George and Heather have two colors (say, red and blue) and have the others choose from green and yellow.” However, if we look at the mutual friendships among the 6 there are additional edges. For example, observe that among these 6, Alice is friends with Carol, and Carol in turn is friends with Dave. But also Alice is directly friends with Dave. That makes a triangle (Alice, Carol, Dave) among these 6 people. (There are other triangles lurking as well.) In any triangle the vertices must receive three distinct colors in any proper coloring. But if the remaining 6 people are forced to use only two colors, then no triangle can be properly colored.
+
+Thus, if George and Heather “use up” two of the four colors (as they must, since every other person is friends with each of them), there is no way to color the remaining 6 people without ending up with a triangle whose vertices have to “compete” for only the two remaining colors.
+
+Because of this unavoidable shortage caused by the structure of the friendship graph, it turns out that there is no assignment of red, green, blue, and yellow among the 8 people that respects the rule that no pair of friends wears the same color shirt.
+
+Impossible
+
+---
+Numericized:
+---
+
+We start by noting that every one of the 8 people is connected by “friendship” to a number of the others. In our graph the vertices are people. (For instance, #7 is friends with everyone except #1, #2, etc. as given by the list.) In fact, if you write down exactly which pairs are friends you’ll see that two of the people (#6 and #7) end up being very “popular” while the remaining 6 (#0, #1, #2, #3, #4, and #5) have a slightly lighter friendship burden—but still a lot!
+
+An observation about the problem is that every person chooses one of 4 shirt colors (red, green, blue, yellow) and no two friends may share the same color. When we look at the friendship lists you’ll notice that both #0 and #1 are friends with #2, #3, #4, #5, #6, and #7. This means that many of the people “at the party” share two common “unwelcome” colors from their very popular friends.
+
+To be a bit more systematic, let’s see what restrictions fall on the group of 6 people formed by {#0, #1, #2, #3, #4, #5}. Notice that:
+ • #0 is friends with #2, #3, #4, and #5.
+ • #1 is friends with #2, #3, #4, and #5.
+In addition, these 6 people are each friends with both #6 and #7. This forces that none of them can choose the colors assigned to #6 or #7. So at first glance, it might seem that if we were to “reserve” two colors for #6 and #7, the remaining 6 people would have only the two “other” colors available.
+
+One might think: “Maybe we can let #6 and #7 have two colors (say, red and blue) and have the others choose from green and yellow.” However, if we look at the mutual friendships among the 6 there are additional edges. For example, observe that among these 6, #0 is friends with #2, and #2 in turn is friends with #3. But also #0 is directly friends with #3. That makes a triangle (#0, #2, #3) among these 6 people. (There are other triangles lurking as well.) In any triangle the vertices must receive three distinct colors in any proper coloring. But if the remaining 6 people are forced to use only two colors, then no triangle can be properly colored.
+
+Thus, if #6 and #7 “use up” two of the four colors (as they must, since every other person is friends with each of them), there is no way to color the remaining 6 people without ending up with a triangle whose vertices have to “compete” for only the two remaining colors.
+
+Because of this unavoidable shortage caused by the structure of the friendship graph, it turns out that there is no assignment of red, green, blue, and yellow among the 8 people that respects the rule that no pair of friends wears the same color shirt.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

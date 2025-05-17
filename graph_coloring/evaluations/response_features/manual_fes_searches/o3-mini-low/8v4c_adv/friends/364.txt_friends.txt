@@ -1,0 +1,67 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 5), (1, 6), (1, 7), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (1, 4), (2, 3), (2, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that regardless of how one tries to choose shirt‐colors from the four available (Red, Green, Blue, Yellow) under the rule “friends must wear different colors”, it turns out that no assignment is possible.
+
+Before giving a brief explanation, we list the friendships for clarity (note that friendship is symmetric):
+
+• Alice is friends with Bob, Carol, Ethan, Fran, George, and Heather.
+• Bob is friends with Alice, Carol, Dave, Fran, George, and Heather.
+• Carol is friends with Alice, Bob, Ethan, George, and Heather.
+• Dave is friends with Bob, Ethan, Fran, George, and Heather.
+• Ethan is friends with Alice, Carol, Dave, Fran, George, and Heather.
+• Fran is friends with Alice, Bob, Dave, Ethan, George, and Heather.
+• George is friends with Alice, Bob, Carol, Dave, Ethan, and Fran.
+• Heather is friends with Alice, Bob, Carol, Dave, Ethan, and Fran.
+
+Observe that George and Heather are each friends with the same set of six people:
+  {Alice, Bob, Carol, Dave, Ethan, Fran}.
+
+A key point in a proper coloring of a graph is that for any person v, the set of colors used by v’s friends prevents v from using those colors. In particular, look at George. His six friends must all wear colors different from his. Now, suppose that we try to assign shirt‐colors to the six people {Alice, Bob, Carol, Dave, Ethan, Fran}. Since we only have four colors available, some careful counting tells us that these six vertices (because of their many interconnections) will use at least three distinct colors. (In fact, one can verify by checking the subgraph induced on these six vertices that there is no way to “compress” the colors to just two values.)
+
+So assume that in any proper assignment the colors appearing among {Alice, Bob, Carol, Dave, Ethan, Fran} are exactly three of the four colors. For any vertex such as George (and similarly Heather) the only color left from the palette is the one “missing” from that triplet. Thus George’s only possible shirt color is, say, Yellow (if Red, Green, Blue appear among his six friends). But notice that Heather has the same six friends, and hence she too would be forced to wear the same “fourth” color. However, George and Heather are themselves friends, so they cannot share the same color.
+
+One might wonder whether one could assign colors so that the six neighbors of George (and Heather) use all four colors. But then there would be no color left for George (or Heather), because the rule forbids a vertex from using any color that appears among its friends.
+
+In every case the requirements conflict. Because of this, there is no way to assign the four colors to the 8 people so that friends always have different shirt colors.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that regardless of how one tries to choose shirt‐colors from the four available (Red, Green, Blue, Yellow) under the rule “friends must wear different colors”, it turns out that no assignment is possible.
+
+Before giving a brief explanation, we list the friendships for clarity (note that friendship is symmetric):
+
+• #0 is friends with #1, #2, #4, #5, #6, and #7.
+• #1 is friends with #0, #2, #3, #5, #6, and #7.
+• #2 is friends with #0, #1, #4, #6, and #7.
+• #3 is friends with #1, #4, #5, #6, and #7.
+• #4 is friends with #0, #2, #3, #5, #6, and #7.
+• #5 is friends with #0, #1, #3, #4, #6, and #7.
+• #6 is friends with #0, #1, #2, #3, #4, and #5.
+• #7 is friends with #0, #1, #2, #3, #4, and #5.
+
+Observe that #6 and #7 are each friends with the same set of six people:
+  {#0, #1, #2, #3, #4, #5}.
+
+A key point in a proper coloring of a graph is that for any person v, the set of colors used by v’s friends prevents v from using those colors. In particular, look at #6. His six friends must all wear colors different from his. Now, suppose that we try to assign shirt‐colors to the six people {#0, #1, #2, #3, #4, #5}. Since we only have four colors available, some careful counting tells us that these six vertices (because of their many interconnections) will use at least three distinct colors. (In fact, one can verify by checking the subgraph induced on these six vertices that there is no way to “compress” the colors to just two values.)
+
+So assume that in any proper assignment the colors appearing among {#0, #1, #2, #3, #4, #5} are exactly three of the four colors. For any vertex such as #6 (and similarly #7) the only color left from the palette is the one “missing” from that triplet. Thus #6’s only possible shirt color is, say, Yellow (if Red, Green, Blue appear among his six friends). But notice that #7 has the same six friends, and hence she too would be forced to wear the same “fourth” color. However, #6 and #7 are themselves friends, so they cannot share the same color.
+
+One might wonder whether one could assign colors so that the six neighbors of #6 (and #7) use all four colors. But then there would be no color left for #6 (or #7), because the rule forbids a vertex from using any color that appears among its friends.
+
+In every case the requirements conflict. Because of this, there is no way to assign the four colors to the 8 people so that friends always have different shirt colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

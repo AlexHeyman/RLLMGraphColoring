@@ -1,0 +1,55 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 4), (1, 2), (3, 5), (3, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that under the given friendship constraints it is impossible to assign each person one of four shirt colors in such a way that no two friends share the same color.
+
+To explain briefly, think of each person as a vertex in a graph and “friendship” as an edge connecting two vertices. We must “color” the vertices using four colors (Red, Green, Blue, Yellow) so that every edge connects vertices of different colors. (In graph theory, “coloring” a graph in this way is called “proper vertex‑coloring.”)
+
+One way to start is to look for a vertex whose “neighbors” (its friends) force a difficulty. In our graph the eight people are very “well‐connected.” In fact, if you list the friendships, you find that (for example) Heather is friends with everyone except possibly one person (in our list everyone is her friend) and George is friends with six others:
+  George’s friends are: Alice, Bob, Carol, Ethan, Fran, and Heather.
+
+Now, in any proper 4‑coloring the following must happen for George:
+  – Every neighbor of George must have a color different from George’s.
+  – Thus the six neighbors of George must “cover” some collection of colors chosen among the four available.
+It turns out that by examining the “friendship” relationships among these six neighbors one finds that there are two non‐edges (pair of people who are not friends) among them. (Specifically, Alice and Ethan are not friends, and Bob and Carol are not friends.) These are the only “gaps” in an otherwise very dense graph among the six.
+
+Because we have only four colors available, one might try to “save” a color for George by forcing one of these nonadjacent pairs to share the same color. One might hope for example to force Alice and Ethan to wear the same color. Similarly one might try to have Bob and Carol share a color. However, when one attempts to do so while respecting all the other friendship restrictions among the six (and keeping in mind that all six are also friends with Heather) one finds that no matter how the colors are assigned the six neighbors of George use all four colors. (A little more detail: one may show by writing down the constraints on the colors—that Alice, Bob, Carol, Ethan, Fran, and Heather must be colored in a “proper” way—that the only way two vertices in George’s neighborhood could share a color is if their sharing would force an illegal equality for someone adjacent to both. In fact, one can prove that in every legal 4‑coloring the colors used on {Alice, Bob, Carol, Ethan, Fran, Heather} form a complete set of four colors.)
+
+With all four colors appearing among George’s neighbors, George would have no remaining color available (since his chosen color would have to differ from each neighbor’s color). Thus no valid 4‑coloring of the graph exists.
+
+Because a valid assignment of shirt colors under the condition that no pair of friends share the same color is equivalent to a proper 4‑coloring of the graph, we conclude that the required plan is impossible.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that under the given friendship constraints it is impossible to assign each person one of four shirt colors in such a way that no two friends share the same color.
+
+To explain briefly, think of each person as a vertex in a graph and “friendship” as an edge connecting two vertices. We must “color” the vertices using four colors (Red, Green, Blue, Yellow) so that every edge connects vertices of different colors. (In graph theory, “coloring” a graph in this way is called “proper vertex‑coloring.”)
+
+One way to start is to look for a vertex whose “neighbors” (its friends) force a difficulty. In our graph the eight people are very “well‐connected.” In fact, if you list the friendships, you find that (for example) #7 is friends with everyone except possibly one person (in our list everyone is her friend) and #6 is friends with six others:
+  #6’s friends are: #0, #1, #2, #4, #5, and #7.
+
+Now, in any proper 4‑coloring the following must happen for #6:
+  – Every neighbor of #6 must have a color different from #6’s.
+  – Thus the six neighbors of #6 must “cover” some collection of colors chosen among the four available.
+It turns out that by examining the “friendship” relationships among these six neighbors one finds that there are two non‐edges (pair of people who are not friends) among them. (Specifically, #0 and #4 are not friends, and #1 and #2 are not friends.) These are the only “gaps” in an otherwise very dense graph among the six.
+
+Because we have only four colors available, one might try to “save” a color for #6 by forcing one of these nonadjacent pairs to share the same color. One might hope for example to force #0 and #4 to wear the same color. Similarly one might try to have #1 and #2 share a color. However, when one attempts to do so while respecting all the other friendship restrictions among the six (and keeping in mind that all six are also friends with #7) one finds that no matter how the colors are assigned the six neighbors of #6 use all four colors. (A little more detail: one may show by writing down the constraints on the colors—that #0, #1, #2, #4, #5, and #7 must be colored in a “proper” way—that the only way two vertices in #6’s neighborhood could share a color is if their sharing would force an illegal equality for someone adjacent to both. In fact, one can prove that in every legal 4‑coloring the colors used on {#0, #1, #2, #4, #5, #7} form a complete set of four colors.)
+
+With all four colors appearing among #6’s neighbors, #6 would have no remaining color available (since his chosen color would have to differ from each neighbor’s color). Thus no valid 4‑coloring of the graph exists.
+
+Because a valid assignment of shirt colors under the condition that no pair of friends share the same color is equivalent to a proper 4‑coloring of the graph, we conclude that the required plan is impossible.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

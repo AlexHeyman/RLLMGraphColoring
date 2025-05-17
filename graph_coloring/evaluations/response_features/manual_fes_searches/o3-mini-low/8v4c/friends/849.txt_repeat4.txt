@@ -1,0 +1,75 @@
+Edges: [(0, 1), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 3), (1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (4, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign one of four colors (Red, Green, Blue, Yellow) to each person subject to the rule “no two friends wear the same color,” a conflict must occur.
+
+Let us briefly explain one way to see a difficulty.
+
+Label the people: A = Alice, B = Bob, C = Carol, D = Dave, E = Ethan, F = Fran, G = George, and H = Heather.
+
+The friendship relations are:
+• A is friends with B, E, F, G, H.
+• B is friends with A, C, E.
+• C is friends with B, F, G, H.
+• D is friends with E, F, G, H.
+• E is friends with A, B, D, F, H.
+• F is friends with A, C, D, E, G, H.
+• G is friends with A, C, D, F.
+• H is friends with A, C, D, E, F.
+
+Focus on H (Heather). Her friends are A, C, D, E, and F. Because only 4 colors are available, for H to have a color different from every friend her friends must “use” at most three distinct colors among themselves.
+
+A natural idea is to “force” some color coincidences among H’s friends. For instance, one might try to give A and C the same color (which is allowed since A and C are not friends). That reduces the distinct colors among the set {A, C, D, E, F} to at most four. However, one must also consider the subgraph induced by {D, E, F}:
+  – D, E, and F are mutually “tangled” by conflicts: D is friends with both E and F, and E is friends with F.
+Thus, D, E, and F form a triangle and must receive three distinct colors.
+Then even if A and C share one color, the colors used (say X for A and C; and Y, Z, and W for D, E, and F) are four distinct colors.
+That would force H’s five neighbors to “cover” all four colors—leaving no option for H itself.
+
+One might try other assignments (for example, allowing A, C, and D to share a color) but then one quickly finds that some other conflicts force the five neighbors of H to be assigned three or four different colors. In particular, because among H’s neighbors the subset {D, E, F} always forms a triangle, there is no way to “save” a color for H.
+
+After examining the relations, one may conclude that a valid 4‐coloring (with each person’s color differing from every friend’s) is impossible.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign one of four colors (Red, Green, Blue, Yellow) to each person subject to the rule “no two friends wear the same color,” a conflict must occur.
+
+Let us briefly explain one way to see a difficulty.
+
+Label the people: A = #0, B = #1, C = #2, D = #3, E = #4, F = #5, G = #6, and H = #7.
+
+The friendship relations are:
+• A is friends with B, E, F, G, H.
+• B is friends with A, C, E.
+• C is friends with B, F, G, H.
+• D is friends with E, F, G, H.
+• E is friends with A, B, D, F, H.
+• F is friends with A, C, D, E, G, H.
+• G is friends with A, C, D, F.
+• H is friends with A, C, D, E, F.
+
+Focus on H (#7). Her friends are A, C, D, E, and F. Because only 4 colors are available, for H to have a color different from every friend her friends must “use” at most three distinct colors among themselves.
+
+A natural idea is to “force” some color coincidences among H’s friends. For instance, one might try to give A and C the same color (which is allowed since A and C are not friends). That reduces the distinct colors among the set {A, C, D, E, F} to at most four. However, one must also consider the subgraph induced by {D, E, F}:
+  – D, E, and F are mutually “tangled” by conflicts: D is friends with both E and F, and E is friends with F.
+Thus, D, E, and F form a triangle and must receive three distinct colors.
+Then even if A and C share one color, the colors used (say X for A and C; and Y, Z, and W for D, E, and F) are four distinct colors.
+That would force H’s five neighbors to “cover” all four colors—leaving no option for H itself.
+
+One might try other assignments (for example, allowing A, C, and D to share a color) but then one quickly finds that some other conflicts force the five neighbors of H to be assigned three or four different colors. In particular, because among H’s neighbors the subset {D, E, F} always forms a triangle, there is no way to “save” a color for H.
+
+After examining the relations, one may conclude that a valid 4‐coloring (with each person’s color differing from every friend’s) is impossible.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

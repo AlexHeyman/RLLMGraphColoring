@@ -1,0 +1,60 @@
+148.txt friends
+
+Line 20
+- George: friends with Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+209.txt friends
+
+Line 20
+- George is friends with: Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+211.txt friends
+
+Line 18
+- George: friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+214.txt friends
+
+Line 20
+- George: friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+239.txt friends
+
+Line 20
+- George: friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+65.txt friends
+
+Line 18
+George is friends with: Heather (and Alice, Carol, Dave, Ethan, Fran).
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+

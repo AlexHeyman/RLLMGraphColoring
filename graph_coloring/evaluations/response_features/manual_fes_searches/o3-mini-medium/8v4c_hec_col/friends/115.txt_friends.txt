@@ -1,0 +1,89 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(1, 2), (1, 3), (1, 5), (2, 4), (2, 5), (3, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no valid assignment exists.
+
+Label the people as follows:
+ Alice (A)
+ Bob (B)
+ Carol (C)
+ Dave (D)
+ Ethan (E)
+ Fran (F)
+ George (G)
+ Heather (H)
+
+According to the friendship list, we have these “universal” facts:
+ • Alice is friends with every other person (B, C, D, E, F, G, H).
+ • George is friends with everyone except himself (A, B, C, D, E, F, H).
+ • Heather is friends with everyone except herself (A, B, C, D, E, F, G).
+
+Thus A, G, and H form a triangle (all three are mutual friends). This forces them to get three distinct colors. (For example, if we call the colors Red, Green, Blue, and Yellow, one might feel tempted to assign A = Red, G = Green, and H = Blue.)
+
+Now consider any other person (say Bob). Because Alice is friends with Bob, Bob cannot wear Red. Also, since Bob is friends with both George and Heather, he cannot wear Green or Blue. That leaves only Yellow for Bob.
+
+But look at every person other than A, G, and H. Each of these five persons (B, C, D, E, F) is a friend of A, G, and H and so is forced to wear the fourth color (Yellow in our example).
+
+Examine the remaining friendship relations among these five people. For instance, the list states that:
+ • Bob is friends with Ethan,
+ • Carol is friends with Dave,
+ • Dave is friends with Ethan,
+ • Ethan is friends with Fran,
+ • (and there are a few more among these five).
+If all of B, C, D, E, and F wear Yellow, then many pairs of friends among them will have the same shirt color, violating the requirement.
+
+Because every person besides A, G, and H is forced into a single remaining color—and the subgraph induced on those five people is not an edgeless graph—the result is that some pair of friends would necessarily end up with the same color.
+
+Thus no assignment of red, green, blue, and yellow to the eight people can avoid a color clash among friends.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no valid assignment exists.
+
+Label the people as follows:
+ #0 (A)
+ #1 (B)
+ #2 (C)
+ #3 (D)
+ #4 (E)
+ #5 (F)
+ #6 (G)
+ #7 (H)
+
+According to the friendship list, we have these “universal” facts:
+ • #0 is friends with every other person (B, C, D, E, F, G, H).
+ • #6 is friends with everyone except himself (A, B, C, D, E, F, H).
+ • #7 is friends with everyone except herself (A, B, C, D, E, F, G).
+
+Thus A, G, and H form a triangle (all three are mutual friends). This forces them to get three distinct colors. (For example, if we call the colors Red, Green, Blue, and Yellow, one might feel tempted to assign A = Red, G = Green, and H = Blue.)
+
+Now consider any other person (say #1). Because #0 is friends with #1, #1 cannot wear Red. Also, since #1 is friends with both #6 and #7, he cannot wear Green or Blue. That leaves only Yellow for #1.
+
+But look at every person other than A, G, and H. Each of these five persons (B, C, D, E, F) is a friend of A, G, and H and so is forced to wear the fourth color (Yellow in our example).
+
+Examine the remaining friendship relations among these five people. For instance, the list states that:
+ • #1 is friends with #4,
+ • #2 is friends with #3,
+ • #3 is friends with #4,
+ • #4 is friends with #5,
+ • (and there are a few more among these five).
+If all of B, C, D, E, and F wear Yellow, then many pairs of friends among them will have the same shirt color, violating the requirement.
+
+Because every person besides A, G, and H is forced into a single remaining color—and the subgraph induced on those five people is not an edgeless graph—the result is that some pair of friends would necessarily end up with the same color.
+
+Thus no assignment of red, green, blue, and yellow to the eight people can avoid a color clash among friends.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

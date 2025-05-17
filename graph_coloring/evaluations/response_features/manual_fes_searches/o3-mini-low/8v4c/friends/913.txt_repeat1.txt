@@ -1,0 +1,63 @@
+Edges: [(0, 1), (0, 4), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (6, 7)]
+
+Complement: [(0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (2, 5), (3, 4), (5, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that if every one of the eight people must avoid wearing the same color shirt as any of the people they are friends with (with the given “friend‐of” relationships) and if only four colors (red, green, blue, yellow) are available, then no assignment exists. In other words, it is impossible.
+
+Below we briefly describe one way to try to assign colors and run into unavoidable conflicts.
+
+One approach is to view the situation as a graph on vertices {Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather} where an edge means “are friends.” (For example, there is an edge from Bob to Ethan because Bob is friends with Ethan.) Then the requirement is that adjacent vertices receive different “colors” (shirt colors). One is asking whether the graph is 4‐colorable.
+
+A reasonable way to proceed is to focus on the “central” people (for example, Bob, Ethan, and George) who each have many friends. One may try a greedy assignment in an order designed to use as few colors as possible. For instance, one may try an ordering such as
+
+ Ethan, Bob, Dave, George, Heather, Carol, Fran, Alice
+
+and assign colors step‐by‐step. For example, one might start with
+
+ Ethan = Red
+ Bob = Blue   (since Bob is a friend of Ethan)
+ ... etc.
+
+But then eventually when you come to, say, Heather (who is friends with Bob, Carol, Dave, Ethan, and George) you find that all four colors have already appeared among her friends. Different orders and attempts similarly run into a “four‐color jam” at one vertex or another.
+
+A careful analysis (or even an exhaustive search computer program) shows that no assignment of the four colors to these eight people can avoid a conflict among at least one pair of friends.
+
+Thus, with the given friendship relationships and shirt colors, it is impossible for everyone to attend wearing a shirt of a color different from all of their friends.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that if every one of the eight people must avoid wearing the same color shirt as any of the people they are friends with (with the given “friend‐of” relationships) and if only four colors (red, green, blue, yellow) are available, then no assignment exists. In other words, it is impossible.
+
+Below we briefly describe one way to try to assign colors and run into unavoidable conflicts.
+
+One approach is to view the situation as a graph on vertices {#0, #1, #2, #3, #4, #5, #6, #7} where an edge means “are friends.” (For example, there is an edge from #1 to #4 because #1 is friends with #4.) Then the requirement is that adjacent vertices receive different “colors” (shirt colors). One is asking whether the graph is 4‐colorable.
+
+A reasonable way to proceed is to focus on the “central” people (for example, #1, #4, and #6) who each have many friends. One may try a greedy assignment in an order designed to use as few colors as possible. For instance, one may try an ordering such as
+
+ #4, #1, #3, #6, #7, #2, #5, #0
+
+and assign colors step‐by‐step. For example, one might start with
+
+ #4 = Red
+ #1 = Blue   (since #1 is a friend of #4)
+ ... etc.
+
+But then eventually when you come to, say, #7 (who is friends with #1, #2, #3, #4, and #6) you find that all four colors have already appeared among her friends. Different orders and attempts similarly run into a “four‐color jam” at one vertex or another.
+
+A careful analysis (or even an exhaustive search computer program) shows that no assignment of the four colors to these eight people can avoid a conflict among at least one pair of friends.
+
+Thus, with the given friendship relationships and shirt colors, it is impossible for everyone to attend wearing a shirt of a color different from all of their friends.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

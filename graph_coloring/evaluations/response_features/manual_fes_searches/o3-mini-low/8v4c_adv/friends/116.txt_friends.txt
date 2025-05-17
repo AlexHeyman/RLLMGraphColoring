@@ -1,0 +1,43 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 3), (0, 5), (1, 2), (2, 7), (3, 4), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that under the rules given—each of the eight people must wear one of only the four shirt‐colors available (red, green, blue, or yellow) and no one may “share” a shirt–color with any of their friends—it is impossible to assign colors to all eight people.
+
+Below is a brief explanation.
+
+Step 1. Represent the situation as a graph. The eight people are vertices (Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather) and there is an edge joining two vertices if the corresponding people are friends. (For example, Alice is connected to Bob, Carol, Ethan, George, and Heather; Bob is connected to Alice, Dave, Ethan, Fran, George, and Heather; and so on.)
+
+Step 2. Notice that many of the vertices have many edges. In fact, one “central” vertex is George. His friends are Alice, Bob, Carol, Dave, Ethan, and Fran. In any valid coloring (where “color” is one of the four shirt–colors), none of these six vertices may share George’s shirt–color. That leaves just three different colors to assign among the six vertices adjacent to George.
+
+Step 3. One may show—by examining the friendship “sub‐graph” on the six vertices (Alice, Bob, Carol, Dave, Ethan, Fran) and their many connecting edges—that they cannot be colored with only three colors (because of triangles and other overlapping constraints among them). In other words, no matter how one tries, at least one pair of friends in that “sub‐graph” would be forced to have the same color if only three colors are used. (A brief look at the friendships reveals triangles such as Alice–Bob–… and others that force a 3–coloring to “fail” on six highly interconnected people.) 
+
+Because George needs a color different from all of his friends’ and that “friend” group already uses at least four distinct colors if it were possible, we have a contradiction. Thus, with only four colors available it is impossible to assign a shirt–color to every person so that no person has the same color as any of their friends.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that under the rules given—each of the eight people must wear one of only the four shirt‐colors available (red, green, blue, or yellow) and no one may “share” a shirt–color with any of their friends—it is impossible to assign colors to all eight people.
+
+Below is a brief explanation.
+
+Step 1. Represent the situation as a graph. The eight people are vertices (#0, #1, #2, #3, #4, #5, #6, #7) and there is an edge joining two vertices if the corresponding people are friends. (For example, #0 is connected to #1, #2, #4, #6, and #7; #1 is connected to #0, #3, #4, #5, #6, and #7; and so on.)
+
+Step 2. Notice that many of the vertices have many edges. In fact, one “central” vertex is #6. His friends are #0, #1, #2, #3, #4, and #5. In any valid coloring (where “color” is one of the four shirt–colors), none of these six vertices may share #6’s shirt–color. That leaves just three different colors to assign among the six vertices adjacent to #6.
+
+Step 3. One may show—by examining the friendship “sub‐graph” on the six vertices (#0, #1, #2, #3, #4, #5) and their many connecting edges—that they cannot be colored with only three colors (because of triangles and other overlapping constraints among them). In other words, no matter how one tries, at least one pair of friends in that “sub‐graph” would be forced to have the same color if only three colors are used. (A brief look at the friendships reveals triangles such as #0–#1–… and others that force a 3–coloring to “fail” on six highly interconnected people.) 
+
+Because #6 needs a color different from all of his friends’ and that “friend” group already uses at least four distinct colors if it were possible, we have a contradiction. Thus, with only four colors available it is impossible to assign a shirt–color to every person so that no person has the same color as any of their friends.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

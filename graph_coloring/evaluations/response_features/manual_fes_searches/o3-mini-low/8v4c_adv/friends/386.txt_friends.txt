@@ -1,0 +1,41 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 5), (1, 3), (2, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign one of four colors to each of the eight people – with the rule that every two persons who are friends must have different‐colored shirts – you cannot “color” the friendship “graph” with only four colors.
+
+To explain briefly without getting lost in the weeds, picture the 8 people as vertices. The friendship list tells you which vertices are connected by an “edge.” (For example, Alice is connected to Bob, Dave, Ethan, George and Heather; Bob is connected to Alice, Carol, Ethan, Fran, George and Heather; and so on.) One may check that in the friends‐graph there is a “dense” set of vertices that are very highly interconnected. In fact, focusing on Bob and the six people he is friends with (Alice, Carol, Ethan, Fran, George, and Heather) – and then noticing that among those six at least three (say, Ethan, George, and Heather) are all friends with one another – one sees that when you try to “four–color” the graph some vertex would be forced to share a color with a friend.
+
+A more detailed “hand–analysis” is as follows:
+1. Notice that one vertex – Ethan – is friends with everyone except possibly one person. (In fact, checking the list, several vertices are connected to almost every other vertex.) This high degree forces restrictions on the colors available for his neighbors.
+2. In an attempt to “four–color” the graph one is forced to look at some subset of vertices (for example, the neighbors of Bob). In that subgraph one can show that there is a clique (that is, a set of mutually adjacent vertices) of size 4. (More precisely, the structure forces at least 3 of Bob’s neighbors to form a triangle; and then three other vertices, which are each adjacent to that triangle, must all share a “fourth color.” But those three vertices are also not adjacent among themselves so they may be colored alike—but then Bob, being adjacent to all of them, can use only one of the three colors on the triangle. A careful check shows that no consistent assignment is possible.)
+3. In any valid proper graph–coloring of an undirected graph, the size of the largest clique gives a lower bound on the number of colors needed (this number is called the graph’s “chromatic number”). In our case, the friendships force a subset whose chromatic number is at least 5. That is, no matter how you try to assign red, green, blue and yellow, you will have a pair of friends that are forced to share the same color.
+
+Because every possible attempt has the same difficulty, we must conclude that it is impossible to assign the four colors (red, green, blue, yellow) to the eight people so that no two friends wear the same colored shirt.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign one of four colors to each of the eight people – with the rule that every two persons who are friends must have different‐colored shirts – you cannot “color” the friendship “graph” with only four colors.
+
+To explain briefly without getting lost in the weeds, picture the 8 people as vertices. The friendship list tells you which vertices are connected by an “edge.” (For example, #0 is connected to #1, #3, #4, #6 and #7; #1 is connected to #0, #2, #4, #5, #6 and #7; and so on.) One may check that in the friends‐graph there is a “dense” set of vertices that are very highly interconnected. In fact, focusing on #1 and the six people he is friends with (#0, #2, #4, #5, #6, and #7) – and then noticing that among those six at least three (say, #4, #6, and #7) are all friends with one another – one sees that when you try to “four–color” the graph some vertex would be forced to share a color with a friend.
+
+A more detailed “hand–analysis” is as follows:
+1. Notice that one vertex – #4 – is friends with everyone except possibly one person. (In fact, checking the list, several vertices are connected to almost every other vertex.) This high degree forces restrictions on the colors available for his neighbors.
+2. In an attempt to “four–color” the graph one is forced to look at some subset of vertices (for example, the neighbors of #1). In that subgraph one can show that there is a clique (that is, a set of mutually adjacent vertices) of size 4. (More precisely, the structure forces at least 3 of #1’s neighbors to form a triangle; and then three other vertices, which are each adjacent to that triangle, must all share a “fourth color.” But those three vertices are also not adjacent among themselves so they may be colored alike—but then #1, being adjacent to all of them, can use only one of the three colors on the triangle. A careful check shows that no consistent assignment is possible.)
+3. In any valid proper graph–coloring of an undirected graph, the size of the largest clique gives a lower bound on the number of colors needed (this number is called the graph’s “chromatic number”). In our case, the friendships force a subset whose chromatic number is at least 5. That is, no matter how you try to assign red, green, blue and yellow, you will have a pair of friends that are forced to share the same color.
+
+Because every possible attempt has the same difficulty, we must conclude that it is impossible to assign the four colors (red, green, blue, yellow) to the eight people so that no two friends wear the same colored shirt.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

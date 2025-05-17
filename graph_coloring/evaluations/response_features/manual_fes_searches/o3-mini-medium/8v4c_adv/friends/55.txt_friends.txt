@@ -1,0 +1,59 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 4), (2, 6), (2, 7), (3, 5), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (1, 5), (2, 3), (2, 5), (3, 4), (3, 6), (3, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We first model the situation as a graph. The vertices are the 8 people, and an edge connects two people if they are friends. The given friendships are:
+
+• Alice: friends with Bob, Dave, Ethan, Fran, George, Heather  
+• Bob: friends with Alice, Carol, Dave, Ethan, George, Heather  
+• Carol: friends with Bob, Ethan, George, Heather  
+• Dave: friends with Alice, Bob, Fran  
+• Ethan: friends with Alice, Bob, Carol, Fran, George, Heather  
+• Fran: friends with Alice, Dave, Ethan, George, Heather  
+• George: friends with Alice, Bob, Carol, Ethan, Fran, Heather  
+• Heather: friends with Alice, Bob, Carol, Ethan, Fran, George
+
+Now, note that among these vertices there is a complete subgraph (a clique) on {Alice, Bob, Ethan, Heather}. (Every pair from these four are friends: for example, Alice is friends with Bob, Ethan, and Heather; Bob is friends with Ethan and Heather; and Ethan is friends with Heather.) In any proper coloring of a clique, each vertex must be given a different color—so if we have 4 colors (Red, Green, Blue, Yellow) then the clique forces Alice, Bob, Ethan, and Heather to take all 4 different colors.
+
+Look now at George. Its neighbors are:  
+Alice, Bob, Carol, Ethan, Fran, and Heather.
+
+No matter how we assign the colors to the clique {Alice, Bob, Ethan, Heather} (all four different colors), George finds that among its neighbors the colors Red, Green, Blue, and Yellow are all present. Even if you try to “save” a color by carefully choosing colors for Carol and Fran, the four clique members already cover all 4 colors. This means that any choice for George would conflict with one of its neighbors—a proper coloring requires that no two adjacent vertices share the same color.
+
+Thus, there is no way to assign one of the four colors to each person so that friends (adjacent vertices) do not wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We first model the situation as a graph. The vertices are the 8 people, and an edge connects two people if they are friends. The given friendships are:
+
+• #0: friends with #1, #3, #4, #5, #6, #7  
+• #1: friends with #0, #2, #3, #4, #6, #7  
+• #2: friends with #1, #4, #6, #7  
+• #3: friends with #0, #1, #5  
+• #4: friends with #0, #1, #2, #5, #6, #7  
+• #5: friends with #0, #3, #4, #6, #7  
+• #6: friends with #0, #1, #2, #4, #5, #7  
+• #7: friends with #0, #1, #2, #4, #5, #6
+
+Now, note that among these vertices there is a complete subgraph (a clique) on {#0, #1, #4, #7}. (Every pair from these four are friends: for example, #0 is friends with #1, #4, and #7; #1 is friends with #4 and #7; and #4 is friends with #7.) In any proper coloring of a clique, each vertex must be given a different color—so if we have 4 colors (Red, Green, Blue, Yellow) then the clique forces #0, #1, #4, and #7 to take all 4 different colors.
+
+Look now at #6. Its neighbors are:  
+#0, #1, #2, #4, #5, and #7.
+
+No matter how we assign the colors to the clique {#0, #1, #4, #7} (all four different colors), #6 finds that among its neighbors the colors Red, Green, Blue, and Yellow are all present. Even if you try to “save” a color by carefully choosing colors for #2 and #5, the four clique members already cover all 4 colors. This means that any choice for #6 would conflict with one of its neighbors—a proper coloring requires that no two adjacent vertices share the same color.
+
+Thus, there is no way to assign one of the four colors to each person so that friends (adjacent vertices) do not wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

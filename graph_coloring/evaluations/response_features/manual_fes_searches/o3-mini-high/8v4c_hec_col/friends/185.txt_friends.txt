@@ -1,0 +1,23 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (6, 7)]
+
+Complement: [(0, 1), (0, 7), (1, 2), (1, 4), (2, 4), (5, 6), (5, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+There’s an unavoidable 4‐clique in the friendship graph. Notice that Alice, Carol, Dave, and Fran are all friends with each other, so they must all wear different colors. That uses all four colors (red, green, blue, and yellow). However, George is friends with all four of these people, so no matter how you assign the colors to the clique, every one of the four colors appears among George’s friends. In other words, there is no color left for George that differs from all of his friends’ colors. 
+
+Impossible
+
+---
+Numericized:
+---
+
+There’s an unavoidable 4‐clique in the friendship graph. Notice that #0, #2, #3, and #5 are all friends with each other, so they must all wear different colors. That uses all four colors (red, green, blue, and yellow). However, #6 is friends with all four of these people, so no matter how you assign the colors to the clique, every one of the four colors appears among #6’s friends. In other words, there is no color left for #6 that differs from all of his friends’ colors. 
+
+Impossible
+
+---
+
+Manually assessed false edges: 5,6

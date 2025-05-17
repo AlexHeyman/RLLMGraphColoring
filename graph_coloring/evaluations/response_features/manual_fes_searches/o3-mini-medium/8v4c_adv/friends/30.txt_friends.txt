@@ -1,0 +1,87 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 3), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7)]
+
+Complement: [(0, 5), (1, 2), (1, 4), (1, 5), (2, 3), (5, 6), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign the four colors – red, green, blue, yellow – to the eight people so that no two friends share the same color, you cannot avoid a conflict for at least one person.
+
+Let the eight people be labeled as follows:
+ Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather.
+
+The friendships given are:
+ • Alice is friends with Bob, Carol, Dave, Ethan, George, Heather.
+ • Bob is friends with Dave, George, Heather.
+ • Carol is friends with Ethan, Fran, George, Heather.
+ • Dave is friends with Ethan, Fran, George, Heather.
+ • Ethan is friends with Fran, George, Heather.
+
+In particular, notice that George is friends with
+ Alice, Bob, Carol, Dave, Ethan, Heather.
+That is, six people must have colors distinct from George’s color.
+
+Now, because there are only four colors available, for George to be able to “avoid” conflict its six friends must use at most three distinct colors (so that the fourth color remains free for George). In other words, it must be possible to color the set {Alice, Bob, Carol, Dave, Ethan, Heather} using only three colors while at the same time obeying that any two people who are friends get different colors.
+
+Let’s examine the subgraph induced on {Alice, Bob, Carol, Dave, Ethan, Heather} (ignoring Fran and George for the moment). The given friendships among these six people include:
+ • Alice is friends with Bob, Carol, Dave, Ethan, Heather.
+ • Bob is friends with Alice, Dave, Heather.
+ • Carol is friends with Alice, Ethan, Heather.
+ • Dave is friends with Alice, Bob, Ethan, Heather.
+ • Ethan is friends with Alice, Carol, Dave, Heather.
+ • Heather is friends with everyone in this set (Alice, Bob, Carol, Dave, Ethan).
+
+In any proper coloring of these six people, note that Heather (who is friends with everyone else among them) must have a color that none of the other five use. That forces the colors for the five people {Alice, Bob, Carol, Dave, Ethan} to come from the three remaining colors. However, when you look at the edges among those five it turns out they cannot be colored with just three colors. For example, consider the triangle among Alice, Bob, and Dave (since Alice is friends with Bob and Dave, and Bob is friends with Dave). A triangle necessarily requires three different colors. Then whoever colors Carol and Ethan will have to choose from these same three colors. But Carol and Ethan are adjacent (since Carol is friends with Ethan). That extra condition forces that among {Alice, Bob, Carol, Dave, Ethan} all three colors must appear. Now Heather (adjacent to all five) must take a fourth color. Thus the six people {Alice, Bob, Carol, Dave, Ethan, Heather} end up using all four colors.
+
+Returning to George, since his friends are exactly these six people, their colors cover all four colors. That leaves no available color for George. 
+
+Because every valid assignment of colors to the other six people forces them to use all four colors, it becomes impossible to give George any shirt color different from all his friends.
+
+Thus, there is no possible assignment of the four colors to the eight people so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign the four colors – red, green, blue, yellow – to the eight people so that no two friends share the same color, you cannot avoid a conflict for at least one person.
+
+Let the eight people be labeled as follows:
+ #0, #1, #2, #3, #4, #5, #6, #7.
+
+The friendships given are:
+ • #0 is friends with #1, #2, #3, #4, #6, #7.
+ • #1 is friends with #3, #6, #7.
+ • #2 is friends with #4, #5, #6, #7.
+ • #3 is friends with #4, #5, #6, #7.
+ • #4 is friends with #5, #6, #7.
+
+In particular, notice that #6 is friends with
+ #0, #1, #2, #3, #4, #7.
+That is, six people must have colors distinct from #6’s color.
+
+Now, because there are only four colors available, for #6 to be able to “avoid” conflict its six friends must use at most three distinct colors (so that the fourth color remains free for #6). In other words, it must be possible to color the set {#0, #1, #2, #3, #4, #7} using only three colors while at the same time obeying that any two people who are friends get different colors.
+
+Let’s examine the subgraph induced on {#0, #1, #2, #3, #4, #7} (ignoring #5 and #6 for the moment). The given friendships among these six people include:
+ • #0 is friends with #1, #2, #3, #4, #7.
+ • #1 is friends with #0, #3, #7.
+ • #2 is friends with #0, #4, #7.
+ • #3 is friends with #0, #1, #4, #7.
+ • #4 is friends with #0, #2, #3, #7.
+ • #7 is friends with everyone in this set (#0, #1, #2, #3, #4).
+
+In any proper coloring of these six people, note that #7 (who is friends with everyone else among them) must have a color that none of the other five use. That forces the colors for the five people {#0, #1, #2, #3, #4} to come from the three remaining colors. However, when you look at the edges among those five it turns out they cannot be colored with just three colors. For example, consider the triangle among #0, #1, and #3 (since #0 is friends with #1 and #3, and #1 is friends with #3). A triangle necessarily requires three different colors. Then whoever colors #2 and #4 will have to choose from these same three colors. But #2 and #4 are adjacent (since #2 is friends with #4). That extra condition forces that among {#0, #1, #2, #3, #4} all three colors must appear. Now #7 (adjacent to all five) must take a fourth color. Thus the six people {#0, #1, #2, #3, #4, #7} end up using all four colors.
+
+Returning to #6, since his friends are exactly these six people, their colors cover all four colors. That leaves no available color for #6. 
+
+Because every valid assignment of colors to the other six people forces them to use all four colors, it becomes impossible to give #6 any shirt color different from all his friends.
+
+Thus, there is no possible assignment of the four colors to the eight people so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

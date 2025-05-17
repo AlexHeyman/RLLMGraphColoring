@@ -1,0 +1,161 @@
+Edges: [(0, 4), (0, 5), (0, 6), (1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (6, 7)]
+
+Complement: [(0, 1), (0, 2), (0, 3), (0, 7), (1, 2), (1, 4), (2, 5), (4, 7), (5, 6), (5, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+Let the 8 people be represented by the vertices of a graph G = (V, E), where V = {Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather}. An edge exists between two vertices if the corresponding people are friends. The set of available shirt colors is {Red, Green, Blue, Yellow}. We need to assign a color to each vertex such that no two adjacent vertices have the same color. This is a graph coloring problem, and we need to determine if the graph G is 4-colorable.
+
+Let's denote the vertices by their first letters: A, B, C, D, E, F, G, H.
+The friendships define the edges of the graph:
+A is friends with E, F, G. Edges: (A, E), (A, F), (A, G).
+B is friends with D, F, G, H. Edges: (B, D), (B, F), (B, G), (B, H).
+C is friends with D, E, G, H. Edges: (C, D), (C, E), (C, G), (C, H).
+D is friends with E, F, G, H. From B and C's lists, D is also friends with B and C. Edges: (D, E), (D, F), (D, G), (D, H), (D, B), (D, C).
+E is friends with F, G. From A, C, D's lists, E is also friends with A, C, D. Edges: (E, F), (E, G), (E, A), (E, C), (E, D).
+F is friends with G. From A, B, D, E's lists, F is also friends with A, B, D, E. Edges: (F, G), (F, A), (F, B), (F, D), (F, E).
+G is friends with H. From A, B, C, D, E, F's lists, G is also friends with A, B, C, D, E, F. Edges: (G, H), (G, A), (G, B), (G, C), (G, D), (G, E), (G, F).
+H has friends B, C, D, G based on the lists of B, C, D, G.
+
+The adjacency list for the graph G is:
+A: E, F, G
+B: D, F, G, H
+C: D, E, G, H
+D: B, C, E, F, G, H
+E: A, C, D, F, G
+F: A, B, D, E, G
+G: A, B, C, D, E, F, H
+H: B, C, D, G
+
+We need to determine if this graph G is 4-colorable. Let the four colors be c1, c2, c3, c4.
+
+Consider vertex H. Its neighbors are B, C, D, G. In any valid coloring, the color assigned to H, C(H), must be different from the colors assigned to its neighbors: C(B), C(C), C(D), C(G).
+For H to be colorable using one of the four available colors, the set of colors {C(B), C(C), C(D), C(G)} must use at most 3 distinct colors. This implies that at least two vertices among B, C, D, G must share the same color.
+
+Let's examine the subgraph induced by the vertices {B, C, D, G}. The edges within this set are:
+(B, D), (B, G)
+(C, D), (C, G)
+(D, G)
+The vertices B and C are not friends (there is no edge (B, C)).
+Since D is connected to B, C, G, its color C(D) must be different from C(B), C(C), C(G).
+Since G is connected to B, C, D, its color C(G) must be different from C(B), C(C), C(D).
+Since B is connected to D, G, its color C(B) must be different from C(D), C(G).
+Since C is connected to D, G, its color C(C) must be different from C(D), C(G).
+Also, D and G are connected, so C(D) != C(G).
+B and D are connected, so C(B) != C(D).
+B and G are connected, so C(B) != C(G).
+C and D are connected, so C(C) != C(D).
+C and G are connected, so C(C) != C(G).
+
+The only pair of vertices in {B, C, D, G} that are not connected by an edge is (B, C). Therefore, if any two vertices in this set are to share a color, it must be B and C.
+So, for H to be colorable, it must be the case that C(B) = C(C). Let this color be c3.
+Since D is adjacent to B and C (both colored c3), C(D) must be different from c3. Let C(D) = c1.
+Since G is adjacent to B and C (both colored c3), C(G) must be different from c3. Let C(G) = c2.
+Since D and G are adjacent, c1 != c2.
+Since D is adjacent to B and C (color c3), c1 != c3.
+Since G is adjacent to B and C (color c3), c2 != c3.
+Thus, c1, c2, and c3 must be three distinct colors.
+
+Now, consider H. H is adjacent to B(c3), C(c3), D(c1), G(c2). C(H) must be different from c1, c2, c3. Since there are four colors available, H must be assigned the fourth color, c4. C(H) = c4.
+So, any valid 4-coloring of G must satisfy: C(D)=c1, C(G)=c2, C(B)=C(C)=c3, C(H)=c4, where c1, c2, c3, c4 are the four distinct colors.
+
+Now let's consider vertex E. E is adjacent to A, C, D, F, G.
+The colors of its neighbors C, D, G are C(C)=c3, C(D)=c1, C(G)=c2.
+So, C(E) must be different from c1, c2, c3. Therefore, C(E) must be c4 (or possibly a color shared with A or F, but it must be different from c1, c2, c3). The only color available from {c1, c2, c3, c4} is c4. So C(E) = c4.
+
+Now let's consider vertex F. F is adjacent to A, B, D, E, G.
+The colors of its neighbors B, D, G are C(B)=c3, C(D)=c1, C(G)=c2.
+So, C(F) must be different from c1, c2, c3. Therefore, C(F) must be c4 (or possibly a color shared with A or E, but it must be different from c1, c2, c3). The only color available from {c1, c2, c3, c4} is c4. So C(F) = c4.
+
+We have deduced that in any 4-coloring of G, it must be the case that C(E) = c4 and C(F) = c4.
+However, Ethan (E) and Fran (F) are friends. This means there is an edge (E, F) in the graph G.
+Adjacent vertices must have different colors, so C(E) must be different from C(F).
+But we found that C(E) = c4 and C(F) = c4, which means C(E) = C(F).
+This is a contradiction.
+
+The assumption that a valid 4-coloring exists leads to a contradiction. Therefore, the graph G is not 4-colorable. It is impossible to assign shirts to the 8 people according to the given rules.
+
+Impossible
+
+---
+Numericized:
+---
+
+Let the 8 people be represented by the vertices of a graph G = (V, E), where V = {#0, #1, #2, #3, #4, #5, #6, #7}. An edge exists between two vertices if the corresponding people are friends. The set of available shirt colors is {Red, Green, Blue, Yellow}. We need to assign a color to each vertex such that no two adjacent vertices have the same color. This is a graph coloring problem, and we need to determine if the graph G is 4-colorable.
+
+Let's denote the vertices by their first letters: A, B, C, D, E, F, G, H.
+The friendships define the edges of the graph:
+A is friends with E, F, G. Edges: (A, E), (A, F), (A, G).
+B is friends with D, F, G, H. Edges: (B, D), (B, F), (B, G), (B, H).
+C is friends with D, E, G, H. Edges: (C, D), (C, E), (C, G), (C, H).
+D is friends with E, F, G, H. From B and C's lists, D is also friends with B and C. Edges: (D, E), (D, F), (D, G), (D, H), (D, B), (D, C).
+E is friends with F, G. From A, C, D's lists, E is also friends with A, C, D. Edges: (E, F), (E, G), (E, A), (E, C), (E, D).
+F is friends with G. From A, B, D, E's lists, F is also friends with A, B, D, E. Edges: (F, G), (F, A), (F, B), (F, D), (F, E).
+G is friends with H. From A, B, C, D, E, F's lists, G is also friends with A, B, C, D, E, F. Edges: (G, H), (G, A), (G, B), (G, C), (G, D), (G, E), (G, F).
+H has friends B, C, D, G based on the lists of B, C, D, G.
+
+The adjacency list for the graph G is:
+A: E, F, G
+B: D, F, G, H
+C: D, E, G, H
+D: B, C, E, F, G, H
+E: A, C, D, F, G
+F: A, B, D, E, G
+G: A, B, C, D, E, F, H
+H: B, C, D, G
+
+We need to determine if this graph G is 4-colorable. Let the four colors be c1, c2, c3, c4.
+
+Consider vertex H. Its neighbors are B, C, D, G. In any valid coloring, the color assigned to H, C(H), must be different from the colors assigned to its neighbors: C(B), C(C), C(D), C(G).
+For H to be colorable using one of the four available colors, the set of colors {C(B), C(C), C(D), C(G)} must use at most 3 distinct colors. This implies that at least two vertices among B, C, D, G must share the same color.
+
+Let's examine the subgraph induced by the vertices {B, C, D, G}. The edges within this set are:
+(B, D), (B, G)
+(C, D), (C, G)
+(D, G)
+The vertices B and C are not friends (there is no edge (B, C)).
+Since D is connected to B, C, G, its color C(D) must be different from C(B), C(C), C(G).
+Since G is connected to B, C, D, its color C(G) must be different from C(B), C(C), C(D).
+Since B is connected to D, G, its color C(B) must be different from C(D), C(G).
+Since C is connected to D, G, its color C(C) must be different from C(D), C(G).
+Also, D and G are connected, so C(D) != C(G).
+B and D are connected, so C(B) != C(D).
+B and G are connected, so C(B) != C(G).
+C and D are connected, so C(C) != C(D).
+C and G are connected, so C(C) != C(G).
+
+The only pair of vertices in {B, C, D, G} that are not connected by an edge is (B, C). Therefore, if any two vertices in this set are to share a color, it must be B and C.
+So, for H to be colorable, it must be the case that C(B) = C(C). Let this color be c3.
+Since D is adjacent to B and C (both colored c3), C(D) must be different from c3. Let C(D) = c1.
+Since G is adjacent to B and C (both colored c3), C(G) must be different from c3. Let C(G) = c2.
+Since D and G are adjacent, c1 != c2.
+Since D is adjacent to B and C (color c3), c1 != c3.
+Since G is adjacent to B and C (color c3), c2 != c3.
+Thus, c1, c2, and c3 must be three distinct colors.
+
+Now, consider H. H is adjacent to B(c3), C(c3), D(c1), G(c2). C(H) must be different from c1, c2, c3. Since there are four colors available, H must be assigned the fourth color, c4. C(H) = c4.
+So, any valid 4-coloring of G must satisfy: C(D)=c1, C(G)=c2, C(B)=C(C)=c3, C(H)=c4, where c1, c2, c3, c4 are the four distinct colors.
+
+Now let's consider vertex E. E is adjacent to A, C, D, F, G.
+The colors of its neighbors C, D, G are C(C)=c3, C(D)=c1, C(G)=c2.
+So, C(E) must be different from c1, c2, c3. Therefore, C(E) must be c4 (or possibly a color shared with A or F, but it must be different from c1, c2, c3). The only color available from {c1, c2, c3, c4} is c4. So C(E) = c4.
+
+Now let's consider vertex F. F is adjacent to A, B, D, E, G.
+The colors of its neighbors B, D, G are C(B)=c3, C(D)=c1, C(G)=c2.
+So, C(F) must be different from c1, c2, c3. Therefore, C(F) must be c4 (or possibly a color shared with A or E, but it must be different from c1, c2, c3). The only color available from {c1, c2, c3, c4} is c4. So C(F) = c4.
+
+We have deduced that in any 4-coloring of G, it must be the case that C(E) = c4 and C(F) = c4.
+However, #4 (E) and #5 (F) are friends. This means there is an edge (E, F) in the graph G.
+Adjacent vertices must have different colors, so C(E) must be different from C(F).
+But we found that C(E) = c4 and C(F) = c4, which means C(E) = C(F).
+This is a contradiction.
+
+The assumption that a valid 4-coloring exists leads to a contradiction. Therefore, the graph G is not 4-colorable. It is impossible to assign shirts to the 8 people according to the given rules.
+
+Impossible
+
+---
+
+Manually assessed false edges: 5,6

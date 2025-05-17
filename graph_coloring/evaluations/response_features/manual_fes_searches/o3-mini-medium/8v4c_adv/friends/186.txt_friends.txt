@@ -1,0 +1,57 @@
+Edges: [(0, 1), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 3), (0, 5), (3, 4), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how the eight people choose shirts from the four available colors, there is always someone forced to share a shirt color with one of their friends.
+
+Let the eight people be denoted by A, B, C, D, E, F, G, and H standing for Alice, Bob, Carol, Dave, Ethan, Fran, George, and Heather respectively. The given friendship relationships can be summarized as follows:
+
+• A (Alice) is friends with: B, E, G, H.
+• B (Bob) is friends with: A, C, D, E, F, G, H.
+• C (Carol) is friends with: B, D, E, F, G, H.
+• D (Dave) is friends with: B, C, G, H.
+• E (Ethan) is friends with: A, B, C, G, H.
+• F (Fran) is friends with: B, C, G, H.
+• G (George) is friends with: A, B, C, D, E, F, H.
+• H (Heather) is friends with: A, B, C, D, E, F, G.
+
+Notice that Bob, Carol, George, and Heather are all mutual friends. In addition, Dave is friends with Bob, Carol, George, and Heather. That means that the set {B, C, D, G, H} forms a clique – every pair in that set is friends with each other. (To check, note for example that B is friends with C, D, G, and H; C is friends with D, G, and H; and so on.)
+
+A clique of size k requires that all k vertices be assigned different colors. Since {B, C, D, G, H} is a clique of size 5, a valid shirt assignment would need at least 5 different colors so that none of these friends would share a shirt color. However, only 4 colors (red, green, blue, yellow) are available.
+
+Thus, it is impossible to assign shirt colors to the 8 people so that no pair of friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how the eight people choose shirts from the four available colors, there is always someone forced to share a shirt color with one of their friends.
+
+Let the eight people be denoted by A, B, C, D, E, F, G, and H standing for #0, #1, #2, #3, #4, #5, #6, and #7 respectively. The given friendship relationships can be summarized as follows:
+
+• A (#0) is friends with: B, E, G, H.
+• B (#1) is friends with: A, C, D, E, F, G, H.
+• C (#2) is friends with: B, D, E, F, G, H.
+• D (#3) is friends with: B, C, G, H.
+• E (#4) is friends with: A, B, C, G, H.
+• F (#5) is friends with: B, C, G, H.
+• G (#6) is friends with: A, B, C, D, E, F, H.
+• H (#7) is friends with: A, B, C, D, E, F, G.
+
+Notice that #1, #2, #6, and #7 are all mutual friends. In addition, #3 is friends with #1, #2, #6, and #7. That means that the set {B, C, D, G, H} forms a clique – every pair in that set is friends with each other. (To check, note for example that B is friends with C, D, G, and H; C is friends with D, G, and H; and so on.)
+
+A clique of size k requires that all k vertices be assigned different colors. Since {B, C, D, G, H} is a clique of size 5, a valid shirt assignment would need at least 5 different colors so that none of these friends would share a shirt color. However, only 4 colors (red, green, blue, yellow) are available.
+
+Thus, it is impossible to assign shirt colors to the 8 people so that no pair of friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,59 @@
+Edges: [(0, 1), (0, 2), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 6), (2, 7), (3, 4), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (0, 4), (1, 2), (2, 3), (2, 5), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We first model the situation as a graph with vertices representing the eight people and an edge between two people if they are friends. The friendships given are:
+
+• Alice is friends with Bob, Carol, Fran, George, and Heather.
+• Bob is friends with Dave, Ethan, Fran, George, and Heather.
+• Carol is friends with Ethan, George, and Heather.
+• Dave is friends with Ethan.
+• Ethan is friends with Heather.
+• Fran is friends with George and Heather.
+
+Since friendship is mutual, we record the symmetric edges. In particular, notice the group consisting of Alice, Bob, Fran, George, and Heather. Check that:
+ – Alice is friends with Bob, Fran, George, and Heather.
+ – Bob is friends with Alice, Fran, George, and Heather.
+ – Fran is friends with Alice, Bob, George, and Heather.
+ – George is friends with Alice, Bob, Fran, and Heather.
+ – Heather is friends with Alice, Bob, Fran, and George.
+
+This means that these five people form a clique (a set of vertices every two of which are adjacent). In any graph coloring, every vertex in a clique must receive a distinct color because each one is connected to every other. Thus, in this clique of 5 people, at least 5 different colors are needed.
+
+Since only 4 shirt colors (red, green, blue, yellow) are available, there is no way to assign shirts so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We first model the situation as a graph with vertices representing the eight people and an edge between two people if they are friends. The friendships given are:
+
+• #0 is friends with #1, #2, #5, #6, and #7.
+• #1 is friends with #3, #4, #5, #6, and #7.
+• #2 is friends with #4, #6, and #7.
+• #3 is friends with #4.
+• #4 is friends with #7.
+• #5 is friends with #6 and #7.
+
+Since friendship is mutual, we record the symmetric edges. In particular, notice the group consisting of #0, #1, #5, #6, and #7. Check that:
+ – #0 is friends with #1, #5, #6, and #7.
+ – #1 is friends with #0, #5, #6, and #7.
+ – #5 is friends with #0, #1, #6, and #7.
+ – #6 is friends with #0, #1, #5, and #7.
+ – #7 is friends with #0, #1, #5, and #6.
+
+This means that these five people form a clique (a set of vertices every two of which are adjacent). In any graph coloring, every vertex in a clique must receive a distinct color because each one is connected to every other. Thus, in this clique of 5 people, at least 5 different colors are needed.
+
+Since only 4 shirt colors (red, green, blue, yellow) are available, there is no way to assign shirts so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

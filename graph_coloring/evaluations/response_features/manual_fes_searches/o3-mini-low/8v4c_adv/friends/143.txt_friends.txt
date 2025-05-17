@@ -1,0 +1,43 @@
+Edges: [(0, 1), (0, 3), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 2), (0, 4), (0, 5), (1, 2), (3, 4), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four available colors (red, green, blue, yellow) to the eight people can “proper‐color” the friendship graph (that is, assign colors so that any two people who are friends have different colors). In what follows we describe one way of arriving at that conclusion.
+
+Let us represent the eight people as vertices and put an edge between two people if they are friends. (For example, there is an edge between Alice and Bob, between Alice and Dave, and so on.) A coloring of the vertices by four “colors” (red, green, blue, yellow) is acceptable if every edge connects vertices of different colors.
+
+A brief survey of the “local conditions” shows that some of the vertices have many neighbors. For instance, George is friends with seven of the eight people (everyone except Carol). Similarly, Dave and Heather each have six friends. One might hope that with four colors there is enough freedom, but if you try to assign a color to one vertex (say, Alice) and then attempt to assign colors to all of her friends and their friends step‐by‐step, you eventually run into a situation where some vertex has all four colors already “used up” on its neighbors.
+
+For example, one possibility is to begin by letting Alice wear red. Since Alice is friends with Bob, Dave, George, and Heather, none of these four may use red. In one attempt one may set Bob = blue, Dave = green, George = yellow, and then try to color Heather (who is friends with Alice, Bob, Dave, George, and others). But then Heather’s neighbors would already be wearing red, blue, green, and yellow – leaving no possible color for her.
+
+A more systematic trial (letting high‐degree vertices such as George “force” their color first and then working outwards) turns out to lead to unavoidable conflicts. One may show by “exhausting the possibilities” (or by more abstract graph‐theoretic reasoning) that there is no way to choose colors for all eight vertices under the rule that friends must have different colors.
+
+Thus, there is no valid assignment of color shirts to the eight people that keeps all friends in different colors.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of the four available colors (red, green, blue, yellow) to the eight people can “proper‐color” the friendship graph (that is, assign colors so that any two people who are friends have different colors). In what follows we describe one way of arriving at that conclusion.
+
+Let us represent the eight people as vertices and put an edge between two people if they are friends. (For example, there is an edge between #0 and #1, between #0 and #3, and so on.) A coloring of the vertices by four “colors” (red, green, blue, yellow) is acceptable if every edge connects vertices of different colors.
+
+A brief survey of the “local conditions” shows that some of the vertices have many neighbors. For instance, #6 is friends with seven of the eight people (everyone except #2). Similarly, #3 and #7 each have six friends. One might hope that with four colors there is enough freedom, but if you try to assign a color to one vertex (say, #0) and then attempt to assign colors to all of her friends and their friends step‐by‐step, you eventually run into a situation where some vertex has all four colors already “used up” on its neighbors.
+
+For example, one possibility is to begin by letting #0 wear red. Since #0 is friends with #1, #3, #6, and #7, none of these four may use red. In one attempt one may set #1 = blue, #3 = green, #6 = yellow, and then try to color #7 (who is friends with #0, #1, #3, #6, and others). But then #7’s neighbors would already be wearing red, blue, green, and yellow – leaving no possible color for her.
+
+A more systematic trial (letting high‐degree vertices such as #6 “force” their color first and then working outwards) turns out to lead to unavoidable conflicts. One may show by “exhausting the possibilities” (or by more abstract graph‐theoretic reasoning) that there is no way to choose colors for all eight vertices under the rule that friends must have different colors.
+
+Thus, there is no valid assignment of color shirts to the eight people that keeps all friends in different colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

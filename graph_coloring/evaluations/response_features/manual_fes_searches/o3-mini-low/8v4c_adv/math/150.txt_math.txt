@@ -1,0 +1,40 @@
+Edges: [(0, 1), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 4), (1, 3), (2, 5), (2, 6), (4, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of four different “colors” (taken from {Red, Green, Blue, Yellow}) to the eight vertices can “break” all the conflicts so that every edge connects vertices of different colors.
+
+Below is one way to argue that a proper four‐coloring does not exist.
+
+One can begin with the following observations. Label the vertices 0,…,7 and note that vertex 0 is incident to five other vertices (1, 3, 5, 6, 7). So if we set, say, 
+  0 = Red, 
+then all of 0’s neighbors must use colors other than Red. (The same observation applies to vertex 1, which is adjacent to 0 and four others, etc.) Even though high degree is not by itself enough to rule out a coloring with four colors, a look at the “core” of the graph shows additional conflicts.
+
+For example, one might try to begin by assigning
+  0 = Red
+and then choose a color for 1 (which must differ from Red) and for 3 (another neighbor of 0) and go on. One plausible start is to assign
+  1 = Green     (since 1 is adjacent to 0)
+  3 = Blue     (since 3 is adjacent to 0)
+
+Now vertex 0 touches 1, 3, 5, 6, and 7 (so none of them can be Red). Looking at vertex 5 (which is adjacent to both 0 and 1 and also to 3) the choice of its color is forced—none of Red, Green, or Blue may be used so one must try
+  5 = Yellow.
+
+At this point the following “partial” picture has been set up:
+  0: Red
+  1: Green
+  3: Blue
+  5: Yellow
+
+Next, examine vertex 6. Notice that 6 is adjacent to 0 (Red), 1 (Green), and 3 (Blue). So the only candidate left for 6 appears to be Yellow. However, since 5 and 6 are adjacent (edge (5,6) is given) and we already set 5 = Yellow, vertex 6 cannot be Yellow. Thus, vertex 6 would have no legal color. One might try to “fix” the problem by back‐tracking and reassigning some colors. However, after many such attempts (reassigning colors to 1, 3, or 5 in different ways) one finds that there is no assignment of our four colors to every vertex in this graph that avoids all conflict along its edges.
+
+Since every attempt to “shift” colors runs into an unsolvable conflict somewhere in the graph, we conclude that there is no 4–coloring of the graph.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

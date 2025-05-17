@@ -1,0 +1,27 @@
+Edges: [(0, 1), (0, 2), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 6), (2, 7), (3, 4), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (0, 4), (1, 2), (2, 3), (2, 5), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+Consider the four people who are all mutual friends – Alice, Bob, George, and Heather. In any proper coloring of their friendship graph, these four must all have different colors. Since only four colors are available, they will use all four colors. However, Fran is also friends with each of these four, so no matter which color Fran tried, it would match the shirt color of one of her friends. 
+
+Thus, there is no way to assign the four colors to the 8 people such that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+Consider the four people who are all mutual friends – #0, #1, #6, and #7. In any proper coloring of their friendship graph, these four must all have different colors. Since only four colors are available, they will use all four colors. However, #5 is also friends with each of these four, so no matter which color #5 tried, it would match the shirt color of one of her friends. 
+
+Thus, there is no way to assign the four colors to the 8 people such that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

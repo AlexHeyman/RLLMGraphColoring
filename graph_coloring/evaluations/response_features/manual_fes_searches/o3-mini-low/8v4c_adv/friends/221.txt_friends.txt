@@ -1,0 +1,83 @@
+Edges: [(0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7)]
+
+Complement: [(0, 1), (0, 4), (2, 4), (5, 6), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We first list the people using letters for convenience:
+• A (Alice)
+• B (Bob)
+• C (Carol)
+• D (Dave)
+• E (Ethan)
+• F (Fran)
+• G (George)
+• H (Heather)
+
+The given friendship relations are:
+
+• A is friends with C, D, F, G, and H.
+• B is friends with C, D, E, F, G, and H.
+• C is friends with D, F, G, and H (in addition to A and B).
+• D is friends with E, F, G, and H (in addition to A, B, and C).
+• E is friends with F, G, and H (in addition to B and D).
+• (F, G, and H get their friendships from the above statements.)
+
+A key observation is to look for a clique—a set of people where every two are mutual friends. Note that:
+• C is friends with D, F, G, and H.
+• D is friends with C, F, G, and H.
+• F is friends with A, B, C, D, and E (and, by symmetry, with G and H because each friendship was stated by someone).
+• G and H share similar relations.
+Thus, one finds that the set {D, F, G, H, E} all are pairwise friends:
+ – D is friends with E, F, G, and H.
+ – E is friends with F, G, and H.
+ – F, G, and H are all connected with each other as dictated by the symmetry of the friendship declarations.
+(In fact, one can also spot large interconnected groups that require at least 5 different colors.)
+
+Since a clique of size 5 appears in the graph, any proper coloring of the vertices (where friends must have different colors) would require at least 5 colors. Since only 4 colors (red, green, blue, yellow) are available, it is impossible to assign shirts to the 8 people so that no pair of friends wears the same color shirt.
+
+Impossible
+
+---
+Numericized:
+---
+
+We first list the people using letters for convenience:
+• A (#0)
+• B (#1)
+• C (#2)
+• D (#3)
+• E (#4)
+• F (#5)
+• G (#6)
+• H (#7)
+
+The given friendship relations are:
+
+• A is friends with C, D, F, G, and H.
+• B is friends with C, D, E, F, G, and H.
+• C is friends with D, F, G, and H (in addition to A and B).
+• D is friends with E, F, G, and H (in addition to A, B, and C).
+• E is friends with F, G, and H (in addition to B and D).
+• (F, G, and H get their friendships from the above statements.)
+
+A key observation is to look for a clique—a set of people where every two are mutual friends. Note that:
+• C is friends with D, F, G, and H.
+• D is friends with C, F, G, and H.
+• F is friends with A, B, C, D, and E (and, by symmetry, with G and H because each friendship was stated by someone).
+• G and H share similar relations.
+Thus, one finds that the set {D, F, G, H, E} all are pairwise friends:
+ – D is friends with E, F, G, and H.
+ – E is friends with F, G, and H.
+ – F, G, and H are all connected with each other as dictated by the symmetry of the friendship declarations.
+(In fact, one can also spot large interconnected groups that require at least 5 different colors.)
+
+Since a clique of size 5 appears in the graph, any proper coloring of the vertices (where friends must have different colors) would require at least 5 colors. Since only 4 colors (red, green, blue, yellow) are available, it is impossible to assign shirts to the 8 people so that no pair of friends wears the same color shirt.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

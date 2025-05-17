@@ -1,0 +1,53 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (4, 6), (4, 7), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 1), (0, 6), (1, 7), (2, 3), (3, 7), (4, 5)]
+
+Evaluation: impossible incorrect
+
+---
+
+We begin by interpreting the friendships as edges of a graph whose vertices are the people. A proper shirt assignment (where no one wears the same shirt color as any friend) corresponds to a proper vertex coloring of the graph using 4 colors.
+
+Listing the friends of each person:
+
+• Alice: Carol, Dave, Ethan, Fran, Heather  
+• Bob: Carol, Dave, Ethan, Fran, George  
+• Carol: Alice, Bob, Ethan, Fran, George, Heather  
+• Dave: Alice, Bob, Ethan, Fran, George  
+• Ethan: Alice, Bob, Carol, Dave, George, Heather  
+• Fran: Alice, Bob, Carol, Dave, George, Heather  
+• George: Bob, Carol, Dave, Ethan, Fran, Heather  
+• Heather: Alice, Carol, Ethan, Fran, George  
+
+Notice that the set {Carol, Ethan, Fran, George, Heather} forms a clique (each person in this set is friends with every other person in the set). In graph coloring, a clique of size k requires at least k different colors. Here, a clique of size 5 would require 5 colors to ensure no two connected vertices share the same color.
+
+Since only 4 colors (red, green, blue, yellow) are available, it is impossible to assign shirts such that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We begin by interpreting the friendships as edges of a graph whose vertices are the people. A proper shirt assignment (where no one wears the same shirt color as any friend) corresponds to a proper vertex coloring of the graph using 4 colors.
+
+Listing the friends of each person:
+
+• #0: #2, #3, #4, #5, #7  
+• #1: #2, #3, #4, #5, #6  
+• #2: #0, #1, #4, #5, #6, #7  
+• #3: #0, #1, #4, #5, #6  
+• #4: #0, #1, #2, #3, #6, #7  
+• #5: #0, #1, #2, #3, #6, #7  
+• #6: #1, #2, #3, #4, #5, #7  
+• #7: #0, #2, #4, #5, #6  
+
+Notice that the set {#2, #4, #5, #6, #7} forms a clique (each person in this set is friends with every other person in the set). In graph coloring, a clique of size k requires at least k different colors. Here, a clique of size 5 would require 5 colors to ensure no two connected vertices share the same color.
+
+Since only 4 colors (red, green, blue, yellow) are available, it is impossible to assign shirts such that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,43 @@
+Edges: [(0, 1), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 4), (1, 3), (1, 7), (2, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of red, green, blue, and yellow shirts among the 8 friends can be made so that every pair of friends wears different‐colored shirts. (In other words, there is no proper “4‐coloring” of the “friendship graph” defined above.)
+
+A brief explanation follows.
+
+One way to attack such problems is to “model” the situation by a graph whose vertices represent the people and whose edges join pairs of friends. An acceptable shirt assignment corresponds to a 4‐coloring of the graph (with “colors” red, green, blue, yellow) so that adjacent vertices (friends) get different colors. (Keep in mind that in our graph every “friendship” is mutual.)
+
+A somewhat careful look at the graph shows that some vertices—indeed, some people—have many friends. In fact, if you list the friends for each vertex you will find that (for instance) George is friends with 6 of the 7 others, and Heather is friends with 6 as well. Also, note that many edges “overlap” so that many of the people are “held together” by numerous friendship links. In our graph the friends of a particular individual turn out to form a set so “rich” in edges that no matter how you try to assign colors to them, some individual will be forced to have all four colors represented among that person’s friends, leaving no free color for that person.
+
+One might try—for example—setting colors for some of the highest‐degree vertices and then “backtracking” through the remaining ones. Many assignments eventually lead to a contradiction. After a thorough inspection (or computer‐assisted search), one finds that there is no way to assign four colors to the vertices so that every edge has differently colored endpoints.
+
+Thus, since every possible 4–coloring runs into a conflict on at least one friendship, the party plan cannot be arranged in the stated manner.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of red, green, blue, and yellow shirts among the 8 friends can be made so that every pair of friends wears different‐colored shirts. (In other words, there is no proper “4‐coloring” of the “friendship graph” defined above.)
+
+A brief explanation follows.
+
+One way to attack such problems is to “model” the situation by a graph whose vertices represent the people and whose edges join pairs of friends. An acceptable shirt assignment corresponds to a 4‐coloring of the graph (with “colors” red, green, blue, yellow) so that adjacent vertices (friends) get different colors. (Keep in mind that in our graph every “friendship” is mutual.)
+
+A somewhat careful look at the graph shows that some vertices—indeed, some people—have many friends. In fact, if you list the friends for each vertex you will find that (for instance) #6 is friends with 6 of the 7 others, and #7 is friends with 6 as well. Also, note that many edges “overlap” so that many of the people are “held together” by numerous friendship links. In our graph the friends of a particular individual turn out to form a set so “rich” in edges that no matter how you try to assign colors to them, some individual will be forced to have all four colors represented among that person’s friends, leaving no free color for that person.
+
+One might try—for example—setting colors for some of the highest‐degree vertices and then “backtracking” through the remaining ones. Many assignments eventually lead to a contradiction. After a thorough inspection (or computer‐assisted search), one finds that there is no way to assign four colors to the vertices so that every edge has differently colored endpoints.
+
+Thus, since every possible 4–coloring runs into a conflict on at least one friendship, the party plan cannot be arranged in the stated manner.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

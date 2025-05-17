@@ -1,0 +1,31 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (1, 5), (2, 3), (3, 7), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of four colors (Red, Green, Blue, Yellow) to the eight vertices (numbered 0 through 7) can avoid giving the same color to two vertices that are connected by an edge.
+
+I will now briefly explain one way to “feel” the conflict.
+
+For example, one might try to “break up” the graph by first looking at the two “special” vertices 0 and 1. Notice that 0 is adjacent to every vertex except 1, and 1 is adjacent to every vertex except 0. (So there is no edge between 0 and 1.) If we try to give 0 and 1 different colors (say, Red for 0 and Green for 1) then every vertex other than 0 and 1 (namely vertices 2,3,4,5,6,7) is adjacent both to 0 and 1. Therefore none of these vertices may receive Red or Green – only Blue or Yellow are available. (If we had given 0 and 1 the same color the situation would be no better.) 
+
+Even with just two colors available on the “rest” of the graph, one may hope that a bipartition of that part of the graph would do the job. However, when you look carefully at the edges among vertices 2,3,4,5,6,7 (for example, note that 2 is adjacent to 4, 5, 6, and 7; 3 is adjacent to 4, 5, and 6; and so on) you eventually come across a vertex – say vertex 6 – for which the two allowed colors force a contradiction. One “working attempt” one might try gives these steps:
+
+• Let 0 = Red, 1 = Green.
+• Then every one of vertices 2,3,4,6,7 must be Blue or Yellow.
+• Next one may try an assignment such as 2 = Blue and 3 = Yellow.
+• Because vertex 4 is adjacent to 2 and 3, it is forced (since 2 and 3 already “use” one color each) to take one of Blue or Yellow.
+• Continuing in this manner, you eventually find (after checking the edges such as (2,6) and (3,6) – among others – that the vertex 6 (or some other vertex) is forced into a color that conflicts with one of its already–colored neighbors.
+
+After trying all “natural” options you always run into a conflict. (A more systematic search confirms that no assignment works.)
+
+Thus, there is no valid 4–coloring that obeys the “adjacent vertices different” rule for the graph given.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

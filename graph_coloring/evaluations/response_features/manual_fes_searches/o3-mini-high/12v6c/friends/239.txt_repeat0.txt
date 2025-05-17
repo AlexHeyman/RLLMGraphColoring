@@ -1,0 +1,43 @@
+Edges: [(0, 1), (0, 3), (0, 5), (0, 6), (0, 7), (0, 8), (0, 9), (0, 10), (0, 11), (1, 2), (1, 3), (1, 4), (1, 5), (1, 10), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 9), (2, 11), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8), (3, 10), (3, 11), (4, 6), (4, 7), (4, 8), (4, 9), (4, 10), (4, 11), (5, 6), (5, 10), (5, 11), (6, 7), (6, 9), (6, 10), (7, 8), (7, 9), (7, 10), (7, 11), (8, 9), (8, 10), (8, 11), (9, 10), (9, 11), (10, 11)]
+
+Complement: [(0, 2), (0, 4), (1, 6), (1, 7), (1, 8), (1, 9), (1, 11), (2, 10), (3, 9), (4, 5), (5, 7), (5, 8), (5, 9), (6, 8), (6, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no valid assignment exists. In any valid coloring (where “coloring” means assigning one of the six colors to each person so that no two friends share the same color) the friends must receive different colors. One can prove that the “friendship‐graph” in this problem contains a clique of 7 people. (A clique is a set of vertices such that every pair is connected by an edge—in other words, every two people in that set are friends.) Since there are only 6 colors available, any clique would require that many different colors (each friend in a clique must have a unique color). Therefore if any 7 people form a clique, it is impossible to assign 6 colors so that all adjacent (friend) pairs have different colors.
+
+Let’s explain one such clique. Notice that Kathy is friends with everyone (Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather, Irene, Jack, Larry are all her friends). Now consider the six people {Carol, Dave, Ethan, Heather, Irene, Larry}. By checking the friendship list we see that:
+ • Carol is friends with Dave, Ethan, Heather, Irene, and Larry.
+ • Dave is friends with Ethan, Heather, Irene, and Larry.
+ • Ethan is friends with Heather, Irene, and Larry.
+ • Heather is friends with Irene and Larry.
+ • Irene is friends with Larry.
+Since every pair among these six people are friends, they form a clique of size 6. Because Kathy is friends with all of them, the set {Kathy, Carol, Dave, Ethan, Heather, Irene, Larry} forms a clique of size 7.
+
+A clique of 7 requires 7 distinct colors. Since we have only 6, there is no way to assign the colors so that no two friends share the same shirt color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no valid assignment exists. In any valid coloring (where “coloring” means assigning one of the six colors to each person so that no two friends share the same color) the friends must receive different colors. One can prove that the “friendship‐graph” in this problem contains a clique of 7 people. (A clique is a set of vertices such that every pair is connected by an edge—in other words, every two people in that set are friends.) Since there are only 6 colors available, any clique would require that many different colors (each friend in a clique must have a unique color). Therefore if any 7 people form a clique, it is impossible to assign 6 colors so that all adjacent (friend) pairs have different colors.
+
+Let’s explain one such clique. Notice that #10 is friends with everyone (#0, #1, #2, #3, #4, #5, #6, #7, #8, #9, #11 are all her friends). Now consider the six people {#2, #3, #4, #7, #8, #11}. By checking the friendship list we see that:
+ • #2 is friends with #3, #4, #7, #8, and #11.
+ • #3 is friends with #4, #7, #8, and #11.
+ • #4 is friends with #7, #8, and #11.
+ • #7 is friends with #8 and #11.
+ • #8 is friends with #11.
+Since every pair among these six people are friends, they form a clique of size 6. Because #10 is friends with all of them, the set {#10, #2, #3, #4, #7, #8, #11} forms a clique of size 7.
+
+A clique of 7 requires 7 distinct colors. Since we have only 6, there is no way to assign the colors so that no two friends share the same shirt color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 2,10

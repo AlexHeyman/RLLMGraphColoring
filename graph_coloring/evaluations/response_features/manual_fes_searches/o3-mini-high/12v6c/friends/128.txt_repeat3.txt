@@ -1,0 +1,87 @@
+Edges: [(0, 1), (0, 3), (0, 5), (0, 6), (0, 7), (0, 8), (0, 9), (0, 10), (0, 11), (1, 2), (1, 3), (1, 6), (1, 7), (1, 9), (1, 11), (2, 3), (2, 4), (2, 5), (2, 6), (2, 9), (2, 10), (2, 11), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (3, 10), (3, 11), (4, 6), (4, 7), (4, 8), (4, 9), (4, 11), (5, 8), (5, 9), (5, 10), (5, 11), (6, 7), (6, 10), (6, 11), (7, 8), (7, 10), (7, 11), (8, 9), (8, 10), (8, 11), (9, 10), (9, 11)]
+
+Complement: [(0, 2), (0, 4), (1, 4), (1, 5), (1, 8), (1, 10), (2, 7), (2, 8), (3, 4), (4, 5), (4, 10), (5, 6), (5, 7), (6, 8), (6, 9), (7, 9), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of six shirt‐colors (red, green, blue, yellow, orange, and purple) can “separate” every pair of friends. In other words, the “friendship graph” cannot be colored properly with only six colors.
+
+Let us explain briefly. (Note: A “proper coloring” is an assignment of colors to people so that every pair of friends gets different colors.)
+
+One may list the “friendships” among the 12 people. For example, from the problem statement we have:
+  • Alice is friends with Bob, Dave, Fran, George, Heather, Irene, Jack, Kathy, and Larry.
+  • Bob is friends with Carol, Dave, George, Heather, Jack, and Larry.
+  • Carol is friends with Dave, Ethan, Fran, George, Jack, Kathy, and Larry.
+  • Dave is friends with Fran, George, Heather, Irene, Jack, Kathy, and Larry.
+  • Ethan is friends with George, Heather, Irene, Jack, and Larry.
+  • Fran is friends with Irene, Jack, Kathy, and Larry.
+  • George is friends with Heather, Kathy, and Larry.
+  • Heather is friends with Irene, Kathy, and Larry.
+  • Irene is friends with Jack, Kathy, and Larry.
+  • Jack is friends with Kathy and Larry.
+  • Kathy is friends with Larry.
+
+A little thought reveals that some people are “very popular.” In fact, one may show that the six people 
+  Alice, Dave, Fran, Irene, Jack, and Kathy 
+(with Larry added automatically, since Larry is friends with everyone) satisfy the following:
+  – Alice is friends with Dave, Fran, Irene, Jack, and Kathy.
+  – Dave is friends with Alice, Fran, Irene, Jack, and Kathy.
+  – Fran is friends with Alice, Dave, Irene, and Jack (and also Kathy).
+  – Irene is friends with Alice, Dave, Fran, and Jack (as well as Kathy).
+  – Jack is friends with Alice, Dave, Fran, and Irene (and also Kathy).
+  – Kathy (by her own list) is friends with Alice, Dave, Fran, Irene, and Jack.
+Moreover, each of these is also friends with Larry. In other words, the seven–vertex set 
+  {Alice, Dave, Fran, Irene, Jack, Kathy, Larry}
+forms a complete subgraph (a “clique”). (One may check from the listings above that every two people in this set are friends.) 
+
+Since a proper coloring must assign a different color to every pair of vertices in a clique, a clique of size 7 requires at least 7 colors. (In our 7‑clique the seven people are all “mutually adjacent,” so no two may share the same color.) Thus the “chromatic number” of the friendship graph is at least 7.
+
+Since only six shirt–colors are available, there is no way to assign the shirts so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of six shirt‐colors (red, green, blue, yellow, orange, and purple) can “separate” every pair of friends. In other words, the “friendship graph” cannot be colored properly with only six colors.
+
+Let us explain briefly. (Note: A “proper coloring” is an assignment of colors to people so that every pair of friends gets different colors.)
+
+One may list the “friendships” among the 12 people. For example, from the problem statement we have:
+  • #0 is friends with #1, #3, #5, #6, #7, #8, #9, #10, and #11.
+  • #1 is friends with #2, #3, #6, #7, #9, and #11.
+  • #2 is friends with #3, #4, #5, #6, #9, #10, and #11.
+  • #3 is friends with #5, #6, #7, #8, #9, #10, and #11.
+  • #4 is friends with #6, #7, #8, #9, and #11.
+  • #5 is friends with #8, #9, #10, and #11.
+  • #6 is friends with #7, #10, and #11.
+  • #7 is friends with #8, #10, and #11.
+  • #8 is friends with #9, #10, and #11.
+  • #9 is friends with #10 and #11.
+  • #10 is friends with #11.
+
+A little thought reveals that some people are “very popular.” In fact, one may show that the six people 
+  #0, #3, #5, #8, #9, and #10 
+(with #11 added automatically, since #11 is friends with everyone) satisfy the following:
+  – #0 is friends with #3, #5, #8, #9, and #10.
+  – #3 is friends with #0, #5, #8, #9, and #10.
+  – #5 is friends with #0, #3, #8, and #9 (and also #10).
+  – #8 is friends with #0, #3, #5, and #9 (as well as #10).
+  – #9 is friends with #0, #3, #5, and #8 (and also #10).
+  – #10 (by her own list) is friends with #0, #3, #5, #8, and #9.
+Moreover, each of these is also friends with #11. In other words, the seven–vertex set 
+  {#0, #3, #5, #8, #9, #10, #11}
+forms a complete subgraph (a “clique”). (One may check from the listings above that every two people in this set are friends.) 
+
+Since a proper coloring must assign a different color to every pair of vertices in a clique, a clique of size 7 requires at least 7 colors. (In our 7‑clique the seven people are all “mutually adjacent,” so no two may share the same color.) Thus the “chromatic number” of the friendship graph is at least 7.
+
+Since only six shirt–colors are available, there is no way to assign the shirts so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 10,11

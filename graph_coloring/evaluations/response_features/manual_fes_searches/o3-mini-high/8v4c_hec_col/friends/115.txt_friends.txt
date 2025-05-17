@@ -1,0 +1,59 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(1, 2), (1, 3), (1, 5), (2, 4), (2, 5), (3, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how one tries to assign four colors (red, green, blue, and yellow) under the rule “friends must wear different colors,” a conflict is forced.
+
+To explain briefly, label the eight people as follows:
+ Alice, Bob, Carol, Dave, Ethan, Fran, George, and Heather.
+The given “friendship” list tells us, in particular, that:
+ • Alice is friends with everyone else.
+ • George and Heather are each friends with every one of the other seven people (including with each other).
+ • In addition, several extra friendships exist among the others (for example, Bob is friends with Ethan; Carol is friends with Dave; Dave is friends with Ethan; Ethan is friends with Fran; etc.).
+
+Because Alice is friends with all the others, whoever color Alice wears cannot appear on any other person. (For instance, if Alice wears red then no one else may wear red.) That forces the remaining seven people—Bob, Carol, Dave, Ethan, Fran, George, and Heather—to choose their colors from the other three colors (green, blue, and yellow).
+
+But observe that both George and Heather are “universal” among these seven (each is friends with every one of the other six in this group). So in a proper 3‐coloring of these seven people:
+ – George and Heather must have different colors.
+ – Then every other person in the set (that is, Bob, Carol, Dave, Ethan, and Fran) is friends with both George and Heather. In a 3‐coloring, when two colors are “blocked” by two neighbors, each of these other vertices is forced to take the one remaining color.
+That would mean Bob, Carol, Dave, Ethan, and Fran would all be forced to the same color.
+
+But among these five there are extra friendship edges (for example, Bob is friends with Ethan; Carol is friends with Dave; Dave is friends with Ethan; Ethan is friends with Fran; and so on). Thus at least one edge would have its two endpoints with the same color, violating the rule.
+
+Because any choice for Alice forces the remaining seven into a 3‐coloring (and with the extra edges that does not work), there is no possible way to assign the four colors so that every pair of friends wears different colors.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how one tries to assign four colors (red, green, blue, and yellow) under the rule “friends must wear different colors,” a conflict is forced.
+
+To explain briefly, label the eight people as follows:
+ #0, #1, #2, #3, #4, #5, #6, and #7.
+The given “friendship” list tells us, in particular, that:
+ • #0 is friends with everyone else.
+ • #6 and #7 are each friends with every one of the other seven people (including with each other).
+ • In addition, several extra friendships exist among the others (for example, #1 is friends with #4; #2 is friends with #3; #3 is friends with #4; #4 is friends with #5; etc.).
+
+Because #0 is friends with all the others, whoever color #0 wears cannot appear on any other person. (For instance, if #0 wears red then no one else may wear red.) That forces the remaining seven people—#1, #2, #3, #4, #5, #6, and #7—to choose their colors from the other three colors (green, blue, and yellow).
+
+But observe that both #6 and #7 are “universal” among these seven (each is friends with every one of the other six in this group). So in a proper 3‐coloring of these seven people:
+ – #6 and #7 must have different colors.
+ – Then every other person in the set (that is, #1, #2, #3, #4, and #5) is friends with both #6 and #7. In a 3‐coloring, when two colors are “blocked” by two neighbors, each of these other vertices is forced to take the one remaining color.
+That would mean #1, #2, #3, #4, and #5 would all be forced to the same color.
+
+But among these five there are extra friendship edges (for example, #1 is friends with #4; #2 is friends with #3; #3 is friends with #4; #4 is friends with #5; and so on). Thus at least one edge would have its two endpoints with the same color, violating the rule.
+
+Because any choice for #0 forces the remaining seven into a 3‐coloring (and with the extra edges that does not work), there is no possible way to assign the four colors so that every pair of friends wears different colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: 6,7

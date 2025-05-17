@@ -1,0 +1,65 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 5), (2, 4), (2, 5), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+First, note that in our friendship graph we have the following edges:
+
+• Alice is friends with Dave, Ethan, Fran, George, and Heather.
+• Bob is friends with Carol, Dave, Ethan, George, and Heather.
+• Carol is friends with Bob, Dave, George, and Heather.
+• Dave is friends with Alice, Bob, Carol, Ethan, George, and Heather.
+• Ethan is friends with Alice, Bob, Dave, George, and Heather.
+• Fran is friends with Alice, George, and Heather.
+• George is friends with Alice, Bob, Carol, Dave, Ethan, Fran, and Heather.
+• Heather is friends with Alice, Bob, Carol, Dave, Ethan, Fran, and George.
+
+Notice that Dave, Ethan, George, and Heather form a clique (a set of people where every two are friends): each is friends with all the others in that set. Since there are four available shirt colors (red, green, blue, yellow), any clique of size 4 will force these four people to each wear a distinct color.
+
+Assume we assign:
+  Dave: Red
+  Ethan: Green
+  George: Blue
+  Heather: Yellow
+
+Now, look at Alice. Her friends are Dave, Ethan, Fran, George, and Heather. With the above assignment, she sees her friends wearing Red, Green, Blue, and Yellow (since Fran’s color hasn’t been assigned yet, but that doesn’t matter). That means that no matter which color we choose for Fran, Alice is already adjacent to all four colors. Hence, Alice would have no available color left.
+
+Since there is no way to assign the four shirt colors so that no two friends share the same color, this coloring arrangement is impossible.
+
+Impossible
+
+---
+Numericized:
+---
+
+First, note that in our friendship graph we have the following edges:
+
+• #0 is friends with #3, #4, #5, #6, and #7.
+• #1 is friends with #2, #3, #4, #6, and #7.
+• #2 is friends with #1, #3, #6, and #7.
+• #3 is friends with #0, #1, #2, #4, #6, and #7.
+• #4 is friends with #0, #1, #3, #6, and #7.
+• #5 is friends with #0, #6, and #7.
+• #6 is friends with #0, #1, #2, #3, #4, #5, and #7.
+• #7 is friends with #0, #1, #2, #3, #4, #5, and #6.
+
+Notice that #3, #4, #6, and #7 form a clique (a set of people where every two are friends): each is friends with all the others in that set. Since there are four available shirt colors (red, green, blue, yellow), any clique of size 4 will force these four people to each wear a distinct color.
+
+Assume we assign:
+  #3: Red
+  #4: Green
+  #6: Blue
+  #7: Yellow
+
+Now, look at #0. Her friends are #3, #4, #5, #6, and #7. With the above assignment, she sees her friends wearing Red, Green, Blue, and Yellow (since #5’s color hasn’t been assigned yet, but that doesn’t matter). That means that no matter which color we choose for #5, #0 is already adjacent to all four colors. Hence, #0 would have no available color left.
+
+Since there is no way to assign the four shirt colors so that no two friends share the same color, this coloring arrangement is impossible.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

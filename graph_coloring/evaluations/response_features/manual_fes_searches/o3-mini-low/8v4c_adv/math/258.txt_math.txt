@@ -1,0 +1,39 @@
+Edges: [(0, 1), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 3), (2, 3), (2, 4), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no proper 4–coloring exists for this graph. In any proper coloring the rule is that every edge’s two end–vertices must receive different colors. One might hope to “get away” with four colors, but careful examination of the graph shows that some vertex is forced to be adjacent to vertices of all four colors.
+
+Let’s look at some key parts of the graph. The vertices are 0, 1, …, 7 and the edge set is
+
+ { (0,1), (0,4), (0,5), (0,6), (0,7),
+  (1,2), (1,3), (1,4), (1,5), (1,6), (1,7),
+  (2,5), (2,6), (2,7),
+  (3,4), (3,5), (3,6), (3,7),
+  (4,6), (4,7),
+  (5,6), (5,7) }.
+
+Notice in particular that vertex 1 is highly “connected” – it is adjacent to 0, 2, 3, 4, 5, 6, and 7. Also, the set of vertices {0, 1, 6, 7} forms a clique (that is, every pair of distinct vertices in this set is connected by an edge). Thus in any proper coloring these four vertices must receive four different colors. In other words, if we try to color using Red, Green, Blue, Yellow we must have, for example:
+
+ 0 Red   1 Green   6 Blue   7 Yellow
+
+Now consider vertex 4. Its neighbors are 0, 1, 3, 6, and 7. Notice that 
+ – Vertex 0 already has Red,
+ – Vertex 1 has Green,
+ – Vertex 6 has Blue,
+ – Vertex 7 has Yellow.
+So regardless of what color we give to vertex 3, vertex 4 sees all four colors among its neighbors. That leaves no available color for vertex 4.
+
+One might try avoiding this situation by “reshuffling” colors among vertices 0, 1, 6, and 7. However, because they form a clique, they must use all four colors – and vertex 4 remains adjacent to all four. Therefore no matter how we assign the colors, some vertex (namely vertex 4) is forced into conflict.
+
+Thus, it is impossible to color the vertices of the given graph with four colors in such a way that neighboring vertices always receive different colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

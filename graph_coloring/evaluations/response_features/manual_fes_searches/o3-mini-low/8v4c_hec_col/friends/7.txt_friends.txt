@@ -1,0 +1,67 @@
+Edges: [(0, 2), (0, 3), (0, 4), (1, 2), (1, 4), (1, 5), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 1), (0, 5), (0, 6), (0, 7), (1, 3), (1, 6), (2, 4), (3, 6)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how one tries to “color” (assign shirt colors to) these 8 people with only 4 colors (red, green, blue, yellow), someone will inevitably share a color with a friend. (In the language of graph‐theory, the “friendship graph” shown above is not 4–colorable.) 
+
+Let us explain one way to see this.
+
+Step 1. Forming the Graph
+
+Think of the 8 people as vertices and draw an edge between two vertices if those people are friends. (For example, there is an edge between Alice and Carol, between Alice and Dave, etc.) 
+
+Step 2. Noticing a “Hard” Set of Vertices
+
+One may check that every person is “friends with” several others. In particular, if you look at Heather’s friends, you find that Heather is friends with Bob, Carol, Dave, Ethan, Fran, and George. In any proper coloring of the graph (that is, an assignment of colors so that adjacent vertices get different colors) the six vertices adjacent to Heather are all colored with colors taken from your available palette. (A vertex’s “neighbors” in the graph are those with whom that vertex is connected by an edge.) 
+
+What might save Heather is if her neighbors “don’t use up all of the 4 colours” so that a fourth color remains available for Heather. But in fact one may show that the induced subgraph on Heather’s 6 neighbors (namely, Bob, Carol, Dave, Ethan, Fran, George) is “very connected.” In fact, one can check by inspection that these 6 vertices contain a clique (complete subgraph) of size 4—for example, the set {Bob, Carol, Ethan, Fran} forms such a clique (every two of them are friends). (One way to check is to note that Bob is friends with Carol, Ethan, and Fran; Carol is friends with both Ethan and Fran; and Ethan and Fran are also friends.) 
+
+Step 3. Why This Matters
+
+A clique of size 4 means that those 4 people must be assigned 4 different colors. Since these 4 colors are all used up among Heather’s friends, there is no color left (from the 4 available) to assign Heather (because any color used on one of her friends would then be “duplicated” on the edge connecting Heather to that friend). 
+
+Step 4. Conclusion
+
+Thus no matter how hard one tries, one is forced to assign 4 different colors to a set of 4 friends among those who are all friends with Heather—and then Heather has no “safe” fourth color available. In other words, it is impossible, using only 4 colors, to assign a color to every person while avoiding a conflict along one of the friendship edges.
+
+Therefore, the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how one tries to “color” (assign shirt colors to) these 8 people with only 4 colors (red, green, blue, yellow), someone will inevitably share a color with a friend. (In the language of graph‐theory, the “friendship graph” shown above is not 4–colorable.) 
+
+Let us explain one way to see this.
+
+Step 1. Forming the Graph
+
+Think of the 8 people as vertices and draw an edge between two vertices if those people are friends. (For example, there is an edge between #0 and #2, between #0 and #3, etc.) 
+
+Step 2. Noticing a “Hard” Set of Vertices
+
+One may check that every person is “friends with” several others. In particular, if you look at #7’s friends, you find that #7 is friends with #1, #2, #3, #4, #5, and #6. In any proper coloring of the graph (that is, an assignment of colors so that adjacent vertices get different colors) the six vertices adjacent to #7 are all colored with colors taken from your available palette. (A vertex’s “neighbors” in the graph are those with whom that vertex is connected by an edge.) 
+
+What might save #7 is if her neighbors “don’t use up all of the 4 colours” so that a fourth color remains available for #7. But in fact one may show that the induced subgraph on #7’s 6 neighbors (namely, #1, #2, #3, #4, #5, #6) is “very connected.” In fact, one can check by inspection that these 6 vertices contain a clique (complete subgraph) of size 4—for example, the set {#1, #2, #4, #5} forms such a clique (every two of them are friends). (One way to check is to note that #1 is friends with #2, #4, and #5; #2 is friends with both #4 and #5; and #4 and #5 are also friends.) 
+
+Step 3. Why This Matters
+
+A clique of size 4 means that those 4 people must be assigned 4 different colors. Since these 4 colors are all used up among #7’s friends, there is no color left (from the 4 available) to assign #7 (because any color used on one of her friends would then be “duplicated” on the edge connecting #7 to that friend). 
+
+Step 4. Conclusion
+
+Thus no matter how hard one tries, one is forced to assign 4 different colors to a set of 4 friends among those who are all friends with #7—and then #7 has no “safe” fourth color available. In other words, it is impossible, using only 4 colors, to assign a color to every person while avoiding a conflict along one of the friendship edges.
+
+Therefore, the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

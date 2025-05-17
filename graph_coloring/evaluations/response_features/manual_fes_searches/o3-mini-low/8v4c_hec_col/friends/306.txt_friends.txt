@@ -1,0 +1,77 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 1), (0, 2), (2, 3), (4, 7), (5, 6)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four colors (red, green, blue, yellow) to our eight people can “avoid” a conflict between friends.
+
+One way to settle the question is to try to “color” the graph whose vertices represent the eight people and where an edge means “are friends.” (That is, one assigns each person a “color” and demands that any two people who are friends get different colors.) In our situation the “graph” has vertices 
+  Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather 
+and the edges
+
+  Alice–Dave, Alice–Ethan, Alice–Fran, Alice–George, Alice–Heather,
+  Bob–Carol, Bob–Dave, Bob–Ethan, Bob–Fran, Bob–George, Bob–Heather,
+  Carol–Ethan, Carol–Fran, Carol–George, Carol–Heather,
+  Dave–Ethan, Dave–Fran, Dave–George, Dave–Heather,
+  Ethan–Fran, Ethan–George,
+  Fran–Heather,
+  George–Heather.
+
+A slight check shows that while not every pair is friends, the graph is “dense” in that many vertices (in fact, every person has six or five friends) share many edges. (For instance, note that Bob is friends with Carol, Dave, Ethan, Fran, George, and Heather.)
+
+One might try a systematic “greedy” coloring (or set up a system of constraints) but every attempt to assign one of four colors to the eight vertices – subject to the constraints that every edge connects vertices of different colors – ends in a conflict.
+
+For example, one might begin by “fixing” Alice’s color and then using the fact that Bob is not friends with Alice (so his color could be reused) but that Bob is friends with Carol. In one sample attempt one could try:
+
+  Alice: Red   (forcing Dave, Ethan, Fran, George, Heather not to be red)
+  Bob: Blue   (forcing Carol, Dave, Ethan, Fran, George, Heather not to be blue)
+  Carol: Red or another color, say Green,
+  … etc.
+
+When one eventually comes to assign a color to a person whose friends altogether have already “used up” red, blue, green, and yellow, one finds no available color. (A careful check shows that whichever way you try to assign the shirts among the eight people as indicated by the friendship relations, one of the people will be forced to share a color with one of his or her friends.)
+
+Since several different orderings of assignments lead to a dead‐end and one may even prove that the “chromatic number” of this graph is at least 5, the answer is that it is impossible to choose four colors (red, green, blue, and yellow) and assign them to the 8 people so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of the four colors (red, green, blue, yellow) to our eight people can “avoid” a conflict between friends.
+
+One way to settle the question is to try to “color” the graph whose vertices represent the eight people and where an edge means “are friends.” (That is, one assigns each person a “color” and demands that any two people who are friends get different colors.) In our situation the “graph” has vertices 
+  #0, #1, #2, #3, #4, #5, #6, #7 
+and the edges
+
+  #0–#3, #0–#4, #0–#5, #0–#6, #0–#7,
+  #1–#2, #1–#3, #1–#4, #1–#5, #1–#6, #1–#7,
+  #2–#4, #2–#5, #2–#6, #2–#7,
+  #3–#4, #3–#5, #3–#6, #3–#7,
+  #4–#5, #4–#6,
+  #5–#7,
+  #6–#7.
+
+A slight check shows that while not every pair is friends, the graph is “dense” in that many vertices (in fact, every person has six or five friends) share many edges. (For instance, note that #1 is friends with #2, #3, #4, #5, #6, and #7.)
+
+One might try a systematic “greedy” coloring (or set up a system of constraints) but every attempt to assign one of four colors to the eight vertices – subject to the constraints that every edge connects vertices of different colors – ends in a conflict.
+
+For example, one might begin by “fixing” #0’s color and then using the fact that #1 is not friends with #0 (so his color could be reused) but that #1 is friends with #2. In one sample attempt one could try:
+
+  #0: Red   (forcing #3, #4, #5, #6, #7 not to be red)
+  #1: Blue   (forcing #2, #3, #4, #5, #6, #7 not to be blue)
+  #2: Red or another color, say Green,
+  … etc.
+
+When one eventually comes to assign a color to a person whose friends altogether have already “used up” red, blue, green, and yellow, one finds no available color. (A careful check shows that whichever way you try to assign the shirts among the eight people as indicated by the friendship relations, one of the people will be forced to share a color with one of his or her friends.)
+
+Since several different orderings of assignments lead to a dead‐end and one may even prove that the “chromatic number” of this graph is at least 5, the answer is that it is impossible to choose four colors (red, green, blue, and yellow) and assign them to the 8 people so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

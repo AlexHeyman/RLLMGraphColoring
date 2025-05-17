@@ -1,0 +1,97 @@
+Edges: [(0, 1), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 4), (1, 5), (2, 4), (2, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+To determine if it's possible for the 8 people to wear shirts of 4 different colors (Red, Green, Blue, Yellow) such that no two friends wear the same color shirt, we can model this problem using graph theory. Let the 8 people be the vertices of a graph, and let an edge connect two vertices if the corresponding people are friends. The problem is equivalent to asking if this graph can be colored using 4 colors such that no two adjacent vertices have the same color. This is known as the graph 4-coloring problem.
+
+Let the people be represented by their initials: A (Alice), B (Bob), C (Carol), D (Dave), E (Ethan), F (Fran), G (George), H (Heather).
+The friendships define the edges of the graph G = (V, E), where V = {A, B, C, D, E, F, G, H}.
+The friendships are:
+A is friends with B, D, F, G, H.
+B is friends with A, C, D, E, G, H.
+C is friends with B, D, G, H.
+D is friends with A, B, C, E, F, G, H.
+E is friends with B, D, F, G, H.
+F is friends with A, D, E, G, H.
+G is friends with A, B, C, D, E, F, H.
+H is friends with A, B, C, D, E, F, G.
+
+We need to determine if the chromatic number of this graph, χ(G), is less than or equal to 4.
+
+Consider the subset of people {Alice, Bob, Dave, George, Heather}, or {A, B, D, G, H}. Let's check if these 5 people are all friends with each other. This corresponds to checking if the subgraph induced by these 5 vertices is a complete graph K5.
+1.  Alice (A) is friends with Bob (B), Dave (D), George (G), and Heather (H).
+2.  Bob (B) is friends with Alice (A), Dave (D), George (G), and Heather (H). (Also friends with C and E).
+3.  Dave (D) is friends with Alice (A), Bob (B), George (G), and Heather (H). (Also friends with C, E, F).
+4.  George (G) is friends with Alice (A), Bob (B), Dave (D), and Heather (H). (Also friends with C, E, F).
+5.  Heather (H) is friends with Alice (A), Bob (B), Dave (D), and George (G). (Also friends with C, E, F).
+
+From the list of friendships, we can confirm that every pair of people within the set {A, B, D, G, H} are friends with each other. For example:
+- A and B are friends.
+- A and D are friends.
+- A and G are friends.
+- A and H are friends.
+- B and D are friends.
+- B and G are friends.
+- B and H are friends.
+- D and G are friends.
+- D and H are friends.
+- G and H are friends.
+
+This means that the vertices A, B, D, G, H form a complete subgraph K5 (a clique of size 5). In any valid coloring of the graph G, all vertices in this K5 subgraph must be assigned different colors. Since there are 5 vertices in this subgraph, we need at least 5 distinct colors to color them.
+
+However, we only have 4 colors available (Red, Green, Blue, Yellow). Since the graph contains a K5 subgraph, it requires at least 5 colors (χ(G) ≥ 5). Therefore, it is impossible to color the graph with only 4 colors while satisfying the condition that no two friends wear the same color shirt.
+
+Impossible
+
+---
+Numericized:
+---
+
+To determine if it's possible for the 8 people to wear shirts of 4 different colors (Red, Green, Blue, Yellow) such that no two friends wear the same color shirt, we can model this problem using graph theory. Let the 8 people be the vertices of a graph, and let an edge connect two vertices if the corresponding people are friends. The problem is equivalent to asking if this graph can be colored using 4 colors such that no two adjacent vertices have the same color. This is known as the graph 4-coloring problem.
+
+Let the people be represented by their initials: A (#0), B (#1), C (#2), D (#3), E (#4), F (#5), G (#6), H (#7).
+The friendships define the edges of the graph G = (V, E), where V = {A, B, C, D, E, F, G, H}.
+The friendships are:
+A is friends with B, D, F, G, H.
+B is friends with A, C, D, E, G, H.
+C is friends with B, D, G, H.
+D is friends with A, B, C, E, F, G, H.
+E is friends with B, D, F, G, H.
+F is friends with A, D, E, G, H.
+G is friends with A, B, C, D, E, F, H.
+H is friends with A, B, C, D, E, F, G.
+
+We need to determine if the chromatic number of this graph, χ(G), is less than or equal to 4.
+
+Consider the subset of people {#0, #1, #3, #6, #7}, or {A, B, D, G, H}. Let's check if these 5 people are all friends with each other. This corresponds to checking if the subgraph induced by these 5 vertices is a complete graph K5.
+1.  #0 (A) is friends with #1 (B), #3 (D), #6 (G), and #7 (H).
+2.  #1 (B) is friends with #0 (A), #3 (D), #6 (G), and #7 (H). (Also friends with C and E).
+3.  #3 (D) is friends with #0 (A), #1 (B), #6 (G), and #7 (H). (Also friends with C, E, F).
+4.  #6 (G) is friends with #0 (A), #1 (B), #3 (D), and #7 (H). (Also friends with C, E, F).
+5.  #7 (H) is friends with #0 (A), #1 (B), #3 (D), and #6 (G). (Also friends with C, E, F).
+
+From the list of friendships, we can confirm that every pair of people within the set {A, B, D, G, H} are friends with each other. For example:
+- A and B are friends.
+- A and D are friends.
+- A and G are friends.
+- A and H are friends.
+- B and D are friends.
+- B and G are friends.
+- B and H are friends.
+- D and G are friends.
+- D and H are friends.
+- G and H are friends.
+
+This means that the vertices A, B, D, G, H form a complete subgraph K5 (a clique of size 5). In any valid coloring of the graph G, all vertices in this K5 subgraph must be assigned different colors. Since there are 5 vertices in this subgraph, we need at least 5 distinct colors to color them.
+
+However, we only have 4 colors available (Red, Green, Blue, Yellow). Since the graph contains a K5 subgraph, it requires at least 5 colors (χ(G) ≥ 5). Therefore, it is impossible to color the graph with only 4 colors while satisfying the condition that no two friends wear the same color shirt.
+
+Impossible
+
+---
+
+Manually assessed false edges: 6,7

@@ -1,0 +1,1341 @@
+1000.txt repeat0
+
+Line 24
+Vertex 6: connected to 2,3,4,5,7. List: (2,6), (3,6), (4,6), (5,6), and (6,7) is not listed? Let's check.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1000.txt repeat1
+
+Line 24
+Vertex 6: connected to 2,3,4,5,7. List: (2,6), (3,6), (4,6), (5,6), and (6,7) is not listed? Let's check.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1000.txt repeat2
+
+Line 24
+Vertex 6: connected to 2,3,4,5,7. List: (2,6), (3,6), (4,6), (5,6), and (6,7) is not listed? Let's check.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1000.txt repeat3
+
+Line 20
+Vertex 6: connected to 2,3,4,5,7. (from (2,6), (3,6), (4,6), (5,6), and (6,7) is not listed? Let's check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1000.txt repeat4
+
+Line 24
+Vertex 6: connected to 2,3,4,5,7. List: (2,6), (3,6), (4,6), (5,6), and (6,7) is not listed? Let's check.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1023.txt repeat0
+
+Line 170
+Is that right? In the subgraph without 2, no edge between 1 and 6, and originally, was there an edge? Original edges: (1,6) not in the list, no, only through 2, but since 2 is removed, no direct edge.
+
+False edges:
+(1, 6) [Manual assessment: false positive]
+
+---
+
+1023.txt repeat1
+
+Line 170
+Is that right? In the subgraph without 2, no edge between 1 and 6, and originally, was there an edge? Original edges: (1,6) not in the list, no, only through 2, but since 2 is removed, no direct edge.
+
+False edges:
+(1, 6) [Manual assessment: false positive]
+
+---
+
+1023.txt repeat2
+
+Line 170
+Is that right? In the subgraph without 2, no edge between 1 and 6, and originally, was there an edge? Original edges: (1,6) not in the list, no, only through 2, but since 2 is removed, no direct edge.
+
+False edges:
+(1, 6) [Manual assessment: false positive]
+
+---
+
+1023.txt repeat3
+
+Line 170
+Is that right? In the subgraph without 2, no edge between 1 and 6, and originally, was there an edge? Original edges: (1,6) not in the list, no, only through 2, but since 2 is removed, no direct edge.
+
+False edges:
+(1, 6) [Manual assessment: false positive]
+
+---
+
+1055.txt repeat2
+
+Line 690
+Now, vertex 4 is adjacent to 1,2,3 (since all edges except to 5), so adjacent to R,G,B, so needs a fourth color, but if I have only three colors, conflict.
+
+False edges:
+(1, 4) [Manual assessment: N/A]
+
+---
+
+1057.txt repeat1
+
+Line 282
+Standard K4 minus one edge: say vertices 1,2,3,4, remove edge between 1 and 2. Then edges: 1-3,1-4,2-3,2-4,3-4.
+
+False edges:
+(2, 4) [Manual assessment: N/A]
+(3, 4) [Manual assessment: N/A]
+
+---
+
+1057.txt repeat2
+
+Line 282
+Standard K4 minus one edge: say vertices 1,2,3,4, remove edge between 1 and 2. Then edges: 1-3,1-4,2-3,2-4,3-4.
+
+False edges:
+(2, 4) [Manual assessment: N/A]
+(3, 4) [Manual assessment: N/A]
+
+---
+
+1057.txt repeat3
+
+Line 282
+Standard K4 minus one edge: say vertices 1,2,3,4, remove edge between 1 and 2. Then edges: 1-3,1-4,2-3,2-4,3-4.
+
+False edges:
+(2, 4) [Manual assessment: N/A]
+(3, 4) [Manual assessment: N/A]
+
+---
+
+1060.txt repeat0
+
+Line 16
+Vertex 5: connected to 0,2,3,4,6. Edges involving 5: (0,5), (2,5), (3,5), (4,5), and (5,6)? Looking back: the edges list has (0,5), (2,5), (3,5), (4,5), and is there (5,6)? No, (5,6) is not listed. Let me check the edge list carefully.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+1060.txt repeat1
+
+Line 16
+Vertex 5: connected to 0,2,3,4,6. Edges involving 5: (0,5), (2,5), (3,5), (4,5), and (5,6)? Looking back, the edges are: {(0,1), (0,2), (0,3), (0,5), (0,6), (1,2), (1,3), (1,4), (1,6), (1,7), (2,4), (2,5), (2,6), (2,7), (3,4), (3,5), (3,6), (3,7), (4,5), (4,6), (4,7), (6,7)}
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+1060.txt repeat2
+
+Line 16
+Vertex 5: connected to 0,2,3,4,6. Edges involving 5: (0,5), (2,5), (3,5), (4,5), and (5,6)? Looking back, the edges are: {(0,1), (0,2), (0,3), (0,5), (0,6), (1,2), (1,3), (1,4), (1,6), (1,7), (2,4), (2,5), (2,6), (2,7), (3,4), (3,5), (3,6), (3,7), (4,5), (4,6), (4,7), (6,7)}
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+1060.txt repeat3
+
+Line 16
+Vertex 5: connected to 0,2,3,4,6. Edges involving 5: (0,5), (2,5), (3,5), (4,5), and (5,6)? Looking back, the edges are: {(0,1), (0,2), (0,3), (0,5), (0,6), (1,2), (1,3), (1,4), (1,6), (1,7), (2,4), (2,5), (2,6), (2,7), (3,4), (3,5), (3,6), (3,7), (4,5), (4,6), (4,7), (6,7)}
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+1062.txt repeat0
+
+Line 20
+Vertex 5: connected to 0,1,2,3,4,6. From list: (0,5), (1,5), (2,5), (3,5), (4,5), and is there (5,6)? Let's see the list: (4,5), (3,5), etc. (0,5), (1,5), (2,5), (3,5), (4,5), and (5,6) is not explicitly listed, but (4,6) is there, but for 5: looking at edges involving 5: (0,5), (1,5), (2,5), (3,5), (4,5), and is there more? (5,6) is not in the list. The list has (4,5), but no (5,6). Let me check the full list.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+1068.txt repeat0
+
+Line 18
+Vertex 6: connected to 0,1,3,4,5,7. List: (0,6), (1,6), (3,6), (4,6), (5,6), and (6,7) is not listed? Let me check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1068.txt repeat1
+
+Line 18
+Vertex 6: connected to 0,1,3,4,5,7. Edges: (0,6), (1,6), (3,6), (4,6), (5,6), and (6,7) is there? Looking back: the edges list has (5,6), (4,6), etc., but (6,7) is not explicitly listed. Let me check the list again.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1068.txt repeat2
+
+Line 18
+Vertex 6: connected to 0,1,3,4,5,7. List: (0,6), (1,6), (3,6), (4,6), (5,6), and (6,7) is not listed? Let me check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1068.txt repeat3
+
+Line 18
+Vertex 6: connected to 0,1,3,4,5,7. List: (0,6), (1,6), (3,6), (4,6), (5,6), and (6,7) is not listed? Let me check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1068.txt repeat4
+
+Line 18
+Vertex 6: connected to 0,1,3,4,5,7. Edges: (0,6), (1,6), (3,6), (4,6), (5,6), and (6,7) is there? Looking back: the edges list has (5,6), (4,6), etc., but (6,7) is not explicitly listed. Let me check the list again.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1085.txt repeat2
+
+Line 242
+Vertex 3: connected to 4,5,6 (and 0,7 but not in this set), so among 2,3,4,5,6: connected to 4,5,6.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+1085.txt repeat3
+
+Line 242
+Vertex 3: connected to 4,5,6 (and 0,7 but not in this set), so among 2,3,4,5,6: connected to 4,5,6.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+1089.txt repeat2
+
+Line 24
+Vertex 6: connected to 0,1,3,4,5,7. List: (0,6), (1,6), (3,6), (4,6), (5,6), and (6,7)? Is (6,7) in list? Looking: (4,6), (5,6), but (6,7) is not explicitly listed, but since undirected, (6,7) might be under (6,7) or (7,6). List has (4,7), (5,7), (3,7), etc., but for 6 and 7: is there (6,7)? Scanning the list: {(0,1), (0,3), (0,4), (0,5), (0,6), (0,7), (1,2), (1,3), (1,5), (1,6), (1,7), (2,3), (2,4), (2,5), (2,7), (3,4), (3,5), (3,6), (3,7), (4,6), (4,7), (5,6), (5,7)} — no (6,7) listed. So vertex 6 is connected to: from list, (0,6), (1,6), (3,6), (4,6), (5,6). Is that all? (3,6) is there, yes. So neighbors: 0,1,3,4,5. Degree 5. Missing 2 and 7.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1089.txt repeat4
+
+Line 24
+Vertex 6: connected to 0,1,3,4,5,7. List: (0,6), (1,6), (3,6), (4,6), (5,6), and (6,7)? Is (6,7) in list? Looking: (4,6), (5,6), but (6,7) is not explicitly listed, but since undirected, (6,7) might be under (6,7) or (7,6). List has (4,7), (5,7), (3,7), etc., but for 6 and 7: is there (6,7)? Scanning the list: {(0,1), (0,3), (0,4), (0,5), (0,6), (0,7), (1,2), (1,3), (1,5), (1,6), (1,7), (2,3), (2,4), (2,5), (2,7), (3,4), (3,5), (3,6), (3,7), (4,6), (4,7), (5,6), (5,7)} — no (6,7) listed. So vertex 6 is connected to: from list, (0,6), (1,6), (3,6), (4,6), (5,6). Is that all? (3,6) is there, yes. So neighbors: 0,1,3,4,5. Degree 5. Missing 2 and 7.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1098.txt repeat0
+
+Line 72
+- 6 connected to 0,2,4,5,7 (from (0,6), (2,6), (4,6), (5,6), and (5,7) is for 5 and 7, wait (6,7) is not listed? Wait, is there (6,7)?
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1098.txt repeat2
+
+Line 72
+- 6 connected to 0,2,4,5,7 (from (0,6), (2,6), (4,6), (5,6), and (5,7) is for 5 and 7, wait (6,7) is not listed? Wait, is there (6,7)?
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1098.txt repeat3
+
+Line 72
+- 6 connected to 0,2,4,5,7 (from (0,6), (2,6), (4,6), (5,6), and (5,7) is for 5 and 7, wait (6,7) is not listed? Wait, is there (6,7)?
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1098.txt repeat4
+
+Line 90
+Vertex 6: connected to 0,2,4,5,7 (from (0,6),(2,6),(4,6),(5,6),(5,7)? (5,7) is between 5 and 7, but for 6: (0,6),(2,6),(4,6),(5,6), and (4,7) is not with 6, wait: edges involving 6: from remaining: (0,6), (2,6), (4,6), (5,6), and (5,7) is not with 6, wait: is there (6,7)? In original edges, is (6,7) present?
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+1109.txt repeat1
+
+Line 30
+- 5: connected to 0,1,2,3,4,6 (from (0,5),(1,5),(2,5),(3,5),(4,5), and (5,6)? Is there (5,6)? Looking at list: (4,5),(3,5), etc. (0,5),(1,5),(2,5),(3,5),(4,5), and for 6, (0,6),(1,6),(2,6),(3,6),(4,6),(6,7). Is (5,6) an edge? Not listed. The list has (4,5), but no (5,6). Let me check the full list again.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+1109.txt repeat2
+
+Line 30
+- 5: connected to 0,1,2,3,4,6 (from (0,5),(1,5),(2,5),(3,5),(4,5), and (5,6)? Is there (5,6)? Looking at list: (4,5),(3,5), etc. (0,5),(1,5),(2,5),(3,5),(4,5), and for 6, (0,6),(1,6),(2,6),(3,6),(4,6),(6,7). Is (5,6) an edge? Not listed. The list has (4,5), but no (5,6). Let me check the full list again.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+1109.txt repeat3
+
+Line 30
+- 5: connected to 0,1,2,3,4,6 (from (0,5),(1,5),(2,5),(3,5),(4,5), and (5,6)? Is there (5,6)? Looking at list: (4,5),(3,5), etc. (0,5),(1,5),(2,5),(3,5),(4,5), and for 6, (0,6),(1,6),(2,6),(3,6),(4,6),(6,7). Is (5,6) an edge? Not listed. The list has (4,5), but no (5,6). Let me check the full list again.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+632.txt repeat0
+
+Line 140
+Non-adjacent: 10-4=6: which are (0,1),(0,5),(1,2),(1,3),(2,3),(3,5).
+
+False edges:
+(0, 1) [Manual assessment: N/A]
+(0, 5) [Manual assessment: N/A]
+(1, 2) [Manual assessment: N/A]
+(1, 3) [Manual assessment: N/A]
+(2, 3) [Manual assessment: N/A]
+(3, 5) [Manual assessment: N/A]
+
+---
+
+632.txt repeat1
+
+Line 140
+Non-adjacent: 10-4=6: which are (0,1),(0,5),(1,2),(1,3),(2,3),(3,5).
+
+False edges:
+(0, 1) [Manual assessment: N/A]
+(0, 5) [Manual assessment: N/A]
+(1, 2) [Manual assessment: N/A]
+(1, 3) [Manual assessment: N/A]
+(2, 3) [Manual assessment: N/A]
+(3, 5) [Manual assessment: N/A]
+
+---
+
+632.txt repeat3
+
+Line 140
+Non-adjacent: 10-4=6: which are (0,1),(0,5),(1,2),(1,3),(2,3),(3,5).
+
+False edges:
+(0, 1) [Manual assessment: N/A]
+(0, 5) [Manual assessment: N/A]
+(1, 2) [Manual assessment: N/A]
+(1, 3) [Manual assessment: N/A]
+(2, 3) [Manual assessment: N/A]
+(3, 5) [Manual assessment: N/A]
+
+---
+
+632.txt repeat4
+
+Line 140
+Non-adjacent: 10-4=6: which are (0,1),(0,5),(1,2),(1,3),(2,3),(3,5).
+
+False edges:
+(0, 1) [Manual assessment: N/A]
+(0, 5) [Manual assessment: N/A]
+(1, 2) [Manual assessment: N/A]
+(1, 3) [Manual assessment: N/A]
+(2, 3) [Manual assessment: N/A]
+(3, 5) [Manual assessment: N/A]
+
+---
+
+641.txt repeat3
+
+Line 160
+Color 1 red, 2 green, 3 red, but 3 adjacent to 2 (green) ok, 3 adjacent to 4, 4 cannot be red, say blue, 4 adjacent to 5, 5 cannot be blue, and 5 adjacent to 1 (red), so 5 can be green.
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+(3, 4) [Manual assessment: N/A]
+(4, 5) [Manual assessment: N/A]
+
+---
+
+642.txt repeat2
+
+Line 268
+Now, vertex 6 is adjacent to 0,4,5,7, and 1.
+
+False edges:
+(1, 6) [Manual assessment: N/A]
+
+---
+
+643.txt repeat0
+
+Line 118
+It's like 3 is connected to 1,5,7, and 6-7 are connected.
+
+False edges:
+(3, 6) [Manual assessment: N/A]
+
+---
+
+643.txt repeat1
+
+Line 118
+It's like 3 is connected to 1,5,7, and 6-7 are connected.
+
+False edges:
+(3, 6) [Manual assessment: N/A]
+
+---
+
+646.txt repeat0
+
+Line 102
+Are 3-5 connected? No. 3-6 no. 5-6 no. So no triangle there.
+
+False edges:
+(3, 5) [Manual assessment: N/A]
+
+---
+
+646.txt repeat3
+
+Line 102
+Are 3-5 connected? No. 3-6 no. 5-6 no. So no triangle there.
+
+False edges:
+(3, 5) [Manual assessment: N/A]
+
+---
+
+646.txt repeat4
+
+Line 102
+Are 3-5 connected? No. 3-6 no. 5-6 no. So no triangle there.
+
+False edges:
+(3, 5) [Manual assessment: N/A]
+
+---
+
+649.txt repeat3
+
+Line 198
+Vertex 2 adjacent to 3,4,5 (not to 1).
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+(2, 4) [Manual assessment: N/A]
+(2, 5) [Manual assessment: N/A]
+
+Line 200
+Vertex 3 adjacent to 1,2,4,5.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+(3, 5) [Manual assessment: N/A]
+
+---
+
+649.txt repeat4
+
+Line 198
+Vertex 2 adjacent to 3,4,5 (not to 1).
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+(2, 4) [Manual assessment: N/A]
+(2, 5) [Manual assessment: N/A]
+
+Line 200
+Vertex 3 adjacent to 1,2,4,5.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+(3, 5) [Manual assessment: N/A]
+
+---
+
+696.txt repeat2
+
+Line 106
+4 is adjacent to 0,1,2,3.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+
+---
+
+696.txt repeat3
+
+Line 106
+4 is adjacent to 0,1,2,3.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+
+---
+
+702.txt repeat0
+
+Line 256
+6's neighbors: 0 (green), 2 (red), 4 (green), 7 (yellow). 4 is green and 0 is green, but 6 is adjacent to both 0 and 4, both green? No, 6 cannot be adjacent to two greens if they are same color, but the issue is for 6, it's ok to have neighbors same color as long as they are not same as itself, but in coloring, the constraint is that adjacent vertices have different colors, so for vertex 6, which is blue, its neighbors 0 is green, 2 is red, 4 is green, 7 is yellow. Now, 0 and 4 are both green, but they are not adjacent to each other? Are 0 and 4 adjacent? Look at edges: (0,4) not in the list, so no edge between 0 and 4, so it's ok for both to be green, as long as they don't conflict with others.
+
+False edges:
+(0, 4) [Manual assessment: N/A]
+
+Line 328
+6 is blue, and 1 is blue, are 1 and 6 adjacent? Look at edges: (1,6) not in the list, so no, not adjacent, so both blue is ok.
+
+False edges:
+(1, 6) [Manual assessment: N/A]
+
+---
+
+702.txt repeat3
+
+Line 256
+6's neighbors: 0 (green), 2 (red), 4 (green), 7 (yellow). 4 is green and 0 is green, but 6 is adjacent to both 0 and 4, both green? No, 6 cannot be adjacent to two greens if they are same color, but the issue is for 6, it's ok to have neighbors same color as long as they are not same as itself, but in coloring, the constraint is that adjacent vertices have different colors, so for vertex 6, which is blue, its neighbors 0 is green, 2 is red, 4 is green, 7 is yellow. Now, 0 and 4 are both green, but they are not adjacent to each other? Are 0 and 4 adjacent? Look at edges: (0,4) not in the list, so no edge between 0 and 4, so it's ok for both to be green, as long as they don't conflict with others.
+
+False edges:
+(0, 4) [Manual assessment: N/A]
+
+Line 328
+6 is blue, and 1 is blue, are 1 and 6 adjacent? Look at edges: (1,6) not in the list, so no, not adjacent, so both blue is ok.
+
+False edges:
+(1, 6) [Manual assessment: N/A]
+
+---
+
+702.txt repeat4
+
+Line 256
+6's neighbors: 0 (green), 2 (red), 4 (green), 7 (yellow). 4 is green and 0 is green, but 6 is adjacent to both 0 and 4, both green? No, 6 cannot be adjacent to two greens if they are same color, but the issue is for 6, it's ok to have neighbors same color as long as they are not same as itself, but in coloring, the constraint is that adjacent vertices have different colors, so for vertex 6, which is blue, its neighbors 0 is green, 2 is red, 4 is green, 7 is yellow. Now, 0 and 4 are both green, but they are not adjacent to each other? Are 0 and 4 adjacent? Look at edges: (0,4) not in the list, so no edge between 0 and 4, so it's ok for both to be green, as long as they don't conflict with others.
+
+False edges:
+(0, 4) [Manual assessment: N/A]
+
+Line 328
+6 is blue, and 1 is blue, are 1 and 6 adjacent? Look at edges: (1,6) not in the list, so no, not adjacent, so both blue is ok.
+
+False edges:
+(1, 6) [Manual assessment: N/A]
+
+---
+
+714.txt repeat3
+
+Line 140
+Edges: 2-3 no, 2-4 yes, 2-5 yes, 3-4 yes? (3,4) yes, 3-5 no, 4-5 no.
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+714.txt repeat4
+
+Line 140
+Edges: 2-3 no, 2-4 yes, 2-5 yes, 3-4 yes? (3,4) yes, 3-5 no, 4-5 no.
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+723.txt repeat0
+
+Line 164
+And 5 is only connected to 1, 4 only to 6.
+
+False edges:
+(4, 5) [Manual assessment: N/A]
+
+---
+
+723.txt repeat1
+
+Line 164
+And 5 is only connected to 1, 4 only to 6.
+
+False edges:
+(4, 5) [Manual assessment: N/A]
+
+---
+
+723.txt repeat2
+
+Line 164
+And 5 is only connected to 1, 4 only to 6.
+
+False edges:
+(4, 5) [Manual assessment: N/A]
+
+---
+
+723.txt repeat4
+
+Line 164
+And 5 is only connected to 1, 4 only to 6.
+
+False edges:
+(4, 5) [Manual assessment: N/A]
+
+---
+
+769.txt repeat2
+
+Line 142
+So, the graph is: 1--7, and 7 connected to 2 and 4, 2 connected to 4,6, and 5--6.
+
+False edges:
+(2, 5) [Manual assessment: N/A]
+
+Line 278
+But vertex 3 is not yet colored, and vertex 3 is adjacent to 0, so must also be not red, since 0 is red.
+
+False edges:
+(0, 3) [Manual assessment: N/A]
+
+---
+
+776.txt repeat2
+
+Line 152
+Color vertex 1: red, vertex 2: green, vertex 3: blue, vertex 4: green, but vertex 4 green and vertex 5 must be different from 4 and 1, vertex 1 is red, vertex 4 is green, so vertex 5 cannot be green or red, so must be blue, but vertex 3 is blue and not adjacent to 5? In C5, 3 and 5 are not adjacent, so ok: 1:red, 2:green, 3:blue, 4:green, 5:blue. 4 is green, 5 is blue, adjacent ok; 5 blue and 1 red, adjacent ok. But 2 and 4 both green, but not adjacent, since in C5, 2 adjacent to 1 and 3, 4 adjacent to 3 and 5, so no edge between 2 and 4, so same color ok.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+
+---
+
+796.txt repeat0
+
+Line 116
+But vertex 0 is connected to all of them: 0 is connected to 1,3,5,6.
+
+False edges:
+(0, 5) [Manual assessment: N/A]
+
+---
+
+796.txt repeat1
+
+Line 116
+But vertex 0 is connected to all of them: 0 is connected to 1,3,5,6.
+
+False edges:
+(0, 5) [Manual assessment: N/A]
+
+---
+
+796.txt repeat2
+
+Line 116
+But vertex 0 is connected to all of them: 0 is connected to 1,3,5,6.
+
+False edges:
+(0, 5) [Manual assessment: N/A]
+
+---
+
+819.txt repeat0
+
+Line 234
+In this subgraph, no other edges. 2 is only connected to 6, 3 only to 7, and no edge between 2 and 3 or anything.
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+819.txt repeat1
+
+Line 234
+In this subgraph, no other edges. 2 is only connected to 6, 3 only to 7, and no edge between 2 and 3 or anything.
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+819.txt repeat2
+
+Line 234
+In this subgraph, no other edges. 2 is only connected to 6, 3 only to 7, and no edge between 2 and 3 or anything.
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+819.txt repeat3
+
+Line 234
+In this subgraph, no other edges. 2 is only connected to 6, 3 only to 7, and no edge between 2 and 3 or anything.
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+819.txt repeat4
+
+Line 234
+In this subgraph, no other edges. 2 is only connected to 6, 3 only to 7, and no edge between 2 and 3 or anything.
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+828.txt repeat0
+
+Line 20
+Vertex 6: connected to 0,1,3,5,7. Edges: (0,6), (1,6), (3,6), (5,6), and (5,7) is there, but for 6: (0,6), (1,6), (3,6), (5,6), and is there (6,7)? No, (5,7) and (3,7), but not directly (6,7). Let me check the list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+828.txt repeat1
+
+Line 20
+Vertex 6: connected to 0,1,3,5,7. Edges: (0,6), (1,6), (3,6), (5,6), and (5,7) is there, but for 6: (0,6), (1,6), (3,6), (5,6), and is there (6,7)? No, (5,7) and (3,7), but not directly (6,7). Let me check the list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+828.txt repeat2
+
+Line 20
+Vertex 6: connected to 0,1,3,5,7. Edges: (0,6), (1,6), (3,6), (5,6), and (5,7) is for 5, but for 6: (0,6), (1,6), (3,6), (5,6), and is there (6,7)? No, (5,7) and (3,7), but not directly (6,7) listed. Let me check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+828.txt repeat3
+
+Line 20
+Vertex 6: connected to 0,1,3,5,7. Edges: (0,6), (1,6), (3,6), (5,6), and (5,7) is there, but for 6: (0,6), (1,6), (3,6), (5,6), and is there (6,7)? No, (5,7) and (3,7), but not directly (6,7). Let me check the list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+828.txt repeat4
+
+Line 20
+Vertex 6: connected to 0,1,3,5,7. Edges: (0,6), (1,6), (3,6), (5,6), and (5,7) is there, but for 6: (0,6), (1,6), (3,6), (5,6), and is there (6,7)? No, (5,7) and (3,7), but not directly (6,7). Let me check the list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+839.txt repeat0
+
+Line 18
+Vertex 6: connected to 2,4,5,7. Edges: (2,6),(4,6),(5,6),(6,7)? Is (6,7) an edge? Looking back: (5,7) is there, but (6,7) is not listed explicitly. Let me check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+839.txt repeat1
+
+Line 18
+Vertex 6: connected to 2,4,5,7. Edges: (2,6),(4,6),(5,6),(5,7)? (5,7) is for 5 and 7, but for 6: (2,6),(4,6),(5,6), and (6,7)? Is there (6,7)? Looking back: edges list has (2,6),(4,6),(5,6), and (4,7),(2,7), but no (6,7) directly listed. Let me check the list again.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+839.txt repeat2
+
+Line 18
+Vertex 6: connected to 2,4,5,7. Edges: (2,6),(4,6),(5,6),(6,7)? Is (6,7) an edge? Looking back: (5,7) is there, but (6,7) is not listed explicitly. Let me check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+839.txt repeat3
+
+Line 18
+Vertex 6: connected to 2,4,5,7. Edges: (2,6),(4,6),(5,6),(6,7)? Is (6,7) an edge? Looking back: (5,7) is there, but (6,7) is not listed explicitly. Let me check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+839.txt repeat4
+
+Line 18
+Vertex 6: connected to 2,4,5,7. Edges: (2,6),(4,6),(5,6),(6,7)? Is (6,7) an edge? Looking back: (5,7) is there, but (6,7) is not listed explicitly. Let me check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+841.txt repeat2
+
+Line 202
+Since 0 is adjacent to 2,4,6, and 1 is adjacent to 2,4,6, and 0 and 1 not adjacent.
+
+False edges:
+(0, 1) [Manual assessment: N/A]
+
+---
+
+841.txt repeat3
+
+Line 202
+Since 0 is adjacent to 2,4,6, and 1 is adjacent to 2,4,6, and 0 and 1 not adjacent.
+
+False edges:
+(0, 1) [Manual assessment: N/A]
+
+---
+
+864.txt repeat0
+
+Line 16
+Vertex 5: connected to 0,1,3,4,6. Edges: (0,5), (1,5), (3,5), (4,5), and (3,5) is already there, (5,6)? Looking back, edges include (0,5), (1,5), (3,5), (4,5), and is there (5,6)? No, (5,6) is not listed. Let me check the edge list again.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+864.txt repeat1
+
+Line 16
+Vertex 5: connected to 0,1,3,4,6. Edges: (0,5), (1,5), (3,5), (4,5), and (3,5) is already there, (5,6)? Looking back, edges include (0,5), (1,5), (3,5), (4,5), and is there (5,6)? No, (5,6) is not listed. Let me check the edge list again.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+864.txt repeat2
+
+Line 16
+Vertex 5: connected to 0,1,3,4,6. Edges: (0,5), (1,5), (3,5), (4,5), and (3,5) is already there, (5,6)? Looking back, edges include (0,5), (1,5), (3,5), (4,5), and is there (5,6)? No, (5,6) is not listed. Let me check the edge list again.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+864.txt repeat3
+
+Line 16
+Vertex 5: connected to 0,1,3,4,6. Edges: (0,5), (1,5), (3,5), (4,5), and (3,5) is already there, (5,6)? Looking back, edges include (0,5), (1,5), (3,5), (4,5), and is there (5,6)? No, (5,6) is not listed. Let me check the edge list again.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+864.txt repeat4
+
+Line 16
+Vertex 5: connected to 0,1,3,4,6. Edges: (0,5), (1,5), (3,5), (4,5), and (3,5) is already there, (5,6)? Looking back, edges include (0,5), (1,5), (3,5), (4,5), and is there (5,6)? No, (5,6) is not listed. Let me check the edge list again.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+871.txt repeat0
+
+Line 190
+And vertex 7 connected to 5 and 6 as well, wait no, vertex 7 is connected to 5, yes (5,7), and to 6? Is there (6,7)? In original edges, is (6,7) present? Looking back: edges with 6: (1,6), (3,6), (5,6) — (3,6) is removed, so in subgraph, (1,6) and (5,6). No (6,7). Original edges: (1,6), (3,6), (5,6). No (6,7). Similarly, for 7: (0,7),(1,7),(2,7),(3,7),(4,7),(5,7) — so (5,7) yes, but no (6,7).
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+871.txt repeat2
+
+Line 176
+4 is adjacent to 0 (B), 1 (C), 2 (B), so it cannot be B (because of 0 and 2), cannot be C (because of 1), so it needs a third color, say D, but I only have three colors total for the whole subgraph, which are B and C so far, but I have color A left? No.
+
+False edges:
+(1, 4) [Manual assessment: N/A]
+
+---
+
+871.txt repeat3
+
+Line 176
+4 is adjacent to 0 (B), 1 (C), 2 (B), so it cannot be B (because of 0 and 2), cannot be C (because of 1), so it needs a third color, say D, but I only have three colors total for the whole subgraph, which are B and C so far, but I have color A left? No.
+
+False edges:
+(1, 4) [Manual assessment: N/A]
+
+---
+
+871.txt repeat4
+
+Line 176
+4 is adjacent to 0 (B), 1 (C), 2 (B), so it cannot be B (because of 0 and 2), cannot be C (because of 1), so it needs a third color, say D, but I only have three colors total for the whole subgraph, which are B and C so far, but I have color A left? No.
+
+False edges:
+(1, 4) [Manual assessment: N/A]
+
+---
+
+877.txt repeat0
+
+Line 20
+Vertex 6: connected to 1,2,3,4,7. Edges for 6: (1,6), (2,6), (3,6), (4,6), and is there (6,7)? Looking back, no (6,7) in the list. List is: {(0,2), (0,3), (0,5), (0,7), (1,2), (1,6), (1,7), (2,4), (2,5), (2,6), (2,7), (3,4), (3,5), (3,6), (4,5), (4,6), (4,7), (5,7)}
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+877.txt repeat1
+
+Line 20
+Vertex 6: connected to 1,2,3,4,7. Edges for 6: (1,6), (2,6), (3,6), (4,6), and is there (6,7)? Looking back, no (6,7) in the list. List is: {(0,2), (0,3), (0,5), (0,7), (1,2), (1,6), (1,7), (2,4), (2,5), (2,6), (2,7), (3,4), (3,5), (3,6), (4,5), (4,6), (4,7), (5,7)}
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+877.txt repeat2
+
+Line 20
+Vertex 6: connected to 1,2,3,4,7. Edges for 6: (1,6), (2,6), (3,6), (4,6), and (6,7) is not listed? Let me check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+877.txt repeat3
+
+Line 20
+Vertex 6: connected to 1,2,3,4,7. Edges for 6: (1,6), (2,6), (3,6), (4,6), and (6,7) is not listed? Let me check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+877.txt repeat4
+
+Line 20
+Vertex 6: connected to 1,2,3,4,7. Edges for 6: (1,6), (2,6), (3,6), (4,6), and (6,7) is not listed? Let me check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+887.txt repeat0
+
+Line 18
+Vertex 6: connected to 2,3,5,7. Edges: (2,6), (3,6), (5,6), and (2,7), (3,7), (5,7), but (6,7) is not listed, so no direct edge between 6 and 7.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+887.txt repeat1
+
+Line 18
+Vertex 6: connected to 2,3,5,7. Edges: (2,6), (3,6), (5,6), and (2,7), (3,7), (5,7), but (6,7) is not listed, so no direct edge between 6 and 7.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+887.txt repeat2
+
+Line 18
+Vertex 6: connected to 2,3,5,7. Edges: (2,6), (3,6), (5,6), and (2,7), (3,7), (5,7), but (6,7) is not listed, so no direct edge between 6 and 7.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+887.txt repeat3
+
+Line 18
+Vertex 6: connected to 2,3,5,7. Edges: (2,6), (3,6), (5,6), and (2,7), (3,7), (5,7), but (6,7) is not listed, so no direct edge between 6 and 7.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+887.txt repeat4
+
+Line 18
+Vertex 6: connected to 2,3,5,7. Edges: (2,6), (3,6), (5,6), and (2,7), (3,7), (5,7), but (6,7) is not listed, so no direct edge between 6 and 7.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+891.txt repeat0
+
+Line 98
+So it's like 2 is only connected to 1, 0 and 4 are connected to each other and to 3, 1 is connected to 3 and 2.
+
+False edges:
+(0, 2) [Manual assessment: N/A]
+(2, 4) [Manual assessment: N/A]
+
+---
+
+891.txt repeat2
+
+Line 98
+So it's like 2 is only connected to 1, 0 and 4 are connected to each other and to 3, 1 is connected to 3 and 2.
+
+False edges:
+(0, 2) [Manual assessment: N/A]
+(2, 4) [Manual assessment: N/A]
+
+---
+
+891.txt repeat3
+
+Line 98
+So it's like 2 is only connected to 1, 0 and 4 are connected to each other and to 3, 1 is connected to 3 and 2.
+
+False edges:
+(0, 2) [Manual assessment: N/A]
+(2, 4) [Manual assessment: N/A]
+
+---
+
+893.txt repeat0
+
+Line 18
+Vertex 6: connected to 1,2,3,4,5,7. Edges: (1,6), (2,6), (3,6), (4,6), (5,6), and (6,7) is not listed? Let me check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+893.txt repeat2
+
+Line 18
+Vertex 6: connected to 1,2,3,4,5,7. Edges: (1,6), (2,6), (3,6), (4,6), (5,6), and (6,7) is not listed? Let me check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+893.txt repeat4
+
+Line 18
+Vertex 6: connected to 1,2,3,4,5,7. Edges: (1,6), (2,6), (3,6), (4,6), (5,6), and (6,7) is not listed? Let me check the edge list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+923.txt repeat0
+
+Line 262
+Vertex 1 is adjacent to 3,4,5 (since only edge to 2 is missing).
+
+False edges:
+(1, 3) [Manual assessment: N/A]
+(1, 4) [Manual assessment: N/A]
+
+Line 268
+Vertices 3,4,5 each adjacent to all others, so 3 adjacent to 1,2,4,5; similarly for 4 and 5.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+
+---
+
+923.txt repeat4
+
+Line 262
+Vertex 1 is adjacent to 3,4,5 (since only edge to 2 is missing).
+
+False edges:
+(1, 3) [Manual assessment: N/A]
+(1, 4) [Manual assessment: N/A]
+
+Line 268
+Vertices 3,4,5 each adjacent to all others, so 3 adjacent to 1,2,4,5; similarly for 4 and 5.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+
+---
+
+933.txt repeat0
+
+Line 178
+1 connected to 3 no.
+
+False edges:
+(1, 3) [Manual assessment: N/A]
+
+---
+
+933.txt repeat3
+
+Line 178
+1 connected to 3 no.
+
+False edges:
+(1, 3) [Manual assessment: N/A]
+
+---
+
+933.txt repeat4
+
+Line 178
+1 connected to 3 no.
+
+False edges:
+(1, 3) [Manual assessment: N/A]
+
+---
+
+935.txt repeat0
+
+Line 16
+Vertex 5: connected to 0,1,3,4,6. (edges: (0,5), (1,5), (3,5), (4,5), and (5,6) is not listed, wait no, (3,6) is there but not (5,6). Let me check the edge list.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+935.txt repeat1
+
+Line 16
+Vertex 5: connected to 0,1,3,4,6. (edges: (0,5), (1,5), (3,5), (4,5), and (5,6) is not listed, wait no, (3,6) is there but not (5,6). Let me check the edge list.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+935.txt repeat2
+
+Line 16
+Vertex 5: connected to 0,1,3,4,6. (edges: (0,5), (1,5), (3,5), (4,5), and (5,6) is not listed, wait no, (3,6) is there but not (5,6). Let me check the edge list.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+935.txt repeat3
+
+Line 16
+Vertex 5: connected to 0,1,3,4,6. (edges: (0,5), (1,5), (3,5), (4,5), and (5,6) is not listed, wait no, (3,6) is there but not (5,6). Let me check the edge list.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+935.txt repeat4
+
+Line 16
+Vertex 5: connected to 0,1,3,4,6. (edges: (0,5), (1,5), (3,5), (4,5), and is there (5,6)? No, (5,7)? No. Edges list: (0,5), (1,5), (3,5), (4,5). Only those? Let me check the list again.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+Line 194
+Is there any vertex not adjacent to 0 or 3? Vertex 1 is adjacent to 0, vertex 7 adjacent to 0, vertex 2,4,5,6 adjacent to both.
+
+False edges:
+(5, 7) [Manual assessment: N/A]
+
+---
+
+938.txt repeat1
+
+Line 156
+Also, there is vertex 4, which is not yet considered, and vertex 4 is connected to 1, which is red, so vertex 4 cannot be red, and vertex 4 is connected to 0,2,3,6,7.
+
+False edges:
+(1, 4) [Manual assessment: N/A]
+
+---
+
+938.txt repeat4
+
+Line 156
+Also, there is vertex 4, which is not yet considered, and vertex 4 is connected to 1, which is red, so vertex 4 cannot be red, and vertex 4 is connected to 0,2,3,6,7.
+
+False edges:
+(1, 4) [Manual assessment: N/A]
+
+---
+
+960.txt repeat3
+
+Line 98
+Degree of 5 in this subgraph is 4: connected to 3,4,6,7.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+(4, 6) [Manual assessment: N/A]
+
+---
+
+967.txt repeat1
+
+Line 18
+Vertex 6: connected to 0,1,2,3,4,5,7. Let's list: (0,6), (1,6), (2,6), (3,6), (4,6), (5,6), and (6,7) is not explicitly listed, but (3,7), (4,7), etc. Is (6,7) an edge? Looking back: the edges are up to (5,7), no (6,7). Let me check the list again.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+967.txt repeat4
+
+Line 18
+Vertex 6: connected to 0,1,2,3,4,5,7. Let's list: (0,6), (1,6), (2,6), (3,6), (4,6), (5,6), and (6,7) is not explicitly listed, but (3,7), (4,7), etc. Is (6,7) an edge? Looking back: the edges are up to (5,7), no (6,7). Let me check the list again.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+992.txt repeat0
+
+Line 18
+Vertex 6: connected to 1,2,3,5,7. Edges: (1,6), (2,6), (3,6), (5,6), and (2,7) is for 7, wait. For 6: (1,6), (2,6), (3,6), (5,6), and is there (6,7)? No, (5,7) and (6,7) not listed. Let me check the list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+992.txt repeat1
+
+Line 18
+Vertex 6: connected to 1,2,3,5,7. From edges: (1,6), (2,6), (3,6), (5,6), and (2,7) is for 7, wait. Edges involving 6: (1,6), (2,6), (3,6), (5,6), and is there (6,7)? No, (5,7) and (6,7) is not listed. Let me check the list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+992.txt repeat2
+
+Line 18
+Vertex 6: connected to 1,2,3,5,7. From edges: (1,6), (2,6), (3,6), (5,6), and (2,7) is for 7, wait. Edges involving 6: (1,6), (2,6), (3,6), (5,6), and is there (6,7)? No, (5,7) and (6,7) is not listed. Let me check the list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+992.txt repeat3
+
+Line 18
+Vertex 6: connected to 1,2,3,5,7. From edges: (1,6), (2,6), (3,6), (5,6), and (2,7) is for 7, wait. Edges involving 6: (1,6), (2,6), (3,6), (5,6), and is there (6,7)? No, (5,7) and (6,7) is not listed. Let me check the list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+992.txt repeat4
+
+Line 18
+Vertex 6: connected to 1,2,3,5,7. From edges: (1,6), (2,6), (3,6), (5,6), and (2,7) is for 7, wait. Edges involving 6: (1,6), (2,6), (3,6), (5,6), and is there (6,7)? No, (5,7) and (6,7) is not listed. Let me check the list.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+

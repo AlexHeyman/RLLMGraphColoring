@@ -1,0 +1,37 @@
+Edges: [(0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (4, 5), (4, 6), (4, 7)]
+
+Complement: [(0, 1), (0, 4), (1, 5), (3, 6), (3, 7), (5, 6), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign one of four colors (red, green, blue, yellow) to vertices 0–7 subject to the constraint that adjacent vertices get different colors (with the following edges):
+
+  {(0,2), (0,3), (0,5), (0,6), (0,7),  
+   (1,2), (1,3), (1,4), (1,6), (1,7),  
+   (2,3), (2,4), (2,5), (2,6), (2,7),  
+   (3,4), (3,5),  
+   (4,5), (4,6), (4,7)}
+
+a proper 4–coloring is impossible.
+
+Below we describe one line of reasoning that indicates why a valid 4–coloring cannot be reached.
+
+Step 1. Notice that vertex 2 is very “busy” in that it is adjacent to almost every other vertex (in fact, it is joined to 0, 1, 3, 4, 5, 6, and 7). Thus once you pick a color for vertex 2 it forces nearly all other vertices to avoid that color.
+
+Step 2. Suppose (without loss of generality – a symmetry argument shows that any initial choice simply renames the colors) we set vertex 2 = Red. Then vertices 0, 1, 3, 4, 5, 6, and 7 must use only green, blue, and yellow.
+
+Step 3. Look at vertex 0 (which is connected to 2, 3, 5, 6, 7). After assigning 2 red, you might try assigning vertex 0 = Blue. Next, vertices 3, 5, 6, and 7 (all neighbors of 0) must avoid Blue. Continue similarly for vertex 1—and similar restrictions hold there since 1 is adjacent to 2, 3, 4, 6, 7.
+
+Step 4. As you work through assigning colors to 3, 4, 5, 6, and finally 7, you eventually end up in a situation where vertex 7 (adjacent to 0, 1, 2, 4, 6) sees all four colors already used by its neighbors. (It is not a coincidence that in several different attempted assignments, a “last‐vertex” conflict occurs proposing that all four colors appear in its neighborhood.)
+
+Step 5. A number of alternate assignments (for example, swapping the colors of 0 and 1 or trying different choices for vertices 0 and 1) have been attempted. In every case a conflict appears (typically when trying to assign vertex 7). Working through all logical possibilities (up to symmetry) one finds that there is no way to assign colors without eventually forcing two adjacent vertices to share the same color.
+
+Thus, there is no possible assignment of four colors to these eight vertices that avoids a clash on every edge.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

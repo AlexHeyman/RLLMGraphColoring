@@ -1,0 +1,57 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 4), (1, 2), (3, 4), (3, 6), (3, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will now show that no assignment of the four colors – red, green, blue, and yellow – to the eight people can avoid a “color clash” on every friendship. In other words, no matter how you try to “color‐the graph” whose vertices are
+
+  Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather
+
+and whose edges indicate the “friendships” below
+
+  Alice–Bob, Alice–Carol, Alice–Dave, Alice–Fran, Alice–George, Alice–Heather,
+  Bob–Dave, Bob–Ethan, Bob–Fran, Bob–George, Bob–Heather,
+  Carol–Dave, Carol–Ethan, Carol–Fran, Carol–George, Carol–Heather,
+  Dave–Fran,
+  Ethan–Fran, Ethan–George, Ethan–Heather,
+  Fran–George, Fran–Heather
+
+with no two friends getting the same shirt‐color there is no way to assign red, green, blue, and yellow so that every edge connects differently‐colored individuals.
+
+One might try various “colorings” (for example, starting by assigning one color to the person with most friends – Fran in our list – and then trying to “propagate” allowed colors on the others). But no matter how hard one tries, one always ends up “boxing oneself in” on at least one vertex. (One can check several attempts – for instance, planning for Heather, who is friends with six others. No matter what choices are made for her friends, all four colors end up forced on her neighborhood, leaving nothing for Heather herself.)
+
+Thus the answer is that there is no possible plan.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will now show that no assignment of the four colors – red, green, blue, and yellow – to the eight people can avoid a “color clash” on every friendship. In other words, no matter how you try to “color‐the graph” whose vertices are
+
+  #0, #1, #2, #3, #4, #5, #6, #7
+
+and whose edges indicate the “friendships” below
+
+  #0–#1, #0–#2, #0–#3, #0–#5, #0–#6, #0–#7,
+  #1–#3, #1–#4, #1–#5, #1–#6, #1–#7,
+  #2–#3, #2–#4, #2–#5, #2–#6, #2–#7,
+  #3–#5,
+  #4–#5, #4–#6, #4–#7,
+  #5–#6, #5–#7
+
+with no two friends getting the same shirt‐color there is no way to assign red, green, blue, and yellow so that every edge connects differently‐colored individuals.
+
+One might try various “colorings” (for example, starting by assigning one color to the person with most friends – #5 in our list – and then trying to “propagate” allowed colors on the others). But no matter how hard one tries, one always ends up “boxing oneself in” on at least one vertex. (One can check several attempts – for instance, planning for #7, who is friends with six others. No matter what choices are made for her friends, all four colors end up forced on her neighborhood, leaving nothing for #7 herself.)
+
+Thus the answer is that there is no possible plan.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

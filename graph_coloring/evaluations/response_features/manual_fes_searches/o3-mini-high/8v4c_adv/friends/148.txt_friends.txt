@@ -1,0 +1,45 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (1, 2), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 6), (0, 7), (1, 3), (1, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of four colors (Red, Green, Blue, Yellow) can work. In fact, one can prove that the friendship graph in question contains a clique of size 5.
+
+One way to see this is to list the friends of each person. For example, note that Heather’s friends are
+  Bob, Carol, Dave, Ethan, Fran, and George.
+Among these, one can check that the four people Carol, Dave, Ethan, and George are all mutually friends:
+ • Carol is friends with Dave, Ethan, and George.
+ • Dave is friends with Ethan and George.
+ • Ethan is friends with George.
+
+Thus the set {Heather, Carol, Dave, Ethan, George} forms a clique of five—every two different people in this set are friends with each other. In any proper coloring of a graph, every vertex in a clique must receive a different color. This clique of size 5 forces five different colors on its members. However, only four colors are available.
+
+Because it is impossible to assign five different colors using just four options, no acceptable assignment exists.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of four colors (Red, Green, Blue, Yellow) can work. In fact, one can prove that the friendship graph in question contains a clique of size 5.
+
+One way to see this is to list the friends of each person. For example, note that #7’s friends are
+  #1, #2, #3, #4, #5, and #6.
+Among these, one can check that the four people #2, #3, #4, and #6 are all mutually friends:
+ • #2 is friends with #3, #4, and #6.
+ • #3 is friends with #4 and #6.
+ • #4 is friends with #6.
+
+Thus the set {#7, #2, #3, #4, #6} forms a clique of five—every two different people in this set are friends with each other. In any proper coloring of a graph, every vertex in a clique must receive a different color. This clique of size 5 forces five different colors on its members. However, only four colors are available.
+
+Because it is impossible to assign five different colors using just four options, no acceptable assignment exists.
+
+Impossible
+
+---
+
+Manually assessed false edges: 6,7

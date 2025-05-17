@@ -1,0 +1,47 @@
+Edges: [(0, 6), (1, 2), (1, 5), (1, 6), (2, 3), (2, 4), (2, 5), (2, 7), (3, 5), (3, 6), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 7), (1, 3), (1, 4), (1, 7), (2, 6), (3, 4), (3, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+The key is to look at the subgraph formed by Carol, Ethan, Fran, George, and Heather. (A subgraph is simply a selection of some of the people and all the friendships among them.) Notice that according to the friendship list:
+
+• Carol is friends with Ethan, Fran, and George.
+• Ethan is friends with Carol, Fran, and George (as well as Heather).
+• Fran is friends with Carol, Ethan, and George.
+• George is friends with Carol, Ethan, and Fran.
+• Heather is friends with Carol, Ethan, Fran, and George.
+
+This means that among Carol, Ethan, Fran, and George every pair of people are friends with each other. That is, these four people form a complete subgraph (a clique) on 4 vertices. Moreover, Heather is friends with each person in that clique. Thus, the set {Carol, Ethan, Fran, George, Heather} forms a complete graph on 5 vertices (a K₅).
+
+Since every pair of vertices in a complete graph must have different colors in a proper coloring, a K₅ requires 5 different colors. However, we are only allowed 4 shirt colors (red, green, blue, yellow).
+
+Because of this K₅ within the friendship graph, there’s no way to assign 4 colors to the 8 people without giving two friends the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+The key is to look at the subgraph formed by #2, #4, #5, #6, and #7. (A subgraph is simply a selection of some of the people and all the friendships among them.) Notice that according to the friendship list:
+
+• #2 is friends with #4, #5, and #6.
+• #4 is friends with #2, #5, and #6 (as well as #7).
+• #5 is friends with #2, #4, and #6.
+• #6 is friends with #2, #4, and #5.
+• #7 is friends with #2, #4, #5, and #6.
+
+This means that among #2, #4, #5, and #6 every pair of people are friends with each other. That is, these four people form a complete subgraph (a clique) on 4 vertices. Moreover, #7 is friends with each person in that clique. Thus, the set {#2, #4, #5, #6, #7} forms a complete graph on 5 vertices (a K₅).
+
+Since every pair of vertices in a complete graph must have different colors in a proper coloring, a K₅ requires 5 different colors. However, we are only allowed 4 shirt colors (red, green, blue, yellow).
+
+Because of this K₅ within the friendship graph, there’s no way to assign 4 colors to the 8 people without giving two friends the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

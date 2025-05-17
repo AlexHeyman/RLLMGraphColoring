@@ -1,0 +1,41 @@
+Edges: [(0, 1), (0, 2), (0, 5), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 7), (3, 5), (3, 6), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (0, 4), (0, 6), (0, 7), (1, 5), (2, 6), (3, 4), (3, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+Let’s first see the constraints on the four people (Bob, Carol, Ethan, Fran). If you list the friendships among these four by checking the given list you find:
+
+• Bob is friends with Carol, Ethan, and Fran.
+• Carol is friends with Bob, Ethan, and Fran.
+• Ethan is friends with Bob, Carol, and Fran.
+• Fran is friends with Bob, Carol, and Ethan.
+
+This means that Bob, Carol, Ethan, and Fran form a complete graph on 4 vertices (a K₄). In any proper vertex-coloring of a K₄ using colors for “red,” “green,” “blue,” and “yellow,” each vertex must have its own distinct color.
+
+Now look at Heather. Heather is friends with Bob, Carol, Ethan, and Fran. Since these four occupy all 4 colors, Heather would have no available color left to wear. Therefore, even before considering the other people at the party, it is impossible to assign the four colors so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+Let’s first see the constraints on the four people (#1, #2, #4, #5). If you list the friendships among these four by checking the given list you find:
+
+• #1 is friends with #2, #4, and #5.
+• #2 is friends with #1, #4, and #5.
+• #4 is friends with #1, #2, and #5.
+• #5 is friends with #1, #2, and #4.
+
+This means that #1, #2, #4, and #5 form a complete graph on 4 vertices (a K₄). In any proper vertex-coloring of a K₄ using colors for “red,” “green,” “blue,” and “yellow,” each vertex must have its own distinct color.
+
+Now look at #7. #7 is friends with #1, #2, #4, and #5. Since these four occupy all 4 colors, #7 would have no available color left to wear. Therefore, even before considering the other people at the party, it is impossible to assign the four colors so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

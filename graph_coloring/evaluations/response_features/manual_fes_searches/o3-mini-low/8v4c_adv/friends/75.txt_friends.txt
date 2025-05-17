@@ -1,0 +1,35 @@
+Edges: [(0, 1), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 5), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 3), (0, 5), (1, 5), (2, 4), (2, 6), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign the four shirt‐colors, someone (in fact Ethan) will always have all four colors “taken” by one or more of his friends. (Thus a valid assignment is impossible.)
+
+To explain briefly, let the four available colors be Red, Green, Blue, and Yellow. One may check that the “friendship graph” among these eight people contains a clique (a set of mutually adjacent vertices) of size four—namely, Alice, Bob, George, and Heather. In any proper coloring (that is, any assignment in which adjacent people get different colors) the four people in this clique must all get different colors.
+
+Now, notice that Ethan is friends with all four of these people (Alice, Bob, George, and Heather) and also with Dave. Even if Dave were to “help out” by sharing a color with one of Alice, Bob, George, or Heather (itself possible if Dave isn’t adjacent to that person), Ethan still sees his friends among {Alice, Bob, George, Heather} using all four different colors. That leaves no color available for Ethan.
+
+Because in every possible assignment the neighborhood of Ethan uses all four colors, there is no way to give him a shirt color different from those of his friends. Thus there is no valid assignment.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign the four shirt‐colors, someone (in fact #4) will always have all four colors “taken” by one or more of his friends. (Thus a valid assignment is impossible.)
+
+To explain briefly, let the four available colors be Red, Green, Blue, and Yellow. One may check that the “friendship graph” among these eight people contains a clique (a set of mutually adjacent vertices) of size four—namely, #0, #1, #6, and #7. In any proper coloring (that is, any assignment in which adjacent people get different colors) the four people in this clique must all get different colors.
+
+Now, notice that #4 is friends with all four of these people (#0, #1, #6, and #7) and also with #3. Even if #3 were to “help out” by sharing a color with one of #0, #1, #6, or #7 (itself possible if #3 isn’t adjacent to that person), #4 still sees his friends among {#0, #1, #6, #7} using all four different colors. That leaves no color available for #4.
+
+Because in every possible assignment the neighborhood of #4 uses all four colors, there is no way to give him a shirt color different from those of his friends. Thus there is no valid assignment.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

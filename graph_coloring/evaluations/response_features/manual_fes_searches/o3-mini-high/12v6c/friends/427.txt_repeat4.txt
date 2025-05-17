@@ -1,0 +1,43 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 7), (0, 9), (0, 10), (0, 11), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 9), (2, 10), (2, 11), (3, 7), (3, 8), (3, 9), (3, 10), (3, 11), (4, 5), (4, 6), (4, 7), (4, 8), (4, 9), (4, 10), (4, 11), (5, 6), (5, 7), (5, 9), (5, 10), (5, 11), (6, 8), (6, 9), (6, 11), (7, 8), (7, 9), (7, 10), (7, 11), (8, 9), (8, 10), (8, 11), (9, 10), (9, 11)]
+
+Complement: [(0, 5), (0, 6), (0, 8), (1, 2), (3, 4), (3, 5), (3, 6), (5, 8), (6, 7), (6, 10), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign the six colors, you are forced to “clash” in a collection of friends that all must wear different colors.
+
+Here’s one way to see the difficulty:
+
+• Notice that two people—Jack and Larry—are friends with all the other 11 people. (Each of them is mentioned as a friend by everyone else.) In any proper assignment, Jack and Larry must have different colors, and because each is friends with every other person, no one else may use either Jack’s or Larry’s colors. This means that every other person must choose its color from the remaining 4 colors.
+
+• Now look at the other 10 people. In fact, if you examine the friendships carefully (or combine the information from the “Alice…Larry” lists), you will find that the five persons Bob, Ethan, Heather, Irene, and Kathy are all mutually friends with one another. (For example, Bob is friends with Ethan, Heather, Irene, and Kathy by his list; Ethan’s list includes Heather, Irene, Kathy; Heather is friends with Irene and Kathy; and Irene is friends with Kathy.) In other words, these five form a clique—a set of vertices each pair of which is connected.
+
+• Since everyone in a clique must wear a different color, these 5 people would require 5 distinct colors. However, as noted above, none of these five may use the colors worn by Jack or Larry. That leaves only 4 colors available for them.
+
+Because even using the best “color-saving” strategy you’d end up needing 5 different colors for that clique (on top of Jack’s and Larry’s colors), there is no way to assign shirts with only six colors so that no pair of friends wears the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign the six colors, you are forced to “clash” in a collection of friends that all must wear different colors.
+
+Here’s one way to see the difficulty:
+
+• Notice that two people—#9 and #11—are friends with all the other 11 people. (Each of them is mentioned as a friend by everyone else.) In any proper assignment, #9 and #11 must have different colors, and because each is friends with every other person, no one else may use either #9’s or #11’s colors. This means that every other person must choose its color from the remaining 4 colors.
+
+• Now look at the other 10 people. In fact, if you examine the friendships carefully (or combine the information from the “#0…#11” lists), you will find that the five persons #1, #4, #7, #8, and #10 are all mutually friends with one another. (For example, #1 is friends with #4, #7, #8, and #10 by his list; #4’s list includes #7, #8, #10; #7 is friends with #8 and #10; and #8 is friends with #10.) In other words, these five form a clique—a set of vertices each pair of which is connected.
+
+• Since everyone in a clique must wear a different color, these 5 people would require 5 distinct colors. However, as noted above, none of these five may use the colors worn by #9 or #11. That leaves only 4 colors available for them.
+
+Because even using the best “color-saving” strategy you’d end up needing 5 different colors for that clique (on top of #9’s and #11’s colors), there is no way to assign shirts with only six colors so that no pair of friends wears the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 10,11

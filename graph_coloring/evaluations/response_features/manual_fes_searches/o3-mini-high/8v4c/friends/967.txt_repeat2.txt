@@ -1,0 +1,65 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 5), (2, 4), (2, 5), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We first model the situation as a graph in which each person is a vertex and an edge connects two people if they are friends. The friendships are:
+
+  Alice: Dave, Ethan, Fran, George, Heather  
+  Bob: Carol, Dave, Ethan, George, Heather  
+  Carol: Bob, Dave, George, Heather  
+  Dave: Alice, Bob, Carol, Ethan, George, Heather  
+  Ethan: Alice, Bob, Dave, George, Heather  
+  Fran: Alice, George, Heather  
+  George: Alice, Bob, Carol, Dave, Ethan, Fran, Heather  
+  Heather: Alice, Bob, Carol, Dave, Ethan, Fran, George
+
+Notice that (Dave, Ethan, George, Heather) form a complete subgraph (a clique of 4) because every pair among them are friends; for instance, Dave is friends with Ethan, George, and Heather, Ethan is friends with George and Heather, and George is friends with Heather.
+
+Now, when clothing choices must differ for any two friends, this becomes a graph‐coloring problem where each vertex must be assigned one of the four colors (red, green, blue, yellow) and adjacent vertices must get different colors.
+
+In any proper coloring of a clique (a complete graph), every vertex must get a different color. Therefore, in any valid assignment the clique {Dave, Ethan, George, Heather} uses all four colors.
+
+Examine Alice’s friends. Alice is friends with Dave, Ethan, Fran, George, and Heather. In the clique {Dave, Ethan, George, Heather} the four available colors are used. (Fran might share a color with one of them if possible, but that does not change the fact that these four neighbors “cover” all the colors.) This means that whichever color Fran wears, Alice sees that all four colors are already "taken" by her friends Dave, Ethan, George, and Heather. Hence, Alice would have no color left to wear.
+
+A similar problem occurs with Bob, whose friends include Dave, Ethan, George, and Heather as well.
+
+Since these unavoidable conflicts leave at least one vertex (in this case, both Alice and Bob) with no available color choice, it is impossible to assign red, green, blue, or yellow shirts to the 8 people so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We first model the situation as a graph in which each person is a vertex and an edge connects two people if they are friends. The friendships are:
+
+  #0: #3, #4, #5, #6, #7  
+  #1: #2, #3, #4, #6, #7  
+  #2: #1, #3, #6, #7  
+  #3: #0, #1, #2, #4, #6, #7  
+  #4: #0, #1, #3, #6, #7  
+  #5: #0, #6, #7  
+  #6: #0, #1, #2, #3, #4, #5, #7  
+  #7: #0, #1, #2, #3, #4, #5, #6
+
+Notice that (#3, #4, #6, #7) form a complete subgraph (a clique of 4) because every pair among them are friends; for instance, #3 is friends with #4, #6, and #7, #4 is friends with #6 and #7, and #6 is friends with #7.
+
+Now, when clothing choices must differ for any two friends, this becomes a graph‐coloring problem where each vertex must be assigned one of the four colors (red, green, blue, yellow) and adjacent vertices must get different colors.
+
+In any proper coloring of a clique (a complete graph), every vertex must get a different color. Therefore, in any valid assignment the clique {#3, #4, #6, #7} uses all four colors.
+
+Examine #0’s friends. #0 is friends with #3, #4, #5, #6, and #7. In the clique {#3, #4, #6, #7} the four available colors are used. (#5 might share a color with one of them if possible, but that does not change the fact that these four neighbors “cover” all the colors.) This means that whichever color #5 wears, #0 sees that all four colors are already "taken" by her friends #3, #4, #6, and #7. Hence, #0 would have no color left to wear.
+
+A similar problem occurs with #1, whose friends include #3, #4, #6, and #7 as well.
+
+Since these unavoidable conflicts leave at least one vertex (in this case, both #0 and #1) with no available color choice, it is impossible to assign red, green, blue, or yellow shirts to the 8 people so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 6,7

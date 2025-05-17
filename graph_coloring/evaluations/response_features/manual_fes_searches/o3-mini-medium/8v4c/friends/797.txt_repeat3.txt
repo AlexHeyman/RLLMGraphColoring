@@ -1,0 +1,77 @@
+Edges: [(0, 1), (0, 2), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 6), (2, 7), (3, 4), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (0, 4), (1, 2), (2, 3), (2, 5), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We can show that no matter how the shirts’ colors are assigned, a conflict is unavoidable. In fact, there is a group of five people who are all pair‐wise friends, so if they attend the party, then each would need a distinct shirt color—and with only 4 colors available, that is impossible.
+
+Let’s explain one way to see this.
+
+The friendships are as follows:
+• Alice is friends with Bob, Carol, Fran, George, and Heather.
+• Bob is friends with Dave, Ethan, Fran, George, and Heather (and Alice, by symmetry).
+• Carol is friends with Ethan, George, and Heather (and Alice, by symmetry).
+• Dave is friends with Ethan (and Bob, by symmetry).
+• Ethan is friends with Heather (and Bob, Carol, Dave, by symmetry).
+• Fran is friends with George and Heather (and Alice, Bob, by symmetry).
+• George is friends with Heather (and Alice, Bob, Carol, Fran, by symmetry).
+
+In particular, notice the following:
+• Alice is friends with Bob and Fran.
+• Bob is friends with Fran.
+• Also, Heather is friends with Alice, Bob, and Fran.
+
+Thus, the four people Alice, Bob, Fran, and Heather are all mutually connected (each pair among these four are friends). In other words, they form a clique of size 4. Now, look at George. We have:
+ – Alice is friends with George.
+ – Bob is friends with George.
+ – Fran is friends with George.
+ – Heather is friends with George.
+So George is friends with all members of that clique. Hence, the set {Alice, Bob, Fran, Heather, George} forms a clique of 5.
+
+Since every two people in a clique must wear different-colored shirts, any clique of size 5 would require 5 different colors. With only 4 colors available (red, green, blue, yellow), it is impossible to assign a different color to each person in that clique.
+
+Therefore, there is no way to assign the 4 colors to the 8 people so that friends always have different shirt colors.
+
+Impossible
+
+---
+Numericized:
+---
+
+We can show that no matter how the shirts’ colors are assigned, a conflict is unavoidable. In fact, there is a group of five people who are all pair‐wise friends, so if they attend the party, then each would need a distinct shirt color—and with only 4 colors available, that is impossible.
+
+Let’s explain one way to see this.
+
+The friendships are as follows:
+• #0 is friends with #1, #2, #5, #6, and #7.
+• #1 is friends with #3, #4, #5, #6, and #7 (and #0, by symmetry).
+• #2 is friends with #4, #6, and #7 (and #0, by symmetry).
+• #3 is friends with #4 (and #1, by symmetry).
+• #4 is friends with #7 (and #1, #2, #3, by symmetry).
+• #5 is friends with #6 and #7 (and #0, #1, by symmetry).
+• #6 is friends with #7 (and #0, #1, #2, #5, by symmetry).
+
+In particular, notice the following:
+• #0 is friends with #1 and #5.
+• #1 is friends with #5.
+• Also, #7 is friends with #0, #1, and #5.
+
+Thus, the four people #0, #1, #5, and #7 are all mutually connected (each pair among these four are friends). In other words, they form a clique of size 4. Now, look at #6. We have:
+ – #0 is friends with #6.
+ – #1 is friends with #6.
+ – #5 is friends with #6.
+ – #7 is friends with #6.
+So #6 is friends with all members of that clique. Hence, the set {#0, #1, #5, #7, #6} forms a clique of 5.
+
+Since every two people in a clique must wear different-colored shirts, any clique of size 5 would require 5 different colors. With only 4 colors available (red, green, blue, yellow), it is impossible to assign a different color to each person in that clique.
+
+Therefore, there is no way to assign the 4 colors to the 8 people so that friends always have different shirt colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

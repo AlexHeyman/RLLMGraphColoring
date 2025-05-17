@@ -1,0 +1,27 @@
+Edges: [(0, 2), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (6, 7)]
+
+Complement: [(0, 1), (0, 3), (0, 4), (1, 4), (3, 6), (5, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four colors (red, green, blue, yellow) to the eight vertices can avoid having two adjacent vertices share the same color.
+
+To explain briefly (one may try many “back‐tracking” color–assignment approaches):
+
+• Label the vertices 0,…,7 and note the “neighbor lists” (that is, the vertices adjacent by an edge). For example, vertex 2 is adjacent to 0, 1, 3, 4, 5, 6, and 7. Other vertices (like vertex 5 for instance) have many neighbors as well. (You may verify each edge in the given list.)
+
+• Because vertex 2 touches seven other vertices, its color “affects” almost everything else. No matter what color is chosen for vertex 2 (say “Red”) the seven neighbors of 2 are forced to avoid Red.
+
+• Then one may try to choose colors for one of those high–degree neighbors (for instance vertex 7) and then continue picking a vertex that “sees” many already–colored vertices. In every branch one ultimately finds a vertex that – because of the adjacent colors already used by its neighbors – has no possibility left from the four colors.
+
+One may try several different orders or “branches” (for example, beginning by assigning vertex 2 and then vertex 7, or beginning in a different order). In every systematic exploration the process runs into a conflict: a vertex is left with all four colors already “blocked” by its adjacent vertices. (For example, in one branch one finds that after assigning vertex 2 = Red, vertex 7 = Green, and then assigning colors to some of the neighbors, a vertex’s neighbor set ends up using Red, Green, Blue and Yellow – leaving no option.)
+
+Thus, after a careful case–analysis (or by using a computer–assisted search) one must conclude that there is no valid 4–coloring of the graph.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

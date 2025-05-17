@@ -1,0 +1,75 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 6), (1, 7), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 4), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that there is no valid way to assign red, green, blue, or yellow shirts so that every pair of friends wears different colors.
+
+Let’s summarize the situation. There are eight people: Alice, Bob, Carol, Dave, Ethan, Fran, George, and Heather. The friendship pairs are:
+
+• Alice is friends with Bob, Carol, Dave, Fran, George, and Heather.
+• Bob is friends with Carol, George, and Heather (in addition to Alice).
+• Carol is friends with Fran, George, and Heather (in addition to Alice and Bob).
+• Dave is friends with Ethan, Fran, George, and Heather (in addition to Alice).
+• Ethan is friends with Fran, George, and Heather (in addition to Dave).
+• Fran is friends with George and Heather (in addition to Alice, Carol, Dave, and Ethan).
+• George is friends with (Alice, Bob, Carol, Dave, Ethan, Fran, Heather).
+• Heather is friends with (Alice, Bob, Carol, Dave, Ethan, Fran, George).
+
+Notice that both George and Heather are “universal” in the group – each is friends with everyone else. In any proper coloring of the vertices (with each vertex’s color representing that person’s shirt color), if two vertices are adjacent (i.e. if the corresponding people are friends) they must have different colors.
+
+Because Heather is friends with all of the other 7 people, none of them may share her color. Similarly, George—being friends with the other 7—must have a color different from everyone else.
+
+Thus, among the 8 people the colors used on Heather and George must be unique relative to the rest. Since there are only 4 colors available, when Heather uses one color and George uses a different one, the remaining 6 people must all be assigned colors from the remaining 2 colors (because every one of these 6 is a friend of both Heather and George, and so cannot use either Heather’s or George’s color).
+
+Now, look at the subgraph induced by the remaining 6 people: {Alice, Bob, Carol, Dave, Ethan, Fran}. In this subgraph the following important edges exist (among others):
+
+– Dave is friends with Ethan and Fran.
+– Ethan is friends with Fran.
+
+Thus, Dave, Ethan, and Fran form a triangle. (A triangle means that each pair among these three are friends.) It is a basic fact from graph theory that a triangle is not 2–colorable (since an odd cycle requires at least 3 colors).
+
+Because the 6 people would be forced to use only 2 colors (if Heather and George have already used 2 distinct colors from the 4), it is impossible to properly color the triangle among Dave, Ethan, and Fran. Therefore, there is no way to assign the 4 colors (red, green, blue, yellow) to all 8 people such that every pair of friends wears a different-colored shirt.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that there is no valid way to assign red, green, blue, or yellow shirts so that every pair of friends wears different colors.
+
+Let’s summarize the situation. There are eight people: #0, #1, #2, #3, #4, #5, #6, and #7. The friendship pairs are:
+
+• #0 is friends with #1, #2, #3, #5, #6, and #7.
+• #1 is friends with #2, #6, and #7 (in addition to #0).
+• #2 is friends with #5, #6, and #7 (in addition to #0 and #1).
+• #3 is friends with #4, #5, #6, and #7 (in addition to #0).
+• #4 is friends with #5, #6, and #7 (in addition to #3).
+• #5 is friends with #6 and #7 (in addition to #0, #2, #3, and #4).
+• #6 is friends with (#0, #1, #2, #3, #4, #5, #7).
+• #7 is friends with (#0, #1, #2, #3, #4, #5, #6).
+
+Notice that both #6 and #7 are “universal” in the group – each is friends with everyone else. In any proper coloring of the vertices (with each vertex’s color representing that person’s shirt color), if two vertices are adjacent (i.e. if the corresponding people are friends) they must have different colors.
+
+Because #7 is friends with all of the other 7 people, none of them may share her color. Similarly, #6—being friends with the other 7—must have a color different from everyone else.
+
+Thus, among the 8 people the colors used on #7 and #6 must be unique relative to the rest. Since there are only 4 colors available, when #7 uses one color and #6 uses a different one, the remaining 6 people must all be assigned colors from the remaining 2 colors (because every one of these 6 is a friend of both #7 and #6, and so cannot use either #7’s or #6’s color).
+
+Now, look at the subgraph induced by the remaining 6 people: {#0, #1, #2, #3, #4, #5}. In this subgraph the following important edges exist (among others):
+
+– #3 is friends with #4 and #5.
+– #4 is friends with #5.
+
+Thus, #3, #4, and #5 form a triangle. (A triangle means that each pair among these three are friends.) It is a basic fact from graph theory that a triangle is not 2–colorable (since an odd cycle requires at least 3 colors).
+
+Because the 6 people would be forced to use only 2 colors (if #7 and #6 have already used 2 distinct colors from the 4), it is impossible to properly color the triangle among #3, #4, and #5. Therefore, there is no way to assign the 4 colors (red, green, blue, yellow) to all 8 people such that every pair of friends wears a different-colored shirt.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

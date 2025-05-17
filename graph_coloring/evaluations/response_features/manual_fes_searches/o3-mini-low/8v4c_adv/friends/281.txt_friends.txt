@@ -1,0 +1,67 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (2, 4), (3, 4), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how the four shirt‐colors are used, at least one of these eight people (in fact, Dave) would find all four colors “taken” in his friend group. In other words, using four colors it is impossible to assign to each person a shirt‐color so that no one wears the same color as someone who is their friend.
+
+Below is one way to see why. (Any valid solution must produce colors for all eight people. In our situation, however, an unavoidable conflict occurs.)
+
+Label the people as follows:
+ Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather.
+The list of friendships is:
+ • Alice is friends with Bob, Dave, Ethan, Fran, George, and Heather.
+ • Bob is friends with Carol, Dave, Ethan, Fran, George, and Heather. (Also, Bob is friends with Alice.)
+ • Carol is friends with Dave, Fran, George, and Heather. (Also, friend with Bob.)
+ • Dave is friends with George and Heather. (Also, friend with Alice, Bob, and Carol.)
+ • Ethan is friends with George and Heather. (Also, friend with Alice and Bob.)
+ • Fran is friends with George and Heather. (Also, friend with Alice, Bob, and Carol.)
+ • George is friends with everyone except himself.
+ • Heather is friends with everyone except herself.
+
+You might try to “fix” one person’s color and then assign colors to others. However, because George is friends with everyone except, say, Carol (who is not friends with Alice) the graph forces many differences. In particular, examine Dave’s friends: Alice, Bob, Carol, George, and Heather. No matter what choices are made for these five, it turns out that among them the four colors must appear.
+
+One way to see the problem is to “zoom in” on the set of people that are all friends with Dave. Notice that since George is friends with every one of the others, his color is unique in that set. So the other four neighbors (Alice, Bob, Carol, Heather) would need to be colored using only the three remaining colors. But even if two of these four share the same color, the remainder (and the forced adjacencies among them) will force that all three remaining colors appear in the set. In short, Dave’s five friends end up having all four colors. Then no color can be assigned to Dave because he cannot wear any color that appears on one of his friends.
+
+It can be shown by going through any attempted assignment that the conflict at Dave (or someone else in the network) makes any valid four‐coloring of the vertices with the “friendship” restrictions impossible.
+
+Thus, the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how the four shirt‐colors are used, at least one of these eight people (in fact, #3) would find all four colors “taken” in his friend group. In other words, using four colors it is impossible to assign to each person a shirt‐color so that no one wears the same color as someone who is their friend.
+
+Below is one way to see why. (Any valid solution must produce colors for all eight people. In our situation, however, an unavoidable conflict occurs.)
+
+Label the people as follows:
+ #0, #1, #2, #3, #4, #5, #6, #7.
+The list of friendships is:
+ • #0 is friends with #1, #3, #4, #5, #6, and #7.
+ • #1 is friends with #2, #3, #4, #5, #6, and #7. (Also, #1 is friends with #0.)
+ • #2 is friends with #3, #5, #6, and #7. (Also, friend with #1.)
+ • #3 is friends with #6 and #7. (Also, friend with #0, #1, and #2.)
+ • #4 is friends with #6 and #7. (Also, friend with #0 and #1.)
+ • #5 is friends with #6 and #7. (Also, friend with #0, #1, and #2.)
+ • #6 is friends with everyone except himself.
+ • #7 is friends with everyone except herself.
+
+You might try to “fix” one person’s color and then assign colors to others. However, because #6 is friends with everyone except, say, #2 (who is not friends with #0) the graph forces many differences. In particular, examine #3’s friends: #0, #1, #2, #6, and #7. No matter what choices are made for these five, it turns out that among them the four colors must appear.
+
+One way to see the problem is to “zoom in” on the set of people that are all friends with #3. Notice that since #6 is friends with every one of the others, his color is unique in that set. So the other four neighbors (#0, #1, #2, #7) would need to be colored using only the three remaining colors. But even if two of these four share the same color, the remainder (and the forced adjacencies among them) will force that all three remaining colors appear in the set. In short, #3’s five friends end up having all four colors. Then no color can be assigned to #3 because he cannot wear any color that appears on one of his friends.
+
+It can be shown by going through any attempted assignment that the conflict at #3 (or someone else in the network) makes any valid four‐coloring of the vertices with the “friendship” restrictions impossible.
+
+Thus, the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

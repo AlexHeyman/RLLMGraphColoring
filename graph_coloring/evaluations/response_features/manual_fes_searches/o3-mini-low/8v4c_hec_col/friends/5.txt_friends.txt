@@ -1,0 +1,95 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 3), (1, 5), (1, 6), (2, 4), (2, 5), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 6), (0, 7), (1, 2), (1, 4), (1, 7), (2, 3), (2, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign the four available shirt‐colors to the eight people, if no one is allowed to wear the same shirt–color as any of their friends then a valid assignment cannot be found.
+
+One way to see why is to look at the person with the “most–demanding” relationships. In our situation Fran is friends with seven others. In order for Fran to be able to “differ” from each of her friends, all of her seven friends must choose shirt–colors from among at most three colors (so that Fran, using the fourth color, avoids a clash). (More precisely, if you imagine fixing a color for Fran then every friend must use a color different from Fran’s color; but there are only three available colors left. However, note that although two non–friends can wear the same color, it turns out that the network of friendships among Fran’s seven friends is so “dense” that on further inspection they cannot be properly colored with just three colors.) 
+
+For instance, label the people as follows:
+ Alice (A)
+ Bob (B)
+ Carol (C)
+ Dave (D)
+ Ethan (E)
+ Fran (F)
+ George (G)
+ Heather (H)
+
+The given friendships (which we list here in both directions) are:
+
+ A–B, A–C, A–D, A–E, A–F;
+ B–A, B–D, B–F, B–G;
+ C–A, C–E, C–F, C–H;
+ D–A, D–B, D–E, D–F, D–G, D–H;
+ E–A, E–C, E–D, E–F, E–G, E–H;
+ F–A, F–B, F–C, F–D, F–E, F–G, F–H;
+ G–B, G–D, G–E, G–F, G–H;
+ H–C, H–D, H–E, H–F, H–G.
+
+Look at the set of Fran’s friends:
+ {Alice, Bob, Carol, Dave, Ethan, George, Heather}.
+
+Within this set one may verify that the four people {Dave, Ethan, George, Heather} form a complete “clique” (that is, each pair among them are friends):
+ Dave is friends with Ethan, George, and Heather;
+ Ethan is friends with Dave, George, and Heather;
+ George is friends with Dave, Ethan, and Heather;
+ Heather is friends with Dave, Ethan, and George.
+
+A clique of four people requires four different colors (since every two of them are friends). That means that there is no way to color Fran’s neighbors with only three colors (other than Fran’s own)–instead, four different colors are forced onto them. But then no “fourth” color remains for Fran herself. 
+
+Thus it is impossible to assign red, green, blue and yellow shirts to Alice, Bob, Carol, Dave, Ethan, Fran, George, and Heather so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign the four available shirt‐colors to the eight people, if no one is allowed to wear the same shirt–color as any of their friends then a valid assignment cannot be found.
+
+One way to see why is to look at the person with the “most–demanding” relationships. In our situation #5 is friends with seven others. In order for #5 to be able to “differ” from each of her friends, all of her seven friends must choose shirt–colors from among at most three colors (so that #5, using the fourth color, avoids a clash). (More precisely, if you imagine fixing a color for #5 then every friend must use a color different from #5’s color; but there are only three available colors left. However, note that although two non–friends can wear the same color, it turns out that the network of friendships among #5’s seven friends is so “dense” that on further inspection they cannot be properly colored with just three colors.) 
+
+For instance, label the people as follows:
+ #0 (A)
+ #1 (B)
+ #2 (C)
+ #3 (D)
+ #4 (E)
+ #5 (F)
+ #6 (G)
+ #7 (H)
+
+The given friendships (which we list here in both directions) are:
+
+ A–B, A–C, A–D, A–E, A–F;
+ B–A, B–D, B–F, B–G;
+ C–A, C–E, C–F, C–H;
+ D–A, D–B, D–E, D–F, D–G, D–H;
+ E–A, E–C, E–D, E–F, E–G, E–H;
+ F–A, F–B, F–C, F–D, F–E, F–G, F–H;
+ G–B, G–D, G–E, G–F, G–H;
+ H–C, H–D, H–E, H–F, H–G.
+
+Look at the set of #5’s friends:
+ {#0, #1, #2, #3, #4, #6, #7}.
+
+Within this set one may verify that the four people {#3, #4, #6, #7} form a complete “clique” (that is, each pair among them are friends):
+ #3 is friends with #4, #6, and #7;
+ #4 is friends with #3, #6, and #7;
+ #6 is friends with #3, #4, and #7;
+ #7 is friends with #3, #4, and #6.
+
+A clique of four people requires four different colors (since every two of them are friends). That means that there is no way to color #5’s neighbors with only three colors (other than #5’s own)–instead, four different colors are forced onto them. But then no “fourth” color remains for #5 herself. 
+
+Thus it is impossible to assign red, green, blue and yellow shirts to #0, #1, #2, #3, #4, #5, #6, and #7 so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

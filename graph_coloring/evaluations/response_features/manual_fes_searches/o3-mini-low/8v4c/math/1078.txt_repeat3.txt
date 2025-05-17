@@ -1,0 +1,21 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (1, 2), (1, 4), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 7), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 2), (0, 7), (1, 3), (1, 5), (2, 3), (4, 6)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no proper 4‐coloring exists for the graph given. In other words, it is impossible to assign four colors (red, green, blue, yellow) to the eight vertices in such a way that adjacent vertices always receive different colors.
+
+One way to “see” this is to note that several vertices have so many neighbors that if one were to try to “save” a color for an uncolored vertex some neighbor‐set already “uses” all four colors. For example, consider vertex 5. Its neighbors are 0, 2, 3, 4, 6, and 7. (In our graph the edges include (0,5), (2,5), (3,5), (4,5), (5,6), (5,7).) In any proper 4–coloring, the colors assigned to these 6 neighbors must all be different from that of vertex 5. But if, no matter how you assign colors to the graph as you go, the high interconnectivity among the neighbors forces them to “use up” all 4 available colors among themselves, then vertex 5 would have no “free” color available. (One may try various orders of assignments and be forced to “split” the neighbors into four different colors; the structure of the graph forces that the seven other vertices are arranged “too densely” for a 4–coloring.) 
+
+A more formal (though sketchy) reasoning goes as follows. One may verify that many of the vertices (in fact, vertices 4, 5, 6, and 7) have degree 6. In many cases when you try to color the graph one finds that the neighbors of one vertex form a “critical” set in which no color can be repeated (because there is an edge between any two vertices that might otherwise be given the same color). In every ordering one finds a vertex whose set of colored neighbors contains all four colors. (A computer–assisted search or a careful hand search reveals that every candidate assignment eventually leads to a dead end.) 
+
+Because of this unavoidable problem one concludes that no assignment of red, green, blue, and yellow to vertices 0 through 7 can satisfy the condition that every edge connects vertices of different colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

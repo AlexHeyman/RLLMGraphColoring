@@ -1,0 +1,61 @@
+Edges: [(0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 1), (0, 2), (0, 3), (1, 3), (1, 4), (4, 5), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+Let’s check if we can assign each of the 8 people one of the four colors (red, green, blue, yellow) so no one shares a color with any friend.
+
+The friendships are given by:
+• Alice is friends with Ethan, Fran, George, Heather.
+• Bob is friends with Carol, Fran, George, Heather.
+• Carol is friends with Bob, Dave, Ethan, Fran, George, Heather.
+• Dave is friends with Carol, Ethan, Fran, George, Heather.
+• Ethan is friends with Alice, Carol, Dave, George, Heather.
+• Fran is friends with Alice, Bob, Carol, Dave, George.
+• George is friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather.
+• Heather is friends with Alice, Bob, Carol, Dave, Ethan, George.
+
+Focus on Dave. Dave is friends with Carol, Ethan, Fran, George, and Heather (note that Dave is not listed as a friend of Alice or Bob). In particular, consider the four people among Dave’s friends: Carol, Ethan, George, and Heather. A careful look at the friendships shows that among these four:
+ – Carol is friends with Ethan, George, and Heather.
+ – Ethan is friends with Carol, George, and Heather.
+ – George is friends with Carol, Ethan, and Heather.
+ – Heather is friends with Carol, Ethan, and George.
+Since these four are all pairwise friends with one another, they must all wear different colors. With only four colors available, it means Carol, Ethan, George, and Heather must use all four colors.
+
+That leaves no color available for Dave (since Dave cannot share any color with any of these four). Thus, no matter how we assign the four colors to the people, Dave’s situation forces a conflict.
+
+Impossible
+
+---
+Numericized:
+---
+
+Let’s check if we can assign each of the 8 people one of the four colors (red, green, blue, yellow) so no one shares a color with any friend.
+
+The friendships are given by:
+• #0 is friends with #4, #5, #6, #7.
+• #1 is friends with #2, #5, #6, #7.
+• #2 is friends with #1, #3, #4, #5, #6, #7.
+• #3 is friends with #2, #4, #5, #6, #7.
+• #4 is friends with #0, #2, #3, #6, #7.
+• #5 is friends with #0, #1, #2, #3, #6.
+• #6 is friends with #0, #1, #2, #3, #4, #5, #7.
+• #7 is friends with #0, #1, #2, #3, #4, #6.
+
+Focus on #3. #3 is friends with #2, #4, #5, #6, and #7 (note that #3 is not listed as a friend of #0 or #1). In particular, consider the four people among #3’s friends: #2, #4, #6, and #7. A careful look at the friendships shows that among these four:
+ – #2 is friends with #4, #6, and #7.
+ – #4 is friends with #2, #6, and #7.
+ – #6 is friends with #2, #4, and #7.
+ – #7 is friends with #2, #4, and #6.
+Since these four are all pairwise friends with one another, they must all wear different colors. With only four colors available, it means #2, #4, #6, and #7 must use all four colors.
+
+That leaves no color available for #3 (since #3 cannot share any color with any of these four). Thus, no matter how we assign the four colors to the people, #3’s situation forces a conflict.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

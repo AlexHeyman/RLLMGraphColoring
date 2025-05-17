@@ -1,0 +1,63 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (2, 5), (2, 6), (2, 7), (3, 5), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(1, 5), (1, 7), (2, 3), (2, 4), (3, 4), (3, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show by analysis that no matter how one “colors” (assigns shirt‐colors) the eight people with the four available colors under the rule “friends must have different colors” it is impossible to avoid a conflict.
+
+Let us explain briefly.
+
+One convenient way to model the situation is as a graph with eight vertices (one per person) and an edge joining two people if they are friends. (For example, Alice is adjacent to every one of the other seven people.) Notice that because Alice is friends with everybody else, if we assign her a color (say, Red) then none of the other seven people may wear Red. In other words, the remaining seven people must choose their colors from the remaining three colors (say, Blue, Green, and Yellow).
+
+However, it turns out that if you look at the induced subgraph on the seven vertices excluding Alice the given friendships force the use of all three colors in such a way that one cannot “3‐color” it (that is, assign three colors so that adjacent vertices get distinct colors). One can try various assignments (for example, begin by assigning Bob one color and then going through the list of conditions – see the working below) but eventually some person such as Heather, whose friends force her not to have any of the three available colors, remains with no legal option.
+
+Because one cannot 3–color the induced graph on the other seven people while avoiding clashes with Alice’s color, there is no way to assign four shirt–colors so that every pair of friends wears different colors.
+
+Thus the answer is:
+
+Impossible
+
+–––––––––––––––––––––––
+Explanation:
+
+• Choose Alice = Red.
+• Then each of Bob, Carol, Dave, Ethan, Fran, George, and Heather must use one of {Blue, Green, Yellow}.
+• One may check (via trying different assignments) that the constraints among these seven (which include friendships such as Bob–Carol, Bob–Dave, Carol–Fran, Carol–George, Carol–Heather, Dave–Fran, Dave–Heather, Ethan–Fran, Ethan–George, Ethan–Heather, Fran–George, Fran–Heather, etc.) force a conflict so that no proper 3–coloring exists.
+• Therefore no acceptable assignment of four colors to the eight people is possible.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show by analysis that no matter how one “colors” (assigns shirt‐colors) the eight people with the four available colors under the rule “friends must have different colors” it is impossible to avoid a conflict.
+
+Let us explain briefly.
+
+One convenient way to model the situation is as a graph with eight vertices (one per person) and an edge joining two people if they are friends. (For example, #0 is adjacent to every one of the other seven people.) Notice that because #0 is friends with everybody else, if we assign her a color (say, Red) then none of the other seven people may wear Red. In other words, the remaining seven people must choose their colors from the remaining three colors (say, Blue, Green, and Yellow).
+
+However, it turns out that if you look at the induced subgraph on the seven vertices excluding #0 the given friendships force the use of all three colors in such a way that one cannot “3‐color” it (that is, assign three colors so that adjacent vertices get distinct colors). One can try various assignments (for example, begin by assigning #1 one color and then going through the list of conditions – see the working below) but eventually some person such as #7, whose friends force her not to have any of the three available colors, remains with no legal option.
+
+Because one cannot 3–color the induced graph on the other seven people while avoiding clashes with #0’s color, there is no way to assign four shirt–colors so that every pair of friends wears different colors.
+
+Thus the answer is:
+
+Impossible
+
+–––––––––––––––––––––––
+Explanation:
+
+• Choose #0 = Red.
+• Then each of #1, #2, #3, #4, #5, #6, and #7 must use one of {Blue, Green, Yellow}.
+• One may check (via trying different assignments) that the constraints among these seven (which include friendships such as #1–#2, #1–#3, #2–#5, #2–#6, #2–#7, #3–#5, #3–#7, #4–#5, #4–#6, #4–#7, #5–#6, #5–#7, etc.) force a conflict so that no proper 3–coloring exists.
+• Therefore no acceptable assignment of four colors to the eight people is possible.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

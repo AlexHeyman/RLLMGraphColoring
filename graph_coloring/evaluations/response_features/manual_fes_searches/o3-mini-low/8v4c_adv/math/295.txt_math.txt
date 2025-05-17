@@ -1,0 +1,25 @@
+Edges: [(0, 2), (0, 4), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 3), (0, 5), (1, 2), (3, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no proper 4‐coloring exists. (In other words, the answer is “Impossible”.)
+
+Below is one explanation of why one can’t assign four colors so that every edge has differently colored endpoints.
+
+One way to see the difficulty is to note that many of the vertices are “almost complete” to a large group of others. For example, with vertices numbered 1, 2, 3, 4, and 5 the adjacencies are almost those of a complete graph (K₅). In fact, if you look at the set
+  {1,2,3,4,5}
+you will find that every vertex here is adjacent to all but two others in the set. (The missing pairs are 1–2 and 3–4.) Consequently, if you try to “share” colors between non‐adjacent vertices (for instance, letting vertices 1 and 2 be the same color) you soon encounter problems with a “leftover” vertex whose neighborhood uses all four available colors. A number of “trial” 4–colorings (consistent assignments of red, green, blue, and yellow to vertices) can be set up—by beginning with a color for vertex 0 and then working through the high–degree vertices—but each such assignment eventually runs into a conflict on one edge or another.
+
+After some careful case–analysis one finds that there is no way to assign red, green, blue, and yellow to vertices 0 through 7 so that no edge joins two vertices of the same color.
+
+Thus, the final answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,52 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (4, 6), (5, 7)]
+
+Complement: [(0, 2), (1, 4), (3, 5), (4, 7), (5, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how one tries to assign one of the four colors {Red, Green, Blue, Yellow} to each vertex, some vertex will be “trapped” by having all four colors appear on its neighbors. (That is, there is no proper 4‐coloring.)
+
+Let the vertices be 0, 1, …, 7 and suppose you try to color them so that every edge connects two vertices of distinct colors. (The full list of edges is
+
+  {(0,1), (0,3), (0,4), (0,5), (0,6), (0,7),
+   (1,2), (1,3), (1,5), (1,6), (1,7),
+   (2,3), (2,4), (2,5), (2,6), (2,7),
+   (3,4), (3,6), (3,7),
+   (4,5), (4,6),
+   (5,7)}.)
+
+A natural “start” might be to assign a color to vertex 0. Say we set
+
+  vertex 0 = Red.
+
+Because vertex 0 is adjacent to vertices 1, 3, 4, 5, 6, and 7 the same color Red cannot be used on any of these. Now choose a color for vertex 1 (which is adjacent to 0, 2, 3, 5, 6, 7). For example, set
+
+  vertex 1 = Green.
+
+Also, vertex 1’s neighbor vertex 2 must then avoid Green. One might then try
+
+  vertex 2 = Blue.
+
+Next, notice that vertex 3 is adjacent to vertices 0 (Red), 1 (Green) and 2 (Blue) (since edge (2,3) is in the list). Thus vertex 3 is “forced” to take the only remaining color:
+
+  vertex 3 = Yellow.
+
+So far the assignments are:
+  0 Red
+  1 Green
+  2 Blue
+  3 Yellow
+
+Now look at vertex 6. It is adjacent to 0, 1, 2, and 3 (among possibly others). In our current partial assignment those colors are {Red, Green, Blue, Yellow}. This means that no matter what you choose for vertex 6, it will share its color with one neighbor. (Even if you haven’t assigned some other neighbors yet, those four edges force vertex 6’s color to conflict.)
+
+No rearrangement of the colors on vertices 0, 1, 2, 3 will save vertex 6 since the edges (0,6), (1,6), (2,6) and (3,6) ensure that if vertices 0, 1, 2, 3 take all four different colors, vertex 6 cannot be colored at all (and a little checking shows that in any attempt one finds the same impasse).
+
+Thus it is impossible to color the vertices using only the 4 given colors so that every edge connects vertices of different colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

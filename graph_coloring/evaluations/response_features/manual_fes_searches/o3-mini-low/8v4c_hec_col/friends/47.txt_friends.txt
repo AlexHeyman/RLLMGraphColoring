@@ -1,0 +1,51 @@
+Edges: [(0, 1), (0, 2), (0, 5), (0, 6), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 7), (6, 7)]
+
+Complement: [(0, 3), (0, 4), (0, 7), (1, 2), (1, 3), (1, 4), (3, 4), (5, 6)]
+
+Evaluation: impossible incorrect
+
+---
+
+We first note that we can think of each person as a “vertex” in a graph and draw an “edge” between two people if they are friends. (For example, there is an edge between Alice and Bob, there is an edge between Alice and Carol, etc.) The condition that no person wears the same shirt color as any friend is equivalent to asking whether we can assign one of four “colors” (red, green, blue, yellow) to each vertex so that adjacent vertices receive different colors.
+
+On analyzing the list of edges, one finds that some individuals are very “highly connected.” In fact, look at Carol, Fran, George, Heather, and Dave. We have:
+
+• Carol is friends with Fran, George, and Heather (and also with Dave).
+• Fran is friends with Carol, George, and Heather (and also with Dave and Ethan).
+• George is friends with Carol, Fran, and Heather (and also with Dave and Ethan).
+• Heather is friends with Carol, Fran, and George (and also with Bob, Dave, and Ethan).
+• Dave is friends with Carol, Fran, George, and Heather.
+
+In particular, Carol, Fran, George, and Heather are all mutually friends (each pair among these four is connected by a friendship edge), and Dave is friends with all of these four. Therefore, the set {Carol, Fran, George, Heather, Dave} forms a clique—a set of vertices each pair of which are connected. In any proper coloring of a graph, every vertex in a clique must receive a different color.
+
+Since our clique has 5 people, we would need at least 5 different colors (one per person) in order to meet the condition. However, only 4 colors (red, green, blue, yellow) are available.
+
+Thus, it is impossible to assign shirt colors to these 8 people so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We first note that we can think of each person as a “vertex” in a graph and draw an “edge” between two people if they are friends. (For example, there is an edge between #0 and #1, there is an edge between #0 and #2, etc.) The condition that no person wears the same shirt color as any friend is equivalent to asking whether we can assign one of four “colors” (red, green, blue, yellow) to each vertex so that adjacent vertices receive different colors.
+
+On analyzing the list of edges, one finds that some individuals are very “highly connected.” In fact, look at #2, #5, #6, #7, and #3. We have:
+
+• #2 is friends with #5, #6, and #7 (and also with #3).
+• #5 is friends with #2, #6, and #7 (and also with #3 and #4).
+• #6 is friends with #2, #5, and #7 (and also with #3 and #4).
+• #7 is friends with #2, #5, and #6 (and also with #1, #3, and #4).
+• #3 is friends with #2, #5, #6, and #7.
+
+In particular, #2, #5, #6, and #7 are all mutually friends (each pair among these four is connected by a friendship edge), and #3 is friends with all of these four. Therefore, the set {#2, #5, #6, #7, #3} forms a clique—a set of vertices each pair of which are connected. In any proper coloring of a graph, every vertex in a clique must receive a different color.
+
+Since our clique has 5 people, we would need at least 5 different colors (one per person) in order to meet the condition. However, only 4 colors (red, green, blue, yellow) are available.
+
+Thus, it is impossible to assign shirt colors to these 8 people so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

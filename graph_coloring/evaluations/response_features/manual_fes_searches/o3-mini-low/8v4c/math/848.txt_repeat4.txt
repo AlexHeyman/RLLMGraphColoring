@@ -1,0 +1,37 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (3, 5), (3, 6), (4, 5), (4, 6), (5, 7), (6, 7)]
+
+Complement: [(1, 2), (1, 3), (1, 4), (1, 5), (2, 6), (2, 7), (3, 4), (3, 7), (4, 7), (5, 6)]
+
+Evaluation: impossible incorrect
+
+---
+
+We'll show that no proper 4‐coloring exists for the given graph.
+
+Let the vertices be 0,…,7 and note that the edges are
+
+  (0,1), (0,2), (0,3), (0,4), (0,5), (0,6), (0,7),
+  (1,6), (1,7),
+  (2,3), (2,4), (2,5),
+  (3,5), (3,6),
+  (4,5), (4,6),
+  (5,7),
+  (6,7).
+
+Because vertex 0 is adjacent to every other vertex, if we assign it any color (say Red) then none of vertices 1–7 may be Red. In other words, the other 7 vertices must be colored with the remaining 3 colors: Green, Blue, and Yellow.
+
+A close look at the induced subgraph on vertices 1,…,7 reveals the following facts. First, vertices 1, 6, and 7 form a triangle (they are pairwise adjacent via edges (1,6), (1,7), and (6,7)). Thus these three vertices must receive three different colors—say 1 = Green, 6 = Blue, and 7 = Yellow (in some order).
+
+Next, consider the remaining vertices 2, 3, 4, and 5. Their edges are:
+  (2,3), (2,4), (2,5),
+  (3,5), (4,5).
+
+Since they also must use only Green, Blue, and Yellow (because Red is “used up” by vertex 0), we are forced into trying a 3–coloring on these 4 vertices. But one quickly finds that no matter how one assigns colors (keeping in mind the additional connections from vertices 3 and 4 to vertex 6, or vertex 5 to vertex 7, etc.), at least one edge will have both endpoints colored the same. (Various attempted assignments lead to conflicts, as one may check by starting with a tentative color for vertex 2 and then propagating the restrictions along its edges.)
+
+Because our subgraph on vertices 1–7 must be 3–colored (and we’ve shown that even ignoring the extra edges from vertex 0 this is impossible), there is no valid 4–coloring for the entire graph.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,30 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 5), (0, 7), (1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (4, 7), (5, 6), (6, 7)]
+
+Complement: [(0, 3), (0, 6), (1, 2), (1, 4), (3, 5), (4, 6), (5, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no 4‐coloring of the 8 vertices exists where every edge joins two differently “colored” vertices. In other words, it is impossible to assign the colors Red, Green, Blue, and Yellow to vertices 0,…,7 so that for every edge, the endpoints have different colors.
+
+One way to convince oneself is to try to “color‐by‐hand” the graph. (Below is one “attempt” that runs into an unavoidable contradiction.)
+
+A possible approach is as follows. (We sometimes “cheat” by first labelling the vertices with high degree – many edges – and then trying to assign colors. In our graph vertices 2 and 7 have six neighbors.) For instance, one might start by presuming
+
+  vertex 0 = Red,
+  vertex 1 = Blue,
+  vertex 2 = Green,
+  vertex 7 = Yellow
+
+since 0, 1, 2, and 7 are very “popular.” Then, when one goes on to color vertex 4 (which already is adjacent to 0 and 2 and also to 7) one finds the only possibility is to pick a color that conflicts with the color already chosen for vertex 1 (because 4 is adjacent to 1 as well). If one tries to tweak the assumed colors (for instance, switching the colors for vertices 1 and 2 or trying other choices for vertex 7) eventually one finds that in every case the remaining vertex – namely vertex 6 – is forced to be adjacent to vertices using all four colors. In short, every proposed assignment leads to a “dead–end” where some vertex has no legal color available.
+
+A computer–aided search or a complete hand–analysis confirms that no 4–color assignment exists that satisfies the property that no two vertices joined by an edge receive the same color.
+
+Thus, the final answer is simply:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

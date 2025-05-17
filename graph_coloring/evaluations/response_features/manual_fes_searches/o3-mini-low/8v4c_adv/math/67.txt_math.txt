@@ -1,0 +1,27 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 6), (2, 3), (2, 4), (2, 5), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 5), (1, 4), (1, 5), (1, 7), (2, 6), (3, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no proper four‐coloring exists. In a proper coloring, each vertex is assigned one of four colors (say Red, Green, Blue, Yellow) so that every edge connects two vertices of different colors.
+
+Examine vertex 7. Its incident edges are (0,7), (2,7), (3,7), (4,7), (5,7) and (6,7). In other words, vertex 7 is adjacent to vertices 0, 2, 3, 4, 5, and 6.
+
+A closer look at the graph shows that the vertices 0, 3, 4, and 6 form a subgraph with many edges among them. In fact, through the edges
+
+  (0,3), (0,4), (0,6), (3,6), (3,4), (4,6)
+
+it turns out that these four vertices are all adjacent in one way or another. This forces them to all have distinct colors. There is no way to “re-use” a color among these four vertices because adjacent vertices must have different colors.
+
+But then vertex 7 is adjacent to all of vertices 0, 3, 4, and 6. Since they already use all four available colors, no color remains that can be assigned to vertex 7. (Changing the colors of the remaining vertices, such as 2 or 5, cannot avoid the fact that these four neighbors of 7 must all have different colors; their mutual adjacencies force them to use all four colors.) 
+
+Thus it is impossible to assign one of the four colors to every vertex while having adjacent vertices with different colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,57 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (1, 2), (4, 5), (4, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how one tries to “color‐the people” (that is, assign one of the four shirt colors to each person) so that no pair of friends gets the same color, one is forced to “use up” all four colors among the people who are friends with George. (George is the “bottleneck‐vertex,” so to speak.) Once all four colors appear among someone who is a friend of George, there is no color left available for George.
+
+To explain briefly without “graph theory language” in too much detail, here is one way to look at it.
+
+Let the people be the vertices in a graph and the friendships the edges. We have eight vertices (Alice, Bob, Carol, Dave, Ethan, Fran, George, and Heather) and the following edges (friendships):
+
+• Alice is friends with Bob, Carol, Ethan, Fran, George, Heather.
+• Bob is friends with Dave, Ethan, Fran, George, Heather.
+• Carol is friends with Dave, Ethan, Fran, George, Heather.
+• Dave is friends with Ethan, Fran, George, Heather.
+• Ethan is friends with George.
+• Fran is friends with George, Heather.
+
+It turns out that one vertex—George—is adjacent to six others (Alice, Bob, Carol, Dave, Ethan, and Fran). In any valid assignment, each friend of George must wear a color different from George’s shirt; that is, among these six people no one may have the same color as George. But if these six end up “using” all four available colors then whatever color you try to give George would already appear on one of his neighbors. Several attempts at assigning colors (taking care to respect the friendship restrictions) always force the six neighbors of George to require all four colors. (I.e. if one tries to “save” one color for George by forcing the six to use only three colors, some conflict occurs among themselves.) 
+
+Because every valid assignment would force George’s six “neighbors” (Alice, Bob, Carol, Dave, Ethan, and Fran) to “cover” all four colors, there is no possibility for George to have a color different from all his friends. 
+
+Thus, under the stated conditions with four shirt colors, it is impossible.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how one tries to “color‐the people” (that is, assign one of the four shirt colors to each person) so that no pair of friends gets the same color, one is forced to “use up” all four colors among the people who are friends with #6. (#6 is the “bottleneck‐vertex,” so to speak.) Once all four colors appear among someone who is a friend of #6, there is no color left available for #6.
+
+To explain briefly without “graph theory language” in too much detail, here is one way to look at it.
+
+Let the people be the vertices in a graph and the friendships the edges. We have eight vertices (#0, #1, #2, #3, #4, #5, #6, and #7) and the following edges (friendships):
+
+• #0 is friends with #1, #2, #4, #5, #6, #7.
+• #1 is friends with #3, #4, #5, #6, #7.
+• #2 is friends with #3, #4, #5, #6, #7.
+• #3 is friends with #4, #5, #6, #7.
+• #4 is friends with #6.
+• #5 is friends with #6, #7.
+
+It turns out that one vertex—#6—is adjacent to six others (#0, #1, #2, #3, #4, and #5). In any valid assignment, each friend of #6 must wear a color different from #6’s shirt; that is, among these six people no one may have the same color as #6. But if these six end up “using” all four available colors then whatever color you try to give #6 would already appear on one of his neighbors. Several attempts at assigning colors (taking care to respect the friendship restrictions) always force the six neighbors of #6 to require all four colors. (I.e. if one tries to “save” one color for #6 by forcing the six to use only three colors, some conflict occurs among themselves.) 
+
+Because every valid assignment would force #6’s six “neighbors” (#0, #1, #2, #3, #4, and #5) to “cover” all four colors, there is no possibility for #6 to have a color different from all his friends. 
+
+Thus, under the stated conditions with four shirt colors, it is impossible.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

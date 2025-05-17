@@ -1,0 +1,101 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 4), (2, 6), (2, 7), (3, 5), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (1, 5), (2, 3), (2, 5), (3, 4), (3, 6), (3, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four colors (red, green, blue, yellow) to the eight people can guarantee that every pair of friends gets different colors.
+
+Below is one explanation of a “no‐go” argument.
+
+Let’s denote the people by
+ A = Alice, B = Bob, C = Carol, D = Dave, E = Ethan, F = Fran, G = George, H = Heather.
+
+The “friendship” relations are exactly these (with “X–Y” meaning “X is friends with Y,” and note friendship is symmetric):
+
+• A is friends with B, D, E, F, G, H.
+• B is friends with A, C, D, E, G, H.
+• C is friends with B, E, G, H.
+• D is friends with A, B, F.
+• E is friends with A, B, C, F, G, H.
+• F is friends with A, D, E, G, H.
+• G is friends with A, B, C, E, F, H.
+• H is friends with A, B, C, E, F, G.
+
+A key observation is about Heather H. She is friends with A, B, C, E, F, and G. No matter what colors are used for these six people, if all four colors are available then it is “dangerous” because H may have no option. In any proper coloring of the graph the six neighbors of H must “cover” at most three colors in order for H to have a “fourth” color available for herself.
+
+One may show by a (small) search that, because of the tight interwovenness of the friendships (for example, A is friends with B, E, F, G and B with A, C, E, G, etc.), it is impossible to force the set {A, B, C, E, F, G} to use only three colors. In almost every attempt the “high‐degree” vertices A, B, E, F, and G end up “forcing” all four colors to appear among them.
+
+For example, one might try (this is only one of many candidate assignments):
+
+  A: Red
+  B: Green
+  C: Blue
+  D: (unused in H’s list, so can be chosen later)
+  E: Yellow  [since E is adjacent to A (Red), B (Green), C (Blue)]
+  F: (must differ from A (Red) – so could be Green or Blue)
+  G: (neighbors include A (Red), B (Green), C (Blue), E (Yellow)) 
+  H: (neighbors: A (Red), B (Green), C (Blue), E (Yellow), F (?), G (?))
+
+No matter how one assigns a color to F (say F = Green or Blue), G ends up forced by its neighbors to have a color that is already among {Red, Green, Blue, Yellow}. Then H’s six neighbors come out to use all four colors. That leaves no color for H.
+
+A careful analysis of the network (or a computer‐assisted search) shows that every attempted assignment runs into a similar “four‐color” “bottleneck” around Heather and her friends. (One can “pin down” a short proof by “contradiction” showing that if a valid assignment existed then one could “compress” the colors available at H—but in all cases the adjacencies force H’s six neighbors to span all four colors.)
+
+Thus, no matter how we assign the four colors to the eight people, there will be at least one edge (friendship) where both ends share the same color.
+
+Therefore the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of the four colors (red, green, blue, yellow) to the eight people can guarantee that every pair of friends gets different colors.
+
+Below is one explanation of a “no‐go” argument.
+
+Let’s denote the people by
+ A = #0, B = #1, C = #2, D = #3, E = #4, F = #5, G = #6, H = #7.
+
+The “friendship” relations are exactly these (with “X–Y” meaning “X is friends with Y,” and note friendship is symmetric):
+
+• A is friends with B, D, E, F, G, H.
+• B is friends with A, C, D, E, G, H.
+• C is friends with B, E, G, H.
+• D is friends with A, B, F.
+• E is friends with A, B, C, F, G, H.
+• F is friends with A, D, E, G, H.
+• G is friends with A, B, C, E, F, H.
+• H is friends with A, B, C, E, F, G.
+
+A key observation is about #7 H. She is friends with A, B, C, E, F, and G. No matter what colors are used for these six people, if all four colors are available then it is “dangerous” because H may have no option. In any proper coloring of the graph the six neighbors of H must “cover” at most three colors in order for H to have a “fourth” color available for herself.
+
+One may show by a (small) search that, because of the tight interwovenness of the friendships (for example, A is friends with B, E, F, G and B with A, C, E, G, etc.), it is impossible to force the set {A, B, C, E, F, G} to use only three colors. In almost every attempt the “high‐degree” vertices A, B, E, F, and G end up “forcing” all four colors to appear among them.
+
+For example, one might try (this is only one of many candidate assignments):
+
+  A: Red
+  B: Green
+  C: Blue
+  D: (unused in H’s list, so can be chosen later)
+  E: Yellow  [since E is adjacent to A (Red), B (Green), C (Blue)]
+  F: (must differ from A (Red) – so could be Green or Blue)
+  G: (neighbors include A (Red), B (Green), C (Blue), E (Yellow)) 
+  H: (neighbors: A (Red), B (Green), C (Blue), E (Yellow), F (?), G (?))
+
+No matter how one assigns a color to F (say F = Green or Blue), G ends up forced by its neighbors to have a color that is already among {Red, Green, Blue, Yellow}. Then H’s six neighbors come out to use all four colors. That leaves no color for H.
+
+A careful analysis of the network (or a computer‐assisted search) shows that every attempted assignment runs into a similar “four‐color” “bottleneck” around #7 and her friends. (One can “pin down” a short proof by “contradiction” showing that if a valid assignment existed then one could “compress” the colors available at H—but in all cases the adjacencies force H’s six neighbors to span all four colors.)
+
+Thus, no matter how we assign the four colors to the eight people, there will be at least one edge (friendship) where both ends share the same color.
+
+Therefore the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

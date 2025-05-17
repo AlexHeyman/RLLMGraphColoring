@@ -1,0 +1,20 @@
+268.txt friends
+
+Line 22
+- Heather: friends with Alice, Bob, Carol, Dave, Ethan, Fran, George
+
+False edges:
+(5, 7) [Manual assessment: N/A]
+
+---
+
+47.txt friends
+
+Line 20
+- George: friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+

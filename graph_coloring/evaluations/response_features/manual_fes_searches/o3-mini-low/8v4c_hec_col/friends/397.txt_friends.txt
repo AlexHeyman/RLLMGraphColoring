@@ -1,0 +1,45 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (1, 3), (1, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign the four colors to the eight people so that adjacent (“friends‐with”) people wear different colors, one person – in this case “George” – will end up having friends wearing all four colors, leaving no available color for him. (It turns out that the structure of the “friendship graph” forces a very “tight” configuration that cannot be 4–colored.)
+
+Below is one way to explain the impossibility.
+
+Let the people be the vertices of a graph. (For example, “Alice is friends with Bob” is an edge joining the vertices for Alice and Bob.) One quickly verifies that the graph has the following features. One vertex (George) is friends with all of the other seven people. In addition, if you look at the subgraph induced on the other seven vertices (Alice, Bob, Carol, Dave, Ethan, Fran, and Heather) then two things happen:
+ 
+1. Among the six people except Heather there is a triangle (for instance, Carol, Dave and Fran are all mutually friends). In any proper coloring a triangle forces three different colors.
+2. In the induced subgraph these six people are “almost” all connected, and Heather in fact is friends with all six of them. So once the triangle forces three colors on three of them, Heather (being adjacent to everybody in that group) cannot use any of the colors that appear on one of those six.
+
+Thus a proper coloring of the seven people (all of George’s neighbors) forces the use of all four colors. But then when we come to color George (who is friends with all these seven), every color in our 4–set is “taken” by someone he is friends with. There is no color left for George.
+
+Because every assignment of red, green, blue, and yellow to the eight people leads to this unavoidable “rainbow neighborhood” for George, it is impossible to assign colors in the required way.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign the four colors to the eight people so that adjacent (“friends‐with”) people wear different colors, one person – in this case “#6” – will end up having friends wearing all four colors, leaving no available color for him. (It turns out that the structure of the “friendship graph” forces a very “tight” configuration that cannot be 4–colored.)
+
+Below is one way to explain the impossibility.
+
+Let the people be the vertices of a graph. (For example, “#0 is friends with #1” is an edge joining the vertices for #0 and #1.) One quickly verifies that the graph has the following features. One vertex (#6) is friends with all of the other seven people. In addition, if you look at the subgraph induced on the other seven vertices (#0, #1, #2, #3, #4, #5, and #7) then two things happen:
+ 
+1. Among the six people except #7 there is a triangle (for instance, #2, #3 and #5 are all mutually friends). In any proper coloring a triangle forces three different colors.
+2. In the induced subgraph these six people are “almost” all connected, and #7 in fact is friends with all six of them. So once the triangle forces three colors on three of them, #7 (being adjacent to everybody in that group) cannot use any of the colors that appear on one of those six.
+
+Thus a proper coloring of the seven people (all of #6’s neighbors) forces the use of all four colors. But then when we come to color #6 (who is friends with all these seven), every color in our 4–set is “taken” by someone he is friends with. There is no color left for #6.
+
+Because every assignment of red, green, blue, and yellow to the eight people leads to this unavoidable “rainbow neighborhood” for #6, it is impossible to assign colors in the required way.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

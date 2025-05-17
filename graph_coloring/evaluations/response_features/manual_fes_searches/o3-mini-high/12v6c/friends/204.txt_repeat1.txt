@@ -1,0 +1,97 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 6), (0, 7), (0, 8), (0, 9), (0, 10), (0, 11), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (1, 9), (1, 10), (2, 3), (2, 4), (2, 5), (2, 7), (2, 9), (2, 11), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (3, 10), (3, 11), (4, 5), (4, 7), (4, 8), (4, 9), (4, 10), (4, 11), (5, 6), (5, 7), (5, 8), (5, 10), (5, 11), (6, 7), (6, 8), (6, 10), (6, 11), (7, 8), (7, 9), (7, 10), (7, 11), (8, 11), (9, 10), (9, 11)]
+
+Complement: [(0, 2), (0, 5), (1, 3), (1, 8), (1, 11), (2, 6), (2, 8), (2, 10), (3, 4), (4, 6), (5, 9), (6, 9), (8, 9), (8, 10), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no choice of shirt‐colors (using red, green, blue, yellow, orange, and purple) can be made so that every pair of friends has different colored shirts.
+
+One way to see this is to “reduce” the problem as follows. Notice that one person stands out: Heather. (In the list of friendships Heather is friends with everyone else!) This forces Heather’s shirt color to be unique. (For example, say Heather wears red.) Then every other one of the 11 people must choose their shirt color from the remaining five colors—green, blue, yellow, orange, and purple—with the rule that any two people who are friends must not share a color.
+
+A somewhat careful look at the friendship relations shows that among the remaining 11 people the following is true (we use the people’s first‐names with the following abbreviations):
+
+  Alice (A) is friends with Bob, Dave, Ethan, George, Irene, Jack, Kathy, and Larry;
+  Bob (B) is friends with A, Carol, Ethan, Fran, George, Jack, and Kathy;
+  Carol (C) is friends with B, Dave, Ethan, Fran, Jack, and Larry;
+  Dave (D) is friends with A, C, Fran, George, Irene, Jack, Kathy, and Larry;
+  Ethan (E) is friends with A, B, C, Fran, Irene, Jack, Kathy, and Larry;
+  Fran (F) is friends with B, C, D, E, George, Irene, Kathy, and Larry;
+  George (G) is friends with A, B, D, F, Irene, Kathy, and Larry;
+  Irene (I) is friends with A, D, E, F, G, and Larry;
+  Jack (J) is friends with A, B, C, D, E, Kathy, and Larry;
+  Kathy (K) is friends with A, B, D, E, F, G, and J;
+  Larry (L) is friends with A, C, D, E, F, G, I, and J.
+
+Furthermore, one may verify that the five persons 
+  Carol (C), Dave (D), Ethan (E), Fran (F), and Larry (L)
+form a clique in this graph—that is, each of them is friends with each other. Consequently, in any proper coloring of these 11 people with five colors the five clique‐members must receive all five different colors.
+
+Now observe what happens to certain “outsider” vertices. In every proper 5–coloring (using, say, the available colors {green, blue, yellow, orange, purple}) the following relationships can be deduced from the friendship lists:
+
+  • Alice (A) is friends with D, E, and L.
+   So among the five colors the three choices on D, E, and L are forbidden for A. Because the clique uses all five colors, the only two “unused” colors available to A would be exactly the colors appearing on the two clique–members with whom A is not friends. But by the friendship lists A is not friends with Carol (C) and Fran (F). Thus A’s “allowable” colors would be exactly {color of C, color of F}.
+
+  • Irene (I) is friends with D, E, F, and L.
+   So I’s only available color (coming from the five–color palette) is the one missing from {D, E, F, L} – namely the color of Carol (C).
+
+  • Jack (J) is friends with C, D, E, and L.
+   So J’s only available color is the one missing from {C, D, E, L} – namely the color of Fran (F).
+
+Since A is friends both with I (Irene) and J (Jack), its color must differ from I’s and J’s colors. But by the deductions above the only two colors A might choose are exactly the color already forced on I (the color of C) and the color forced on J (the color of F). This is a contradiction because A cannot be different from both if those are its only options.
+
+Thus no matter how one permutes the five “non‐red” colors among the 11 people, the conflicts forced by the clique and the “outside” vertices (especially A, I, and J) cannot be avoided.
+
+Because Heather’s spot forces using exactly five colors for the others, we see that it is impossible to assign shirt–colors to all 12 people so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no choice of shirt‐colors (using red, green, blue, yellow, orange, and purple) can be made so that every pair of friends has different colored shirts.
+
+One way to see this is to “reduce” the problem as follows. Notice that one person stands out: #7. (In the list of friendships #7 is friends with everyone else!) This forces #7’s shirt color to be unique. (For example, say #7 wears red.) Then every other one of the 11 people must choose their shirt color from the remaining five colors—green, blue, yellow, orange, and purple—with the rule that any two people who are friends must not share a color.
+
+A somewhat careful look at the friendship relations shows that among the remaining 11 people the following is true (we use the people’s first‐names with the following abbreviations):
+
+  #0 (A) is friends with #1, #3, #4, #6, #8, #9, #10, and #11;
+  #1 (B) is friends with A, #2, #4, #5, #6, #9, and #10;
+  #2 (C) is friends with B, #3, #4, #5, #9, and #11;
+  #3 (D) is friends with A, C, #5, #6, #8, #9, #10, and #11;
+  #4 (E) is friends with A, B, C, #5, #8, #9, #10, and #11;
+  #5 (F) is friends with B, C, D, E, #6, #8, #10, and #11;
+  #6 (G) is friends with A, B, D, F, #8, #10, and #11;
+  #8 (I) is friends with A, D, E, F, G, and #11;
+  #9 (J) is friends with A, B, C, D, E, #10, and #11;
+  #10 (K) is friends with A, B, D, E, F, G, and J;
+  #11 (L) is friends with A, C, D, E, F, G, I, and J.
+
+Furthermore, one may verify that the five persons 
+  #2 (C), #3 (D), #4 (E), #5 (F), and #11 (L)
+form a clique in this graph—that is, each of them is friends with each other. Consequently, in any proper coloring of these 11 people with five colors the five clique‐members must receive all five different colors.
+
+Now observe what happens to certain “outsider” vertices. In every proper 5–coloring (using, say, the available colors {green, blue, yellow, orange, purple}) the following relationships can be deduced from the friendship lists:
+
+  • #0 (A) is friends with D, E, and L.
+   So among the five colors the three choices on D, E, and L are forbidden for A. Because the clique uses all five colors, the only two “unused” colors available to A would be exactly the colors appearing on the two clique–members with whom A is not friends. But by the friendship lists A is not friends with #2 (C) and #5 (F). Thus A’s “allowable” colors would be exactly {color of C, color of F}.
+
+  • #8 (I) is friends with D, E, F, and L.
+   So I’s only available color (coming from the five–color palette) is the one missing from {D, E, F, L} – namely the color of #2 (C).
+
+  • #9 (J) is friends with C, D, E, and L.
+   So J’s only available color is the one missing from {C, D, E, L} – namely the color of #5 (F).
+
+Since A is friends both with I (#8) and J (#9), its color must differ from I’s and J’s colors. But by the deductions above the only two colors A might choose are exactly the color already forced on I (the color of C) and the color forced on J (the color of F). This is a contradiction because A cannot be different from both if those are its only options.
+
+Thus no matter how one permutes the five “non‐red” colors among the 11 people, the conflicts forced by the clique and the “outside” vertices (especially A, I, and J) cannot be avoided.
+
+Because #7’s spot forces using exactly five colors for the others, we see that it is impossible to assign shirt–colors to all 12 people so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 3,4

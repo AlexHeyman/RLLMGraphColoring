@@ -1,0 +1,23 @@
+Edges: [(0, 1), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (3, 5), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 3), (1, 5), (2, 7), (3, 4), (3, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+After several attempts at assigning colors to the eight people, one finds that no assignment of the four available colors to Alice, Bob, Carol, Dave, Ethan, Fran, George, and Heather can avoid at least one pair of friends sharing the same color. In other words, if everyone must choose one of Red, Green, Blue, or Yellow and no two people who are friends may wear the same color, then there is no valid way to assign colors to all eight people.
+
+Impossible
+
+---
+Numericized:
+---
+
+After several attempts at assigning colors to the eight people, one finds that no assignment of the four available colors to #0, #1, #2, #3, #4, #5, #6, and #7 can avoid at least one pair of friends sharing the same color. In other words, if everyone must choose one of Red, Green, Blue, or Yellow and no two people who are friends may wear the same color, then there is no valid way to assign colors to all eight people.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

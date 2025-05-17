@@ -1,0 +1,79 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(1, 2), (1, 3), (2, 3), (2, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We first note that each person must choose one of 4 colors. Because any two friends must have different colored shirts, a necessary condition for such an assignment is that no set of people who are all friends (a clique) has more than 4 members.
+
+Let’s list the friendships:
+
+• Alice is friends with Bob, Carol, Dave, Ethan, Fran, George, and Heather.
+
+• Bob is friends with Ethan, Fran, George, and Heather.
+
+• Carol is friends with Ethan, George, and Heather.
+
+• Dave is friends with Ethan, Fran, George, and Heather.
+
+• Ethan is friends with George and Heather (in addition to his friendships with Alice, Bob, and Carol/Dave).
+
+• Fran is friends with George and Heather (as well as her friendships with Alice, Bob, and Dave).
+
+• George is friends with Heather (in addition to his friendships with Alice, Bob, Carol, Dave, Ethan, and Fran).
+
+Notice that Alice is friends with everyone else, so whatever color Alice wears cannot be repeated by any of the other 7.
+
+More importantly, examine the set S = {Bob, Carol, Dave, Ethan, Fran, George, Heather}. Look at the following four people in S: Bob, Ethan, George, and Heather. We have:
+ – Bob is friends with Ethan, George, and Heather.
+ – Ethan is friends with George and Heather.
+ – George is friends with Heather.
+Thus Bob, Ethan, George, and Heather form a clique of 4 – they all are mutually friends among themselves.
+
+But we can actually find a 5–clique in the whole graph. Since Alice is friends with everyone, if we take the clique in S (for example, Bob, Ethan, George, and Heather) and add Alice, then the set {Alice, Bob, Ethan, George, Heather} forms a 5–clique. Every pair in this set is friends. In any clique, all members must have distinct colors. Therefore, to color a clique of size 5 you would need 5 different colors.
+
+Since only 4 colors are available, it is impossible to assign colors to the 8 people without a conflict among friends.
+
+Impossible
+
+---
+Numericized:
+---
+
+We first note that each person must choose one of 4 colors. Because any two friends must have different colored shirts, a necessary condition for such an assignment is that no set of people who are all friends (a clique) has more than 4 members.
+
+Let’s list the friendships:
+
+• #0 is friends with #1, #2, #3, #4, #5, #6, and #7.
+
+• #1 is friends with #4, #5, #6, and #7.
+
+• #2 is friends with #4, #6, and #7.
+
+• #3 is friends with #4, #5, #6, and #7.
+
+• #4 is friends with #6 and #7 (in addition to his friendships with #0, #1, and #2/#3).
+
+• #5 is friends with #6 and #7 (as well as her friendships with #0, #1, and #3).
+
+• #6 is friends with #7 (in addition to his friendships with #0, #1, #2, #3, #4, and #5).
+
+Notice that #0 is friends with everyone else, so whatever color #0 wears cannot be repeated by any of the other 7.
+
+More importantly, examine the set S = {#1, #2, #3, #4, #5, #6, #7}. Look at the following four people in S: #1, #4, #6, and #7. We have:
+ – #1 is friends with #4, #6, and #7.
+ – #4 is friends with #6 and #7.
+ – #6 is friends with #7.
+Thus #1, #4, #6, and #7 form a clique of 4 – they all are mutually friends among themselves.
+
+But we can actually find a 5–clique in the whole graph. Since #0 is friends with everyone, if we take the clique in S (for example, #1, #4, #6, and #7) and add #0, then the set {#0, #1, #4, #6, #7} forms a 5–clique. Every pair in this set is friends. In any clique, all members must have distinct colors. Therefore, to color a clique of size 5 you would need 5 different colors.
+
+Since only 4 colors are available, it is impossible to assign colors to the 8 people without a conflict among friends.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

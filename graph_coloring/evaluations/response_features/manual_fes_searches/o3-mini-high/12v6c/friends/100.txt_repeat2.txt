@@ -1,0 +1,35 @@
+Edges: [(0, 1), (0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (0, 9), (0, 10), (0, 11), (1, 2), (1, 4), (1, 6), (1, 8), (1, 9), (1, 10), (1, 11), (2, 3), (2, 5), (2, 6), (2, 7), (2, 8), (2, 11), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8), (3, 10), (4, 5), (4, 9), (4, 10), (4, 11), (5, 6), (5, 7), (5, 9), (5, 10), (5, 11), (6, 7), (6, 8), (6, 9), (6, 10), (7, 11), (8, 9), (8, 10), (8, 11), (9, 10), (9, 11), (10, 11)]
+
+Complement: [(0, 2), (0, 3), (1, 3), (1, 5), (1, 7), (2, 4), (2, 9), (2, 10), (3, 9), (3, 11), (4, 6), (4, 7), (4, 8), (5, 8), (6, 11), (7, 8), (7, 9), (7, 10)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign the six colors, some pair of friends will end up with the same color. In fact, if you look closely at the friend relationships a certain group of seven people all turn out to be pairwise friends (a “clique”), and a clique of size 7 (a K₇) requires 7 different colors.
+
+For example, note that both Alice and Bob are friends with each of the following five people:
+  Larry, Irene, Jack, Kathy, and George.
+These five are all mutual friends with one another (check that every pair among Larry, Irene, Jack, Kathy, and George appears in the list). Therefore they form a clique of size 5 and must use 5 distinct colors. But then both Alice and Bob are each friends with all 5 of those people. This forces each of them to use a color not among those 5. Since there are only 6 colors available (red, green, blue, yellow, orange, purple), there is only one color left for any vertex that is adjacent to all 5. However, Alice and Bob are also friends with each other—so they cannot both have that remaining color.
+
+Thus, the seven people {Alice, Bob, Larry, Irene, Jack, Kathy, George} form a complete graph (K₇), which requires 7 distinct colors. Since we only have 6 choices, it is impossible to assign shirt colors so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign the six colors, some pair of friends will end up with the same color. In fact, if you look closely at the friend relationships a certain group of seven people all turn out to be pairwise friends (a “clique”), and a clique of size 7 (a K₇) requires 7 different colors.
+
+For example, note that both #0 and #1 are friends with each of the following five people:
+  #11, #8, #9, #10, and #6.
+These five are all mutual friends with one another (check that every pair among #11, #8, #9, #10, and #6 appears in the list). Therefore they form a clique of size 5 and must use 5 distinct colors. But then both #0 and #1 are each friends with all 5 of those people. This forces each of them to use a color not among those 5. Since there are only 6 colors available (red, green, blue, yellow, orange, purple), there is only one color left for any vertex that is adjacent to all 5. However, #0 and #1 are also friends with each other—so they cannot both have that remaining color.
+
+Thus, the seven people {#0, #1, #11, #8, #9, #10, #6} form a complete graph (K₇), which requires 7 distinct colors. Since we only have 6 choices, it is impossible to assign shirt colors so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 6,11

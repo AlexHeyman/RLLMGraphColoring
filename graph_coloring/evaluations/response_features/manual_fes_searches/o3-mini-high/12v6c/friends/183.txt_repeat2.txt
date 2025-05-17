@@ -1,0 +1,43 @@
+Edges: [(0, 2), (0, 3), (0, 5), (0, 7), (0, 8), (0, 9), (0, 11), (1, 2), (1, 3), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (2, 3), (2, 4), (2, 5), (2, 7), (2, 8), (2, 9), (2, 11), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (3, 10), (4, 5), (4, 6), (4, 8), (4, 9), (4, 10), (4, 11), (5, 8), (5, 9), (5, 11), (6, 7), (6, 8), (6, 10), (6, 11), (7, 9), (7, 10), (7, 11), (8, 9), (8, 10), (8, 11), (9, 11)]
+
+Complement: [(0, 1), (0, 4), (0, 6), (0, 10), (1, 4), (2, 6), (2, 10), (3, 11), (4, 7), (5, 6), (5, 7), (5, 10), (6, 9), (7, 8), (9, 10), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We first model the situation as a graph problem. The 12 people are vertices, and an edge connects two vertices if the corresponding people are friends. A “proper coloring” of the graph with 6 colors means assigning one of the 6 shirt colors (red, green, blue, yellow, orange, purple) to each person so that no two adjacent (i.e. friends) vertices share the same color.
+
+An important observation is the structure around Alice. Her friends are
+  Alice’s neighbors = {Carol, Dave, Fran, Heather, Irene, Jack, Larry}.
+
+Now look at the “clique” formed by 6 of these:
+  {Carol, Dave, Fran, Irene, Jack, Larry}
+
+In a clique every pair of vertices is connected (and one can check from the given list that every two of Carol, Dave, Fran, Irene, Jack, and Larry are indeed friends). In any proper coloring, all vertices in a clique must receive different colors. Since there are 6 vertices in this clique and only 6 colors available, these 6 people must use all 6 colors. That means that whatever colors they get, every one of the 6 colors (red, green, blue, yellow, orange, purple) appears on one of Alice’s friends.
+
+Because Alice is friends with all six of those people, she sees all 6 colors in her neighborhood. Therefore, no color remains available for her, which makes a proper 6‑coloring impossible.
+
+Impossible
+
+---
+Numericized:
+---
+
+We first model the situation as a graph problem. The 12 people are vertices, and an edge connects two vertices if the corresponding people are friends. A “proper coloring” of the graph with 6 colors means assigning one of the 6 shirt colors (red, green, blue, yellow, orange, purple) to each person so that no two adjacent (i.e. friends) vertices share the same color.
+
+An important observation is the structure around #0. Her friends are
+  #0’s neighbors = {#2, #3, #5, #7, #8, #9, #11}.
+
+Now look at the “clique” formed by 6 of these:
+  {#2, #3, #5, #8, #9, #11}
+
+In a clique every pair of vertices is connected (and one can check from the given list that every two of #2, #3, #5, #8, #9, and #11 are indeed friends). In any proper coloring, all vertices in a clique must receive different colors. Since there are 6 vertices in this clique and only 6 colors available, these 6 people must use all 6 colors. That means that whatever colors they get, every one of the 6 colors (red, green, blue, yellow, orange, purple) appears on one of #0’s friends.
+
+Because #0 is friends with all six of those people, she sees all 6 colors in her neighborhood. Therefore, no color remains available for her, which makes a proper 6‑coloring impossible.
+
+Impossible
+
+---
+
+Manually assessed false edges: 3,11

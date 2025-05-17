@@ -1,0 +1,81 @@
+Edges: [(0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 7), (3, 6), (3, 7), (4, 5), (4, 7), (5, 6), (6, 7)]
+
+Complement: [(0, 1), (0, 4), (2, 3), (2, 4), (2, 5), (2, 6), (3, 4), (3, 5), (4, 6), (5, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how one tries to assign one of the four colors—red, green, blue, or yellow—to each of the eight people subject to the “no two friends share a color” rule, some person will always have – among the colors already “forced” on that person’s friends – all four colors represented. In other words, a proper coloring of the “friendship graph” of these eight people with four colors does not exist.
+
+Below is one way to see that a 4‐coloring is impossible.
+
+Step 1. Define the vertices and list the edges. Let our vertices be the eight people:
+ Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather.
+The friendship (adjacency) list is:
+ • Alice is adjacent to Carol, Dave, Fran, George, Heather.
+ • Bob is adjacent to Carol, Dave, Ethan, Fran, George, Heather.
+ • Carol is adjacent to Alice, Bob, Heather.
+ • Dave is adjacent to Alice, Bob, George, Heather.
+ • Ethan is adjacent to Bob, Fran, Heather.
+ • Fran is adjacent to Alice, Bob, Ethan, George.
+ • George is adjacent to Alice, Bob, Dave, Fran, Heather.
+ • Heather is adjacent to Alice, Bob, Carol, Dave, Ethan, George.
+
+Step 2. Notice that three of these people stand out.
+ – Heather has six neighbors (everyone except herself and (implicitly) Ethan’s friend Fran – though note that Ethan is a friend of Heather).
+ – Alice, Bob and George are each adjacent to several others.
+In particular, look at George. George’s neighbors are:
+ Alice, Bob, Dave, Fran, and Heather.
+Thus, whatever colors we assign to these five must all be different from the color assigned to George. But since there are only four colors available, at most four distinct colors could appear among George’s neighbors. In any attempted 4‐coloring one is forced to “reuse” a color among (at least) two of the people adjacent to George.
+
+Step 3. It turns out that because of the extra edges (for example, between Heather and Dave, and among the friends of Alice and Bob) any attempt to “reuse” a color among the five neighbors of George creates a conflict somewhere else in the graph. (One may check many cases by “guessing” a color for Heather – the vertex that is adjacent to almost everyone – and then trying to color the remaining vertices. Every time one gets to George, his five neighbors force the use of all four colors; that is, one finds that his neighbors cover all four colors, leaving no possibility for George’s color.)
+
+A more systematic (though still informal) analysis reveals that if we assign colors step‐by‐step to the vertices (with Heather, Alice, Bob, Carol, Dave, Ethan, Fran, and finally George being “set”), we always run into the situation that when it comes time to color George his five neighbors (Alice, Bob, Dave, Fran, and Heather) already get all four colors, and so there is no color remaining for George.
+
+Step 4. Since no assignment can avoid a conflict, there is no valid assignment of red, green, blue, or yellow shirts to the 8 people so that no two friends wear the same color.
+
+Thus the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how one tries to assign one of the four colors—red, green, blue, or yellow—to each of the eight people subject to the “no two friends share a color” rule, some person will always have – among the colors already “forced” on that person’s friends – all four colors represented. In other words, a proper coloring of the “friendship graph” of these eight people with four colors does not exist.
+
+Below is one way to see that a 4‐coloring is impossible.
+
+Step 1. Define the vertices and list the edges. Let our vertices be the eight people:
+ #0, #1, #2, #3, #4, #5, #6, #7.
+The friendship (adjacency) list is:
+ • #0 is adjacent to #2, #3, #5, #6, #7.
+ • #1 is adjacent to #2, #3, #4, #5, #6, #7.
+ • #2 is adjacent to #0, #1, #7.
+ • #3 is adjacent to #0, #1, #6, #7.
+ • #4 is adjacent to #1, #5, #7.
+ • #5 is adjacent to #0, #1, #4, #6.
+ • #6 is adjacent to #0, #1, #3, #5, #7.
+ • #7 is adjacent to #0, #1, #2, #3, #4, #6.
+
+Step 2. Notice that three of these people stand out.
+ – #7 has six neighbors (everyone except herself and (implicitly) #4’s friend #5 – though note that #4 is a friend of #7).
+ – #0, #1 and #6 are each adjacent to several others.
+In particular, look at #6. #6’s neighbors are:
+ #0, #1, #3, #5, and #7.
+Thus, whatever colors we assign to these five must all be different from the color assigned to #6. But since there are only four colors available, at most four distinct colors could appear among #6’s neighbors. In any attempted 4‐coloring one is forced to “reuse” a color among (at least) two of the people adjacent to #6.
+
+Step 3. It turns out that because of the extra edges (for example, between #7 and #3, and among the friends of #0 and #1) any attempt to “reuse” a color among the five neighbors of #6 creates a conflict somewhere else in the graph. (One may check many cases by “guessing” a color for #7 – the vertex that is adjacent to almost everyone – and then trying to color the remaining vertices. Every time one gets to #6, his five neighbors force the use of all four colors; that is, one finds that his neighbors cover all four colors, leaving no possibility for #6’s color.)
+
+A more systematic (though still informal) analysis reveals that if we assign colors step‐by‐step to the vertices (with #7, #0, #1, #2, #3, #4, #5, and finally #6 being “set”), we always run into the situation that when it comes time to color #6 his five neighbors (#0, #1, #3, #5, and #7) already get all four colors, and so there is no color remaining for #6.
+
+Step 4. Since no assignment can avoid a conflict, there is no valid assignment of red, green, blue, or yellow shirts to the 8 people so that no two friends wear the same color.
+
+Thus the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

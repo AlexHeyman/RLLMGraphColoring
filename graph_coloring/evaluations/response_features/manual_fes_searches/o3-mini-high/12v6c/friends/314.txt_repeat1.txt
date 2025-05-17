@@ -1,0 +1,73 @@
+Edges: [(0, 3), (0, 5), (0, 6), (0, 7), (0, 8), (0, 9), (0, 10), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (2, 4), (2, 5), (2, 6), (2, 7), (2, 9), (2, 10), (2, 11), (3, 4), (3, 6), (3, 7), (3, 8), (3, 9), (3, 10), (3, 11), (4, 6), (4, 7), (4, 8), (4, 10), (5, 6), (5, 7), (5, 8), (5, 9), (5, 10), (5, 11), (6, 7), (6, 8), (6, 9), (6, 10), (6, 11), (7, 8), (7, 9), (7, 11), (8, 9), (8, 10), (8, 11), (9, 10), (9, 11), (10, 11)]
+
+Complement: [(0, 1), (0, 2), (0, 4), (0, 11), (1, 5), (1, 11), (2, 3), (2, 8), (3, 5), (4, 5), (4, 9), (4, 11), (7, 10)]
+
+Evaluation: impossible incorrect
+
+---
+
+We start by “translating” the given friendships into an undirected graph whose vertices are the 12 people and where an edge means “the two are friends.” (Friendship is assumed to be mutual.) Then the problem becomes one of coloring the vertices with 6 colors (red, green, blue, yellow, orange, purple) so that no two vertices connected by an edge have the same color—in other words, a proper 6‐coloring of the graph.
+
+An important observation in graph coloring is that any clique (a set of vertices every pair of which is adjacent) requires that each vertex in the clique gets a different color. Thus, if the graph contains any clique with more than 6 vertices then even 6 colors won’t be enough.
+
+If we list the friendships exactly as given we eventually find the following (symmetric) neighbor sets:
+
+ • Alice: {Dave, Fran, George, Heather, Irene, Jack, Kathy}
+ • Bob: {Carol, Dave, Ethan, George, Heather, Irene, Jack, Kathy}
+ • Carol: {Bob, Ethan, Fran, George, Heather, Jack, Kathy, Larry}
+ • Dave: {Alice, Bob, Ethan, George, Heather, Irene, Jack, Kathy, Larry}
+ • Ethan: {Bob, Carol, Dave, George, Heather, Irene, Kathy}
+ • Fran: {Alice, Carol, George, Heather, Irene, Jack, Kathy, Larry}
+ • George: {Alice, Bob, Carol, Dave, Ethan, Fran, Heather, Irene, Jack, Kathy, Larry}
+ • Heather: {Alice, Bob, Carol, Dave, Ethan, Fran, George, Irene, Jack, Larry}
+ • Irene: {Alice, Bob, Dave, Ethan, Fran, George, Heather, Jack, Kathy, Larry}
+ • Jack: {Alice, Bob, Carol, Dave, Fran, George, Heather, Irene, Kathy, Larry}
+ • Kathy: {Alice, Bob, Carol, Dave, Ethan, Fran, George, Irene, Jack, Larry}
+ • Larry: {Carol, Dave, Fran, George, Heather, Irene, Jack, Kathy}
+
+One can look among these vertices for a set in which every two are friends. For example, the set
+
+  {Fran, George, Heather, Irene, Jack, Kathy, Larry}
+
+forms a clique. (One may verify in the lists that every pair among these 7 people is indeed connected by an edge.) Since a clique of 7 vertices requires 7 different colors (each vertex must have a different color than every other vertex in the clique), any proper coloring of the graph must use at least 7 distinct colors.
+
+But only 6 colors are available. Therefore, it is impossible to assign the six shirt colors to the 12 people so that no two friends share the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We start by “translating” the given friendships into an undirected graph whose vertices are the 12 people and where an edge means “the two are friends.” (Friendship is assumed to be mutual.) Then the problem becomes one of coloring the vertices with 6 colors (red, green, blue, yellow, orange, purple) so that no two vertices connected by an edge have the same color—in other words, a proper 6‐coloring of the graph.
+
+An important observation in graph coloring is that any clique (a set of vertices every pair of which is adjacent) requires that each vertex in the clique gets a different color. Thus, if the graph contains any clique with more than 6 vertices then even 6 colors won’t be enough.
+
+If we list the friendships exactly as given we eventually find the following (symmetric) neighbor sets:
+
+ • #0: {#3, #5, #6, #7, #8, #9, #10}
+ • #1: {#2, #3, #4, #6, #7, #8, #9, #10}
+ • #2: {#1, #4, #5, #6, #7, #9, #10, #11}
+ • #3: {#0, #1, #4, #6, #7, #8, #9, #10, #11}
+ • #4: {#1, #2, #3, #6, #7, #8, #10}
+ • #5: {#0, #2, #6, #7, #8, #9, #10, #11}
+ • #6: {#0, #1, #2, #3, #4, #5, #7, #8, #9, #10, #11}
+ • #7: {#0, #1, #2, #3, #4, #5, #6, #8, #9, #11}
+ • #8: {#0, #1, #3, #4, #5, #6, #7, #9, #10, #11}
+ • #9: {#0, #1, #2, #3, #5, #6, #7, #8, #10, #11}
+ • #10: {#0, #1, #2, #3, #4, #5, #6, #8, #9, #11}
+ • #11: {#2, #3, #5, #6, #7, #8, #9, #10}
+
+One can look among these vertices for a set in which every two are friends. For example, the set
+
+  {#5, #6, #7, #8, #9, #10, #11}
+
+forms a clique. (One may verify in the lists that every pair among these 7 people is indeed connected by an edge.) Since a clique of 7 vertices requires 7 different colors (each vertex must have a different color than every other vertex in the clique), any proper coloring of the graph must use at least 7 distinct colors.
+
+But only 6 colors are available. Therefore, it is impossible to assign the six shirt colors to the 12 people so that no two friends share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 7,10

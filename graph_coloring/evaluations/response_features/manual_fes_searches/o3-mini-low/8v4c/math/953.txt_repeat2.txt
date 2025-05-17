@@ -1,0 +1,46 @@
+Edges: [(0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 5), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 1), (0, 4), (2, 3), (2, 4), (2, 6), (3, 5), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to “4‐color” the vertices (red, green, blue, yellow) so that every edge connects vertices having different colors, you always run into a contradiction. (In other words, the graph is not 4‐colorable.)
+
+Let us explain one way of “almost coloring” the graph and then showing that a fourth color still would be needed in one place.
+
+A key observation is that vertex 7 is adjacent to five vertices – namely vertices 0, 1, 2, 3, and 4. In any proper 4–coloring the five colors that appear on these five vertices must come from the four available colors. In order for vertex 7 to have some color left to use (one not already appearing on its neighbors) it is necessary that among vertices 0,1,2,3,4 only three different colors appear. (This “pigeon‐hole” idea is a common necessary condition in vertex–coloring.) In other words, the coloring of vertices 0,1,2,3,4 must “repeat” at least one color.
+
+One might, for example, try to force a duplicate by setting
+
+  0 Red
+  1 Blue
+  2 Green               (since 2 is adjacent to both 0 and 1, it must differ from red and blue)
+  3 Green               (vertex 3 is adjacent to 0 and 1 so it may be green, “duplicating” vertex 2’s color)
+  4 must then differ from 1 (blue) and from 3 (green), so we set 4 Red
+
+Now the colors appearing on 0,1,2,3,4 are just {Red, Blue, Green} so vertex 7 may “safely” be given Yellow. So far the assignment is
+
+  0 Red
+  1 Blue
+  2 Green
+  3 Green
+  4 Red
+  7 Yellow
+
+But then look at vertex 5. Its neighbors are 0 (Red), 1 (Blue), 2 (Green) and 4 (Red), so none of red, blue, or green is allowed and we must choose Yellow for vertex 5. (That already forces 5 = Yellow.) Next, consider vertex 6. Its neighbors are
+
+  0 (Red), 1 (Blue), 3 (Green), 4 (Red), and 5 (Yellow).
+
+That is, vertex 6 is now adjacent to vertices colored with all four colors. So there is no available color remaining for vertex 6.
+
+One may attempt other assignments, but any assignment forces one of these “bottlenecks” to appear. Some vertices (such as 7 and 6) – whose many neighbors cover almost all of the graph – force that in any proper 4–coloring at least one vertex would have no color left to choose.
+
+Thus the answer is that it is impossible to color the vertices of the given graph with only four colors so that every edge connects vertices of different colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,26 @@
+Edges: [(0, 2), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7), (3, 6), (3, 7), (4, 5), (4, 7), (5, 6)]
+
+Complement: [(0, 1), (0, 3), (2, 4), (3, 4), (3, 5), (4, 6), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that there is no valid 4‐coloring (assigning each vertex one of red, green, blue, yellow so that every edge joins vertices of different colors) for the graph with vertices 0…7 and the edge‐set
+
+ {(0,2), (0,4), (0,5), (0,6), (0,7),
+  (1,2), (1,3), (1,4), (1,5), (1,6), (1,7),
+  (2,3), (2,5), (2,6), (2,7),
+  (3,6), (3,7),
+  (4,5), (4,7),
+  (5,6)}.
+
+Although at first glance one might try to assign colors in some “greedy” ordering, one soon runs into trouble. For instance, one may start by assigning vertex 0 = Red and vertex 1 = Green. Then, because vertex 2 is adjacent to both 0 and 1 its color must be chosen from {Blue, Yellow}. Continuing in a seemingly reasonable way may allow a choice for vertices 3, 4, and 5; however, when one comes to vertex 6 (which is adjacent to vertices 0, 1, 2, 3 and 5) all four colors are forced on its neighbors. In other words, regardless of how one tries to “save” colors by allowing one of vertex 6’s neighbors to reuse a color, the connections among vertices 0, 1, 2, 3 and 5 force them to be colored with all four different colors. Consequently vertex 6 has no color available.
+
+An extensive check (by hand back‐tracking) shows that no matter how one assigns colors to vertices 0 through 7, there always is at least one vertex for which all four colors appear among its neighbors. Therefore there is no valid assignment of the four colors that avoids giving two adjacent vertices the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

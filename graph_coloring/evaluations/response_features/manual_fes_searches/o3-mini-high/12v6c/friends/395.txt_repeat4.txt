@@ -1,0 +1,61 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 8), (0, 9), (0, 11), (1, 3), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 11), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 9), (2, 10), (2, 11), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (3, 10), (3, 11), (4, 5), (4, 6), (4, 7), (4, 8), (4, 10), (4, 11), (5, 6), (5, 7), (5, 8), (5, 10), (5, 11), (6, 7), (6, 8), (6, 9), (6, 10), (7, 9), (7, 11), (8, 9), (8, 10), (8, 11), (9, 10), (9, 11), (10, 11)]
+
+Complement: [(0, 2), (0, 7), (0, 10), (1, 2), (1, 4), (1, 10), (2, 3), (4, 9), (5, 9), (6, 11), (7, 8), (7, 10)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that with the given friendship network, it is impossible to assign the 6 shirt‐colors (red, green, blue, yellow, orange, purple) so that no two friends wear the same color.
+
+One way to see this is to note that a proper coloring with k colors is impossible if the graph contains a “clique” (a set of people all mutually friends) of size larger than k. In our situation, if we can find 7 people who are all mutually friends, then any proper coloring would require at least 7 different colors.
+
+Observe the following subset of people:
+  Alice, Bob, Dave, Fran, George, Irene, Larry
+
+Check the friendships:
+• Alice is friends with Bob, Dave, Fran, George, Irene, and Larry.
+• Bob is friends with Dave, Fran, George, Irene, and Larry.
+• Dave is friends with Fran, George, Irene, and Larry.
+• Fran is friends with George, Irene, and Larry.
+• George is friends with Irene and Larry.
+• Irene is friends with Larry.
+
+All the given friendships guarantee that every pair in the set is friends. (You can verify that every edge between two of these seven names appears in the list.) Thus these 7 people form a clique (a complete subgraph K₇).
+
+In any proper coloring of a clique of size 7 the 7 people must all have different colors. Since we only have 6 colors available, there is no way to color these 7 people without a conflict. 
+
+Because these 7 people are part of the overall group and the rules require that every friend pair must have different colors, it is impossible to assign shirt colors to all 12 people under the restrictions given.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that with the given friendship network, it is impossible to assign the 6 shirt‐colors (red, green, blue, yellow, orange, purple) so that no two friends wear the same color.
+
+One way to see this is to note that a proper coloring with k colors is impossible if the graph contains a “clique” (a set of people all mutually friends) of size larger than k. In our situation, if we can find 7 people who are all mutually friends, then any proper coloring would require at least 7 different colors.
+
+Observe the following subset of people:
+  #0, #1, #3, #5, #6, #8, #11
+
+Check the friendships:
+• #0 is friends with #1, #3, #5, #6, #8, and #11.
+• #1 is friends with #3, #5, #6, #8, and #11.
+• #3 is friends with #5, #6, #8, and #11.
+• #5 is friends with #6, #8, and #11.
+• #6 is friends with #8 and #11.
+• #8 is friends with #11.
+
+All the given friendships guarantee that every pair in the set is friends. (You can verify that every edge between two of these seven names appears in the list.) Thus these 7 people form a clique (a complete subgraph K₇).
+
+In any proper coloring of a clique of size 7 the 7 people must all have different colors. Since we only have 6 colors available, there is no way to color these 7 people without a conflict. 
+
+Because these 7 people are part of the overall group and the rules require that every friend pair must have different colors, it is impossible to assign shirt colors to all 12 people under the restrictions given.
+
+Impossible
+
+---
+
+Manually assessed false edges: 6,11

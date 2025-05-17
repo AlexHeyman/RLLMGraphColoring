@@ -1,0 +1,57 @@
+Edges: [(0, 1), (0, 4), (0, 5), (0, 6), (1, 2), (1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 3), (0, 7), (1, 4), (2, 5), (2, 7), (4, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that it is not possible to “color” the people with four shirt‐colors so that no two friends have the same color.
+
+Let each person be a vertex and put an edge between two people if they are friends. (For instance, there is an edge from Alice to Bob, from Alice to Ethan, etc.) Then the problem becomes: Is the graph defined by these eight vertices and the given edges 4‑colorable?
+
+One way to see a difficulty is to “focus” on the vertex for George. (George is friends with Alice, Bob, Carol, Dave, Ethan, and Fran.) In any valid coloring of the graph, George must get a color that is different from all of his six neighbors. (Heather is not a neighbor of George so she is not relevant here.) In other words, considering the six vertices {Alice, Bob, Carol, Dave, Ethan, Fran} the colors they receive must use at most three distinct colors (so that one “spare” color remains available to assign to George).
+
+Now, one may try to 3‑color the induced subgraph on {Alice, Bob, Carol, Dave, Ethan, Fran}. In that induced subgraph the edges are as follows (only showing friendships among these six):
+
+  • Alice is friends with Bob, Ethan, and Fran.
+  • Bob is friends with Carol, Dave, and Fran.
+  • Carol is friends with Bob, Dave, and Ethan.
+  • Dave is friends with Bob, Carol, Ethan, and Fran.
+  • Ethan is friends with Alice, Carol, and Dave.
+  • Fran is friends with Alice, Bob, Dave, and Ethan.
+
+A short investigation (or applying a 3‑coloring algorithm, or checking by contradiction) reveals that it is not possible to properly assign only three colors to these six vertices. (In any proper coloring of this induced graph the mutual constraints force the use of four different colors on these six vertices.) Consequently, no matter how you assign the four colors to all eight people, George’s friends end up “using” all four colors, leaving no possible color for George.
+
+Because of this unavoidable conflict, there is no way to assign the four colors so that no two friends wear the same color shirt.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that it is not possible to “color” the people with four shirt‐colors so that no two friends have the same color.
+
+Let each person be a vertex and put an edge between two people if they are friends. (For instance, there is an edge from #0 to #1, from #0 to #4, etc.) Then the problem becomes: Is the graph defined by these eight vertices and the given edges 4‑colorable?
+
+One way to see a difficulty is to “focus” on the vertex for #6. (#6 is friends with #0, #1, #2, #3, #4, and #5.) In any valid coloring of the graph, #6 must get a color that is different from all of his six neighbors. (#7 is not a neighbor of #6 so she is not relevant here.) In other words, considering the six vertices {#0, #1, #2, #3, #4, #5} the colors they receive must use at most three distinct colors (so that one “spare” color remains available to assign to #6).
+
+Now, one may try to 3‑color the induced subgraph on {#0, #1, #2, #3, #4, #5}. In that induced subgraph the edges are as follows (only showing friendships among these six):
+
+  • #0 is friends with #1, #4, and #5.
+  • #1 is friends with #2, #3, and #5.
+  • #2 is friends with #1, #3, and #4.
+  • #3 is friends with #1, #2, #4, and #5.
+  • #4 is friends with #0, #2, and #3.
+  • #5 is friends with #0, #1, #3, and #4.
+
+A short investigation (or applying a 3‑coloring algorithm, or checking by contradiction) reveals that it is not possible to properly assign only three colors to these six vertices. (In any proper coloring of this induced graph the mutual constraints force the use of four different colors on these six vertices.) Consequently, no matter how you assign the four colors to all eight people, #6’s friends end up “using” all four colors, leaving no possible color for #6.
+
+Because of this unavoidable conflict, there is no way to assign the four colors so that no two friends wear the same color shirt.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

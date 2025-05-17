@@ -1,0 +1,19 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 5), (1, 6), (2, 3), (2, 4), (2, 5), (3, 4), (3, 5), (3, 6), (4, 5), (4, 7), (5, 6), (6, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 3), (1, 4), (1, 7), (2, 6), (2, 7), (3, 7), (4, 6), (5, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+Consider vertices 0, 2, 3, and 4. Note that the edges (0,3), (0,4), (2,3), (2,4), and (3,4) form a complete graph (clique) on these four vertices. Thus, they must all have different colors.
+
+Now observe vertex 5. Its neighbors include 0, 2, 3, and 4 (among others). This means vertex 5 is adjacent to all four vertices of the clique. In any proper coloring, vertex 5 would then be forced to avoid all four colors used on 0, 2, 3, and 4. With only four colors available, there is no remaining color for vertex 5.
+
+Because vertex 5 is adjacent to a clique that already uses all four colors, there is no way to color the graph with just four colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,21 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 4), (1, 3), (2, 5), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that with only four colors it is impossible to assign a color to every vertex so that every edge connects vertices of different colors.
+
+One way to see the difficulty is to look at the subgraph induced by the vertices 0, 1, 2, 3, 4, 6, and 7. (Vertex 5 is “less‐constrained” than the others.) When you list all the edges among these vertices that are given, you find that nearly every pair is adjacent. In fact, the only missing edges among these seven vertices are (0,4) and (1,3). (That is, aside from these two omissions, every pair of distinct vertices among {0,1,2,3,4,6,7} is an edge.) 
+
+Now, if the graph were complete on seven vertices, it would require 7 colors. Even if you remove one or two edges, the chromatic number cannot drop dramatically. In fact, one can show that the largest clique (i.e. set of mutually adjacent vertices) in the graph has size 5 – for example, consider {1,2,4,6,7}. Since every clique requires its vertices to have distinct colors, we would need at least 5 colors.
+
+Thus there is no way to properly color the graph using only the four available colors (Red, Green, Blue, and Yellow).
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

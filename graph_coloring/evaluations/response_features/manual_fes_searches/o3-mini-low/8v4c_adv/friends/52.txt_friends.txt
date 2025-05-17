@@ -1,0 +1,45 @@
+Edges: [(0, 1), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 3), (0, 4), (1, 4), (3, 6), (3, 7), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that it is impossible for the eight people to choose shirts from only Red, Green, Blue, and Yellow so that no pair of friends wears the same color.
+
+Let us explain briefly. Suppose we denote the colors by R, G, B, and Y. In the given network the friendships create the following “conflict” graph (vertices are people, edges connect friends). One may check from the list that George is friends with Alice, Bob, Carol, Fran, Ethan, and Heather. Thus, whichever colors are assigned to those six people, they must all be different from George’s color. (In a proper coloring it is allowed that two or more of those six share the same color, but the set of the distinct colors used on them is “forbidden” for George.)
+
+A closer look at the friendship relations among George’s six friends shows that Alice, Bob, Fran, and Heather all are mutually “tightly connected” – indeed, these four form a complete subgraph (K4). To see this, note that the given friendships include:
+ • Alice is friends with Bob, Fran, and Heather.
+ • Bob is friends with Alice, Fran, and Heather.
+ • Fran is friends with Alice, Bob, and Heather.
+ • Heather is friends with Alice, Bob, and Fran.
+A complete graph on 4 vertices (a K4) necessarily requires 4 distinct colors in any proper coloring. Thus even if we try to “save” a color by giving the remaining two neighbors (Carol and Ethan) a color already used by one of the K4 vertices, the set of distinct colors among the neighbors of George will become exactly {R, G, B, Y}. Consequently, no matter what assignment is tried, George’s six friends end up using all 4 colors. This leaves George with no available color that is different from the colors of all of his friends.
+
+Because of this unavoidable “color overload” in the neighborhood of George, it is impossible to assign the four shirt colors so that no two friends share the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that it is impossible for the eight people to choose shirts from only Red, Green, Blue, and Yellow so that no pair of friends wears the same color.
+
+Let us explain briefly. Suppose we denote the colors by R, G, B, and Y. In the given network the friendships create the following “conflict” graph (vertices are people, edges connect friends). One may check from the list that #6 is friends with #0, #1, #2, #5, #4, and #7. Thus, whichever colors are assigned to those six people, they must all be different from #6’s color. (In a proper coloring it is allowed that two or more of those six share the same color, but the set of the distinct colors used on them is “forbidden” for #6.)
+
+A closer look at the friendship relations among #6’s six friends shows that #0, #1, #5, and #7 all are mutually “tightly connected” – indeed, these four form a complete subgraph (K4). To see this, note that the given friendships include:
+ • #0 is friends with #1, #5, and #7.
+ • #1 is friends with #0, #5, and #7.
+ • #5 is friends with #0, #1, and #7.
+ • #7 is friends with #0, #1, and #5.
+A complete graph on 4 vertices (a K4) necessarily requires 4 distinct colors in any proper coloring. Thus even if we try to “save” a color by giving the remaining two neighbors (#2 and #4) a color already used by one of the K4 vertices, the set of distinct colors among the neighbors of #6 will become exactly {R, G, B, Y}. Consequently, no matter what assignment is tried, #6’s six friends end up using all 4 colors. This leaves #6 with no available color that is different from the colors of all of his friends.
+
+Because of this unavoidable “color overload” in the neighborhood of #6, it is impossible to assign the four shirt colors so that no two friends share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

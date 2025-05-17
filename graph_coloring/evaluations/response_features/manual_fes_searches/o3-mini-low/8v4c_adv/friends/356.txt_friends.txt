@@ -1,0 +1,67 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 4), (0, 5), (1, 3), (2, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that under the given friendship (“adjacency”) relationships, the “conflict‐graph” contains a complete subgraph on 5 vertices. Since there are only 4 colors available but a complete graph on 5 vertices (a K₅) requires 5 different colors, it is impossible to assign each person one of the colors so that no two friends wear the same color shirt.
+
+To explain a bit further:
+
+1. Label the eight people as A (Alice), B (Bob), C (Carol), D (Dave), E (Ethan), F (Fran), G (George), and H (Heather).
+
+2. The friendship relationships (which we treat as edges of a graph) are:
+  • A is friends with B, C, D, G, H.
+  • B is friends with A, C, E, F, G, H.
+  • C is friends with A, B, D, F, G, H.
+  • D is friends with A, C, E, F, G, H.
+  • E is friends with B, D, F, G, H.
+  • F is friends with B, C, D, E, G, H.
+  • G is friends with A, B, C, D, E, F, H.
+  • H is friends with A, B, C, D, E, F, G.
+
+3. Notice that most pairs of vertices are adjacent; however, there are a few pairs that are not friends (for example, A is not friends with E or F; B and D are not friends; C and E are not friends; F and A are not friends). Even with these missing edges, one may verify that the vertices B, C, F, G, and H form a clique. In other words, every two among B, C, F, G, and H are friends:
+  – G and H are friends with everyone.
+  – B, C, and F are all mutually friends (as given by “B is friends with Carol and Fran”, “Carol is friends with Fran”, etc).
+
+4. A clique of 5 people means that any valid coloring must assign 5 different colors to these vertices. Since only 4 colors (red, green, blue, yellow) are available, no assignment is possible that avoids a conflict among friends.
+
+Thus, the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that under the given friendship (“adjacency”) relationships, the “conflict‐graph” contains a complete subgraph on 5 vertices. Since there are only 4 colors available but a complete graph on 5 vertices (a K₅) requires 5 different colors, it is impossible to assign each person one of the colors so that no two friends wear the same color shirt.
+
+To explain a bit further:
+
+1. Label the eight people as A (#0), B (#1), C (#2), D (#3), E (#4), F (#5), G (#6), and H (#7).
+
+2. The friendship relationships (which we treat as edges of a graph) are:
+  • A is friends with B, C, D, G, H.
+  • B is friends with A, C, E, F, G, H.
+  • C is friends with A, B, D, F, G, H.
+  • D is friends with A, C, E, F, G, H.
+  • E is friends with B, D, F, G, H.
+  • F is friends with B, C, D, E, G, H.
+  • G is friends with A, B, C, D, E, F, H.
+  • H is friends with A, B, C, D, E, F, G.
+
+3. Notice that most pairs of vertices are adjacent; however, there are a few pairs that are not friends (for example, A is not friends with E or F; B and D are not friends; C and E are not friends; F and A are not friends). Even with these missing edges, one may verify that the vertices B, C, F, G, and H form a clique. In other words, every two among B, C, F, G, and H are friends:
+  – G and H are friends with everyone.
+  – B, C, and F are all mutually friends (as given by “B is friends with #2 and #5”, “#2 is friends with #5”, etc).
+
+4. A clique of 5 people means that any valid coloring must assign 5 different colors to these vertices. Since only 4 colors (red, green, blue, yellow) are available, no assignment is possible that avoids a conflict among friends.
+
+Thus, the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

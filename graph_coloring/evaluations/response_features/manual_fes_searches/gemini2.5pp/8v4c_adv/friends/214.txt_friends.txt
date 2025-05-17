@@ -1,0 +1,43 @@
+Edges: [(0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (0, 4), (2, 3), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+Let's analyze the friendships to see if there are any groups where everyone is friends with everyone else within that group (a clique).
+
+Consider the following group of 5 people: Bob, Dave, Fran, George, and Heather.
+Let's check the friendships within this group:
+*   Bob is friends with Dave, Fran, George, and Heather. (All 4 others)
+*   Dave is friends with Bob, Fran, George, and Heather. (All 4 others)
+*   Fran is friends with Bob, Dave, George, and Heather. (All 4 others)
+*   George is friends with Bob, Dave, Fran, and Heather. (All 4 others)
+*   Heather is friends with Bob, Dave, Fran, and George. (All 4 others)
+
+Since Bob, Dave, Fran, George, and Heather are all mutually friends, each of these 5 people must wear a different colored shirt. However, there are only 4 available colors (Red, Green, Blue, Yellow). It is therefore impossible to assign shirts such that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+Let's analyze the friendships to see if there are any groups where everyone is friends with everyone else within that group (a clique).
+
+Consider the following group of 5 people: #1, #3, #5, #6, and #7.
+Let's check the friendships within this group:
+*   #1 is friends with #3, #5, #6, and #7. (All 4 others)
+*   #3 is friends with #1, #5, #6, and #7. (All 4 others)
+*   #5 is friends with #1, #3, #6, and #7. (All 4 others)
+*   #6 is friends with #1, #3, #5, and #7. (All 4 others)
+*   #7 is friends with #1, #3, #5, and #6. (All 4 others)
+
+Since #1, #3, #5, #6, and #7 are all mutually friends, each of these 5 people must wear a different colored shirt. However, there are only 4 available colors (Red, Green, Blue, Yellow). It is therefore impossible to assign shirts such that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 6,7

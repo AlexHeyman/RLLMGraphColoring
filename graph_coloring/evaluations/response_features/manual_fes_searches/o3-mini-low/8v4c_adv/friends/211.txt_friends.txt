@@ -1,0 +1,45 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (0, 5), (1, 2), (2, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We start by noting that each person “forbids” from using certain colors because they are friends with someone already wearing that color. In our situation the eight people must choose from four colors (red, green, blue, yellow) so that no two friends share the same color.
+
+One way to analyze the possibility is to view the situation as a graph‐coloring problem. The people are vertices and friendships are edges. (For example, “Alice is friends with Bob” gives an edge between the vertices representing Alice and Bob.) Then the question is “Does the graph admit a proper 4‐coloring?”
+
+On inspection the friendship list tells us the following key facts:
+ • Alice, Bob, Carol, Dave, Ethan, and Fran are all friends with at least one of the “super‐connected” vertices George and Heather. In fact, both George and Heather are friends with everyone except each other (so they are adjacent, too).
+ • Because George and Heather are friends with all of the other six people, none of the six may wear the same color as George or Heather.
+ • Thus the six “other” people must choose their colors from the remaining two colors (from the four available colors). In our attempted plan, once we assign (say) George = Red and Heather = Green, then the others must wear only blue or yellow.
+ • However, looking at the friendships among the remaining six (Alice, Bob, Carol, Dave, Ethan, Fran) we find a triangle – for instance, Alice, Bob, and Ethan (or Alice, Bob, Carol, or another triangle that forms among them – notice Alice is friends with Bob and Carol, and Bob and Carol are friends via connections to the others in the list). (In fact, one explicit triangle is among Alice, Bob, and E­than since Alice is friends with Ethan and Bob is friends with Ethan.) In a triangle every pair of vertices is adjacent, so a 2‐coloring (using just blue and yellow) is impossible.
+ • Thus, no matter how one assigns the colors to George and Heather, the six other people are forced into a subgraph that would have to be 2‐colored to avoid conflict with George and Heather’s colors—but that subgraph is not bipartite (and in particular, it contains triangles).
+
+Because of this inherent conflict, there is no way to assign red, green, blue, or yellow to all 8 people so that friends do not share the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We start by noting that each person “forbids” from using certain colors because they are friends with someone already wearing that color. In our situation the eight people must choose from four colors (red, green, blue, yellow) so that no two friends share the same color.
+
+One way to analyze the possibility is to view the situation as a graph‐coloring problem. The people are vertices and friendships are edges. (For example, “#0 is friends with #1” gives an edge between the vertices representing #0 and #1.) Then the question is “Does the graph admit a proper 4‐coloring?”
+
+On inspection the friendship list tells us the following key facts:
+ • #0, #1, #2, #3, #4, and #5 are all friends with at least one of the “super‐connected” vertices #6 and #7. In fact, both #6 and #7 are friends with everyone except each other (so they are adjacent, too).
+ • Because #6 and #7 are friends with all of the other six people, none of the six may wear the same color as #6 or #7.
+ • Thus the six “other” people must choose their colors from the remaining two colors (from the four available colors). In our attempted plan, once we assign (say) #6 = Red and #7 = Green, then the others must wear only blue or yellow.
+ • However, looking at the friendships among the remaining six (#0, #1, #2, #3, #4, #5) we find a triangle – for instance, #0, #1, and #4 (or #0, #1, #2, or another triangle that forms among them – notice #0 is friends with #1 and #2, and #1 and #2 are friends via connections to the others in the list). (In fact, one explicit triangle is among #0, #1, and E­than since #0 is friends with #4 and #1 is friends with #4.) In a triangle every pair of vertices is adjacent, so a 2‐coloring (using just blue and yellow) is impossible.
+ • Thus, no matter how one assigns the colors to #6 and #7, the six other people are forced into a subgraph that would have to be 2‐colored to avoid conflict with #6 and #7’s colors—but that subgraph is not bipartite (and in particular, it contains triangles).
+
+Because of this inherent conflict, there is no way to assign red, green, blue, or yellow to all 8 people so that friends do not share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

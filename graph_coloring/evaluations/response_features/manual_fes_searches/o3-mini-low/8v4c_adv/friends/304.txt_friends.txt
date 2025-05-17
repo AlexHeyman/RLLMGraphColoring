@@ -1,0 +1,51 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (5, 6), (5, 7)]
+
+Complement: [(1, 2), (3, 5), (4, 6), (4, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+One way to determine the answer is to try to assign colors systematically. For example, label the people A (Alice), B (Bob), C (Carol), D (Dave), E (Ethan), F (Fran), G (George), and H (Heather).
+
+From the friendship list we have:
+• A is friends with everyone else (B, C, D, E, F, G, H).
+• B is friends with A, D, E, F, G, H.
+• C is friends with A, D, E, F, G, H.
+• D is friends with A, B, C, E, G, H.
+• E is friends with A, B, C, D, F (since Dave is friends with Ethan and Ethan is friends with Fran).
+• F is friends with A, B, C, E, G, H (in addition to the link noted with E, and also with George and Heather).
+• G is friends with A, B, C, D, F.
+• H is friends with A, B, C, D, F.
+
+Notice that A is connected to everyone. Suppose we try to assign A a color, say Red. Then nobody else can wear Red. Continuing, if we try to assign different colors to B, C, and D—say Green, Blue, and Yellow respectively—we soon run into a problem with E. Since E is friends with A, B, C, and D, it cannot use Red, Green, Blue, or Yellow. 
+
+There is no fourth color available for E. Therefore, with only four colors available, it is impossible to assign a color to each person so that no two friends wear the same shirt color.
+
+Impossible
+
+---
+Numericized:
+---
+
+One way to determine the answer is to try to assign colors systematically. For example, label the people A (#0), B (#1), C (#2), D (#3), E (#4), F (#5), G (#6), and H (#7).
+
+From the friendship list we have:
+• A is friends with everyone else (B, C, D, E, F, G, H).
+• B is friends with A, D, E, F, G, H.
+• C is friends with A, D, E, F, G, H.
+• D is friends with A, B, C, E, G, H.
+• E is friends with A, B, C, D, F (since #3 is friends with #4 and #4 is friends with #5).
+• F is friends with A, B, C, E, G, H (in addition to the link noted with E, and also with #6 and #7).
+• G is friends with A, B, C, D, F.
+• H is friends with A, B, C, D, F.
+
+Notice that A is connected to everyone. Suppose we try to assign A a color, say Red. Then nobody else can wear Red. Continuing, if we try to assign different colors to B, C, and D—say Green, Blue, and Yellow respectively—we soon run into a problem with E. Since E is friends with A, B, C, and D, it cannot use Red, Green, Blue, or Yellow. 
+
+There is no fourth color available for E. Therefore, with only four colors available, it is impossible to assign a color to each person so that no two friends wear the same shirt color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

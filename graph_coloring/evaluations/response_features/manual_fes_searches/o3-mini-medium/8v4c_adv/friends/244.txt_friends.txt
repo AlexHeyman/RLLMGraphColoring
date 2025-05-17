@@ -1,0 +1,61 @@
+Edges: [(0, 1), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 4), (1, 3), (1, 4), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no acceptable shirt‐assignment is possible under the given friendship constraints. In our problem the shirt “colors” play the role of colors in a graph‐coloring problem. Picture a graph whose vertices represent the 8 people and whose edges connect every pair of friends. The rule that no pair of friends may wear the same color then says that adjacent vertices must have different colors.
+
+The four available colors are Red, Green, Blue, and Yellow. (You may name them however you like; we stick with these.) If we write down the friendships as edges, you get the following list (each edge appears only once):
+
+• Alice is friends with Bob, Dave, Fran, George, Heather.
+• Bob is friends with Alice, Carol, Fran, George, Heather.
+• Carol is friends with Bob, Dave, Ethan, Fran, George, Heather.
+• Dave is friends with Alice, Carol, Ethan, Fran, George, Heather.
+• Ethan is friends with Carol, Dave, George, Heather.
+• Fran is friends with Alice, Bob, Carol, Dave, George, Heather.
+• George is friends with everyone else (Alice, Bob, Carol, Dave, Ethan, Fran, Heather).
+• Heather is friends with everyone else (Alice, Bob, Carol, Dave, Ethan, Fran, George).
+
+Notice that George and Heather have the highest “degree” (each is friends with 7 others) so for any proper coloring they must be assigned different colors. But here’s the key observation: every one of the remaining 6 people (Alice, Bob, Carol, Dave, Ethan, Fran) is friends with both George and Heather. That means that whichever colors are assigned to George and Heather, those two colors are forbidden for the other 6 people. Since there are only 4 colors total, each of the other 6 people would then have only 2 choices.
+
+However, if you look at the friendships among those 6 people you will find many edges. (For example, Bob, Carol, and Fran form a triangle since Bob is friends with Carol and Fran, and Carol is friends with Fran.) It is a well‐known fact in graph theory that any graph containing a triangle (or any odd cycle) is not 2‐colorable—that is, it cannot be properly colored with just 2 colors.
+
+Thus, once George and Heather take up two different colors, the other 6 people would be forced to “color” a subgraph that is not bipartite (not 2‐colorable). In other words, there is no way to assign shirt colors to the remaining people from only the two available colors while satisfying the condition that no two friends wear the same color.
+
+Because of this forced shortage of colors for the 6 people, there is no complete assignment of the 4 colors to all 8 people that avoids a conflict among friends.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no acceptable shirt‐assignment is possible under the given friendship constraints. In our problem the shirt “colors” play the role of colors in a graph‐coloring problem. Picture a graph whose vertices represent the 8 people and whose edges connect every pair of friends. The rule that no pair of friends may wear the same color then says that adjacent vertices must have different colors.
+
+The four available colors are Red, Green, Blue, and Yellow. (You may name them however you like; we stick with these.) If we write down the friendships as edges, you get the following list (each edge appears only once):
+
+• #0 is friends with #1, #3, #5, #6, #7.
+• #1 is friends with #0, #2, #5, #6, #7.
+• #2 is friends with #1, #3, #4, #5, #6, #7.
+• #3 is friends with #0, #2, #4, #5, #6, #7.
+• #4 is friends with #2, #3, #6, #7.
+• #5 is friends with #0, #1, #2, #3, #6, #7.
+• #6 is friends with everyone else (#0, #1, #2, #3, #4, #5, #7).
+• #7 is friends with everyone else (#0, #1, #2, #3, #4, #5, #6).
+
+Notice that #6 and #7 have the highest “degree” (each is friends with 7 others) so for any proper coloring they must be assigned different colors. But here’s the key observation: every one of the remaining 6 people (#0, #1, #2, #3, #4, #5) is friends with both #6 and #7. That means that whichever colors are assigned to #6 and #7, those two colors are forbidden for the other 6 people. Since there are only 4 colors total, each of the other 6 people would then have only 2 choices.
+
+However, if you look at the friendships among those 6 people you will find many edges. (For example, #1, #2, and #5 form a triangle since #1 is friends with #2 and #5, and #2 is friends with #5.) It is a well‐known fact in graph theory that any graph containing a triangle (or any odd cycle) is not 2‐colorable—that is, it cannot be properly colored with just 2 colors.
+
+Thus, once #6 and #7 take up two different colors, the other 6 people would be forced to “color” a subgraph that is not bipartite (not 2‐colorable). In other words, there is no way to assign shirt colors to the remaining people from only the two available colors while satisfying the condition that no two friends wear the same color.
+
+Because of this forced shortage of colors for the 6 people, there is no complete assignment of the 4 colors to all 8 people that avoids a conflict among friends.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

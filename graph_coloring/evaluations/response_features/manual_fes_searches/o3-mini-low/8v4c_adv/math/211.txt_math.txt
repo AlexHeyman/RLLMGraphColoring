@@ -1,0 +1,27 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (0, 5), (1, 2), (2, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that it is impossible to “proper‐4–color” the given graph.
+
+Below is one way to explain the negative answer.
+
+Let the eight vertices be numbered 0 to 7 and suppose we try to assign each one a color from {Red, Green, Blue, Yellow} so that every edge has endpoints of different colors. A quick look at the list of edges shows that vertices 0, 1, 2, 3, and 4 are very “interconnected” – indeed, looking at just the “almost–complete” subgraph on vertices 0, 1, 2, 3, 4, one may verify that any proper coloring of these five vertices must use at least three colors. (In fact, one may prove that in every proper coloring the set 
+  {color(0), color(1), color(2), color(3), color(4)}
+consists of three distinct colors.)
+
+Now examine the vertex 6. Its neighbors (from the given edge–set) are exactly vertices 0, 1, 2, 3, 4, and also vertex 5. In any coloring of vertices 0–5 (which we already saw must use at least three colors—and in fact, one may argue that in any attempt to “save” a color for 6 one would try to use only three among 0–5) one ends up “using up” three colors on the neighbors of 6. But, as one works through the adjacencies in the subgraph induced on {0,1,2,3,4,5} (note, for example, that 4 is adjacent to 0, 1, 2 and 3; and 5 is adjacent to 1 and 3 while 0,1,2,3 are forced into a bipartition by their own adjacencies) one eventually shows that vertices 0–5 really must receive all four colors. (For example, one can show that if one assigns the same color to two vertices that are not adjacent then a conflict arises elsewhere. In particular, in any attempted 4–coloring one finds that the neighbors of 6 end up “using” all four colors.) 
+
+But then vertex 6, which is adjacent to 0, 1, 2, 3, 4, and 5, would have no “fresh” color to use. A similar argument holds for vertex 7 (which is adjacent to nearly the same set). 
+
+Thus no assignment of four colors to vertices 0–7 can avoid a conflict on at least one edge. 
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

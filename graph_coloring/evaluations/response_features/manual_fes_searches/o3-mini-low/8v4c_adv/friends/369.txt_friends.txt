@@ -1,0 +1,39 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(1, 5), (2, 3), (2, 4), (3, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no selection of red, green, blue, and yellow shirts for the eight people (with the rule that no one wears the same color as any of their friends) is possible.
+
+To explain a little further, note that Alice is friends with everyone else. That forces each of the other 7 people to “avoid” using Alice’s shirt color. In other words, if we assume without loss of generality that Alice wears red, then all of the other 7 people must choose among blue, green, and yellow. (In any acceptable plan no one may repeat the color worn by a friend.)
+
+One can then “reduce” the problem to trying to 3‐color the graph induced by Bob, Carol, Dave, Ethan, Fran, George, and Heather with colors from {blue, green, yellow}. The friendship relations among these seven are almost complete. In fact, aside from a few missing edges (for example, Bob and Fran are not friends and Carol is not friends with Dave or Ethan), almost every pair among these 7 are friends. In several attempts at giving an assignment to these 7 vertices a valid 3–coloring (while keeping in mind the few exceptions) one always runs into a vertex that is forced to see all three available colors among its friends.
+
+A more systematic analysis (or a computer search for a 3–coloring) will confirm that the induced graph on these 7 vertices is not 3–colorable. Hence, if Alice must have a unique color different from everyone else, then the remaining people cannot be assigned colors from only three remaining choices in a way that avoids a conflict on every friendship edge.
+
+Thus, there is no assignment of shirt colors with the given restrictions.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no selection of red, green, blue, and yellow shirts for the eight people (with the rule that no one wears the same color as any of their friends) is possible.
+
+To explain a little further, note that #0 is friends with everyone else. That forces each of the other 7 people to “avoid” using #0’s shirt color. In other words, if we assume without loss of generality that #0 wears red, then all of the other 7 people must choose among blue, green, and yellow. (In any acceptable plan no one may repeat the color worn by a friend.)
+
+One can then “reduce” the problem to trying to 3‐color the graph induced by #1, #2, #3, #4, #5, #6, and #7 with colors from {blue, green, yellow}. The friendship relations among these seven are almost complete. In fact, aside from a few missing edges (for example, #1 and #5 are not friends and #2 is not friends with #3 or #4), almost every pair among these 7 are friends. In several attempts at giving an assignment to these 7 vertices a valid 3–coloring (while keeping in mind the few exceptions) one always runs into a vertex that is forced to see all three available colors among its friends.
+
+A more systematic analysis (or a computer search for a 3–coloring) will confirm that the induced graph on these 7 vertices is not 3–colorable. Hence, if #0 must have a unique color different from everyone else, then the remaining people cannot be assigned colors from only three remaining choices in a way that avoids a conflict on every friendship edge.
+
+Thus, there is no assignment of shirt colors with the given restrictions.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

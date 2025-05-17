@@ -1,0 +1,69 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (0, 5), (1, 2), (4, 6), (4, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how the shirts (colors) are assigned, at least five mutually “friend‐related” people will force the use of five different colors. But since only four colors (red, green, blue, yellow) are available, a proper assignment (with no two friends wearing the same color) is impossible.
+
+Let’s explain one way to see this.
+
+Step 1. List the eight people as vertices and draw an edge between any two friends. (Friendship is symmetric.) The friendships given are:
+• Alice is friends with Bob, Carol, Ethan, George, and Heather.
+• Bob is friends with Dave, Ethan, Fran, George, and Heather.
+• Carol is friends with Dave, Ethan, Fran, George, and Heather.
+• Dave is friends with Ethan, Fran, George, and Heather.
+• Ethan is friends with Fran.
+• Fran is friends with George and Heather.
+
+Step 2. Note that when you “symmetrize” the list (using the fact that if X is friend with Y then Y is friend with X), many of the people appear with high degrees. In fact, if we focus on the set of five people {Bob, Dave, Fran, George, Heather}, by checking the given list you will verify that each pair of these five are friends. For example:
+  – Bob is friends with Dave, Fran, George, and Heather.
+  – Dave is friends with Bob, Fran, George, and Heather.
+  – Fran is friends with Bob, Dave, George, and Heather.
+  – George and Heather are also friends with all in that set.
+Thus the five people {Bob, Dave, Fran, George, Heather} form a complete graph (a 5‐clique).
+
+Step 3. In any proper coloring of a graph the vertices of a clique must use all different colors. Therefore, any 5‐clique requires 5 distinct colors.
+
+Step 4. Since only 4 colors are available (red, green, blue, yellow), it is impossible to assign a shirt color to every person so that no two friends share the same color.
+
+Thus, the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how the shirts (colors) are assigned, at least five mutually “friend‐related” people will force the use of five different colors. But since only four colors (red, green, blue, yellow) are available, a proper assignment (with no two friends wearing the same color) is impossible.
+
+Let’s explain one way to see this.
+
+Step 1. List the eight people as vertices and draw an edge between any two friends. (Friendship is symmetric.) The friendships given are:
+• #0 is friends with #1, #2, #4, #6, and #7.
+• #1 is friends with #3, #4, #5, #6, and #7.
+• #2 is friends with #3, #4, #5, #6, and #7.
+• #3 is friends with #4, #5, #6, and #7.
+• #4 is friends with #5.
+• #5 is friends with #6 and #7.
+
+Step 2. Note that when you “symmetrize” the list (using the fact that if X is friend with Y then Y is friend with X), many of the people appear with high degrees. In fact, if we focus on the set of five people {#1, #3, #5, #6, #7}, by checking the given list you will verify that each pair of these five are friends. For example:
+  – #1 is friends with #3, #5, #6, and #7.
+  – #3 is friends with #1, #5, #6, and #7.
+  – #5 is friends with #1, #3, #6, and #7.
+  – #6 and #7 are also friends with all in that set.
+Thus the five people {#1, #3, #5, #6, #7} form a complete graph (a 5‐clique).
+
+Step 3. In any proper coloring of a graph the vertices of a clique must use all different colors. Therefore, any 5‐clique requires 5 distinct colors.
+
+Step 4. Since only 4 colors are available (red, green, blue, yellow), it is impossible to assign a shirt color to every person so that no two friends share the same color.
+
+Thus, the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

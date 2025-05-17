@@ -1,0 +1,61 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(1, 2), (1, 3), (1, 5), (2, 4), (2, 5), (3, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how one tries to assign colors (red, green, blue, yellow) to these 8 people subject to the rule that friends must have different shirt‐colors, no valid assignment exists.
+
+Let’s explain briefly one way to see the difficulty.
+
+Step 1. Notice that Alice is friends with everyone else so if we give Alice any color (say Red) then none of the other 7 people may wear red. In other words, the remaining 7 people must be colored using the other three colors: green, blue, and yellow.
+
+Step 2. Now consider the subgraph induced by the remaining people: Bob, Carol, Dave, Ethan, Fran, George, and Heather. Their friendships (aside from those with Alice) include:
+ • Bob is friends with Ethan, George, and Heather.
+ • Carol is friends with Dave, George, and Heather.
+ • Dave is friends with Carol, Ethan, George, and Heather.
+ • Ethan is friends with Bob, Dave, Fran, George, and Heather.
+ • Fran is friends with Ethan, George, and Heather.
+ • George is friends with Bob, Carol, Dave, Ethan, Fran, and Heather.
+ • Heather is friends with Bob, Carol, Dave, Ethan, Fran, and George.
+
+A quick inspection reveals that, for example, the set {Ethan, Fran, George, Heather} forms a clique (each is friends with every other member of that set). (To check: Ethan is friends with Fran, George, and Heather; Fran is friends with Ethan, George, and Heather; and George and Heather are friends with everyone in the group.) A clique of size 4 requires 4 different colors. But the remaining 7 people are forced to use only 3 colors (green, blue, yellow) because none can use red (Alice’s color).
+
+Step 3. Because this clique already forces a requirement of 4 different colors, there is no way to assign clothes colors to all 8 people following the rule.
+
+Thus, such an assignment is impossible.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how one tries to assign colors (red, green, blue, yellow) to these 8 people subject to the rule that friends must have different shirt‐colors, no valid assignment exists.
+
+Let’s explain briefly one way to see the difficulty.
+
+Step 1. Notice that #0 is friends with everyone else so if we give #0 any color (say Red) then none of the other 7 people may wear red. In other words, the remaining 7 people must be colored using the other three colors: green, blue, and yellow.
+
+Step 2. Now consider the subgraph induced by the remaining people: #1, #2, #3, #4, #5, #6, and #7. Their friendships (aside from those with #0) include:
+ • #1 is friends with #4, #6, and #7.
+ • #2 is friends with #3, #6, and #7.
+ • #3 is friends with #2, #4, #6, and #7.
+ • #4 is friends with #1, #3, #5, #6, and #7.
+ • #5 is friends with #4, #6, and #7.
+ • #6 is friends with #1, #2, #3, #4, #5, and #7.
+ • #7 is friends with #1, #2, #3, #4, #5, and #6.
+
+A quick inspection reveals that, for example, the set {#4, #5, #6, #7} forms a clique (each is friends with every other member of that set). (To check: #4 is friends with #5, #6, and #7; #5 is friends with #4, #6, and #7; and #6 and #7 are friends with everyone in the group.) A clique of size 4 requires 4 different colors. But the remaining 7 people are forced to use only 3 colors (green, blue, yellow) because none can use red (#0’s color).
+
+Step 3. Because this clique already forces a requirement of 4 different colors, there is no way to assign clothes colors to all 8 people following the rule.
+
+Thus, such an assignment is impossible.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,25 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (1, 2), (1, 3), (1, 5), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 7), (1, 4), (2, 3), (4, 5), (4, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no valid assignment of four colors exists for the given graph. (In what follows we describe our “failed‐search” reasoning; the final answer is simply “Impossible”.)
+
+One way to approach the problem is to notice that some vertices have so many neighbours that if you start “coloring” them one‐by‐one, you quickly run into a “dead end.” For instance, suppose we try to assign colors to vertices 0 and 1 arbitrarily (say, 0 = Red and 1 = Green). Then consider vertex 5. Its list of neighbours is
+
+  0, 1, 2, 3, 6, 7   (actually, the edges incident on 5 are: (0,5), (1,5), (2,5), (3,5), (5,6), (5,7)).
+
+In any four–coloring the colours on 0, 1, 2, and 3 must all be different in every case that forces a problem for vertex 5. (One can easily check that even if we try different assignments for vertices 2 and 3, the heavy overlap of neighbourhoods among vertices 0, 1, 2, 3, 5 (and also 6 and 7 around 5) causes vertex 5’s available palette to “shrink” too far. One eventually finds by examining possible cases that no matter how one begins, one vertex – often vertex 5 or a neighbour of it – is forced into a situation where its neighbours use all four colors.)
+
+A systematic attempt (by hand or using a computer–aided search) quickly shows that every partial assignment runs into a conflict and no full assignment of the four colors (red, green, blue, yellow) to vertices 0 through 7 exists that prevents an edge from joining two vertices of the same color.
+
+Thus, the final answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,43 @@
+Edges: [(0, 2), (0, 4), (0, 5), (0, 6), (0, 7), (0, 10), (0, 11), (1, 2), (1, 3), (1, 4), (1, 5), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (2, 4), (2, 5), (2, 8), (2, 9), (2, 11), (3, 4), (3, 5), (3, 6), (3, 8), (3, 10), (3, 11), (4, 5), (4, 7), (4, 8), (4, 9), (5, 6), (5, 7), (5, 8), (5, 9), (5, 10), (5, 11), (6, 7), (6, 10), (7, 8), (7, 9), (7, 10), (7, 11), (8, 9), (8, 10), (8, 11), (9, 10), (9, 11)]
+
+Complement: [(0, 1), (0, 3), (0, 8), (0, 9), (1, 6), (2, 3), (2, 6), (2, 7), (2, 10), (3, 7), (3, 9), (4, 6), (4, 10), (4, 11), (6, 8), (6, 9), (6, 11), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We can view the problem as one of graph coloring. Represent each person as a vertex and each friendship as an edge between vertices; the task is then to assign one of the six colors (red, green, blue, yellow, orange, purple) to each vertex so that no two adjacent vertices share the same color.
+
+A key observation is to determine the graph’s clique number—a clique is a set of vertices all of which are pairwise adjacent. In a proper coloring, each vertex of a clique must receive a different color. Therefore, if the graph contains a clique of size k, then at least k colors are needed.
+
+Looking at the given friendships, notice that Fran is friends with everyone except herself. In fact, you can identify a clique of size 7 by taking the vertices {Fran, Bob, Carol, Ethan, Irene, Jack, Larry}. Checking these:
+ • Fran is friends with each of Bob, Carol, Ethan, Irene, Jack, and Larry.
+ • Every pair among Bob, Carol, Ethan, Irene, Jack, and Larry are also friends with each other (for example, Bob is friends with Carol, Ethan, Irene, Jack, and Larry; Carol is friends with Ethan, Irene, Jack, and Larry; and so on).
+
+Since these 7 people form a clique, they would all need to wear different colors. However, there are only 6 colors available.
+
+Thus, it is impossible to assign the colors without violating the friendship rule.
+
+Impossible
+
+---
+Numericized:
+---
+
+We can view the problem as one of graph coloring. Represent each person as a vertex and each friendship as an edge between vertices; the task is then to assign one of the six colors (red, green, blue, yellow, orange, purple) to each vertex so that no two adjacent vertices share the same color.
+
+A key observation is to determine the graph’s clique number—a clique is a set of vertices all of which are pairwise adjacent. In a proper coloring, each vertex of a clique must receive a different color. Therefore, if the graph contains a clique of size k, then at least k colors are needed.
+
+Looking at the given friendships, notice that #5 is friends with everyone except herself. In fact, you can identify a clique of size 7 by taking the vertices {#5, #1, #2, #4, #8, #9, #11}. Checking these:
+ • #5 is friends with each of #1, #2, #4, #8, #9, and #11.
+ • Every pair among #1, #2, #4, #8, #9, and #11 are also friends with each other (for example, #1 is friends with #2, #4, #8, #9, and #11; #2 is friends with #4, #8, #9, and #11; and so on).
+
+Since these 7 people form a clique, they would all need to wear different colors. However, there are only 6 colors available.
+
+Thus, it is impossible to assign the colors without violating the friendship rule.
+
+Impossible
+
+---
+
+Manually assessed false edges: 4,11

@@ -1,0 +1,87 @@
+Edges: [(0, 1), (0, 3), (0, 5), (0, 6), (0, 7), (1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 4), (1, 2), (1, 4), (2, 4), (3, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter what colors are chosen, one person (in fact, Dave) is “trapped” by his friends wearing all four colors.
+
+Recall that the available colors are red, green, blue, and yellow. The friendships are as follows:
+
+• Alice is friends with Bob, Dave, Fran, George, and Heather.
+• Bob is friends with Alice, Dave, Fran, George, and Heather.
+• Carol is friends with Dave, Fran, George, and Heather.
+• Dave is friends with Alice, Bob, Carol, Ethan, George, and Heather.
+• Ethan is friends with Dave, Fran, George, and Heather.
+• Fran is friends with Alice, Bob, Carol, Ethan, George, and Heather.
+• George is friends with Alice, Bob, Carol, Dave, Ethan, Fran, and Heather.
+• Heather is friends with Alice, Bob, Carol, Dave, Ethan, Fran, and George.
+
+Notice that Dave’s friends are exactly {Alice, Bob, Carol, Ethan, George, Heather} except that the rest of the description (when we list each edge) makes it clear that Dave is adjacent to Alice, Bob, Carol, Ethan, George, and Heather. (Also note that some other edges appear among the other people, but the key is the “neighborhood” of Dave.)
+
+Of these, look in particular at the five friends of Dave that are also (by our list) heavily connected in the following way. In our step‐by‐step reasoning below, we summarize the structure for part of the network that “surrounds” Dave:
+
+– Alice has friends Bob, Dave, Fran, George, Heather.
+– Bob has friends Alice, Dave, Fran, George, Heather.
+– Carol has friends Dave, Fran, George, Heather.
+– George and Heather are each friends with almost everyone.
+– (Ethan is also a friend of Dave, but his “role” turns out to be similar to others in forcing a spread of colors.)
+
+Because of many of these connections (for example, Alice is friends with both George and Heather; Bob is friends with both George and Heather; and Carol—as well as all persons other than Dave—are friends with both George and Heather), one can deduce that there is very little “room” to assign colors without conflict.
+
+In any attempted assignment one must assign each of these people one of the 4 colors in such a way that no two friends share the same color. Now focus on Dave. His friends include a set of 5 people from the group – at minimum the set {Alice, Bob, Carol, George, Heather} (or substituting Ethan for one of these in some lists). But observe:
+
+• Alice, Bob, and Carol are only allowed to choose from the two colors that are not used by Heather and George (since each of them is friends with both Heather and George). In any valid assignment, because Alice and Bob are friends, they must use two distinct colors from that two‐color pool. This forces Carol’s color (even if it could sometimes repeat one of those) to be one of the same two colors.
+• Meanwhile, George and Heather are themselves adjacent (friends) so they must have two different colors from among the 4.
+
+Thus, the colors seen on Dave’s friends are the two colors coming from {Alice, Bob, Carol} and the two distinct colors on {George, Heather}. That is, no matter how one arranges it, Dave’s five friends (and in many versions, even six friends if you include Ethan) will collectively use all four colors.
+
+Since Dave is friends with each of them, Dave cannot wear any color (a person’s shirt color must differ from that of all his/her friends). Therefore, there is no possible assignment of the four colors to the 8 people that will avoid a matching pair between two friends.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter what colors are chosen, one person (in fact, #3) is “trapped” by his friends wearing all four colors.
+
+Recall that the available colors are red, green, blue, and yellow. The friendships are as follows:
+
+• #0 is friends with #1, #3, #5, #6, and #7.
+• #1 is friends with #0, #3, #5, #6, and #7.
+• #2 is friends with #3, #5, #6, and #7.
+• #3 is friends with #0, #1, #2, #4, #6, and #7.
+• #4 is friends with #3, #5, #6, and #7.
+• #5 is friends with #0, #1, #2, #4, #6, and #7.
+• #6 is friends with #0, #1, #2, #3, #4, #5, and #7.
+• #7 is friends with #0, #1, #2, #3, #4, #5, and #6.
+
+Notice that #3’s friends are exactly {#0, #1, #2, #4, #6, #7} except that the rest of the description (when we list each edge) makes it clear that #3 is adjacent to #0, #1, #2, #4, #6, and #7. (Also note that some other edges appear among the other people, but the key is the “neighborhood” of #3.)
+
+Of these, look in particular at the five friends of #3 that are also (by our list) heavily connected in the following way. In our step‐by‐step reasoning below, we summarize the structure for part of the network that “surrounds” #3:
+
+– #0 has friends #1, #3, #5, #6, #7.
+– #1 has friends #0, #3, #5, #6, #7.
+– #2 has friends #3, #5, #6, #7.
+– #6 and #7 are each friends with almost everyone.
+– (#4 is also a friend of #3, but his “role” turns out to be similar to others in forcing a spread of colors.)
+
+Because of many of these connections (for example, #0 is friends with both #6 and #7; #1 is friends with both #6 and #7; and #2—as well as all persons other than #3—are friends with both #6 and #7), one can deduce that there is very little “room” to assign colors without conflict.
+
+In any attempted assignment one must assign each of these people one of the 4 colors in such a way that no two friends share the same color. Now focus on #3. His friends include a set of 5 people from the group – at minimum the set {#0, #1, #2, #6, #7} (or substituting #4 for one of these in some lists). But observe:
+
+• #0, #1, and #2 are only allowed to choose from the two colors that are not used by #7 and #6 (since each of them is friends with both #7 and #6). In any valid assignment, because #0 and #1 are friends, they must use two distinct colors from that two‐color pool. This forces #2’s color (even if it could sometimes repeat one of those) to be one of the same two colors.
+• Meanwhile, #6 and #7 are themselves adjacent (friends) so they must have two different colors from among the 4.
+
+Thus, the colors seen on #3’s friends are the two colors coming from {#0, #1, #2} and the two distinct colors on {#6, #7}. That is, no matter how one arranges it, #3’s five friends (and in many versions, even six friends if you include #4) will collectively use all four colors.
+
+Since #3 is friends with each of them, #3 cannot wear any color (a person’s shirt color must differ from that of all his/her friends). Therefore, there is no possible assignment of the four colors to the 8 people that will avoid a matching pair between two friends.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

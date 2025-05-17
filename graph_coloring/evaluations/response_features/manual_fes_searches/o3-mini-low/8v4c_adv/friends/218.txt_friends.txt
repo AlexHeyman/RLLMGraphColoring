@@ -1,0 +1,61 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (2, 3), (3, 4), (3, 6), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that if we “model” the party‐friendship requirements as a graph–coloring problem then even though there are four “shirt‐colors” available, no assignment exists so that every person’s shirt color is different from that of every friend. (In other words, the “friendship graph” has no proper 4–coloring.) In what follows I will explain one way of arriving at that conclusion.
+
+Let the eight people be vertices and draw an edge between every two people who are friends. (You can check that by the problem statement the edges are exactly
+
+  Alice–Carol, Alice–Dave, Alice–Ethan, Alice–Fran, Alice–George, Alice–Heather,
+  Bob–Carol, Bob–Dave, Bob–Ethan, Bob–Fran, Bob–George, Bob–Heather,
+  Carol–Ethan, Carol–Fran, Carol–George, Carol–Heather,
+  Dave–Fran, Dave–Heather,
+  Ethan–George, Ethan–Heather,
+  Fran–George, Fran–Heather.)
+
+A proper “shirt–coloring” of the people is exactly a proper vertex–coloring of the graph using four colors (red, green, blue, yellow) so that any two vertices connected by an edge receive different colors.
+
+One may try various assignments. For example, one might start by noticing that Alice and Bob have exactly the same set of friends (namely, Carol, Dave, Ethan, Fran, George, and Heather). So Alice and Bob are not connected by an edge and may be given the same color. But then look at Heather: she (like everyone except maybe Alice and Bob) is adjacent to a “lot” of people. In fact Heather is friends with everyone except herself. When you try to extend an assignment to everyone so that all adjacent pairs get distinct colors you quickly run into the snag that at least one person (in one attempted assignment George) finds that its six neighbors use all four colors. (One may show more carefully that in any 4–coloring the “mess” around the “middle” of the graph forces one vertex to have all four colors among its neighbors, so that no color is available for that vertex.)
+
+After several “trials” (or by an exhaustive search; see for example results from computer–assisted search) one finds that no matter what assignment you try, some person–say, George–ends up with six friends who altogether use all four available colors. (One may show by a short case–analysis that every 4–coloring would force George’s six friends to use four different colors, so that no color is left for George.)
+
+Thus there is no way to assign the four shirt colors so that no two friends wear the same colored shirt.
+
+Answer:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that if we “model” the party‐friendship requirements as a graph–coloring problem then even though there are four “shirt‐colors” available, no assignment exists so that every person’s shirt color is different from that of every friend. (In other words, the “friendship graph” has no proper 4–coloring.) In what follows I will explain one way of arriving at that conclusion.
+
+Let the eight people be vertices and draw an edge between every two people who are friends. (You can check that by the problem statement the edges are exactly
+
+  #0–#2, #0–#3, #0–#4, #0–#5, #0–#6, #0–#7,
+  #1–#2, #1–#3, #1–#4, #1–#5, #1–#6, #1–#7,
+  #2–#4, #2–#5, #2–#6, #2–#7,
+  #3–#5, #3–#7,
+  #4–#6, #4–#7,
+  #5–#6, #5–#7.)
+
+A proper “shirt–coloring” of the people is exactly a proper vertex–coloring of the graph using four colors (red, green, blue, yellow) so that any two vertices connected by an edge receive different colors.
+
+One may try various assignments. For example, one might start by noticing that #0 and #1 have exactly the same set of friends (namely, #2, #3, #4, #5, #6, and #7). So #0 and #1 are not connected by an edge and may be given the same color. But then look at #7: she (like everyone except maybe #0 and #1) is adjacent to a “lot” of people. In fact #7 is friends with everyone except herself. When you try to extend an assignment to everyone so that all adjacent pairs get distinct colors you quickly run into the snag that at least one person (in one attempted assignment #6) finds that its six neighbors use all four colors. (One may show more carefully that in any 4–coloring the “mess” around the “middle” of the graph forces one vertex to have all four colors among its neighbors, so that no color is available for that vertex.)
+
+After several “trials” (or by an exhaustive search; see for example results from computer–assisted search) one finds that no matter what assignment you try, some person–say, #6–ends up with six friends who altogether use all four available colors. (One may show by a short case–analysis that every 4–coloring would force #6’s six friends to use four different colors, so that no color is left for #6.)
+
+Thus there is no way to assign the four shirt colors so that no two friends wear the same colored shirt.
+
+Answer:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,31 @@
+Edges: [(0, 2), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 3), (1, 3), (2, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of shirts in four available colors (red, green, blue, yellow) can avoid having two friends wearing the same color.
+
+Let’s explain briefly. (A friendship “edge” exists between two people if they are friends.) If you review the list of friendships, you’ll notice that the people Carol, Dave, Ethan, Fran, and George are “almost” all mutually connected. In fact, for these five there is an edge between every pair except that Carol and Fran are not friends. However, if you look at the similar set Carol, Dave, Ethan, Fran, and Heather, you find that every pair in this set is friends (for instance, Carol is friends with Heather and everyone else in the set, Dave is friends with Heather, Ethan, Fran, etc.). In other words, the subgraph induced by {Carol, Dave, Ethan, Fran, Heather} is complete—a so‐called “K5.” It is a standard fact in graph theory that a complete graph on n vertices, Kn, requires n different colors for a proper coloring (no two adjacent vertices get the same color). Since here n = 5 but only 4 colors are available, no valid assignment exists.
+
+Thus, the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of shirts in four available colors (red, green, blue, yellow) can avoid having two friends wearing the same color.
+
+Let’s explain briefly. (A friendship “edge” exists between two people if they are friends.) If you review the list of friendships, you’ll notice that the people #2, #3, #4, #5, and #6 are “almost” all mutually connected. In fact, for these five there is an edge between every pair except that #2 and #5 are not friends. However, if you look at the similar set #2, #3, #4, #5, and #7, you find that every pair in this set is friends (for instance, #2 is friends with #7 and everyone else in the set, #3 is friends with #7, #4, #5, etc.). In other words, the subgraph induced by {#2, #3, #4, #5, #7} is complete—a so‐called “K5.” It is a standard fact in graph theory that a complete graph on n vertices, Kn, requires n different colors for a proper coloring (no two adjacent vertices get the same color). Since here n = 5 but only 4 colors are available, no valid assignment exists.
+
+Thus, the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

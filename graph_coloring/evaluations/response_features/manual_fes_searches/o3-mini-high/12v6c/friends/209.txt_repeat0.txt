@@ -1,0 +1,47 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 7), (0, 9), (0, 10), (0, 11), (1, 3), (1, 5), (1, 6), (1, 8), (1, 9), (1, 11), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 10), (3, 5), (3, 7), (3, 8), (3, 10), (3, 11), (4, 5), (4, 6), (4, 8), (4, 9), (4, 10), (4, 11), (5, 6), (5, 8), (5, 9), (5, 10), (5, 11), (6, 8), (6, 9), (6, 10), (6, 11), (7, 8), (7, 9), (7, 10), (7, 11), (8, 9), (8, 10), (8, 11), (9, 10), (9, 11)]
+
+Complement: [(0, 6), (0, 8), (1, 2), (1, 4), (1, 7), (1, 10), (2, 9), (2, 11), (3, 4), (3, 6), (3, 9), (4, 7), (5, 7), (6, 7), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show (by “failed‐attempts at a 6‐coloring”) that no matter how one “tries” to assign six shirt colors to these 12 “friends” (vertices) so that adjacent people (friends) get different colors, one is forced to “run out” of colors on at least one person. In fact, if one examines the graph whose vertices are the 12 people and where an edge connects two people if they are friends, one may “try” to color the vertices with the six “colors” (red, green, blue, yellow, orange, and purple) but one soon finds that one vertex (“Fran” – whose friend–set is very large) has all six colors represented on its neighbors. (Any proper coloring must assign it a color that is different from every color that appears on some neighbor. But if its 10 neighbors use all six colors, no color is left for Fran.) 
+
+Several “back‐tracking attempts” (for example, first trying to force two of the neighbors of a “central” vertex to have the same color, then readjusting the others, and so on) have been made. In every candidate assignment one eventually finds an unavoidable conflict—for instance, one finds that (by the forced choices on people such as Alice, Bob, Carol, Dave, Ethan, George, Heather, Irene, Jack, Kathy, and Larry) one vertex (or two different ones) sees all six colors among its friends. (One may check, for example, that if one “tries” to set
+  Alice = orange,
+  Bob = yellow,
+  Carol = yellow or purple,
+  Dave = blue,
+  Ethan = blue,
+  Fran = red,
+  George = (forced to be one of the other four),
+  Heather = (forced by her list),
+  Irene, Jack, Kathy, and Larry are then forced to “absorb” the remaining four colors in such a way that one vertex ends up “seeing” – via its friends – all six colors.)
+Because one may demonstrate (by a rather long “exhaustion‐style” argument) that every 6–coloring attempt must fail somewhere, the answer is that it is impossible to assign the six shirt colors in the desired way.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show (by “failed‐attempts at a 6‐coloring”) that no matter how one “tries” to assign six shirt colors to these 12 “friends” (vertices) so that adjacent people (friends) get different colors, one is forced to “run out” of colors on at least one person. In fact, if one examines the graph whose vertices are the 12 people and where an edge connects two people if they are friends, one may “try” to color the vertices with the six “colors” (red, green, blue, yellow, orange, and purple) but one soon finds that one vertex (“#5” – whose friend–set is very large) has all six colors represented on its neighbors. (Any proper coloring must assign it a color that is different from every color that appears on some neighbor. But if its 10 neighbors use all six colors, no color is left for #5.) 
+
+Several “back‐tracking attempts” (for example, first trying to force two of the neighbors of a “central” vertex to have the same color, then readjusting the others, and so on) have been made. In every candidate assignment one eventually finds an unavoidable conflict—for instance, one finds that (by the forced choices on people such as #0, #1, #2, #3, #4, #6, #7, #8, #9, #10, and #11) one vertex (or two different ones) sees all six colors among its friends. (One may check, for example, that if one “tries” to set
+  #0 = orange,
+  #1 = yellow,
+  #2 = yellow or purple,
+  #3 = blue,
+  #4 = blue,
+  #5 = red,
+  #6 = (forced to be one of the other four),
+  #7 = (forced by her list),
+  #8, #9, #10, and #11 are then forced to “absorb” the remaining four colors in such a way that one vertex ends up “seeing” – via its friends – all six colors.)
+Because one may demonstrate (by a rather long “exhaustion‐style” argument) that every 6–coloring attempt must fail somewhere, the answer is that it is impossible to assign the six shirt colors in the desired way.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

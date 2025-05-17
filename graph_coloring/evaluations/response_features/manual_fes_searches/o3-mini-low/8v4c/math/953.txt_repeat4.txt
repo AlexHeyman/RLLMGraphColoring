@@ -1,0 +1,32 @@
+Edges: [(0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 5), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 1), (0, 4), (2, 3), (2, 4), (2, 6), (3, 5), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four colors (red, green, blue, yellow) to the eight numbered vertices can avoid having at least one edge whose two endpoints share the same color.
+
+To explain briefly (without doing a full computer‐assisted search) consider the following. Note that vertices 0 and 1 are not adjacent so they might be “recycled” (that is, given the same color). Unfortunately, many of the remaining vertices are highly connected; for example, vertex 7 is adjacent to five other vertices (0,1,2,3,4) and so its color must differ from that of each. A natural idea is to “save” colors by giving 0 and 1 the same color. One then hopes to “spread out” the remaining three colors among the other vertices. However, one may check that no matter how the colors are assigned the other vertices – whose interconnections force heavy restrictions – one vertex “falls by the wayside” and ends up being forced to have a color that already appears on one of its neighbors.
+
+For example, one natural approach starts with
+
+  0 Red
+  1 Red
+
+so that the five neighbors of vertex 0 (vertices 2, 3, 5, 6, 7) must use only green, blue, and yellow. (To be specific, vertex 7 is adjacent to 0, 1, 2, 3, and 4 so its situation is very “tight”.) Then one may try an assignment such as
+
+  2 Blue,
+  3 Yellow,
+  7 Green
+
+but then when one comes to assign colors to vertices 4, 5, and 6 (each adjacent to at least three of the colored vertices) one finds that every one of them has neighbors in all three of green, blue, and yellow, forcing a repeat of the color red – which is not allowed because red is already used on some of their neighbors (for example, neighbor 0 or 1). Other attempts with a different starting arrangement all succumb to a similar contradiction.
+
+A careful case‐analysis (or an exhaustive computer search) shows that a proper 4–coloring with the given set of edges is impossible.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

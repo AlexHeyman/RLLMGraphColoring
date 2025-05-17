@@ -1,0 +1,103 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 5), (0, 6), (0, 7), (1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (1, 2), (1, 4), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no valid assignment of red, green, blue, and yellow shirts (where “red”, “green”, “blue”, “yellow” are the only available colors) can be given to the eight people so that no two friends share the same color.
+
+Let’s call the people 
+ • A = Alice, 
+ • B = Bob, 
+ • C = Carol, 
+ • D = Dave, 
+ • E = Ethan, 
+ • F = Fran, 
+ • G = George, and 
+ • H = Heather.
+
+The friendship relations (which we assume are symmetric) are:
+ • A is friends with B, C, E, F, G, and H.
+ • B is friends with A, D, F, G, and H.
+ • C is friends with A, D, F, G, and H.
+ • D is friends with B, C, E, G, and H.
+ • E is friends with A, C, D, G, and H.
+ • F is friends with A, B, and C, G, and H.
+ • G is friends with A, B, C, D, E, F, and H.
+ • H is friends with A, B, C, D, E, F, and G.
+
+Observe in particular that:
+ – George (G) and Heather (H) are the only two people who are connected to everyone else.
+ – In fact, every other person (A, B, C, D, E, F) is friends with both G and H.
+
+Because G and H are friends, they must receive two different colors; say G gets X and H gets Y.
+Then every one of A, B, C, D, E, and F is adjacent to G and H. This forces that none of A–F can be colored X or Y.
+Since there are only four available colors, the vertices A–F must then use only the remaining two colors (let’s call them C1 and C2).
+
+Now, look at the subgraph induced by A, B, C, D, E, and F. From the friendship lists we verify the following edges among them:
+ • A is friends with B, C, E, and F.
+ • B is friends with A, D, and F.
+ • C is friends with A, D, and F.
+ • D is friends with B, C, and E.
+ • E is friends with A, C, and D.
+ • F is friends with A, B, and C.
+
+Notice in particular that A, B, and F form a triangle (since A is friends with B and F, and B is friends with F). In any triangle the three vertices must all be assigned different colors. However, we are forced to choose only from {C1, C2} for these vertices (because the colors used for G and H are forbidden to all of A–F). Two colors cannot properly color a triangle.
+
+Since we reach a contradiction, there is no possible assignment of the four shirt colors with the given friendship restrictions.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no valid assignment of red, green, blue, and yellow shirts (where “red”, “green”, “blue”, “yellow” are the only available colors) can be given to the eight people so that no two friends share the same color.
+
+Let’s call the people 
+ • A = #0, 
+ • B = #1, 
+ • C = #2, 
+ • D = #3, 
+ • E = #4, 
+ • F = #5, 
+ • G = #6, and 
+ • H = #7.
+
+The friendship relations (which we assume are symmetric) are:
+ • A is friends with B, C, E, F, G, and H.
+ • B is friends with A, D, F, G, and H.
+ • C is friends with A, D, F, G, and H.
+ • D is friends with B, C, E, G, and H.
+ • E is friends with A, C, D, G, and H.
+ • F is friends with A, B, and C, G, and H.
+ • G is friends with A, B, C, D, E, F, and H.
+ • H is friends with A, B, C, D, E, F, and G.
+
+Observe in particular that:
+ – #6 (G) and #7 (H) are the only two people who are connected to everyone else.
+ – In fact, every other person (A, B, C, D, E, F) is friends with both G and H.
+
+Because G and H are friends, they must receive two different colors; say G gets X and H gets Y.
+Then every one of A, B, C, D, E, and F is adjacent to G and H. This forces that none of A–F can be colored X or Y.
+Since there are only four available colors, the vertices A–F must then use only the remaining two colors (let’s call them C1 and C2).
+
+Now, look at the subgraph induced by A, B, C, D, E, and F. From the friendship lists we verify the following edges among them:
+ • A is friends with B, C, E, and F.
+ • B is friends with A, D, and F.
+ • C is friends with A, D, and F.
+ • D is friends with B, C, and E.
+ • E is friends with A, C, and D.
+ • F is friends with A, B, and C.
+
+Notice in particular that A, B, and F form a triangle (since A is friends with B and F, and B is friends with F). In any triangle the three vertices must all be assigned different colors. However, we are forced to choose only from {C1, C2} for these vertices (because the colors used for G and H are forbidden to all of A–F). Two colors cannot properly color a triangle.
+
+Since we reach a contradiction, there is no possible assignment of the four shirt colors with the given friendship restrictions.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

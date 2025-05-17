@@ -1,0 +1,65 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 1), (0, 5), (2, 3), (2, 4), (2, 5), (2, 6), (4, 5), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We first represent the eight people as vertices of a graph and draw an edge between two vertices if the corresponding people are friends. (Remember, a “clique” in a graph is a set of vertices that are all mutually connected by edges.) For our graph, here are the friendships:
+
+• Alice is friends with Carol, Dave, Ethan, George, Heather.
+• Bob is friends with Carol, Dave, Ethan, Fran, George, Heather.
+• Carol is friends with Alice, Bob, Heather.
+• Dave is friends with Alice, Bob, Ethan, Fran, George, Heather.
+• Ethan is friends with Alice, Bob, Dave, George, Heather.
+• Fran is friends with Bob, Dave, George.
+• George is friends with Alice, Bob, Dave, Ethan, Fran, Heather.
+• Heather is friends with Alice, Bob, Carol, Dave, Ethan, George.
+
+Examine the set {Bob, Dave, Ethan, George, Heather}. Check the edges among them:
+
+• Bob is friends with Dave, Ethan, George, and Heather.
+• Dave is friends with Bob, Ethan, George, and Heather.
+• Ethan is friends with Bob, Dave, George, and Heather.
+• George is friends with Bob, Dave, Ethan, and Heather.
+• Heather is friends with Bob, Dave, Ethan, and George.
+
+This set forms a clique of 5 people, meaning that in any coloring (where a color assigned to one person cannot be reused by any of their friends) these five people must all receive different colors. Since there are only 4 shirt colors available (red, green, blue, and yellow), it is impossible to assign a shirt color to each of these five people so that no two in the clique share the same color.
+
+Therefore, it is impossible.
+
+Impossible
+
+---
+Numericized:
+---
+
+We first represent the eight people as vertices of a graph and draw an edge between two vertices if the corresponding people are friends. (Remember, a “clique” in a graph is a set of vertices that are all mutually connected by edges.) For our graph, here are the friendships:
+
+• #0 is friends with #2, #3, #4, #6, #7.
+• #1 is friends with #2, #3, #4, #5, #6, #7.
+• #2 is friends with #0, #1, #7.
+• #3 is friends with #0, #1, #4, #5, #6, #7.
+• #4 is friends with #0, #1, #3, #6, #7.
+• #5 is friends with #1, #3, #6.
+• #6 is friends with #0, #1, #3, #4, #5, #7.
+• #7 is friends with #0, #1, #2, #3, #4, #6.
+
+Examine the set {#1, #3, #4, #6, #7}. Check the edges among them:
+
+• #1 is friends with #3, #4, #6, and #7.
+• #3 is friends with #1, #4, #6, and #7.
+• #4 is friends with #1, #3, #6, and #7.
+• #6 is friends with #1, #3, #4, and #7.
+• #7 is friends with #1, #3, #4, and #6.
+
+This set forms a clique of 5 people, meaning that in any coloring (where a color assigned to one person cannot be reused by any of their friends) these five people must all receive different colors. Since there are only 4 shirt colors available (red, green, blue, and yellow), it is impossible to assign a shirt color to each of these five people so that no two in the clique share the same color.
+
+Therefore, it is impossible.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

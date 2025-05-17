@@ -1,0 +1,67 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7)]
+
+Complement: [(0, 4), (1, 2), (3, 4), (5, 6), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We begin by listing the eight people and the friendship relations. (For clarity, denote Fran, George, and Heather by F, G, and H.)
+
+Friendships:
+• Alice (A) is friends with Bob (B), Carol (C), Dave (D), F, G, and H.
+• Bob (B) is friends with A, D, Ethan (E), F, G, and H.
+• Carol (C) is friends with A, D, E, F, G, and H.
+• Dave (D) is friends with A, B, C, F, G, and H.
+• Ethan (E) is friends with B, C, F, G, and H.
+• Fran (F) is friends with A, B, C, D, E, G, and H.
+• George (G) is friends with A, B, C, D, E, F, and H.
+• Heather (H) is friends with A, B, C, D, E, F, and G.
+
+Notice two things:
+1. The trio F, G, H forms a triangle (each is friends with the other two).
+2. Every one of A, B, C, D, and E is friends with F, G, and H.
+
+Now, we have four colors available: red, green, blue, and yellow. Because F, G, and H form a triangle, they must all receive different colors; that is, they collectively “use up” three of the four colors.
+
+Since every person in {A, B, C, D, E} is friends with F, G, and H, none of them may choose any of the three colors assigned to F, G, and H. This forces every one of A, B, C, D, and E to use the one remaining fourth color.
+
+However, the friendship relations among A, B, C, D, and E are not completely “empty.” For instance, A is friends with B, with C, and with D; B is friends with A and D; C is friends with A and D; and so on. So at least one edge (for example, between A and B) would force the same (fourth) color to be used on both ends—which is not allowed.
+
+Because every vertex in {A, B, C, D, E} must be colored with the one leftover color (given that each is adjacent to all of F, G, and H) and because these vertices are not mutually nonadjacent, it is impossible to assign 4 colors without a conflict.
+
+Impossible
+
+---
+Numericized:
+---
+
+We begin by listing the eight people and the friendship relations. (For clarity, denote #5, #6, and #7 by F, G, and H.)
+
+Friendships:
+• #0 (A) is friends with #1 (B), #2 (C), #3 (D), F, G, and H.
+• #1 (B) is friends with A, D, #4 (E), F, G, and H.
+• #2 (C) is friends with A, D, E, F, G, and H.
+• #3 (D) is friends with A, B, C, F, G, and H.
+• #4 (E) is friends with B, C, F, G, and H.
+• #5 (F) is friends with A, B, C, D, E, G, and H.
+• #6 (G) is friends with A, B, C, D, E, F, and H.
+• #7 (H) is friends with A, B, C, D, E, F, and G.
+
+Notice two things:
+1. The trio F, G, H forms a triangle (each is friends with the other two).
+2. Every one of A, B, C, D, and E is friends with F, G, and H.
+
+Now, we have four colors available: red, green, blue, and yellow. Because F, G, and H form a triangle, they must all receive different colors; that is, they collectively “use up” three of the four colors.
+
+Since every person in {A, B, C, D, E} is friends with F, G, and H, none of them may choose any of the three colors assigned to F, G, and H. This forces every one of A, B, C, D, and E to use the one remaining fourth color.
+
+However, the friendship relations among A, B, C, D, and E are not completely “empty.” For instance, A is friends with B, with C, and with D; B is friends with A and D; C is friends with A and D; and so on. So at least one edge (for example, between A and B) would force the same (fourth) color to be used on both ends—which is not allowed.
+
+Because every vertex in {A, B, C, D, E} must be colored with the one leftover color (given that each is adjacent to all of F, G, and H) and because these vertices are not mutually nonadjacent, it is impossible to assign 4 colors without a conflict.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,81 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (3, 4), (3, 6), (3, 7), (4, 5), (4, 7), (5, 6)]
+
+Complement: [(0, 4), (1, 2), (2, 5), (2, 7), (3, 5), (4, 6), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign the four shirt‐colors (red, green, blue, yellow) to the eight people so that no two friends wear the same color, one person (in fact, George) is “forced” into a situation in which all four colors appear among his friends. (When a vertex’s neighbors in a graph “use” all four colors, that vertex cannot be assigned any color.) In other words, a “proper 4‑coloring” of the “friendship graph” does not exist.
+
+Let’s explain one way to see why.
+
+Define a graph whose vertices are people and whose edges connect persons that are friends. The friendships are as follows:
+ • Alice is adjacent to Bob, Carol, Dave, Fran, George, Heather.
+ • Bob is adjacent to Alice, Dave, Ethan, Fran, George, Heather.
+ • Carol is adjacent to Alice, Dave, Ethan, George.
+ • Dave is adjacent to Alice, Bob, Carol, Ethan, George, Heather.
+ • Ethan is adjacent to Bob, Carol, Dave, Fran, Heather.
+ • Fran is adjacent to Alice, Bob, Ethan, George.
+ • George is adjacent to Alice, Bob, Carol, Dave, Fran.
+ • Heather is adjacent to Alice, Bob, Dave, Ethan.
+
+Notice that George is friends with (that is, adjacent to) five people: Alice, Bob, Carol, Dave, and Fran. For George to have a color available, these five neighbors must “use” at most three colors. (Because there are altogether four colors, if four different ones appear among George’s friends there is no remaining color for him.)
+
+So, can the induced subgraph on {Alice, Bob, Carol, Dave, Fran} be colored using only three colors? If one writes down all the “friendship” relations among these five it turns out that almost every one of them is connected:
+
+ – Alice is friends with all four of the others.
+ – Bob is friends with Alice, Dave, and Fran.
+ – Carol is friends with Alice and Dave.
+ – Dave is friends with Alice, Bob, and Carol.
+ – Fran is friends with Alice, Bob.
+
+Because Alice is friends with everyone in that set, her assigned color must differ from that of the four others. Even if one manages to “save” one color by having some of the remaining four share the same color, a little analysis shows that the best you can do is force four different colors among these five.
+For example, one might try to force a “reuse” by letting Bob and Carol share a color (since they are not friends), but then one finds that the remaining vertices, forced by adjacent restrictions, still end up with all different colors. (It is a short—if not entirely trivial—exercise in graph‑coloring to verify that the 5–vertex subgraph induced by {Alice, Bob, Carol, Dave, Fran} requires four colors.)
+ 
+Once those neighbors are colored with four different colors, George (who must have a different color from all his friends) is left with no available color. (His friends have “used” red, green, blue, and yellow – in some order.)
+
+For this reason no assignment of shirts in the four colors to the eight people can satisfy the condition that no pair of friends wear the same color. 
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign the four shirt‐colors (red, green, blue, yellow) to the eight people so that no two friends wear the same color, one person (in fact, #6) is “forced” into a situation in which all four colors appear among his friends. (When a vertex’s neighbors in a graph “use” all four colors, that vertex cannot be assigned any color.) In other words, a “proper 4‑coloring” of the “friendship graph” does not exist.
+
+Let’s explain one way to see why.
+
+Define a graph whose vertices are people and whose edges connect persons that are friends. The friendships are as follows:
+ • #0 is adjacent to #1, #2, #3, #5, #6, #7.
+ • #1 is adjacent to #0, #3, #4, #5, #6, #7.
+ • #2 is adjacent to #0, #3, #4, #6.
+ • #3 is adjacent to #0, #1, #2, #4, #6, #7.
+ • #4 is adjacent to #1, #2, #3, #5, #7.
+ • #5 is adjacent to #0, #1, #4, #6.
+ • #6 is adjacent to #0, #1, #2, #3, #5.
+ • #7 is adjacent to #0, #1, #3, #4.
+
+Notice that #6 is friends with (that is, adjacent to) five people: #0, #1, #2, #3, and #5. For #6 to have a color available, these five neighbors must “use” at most three colors. (Because there are altogether four colors, if four different ones appear among #6’s friends there is no remaining color for him.)
+
+So, can the induced subgraph on {#0, #1, #2, #3, #5} be colored using only three colors? If one writes down all the “friendship” relations among these five it turns out that almost every one of them is connected:
+
+ – #0 is friends with all four of the others.
+ – #1 is friends with #0, #3, and #5.
+ – #2 is friends with #0 and #3.
+ – #3 is friends with #0, #1, and #2.
+ – #5 is friends with #0, #1.
+
+Because #0 is friends with everyone in that set, her assigned color must differ from that of the four others. Even if one manages to “save” one color by having some of the remaining four share the same color, a little analysis shows that the best you can do is force four different colors among these five.
+For example, one might try to force a “reuse” by letting #1 and #2 share a color (since they are not friends), but then one finds that the remaining vertices, forced by adjacent restrictions, still end up with all different colors. (It is a short—if not entirely trivial—exercise in graph‑coloring to verify that the 5–vertex subgraph induced by {#0, #1, #2, #3, #5} requires four colors.)
+ 
+Once those neighbors are colored with four different colors, #6 (who must have a different color from all his friends) is left with no available color. (His friends have “used” red, green, blue, and yellow – in some order.)
+
+For this reason no assignment of shirts in the four colors to the eight people can satisfy the condition that no pair of friends wear the same color. 
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

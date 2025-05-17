@@ -1,0 +1,55 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (2, 4), (3, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four colors (red, green, blue, yellow) to the eight people can avoid giving a pair of friends the same color.
+
+One way to try to “beat‐the problem” is to note that George and Heather happen to be friends with exactly the same six people (Alice, Bob, Carol, Dave, Ethan, and Fran). In any valid assignment the rule is that no person may share a color with any friend. Thus the six people “around” George and Heather force George’s and Heather’s colors: each of them must choose a color different not only from all six of these “neighbors” but also different from each other (since George and Heather are friends).
+
+Because there are four colors in all, that would mean that the six “neighbors” can use at most 2 colors (so that there remain two different colors available for George and Heather). (For example, if the neighbors were colored using three colors then only one color would be “missing” from the neighborhood; but then George and Heather – who are themselves friends – could not choose different colors.)
+
+So, is it possible to color the subgraph induced by {Alice, Bob, Carol, Dave, Ethan, Fran} with only two colors? (That is, is this subgraph bipartite?) 
+
+A careful look at the friendship relations among these six people shows that there is, for example, a triangle:
+ • Bob is friends with Carol.
+ • Carol is friends with Dave.
+ • Bob is also friends with Dave.
+Thus Bob, Carol, and Dave form a 3‐cycle. (Any graph that has an odd cycle is not bipartite, and hence cannot be 2–colored.)
+
+Since the subgraph on these six vertices is not bipartite, they must use at least three distinct colors. That would leave at most one color for both George and Heather. But because George and Heather are friends they must have different colors themselves. 
+
+Therefore there is no way to assign the four colors so that no two friends have the same shirt color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of the four colors (red, green, blue, yellow) to the eight people can avoid giving a pair of friends the same color.
+
+One way to try to “beat‐the problem” is to note that #6 and #7 happen to be friends with exactly the same six people (#0, #1, #2, #3, #4, and #5). In any valid assignment the rule is that no person may share a color with any friend. Thus the six people “around” #6 and #7 force #6’s and #7’s colors: each of them must choose a color different not only from all six of these “neighbors” but also different from each other (since #6 and #7 are friends).
+
+Because there are four colors in all, that would mean that the six “neighbors” can use at most 2 colors (so that there remain two different colors available for #6 and #7). (For example, if the neighbors were colored using three colors then only one color would be “missing” from the neighborhood; but then #6 and #7 – who are themselves friends – could not choose different colors.)
+
+So, is it possible to color the subgraph induced by {#0, #1, #2, #3, #4, #5} with only two colors? (That is, is this subgraph bipartite?) 
+
+A careful look at the friendship relations among these six people shows that there is, for example, a triangle:
+ • #1 is friends with #2.
+ • #2 is friends with #3.
+ • #1 is also friends with #3.
+Thus #1, #2, and #3 form a 3‐cycle. (Any graph that has an odd cycle is not bipartite, and hence cannot be 2–colored.)
+
+Since the subgraph on these six vertices is not bipartite, they must use at least three distinct colors. That would leave at most one color for both #6 and #7. But because #6 and #7 are friends they must have different colors themselves. 
+
+Therefore there is no way to assign the four colors so that no two friends have the same shirt color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

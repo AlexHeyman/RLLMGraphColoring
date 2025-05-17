@@ -1,0 +1,27 @@
+Edges: [(0, 1), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 3), (2, 3), (2, 4), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no valid assignment exists. In fact, if you look closely at the friendship graph (where an edge means “friends‐with”), you will find a clique (a complete subgraph) of five people. For example, consider the set {Bob, Carol, Fran, George, Heather}. In this set every person is friends with every other person. (One can check that Bob is friends with Carol, Fran, George, and Heather; Carol is friends with Fran, George, and Heather; Fran is friends with George and Heather; and George is friends with Heather.) 
+
+Because each pair of friends must wear different colors, every vertex of a clique must be assigned a unique color. But if the clique has five vertices and there are only four colors available, it is impossible to color this clique. Therefore, there is no way for all eight people to choose a shirt color (red, green, blue, or yellow) with the property that no two friends wear the same color shirt.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no valid assignment exists. In fact, if you look closely at the friendship graph (where an edge means “friends‐with”), you will find a clique (a complete subgraph) of five people. For example, consider the set {#1, #2, #5, #6, #7}. In this set every person is friends with every other person. (One can check that #1 is friends with #2, #5, #6, and #7; #2 is friends with #5, #6, and #7; #5 is friends with #6 and #7; and #6 is friends with #7.) 
+
+Because each pair of friends must wear different colors, every vertex of a clique must be assigned a unique color. But if the clique has five vertices and there are only four colors available, it is impossible to color this clique. Therefore, there is no way for all eight people to choose a shirt color (red, green, blue, or yellow) with the property that no two friends wear the same color shirt.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

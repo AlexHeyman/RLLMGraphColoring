@@ -1,0 +1,81 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 6), (0, 7), (1, 2), (1, 3), (1, 5), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 4), (0, 5), (1, 4), (2, 3), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four colors (red, green, blue, yellow) to the eight people—with the rule that no two friends share the same color—is possible.
+
+Let’s label the people as follows:
+ • A = Alice
+ • B = Bob
+ • C = Carol
+ • D = Dave
+ • E = Ethan
+ • F = Fran
+ • G = George
+ • H = Heather
+
+The friendship relations are:
+ A is friends with B, C, D, G, H.
+ B is friends with A, C, D, F, G, H.
+ C is friends with A, B, E, F, G, H.
+ D is friends with A, B, E, F, G, H.
+ E is friends with C, D, F, G, H.
+ F is friends with B, C, D, E, G, H.
+ G is friends with A, B, C, D, E, F, H.
+ H is friends with A, B, C, D, E, F, G.
+
+Observe that every one of A, B, C, D, E, and F is friends with both G (George) and H (Heather). Since G and H are themselves friends, they must receive two different colors. Once colors are chosen for G and H, every one of A, B, C, D, E, and F has those two colors forbidden. In a four‐color palette, that leaves exactly two colors available for each of these six vertices.
+
+However, consider the induced subgraph on {A, B, C, D, E, F}. For instance, A, B, and C form a triangle because:
+ • A is friends with B and C,
+ • B is friends with C.
+A triangle is not 2‐colorable; it needs at least three different colors. Thus it is impossible to assign to A, B, C, D, E, and F only two colors while keeping friends different.
+
+Since every valid assignment must force A–F to choose from only two available colors (because they are all adjacent to both G and H), a proper four‐coloring meeting the rule cannot exist.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of the four colors (red, green, blue, yellow) to the eight people—with the rule that no two friends share the same color—is possible.
+
+Let’s label the people as follows:
+ • A = #0
+ • B = #1
+ • C = #2
+ • D = #3
+ • E = #4
+ • F = #5
+ • G = #6
+ • H = #7
+
+The friendship relations are:
+ A is friends with B, C, D, G, H.
+ B is friends with A, C, D, F, G, H.
+ C is friends with A, B, E, F, G, H.
+ D is friends with A, B, E, F, G, H.
+ E is friends with C, D, F, G, H.
+ F is friends with B, C, D, E, G, H.
+ G is friends with A, B, C, D, E, F, H.
+ H is friends with A, B, C, D, E, F, G.
+
+Observe that every one of A, B, C, D, E, and F is friends with both G (#6) and H (#7). Since G and H are themselves friends, they must receive two different colors. Once colors are chosen for G and H, every one of A, B, C, D, E, and F has those two colors forbidden. In a four‐color palette, that leaves exactly two colors available for each of these six vertices.
+
+However, consider the induced subgraph on {A, B, C, D, E, F}. For instance, A, B, and C form a triangle because:
+ • A is friends with B and C,
+ • B is friends with C.
+A triangle is not 2‐colorable; it needs at least three different colors. Thus it is impossible to assign to A, B, C, D, E, and F only two colors while keeping friends different.
+
+Since every valid assignment must force A–F to choose from only two available colors (because they are all adjacent to both G and H), a proper four‐coloring meeting the rule cannot exist.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

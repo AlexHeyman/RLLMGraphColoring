@@ -1,0 +1,51 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(1, 3), (2, 3), (2, 5), (2, 6), (2, 7), (3, 4), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that under the given conditions it is impossible to assign the shirts so that no friends wear the same color.
+
+Let the four available shirt colors be Red, Green, Blue, and Yellow. Notice first that Alice is friends with everyone. So whatever color Alice wears (say Red), none of the other 7 people may wear Red. That forces each of the remaining 7 people (Bob, Carol, Dave, Ethan, Fran, George, Heather) to choose from only the three colors {Green, Blue, Yellow}.
+
+Now consider the network of friendships among these 7 people. From the problem the friendships (other than those with Alice) are:
+ • Bob is friends with Carol, Ethan, Fran, George, and Heather.
+ • Carol is friends with Ethan.
+ • Dave is friends with Fran, George, and Heather.
+ • Ethan is friends with George and Heather.
+ • Fran is friends with George and Heather.
+ • George is friends with Heather.
+
+Thus, the remaining graph (with vertices the 7 people and edges the friendships above) must be colored with three colors. One can verify by trying to assign the three colors that this graph is not 3‑colorable: for example, Bob is adjacent to five others, and there are several triangles (complete subgraphs on three vertices) among the remaining vertices (for instance, Bob–Fran–George and Bob–George–Heather are triangles). In every attempted assignment using only {Green, Blue, Yellow} a conflict eventually arises.
+
+Since the 7 vertices would have to be colored with only three colors (forced by avoiding Red, which Alice wears) and this subgraph is not 3‑colorable, there is no way to assign the 4 colors to all 8 people with the rule that no one wears the same color as any friend.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that under the given conditions it is impossible to assign the shirts so that no friends wear the same color.
+
+Let the four available shirt colors be Red, Green, Blue, and Yellow. Notice first that #0 is friends with everyone. So whatever color #0 wears (say Red), none of the other 7 people may wear Red. That forces each of the remaining 7 people (#1, #2, #3, #4, #5, #6, #7) to choose from only the three colors {Green, Blue, Yellow}.
+
+Now consider the network of friendships among these 7 people. From the problem the friendships (other than those with #0) are:
+ • #1 is friends with #2, #4, #5, #6, and #7.
+ • #2 is friends with #4.
+ • #3 is friends with #5, #6, and #7.
+ • #4 is friends with #6 and #7.
+ • #5 is friends with #6 and #7.
+ • #6 is friends with #7.
+
+Thus, the remaining graph (with vertices the 7 people and edges the friendships above) must be colored with three colors. One can verify by trying to assign the three colors that this graph is not 3‑colorable: for example, #1 is adjacent to five others, and there are several triangles (complete subgraphs on three vertices) among the remaining vertices (for instance, #1–#5–#6 and #1–#6–#7 are triangles). In every attempted assignment using only {Green, Blue, Yellow} a conflict eventually arises.
+
+Since the 7 vertices would have to be colored with only three colors (forced by avoiding Red, which #0 wears) and this subgraph is not 3‑colorable, there is no way to assign the 4 colors to all 8 people with the rule that no one wears the same color as any friend.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

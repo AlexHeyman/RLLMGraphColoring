@@ -1,0 +1,30 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 5), (1, 6), (2, 3), (2, 6), (2, 7), (3, 4), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 7), (2, 4), (2, 5), (3, 5), (3, 6)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how one tries, it is not possible to assign four colors to the 8 vertices so that every edge connects vertices of different colors. (In other words, the graph is not 4‐colorable.) 
+
+Below is one way to explain why.
+
+Let the four colors be Red, Green, Blue, and Yellow. Suppose for contradiction that there is an assignment of these colors to vertices 0, 1, 2, 3, 4, 5, 6, and 7 satisfying the “adjacent gets different color” rule, given the following edge set:
+
+  {(0,1), (0,2), (0,3), (0,4), (1,2), (1,5), (1,6), (2,3), (2,6), (2,7),  
+    (3,4), (3,7), (4,5), (4,6), (4,7), (5,6), (5,7), (6,7)}
+
+Many of the vertices are highly connected. For example, vertex 0 is adjacent to 1, 2, 3, and 4. Thus these four neighbors must all get colors different from the color chosen for vertex 0. In addition, a certain set of the remaining seven vertices (for instance, vertices 3, 4, 5, 6, and 7) form a clique (a set where every two vertices are adjacent) of size 4 (for example, the vertices 4, 5, 6, and 7 are mutually adjacent by edges (4,5), (4,6), (4,7), (5,6), (5,7), and (6,7)). In any clique each vertex must an all different color; hence these four vertices already “use up” all four colors. 
+
+Even with some try‐and‐error following through on possible coloring orders one finds that eventually some vertex must have all four colors used by its neighbors. (For instance, one may start with vertex 0 = Red and then assign tentative colors to 1, 2, 3 and 4; but then when you try to complete the coloring for vertices 5, 6, and 7 you always run into a situation — no matter how you revise your choices — in which vertex 7 is adjacent to vertices of all four different colors.) 
+
+Because repeated careful attempts lead to this unavoidable conflict, there exists no valid four–coloring of this graph.
+
+Thus, the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,31 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 6), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (2, 3), (3, 5), (3, 7), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no valid 4‐coloring exists. In other words, there is no way to assign each vertex one of the four colors (red, green, blue, yellow) so that every edge’s two endpoints get different colors.
+
+Below we describe one “failed‐attempt” that hints at the underlying issue.
+
+One might try to “save” a color for vertex 6 by “reusing” a color on a pair of nonadjacent vertices in its neighborhood. For example, note that vertices 0 and 1 are not adjacent so one might let both be Red. (Vertex 6 is adjacent to 0, 1, 2, 3, 4, and 5.) Then one might attempt a scheme along these lines:
+
+• Let 0 = Red, and 1 = Red.
+• Vertices 0 and 1 are each connected to 2, 3, 4, 5 so those vertices must avoid Red. In particular, one might try:
+  2 = Blue,
+  3 = Yellow,
+  4 = Green,
+  5 = Blue.
+• Now consider vertex 6. Its neighbors then (from 0, 1, 2, 3, 4, 5) would have colors: Red, Red, Blue, Yellow, Green, Blue. That is, the set {Red, Blue, Yellow, Green} appears among its neighbors, so no matter which of the four colors one picks for 6 the same color is already used by one neighbor.
+
+One might try other variations (for example, swapping colors among 2,3,4,5 or using different choices for 0 and 1), but in every assignment the six vertices adjacent to vertex 6 “cover” all four colors. (Even if some color appears twice the set of colors used is still all four.) Thus no color remains available for vertex 6.
+
+Since vertex 6 (and similarly one may check vertices 0 and 1, which “spread” constraints to many others) forces a conflict in any assignment using only four colors, we conclude that a proper 4‐coloring of this graph is impossible.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

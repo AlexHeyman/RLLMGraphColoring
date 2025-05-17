@@ -1,0 +1,45 @@
+Edges: [(0, 1), (0, 2), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (0, 4), (2, 5), (3, 4), (3, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four shirt‐colors (red, green, blue, and yellow) to the eight people can avoid a conflict among friends.
+
+One way to see why is to notice that among the seven people other than Heather there is a set of four who are all mutual friends—i.e. a clique of size 4. (For example, Bob, Carol, Dave, and George form a clique because according to the list:
+ • Bob is friends with Carol, Dave, and George.
+ • Carol is friends with Bob, Dave, and George.
+ • Dave is friends with Bob, Carol, and George.
+ • George is friends with Bob, Carol, and Dave.)
+In any proper coloring of a graph, a clique of size 4 forces those four vertices to be assigned four different colors. In our case the only colors available are red, green, blue, and yellow.
+
+Now, notice that Heather is friends with all of the other seven people. In particular, she is friends with the four people in the clique. That means Heather is adjacent to vertices that are already using all four available colors. Therefore, no color remains that she could wear without matching the shirt color of one of her friends.
+
+Thus, it is impossible to assign shirt colors according to the rules.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of the four shirt‐colors (red, green, blue, and yellow) to the eight people can avoid a conflict among friends.
+
+One way to see why is to notice that among the seven people other than #7 there is a set of four who are all mutual friends—i.e. a clique of size 4. (For example, #1, #2, #3, and #6 form a clique because according to the list:
+ • #1 is friends with #2, #3, and #6.
+ • #2 is friends with #1, #3, and #6.
+ • #3 is friends with #1, #2, and #6.
+ • #6 is friends with #1, #2, and #3.)
+In any proper coloring of a graph, a clique of size 4 forces those four vertices to be assigned four different colors. In our case the only colors available are red, green, blue, and yellow.
+
+Now, notice that #7 is friends with all of the other seven people. In particular, she is friends with the four people in the clique. That means #7 is adjacent to vertices that are already using all four available colors. Therefore, no color remains that she could wear without matching the shirt color of one of her friends.
+
+Thus, it is impossible to assign shirt colors according to the rules.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

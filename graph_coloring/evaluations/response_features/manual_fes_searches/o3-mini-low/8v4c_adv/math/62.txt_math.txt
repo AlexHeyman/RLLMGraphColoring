@@ -1,0 +1,25 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 6), (2, 7), (3, 4), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 5), (2, 3), (2, 4), (2, 5), (3, 5), (3, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four colors (Red, Green, Blue, Yellow) to the eight vertices obeying the “neighbors have different color” rule exists, given this particular set of edges. (Any correct proof or search procedure is acceptable.)
+
+One way to see this is to note that the graph has many “dense‐subsets” that force nearly a four‐clique. For example, observe that
+
+  • Vertices 0, 1, 4 all are mutually adjacent (0–1, 0–4, 1–4) and so must receive three different colors.
+  • In addition vertex 7 is connected to each of 0, 1, and 4. This forces vertex 7 to be colored by the “fourth” color.
+  • Next, consider vertex 6. It is adjacent to vertices 0, 1, 4 (and also to additional vertices) so vertex 6 must avoid the colors assigned to 0, 1, and 4. In the only remaining color (the same color as 7) vertex 6 might be placed, one must further check every edge; unfortunately the extra edges—such as (2,6) and (5,6) in the graph—end up producing conflicts in any case.
+
+One may try a systematic backtracking search and, after checking all 4^8 possibilities, one will find that no valid coloring exists.
+
+Thus, there is no valid assignment of the four colors to the vertices so that no two adjacent vertices share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

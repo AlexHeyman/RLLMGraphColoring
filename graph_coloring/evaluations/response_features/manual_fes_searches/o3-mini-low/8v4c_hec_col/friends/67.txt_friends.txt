@@ -1,0 +1,39 @@
+Edges: [(0, 2), (0, 3), (0, 5), (0, 7), (1, 2), (1, 5), (1, 6), (1, 7), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (6, 7)]
+
+Complement: [(0, 1), (0, 4), (0, 6), (1, 3), (1, 4), (2, 3), (2, 4), (5, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how we try to assign the four available shirt‐colors to the eight people so that no pair of friends wears the same color, one person is “forced” into a contradiction. (In other words, no proper 4‐coloring of the “friendship graph” exists.)
+
+Let the four colors be Red, Green, Blue, and Yellow. One way to approach the problem is to “draw” a graph whose vertices represent the people and whose edges join those who are friends. (Below the eight people are listed with the “friend” relations described in the problem.) For example, we have an edge between Alice and Carol, between Alice and Dave, between Alice and Fran, and between Alice and Heather; Bob is joined to Carol, Fran, George, and Heather; and so on.
+
+When you work out the graph using the given list of friendships, you will find (after some analysis) that one subset of seven people—namely, Alice, Bob, Carol, Dave, Ethan, Fran, and George—is very “tightly knit.” In fact, by looking at the adjacencies you can show that among these seven there is a complete subgraph (a clique) of size 4. For example, Fran is friends with all of Alice, Bob, Carol, and George; it happens (after following all the given relations) that some four of these people are mutually friends. (One way to pinpoint a 4‐clique is to note that the “central” people Bob, Carol, Fran, and George all know one another.) This forces these four vertices to get four different colors. But note that Heather is friends with every one of these seven people. As a result, in any assignment the neighbors of Heather (that is, all the rest except Heather herself) will have used all four colors. That leaves no choice for Heather.
+
+One might try to “save” Heather by “forcing” one color to be missing among her seven friends, but the structure of the induced subgraph on the other seven people guarantees that at least one clique of four appears. (Any proper 4‐coloring of a graph containing a clique of size 4 must assign four distinct colors to the clique.) Since Heather is adjacent to all the vertices in that clique, every color will occur at least once among her friends.
+
+Thus no assignment exists that lets every person wear a shirt whose color differs from every friend’s shirt color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how we try to assign the four available shirt‐colors to the eight people so that no pair of friends wears the same color, one person is “forced” into a contradiction. (In other words, no proper 4‐coloring of the “friendship graph” exists.)
+
+Let the four colors be Red, Green, Blue, and Yellow. One way to approach the problem is to “draw” a graph whose vertices represent the people and whose edges join those who are friends. (Below the eight people are listed with the “friend” relations described in the problem.) For example, we have an edge between #0 and #2, between #0 and #3, between #0 and #5, and between #0 and #7; #1 is joined to #2, #5, #6, and #7; and so on.
+
+When you work out the graph using the given list of friendships, you will find (after some analysis) that one subset of seven people—namely, #0, #1, #2, #3, #4, #5, and #6—is very “tightly knit.” In fact, by looking at the adjacencies you can show that among these seven there is a complete subgraph (a clique) of size 4. For example, #5 is friends with all of #0, #1, #2, and #6; it happens (after following all the given relations) that some four of these people are mutually friends. (One way to pinpoint a 4‐clique is to note that the “central” people #1, #2, #5, and #6 all know one another.) This forces these four vertices to get four different colors. But note that #7 is friends with every one of these seven people. As a result, in any assignment the neighbors of #7 (that is, all the rest except #7 herself) will have used all four colors. That leaves no choice for #7.
+
+One might try to “save” #7 by “forcing” one color to be missing among her seven friends, but the structure of the induced subgraph on the other seven people guarantees that at least one clique of four appears. (Any proper 4‐coloring of a graph containing a clique of size 4 must assign four distinct colors to the clique.) Since #7 is adjacent to all the vertices in that clique, every color will occur at least once among her friends.
+
+Thus no assignment exists that lets every person wear a shirt whose color differs from every friend’s shirt color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

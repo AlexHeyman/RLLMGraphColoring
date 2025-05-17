@@ -1,0 +1,33 @@
+Edges: [(0, 1), (0, 2), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (0, 4), (1, 2), (1, 6), (1, 7), (4, 6), (4, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of four colors (red, green, blue, yellow) to vertices 0 … 7 avoids giving adjacent vertices the same color.
+
+One observation makes the impossibility clear. Look at vertex 5. Its incident edges are
+
+  (0,5), (1,5), (2,5), (3,5), (4,5), (5,6), (5,7).
+
+Thus vertex 5 is adjacent to every vertex except itself. In any proper coloring vertex 5 must get a color different from every other vertex. In other words, the color used at vertex 5 may never appear elsewhere in the graph.
+
+Now consider the remaining vertices {0,1,2,3,4,6,7}. They must then be colored using only the other three colors.
+
+Examine the edges among these vertices. In particular, note that edges
+
+  (0,1), (0,2), (0,6), (0,7),
+  (2,6), (2,7),
+  (6,7)
+
+exist (and in fact a careful look shows that vertices 0, 2, 6, and 7 form a clique; every pair among them is connected). A clique is a subgraph in which every two distinct vertices are adjacent. In the clique {0,2,6,7} there are 4 vertices and so they must receive 4 different colors. But as already observed, in our coloring the only available colors for these vertices come from the three colors not used at vertex 5. (We cannot “save” one of the four colors for this clique because vertex 5’s choice cannot re‐appear anywhere else.) Hence, no matter how one attempts an assignment, there is no way to assign four colors to all vertices while keeping adjacent vertices different.
+
+Thus the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,43 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 3), (2, 5), (2, 6), (2, 7), (3, 4), (3, 6), (4, 5), (4, 6), (4, 7), (5, 7), (6, 7)]
+
+Complement: [(0, 1), (1, 7), (2, 4), (3, 5), (3, 7), (5, 6)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of four colors to the vertices (colors: Red, Green, Blue, Yellow) will “separate” every edge (so that at every edge the two endpoints receive different colors).
+
+One way to “discover” the impossibility is to look at one vertex that “sees” so many differently‐colored neighbors that, if the rest of the graph “collaborates” in a best–case “sharing” of colors, it still forces all four colors in the neighborhood of that vertex. (Then that vertex would have no available fourth “different” color.)
+
+Let the vertices be 0, 1, 2, …, 7 and let the edges be exactly the set
+  {(0,2), (0,3), (0,4), (0,5), (0,6), (0,7),
+   (1,2), (1,3), (1,4), (1,5), (1,6),
+   (2,3), (2,5), (2,6), (2,7),
+   (3,4), (3,6),
+   (4,5), (4,6), (4,7),
+   (5,7), (6,7)}.
+
+Notice that vertex 0 is adjacent to 2, 3, 4, 5, 6, and 7. Since 0 meets the “rest of the world” in six different vertices, one might hope that some two among 2,3,4,5,6,7 might share a color. But later we shall see that the remainder of the graph “forces” the neighbors of 0 to come in three different colors (and 0 itself gets the fourth color).
+
+A short “insight‐style” analysis goes as follows. Since 0 is adjacent to many vertices, we can – without loss of generality – assign
+  vertex 0 = Red.
+
+Now look at vertex 6. The list of edges shows that 6 is adjacent to 0 (so 6 ≠ Red) and also to vertices 1, 2, 3, and 4.
+A closer look at the induced subgraph on vertices {1,2,3,4} (obtained by “reading off” the edges among them from the given list)
+  – we have (1,2), (1,3), (1,4),
+  – and in addition (2,3) and (3,4)
+– forces that, even in an optimal coloring (that is, trying to “reuse” colors whenever possible subject to the rule), these four vertices would need at least three different colors (none of which is Red because each of 1,2,3,4 is adjacent to 0, or appears in an edge with 0). Thus the color–set used among 1,2,3,4 is something like {Blue, Green, Yellow} (in some order).
+Then the neighbors of vertex 6 are:
+  vertex 0 = Red and vertices 1,2,3,4 = {Blue, Green, Yellow} (using all three colors).
+That forces the set of colors “seen” by vertex 6 to be {Red, Blue, Green, Yellow} – all four available colors. Since two endpoints of an edge must use different colors, vertex 6 would then have no possibility of being assigned any color different from all of its neighbors.
+
+Thus, no proper 4–coloring exists. (Any attempted design of a coloring plan will run into a clash somewhere, and in particular the “bottleneck” is vertex 6, whose neighborhood “uses up” all four colors.) 
+
+So the final answer is just:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

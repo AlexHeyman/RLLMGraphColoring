@@ -1,0 +1,77 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7)]
+
+Complement: [(0, 3), (0, 5), (2, 4), (2, 5), (5, 6), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how one tries to “color” (assign shirt‐colors to) the eight people with the four given colors (Red, Green, Blue, Yellow) so that no one wears the same color as any friend, one is forced into a contradiction. In other words, under the friendship relations given, it is impossible for everyone to wear one of the four colors while obeying the “different from every friend” rule.
+
+Below is one way to explain the reasoning.
+
+Let the people be represented by the vertices
+  Alice, Bob, Carol, Dave, Ethan, Fran, George, and Heather. 
+The friendship “edges” are given by the list in the problem. (For example, “Alice is friends with Bob” means the edge between Alice and Bob, and so on.)
+
+A key observation is that one particular person—George—has a rather “busy” set of friends. In fact, George is friends with
+  Alice, Bob, Carol, Dave, Ethan, and Heather.
+Thus in any acceptable assignment of colors, the six people in the “neighborhood” of George must get colors all different from whatever color George gets. Since there are only four colors, if the friends of George used four or more distinct colors then the color available for George would be “used up.”
+
+Now, you might hope to “save” one color by forcing one or more of the six neighbors to share the same color. However, because the friendship rules force many edges among these six vertices, one cannot make two people in George’s friend‐set share the same color unless they are not friends. (In our induced subgraph on the six vertices {Alice, Bob, Carol, Dave, Ethan, Heather} the only “missing” edges are those not listed as friendships. A careful check shows that even with the best possible pairing (for example, assigning the same color to two people who are not friends), one ends up with all four colors among the neighbors.)
+ 
+For example, an attempted strategy might be as follows. Suppose one “forces” some repetition by letting two people that are not friends (say Alice and Dave, since “Alice is not friends with Dave”) share the same color. And suppose we try to let another two non‐friends (say Carol and Ethan—since “Carol is not friends with Ethan”) share another color. One might then try to assign:
+  Bob: Red      – (since Bob is very “friendly” he forces a unique color)
+  Alice: Blue
+  Dave: Blue      – (allowed because Alice and Dave aren’t friends)
+  Carol: Green
+  Ethan: Green     – (allowed because Carol and Ethan aren’t friends)
+  Heather: Yellow    – (forced because Heather is adjacent to Alice, Bob, and Carol)
+Now, the friends of George are {Alice (Blue), Bob (Red), Carol (Green), Dave (Blue), Ethan (Green), Heather (Yellow)}. Even though we got a “repetition” (Blue and Green appear twice), the whole set of colors used is
+  {Blue, Red, Green, Yellow},
+which uses all four colors. That leaves no color for George!
+
+No matter how one reassigns colors, one always finds that the six people in George’s friend‐set require four different colors, leaving nothing for George. (A full search – or a careful analysis of the induced subgraph on {Alice, Bob, Carol, Dave, Ethan, Heather} – will show that it is not possible to “3‐color” that subgraph; one must use all four available colors.)
+
+Thus, there is no valid assignment of the four colors to the eight people while satisfying the constraint that no pair of friends wears the same colored shirt.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how one tries to “color” (assign shirt‐colors to) the eight people with the four given colors (Red, Green, Blue, Yellow) so that no one wears the same color as any friend, one is forced into a contradiction. In other words, under the friendship relations given, it is impossible for everyone to wear one of the four colors while obeying the “different from every friend” rule.
+
+Below is one way to explain the reasoning.
+
+Let the people be represented by the vertices
+  #0, #1, #2, #3, #4, #5, #6, and #7. 
+The friendship “edges” are given by the list in the problem. (For example, “#0 is friends with #1” means the edge between #0 and #1, and so on.)
+
+A key observation is that one particular person—#6—has a rather “busy” set of friends. In fact, #6 is friends with
+  #0, #1, #2, #3, #4, and #7.
+Thus in any acceptable assignment of colors, the six people in the “neighborhood” of #6 must get colors all different from whatever color #6 gets. Since there are only four colors, if the friends of #6 used four or more distinct colors then the color available for #6 would be “used up.”
+
+Now, you might hope to “save” one color by forcing one or more of the six neighbors to share the same color. However, because the friendship rules force many edges among these six vertices, one cannot make two people in #6’s friend‐set share the same color unless they are not friends. (In our induced subgraph on the six vertices {#0, #1, #2, #3, #4, #7} the only “missing” edges are those not listed as friendships. A careful check shows that even with the best possible pairing (for example, assigning the same color to two people who are not friends), one ends up with all four colors among the neighbors.)
+ 
+For example, an attempted strategy might be as follows. Suppose one “forces” some repetition by letting two people that are not friends (say #0 and #3, since “#0 is not friends with #3”) share the same color. And suppose we try to let another two non‐friends (say #2 and #4—since “#2 is not friends with #4”) share another color. One might then try to assign:
+  #1: Red      – (since #1 is very “friendly” he forces a unique color)
+  #0: Blue
+  #3: Blue      – (allowed because #0 and #3 aren’t friends)
+  #2: Green
+  #4: Green     – (allowed because #2 and #4 aren’t friends)
+  #7: Yellow    – (forced because #7 is adjacent to #0, #1, and #2)
+Now, the friends of #6 are {#0 (Blue), #1 (Red), #2 (Green), #3 (Blue), #4 (Green), #7 (Yellow)}. Even though we got a “repetition” (Blue and Green appear twice), the whole set of colors used is
+  {Blue, Red, Green, Yellow},
+which uses all four colors. That leaves no color for #6!
+
+No matter how one reassigns colors, one always finds that the six people in #6’s friend‐set require four different colors, leaving nothing for #6. (A full search – or a careful analysis of the induced subgraph on {#0, #1, #2, #3, #4, #7} – will show that it is not possible to “3‐color” that subgraph; one must use all four available colors.)
+
+Thus, there is no valid assignment of the four colors to the eight people while satisfying the constraint that no pair of friends wears the same colored shirt.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

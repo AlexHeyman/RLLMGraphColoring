@@ -1,0 +1,39 @@
+Edges: [(0, 2), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 3), (1, 3), (2, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that these friendship constraints force a 5‐vertex clique (a complete graph on 5 vertices) among some of the people, so that at least 5 different shirt colors would be needed. Since only 4 colors are available, a proper assignment is impossible.
+
+For example, observe the following relationships:
+ • Alice is friends with Carol, Fran, George, and Heather.
+ • Carol is friends with Alice, Fran, George, and Heather.
+ • Fran, George, and Heather are each mutually friends with each other (the list tells us Fran is friends with both George and Heather, and George is friends with Heather).
+Thus, the set {Alice, Carol, Fran, George, Heather} forms a clique: every pair among them are friends. In any clique, every vertex must receive a distinct color. Hence, these 5 people would require 5 different colors.
+
+Since we only have 4 shirt colors (red, green, blue, yellow), it is impossible to assign colors so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that these friendship constraints force a 5‐vertex clique (a complete graph on 5 vertices) among some of the people, so that at least 5 different shirt colors would be needed. Since only 4 colors are available, a proper assignment is impossible.
+
+For example, observe the following relationships:
+ • #0 is friends with #2, #5, #6, and #7.
+ • #2 is friends with #0, #5, #6, and #7.
+ • #5, #6, and #7 are each mutually friends with each other (the list tells us #5 is friends with both #6 and #7, and #6 is friends with #7).
+Thus, the set {#0, #2, #5, #6, #7} forms a clique: every pair among them are friends. In any clique, every vertex must receive a distinct color. Hence, these 5 people would require 5 different colors.
+
+Since we only have 4 shirt colors (red, green, blue, yellow), it is impossible to assign colors so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

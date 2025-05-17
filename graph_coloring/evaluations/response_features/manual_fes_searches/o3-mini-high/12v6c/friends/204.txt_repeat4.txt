@@ -1,0 +1,93 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 6), (0, 7), (0, 8), (0, 9), (0, 10), (0, 11), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (1, 9), (1, 10), (2, 3), (2, 4), (2, 5), (2, 7), (2, 9), (2, 11), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (3, 10), (3, 11), (4, 5), (4, 7), (4, 8), (4, 9), (4, 10), (4, 11), (5, 6), (5, 7), (5, 8), (5, 10), (5, 11), (6, 7), (6, 8), (6, 10), (6, 11), (7, 8), (7, 9), (7, 10), (7, 11), (8, 11), (9, 10), (9, 11)]
+
+Complement: [(0, 2), (0, 5), (1, 3), (1, 8), (1, 11), (2, 6), (2, 8), (2, 10), (3, 4), (4, 6), (5, 9), (6, 9), (8, 9), (8, 10), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that even though there are “only” six shirt‐colors available, it is not possible for the 12 people to choose colors so that nobody wears the same color as a friend.
+
+Below is one way to explain the answer.
+
+Let the people be labeled as follows:
+  A = Alice, B = Bob, C = Carol, D = Dave, E = Ethan, F = Fran, 
+  G = George, H = Heather, I = Irene, J = Jack, K = Kathy, L = Larry.
+(The “friendship–graph” has a vertex for each person and an edge joining two vertices whenever the people are friends.)
+
+A careful reading of the list shows (after “symmetrizing” the list) that for example:
+  • Alice is friends with B, D, E, G, H, I, J, K, L.
+  • Bob (B) is friends with A, C, E, F, G, H, J, K.
+  • Carol (C) is friends with B, D, E, F, H, J, L.
+  • Dave (D) is friends with A, C, F, G, H, I, J, K, L.
+  • Ethan (E) is friends with A, B, C, F, H, I, J, K, L.
+  • Fran (F) is friends with B, C, D, E, G, H, I, K, L.
+  • George (G) is friends with A, B, D, F, H, I, K, L.
+  • Heather (H) is friends with everyone else.
+  • Irene (I) is friends with A, D, E, F, G, H, L.
+  • Jack (J) is friends with A, B, C, D, E, H, K, L.
+  • Kathy (K) is friends with A, B, D, E, F, G, H, J.
+  • Larry (L) is friends with A, C, D, E, F, G, H, I, J.
+
+Since H (Heather) is friends with all the other 11 people, any valid “coloring” (that is, assignment of shirt–colors so that friends have different colors) must assign H a color different from everybody else’s. In other words, if the six colors are (say) Red, Green, Blue, Yellow, Orange, and Purple and if H uses, say, Red, then every other person must use one of the other five colors.
+
+One might hope that the “sub–graph” on the remaining 11 vertices can be colored using only five colors. (A proper coloring means that if two people are friends they get different colors.) However, it turns out that in every putative 5–coloring of the other 11 vertices one “bottleneck” appears. For example, one may show that if you look at the set of people who are all friends with Irene—that is, the set
+  N(I) = {all vertices adjacent to I} = {A, D, E, F, G, L} 
+(which comes from the fact that Irene is friends with Alice, Dave, Ethan, Fran, George, and Larry) then the “induced graph” on N(I) has the property that any proper coloring forces all five colors to appear among these six people.
+
+(One way to see a “bottleneck” is to try to “pre–color” among those who are also friends with Jack. In fact, one may “force” a 4–coloring on the seven people who are Jack’s friends outside of Heather—but then when one looks at the friends of Irene (a subset of these vertices) the colors turn out to be “spread out” so that all five non–Red colors are required. Then Irene, who is adjacent to all of these, would have no legal color available.)
+
+In short, once Heather uses one color (say Red), the remaining 11 people would have to be colored with the five colors {Green, Blue, Yellow, Orange, Purple} but a careful (or computer–assisted) check on the given friendship relations shows that the “friends–graph” on these 11 vertices has chromatic number 6. In other words, no matter how you try to assign the colors, some person (in fact, one may show that Irene cannot be colored under any assignment using only five colors on the other vertices) would find that all five “other” colors appear on her friends.
+
+Since the entire party would then use 1 (for Heather) + 6 (for the other 11) = 7 different colors, there is no way to assign colors from an available list of only six.
+
+Thus the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that even though there are “only” six shirt‐colors available, it is not possible for the 12 people to choose colors so that nobody wears the same color as a friend.
+
+Below is one way to explain the answer.
+
+Let the people be labeled as follows:
+  A = #0, B = #1, C = #2, D = #3, E = #4, F = #5, 
+  G = #6, H = #7, I = #8, J = #9, K = #10, L = #11.
+(The “friendship–graph” has a vertex for each person and an edge joining two vertices whenever the people are friends.)
+
+A careful reading of the list shows (after “symmetrizing” the list) that for example:
+  • #0 is friends with B, D, E, G, H, I, J, K, L.
+  • #1 (B) is friends with A, C, E, F, G, H, J, K.
+  • #2 (C) is friends with B, D, E, F, H, J, L.
+  • #3 (D) is friends with A, C, F, G, H, I, J, K, L.
+  • #4 (E) is friends with A, B, C, F, H, I, J, K, L.
+  • #5 (F) is friends with B, C, D, E, G, H, I, K, L.
+  • #6 (G) is friends with A, B, D, F, H, I, K, L.
+  • #7 (H) is friends with everyone else.
+  • #8 (I) is friends with A, D, E, F, G, H, L.
+  • #9 (J) is friends with A, B, C, D, E, H, K, L.
+  • #10 (K) is friends with A, B, D, E, F, G, H, J.
+  • #11 (L) is friends with A, C, D, E, F, G, H, I, J.
+
+Since H (#7) is friends with all the other 11 people, any valid “coloring” (that is, assignment of shirt–colors so that friends have different colors) must assign H a color different from everybody else’s. In other words, if the six colors are (say) Red, Green, Blue, Yellow, Orange, and Purple and if H uses, say, Red, then every other person must use one of the other five colors.
+
+One might hope that the “sub–graph” on the remaining 11 vertices can be colored using only five colors. (A proper coloring means that if two people are friends they get different colors.) However, it turns out that in every putative 5–coloring of the other 11 vertices one “bottleneck” appears. For example, one may show that if you look at the set of people who are all friends with #8—that is, the set
+  N(I) = {all vertices adjacent to I} = {A, D, E, F, G, L} 
+(which comes from the fact that #8 is friends with #0, #3, #4, #5, #6, and #11) then the “induced graph” on N(I) has the property that any proper coloring forces all five colors to appear among these six people.
+
+(One way to see a “bottleneck” is to try to “pre–color” among those who are also friends with #9. In fact, one may “force” a 4–coloring on the seven people who are #9’s friends outside of #7—but then when one looks at the friends of #8 (a subset of these vertices) the colors turn out to be “spread out” so that all five non–Red colors are required. Then #8, who is adjacent to all of these, would have no legal color available.)
+
+In short, once #7 uses one color (say Red), the remaining 11 people would have to be colored with the five colors {Green, Blue, Yellow, Orange, Purple} but a careful (or computer–assisted) check on the given friendship relations shows that the “friends–graph” on these 11 vertices has chromatic number 6. In other words, no matter how you try to assign the colors, some person (in fact, one may show that #8 cannot be colored under any assignment using only five colors on the other vertices) would find that all five “other” colors appear on her friends.
+
+Since the entire party would then use 1 (for #7) + 6 (for the other 11) = 7 different colors, there is no way to assign colors from an available list of only six.
+
+Thus the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

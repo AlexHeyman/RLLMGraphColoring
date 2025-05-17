@@ -1,0 +1,85 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 5), (2, 4), (2, 5), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We begin by listing the friendships between the eight people. (For convenience, we treat friendships as “edges” in a graph whose vertices are the people.)
+• Alice is friends with Dave, Ethan, Fran, George, and Heather.
+• Bob is friends with Carol, Dave, Ethan, George, and Heather.
+• Carol is friends with Bob, Dave, George, and Heather.
+• Dave is friends with Alice, Bob, Carol, Ethan, George, and Heather.
+• Ethan is friends with Alice, Bob, Dave, George, and Heather.
+• Fran is friends with Alice, George, and Heather.
+• George is friends with Alice, Bob, Carol, Dave, Ethan, Fran, and Heather.
+• Heather is friends with Alice, Bob, Carol, Dave, Ethan, Fran, and George.
+
+Notice in particular that both George and Heather are very well‐connected—they are friends with every person except each other (and they are friends with each other too).
+
+Now, the party rule is that no two friends may wear the same color shirt chosen from {Red, Green, Blue, Yellow}.
+
+Observe that every person besides George and Heather (namely, Alice, Bob, Carol, Dave, Ethan, and Fran) is friends with both George and Heather. Thus, if George and Heather are assigned two different colors (which they must be since they are friends), then each of the remaining six people cannot use either of those two colors. That leaves exactly two colors for these six people.
+
+When we look at the connections among the remaining six, here are the edges between them (ignoring friends George and Heather):
+ – Alice is friends with Dave, Ethan, and Fran.
+ – Bob is friends with Carol, Dave, and Ethan.
+ – Carol is friends with Bob and Dave.
+ – Dave is friends with Alice, Bob, Carol, and Ethan.
+ – Ethan is friends with Alice, Bob, and Dave.
+ – Fran is friends with Alice.
+
+This forces us to try to 2‑color the subgraph on {Alice, Bob, Carol, Dave, Ethan, Fran}. However, note that Alice, Dave, and Ethan form a triangle:
+ • Alice is friends with Dave.
+ • Alice is friends with Ethan.
+ • Dave is friends with Ethan.
+
+A triangle is a cycle of odd length and cannot be 2‑colored. (In a proper 2‑coloring, an odd cycle will always force two adjacent vertices to receive the same color.) Since each of these six people is forced to choose from only two colors (the ones not used by George and Heather), the existence of an odd cycle makes it impossible for all of them to have a valid color assignment.
+
+Since there is no way to assign shirts to all eight people in such a way that no friends share the same color, the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We begin by listing the friendships between the eight people. (For convenience, we treat friendships as “edges” in a graph whose vertices are the people.)
+• #0 is friends with #3, #4, #5, #6, and #7.
+• #1 is friends with #2, #3, #4, #6, and #7.
+• #2 is friends with #1, #3, #6, and #7.
+• #3 is friends with #0, #1, #2, #4, #6, and #7.
+• #4 is friends with #0, #1, #3, #6, and #7.
+• #5 is friends with #0, #6, and #7.
+• #6 is friends with #0, #1, #2, #3, #4, #5, and #7.
+• #7 is friends with #0, #1, #2, #3, #4, #5, and #6.
+
+Notice in particular that both #6 and #7 are very well‐connected—they are friends with every person except each other (and they are friends with each other too).
+
+Now, the party rule is that no two friends may wear the same color shirt chosen from {Red, Green, Blue, Yellow}.
+
+Observe that every person besides #6 and #7 (namely, #0, #1, #2, #3, #4, and #5) is friends with both #6 and #7. Thus, if #6 and #7 are assigned two different colors (which they must be since they are friends), then each of the remaining six people cannot use either of those two colors. That leaves exactly two colors for these six people.
+
+When we look at the connections among the remaining six, here are the edges between them (ignoring friends #6 and #7):
+ – #0 is friends with #3, #4, and #5.
+ – #1 is friends with #2, #3, and #4.
+ – #2 is friends with #1 and #3.
+ – #3 is friends with #0, #1, #2, and #4.
+ – #4 is friends with #0, #1, and #3.
+ – #5 is friends with #0.
+
+This forces us to try to 2‑color the subgraph on {#0, #1, #2, #3, #4, #5}. However, note that #0, #3, and #4 form a triangle:
+ • #0 is friends with #3.
+ • #0 is friends with #4.
+ • #3 is friends with #4.
+
+A triangle is a cycle of odd length and cannot be 2‑colored. (In a proper 2‑coloring, an odd cycle will always force two adjacent vertices to receive the same color.) Since each of these six people is forced to choose from only two colors (the ones not used by #6 and #7), the existence of an odd cycle makes it impossible for all of them to have a valid color assignment.
+
+Since there is no way to assign shirts to all eight people in such a way that no friends share the same color, the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

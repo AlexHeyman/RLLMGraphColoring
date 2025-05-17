@@ -1,0 +1,31 @@
+Edges: [(0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 2), (1, 5), (2, 4), (2, 5), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no valid 4‐coloring exists.
+
+Note that the graph’s edges include the following four edges:
+  (0,3), (0,4), (0,7), (3,4), (3,7), (4,7).
+
+This means that vertices 0, 3, 4 and 7 form a complete subgraph (a clique of size 4). In any proper vertex–coloring a clique of size 4 must receive four distinct colors. (In our palette the only colors are Red, Green, Blue, Yellow.) Therefore, in any valid coloring we must have, for example, something like
+
+  0 Color A  
+  3 Color B  
+  4 Color C  
+  7 Color D  
+
+with all four colors different.
+
+Now, inspect vertex 6. Its neighbors are 0, 1, 2, 3, 4, 5, 7. In particular, vertex 6 is adjacent to all of the clique vertices 0, 3, 4, and 7. No matter how you choose your 4 colors for the clique these four vertices use all four available colors. That leaves no available color for vertex 6. (Even if you try to “save” a color by changing some assignment on vertices 1, 2 or 5, the clique forces every color to appear among its vertices so that vertex 6 is adjacent to vertices of every color.)
+
+Thus, there is no way to assign the four colors to all vertices while ensuring that adjacent vertices receive distinct colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

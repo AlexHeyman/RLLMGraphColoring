@@ -1,0 +1,43 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 5), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 7)]
+
+Complement: [(0, 5), (1, 4), (2, 3), (5, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to “color” (i.e. assign shirts to) the 8 people with 4 colors (Red, Green, Blue, Yellow) so that no two friends wear the same color, a conflict necessarily arises.
+
+To explain briefly without “brute‐forcing” every possibility, consider the friendship relations as giving us a graph with vertices
+
+  Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather
+
+and the given edges connecting friends. (For example, since “Alice is friends with Bob, Carol, Dave, Ethan, George, Heather” there are edges joining Alice with each of the other six people listed, and so on.) One can check that many vertices have many friends. In fact, every person (with the possible exception of Fran) is friends with at least 5 or 6 others. Even if you try to “save” one vertex by an appropriate assignment of colors to its friends, look at Heather: Heather is friends with 7 people (Alice, Bob, Carol, Dave, Ethan, Fran, and George). In any 4‐coloring, its neighbors would have to use at most 3 colors to leave a “hole” (a spare color) for Heather. But careful inspection (or an attempted coloring) shows that in every assignment there is a set of 5 vertices among Heather’s friends that, because of many friendships among themselves, must be colored using all 4 colors. (A way to see part of the problem is to note that the subgraph induced by the friends of Heather contains a vertex—George in this case—that is adjacent to nearly everyone else in that subset.) Thus Heather would “see” all 4 colors among her friends and she would have no color available for herself.
+
+One may try various assignments. For example, one natural idea is to try to force a “star‐like” situation in a large clique. One finds after a few attempts – even if one tries to restrict the colors on a certain subset of the vertices – that some vertex (usually Heather) always ends up adjacent to friends wearing all 4 different colors.
+
+Since even after many attempts no assignment of 4 colors to these 8 people can avoid a situation in which some two friends share a color, the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to “color” (i.e. assign shirts to) the 8 people with 4 colors (Red, Green, Blue, Yellow) so that no two friends wear the same color, a conflict necessarily arises.
+
+To explain briefly without “brute‐forcing” every possibility, consider the friendship relations as giving us a graph with vertices
+
+  #0, #1, #2, #3, #4, #5, #6, #7
+
+and the given edges connecting friends. (For example, since “#0 is friends with #1, #2, #3, #4, #6, #7” there are edges joining #0 with each of the other six people listed, and so on.) One can check that many vertices have many friends. In fact, every person (with the possible exception of #5) is friends with at least 5 or 6 others. Even if you try to “save” one vertex by an appropriate assignment of colors to its friends, look at #7: #7 is friends with 7 people (#0, #1, #2, #3, #4, #5, and #6). In any 4‐coloring, its neighbors would have to use at most 3 colors to leave a “hole” (a spare color) for #7. But careful inspection (or an attempted coloring) shows that in every assignment there is a set of 5 vertices among #7’s friends that, because of many friendships among themselves, must be colored using all 4 colors. (A way to see part of the problem is to note that the subgraph induced by the friends of #7 contains a vertex—#6 in this case—that is adjacent to nearly everyone else in that subset.) Thus #7 would “see” all 4 colors among her friends and she would have no color available for herself.
+
+One may try various assignments. For example, one natural idea is to try to force a “star‐like” situation in a large clique. One finds after a few attempts – even if one tries to restrict the colors on a certain subset of the vertices – that some vertex (usually #7) always ends up adjacent to friends wearing all 4 different colors.
+
+Since even after many attempts no assignment of 4 colors to these 8 people can avoid a situation in which some two friends share a color, the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

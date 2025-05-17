@@ -1,0 +1,61 @@
+Edges: [(0, 1), (0, 3), (0, 5), (0, 6), (0, 7), (0, 8), (0, 9), (0, 10), (0, 11), (1, 2), (1, 3), (1, 6), (1, 7), (1, 9), (1, 11), (2, 3), (2, 4), (2, 5), (2, 6), (2, 9), (2, 10), (2, 11), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (3, 10), (3, 11), (4, 6), (4, 7), (4, 8), (4, 9), (4, 11), (5, 8), (5, 9), (5, 10), (5, 11), (6, 7), (6, 10), (6, 11), (7, 8), (7, 10), (7, 11), (8, 9), (8, 10), (8, 11), (9, 10), (9, 11)]
+
+Complement: [(0, 2), (0, 4), (1, 4), (1, 5), (1, 8), (1, 10), (2, 7), (2, 8), (3, 4), (4, 5), (4, 10), (5, 6), (5, 7), (6, 8), (6, 9), (7, 9), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the six shirt‐colors can avoid a conflict. In fact, using the friendship “graph” (where each person is a vertex and an edge joins two friends), one may prove that at least seven colors are needed. (Only six colors are available.)
+
+To explain briefly, note that Larry is friends with everyone else. Thus if the 12 people were to wear colors so that no two friends share the same color, then every other person (the “neighbors” of Larry) must wear colors chosen from the other five colors. In other words, the eleven people besides Larry must be colored using only five colors.
+
+But one may check from the list of friendships that the six people
+  Alice, Dave, Fran, Irene, Jack, Kathy 
+form a clique (that is, every pair in this 6‐set are friends). For example:
+
+ • Alice is friends with Dave, Fran, Irene, Jack, and Kathy.
+ • Dave is friends with Alice, Fran, Irene, Jack, and Kathy.
+ • Fran is friends with Alice, Dave, Irene, Jack, and Kathy.
+ • Irene is friends with Alice, Dave, Fran, Jack, and Kathy.
+ • Jack is friends with Alice, Dave, Fran, Irene, and Kathy.
+ • Kathy is friends with Alice, Dave, Fran, Irene, and Jack.
+
+Since every two of these six are friends, they all must wear different colors. That is, even when only the eleven people besides Larry are considered, at least six different colors are needed. (Indeed, a clique of size k forces a chromatic number of at least k.)
+
+Thus even before Larry is assigned a color, the remaining people would use six colors. Then Larry—who is friends with everyone—would have no “unused” color available. In other words, the partygoers would require at least seven colors to avoid a conflict.
+
+Because only six shirts are available, it is impossible.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of the six shirt‐colors can avoid a conflict. In fact, using the friendship “graph” (where each person is a vertex and an edge joins two friends), one may prove that at least seven colors are needed. (Only six colors are available.)
+
+To explain briefly, note that #11 is friends with everyone else. Thus if the 12 people were to wear colors so that no two friends share the same color, then every other person (the “neighbors” of #11) must wear colors chosen from the other five colors. In other words, the eleven people besides #11 must be colored using only five colors.
+
+But one may check from the list of friendships that the six people
+  #0, #3, #5, #8, #9, #10 
+form a clique (that is, every pair in this 6‐set are friends). For example:
+
+ • #0 is friends with #3, #5, #8, #9, and #10.
+ • #3 is friends with #0, #5, #8, #9, and #10.
+ • #5 is friends with #0, #3, #8, #9, and #10.
+ • #8 is friends with #0, #3, #5, #9, and #10.
+ • #9 is friends with #0, #3, #5, #8, and #10.
+ • #10 is friends with #0, #3, #5, #8, and #9.
+
+Since every two of these six are friends, they all must wear different colors. That is, even when only the eleven people besides #11 are considered, at least six different colors are needed. (Indeed, a clique of size k forces a chromatic number of at least k.)
+
+Thus even before #11 is assigned a color, the remaining people would use six colors. Then #11—who is friends with everyone—would have no “unused” color available. In other words, the partygoers would require at least seven colors to avoid a conflict.
+
+Because only six shirts are available, it is impossible.
+
+Impossible
+
+---
+
+Manually assessed false edges: 10,11

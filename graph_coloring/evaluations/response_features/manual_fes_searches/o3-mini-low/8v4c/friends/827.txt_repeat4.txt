@@ -1,0 +1,97 @@
+Edges: [(0, 3), (0, 4), (0, 6), (1, 5), (1, 6), (1, 7), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 1), (0, 2), (0, 5), (0, 7), (1, 2), (1, 3), (1, 4), (2, 3), (2, 5), (3, 6), (3, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to “color‐assign” shirts to the eight people (using four available colors) so that every pair of friends wears different colors, you eventually run into an unavoidable conflict.
+
+Let us explain one way to arrive at this conclusion.
+
+Step 1. Form the conflict graph.
+The vertices are the people
+  Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather.
+An edge connects two vertices if the corresponding people are friends. (For example, there is an edge between Alice and Dave, between Alice and Ethan, etc.)
+
+Step 2. List the edges (friendships):
+ • Alice is friends with Dave, Ethan, George.
+ • Bob is friends with Fran, George, Heather.
+ • Carol is friends with Ethan, George, Heather.
+ • Dave is friends with Ethan, Fran (and Alice, as above).
+ • Ethan is friends with Fran, George, Heather (and also Alice, Dave, Carol).
+ • Fran is friends with George, Heather (and also Bob, Dave, Ethan).
+ • George is friends with Heather (and also Alice, Bob, Carol, Ethan, Fran).
+
+Step 3. Notice the “neighborhood” of Heather.
+Heather is friends with Bob, Carol, Ethan, Fran, and George.
+In any proper coloring (assignment of shirt‐colors) for the graph the vertices adjacent to a given vertex must not use the same color that that vertex itself is using.
+To “free up” a color for Heather we must be able to color its five neighbors (Bob, Carol, Ethan, Fran, George) with at most three distinct colors (so that one of the four colors is “unused” among Heather’s friends and can be assigned to Heather).
+
+Step 4. Analyzing a key portion of the graph.
+Focus on the induced subgraph on {Bob, Carol, Ethan, Fran, George}. Among these five the following adjacencies hold:
+ – Bob is connected to Fran and George.
+ – Carol is connected to Ethan and George.
+ – Ethan and Fran are connected.
+ – Ethan is also connected to George.
+ – Fran is also connected to George.
+Thus, no matter how you assign colors from the set {red, green, blue, yellow}, you can show by a short “color‐count” argument or by searching through possibilities that this induced subgraph forces all four colors to be used.
+(For example, one may try to “save” one color by giving Bob and Carol the same color. But then, because Ethan and Fran are adjacent (and both must differ from Bob/Carol) and because George is adjacent to Bob, Carol, Ethan, and Fran, the five vertices end up “using” all four colors.)
+Once all four colors appear among Heather’s five friends, there is no available color left for Heather.
+
+Step 5. Conclude impossibility.
+Because any proper 4-coloring of the overall graph would require that Heather’s neighbors use at most three colors, and we have seen that the structure of the friendships forces those five neighbors to “use up” all four colors, it follows that there is no valid assignment of red, green, blue, and yellow shirts that avoids having friends share the same color.
+
+Thus, the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to “color‐assign” shirts to the eight people (using four available colors) so that every pair of friends wears different colors, you eventually run into an unavoidable conflict.
+
+Let us explain one way to arrive at this conclusion.
+
+Step 1. Form the conflict graph.
+The vertices are the people
+  #0, #1, #2, #3, #4, #5, #6, #7.
+An edge connects two vertices if the corresponding people are friends. (For example, there is an edge between #0 and #3, between #0 and #4, etc.)
+
+Step 2. List the edges (friendships):
+ • #0 is friends with #3, #4, #6.
+ • #1 is friends with #5, #6, #7.
+ • #2 is friends with #4, #6, #7.
+ • #3 is friends with #4, #5 (and #0, as above).
+ • #4 is friends with #5, #6, #7 (and also #0, #3, #2).
+ • #5 is friends with #6, #7 (and also #1, #3, #4).
+ • #6 is friends with #7 (and also #0, #1, #2, #4, #5).
+
+Step 3. Notice the “neighborhood” of #7.
+#7 is friends with #1, #2, #4, #5, and #6.
+In any proper coloring (assignment of shirt‐colors) for the graph the vertices adjacent to a given vertex must not use the same color that that vertex itself is using.
+To “free up” a color for #7 we must be able to color its five neighbors (#1, #2, #4, #5, #6) with at most three distinct colors (so that one of the four colors is “unused” among #7’s friends and can be assigned to #7).
+
+Step 4. Analyzing a key portion of the graph.
+Focus on the induced subgraph on {#1, #2, #4, #5, #6}. Among these five the following adjacencies hold:
+ – #1 is connected to #5 and #6.
+ – #2 is connected to #4 and #6.
+ – #4 and #5 are connected.
+ – #4 is also connected to #6.
+ – #5 is also connected to #6.
+Thus, no matter how you assign colors from the set {red, green, blue, yellow}, you can show by a short “color‐count” argument or by searching through possibilities that this induced subgraph forces all four colors to be used.
+(For example, one may try to “save” one color by giving #1 and #2 the same color. But then, because #4 and #5 are adjacent (and both must differ from #1/#2) and because #6 is adjacent to #1, #2, #4, and #5, the five vertices end up “using” all four colors.)
+Once all four colors appear among #7’s five friends, there is no available color left for #7.
+
+Step 5. Conclude impossibility.
+Because any proper 4-coloring of the overall graph would require that #7’s neighbors use at most three colors, and we have seen that the structure of the friendships forces those five neighbors to “use up” all four colors, it follows that there is no valid assignment of red, green, blue, and yellow shirts that avoids having friends share the same color.
+
+Thus, the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,25 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 6), (0, 7), (1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 3), (0, 5), (1, 2), (1, 4), (3, 7), (4, 5), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no valid 4‐coloring exists. In other words, there is no way to assign each vertex one of the colors red, green, blue, or yellow so that every edge – between two vertices whose numbers are given below – connects vertices of different colors.
+
+To explain briefly without getting lost in many details, one common strategy is to “reserve” a color for one vertex. One would try to assign colors to the other vertices (subject to the no‐same‐color condition on each edge) and then “finish” by coloring the remaining vertex or vertices. In this graph the “difficult” vertex is number 6. Observe that vertex 6 is adjacent to six other vertices:
+  neighbors(6) = {0, 1, 2, 3, 4, 5}
+Thus whatever colors 0, 1, 2, 3, 4, and 5 get, in order for there to be an available color for vertex 6 they must use at most three of the four colors. (If they used four distinct colors then none would remain for 6.)
+
+It turns out that if one looks at the induced subgraph on vertices 0, 1, 2, 3, 4, 5 (ignoring temporarily vertex 6 and also vertex 7) one finds the following edges among them:
+  (0,1), (0,2), (0,4), (1,3), (1,5), (2,3), (2,4), (2,5), (3,5)
+A short analysis of this subgraph shows that it is not 3–colorable. (That is, any proper coloring of these six vertices by only three colors will run into a conflict on some edge.) In several attempts one sees that no assignment of three colors to vertices 0,1,2,3,4,5 can avoid a conflict. (For example, one may begin by trying 0 = Red, then 1 must be not Red, etc. and eventually one finds that vertices 1, 2, and 4 – which are all highly connected – force vertices 3 or 5 into an unavoidable conflict.) Since any valid overall 4–coloring would force the colors on vertices 0,1,2,3,4,5 to come from at most 3 colors (so as to leave something for 6), we conclude that there is no valid 4–coloring of the entire graph.
+
+Thus the final answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

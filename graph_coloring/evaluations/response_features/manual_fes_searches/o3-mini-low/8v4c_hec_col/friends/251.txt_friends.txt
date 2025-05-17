@@ -1,0 +1,61 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 3), (0, 5), (1, 3), (2, 3), (2, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign one of four colors (red, green, blue, yellow) to each person, at least one person ends up having a friend with the same color. (In other words, the “friend‐graph” defined below does not admit a proper 4–coloring.) One may show by a rather detailed case analysis or by a computer search that a proper “coloring” of the 8 people is impossible.
+
+Below is one explanation of why the answer is “Impossible.”
+
+Let the vertices (people) be
+  A = Alice, B = Bob, C = Carol, D = Dave, E = Ethan, F = Fran, G = George, and H = Heather.
+The given friendship relations are:
+  A is adjacent to B, C, E, G, H;
+  B is adjacent to A, C, E, F, G, H;
+  C is adjacent to A, B, F, G, H;
+  D is adjacent to E, F, G, H;
+  E is adjacent to A, B, D, F, G, H;
+  F is adjacent to B, C, D, E, G, H;
+  G is adjacent to A, B, C, D, E, F;
+  H is adjacent to A, B, C, D, E, F.
+A “coloring” is an assignment of one of the four colors {red, green, blue, yellow} to each vertex so that any two vertices connected by an edge receive different colors.
+
+Notice that G’s (George’s) neighbors are A, B, C, D, E, and F. No matter how one assigns colors to these 6 people, when you have only four colors it is forced that (by the pigeonhole principle) they use all four colors, and in fact on careful checking one may prove that for any 4–coloring of all other vertices (or for any attempted assignment of colors to A, B, C, D, E, F) the set {A, B, C, D, E, F} will “cover” all four colors. (A similar situation occurs with H’s neighbors.) That means that whichever color you try to give to vertex G, it will match the color of at least one friend; hence no proper 4–coloring exists.
+
+Since it is impossible to assign the four shirt‐colors so that no one has a friend with the same color, the answer is simply:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign one of four colors (red, green, blue, yellow) to each person, at least one person ends up having a friend with the same color. (In other words, the “friend‐graph” defined below does not admit a proper 4–coloring.) One may show by a rather detailed case analysis or by a computer search that a proper “coloring” of the 8 people is impossible.
+
+Below is one explanation of why the answer is “Impossible.”
+
+Let the vertices (people) be
+  A = #0, B = #1, C = #2, D = #3, E = #4, F = #5, G = #6, and H = #7.
+The given friendship relations are:
+  A is adjacent to B, C, E, G, H;
+  B is adjacent to A, C, E, F, G, H;
+  C is adjacent to A, B, F, G, H;
+  D is adjacent to E, F, G, H;
+  E is adjacent to A, B, D, F, G, H;
+  F is adjacent to B, C, D, E, G, H;
+  G is adjacent to A, B, C, D, E, F;
+  H is adjacent to A, B, C, D, E, F.
+A “coloring” is an assignment of one of the four colors {red, green, blue, yellow} to each vertex so that any two vertices connected by an edge receive different colors.
+
+Notice that G’s (#6’s) neighbors are A, B, C, D, E, and F. No matter how one assigns colors to these 6 people, when you have only four colors it is forced that (by the pigeonhole principle) they use all four colors, and in fact on careful checking one may prove that for any 4–coloring of all other vertices (or for any attempted assignment of colors to A, B, C, D, E, F) the set {A, B, C, D, E, F} will “cover” all four colors. (A similar situation occurs with H’s neighbors.) That means that whichever color you try to give to vertex G, it will match the color of at least one friend; hence no proper 4–coloring exists.
+
+Since it is impossible to assign the four shirt‐colors so that no one has a friend with the same color, the answer is simply:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

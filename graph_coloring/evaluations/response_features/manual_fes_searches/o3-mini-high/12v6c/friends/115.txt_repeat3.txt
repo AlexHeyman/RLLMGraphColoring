@@ -1,0 +1,49 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (0, 8), (0, 10), (0, 11), (1, 2), (1, 4), (1, 5), (1, 7), (1, 9), (1, 10), (2, 3), (2, 4), (2, 5), (2, 6), (2, 8), (2, 9), (2, 10), (2, 11), (3, 4), (3, 5), (3, 6), (3, 8), (3, 9), (3, 10), (3, 11), (4, 6), (4, 7), (4, 9), (4, 11), (5, 8), (5, 9), (5, 10), (5, 11), (6, 7), (6, 8), (6, 9), (6, 10), (6, 11), (7, 10), (8, 9), (8, 10), (8, 11), (9, 10), (9, 11)]
+
+Complement: [(0, 4), (0, 9), (1, 3), (1, 6), (1, 8), (1, 11), (2, 7), (3, 7), (4, 5), (4, 8), (4, 10), (5, 6), (5, 7), (7, 8), (7, 9), (7, 11), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how the shirts are chosen, one “friend‐group” forces at least seven different colors, so a proper assignment with only six colors is impossible. In fact, observe that according to the given friendships the seven people
+
+  Alice, Carol, Dave, Fran, Irene, Kathy, and Larry
+
+form a clique (that is, every one of these seven people is friends with every other). For example, from the list we have:
+  • Alice is friends with Carol, Dave, Fran, Irene, Kathy, and Larry.
+  • Carol is friends with Alice, Dave, Fran, Irene, Kathy, and Larry.
+  • Dave is friends with Alice, Carol, Fran, Irene, Kathy, and Larry.
+  • Fran is friends with Alice, Carol, Dave, Irene, Kathy, and Larry.
+  • Irene is friends with Alice, Carol, Dave, Fran, Kathy, and Larry.
+  • Kathy is friends with Alice, Carol, Dave, Fran, Irene, and Larry.
+  • Larry is friends with Alice, Carol, Dave, Fran, Irene, and Kathy.
+
+Since every pair of these seven is friends, a proper “coloring” (that is, a choice of shirt colors with no two friends wearing the same color) would require that all seven get different colors. But only six colors (red, green, blue, yellow, orange, and purple) are available. Hence, there is no way to assign shirt colors so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how the shirts are chosen, one “friend‐group” forces at least seven different colors, so a proper assignment with only six colors is impossible. In fact, observe that according to the given friendships the seven people
+
+  #0, #2, #3, #5, #8, #10, and #11
+
+form a clique (that is, every one of these seven people is friends with every other). For example, from the list we have:
+  • #0 is friends with #2, #3, #5, #8, #10, and #11.
+  • #2 is friends with #0, #3, #5, #8, #10, and #11.
+  • #3 is friends with #0, #2, #5, #8, #10, and #11.
+  • #5 is friends with #0, #2, #3, #8, #10, and #11.
+  • #8 is friends with #0, #2, #3, #5, #10, and #11.
+  • #10 is friends with #0, #2, #3, #5, #8, and #11.
+  • #11 is friends with #0, #2, #3, #5, #8, and #10.
+
+Since every pair of these seven is friends, a proper “coloring” (that is, a choice of shirt colors with no two friends wearing the same color) would require that all seven get different colors. But only six colors (red, green, blue, yellow, orange, and purple) are available. Hence, there is no way to assign shirt colors so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 10,11

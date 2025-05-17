@@ -1,0 +1,43 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (0, 5), (1, 5), (1, 7), (3, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of four colors to the vertices can avoid giving some two adjacent vertices the same color.
+
+Let the four “colors” be Red, Green, Blue, and Yellow. A proper coloring of an undirected graph is an assignment of colors to vertices so that every edge connects two vertices of different colors.
+
+One way to see the impossibility is to focus on vertex 7. Its given neighbors (from the edges that include “7”) are:
+  0, 2, 3, 4, 5, and 6.
+Thus, whatever colors are chosen, the six vertices adjacent to vertex 7 will “use up” some subset of the four colors. In order for vertex 7 to be able to take one of the four colors without conflicting with any of its neighbors, the set of colors on its neighbors must have at most three distinct colors (i.e. at least one color must appear on at least two of its neighbors).
+
+So one might try to “force a duplication” in the colors assigned to vertices 0, 2, 3, 4, 5, and 6. However, if you inspect the graph induced by these six vertices (meaning you look at all the edges among them) you will find the following facts:
+
+• Vertex 0 is adjacent (by edges) to 2, 3, 4, and 6.
+• Vertex 2 is adjacent to 0, 3, 4, 5, and 6.
+• Vertex 3 is adjacent to 0, 2, 5, and 6.
+• Vertex 4 is adjacent to 0, 2, 5, and 6.
+• Vertex 5 is adjacent to 2, 3, 4, and 6.
+• Vertex 6 is adjacent to 0, 2, 3, 4, and 5.
+
+(Notice that the only missing edges among these vertices are between 0 and 5, and between 3 and 4.) It turns out that these six vertices contain a complete subgraph (a clique) of four vertices. For example, if you look at vertices 2, 3, 5, and 6, you find that every pair is connected by an edge:
+  • 2 is adjacent to 3, 5, and 6.
+  • 3 is adjacent to 2, 5, and 6.
+  • 5 is adjacent to 2, 3, and 6.
+  • 6 is adjacent to 2, 3, and 5.
+A complete graph on four vertices (a K₄) requires four different colors on its vertices. In any proper 4‐coloring, those four vertices must all receive distinct colors.
+
+Thus, when you come back to vertex 7 it is adjacent to, among others, the four vertices of that K₄ so that all four colors already appear among its neighbors. In that situation there is no “fourth color” left for vertex 7; whichever color you try to assign will match one neighbor’s color.
+
+Since every coloring of the neighbor set of vertex 7 forces all four colors to be used there, vertex 7 cannot be properly colored with any of the four available colors.
+
+Therefore, it is impossible to color the vertices with four colors so that no two adjacent vertices share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

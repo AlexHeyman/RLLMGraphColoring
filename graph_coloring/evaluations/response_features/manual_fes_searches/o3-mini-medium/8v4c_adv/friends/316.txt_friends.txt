@@ -1,0 +1,83 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (2, 5), (3, 4), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of red, green, blue, and yellow to the eight people can “avoid clashes” along every friendship—i.e. guarantee that every pair of friends wears different colors.
+
+Let us denote the people by their first letters:
+ A = Alice, B = Bob, C = Carol, D = Dave, E = Ethan, F = Fran, G = George, H = Heather.
+
+The friendship list is as follows:
+ • A is friends with C, D, E, F, G, H.
+ • B is friends with C, D, E, F, G, H.
+ • C is friends with D, E, G, H.
+ • D is friends with F, G, H.
+ • E is friends with G, H.
+ • F is friends with G, H.
+
+Thus, note that A and B are “universal” among the rest (except they are not friends with each other) and that both G and H are very “saturated” in that they are friends with everyone except the pair A–B and each other has the same set of six common friends: {A, B, C, D, E, F}.
+
+Let S = {A, B, C, D, E, F} be the six vertices (people) that are friends with both G and H. Our aim is to “save” at least two colors for the pair G and H. (Because if S uses only three of the four colors then both G and H would be forced into the unique missing color—and that would force them to share a color even though G and H are friends. On the other hand, if S uses all four colors, then each of G and H sees every color among his/her friends, leaving no available color.)
+
+Examine S more closely. Among these six people, the edges are:
+ • A is adjacent to C, D, E, F.
+ • B is adjacent to C, D, E, F.
+ • And in addition, we have extra edges: C–D, C–E, D–F.
+(There are no other friendships among these six.) Because A (for example) is adjacent to C and D, and because C and D are themselves friends, the vertices A, C, and D form a triangle. In any proper coloring of a triangle each vertex must get a different color. Hence the vertices in S must use at least three different colors.
+
+Thus there are two cases to consider for the set S:
+ Case 1. S uses exactly three distinct colors.
+  Then every vertex in G’s (and H’s) neighborhood (namely, S) wears only three colors. In order to avoid a conflict with any friend, any candidate color for G must differ from every color present among its (6) neighbors. With three colors used on S, let’s say the colors present are, for example, Red, Blue, and Green; then the only available color for G would be Yellow. Similarly, H is in the same situation (its neighbors are exactly S) so it would also have to be Yellow. But since G and H are friends, they cannot have the same color. This is a contradiction.
+ Case 2. S uses all four colors.
+  Then each vertex in S has one of the four colors, and because A and B already are friends with all vertices in S, it turns out that every one of the four colors appears at least once among S. But now consider vertex G again: its neighbors include everyone in S, so G sees all four colors and has no available color to choose from.
+  A similar problem arises for H.
+
+Since in every case one (or both) of G and H would have no choice (or would be forced to share a color with a friend), there is no way to assign the four colors to the eight people so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of red, green, blue, and yellow to the eight people can “avoid clashes” along every friendship—i.e. guarantee that every pair of friends wears different colors.
+
+Let us denote the people by their first letters:
+ A = #0, B = #1, C = #2, D = #3, E = #4, F = #5, G = #6, H = #7.
+
+The friendship list is as follows:
+ • A is friends with C, D, E, F, G, H.
+ • B is friends with C, D, E, F, G, H.
+ • C is friends with D, E, G, H.
+ • D is friends with F, G, H.
+ • E is friends with G, H.
+ • F is friends with G, H.
+
+Thus, note that A and B are “universal” among the rest (except they are not friends with each other) and that both G and H are very “saturated” in that they are friends with everyone except the pair A–B and each other has the same set of six common friends: {A, B, C, D, E, F}.
+
+Let S = {A, B, C, D, E, F} be the six vertices (people) that are friends with both G and H. Our aim is to “save” at least two colors for the pair G and H. (Because if S uses only three of the four colors then both G and H would be forced into the unique missing color—and that would force them to share a color even though G and H are friends. On the other hand, if S uses all four colors, then each of G and H sees every color among his/her friends, leaving no available color.)
+
+Examine S more closely. Among these six people, the edges are:
+ • A is adjacent to C, D, E, F.
+ • B is adjacent to C, D, E, F.
+ • And in addition, we have extra edges: C–D, C–E, D–F.
+(There are no other friendships among these six.) Because A (for example) is adjacent to C and D, and because C and D are themselves friends, the vertices A, C, and D form a triangle. In any proper coloring of a triangle each vertex must get a different color. Hence the vertices in S must use at least three different colors.
+
+Thus there are two cases to consider for the set S:
+ Case 1. S uses exactly three distinct colors.
+  Then every vertex in G’s (and H’s) neighborhood (namely, S) wears only three colors. In order to avoid a conflict with any friend, any candidate color for G must differ from every color present among its (6) neighbors. With three colors used on S, let’s say the colors present are, for example, Red, Blue, and Green; then the only available color for G would be Yellow. Similarly, H is in the same situation (its neighbors are exactly S) so it would also have to be Yellow. But since G and H are friends, they cannot have the same color. This is a contradiction.
+ Case 2. S uses all four colors.
+  Then each vertex in S has one of the four colors, and because A and B already are friends with all vertices in S, it turns out that every one of the four colors appears at least once among S. But now consider vertex G again: its neighbors include everyone in S, so G sees all four colors and has no available color to choose from.
+  A similar problem arises for H.
+
+Since in every case one (or both) of G and H would have no choice (or would be forced to share a color with a friend), there is no way to assign the four colors to the eight people so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,61 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 6), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 7), (5, 6)]
+
+Complement: [(0, 2), (1, 3), (1, 4), (1, 5), (1, 7), (4, 6), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+Let's analyze the situation.
+
+Label the eight people as vertices of a graph, where an edge connects two people who are friends. Writing down the friendships gives:
+
+• Alice is friends with Bob, Dave, Ethan, Fran, George, and Heather.
+• Bob is friends with Alice, Carol, and George.
+• Carol is friends with Bob, Dave, Ethan, Fran, George, and Heather.
+• Dave is friends with Alice, Carol, Ethan, Fran, George, and Heather.
+• Ethan is friends with Alice, Carol, Dave, Fran, and Heather.
+• Fran is friends with Alice, Carol, Dave, Ethan, and George.
+• George is friends with Alice, Bob, Carol, Dave, and Fran.
+• Heather is friends with Alice, Carol, Dave, and Ethan.
+
+One crucial observation is to look at Fran’s friends. Fran is friends with Alice, Carol, Dave, and Ethan. Notice that among these four people:
+ – Alice is connected to Carol, Dave, and Ethan.
+ – Moreover, Carol, Dave, and Ethan are mutually connected (Carol is friends with both Dave and Ethan, and Dave is friends with Ethan).
+
+This mutual connectivity means that in any valid shirt-color assignment (i.e. proper 4-coloring), Alice, Carol, Dave, and Ethan must all wear different colors. (Remember, a proper coloring requires adjacent vertices to have different colors.) Since there are only four colors available, Fran’s four friends would occupy all four colors. That would leave Fran with no available color—regardless of what color George or Heather wear.
+
+Because this obstruction exists, it is impossible to choose a shirt-color assignment for all eight people so that no two friends share the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+Let's analyze the situation.
+
+Label the eight people as vertices of a graph, where an edge connects two people who are friends. Writing down the friendships gives:
+
+• #0 is friends with #1, #3, #4, #5, #6, and #7.
+• #1 is friends with #0, #2, and #6.
+• #2 is friends with #1, #3, #4, #5, #6, and #7.
+• #3 is friends with #0, #2, #4, #5, #6, and #7.
+• #4 is friends with #0, #2, #3, #5, and #7.
+• #5 is friends with #0, #2, #3, #4, and #6.
+• #6 is friends with #0, #1, #2, #3, and #5.
+• #7 is friends with #0, #2, #3, and #4.
+
+One crucial observation is to look at #5’s friends. #5 is friends with #0, #2, #3, and #4. Notice that among these four people:
+ – #0 is connected to #2, #3, and #4.
+ – Moreover, #2, #3, and #4 are mutually connected (#2 is friends with both #3 and #4, and #3 is friends with #4).
+
+This mutual connectivity means that in any valid shirt-color assignment (i.e. proper 4-coloring), #0, #2, #3, and #4 must all wear different colors. (Remember, a proper coloring requires adjacent vertices to have different colors.) Since there are only four colors available, #5’s four friends would occupy all four colors. That would leave #5 with no available color—regardless of what color #6 or #7 wear.
+
+Because this obstruction exists, it is impossible to choose a shirt-color assignment for all eight people so that no two friends share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

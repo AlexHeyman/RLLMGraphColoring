@@ -1,0 +1,55 @@
+Edges: [(0, 1), (0, 2), (0, 5), (0, 6), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 7), (6, 7)]
+
+Complement: [(0, 3), (0, 4), (0, 7), (1, 2), (1, 3), (1, 4), (3, 4), (5, 6)]
+
+Evaluation: impossible incorrect
+
+---
+
+We begin by drawing the “friendship graph.” Label the eight vertices with the people’s names. The edges connect every pair of people that are friends. (For example, there is an edge from Alice to Bob, from Alice to Carol, etc.)
+
+An especially important subgraph appears among Carol, Fran, George, and Heather. Checking the friendships, we see that:
+ • Carol is friends with Fran, George, and Heather.
+ • Fran is friends with Carol, George, and Heather.
+ • George is friends with Carol, Fran, and Heather.
+ • Heather is friends with Carol, Fran, and George.
+Thus, the four of them form a complete graph (a K₄), meaning that in any proper coloring of the graph no two of these four may share the same color.
+
+Since we only have four colors available (Red, Green, Blue, Yellow), the vertices of this K₄ must use all four colors—one distinct color on each of Carol, Fran, George, and Heather.
+
+Now, look at the vertices for Dave and Ethan. According to the given friendships:
+ • Dave is friends with Carol, Fran, George, and Heather.
+ • Ethan is friends with Carol, Fran, George, and Heather.
+That is, each of Dave and Ethan is adjacent to every vertex of the K₄. Because the four vertices in the K₄ use all four colors, there is no color left for either Dave or Ethan: whichever color you try to assign to Dave (or Ethan) would match the color of one of the neighbors in the K₄, violating the rule.
+
+Since there is no way to assign one of the four colors to Dave and Ethan (or to avoid a conflict in this crowded part of the graph), a proper coloring—i.e. a valid plan for shirt colors—is impossible.
+
+Impossible
+
+---
+Numericized:
+---
+
+We begin by drawing the “friendship graph.” Label the eight vertices with the people’s names. The edges connect every pair of people that are friends. (For example, there is an edge from #0 to #1, from #0 to #2, etc.)
+
+An especially important subgraph appears among #2, #5, #6, and #7. Checking the friendships, we see that:
+ • #2 is friends with #5, #6, and #7.
+ • #5 is friends with #2, #6, and #7.
+ • #6 is friends with #2, #5, and #7.
+ • #7 is friends with #2, #5, and #6.
+Thus, the four of them form a complete graph (a K₄), meaning that in any proper coloring of the graph no two of these four may share the same color.
+
+Since we only have four colors available (Red, Green, Blue, Yellow), the vertices of this K₄ must use all four colors—one distinct color on each of #2, #5, #6, and #7.
+
+Now, look at the vertices for #3 and #4. According to the given friendships:
+ • #3 is friends with #2, #5, #6, and #7.
+ • #4 is friends with #2, #5, #6, and #7.
+That is, each of #3 and #4 is adjacent to every vertex of the K₄. Because the four vertices in the K₄ use all four colors, there is no color left for either #3 or #4: whichever color you try to assign to #3 (or #4) would match the color of one of the neighbors in the K₄, violating the rule.
+
+Since there is no way to assign one of the four colors to #3 and #4 (or to avoid a conflict in this crowded part of the graph), a proper coloring—i.e. a valid plan for shirt colors—is impossible.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

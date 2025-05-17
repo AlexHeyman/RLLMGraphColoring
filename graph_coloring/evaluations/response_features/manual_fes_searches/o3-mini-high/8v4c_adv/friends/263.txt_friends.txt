@@ -1,0 +1,79 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 5), (1, 5), (3, 4), (4, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+Let’s model the situation as a graph where each person is a vertex and an edge connects two vertices if the corresponding people are friends. The available “colors” are red, green, blue, and yellow. A proper coloring is one in which every edge connects vertices of different colors.
+
+Here are the eight people and their friendships (edges, with the understanding that friendship is mutual):
+
+ Alice: Bob, Dave, Ethan, George, Heather  
+ Bob: Alice, Carol, Dave, Ethan, George, Heather  
+ Carol: Bob, Dave, Ethan, Fran, George, Heather  
+ Dave: Alice, Bob, Carol, Fran, George, Heather  
+ Ethan: Alice, Bob, Carol, Fran, Heather  
+ Fran: Carol, Dave, Ethan, George, Heather  
+ George: Alice, Bob, Carol, Dave, Fran, Heather  
+ Heather: Alice, Bob, Carol, Dave, Ethan, Fran, George
+
+Notice that Heather is friends with everyone else. In any proper shirt‐coloring, Heather’s color must be unique among her neighbors. This means that if Heather wears, say, red, then none of the other seven people may wear red. In effect, the other seven must all choose their colors from the remaining three colors.
+
+Now consider the subgraph induced by Heather’s neighbors (the other 7 people). Because no one in that group is allowed to wear red (if Heather chose red), the coloring of this subgraph must be done using only three colors.
+
+Examine some of the edges within these seven:
+ • Alice is friends with Bob, Dave, Ethan, and George.
+ • Bob is friends with Alice, Carol, Dave, Ethan, and George.
+ • George is friends with Alice, Bob, Carol, Dave, and Fran.
+
+In particular, look at the cycle formed by Alice, Bob, and George. Since every two of these are friends—(Alice, Bob), (Alice, George), and (Bob, George) are all edges—they form a triangle. In any proper 3‐coloring of a triangle, all three vertices must receive distinct colors (say, color 1, color 2, and color 3).
+
+Now, notice that Dave is also in this subgraph and is friends with all three of these vertices (Alice, Bob, and George). Since those three have already used up all three of the available colors, there is no remaining color from the three for Dave.
+
+Thus, no matter which color Heather wears, the other 7 people are forced to pick their colors from only three colors—but the friendships among them (in particular, the triangle among Alice, Bob, and George together with Dave’s connections to all three) make a 3‐coloring impossible.
+
+Therefore, it is impossible to assign the four shirt colors in such a way that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+Let’s model the situation as a graph where each person is a vertex and an edge connects two vertices if the corresponding people are friends. The available “colors” are red, green, blue, and yellow. A proper coloring is one in which every edge connects vertices of different colors.
+
+Here are the eight people and their friendships (edges, with the understanding that friendship is mutual):
+
+ #0: #1, #3, #4, #6, #7  
+ #1: #0, #2, #3, #4, #6, #7  
+ #2: #1, #3, #4, #5, #6, #7  
+ #3: #0, #1, #2, #5, #6, #7  
+ #4: #0, #1, #2, #5, #7  
+ #5: #2, #3, #4, #6, #7  
+ #6: #0, #1, #2, #3, #5, #7  
+ #7: #0, #1, #2, #3, #4, #5, #6
+
+Notice that #7 is friends with everyone else. In any proper shirt‐coloring, #7’s color must be unique among her neighbors. This means that if #7 wears, say, red, then none of the other seven people may wear red. In effect, the other seven must all choose their colors from the remaining three colors.
+
+Now consider the subgraph induced by #7’s neighbors (the other 7 people). Because no one in that group is allowed to wear red (if #7 chose red), the coloring of this subgraph must be done using only three colors.
+
+Examine some of the edges within these seven:
+ • #0 is friends with #1, #3, #4, and #6.
+ • #1 is friends with #0, #2, #3, #4, and #6.
+ • #6 is friends with #0, #1, #2, #3, and #5.
+
+In particular, look at the cycle formed by #0, #1, and #6. Since every two of these are friends—(#0, #1), (#0, #6), and (#1, #6) are all edges—they form a triangle. In any proper 3‐coloring of a triangle, all three vertices must receive distinct colors (say, color 1, color 2, and color 3).
+
+Now, notice that #3 is also in this subgraph and is friends with all three of these vertices (#0, #1, and #6). Since those three have already used up all three of the available colors, there is no remaining color from the three for #3.
+
+Thus, no matter which color #7 wears, the other 7 people are forced to pick their colors from only three colors—but the friendships among them (in particular, the triangle among #0, #1, and #6 together with #3’s connections to all three) make a 3‐coloring impossible.
+
+Therefore, it is impossible to assign the four shirt colors in such a way that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: 6,7

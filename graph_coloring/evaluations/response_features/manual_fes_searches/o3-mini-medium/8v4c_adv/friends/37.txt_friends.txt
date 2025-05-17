@@ -1,0 +1,31 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 5), (1, 5), (2, 3), (2, 4), (4, 6), (4, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+The key is to notice that Bob, Dave, George, and Heather form a clique (that is, every pair among these four are friends). In any proper coloring (where “proper” means that adjacent vertices must have different colors) a clique of size k must use at least k distinct colors. Here k = 4, so Bob, Dave, George, and Heather must all be assigned different colors from the four available (red, green, blue, yellow).
+
+Now look at Alice. By the friendships given, Alice is friends with Bob, Dave, George, and Heather. This means that whatever distinct colors Bob, Dave, George, and Heather receive, those four colors will already be “used” on friends of Alice. Since there are exactly four colors available, there is no color left for Alice. (Alice’s friendship with Ethan does not help; even if Ethan’s color were to match one of those already used among the clique, the four friends of Alice already cover all four colors.) 
+
+Because of this unavoidable conflict, no assignment of shirts will allow every person to have a color different from all of their friends.
+
+Impossible
+
+---
+Numericized:
+---
+
+The key is to notice that #1, #3, #6, and #7 form a clique (that is, every pair among these four are friends). In any proper coloring (where “proper” means that adjacent vertices must have different colors) a clique of size k must use at least k distinct colors. Here k = 4, so #1, #3, #6, and #7 must all be assigned different colors from the four available (red, green, blue, yellow).
+
+Now look at #0. By the friendships given, #0 is friends with #1, #3, #6, and #7. This means that whatever distinct colors #1, #3, #6, and #7 receive, those four colors will already be “used” on friends of #0. Since there are exactly four colors available, there is no color left for #0. (#0’s friendship with #4 does not help; even if #4’s color were to match one of those already used among the clique, the four friends of #0 already cover all four colors.) 
+
+Because of this unavoidable conflict, no assignment of shirts will allow every person to have a color different from all of their friends.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,510 @@
+113.txt friends
+
+Line 20
+- George: friends with Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+14.txt friends
+
+Line 78
+Yes, Dave is friends with Ethan.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+
+---
+
+151.txt friends
+
+Line 20
+- George: friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+161.txt friends
+
+Line 20
+- George: friends with Alice, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+165.txt friends
+
+Line 112
+Dave is friends with Carol, so Dave cannot be Green.
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+177.txt friends
+
+Line 132
+Is Heather friends with anyone who is Blue? Carol is Blue, and Heather is friends with Carol.
+
+False edges:
+(2, 7) [Manual assessment: N/A]
+
+---
+
+2.txt friends
+
+Line 20
+- George: friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+209.txt friends
+
+Line 20
+- George: friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+213.txt friends
+
+Line 68
+Also, Fran is friends with Dave, Ethan, George, Heather, so adding Fran: Fran with Dave, yes; Fran with Ethan? No, Ethan and Fran are not friends.
+
+False edges:
+(4, 5) [Manual assessment: N/A]
+
+---
+
+222.txt friends
+
+Line 56
+Fran is friends with Alice (Red), Bob (Green), Dave (Blue), Ethan (Yellow), George, Heather.
+
+False edges:
+(4, 5) [Manual assessment: N/A]
+
+---
+
+223.txt friends
+
+Line 226
+Now, is George friends with anyone who has Y? Dave has Y, and George is friends with Dave.
+
+False edges:
+(3, 6) [Manual assessment: N/A]
+
+---
+
+225.txt friends
+
+Line 22
+- Heather: friends with Alice, Bob, Carol, Dave, Ethan, Fran, George
+
+False edges:
+(5, 7) [Manual assessment: N/A]
+
+---
+
+232.txt friends
+
+Line 276
+Carol is friends with Alice (Red), Bob (Blue), Dave (Red), Ethan (Blue), George, Heather (Green), and Fran (but not, so ok).
+
+False edges:
+(2, 5) [Manual assessment: N/A]
+
+---
+
+233.txt friends
+
+Line 94
+Yes, from the list: Ethan is friends with Dave.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+
+Line 328
+Carol's friends: Alice (Blue), Dave, Ethan, Fran, George (Red)
+
+False edges:
+(2, 6) [Manual assessment: N/A]
+
+---
+
+238.txt friends
+
+Line 22
+- George: Friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather (from the lists above)
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+249.txt friends
+
+Line 20
+- George: friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+251.txt friends
+
+Line 20
+- George: Friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+252.txt friends
+
+Line 56
+For example, look at Ethan, Fran, George, Heather: Ethan is friends with Fran, George, Heather; Fran is friends with George, Heather; George with Heather. So, Ethan, Fran, George, Heather are all pairwise friends. Is that true?
+
+False edges:
+(4, 5) [Manual assessment: N/A]
+
+---
+
+263.txt friends
+
+Line 248
+George is friends with Bob (Green), Carol, Dave, Heather, and Fran (Blue), so George cannot be Green or Blue.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+268.txt friends
+
+Line 22
+- Heather: friends with Alice, Bob, Carol, Dave, Ethan, Fran, George
+
+False edges:
+(5, 7) [Manual assessment: N/A]
+
+---
+
+269.txt friends
+
+Line 68
+Dave is friends with Alice, Bob, Carol, Ethan, Fran, George.
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+27.txt friends
+
+Line 14
+- Dave: friends with Alice, Bob, Carol, Ethan, Fran, George, Heather
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+271.txt friends
+
+Line 20
+- George: friends with Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+Line 24
+Heather is friends with Bob, Carol, Dave, Ethan, Fran, George. So, everyone except Alice is friends with Heather.
+
+False edges:
+(0, 7) [Manual assessment: N/A]
+
+Line 60
+K8 has all possible edges, so removing two edges: Alice-George and Alice-Heather.
+
+False edges:
+(0, 6) [Manual assessment: N/A]
+
+---
+
+273.txt friends
+
+Line 120
+But Ethan is friends with Dave? Dave is friends with Ethan? Yes, Dave is friends with Ethan.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+
+---
+
+281.txt friends
+
+Line 196
+Next, Fran: Fran is friends with Alice (Green), Bob (Blue), Carol (Blue), Ethan (Yellow), Heather (Red), and George.
+
+False edges:
+(4, 5) [Manual assessment: N/A]
+
+---
+
+289.txt friends
+
+Line 58
+- Ethan: Alice, Bob, Carol, Dave, Fran, George, Heather  (Ethan is friends with Alice, Bob, Carol, Dave, Fran, George, Heather)
+
+False edges:
+(2, 4) [Manual assessment: N/A]
+
+---
+
+300.txt friends
+
+Line 136
+Dave is friends with Alice (Red), Bob (Green), Ethan, Fran, George, Heather, and Carol (Blue).
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+305.txt friends
+
+Line 74
+Dave and, say, is Dave friends with everyone except maybe one? Dave is friends with Alice, Bob, Carol, Fran, George, Heather. That's everyone except Ethan? Wait, no, Ethan is friends with Dave, and Dave with Ethan.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+
+---
+
+309.txt friends
+
+Line 64
+Look at Alice, Bob, Dave, Ethan, Fran, George: Alice is friends with Bob, Dave, Ethan, Fran, George. Bob is friends with Dave, Ethan, Fran, George. Dave is friends with Fran and George, but is Dave friends with Ethan? Yes, Dave is friends with Ethan (from the list: Dave with Ethan via Bob and Carol, but wait, is it explicit? Wait, the list says Dave is friends with Ethan? Let's check: the initial list doesn't explicitly say Dave and Ethan are friends, but wait, no: the list is: Dave is friends with Alice, Bob, Carol, Fran, George, Heather. It doesn't say Dave with Ethan.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+
+Line 104
+Is Fran friends with George? Yes, Fran is friends with George (since Ethan is friends with both, and from the list, Fran is friends with Alice, Bob, Carol, Dave, Ethan, Heather, and George is friends with Alice, Bob, Carol, Dave, Ethan, Heather, so yes, Fran and George are both friends with the same people, but is Fran directly friends with George? The list doesn't explicitly say, but wait, no: the list for Fran is: friends with Heather, and earlier: Alice, Bob, Carol, Dave, Ethan (from the initial list).
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+311.txt friends
+
+Line 326
+Now, Dave is friends with Carol (Blue), Ethan (Yellow), Fran (Yellow), so Dave cannot have Blue or Yellow, and cannot have Green (because of Bob), so Dave needs another color, but we only have Green, Blue, Yellow! Dave is friends with Bob (Green), Carol (Blue), Ethan (Yellow), Fran (Yellow), so yes, friends with Green, Blue, and Yellow, so no color for Dave!
+
+False edges:
+(1, 3) [Manual assessment: N/A]
+
+---
+
+329.txt friends
+
+Line 98
+Carol is friends with Alice (Red) and Bob (Green), so Carol can be Blue or Yellow.
+
+False edges:
+(0, 2) [Manual assessment: N/A]
+
+---
+
+33.txt friends
+
+Line 18
+- Fran: friends with Alice, Bob, Carol, Dave, Ethan, George (from the list: Alice, Bob, Carol, Dave, Ethan, and George is implied since Ethan is friends with George and others)
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+350.txt friends
+
+Line 370
+George: Friends with Alice (Red), Ethan (Red), Carol (Blue), Fran (Blue), Dave (Green).
+
+False edges:
+(3, 6) [Manual assessment: N/A]
+
+---
+
+355.txt friends
+
+Line 246
+Ethan is friends with Carol and Dave, so needs to be different from them.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+
+---
+
+365.txt friends
+
+Line 158
+Now, Fran: Fran is friends with Alice (Red), Bob (Green), Carol (Blue), Dave (Yellow), Ethan (Blue), George, Heather.
+
+False edges:
+(1, 5) [Manual assessment: N/A]
+
+---
+
+367.txt friends
+
+Line 104
+Dave is friends with Alice (Red), Bob (Green), and Carol (Blue), and others.
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+373.txt friends
+
+Line 20
+- George: friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather (from the lists)
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+Line 216
+What about {Heather, George, Dave, Fran, Ethan}: Let's check: Heather with all, George with all, Dave with Heather, George, Fran (yes), Ethan (no, Dave not with Ethan).
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+
+---
+
+39.txt friends
+
+Line 262
+Is Ethan friends with anyone else wearing Yellow? Well, Fran is wearing Yellow, and Ethan is friends with Fran, oh!
+
+False edges:
+(4, 5) [Manual assessment: N/A]
+
+---
+
+390.txt friends
+
+Line 190
+But Dave is already Yellow, and Ethan is friends with Dave, so Ethan cannot be Yellow.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+
+---
+
+394.txt friends
+
+Line 120
+Ethan is already Yellow, and George is friends with Ethan? Yes, George is friends with Ethan.
+
+False edges:
+(4, 6) [Manual assessment: N/A]
+
+---
+
+397.txt friends
+
+Line 20
+- George: friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+42.txt friends
+
+Line 28
+George is friends with Bob, Carol, Dave, Ethan, Fran, Heather. So, George is friends with everyone except Alice.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+47.txt friends
+
+Line 20
+- George: friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+50.txt friends
+
+Line 38
+George is connected to Alice, Bob, Dave, Ethan, Fran, Heather.
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+53.txt friends
+
+Line 86
+So, yes, Carol is friends with Fran, because Fran's list includes Carol, and since friendships are mutual, or is it? The problem lists them separately, but I think we have to go by what's stated.
+
+False edges:
+(2, 5) [Manual assessment: N/A]
+
+---
+
+6.txt friends
+
+Line 20
+- George: friends with Alice, Carol, Dave, Ethan, Fran, Heather
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+61.txt friends
+
+Line 160
+Now, next, Bob is friends with Alice, Carol, Ethan, George, and also Dave, Fran, Heather.
+
+False edges:
+(0, 1) [Manual assessment: N/A]
+
+---
+
+68.txt friends
+
+Line 22
+- Heather: friends with Alice, Bob, Carol, Dave, Ethan, Fran, George
+
+False edges:
+(5, 7) [Manual assessment: N/A]
+
+---
+

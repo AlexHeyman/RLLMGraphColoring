@@ -1,0 +1,73 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 5), (1, 4), (1, 5), (2, 3), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+To determine whether the 8 people can pick from four shirt colors (red, green, blue, or yellow) without any pair of friends wearing the same color, we need to see if the friendship “graph” can be 4-colored.
+
+Let’s list the friendships explicitly:
+
+• Alice: Bob, Carol, Dave, Ethan, George, Heather  
+• Bob: Alice, Carol, Dave, George, Heather  
+• Carol: Alice, Bob, Ethan, Fran, George, Heather  
+• Dave: Alice, Bob, Ethan, Fran, George, Heather  
+• Ethan: Alice, Carol, Dave, Fran, George, Heather  
+• Fran: Carol, Dave, Ethan, George, Heather  
+• George: Alice, Bob, Carol, Dave, Ethan, Fran, Heather  
+• Heather: Alice, Bob, Carol, Dave, Ethan, Fran, George  
+
+Notice that the two pairs who are not friends are (Alice, Fran) and (Bob, Ethan). Apart from these exceptions, nearly everyone is friends with everyone else.
+
+The crucial point is to look for a clique (a set of people who are all mutually friends). Consider the set {Alice, Bob, Carol, George, Heather}:
+
+• Alice is friends with Bob, Carol, George, and Heather.  
+• Bob is friends with Alice, Carol, George, and Heather.  
+• Carol is friends with Alice, Bob, George, and Heather.  
+• George is friends with Alice, Bob, Carol, and Heather.  
+• Heather is friends with Alice, Bob, Carol, and George.
+
+Since every pair among these five people is friends, they form a complete graph (clique) of size 5. In a complete graph of k vertices, you need k different colors to properly color the graph. Thus, this clique requires 5 colors.
+
+Since we only have 4 colors available, it is impossible to assign colors so that no pair of friends wears the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+To determine whether the 8 people can pick from four shirt colors (red, green, blue, or yellow) without any pair of friends wearing the same color, we need to see if the friendship “graph” can be 4-colored.
+
+Let’s list the friendships explicitly:
+
+• #0: #1, #2, #3, #4, #6, #7  
+• #1: #0, #2, #3, #6, #7  
+• #2: #0, #1, #4, #5, #6, #7  
+• #3: #0, #1, #4, #5, #6, #7  
+• #4: #0, #2, #3, #5, #6, #7  
+• #5: #2, #3, #4, #6, #7  
+• #6: #0, #1, #2, #3, #4, #5, #7  
+• #7: #0, #1, #2, #3, #4, #5, #6  
+
+Notice that the two pairs who are not friends are (#0, #5) and (#1, #4). Apart from these exceptions, nearly everyone is friends with everyone else.
+
+The crucial point is to look for a clique (a set of people who are all mutually friends). Consider the set {#0, #1, #2, #6, #7}:
+
+• #0 is friends with #1, #2, #6, and #7.  
+• #1 is friends with #0, #2, #6, and #7.  
+• #2 is friends with #0, #1, #6, and #7.  
+• #6 is friends with #0, #1, #2, and #7.  
+• #7 is friends with #0, #1, #2, and #6.
+
+Since every pair among these five people is friends, they form a complete graph (clique) of size 5. In a complete graph of k vertices, you need k different colors to properly color the graph. Thus, this clique requires 5 colors.
+
+Since we only have 4 colors available, it is impossible to assign colors so that no pair of friends wears the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

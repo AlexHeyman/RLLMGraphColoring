@@ -1,0 +1,38 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 6), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 3), (0, 5), (0, 7), (1, 3), (2, 3), (2, 4), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no proper 4‐coloring exists for this graph. In any attempt to assign one of four colors (Red, Green, Blue, Yellow) to the vertices while keeping adjacent vertices differently colored, one soon reaches an unsolvable conflict. Here’s an outline of the reasoning.
+
+Label the vertices 0–7. (For example, one may use the following list of edges:
+ (0,1), (0,2), (0,4), (0,6),
+ (1,2), (1,4), (1,5), (1,6), (1,7),
+ (2,5), (2,6), (2,7),
+ (3,4), (3,5), (3,6), (3,7),
+ (4,5), (4,6), (4,7),
+ (5,6).)
+
+Notice that vertex 6 is highly “popular,” being adjacent to vertices 0, 1, 2, 3, 4, and 5. In order for vertex 6 to have an available color, its six neighbors must use at most three distinct colors (so that at least one color is “left over” among the four available). One might try forcing a repetition among its neighbors by, say, setting vertices 0 and 3 to the same color (since 0 and 3 are not directly connected). For instance, one may attempt:
+
+ 0: Red   3: Red
+
+Then proceed to color the rest:
+ 1 must avoid Red, so say Green.
+ 2 (adjacent to 0 and 1) might be Blue.
+Now consider vertices 4 and 5 (both adjacent to several already–colored vertices):
+ For example, one might try 4 = Blue and 5 = Yellow.
+However, now the neighbors of vertex 6 (which are 0, 1, 2, 3, 4, 5) are colored {Red, Green, Blue, Red, Blue, Yellow} = {Red, Green, Blue, Yellow} (four distinct colors). This leaves no available color for vertex 6.
+
+One might try other assignments so that among the neighbors of 6 only three colors appear. However, after some analysis one finds that the four vertices {1, 2, 4, 5} (all neighbors of 6) form a “dense” subgraph. In fact, they induce edges (1,2), (1,4), (1,5), (2,5), and (4,5); in particular, the triangle 1–2–5 forces three distinct colors on these three vertices, and no matter how one assigns them (or the color for vertex 0 and 3, which have been “combined” in order to start reducing the color count on the neighbors of 6), it turns out that the entire neighborhood of 6 uses all four colors. There is then no available color for vertex 6.
+
+Because every attempted assignment forces vertex 6’s neighborhood to cover all four colors, we conclude that no proper 4‐coloring (with the allowed colors and under the given constraint that adjacent vertices have different colors) exists.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

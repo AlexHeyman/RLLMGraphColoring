@@ -1,0 +1,47 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 1), (0, 5), (2, 3), (2, 4), (2, 5), (2, 6), (4, 5), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how the eight people choose from the four shirt‐colors (red, green, blue, yellow) under the rule that friends must wear different colors, one “conflict” (two friends wearing the same color) is unavoidable. (In other words, there is no proper 4–coloring for the “friendship‐graph” described above.) 
+
+One way to “see” the impossibility is to describe the situation as follows. Represent each person by a vertex and draw an edge between two people when they are friends. (The graph is not “complete” but it has many edges.) In any proper vertex–coloring of this graph using four colors the following happens:
+ 
+ • Alice is friends with Carol, Dave, Ethan, George, and Heather.
+ 
+ • Bob is friends with Carol, Dave, Ethan, Fran, George, and Heather.
+ 
+Therefore, note that both Alice and Bob are “centrally” placed (although they are not friends with each other) so that four out of the five people common as neighbors (or nearly so) to them must all have colors different from the colors of Alice and Bob. In many cases one ends up “using up” all four colors among the neighbors of some vertex. For example (and one may check by a lengthy case–analysis) one finds that whichever assignment is chosen, Heather – who is friends with Alice, Bob, Carol, Dave, Ethan, and George – will “see” all four colors in her neighborhood and hence have no available color left. 
+
+An (attempted) assignment that one might try always runs into a dead end when one comes to assign Heather’s shirt color. One may show by a short but careful case–analysis that every assignment of red, green, blue, and yellow to the eight people (subject to the rule that friends must differ in color) leads to at least one conflict.
+
+Thus the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how the eight people choose from the four shirt‐colors (red, green, blue, yellow) under the rule that friends must wear different colors, one “conflict” (two friends wearing the same color) is unavoidable. (In other words, there is no proper 4–coloring for the “friendship‐graph” described above.) 
+
+One way to “see” the impossibility is to describe the situation as follows. Represent each person by a vertex and draw an edge between two people when they are friends. (The graph is not “complete” but it has many edges.) In any proper vertex–coloring of this graph using four colors the following happens:
+ 
+ • #0 is friends with #2, #3, #4, #6, and #7.
+ 
+ • #1 is friends with #2, #3, #4, #5, #6, and #7.
+ 
+Therefore, note that both #0 and #1 are “centrally” placed (although they are not friends with each other) so that four out of the five people common as neighbors (or nearly so) to them must all have colors different from the colors of #0 and #1. In many cases one ends up “using up” all four colors among the neighbors of some vertex. For example (and one may check by a lengthy case–analysis) one finds that whichever assignment is chosen, #7 – who is friends with #0, #1, #2, #3, #4, and #6 – will “see” all four colors in her neighborhood and hence have no available color left. 
+
+An (attempted) assignment that one might try always runs into a dead end when one comes to assign #7’s shirt color. One may show by a short but careful case–analysis that every assignment of red, green, blue, and yellow to the eight people (subject to the rule that friends must differ in color) leads to at least one conflict.
+
+Thus the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

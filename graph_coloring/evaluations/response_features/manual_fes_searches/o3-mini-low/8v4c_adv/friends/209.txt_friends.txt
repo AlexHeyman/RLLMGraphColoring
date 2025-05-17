@@ -1,0 +1,55 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 4), (1, 3), (2, 5), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We begin by modeling the situation as a graph whose vertices are the eight people and where an edge connects two people if they are friends. The shirt‐colors (Red, Green, Blue, Yellow) represent four “colors” we want to assign so that adjacent vertices receive different colors.
+
+One way to analyze the problem is to “fix” the two people with the most friends. In our list the only persons who are friends with nearly everyone are George and Heather: each of them is friends with all the other six people (Alice, Bob, Carol, Dave, Ethan, and Fran) and also with each other. In any proper 4‑coloring these two must get different colors.
+
+Now notice something important. Every one of the remaining six people is friends with both George and Heather. That means that none of these six can wear either of the two “colors” chosen for George or Heather. In other words, the six people (Alice, Bob, Carol, Dave, Ethan, Fran) are restricted to using only the other two colors—say Blue and Yellow.
+
+Let’s look at some of their friendships:
+ • Alice is friends with Bob, Carol, Dave, and Fran.
+ • Bob is friends with Alice, Carol, Ethan, and Fran.
+ • Carol is friends with Alice, Bob, Dave, and Ethan.
+ • Dave is friends with Alice, Carol, and Ethan.
+ • Ethan is friends with Bob, Carol, and Dave.
+ • Fran is friends with Alice, Bob.
+
+In particular, notice that Alice, Bob, and Carol form a triangle (each pair among them is friends). In a graph, an odd cycle (and a triangle is a cycle of length 3) cannot be 2‑colored. But since these six people are forced to use only Blue and Yellow they would have to be 2‑colored. This contradiction shows that no valid assignment of colors exists.
+
+Thus, it is impossible for everyone to pick a shirt color so that no one is wearing the same color as a friend.
+
+Impossible
+
+---
+Numericized:
+---
+
+We begin by modeling the situation as a graph whose vertices are the eight people and where an edge connects two people if they are friends. The shirt‐colors (Red, Green, Blue, Yellow) represent four “colors” we want to assign so that adjacent vertices receive different colors.
+
+One way to analyze the problem is to “fix” the two people with the most friends. In our list the only persons who are friends with nearly everyone are #6 and #7: each of them is friends with all the other six people (#0, #1, #2, #3, #4, and #5) and also with each other. In any proper 4‑coloring these two must get different colors.
+
+Now notice something important. Every one of the remaining six people is friends with both #6 and #7. That means that none of these six can wear either of the two “colors” chosen for #6 or #7. In other words, the six people (#0, #1, #2, #3, #4, #5) are restricted to using only the other two colors—say Blue and Yellow.
+
+Let’s look at some of their friendships:
+ • #0 is friends with #1, #2, #3, and #5.
+ • #1 is friends with #0, #2, #4, and #5.
+ • #2 is friends with #0, #1, #3, and #4.
+ • #3 is friends with #0, #2, and #4.
+ • #4 is friends with #1, #2, and #3.
+ • #5 is friends with #0, #1.
+
+In particular, notice that #0, #1, and #2 form a triangle (each pair among them is friends). In a graph, an odd cycle (and a triangle is a cycle of length 3) cannot be 2‑colored. But since these six people are forced to use only Blue and Yellow they would have to be 2‑colored. This contradiction shows that no valid assignment of colors exists.
+
+Thus, it is impossible for everyone to pick a shirt color so that no one is wearing the same color as a friend.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

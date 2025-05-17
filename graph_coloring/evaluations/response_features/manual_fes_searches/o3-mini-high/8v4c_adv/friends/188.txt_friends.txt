@@ -1,0 +1,31 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 5), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (5, 6), (5, 7)]
+
+Complement: [(0, 1), (1, 4), (1, 6), (2, 5), (4, 6), (4, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We can show that a proper assignment of four colors is impossible. Notice that the following five people must all be assigned different colors since every pair among them are friends:
+
+  Alice, Carol, Dave, Fran, Heather
+
+For example, Alice is friends with Carol, Dave, Fran, and Heather; Carol is friends with Dave, Fran, and Heather; Dave is friends with Fran and Heather; and Fran is friends with Heather. Since these five people form a clique (each is directly connected to every other), they would require five different colors. But only four colors (red, green, blue, and yellow) are available.
+
+Impossible
+
+---
+Numericized:
+---
+
+We can show that a proper assignment of four colors is impossible. Notice that the following five people must all be assigned different colors since every pair among them are friends:
+
+  #0, #2, #3, #5, #7
+
+For example, #0 is friends with #2, #3, #5, and #7; #2 is friends with #3, #5, and #7; #3 is friends with #5 and #7; and #5 is friends with #7. Since these five people form a clique (each is directly connected to every other), they would require five different colors. But only four colors (red, green, blue, and yellow) are available.
+
+Impossible
+
+---
+
+Manually assessed false edges: 2,5

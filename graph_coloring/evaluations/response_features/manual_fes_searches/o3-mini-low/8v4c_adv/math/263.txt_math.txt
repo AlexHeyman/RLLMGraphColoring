@@ -1,0 +1,25 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 5), (1, 5), (3, 4), (4, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no choice of the four colors (red, green, blue, yellow) for the eight vertices can avoid a conflict on every edge. In fact, careful analysis reveals that one vertex’s “neighborhood” forces all four colors on its adjacent vertices and so no color is left for it. (Below is one way to see the problem.)
+
+Number the vertices 0 through 7 and suppose by way of contradiction that a proper 4‐coloring exists. (A proper coloring means that if two vertices are joined by an edge they must receive different colors.) Leave aside vertex 7 for a moment and look at vertex 6. According to the edge list, vertex 6 is adjacent to 0, 1, 2, 3, and 5; that is, the edges 
+  (0,6), (1,6), (2,6), (3,6), (5,6)
+are present. In any proper coloring, the five neighbors of vertex 6 must have colors different from whatever color is assigned to 6, but it is even more constraining than that. A bit of investigation in the graph shows that among the vertices 0, 1, 2, 3, and 5 there is the following substructure:
+ • Vertices 1, 2, and 3 are all mutually adjacent. (Edges (1,2), (1,3), and (2,3) appear in the list.)
+Thus the trio {1,2,3} forms a triangle (a clique of size 3) and must receive three distinct colors.
+ • Moreover, vertices 0 and 5 are both connected to several of these vertices but (importantly) they are not adjacent to each other; however, no matter how one assigns colors to 0 and 5, the set of colors used on the five vertices (0, 1, 2, 3, 5) ends up using four distinct colors. (For example, it might happen that 0 and 5 get the same color, but then the triangle 1–2–3 still uses three different colors; or if 0 and 5 are colored differently, all five together might cover four colors.)
+In every case, vertex 6 sees neighbors having all four colors, so no allowable color remains for 6.
+
+Since our deductions are forced by the edge relationships, there is no valid way to 4–color this graph.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

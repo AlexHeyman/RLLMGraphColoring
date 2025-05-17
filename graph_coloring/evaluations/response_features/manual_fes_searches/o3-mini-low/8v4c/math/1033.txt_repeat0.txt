@@ -1,0 +1,27 @@
+Edges: [(0, 1), (0, 4), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 7), (4, 5), (4, 7), (5, 6), (6, 7)]
+
+Complement: [(0, 2), (0, 3), (1, 2), (3, 6), (4, 6), (5, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no proper 4‐coloring exists. In any 4–coloring of this graph, observe that vertex 4 is adjacent to vertices 0, 1, 2, and 3. Since no two adjacent vertices may share a color, 0, 1, 2 and 3 must receive (at least) three different colors. (If they used only two colors – say red and green – then one of them would force 4 to take a “fourth” color different from red and green; but then all four colors would appear among 0,1,2,3,4.) In fact, to “save” a color for 4 we might try to force one pair among 0, 1, 2, and 3 to share a color. For example, one might set
+
+  0 Red, 1 Green, 2 Red, 3 Blue,
+
+so that vertex 4 sees only Red, Green, and Blue in its neighbors and so may be colored Yellow.
+
+However, look now at vertex 5. It is adjacent to 0, 1, 2, 3, and 4. With the above assignment the neighbors of 5 have colors: 
+  0: Red, 1: Green, 2: Red, 3: Blue, 4: Yellow.
+That is, even though one color is repeated (Red appears twice), vertex 5 sees all four different colors (Red, Green, Blue, Yellow). Therefore there is no remaining color available for vertex 5.
+
+No matter how one “tries” to force a repeated color among 0,1,2,3 – note that vertex 4 is adjacent to all four of them – the set {0,1,2,3,4} will always end up “using” all four colors. Since vertex 5 is also adjacent to all of 0,1,2,3,4, its neighborhood forces the use of every color, leaving no valid choice. (A similar problem happens with vertex 7.)
+
+Thus, it is impossible to find a 4–coloring of the given graph.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

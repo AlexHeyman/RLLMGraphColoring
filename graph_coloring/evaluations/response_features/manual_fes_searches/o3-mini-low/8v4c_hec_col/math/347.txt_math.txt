@@ -1,0 +1,38 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (3, 4), (3, 5), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 1), (0, 5), (1, 4), (2, 7), (3, 6)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no way exists to assign four colors (red, green, blue, yellow) to the vertices 0,…,7 so that every edge joins vertices of different color.
+
+One way to arrive at that conclusion is to look for a “forced conflict” when one considers a certain four‐vertex clique in the graph. (A clique is a set of vertices every two of which are adjacent.) In our graph the vertices 4, 5, 6, and 7 form a clique. (You may verify that every pair drawn from {4,5,6,7} is connected by an edge.)
+
+Because every two of these four vertices are adjacent the four members of the clique must get four different colors. Suppose we denote an assignment of colors to vertices 4, 5, 6, and 7 by writing
+
+  4: X  5: Y  6: Z  7: W
+
+where {X,Y,Z,W} is a permutation of {Red, Blue, Green, Yellow}.
+
+Now look at the “external” vertices 0 and 1. Notice that
+ • vertex 0 is adjacent to vertices 4, 6, and 7 so its color must differ from X, Z, and W. In other words, vertex 0 must receive the unique color in {Red, Blue, Green, Yellow} that is missing from {X,Z,W}.
+ • vertex 1 is adjacent to vertices 5, 6, and 7 so its color must differ from Y, Z, and W. Hence vertex 1 must receive the unique color in {Red, Blue, Green, Yellow} not in {Y,Z,W}.
+
+But since {X,Y,Z,W} is a permutation of our four colors, one may check that
+  Color(0) = (the unique color missing from {X,Z,W}) = Y  and
+  Color(1) = (the unique color missing from {Y,Z,W}) = X.
+That is, vertex 0 gets the color that was used on vertex 5, and vertex 1 gets the color that was used on vertex 4.
+
+However, the graph also contains the edge (1,4) so vertices 1 and 4 must have different colors. In every possible permutation of the four colors on 4, 5, 6, and 7 the forced choices for vertices 0 and 1 guarantee that
+  Color(1) = Color(4).
+This is a direct contradiction, and no matter how one tries to “maneuver” the remaining assignments the conflict cannot be avoided.
+
+Thus, it is impossible to color the vertices with four colors so that no edge joins vertices of the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

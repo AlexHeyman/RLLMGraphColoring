@@ -1,0 +1,65 @@
+Edges: [(0, 1), (0, 4), (0, 6), (0, 7), (1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (0, 3), (0, 5), (1, 2), (1, 4), (2, 4), (2, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of red, green, blue, and yellow shirts to the eight people, while having every person wear a different color from each of those they are directly friends with, can be found.
+
+Below is an explanation.
+
+Step 1. Write down the people and which friends they have:
+
+ • Alice – friends with Bob, Ethan, George, Heather.
+ • Bob – friends with Alice, Dave, Fran, George, Heather.
+ • Carol – friends with Dave, George, Heather.
+ • Dave – friends with Bob, Carol, Ethan, Fran, George, Heather.
+ • Ethan – friends with Alice, Dave, Fran, George, Heather.
+ • Fran – friends with Bob, Dave, Ethan, George, Heather.
+ • George – friends with Alice, Bob, Carol, Dave, Ethan, Fran, Heather.
+ • Heather – friends with Alice, Bob, Carol, Dave, Ethan, Fran, George.
+
+Step 2. Notice that one of the vertices (George) is connected with everyone except Carol. In addition, the five people {Bob, Dave, Fran, George, Heather} have many mutual friendship connections. In fact, one may check that every two of these five are friends (for example, Bob is friends with Dave, Fran, George, and Heather; Dave is friends with Bob, Fran, George, and Heather; and so on). This set of five vertices forms a complete subgraph—a clique of size 5.
+
+A clique of size n forces the use of at least n different colors in any proper coloring of the graph (since every vertex must get a unique color relative to all its neighbors). In our case, having a clique of 5 means that one would require at least 5 colors. But we are only allowed 4 colors (red, green, blue, yellow).
+
+Step 3. Because 4 colors are available but a clique of size 5 forces 5 different colors, there is no possible way to assign the 4 colors so that no friends share the same color.
+
+Thus, the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of red, green, blue, and yellow shirts to the eight people, while having every person wear a different color from each of those they are directly friends with, can be found.
+
+Below is an explanation.
+
+Step 1. Write down the people and which friends they have:
+
+ • #0 – friends with #1, #4, #6, #7.
+ • #1 – friends with #0, #3, #5, #6, #7.
+ • #2 – friends with #3, #6, #7.
+ • #3 – friends with #1, #2, #4, #5, #6, #7.
+ • #4 – friends with #0, #3, #5, #6, #7.
+ • #5 – friends with #1, #3, #4, #6, #7.
+ • #6 – friends with #0, #1, #2, #3, #4, #5, #7.
+ • #7 – friends with #0, #1, #2, #3, #4, #5, #6.
+
+Step 2. Notice that one of the vertices (#6) is connected with everyone except #2. In addition, the five people {#1, #3, #5, #6, #7} have many mutual friendship connections. In fact, one may check that every two of these five are friends (for example, #1 is friends with #3, #5, #6, and #7; #3 is friends with #1, #5, #6, and #7; and so on). This set of five vertices forms a complete subgraph—a clique of size 5.
+
+A clique of size n forces the use of at least n different colors in any proper coloring of the graph (since every vertex must get a unique color relative to all its neighbors). In our case, having a clique of 5 means that one would require at least 5 colors. But we are only allowed 4 colors (red, green, blue, yellow).
+
+Step 3. Because 4 colors are available but a clique of size 5 forces 5 different colors, there is no possible way to assign the 4 colors so that no friends share the same color.
+
+Thus, the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

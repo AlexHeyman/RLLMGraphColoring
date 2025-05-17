@@ -1,0 +1,31 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (1, 2), (1, 5), (3, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+The answer is impossible.
+
+To explain briefly: if you look at the friendship graph, you’ll find that the people Alice, Dave, Ethan, Fran, George, and Heather form a clique—in other words, every one of these six is friends with every other among them. Since no two friends may wear the same color and each person has only one shirt color, even six different colors would be needed to assign colors to just this clique, and we only have four available (red, green, blue, yellow). 
+
+Therefore, it is impossible. 
+
+Impossible
+
+---
+Numericized:
+---
+
+The answer is impossible.
+
+To explain briefly: if you look at the friendship graph, you’ll find that the people #0, #3, #4, #5, #6, and #7 form a clique—in other words, every one of these six is friends with every other among them. Since no two friends may wear the same color and each person has only one shirt color, even six different colors would be needed to assign colors to just this clique, and we only have four available (red, green, blue, yellow). 
+
+Therefore, it is impossible. 
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

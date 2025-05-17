@@ -1,0 +1,71 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 7), (0, 9), (0, 10), (0, 11), (1, 3), (1, 5), (1, 6), (1, 8), (1, 9), (1, 11), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 10), (3, 5), (3, 7), (3, 8), (3, 10), (3, 11), (4, 5), (4, 6), (4, 8), (4, 9), (4, 10), (4, 11), (5, 6), (5, 8), (5, 9), (5, 10), (5, 11), (6, 8), (6, 9), (6, 10), (6, 11), (7, 8), (7, 9), (7, 10), (7, 11), (8, 9), (8, 10), (8, 11), (9, 10), (9, 11)]
+
+Complement: [(0, 6), (0, 8), (1, 2), (1, 4), (1, 7), (1, 10), (2, 9), (2, 11), (3, 4), (3, 6), (3, 9), (4, 7), (5, 7), (6, 7), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+After a careful analysis of the “friendship” graph (with vertices representing the 12 people and an edge joining any two who are friends) one finds that if we try to “color” the vertices with 6 colors (so that no two adjacent vertices share the same color) the only way to use exactly 6 colors on 12 vertices would be to partition the set into six “color‐classes” whose sizes add up to 12. (In a nearly complete graph like this one – where every person is friends with almost everyone else – any two people who share a color must be “nonadjacent” in the friendship graph and typically an independent set in such a graph has at most 2 people. In other words, a “perfect” 6–coloring would correspond roughly to a partition into 6 pairs.) 
+
+One may show that among the 12 people the missing “friendship–edges” (that is, the pairs who are not friends) are exactly as follows:
+
+ • Alice is not friends with George and Irene.
+ • Bob is not friends with Carol, Ethan, Heather, and Kathy.
+ • Carol is not friends with Bob, Jack, and Larry.
+ • Dave is not friends with Ethan, George, and Jack.
+ • Ethan is not friends with Bob, Dave, and Heather.
+ • Fran is not friends with Heather.
+ • George is not friends with Alice, Dave, and Heather.
+ • Heather is not friends with Bob, Ethan, Fran, and George.
+ • Irene is not friends with Alice.
+ • Jack is not friends with Carol and Dave.
+ • Kathy is not friends with Bob.
+ • Larry is not friends with Carol.
+
+A short “matching‐theory” argument using these nonedges shows that if one tries to pair up vertices (that is, to put two people in the same color)
+• one is forced to put (by uniqueness of available partners) A with I, F with H, K with B, and L with C;
+• leaving the four “leftover” people D, E, G, and J. In this set the only “allowable” shared–color choices come from edges (in the complement) joining D with one of {E, G, J} but then the other two cannot be paired up with each other.
+In any attempted partition the remaining four would have to be split into one pair plus two singles, making a total of 4 (from the four pairs already forced) plus 1 (this additional pair) plus 2 (the singles) = 7 color–classes.
+
+Since 7 color–classes are needed and only 6 different shirt colors are available, no assignment of red, green, blue, yellow, orange, and purple shirts can avoid having at least one pair of friends wearing the same color.
+
+Thus, the answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+After a careful analysis of the “friendship” graph (with vertices representing the 12 people and an edge joining any two who are friends) one finds that if we try to “color” the vertices with 6 colors (so that no two adjacent vertices share the same color) the only way to use exactly 6 colors on 12 vertices would be to partition the set into six “color‐classes” whose sizes add up to 12. (In a nearly complete graph like this one – where every person is friends with almost everyone else – any two people who share a color must be “nonadjacent” in the friendship graph and typically an independent set in such a graph has at most 2 people. In other words, a “perfect” 6–coloring would correspond roughly to a partition into 6 pairs.) 
+
+One may show that among the 12 people the missing “friendship–edges” (that is, the pairs who are not friends) are exactly as follows:
+
+ • #0 is not friends with #6 and #8.
+ • #1 is not friends with #2, #4, #7, and #10.
+ • #2 is not friends with #1, #9, and #11.
+ • #3 is not friends with #4, #6, and #9.
+ • #4 is not friends with #1, #3, and #7.
+ • #5 is not friends with #7.
+ • #6 is not friends with #0, #3, and #7.
+ • #7 is not friends with #1, #4, #5, and #6.
+ • #8 is not friends with #0.
+ • #9 is not friends with #2 and #3.
+ • #10 is not friends with #1.
+ • #11 is not friends with #2.
+
+A short “matching‐theory” argument using these nonedges shows that if one tries to pair up vertices (that is, to put two people in the same color)
+• one is forced to put (by uniqueness of available partners) A with I, F with H, K with B, and L with C;
+• leaving the four “leftover” people D, E, G, and J. In this set the only “allowable” shared–color choices come from edges (in the complement) joining D with one of {E, G, J} but then the other two cannot be paired up with each other.
+In any attempted partition the remaining four would have to be split into one pair plus two singles, making a total of 4 (from the four pairs already forced) plus 1 (this additional pair) plus 2 (the singles) = 7 color–classes.
+
+Since 7 color–classes are needed and only 6 different shirt colors are available, no assignment of red, green, blue, yellow, orange, and purple shirts can avoid having at least one pair of friends wearing the same color.
+
+Thus, the answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: 10,11

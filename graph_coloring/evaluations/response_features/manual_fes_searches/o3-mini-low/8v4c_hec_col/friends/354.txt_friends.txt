@@ -1,0 +1,51 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 7), (1, 2), (3, 5), (3, 6), (4, 5)]
+
+Evaluation: impossible incorrect
+
+---
+
+We begin by “drawing” the friendship graph. Label the 8 people as vertices. The given friendships are:
+• Alice is friends with Bob, Carol, Dave, Ethan, Fran, and George.
+• Bob is friends with Alice, Dave, Ethan, Fran, George, and Heather.
+• Carol is friends with Alice, Dave, Ethan, Fran, George, and Heather.
+• Dave is friends with Alice, Bob, Carol, Ethan, and Heather.
+• Ethan is friends with Alice, Bob, Carol, Dave, George, and Heather.
+• Fran is friends with Alice, Bob, Carol, George, and Heather.
+• George is friends with Alice, Bob, Carol, Ethan, Fran, and Heather.
+• Heather is friends with Bob, Carol, Dave, Ethan, Fran, and George.
+
+A key observation is that there is a clique (all mutually adjacent subset) among Bob, Carol, George, and Heather. (You can check that each pair of these are friends.) In any clique the members must all have distinct colors. Since we have only 4 colors available (Red, Green, Blue, Yellow), the clique forces Bob, Carol, George, and Heather to be assigned 4 different colors.
+
+Consider now Ethan. His friends are: Alice, Bob, Carol, Dave, George, and Heather. In particular, Ethan is adjacent to Bob, Carol, George, and Heather—the members of the 4-vertex clique. That means, regardless of how we assign the extra two people (Alice and Dave), Ethan will have friends wearing all four colors. There will be no color remaining for Ethan that is different from all of his friends’ colors. 
+
+Based on this reasoning, there is no way to assign the 4 colors so that no pair of friends wears the same color shirt.
+
+Impossible
+
+---
+Numericized:
+---
+
+We begin by “drawing” the friendship graph. Label the 8 people as vertices. The given friendships are:
+• #0 is friends with #1, #2, #3, #4, #5, and #6.
+• #1 is friends with #0, #3, #4, #5, #6, and #7.
+• #2 is friends with #0, #3, #4, #5, #6, and #7.
+• #3 is friends with #0, #1, #2, #4, and #7.
+• #4 is friends with #0, #1, #2, #3, #6, and #7.
+• #5 is friends with #0, #1, #2, #6, and #7.
+• #6 is friends with #0, #1, #2, #4, #5, and #7.
+• #7 is friends with #1, #2, #3, #4, #5, and #6.
+
+A key observation is that there is a clique (all mutually adjacent subset) among #1, #2, #6, and #7. (You can check that each pair of these are friends.) In any clique the members must all have distinct colors. Since we have only 4 colors available (Red, Green, Blue, Yellow), the clique forces #1, #2, #6, and #7 to be assigned 4 different colors.
+
+Consider now #4. His friends are: #0, #1, #2, #3, #6, and #7. In particular, #4 is adjacent to #1, #2, #6, and #7—the members of the 4-vertex clique. That means, regardless of how we assign the extra two people (#0 and #3), #4 will have friends wearing all four colors. There will be no color remaining for #4 that is different from all of his friends’ colors. 
+
+Based on this reasoning, there is no way to assign the 4 colors so that no pair of friends wears the same color shirt.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

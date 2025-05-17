@@ -1,0 +1,99 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(1, 2), (1, 3), (2, 3), (2, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+To determine if it is possible for the 8 people to wear shirts of 4 different colors such that no two friends wear the same color, we can model this problem using graph theory. Let the 8 people be the vertices of a graph, and let an edge connect two vertices if the corresponding people are friends. The problem is then equivalent to determining if this graph can be colored using 4 colors such that no two adjacent vertices have the same color. This is known as the graph 4-coloring problem.
+
+Let the set of people be V = {Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather}. Let's denote them by their first letters {A, B, C, D, E, F, G, H}.
+The available colors are {Red, Green, Blue, Yellow}.
+
+Let's list the friendships (edges) in the graph:
+A is friends with B, C, D, E, F, G, H.
+B is friends with A, E, F, G, H.
+C is friends with A, E, G, H.
+D is friends with A, E, F, G, H.
+E is friends with A, B, C, D, G, H.
+F is friends with A, B, D, G, H.
+G is friends with A, B, C, D, E, F, H.
+H is friends with A, B, C, D, E, F, G.
+
+In graph coloring, a clique is a subset of vertices such that every two distinct vertices in the clique are adjacent (friends). If a graph contains a clique of size k (denoted as Kk), then at least k colors are required to color the graph, because each vertex in the clique must be assigned a different color. The chromatic number of the graph, χ(G), must be greater than or equal to the size of the largest clique, ω(G).
+
+Let's examine the set of people {Alice, Bob, Ethan, George, Heather}, or {A, B, E, G, H}. We need to check if they form a clique of size 5 (K5).
+1.  Alice's friends: {B, C, D, E, F, G, H}. Alice is friends with B, E, G, H.
+2.  Bob's friends: {A, E, F, G, H}. Bob is friends with A, E, G, H.
+3.  Ethan's friends: {A, B, C, D, G, H}. Ethan is friends with A, B, G, H.
+4.  George's friends: {A, B, C, D, E, F, H}. George is friends with A, B, E, H.
+5.  Heather's friends: {A, B, C, D, E, F, G}. Heather is friends with A, B, E, G.
+
+All pairs of people within the set {A, B, E, G, H} are friends with each other. For example:
+- A and B are friends.
+- A and E are friends.
+- A and G are friends.
+- A and H are friends.
+- B and E are friends.
+- B and G are friends.
+- B and H are friends.
+- E and G are friends.
+- E and H are friends.
+- G and H are friends.
+
+Since these 5 people are all friends with each other, they form a K5 clique in the friendship graph. To color the vertices of this clique such that no two adjacent vertices have the same color, we would need at least 5 distinct colors. Each of Alice, Bob, Ethan, George, and Heather must wear a different color shirt.
+
+However, there are only 4 available colors (Red, Green, Blue, Yellow). Since the graph requires at least 5 colors (χ(G) ≥ 5) and we only have 4 colors, it is impossible to assign shirt colors according to the given condition.
+
+Impossible
+
+---
+Numericized:
+---
+
+To determine if it is possible for the 8 people to wear shirts of 4 different colors such that no two friends wear the same color, we can model this problem using graph theory. Let the 8 people be the vertices of a graph, and let an edge connect two vertices if the corresponding people are friends. The problem is then equivalent to determining if this graph can be colored using 4 colors such that no two adjacent vertices have the same color. This is known as the graph 4-coloring problem.
+
+Let the set of people be V = {#0, #1, #2, #3, #4, #5, #6, #7}. Let's denote them by their first letters {A, B, C, D, E, F, G, H}.
+The available colors are {Red, Green, Blue, Yellow}.
+
+Let's list the friendships (edges) in the graph:
+A is friends with B, C, D, E, F, G, H.
+B is friends with A, E, F, G, H.
+C is friends with A, E, G, H.
+D is friends with A, E, F, G, H.
+E is friends with A, B, C, D, G, H.
+F is friends with A, B, D, G, H.
+G is friends with A, B, C, D, E, F, H.
+H is friends with A, B, C, D, E, F, G.
+
+In graph coloring, a clique is a subset of vertices such that every two distinct vertices in the clique are adjacent (friends). If a graph contains a clique of size k (denoted as Kk), then at least k colors are required to color the graph, because each vertex in the clique must be assigned a different color. The chromatic number of the graph, χ(G), must be greater than or equal to the size of the largest clique, ω(G).
+
+Let's examine the set of people {#0, #1, #4, #6, #7}, or {A, B, E, G, H}. We need to check if they form a clique of size 5 (K5).
+1.  #0's friends: {B, C, D, E, F, G, H}. #0 is friends with B, E, G, H.
+2.  #1's friends: {A, E, F, G, H}. #1 is friends with A, E, G, H.
+3.  #4's friends: {A, B, C, D, G, H}. #4 is friends with A, B, G, H.
+4.  #6's friends: {A, B, C, D, E, F, H}. #6 is friends with A, B, E, H.
+5.  #7's friends: {A, B, C, D, E, F, G}. #7 is friends with A, B, E, G.
+
+All pairs of people within the set {A, B, E, G, H} are friends with each other. For example:
+- A and B are friends.
+- A and E are friends.
+- A and G are friends.
+- A and H are friends.
+- B and E are friends.
+- B and G are friends.
+- B and H are friends.
+- E and G are friends.
+- E and H are friends.
+- G and H are friends.
+
+Since these 5 people are all friends with each other, they form a K5 clique in the friendship graph. To color the vertices of this clique such that no two adjacent vertices have the same color, we would need at least 5 distinct colors. Each of #0, #1, #4, #6, and #7 must wear a different color shirt.
+
+However, there are only 4 available colors (Red, Green, Blue, Yellow). Since the graph requires at least 5 colors (χ(G) ≥ 5) and we only have 4 colors, it is impossible to assign shirt colors according to the given condition.
+
+Impossible
+
+---
+
+Manually assessed false edges: 6,7

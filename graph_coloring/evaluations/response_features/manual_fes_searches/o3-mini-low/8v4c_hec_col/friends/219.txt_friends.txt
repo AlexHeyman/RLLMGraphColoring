@@ -1,0 +1,31 @@
+Edges: [(0, 2), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 1), (0, 3), (1, 3), (2, 6), (4, 6), (4, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We start by modeling the situation as a graph: each person is a vertex, and an edge connects two people if they are friends. A proper shirt‐assignment is equivalent to a proper graph coloring of the vertices where the “colors” are the shirt colors (red, green, blue, yellow), and no edge connects two vertices of the same color.
+
+One can quickly notice that there is a clique (a set of vertices all pairwise adjacent) in this graph. In fact, consider the group {Alice, Bob, Carol, Fran, Heather}. Checking the given friendships, every one of these five individuals is friends with each of the others in that group. (For example, Alice, Bob, Carol, Fran, and Heather are all connected by the given friendship list.) In graph theory, if you have a clique of size k, you need at least k colors to color it properly. Here, k = 5, but we only have 4 colors available. 
+
+Since a K₅ (a clique on five vertices) exists in the graph but we have only 4 colors, it is impossible to assign one of the four shirt colors to all eight people while ensuring that every pair of friends wears different colored shirts.
+
+Impossible
+
+---
+Numericized:
+---
+
+We start by modeling the situation as a graph: each person is a vertex, and an edge connects two people if they are friends. A proper shirt‐assignment is equivalent to a proper graph coloring of the vertices where the “colors” are the shirt colors (red, green, blue, yellow), and no edge connects two vertices of the same color.
+
+One can quickly notice that there is a clique (a set of vertices all pairwise adjacent) in this graph. In fact, consider the group {#0, #1, #2, #5, #7}. Checking the given friendships, every one of these five individuals is friends with each of the others in that group. (For example, #0, #1, #2, #5, and #7 are all connected by the given friendship list.) In graph theory, if you have a clique of size k, you need at least k colors to color it properly. Here, k = 5, but we only have 4 colors available. 
+
+Since a K₅ (a clique on five vertices) exists in the graph but we have only 4 colors, it is impossible to assign one of the four shirt colors to all eight people while ensuring that every pair of friends wears different colored shirts.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

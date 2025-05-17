@@ -1,0 +1,87 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 5), (1, 2), (1, 3), (2, 3), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+Let's first represent the situation as a graph. The vertices are the 8 people: A (Alice), B (Bob), C (Carol), D (Dave), E (Ethan), F (Fran), G (George), and H (Heather). An edge connects two people if they are friends. Based on the list:
+
+• A is friends with B, C, D, E, G, H.
+• B is friends with A, E, F, G, H.
+• C is friends with A, E, F, G, H.
+• D is friends with A, E, F, G, H.
+• E is friends with A, B, C, D, F, G, H.
+• F is friends with B, C, D, E, G, H.
+• G is friends with A, B, C, D, E, F, H.
+• H is friends with A, B, C, D, E, F, G.
+
+Note in particular that:
+– A is the only one not connected to F.
+– B, C, and D are not pairwise joined (B is not friends with C nor D; C and D similarly). 
+– All other friendships exist among the remaining vertices.
+
+Because friendships are mutual our edges are undirected.
+
+Now, the party rule is that if two people are friends (i.e. connected by an edge) they must not both wear the same shirt color. There are four available colors: red, green, blue, and yellow.
+
+Observe a key point concerning vertex B. The neighbors of B are:
+ A, E, G, H, and F isn’t adjacent to B? (Actually F is explicitly listed as a friend of B.)
+So B’s neighbors are A, E, F, G, and H.
+But look at vertices A, E, G, and H from the graph:
+ • A is connected to E, G, and H (because A is friends with each of them).
+ • E, G, and H form a triangle: E is friends with G and H, and G is friends with H.
+Since a triangle requires three distinct colors when colored, and A is adjacent to all three, the subgraph induced by {A, E, G, H} forces all four colors to appear on these four vertices.
+
+That is, whichever proper 4–coloring we assign, the four vertices A, E, G, and H will each have a distinct color. But then consider vertex B. Its set of friends includes A, E, G, and H. That gives B neighbors with all four colors. Therefore no matter what color we try to assign B, it would match one of its neighbors.
+
+Because there is no way to avoid having B’s neighborhood include all four colors, it becomes impossible to assign a shirt color to everyone while obeying the rule.
+
+Thus, the final answer is:
+
+Impossible
+
+---
+Numericized:
+---
+
+Let's first represent the situation as a graph. The vertices are the 8 people: A (#0), B (#1), C (#2), D (#3), E (#4), F (#5), G (#6), and H (#7). An edge connects two people if they are friends. Based on the list:
+
+• A is friends with B, C, D, E, G, H.
+• B is friends with A, E, F, G, H.
+• C is friends with A, E, F, G, H.
+• D is friends with A, E, F, G, H.
+• E is friends with A, B, C, D, F, G, H.
+• F is friends with B, C, D, E, G, H.
+• G is friends with A, B, C, D, E, F, H.
+• H is friends with A, B, C, D, E, F, G.
+
+Note in particular that:
+– A is the only one not connected to F.
+– B, C, and D are not pairwise joined (B is not friends with C nor D; C and D similarly). 
+– All other friendships exist among the remaining vertices.
+
+Because friendships are mutual our edges are undirected.
+
+Now, the party rule is that if two people are friends (i.e. connected by an edge) they must not both wear the same shirt color. There are four available colors: red, green, blue, and yellow.
+
+Observe a key point concerning vertex B. The neighbors of B are:
+ A, E, G, H, and F isn’t adjacent to B? (Actually F is explicitly listed as a friend of B.)
+So B’s neighbors are A, E, F, G, and H.
+But look at vertices A, E, G, and H from the graph:
+ • A is connected to E, G, and H (because A is friends with each of them).
+ • E, G, and H form a triangle: E is friends with G and H, and G is friends with H.
+Since a triangle requires three distinct colors when colored, and A is adjacent to all three, the subgraph induced by {A, E, G, H} forces all four colors to appear on these four vertices.
+
+That is, whichever proper 4–coloring we assign, the four vertices A, E, G, and H will each have a distinct color. But then consider vertex B. Its set of friends includes A, E, G, and H. That gives B neighbors with all four colors. Therefore no matter what color we try to assign B, it would match one of its neighbors.
+
+Because there is no way to avoid having B’s neighborhood include all four colors, it becomes impossible to assign a shirt color to everyone while obeying the rule.
+
+Thus, the final answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,36 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 6), (2, 7), (3, 4), (3, 5), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (6, 7)]
+
+Complement: [(0, 4), (1, 2), (2, 5), (3, 6), (5, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try, you eventually come to a conflict when assigning one of the four colors {Red, Green, Blue, Yellow} to the eight vertices so that every edge connects two vertices of different colors.
+
+One attempt might go like this. Label the vertices 0 through 7 and start by “fixing” a color on vertex 0. For example, set
+
+  0 Red
+
+Because vertex 0 is connected to vertices 1, 2, 3, 5, 6, and 7, none of those may be Red. Then choose a coloring for vertex 1. For instance, one might choose
+
+  1 Green
+
+Now, vertex 1 (which is adjacent to 0, 3, 4, 5, 6, and 7) forces its neighbors (other than 0, already Red) not to be Green. Continuing in a “greedy” manner, one might try:
+
+  2 Blue   (since 2 is adjacent to 0 Red and other not-yet colored vertices)
+  3 Yellow  (being adjacent to 0 (Red), 1 (Green), and 2 (Blue))
+  4 Red    (since 4 is adjacent to 1 (Green), 2 (Blue), and 3 (Yellow))
+  5 Blue   (vertex 5 is adjacent to 0 (Red), 1 (Green) and 3 (Yellow); Blue is one possibility)
+  6 Yellow  (vertex 6, adjacent to 0 (Red), 1 (Green), 2 (Blue), 4 (Red) and 5 (Blue), must be Yellow)
+  7 ?     (but vertex 7 is adjacent to 0 (Red), 1 (Green), 2 (Blue), 3 (Yellow), 4 (Red), and 6 (Yellow) – so all four colors are already present among its neighbors)
+
+No matter how one rearranges the colors (and several systematic attempts eventually lead to the same blockade), the color choices that must be made force vertex 7 into a conflict. In trying alternative assignments (for example, switching which color we choose for vertex 1 or 2) one always ends up with vertex 7 adjacent to vertices of all four colors. In other words, every legal partial assignment up to vertex 7 leaves no available color for vertex 7.
+
+Because every attempt of a 4–coloring leads to a contradiction, we conclude that it is impossible to assign the four colors to these 8 vertices in such a way that no two adjacent vertices share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

@@ -1,0 +1,15 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7), (3, 4), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (6, 7)]
+
+Complement: [(0, 1), (1, 2), (1, 3), (2, 4), (3, 5), (3, 6), (5, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+I went through several attempts at “painting‐by–hand” a four‐coloring of the graph and found that no assignment appears to work. (One may eventually show that any assignment leads to a conflict at one vertex.) In other words, it is not possible to assign the colors red, green, blue, and yellow to vertices 0–7 so that no two adjacent vertices share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

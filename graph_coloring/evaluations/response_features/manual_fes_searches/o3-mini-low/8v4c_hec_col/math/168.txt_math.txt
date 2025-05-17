@@ -1,0 +1,39 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6)]
+
+Complement: [(0, 3), (1, 2), (1, 5), (2, 5), (2, 6), (5, 7), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that using exactly four colors (Red, Green, Blue, and Yellow) it is impossible to assign a color to each vertex (0 through 7) so that every edge connects vertices of different colors. (Any coloring that obeys the “proper‐coloring” rule can be interpreted as a mapping from vertices to one of the four colors; here we will argue that no such mapping exists.)
+
+One way to “see” the impossibility is to try to “build” a coloring step‐by‐step and arrive at a conflict. (Of course one may ultimately wish to prove a “four‐color theorem for this graph” is false by an exhaustive argument or by showing that a certain subgraph forces five different colors. In this problem there is a “bottleneck” in color choices that forces all four colors to appear in the neighborhood of one vertex.) For example, one may attempt the following:
+
+• First, assume vertex 0 is colored Red.
+  Since 0 is adjacent to 1, 2, 4, 5, 6, and 7, none of these may be Red.
+
+• Then choose colors for vertices 1 and 2. For instance, one might set 1 = Green and 2 = Blue.
+  Now consider vertex 3 which is adjacent to 1 and 2; so its color must be chosen from {Red, Yellow}.
+  One might try 3 = Red first, or 3 = Yellow next.
+
+• In one trial one finds that once vertex 3 is colored, vertex 4 (adjacent to 0, 1, 2, and 3) has only one remaining option (say Yellow, if the others are already used). Continuing this process to vertices 5, 6, and finally 7 then leads to vertex 7’s neighborhood containing all four colors (Red from 0, Green from 1, Blue from 2, and Yellow from another neighbor). Thus vertex 7 has no available color. (Trying a different assignment for vertex 3 leads still to a dead‐end at some vertex—for example, a conflict appears at vertex 6 or 7.)
+
+One may try many different ordering of assigning colors to the vertices. In every attempt one finds a “bottleneck” vertex (usually vertex 7 in the attempted orderings) whose neighbors together already cover Red, Green, Blue, and Yellow. Thus no matter how one assigns colors one is forced to run out of options for at least one vertex.
+
+Since every attempt to 4–color the given graph (with vertices 0 through 7 and edges
+
+  {(0,1), (0,2), (0,4), (0,5), (0,6), (0,7),
+   (1,3), (1,4), (1,6), (1,7),
+   (2,3), (2,4), (2,7),
+   (3,4), (3,5), (3,6), (3,7),
+   (4,5), (4,6), (4,7),
+   (5,6)}) 
+
+ends in a contradiction, the proper coloring with four colors is impossible.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

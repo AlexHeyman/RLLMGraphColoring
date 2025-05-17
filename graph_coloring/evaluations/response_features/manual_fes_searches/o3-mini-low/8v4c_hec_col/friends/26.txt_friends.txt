@@ -1,0 +1,69 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 3), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 6), (4, 5), (4, 7), (5, 7), (6, 7)]
+
+Complement: [(0, 5), (1, 2), (1, 4), (1, 5), (3, 5), (3, 7), (4, 6), (5, 6)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign one of the four colors—red, green, blue, or yellow—to each person while obeying the rule “no two people who are friends share a color,” one person is forced to conflict. (A conflict means that one person would be “boxed‐in” by friends collectively wearing all four colors.)
+
+Let’s review the friendships:
+• Alice is friends with Bob, Carol, Dave, Ethan, George, and Heather.
+• Bob is friends with Dave, George, and Heather.
+• Carol is friends with Dave, Ethan, Fran, George, and Heather.
+• Dave is friends with Ethan and George (as well as the ones already mentioned via Alice, Bob, Carol).
+• Ethan is friends with Fran and Heather (in addition to Alice, Carol, Dave).
+• Fran is friends with Heather (in addition to Carol and Ethan).
+• George is friends with Heather (in addition to Alice, Bob, Carol, Dave).
+
+An especially troublesome group is formed by the five people who are all friends with George:
+  Alice, Bob, Carol, Dave, and Heather.
+Since George is friends with each of these, they all must have colors different from whatever color George wears. In other words, if we manage to “reserve” one color for George, none of his five friends may use that color.
+
+Let’s look at those five more closely. Notice that:
+1. Alice is friends with Bob and Carol.
+2. Both Dave and Heather are friends with Alice, Bob, and Carol.
+That means that among Alice, Bob, and Carol we must assign three different colors. Since only four colors are available, there is exactly one “left‐over” color that is not used by these three. However, Dave (being friends with A, B, and C) must wear a color that differs from each of these three – so Dave is forced to use exactly that “fourth” color. The same reasoning works for Heather. So Dave and Heather end up with the same color.
+Now, among the five (A, B, C, D, and H), the three of A, B, C use three different colors and D = H each use the remaining “fourth” color. In other words, the friends of George are using all four distinct colors.
+
+Since George is friends with each one of these five, he cannot use any of the four colors. That is a contradiction: there is no fifth color available.
+
+Thus no valid assignment of red, green, blue, and yellow exists for these 8 people that avoids a conflict among friends.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no matter how you try to assign one of the four colors—red, green, blue, or yellow—to each person while obeying the rule “no two people who are friends share a color,” one person is forced to conflict. (A conflict means that one person would be “boxed‐in” by friends collectively wearing all four colors.)
+
+Let’s review the friendships:
+• #0 is friends with #1, #2, #3, #4, #6, and #7.
+• #1 is friends with #3, #6, and #7.
+• #2 is friends with #3, #4, #5, #6, and #7.
+• #3 is friends with #4 and #6 (as well as the ones already mentioned via #0, #1, #2).
+• #4 is friends with #5 and #7 (in addition to #0, #2, #3).
+• #5 is friends with #7 (in addition to #2 and #4).
+• #6 is friends with #7 (in addition to #0, #1, #2, #3).
+
+An especially troublesome group is formed by the five people who are all friends with #6:
+  #0, #1, #2, #3, and #7.
+Since #6 is friends with each of these, they all must have colors different from whatever color #6 wears. In other words, if we manage to “reserve” one color for #6, none of his five friends may use that color.
+
+Let’s look at those five more closely. Notice that:
+1. #0 is friends with #1 and #2.
+2. Both #3 and #7 are friends with #0, #1, and #2.
+That means that among #0, #1, and #2 we must assign three different colors. Since only four colors are available, there is exactly one “left‐over” color that is not used by these three. However, #3 (being friends with A, B, and C) must wear a color that differs from each of these three – so #3 is forced to use exactly that “fourth” color. The same reasoning works for #7. So #3 and #7 end up with the same color.
+Now, among the five (A, B, C, D, and H), the three of A, B, C use three different colors and D = H each use the remaining “fourth” color. In other words, the friends of #6 are using all four distinct colors.
+
+Since #6 is friends with each one of these five, he cannot use any of the four colors. That is a contradiction: there is no fifth color available.
+
+Thus no valid assignment of red, green, blue, and yellow exists for these 8 people that avoids a conflict among friends.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

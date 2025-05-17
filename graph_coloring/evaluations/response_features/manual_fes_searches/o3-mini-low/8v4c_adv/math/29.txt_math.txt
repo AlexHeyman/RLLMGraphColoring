@@ -1,0 +1,33 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 3), (1, 4), (1, 6), (2, 3), (2, 4), (2, 7), (3, 5), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(1, 2), (1, 5), (1, 7), (2, 5), (2, 6), (3, 4), (3, 6), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try, it is impossible to assign to the eight vertices (numbered 0 through 7) one of the four colors {Red, Green, Blue, Yellow} so that adjacent vertices receive different colors.
+
+Let us explain one way to see that.
+
+Notice first that vertex 0 is adjacent to every other vertex (vertices 1, 2, …, 7). Hence, whatever color you give vertex 0 (say Red), none of the other vertices may be colored Red. That means vertices 1 through 7 all must be colored from the set {Green, Blue, Yellow}––three colors only.
+
+Thus the problem reduces to this: Is the induced subgraph on vertices 1,…,7 (with all the edges among these vertices, namely 
+  (1,3), (1,4), (1,6), (2,3), (2,4), (2,7), (3,5), (3,7), (4,5), (4,6), (4,7), (5,6), (5,7))
+3‐colorable? 
+
+A careful look at the induced subgraph shows that it contains too many “triangle‐like” constraints. For example, one may start by setting:
+  vertex 1 = Green,
+  vertex 2 = (choose any color different from one arriving at conflicts later),
+  then from the edges (1,3) and (2,3) one is forced on vertex 3 to pick the third color.
+Going on, you eventually discover that several vertices get “forced” to one of the three colors. In particular, if you follow the constraints through, you will find that the vertices adjacent to vertex 7 (namely 2, 3, 4, and 5) already use Green, Blue and Yellow in such a way that vertex 7 would require a fourth color—but Red isn’t allowed (since vertex 0 is Red and vertex 7 is adjacent to 0). 
+
+Thus no assignment using only the three remaining colors for vertices 1 through 7 exist. Since vertex 0 “steals” one color, the whole graph cannot be 4–colored.
+
+Therefore, the correct final answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

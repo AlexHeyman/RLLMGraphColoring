@@ -1,0 +1,47 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 6), (0, 8), (0, 9), (0, 10), (0, 11), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (2, 3), (2, 4), (2, 5), (2, 6), (2, 8), (2, 9), (2, 11), (3, 6), (3, 7), (3, 9), (3, 10), (3, 11), (4, 5), (4, 8), (4, 10), (4, 11), (5, 6), (5, 7), (5, 8), (5, 9), (5, 10), (5, 11), (6, 7), (6, 8), (6, 9), (6, 10), (7, 8), (7, 9), (7, 10), (7, 11), (8, 9), (8, 10), (9, 10), (10, 11)]
+
+Complement: [(0, 3), (0, 5), (0, 7), (1, 5), (2, 7), (2, 10), (3, 4), (3, 5), (3, 8), (4, 6), (4, 7), (4, 9), (6, 11), (8, 11), (9, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that with the friendships given (in particular, because Kathy is friends with everyone else) no assignment of the six colors can avoid a conflict.
+
+Notice that Kathy (K) is friends with all of the other 11 people. That means whichever color Kathy wears cannot be used by any of the others. In other words, once Kathy is “colored” with one of the six shirt colors, the remaining 11 people must use only the other 5 colors.
+
+Now observe that among the remaining people there is a 5‐clique. For example, consider
+
+  Alice, Bob, Carol, Irene, and Jack.
+
+A quick check of the list shows that every one of these five is friends with each of the others. In any proper coloring these five must all have different colors. So they must use all five colors available (none of which is the color worn by Kathy).
+
+Now look at George. His friends (besides Kathy) include Alice, Bob, Carol, Irene, and Jack – the very five vertices that already exhaust the five colors. Since George is friends with all of these five, no color from the remaining five can be assigned to him.
+
+Thus even before all 12 people have “picked a shirt color” there is no legal color available for George. Equivalently, because one vertex (Kathy) forces the remaining graph to be 5‐colorable—even though that graph contains a 5‐clique with an extra vertex (George) adjacent to every vertex of the clique—the friendship constraints cannot be met by any assignment of the six colors.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that with the friendships given (in particular, because #10 is friends with everyone else) no assignment of the six colors can avoid a conflict.
+
+Notice that #10 (K) is friends with all of the other 11 people. That means whichever color #10 wears cannot be used by any of the others. In other words, once #10 is “colored” with one of the six shirt colors, the remaining 11 people must use only the other 5 colors.
+
+Now observe that among the remaining people there is a 5‐clique. For example, consider
+
+  #0, #1, #2, #8, and #9.
+
+A quick check of the list shows that every one of these five is friends with each of the others. In any proper coloring these five must all have different colors. So they must use all five colors available (none of which is the color worn by #10).
+
+Now look at #6. His friends (besides #10) include #0, #1, #2, #8, and #9 – the very five vertices that already exhaust the five colors. Since #6 is friends with all of these five, no color from the remaining five can be assigned to him.
+
+Thus even before all 12 people have “picked a shirt color” there is no legal color available for #6. Equivalently, because one vertex (#10) forces the remaining graph to be 5‐colorable—even though that graph contains a 5‐clique with an extra vertex (#6) adjacent to every vertex of the clique—the friendship constraints cannot be met by any assignment of the six colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: 2,10

@@ -1,0 +1,39 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 3), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 5), (1, 2), (1, 4), (1, 5), (3, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+The key is to notice that Bob’s four friends—Alice, Dave, George, and Heather—form a complete subgraph (K₄). In detail, each of these four is friends with each of the others:
+ • Alice is friends with Dave, George, and Heather.
+ • Dave is friends with Alice, George, and Heather.
+ • George is friends with Alice, Dave, and Heather.
+ • Heather is friends with Alice, Dave, and George.
+
+Because a complete graph on four vertices (K₄) requires four different colors, those four people must wear four distinct colors. Since Bob is friends with each of them, whichever four colors are available (red, green, blue, and yellow) will be “taken” by his friends, leaving Bob with no color that isn’t already used by someone he’s friends with.
+
+Thus, it is impossible to assign the four shirt colors to all eight people under the condition that no one wears the same color as a friend.
+
+Impossible
+
+---
+Numericized:
+---
+
+The key is to notice that #1’s four friends—#0, #3, #6, and #7—form a complete subgraph (K₄). In detail, each of these four is friends with each of the others:
+ • #0 is friends with #3, #6, and #7.
+ • #3 is friends with #0, #6, and #7.
+ • #6 is friends with #0, #3, and #7.
+ • #7 is friends with #0, #3, and #6.
+
+Because a complete graph on four vertices (K₄) requires four different colors, those four people must wear four distinct colors. Since #1 is friends with each of them, whichever four colors are available (red, green, blue, and yellow) will be “taken” by his friends, leaving #1 with no color that isn’t already used by someone he’s friends with.
+
+Thus, it is impossible to assign the four shirt colors to all eight people under the condition that no one wears the same color as a friend.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

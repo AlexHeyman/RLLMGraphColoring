@@ -1,0 +1,270 @@
+101.txt math
+
+Line 184
+Vertex 5: connected to 0 (Red), 2 (Blue), 3 (Red), 4 (Yellow), 6,7
+
+False edges:
+(4, 5) [Manual assessment: N/A]
+
+---
+
+113.txt math
+
+Line 20
+- Vertex 6: Connected to 1,2,3,4,5,7
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+122.txt math
+
+Line 176
+Now, 3 is connected to 0(red), 1(green), and 2(yellow), and others.
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+128.txt math
+
+Line 100
+(1,6) is in the edges, so vertex 7 is connected to 1 (Green).
+
+False edges:
+(1, 7) [Manual assessment: N/A]
+
+---
+
+138.txt math
+
+Line 230
+5 is Yellow, and 6 is connected to 5.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+151.txt math
+
+Line 20
+- Vertex 6: connected to 0,1,2,3,4,5,7
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+172.txt math
+
+Line 22
+- Vertex 6: Connected to 0, 1, 3, 4, 5, 7
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+176.txt math
+
+Line 64
+Vertex 4 is connected to 0 (red), 1 (green), 2 (blue), 3 (red), and 5,6,7.
+
+False edges:
+(2, 4) [Manual assessment: N/A]
+
+---
+
+185.txt math
+
+Line 18
+- Vertex 5: connected to 0, 1, 2, 3, 4, 6
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+191.txt math
+
+Line 22
+- Vertex 6: connected to 0,1,2,4,7
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+200.txt math
+
+Line 60
+Looking at vertex 7: connected to 1,2,3,4,5,6. That's 6 vertices plus itself, but is the subgraph of {0,1,2,3,4,5,6,7} minus 0 a clique? 7 is connected to 1-6, but are 1-6 all connected to each other?
+
+False edges:
+(1, 6) [Manual assessment: N/A]
+
+---
+
+251.txt math
+
+Line 22
+- Vertex 6: connected to 0,1,2,3,4,5,7
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+27.txt math
+
+Line 146
+Now, vertex 3: connected to 0 (Red), 1 (Green), 2 (Yellow). So, only Blue left. Color vertex 3: Blue
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+271.txt math
+
+Line 20
+- Vertex 6: Connected to 1,2,3,4,5,7
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+273.txt math
+
+Line 126
+Vertex 2 is connected to 0 (Red) and 1 (Green), so it can be Yellow or Blue.
+
+False edges:
+(1, 2) [Manual assessment: N/A]
+
+---
+
+285.txt math
+
+Line 36
+- Vertex 7: Connected to 0,1,2,3,4,5,6
+
+False edges:
+(1, 7) [Manual assessment: N/A]
+
+---
+
+305.txt math
+
+Line 54
+Vertex 4 is connected to 0 (Red), 1 (Green), 2,3,5,6,7.
+
+False edges:
+(3, 4) [Manual assessment: N/A]
+
+---
+
+307.txt math
+
+Line 108
+Suppose I color vertex 3 differently, but vertex 3 is connected to 0 (Red), 1 (Green), 2 (Blue), so it has to be Yellow.
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+360.txt math
+
+Line 52
+So, vertex 3 is connected to 0 (Red), 1 (Green), 2 (Blue). So, it can't be Red, Green, or Blue. We have four colors: Yellow is left. So, color vertex 3 Yellow.
+
+False edges:
+(2, 3) [Manual assessment: N/A]
+
+---
+
+377.txt math
+
+Line 134
+Maybe color vertex 2 differently. Vertex 2 is connected to 1 (Green) and 0 (Red), so it could be Blue or Yellow.
+
+False edges:
+(0, 2) [Manual assessment: N/A]
+
+---
+
+389.txt math
+
+Line 120
+Vertex 3 is adjacent to vertex 1, which is Green.
+
+False edges:
+(1, 3) [Manual assessment: N/A]
+
+---
+
+400.txt math
+
+Line 22
+- Vertex 6: connected to 1, 2, 3, 4, 5, 7
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+47.txt math
+
+Line 220
+Is 6 connected to 5? Yes, 6 is connected to 5, which is Yellow.
+
+False edges:
+(5, 6) [Manual assessment: N/A]
+
+---
+
+6.txt math
+
+Line 30
+- Vertex 6: connected to 0, 2, 3, 4, 5, 7
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+7.txt math
+
+Line 70
+Vertex 4: Connected to 0 (Red), 1 (Green), 2 (Blue), 3 (Yellow), 5,6,7.
+
+False edges:
+(2, 4) [Manual assessment: N/A]
+
+---
+
+78.txt math
+
+Line 30
+- Vertex 6: connected to 1,2,3,4,5,7
+
+False edges:
+(6, 7) [Manual assessment: N/A]
+
+---
+
+98.txt math
+
+Line 182
+Instead of Blue for vertex 2, what if I color vertex 2 Yellow? Vertex 2 is connected to 1 (Green) and 0 (Red), so it can be Blue or Yellow.
+
+False edges:
+(0, 2) [Manual assessment: N/A]
+
+---
+

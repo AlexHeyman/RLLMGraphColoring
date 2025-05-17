@@ -1,0 +1,79 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 6), (0, 7), (1, 2), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 5), (1, 3), (2, 4), (3, 5), (4, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of four shirt‐colors (red, green, blue, yellow) to the eight people—subject to the condition that no pair of friends wears the same color—is possible.
+
+Let us briefly explain one way to see the impossibility.
+
+Step 1. Note the list of people and friendships. (For convenience we label them as follows: 
+ Alice, Bob, Carol, Dave, Ethan, Fran, George, Heather.)
+The given pairs of friends are:
+
+ Alice–Bob, Alice–Carol, Alice–Dave, Alice–Ethan, Alice–George, Alice–Heather  
+ Bob–Carol, Bob–Ethan, Bob–Fran, Bob–George, Bob–Heather  
+ Carol–Dave, Carol–Fran, Carol–George, Carol–Heather  
+ Dave–Ethan, Dave–George, Dave–Heather  
+ Ethan–George, Ethan–Heather  
+ Fran–George, Fran–Heather
+
+Step 2. Observe that Heather is friends with everyone except herself (that is, with the other seven people). In any assignment her shirt color must differ from each of her seven friends’ colors.
+
+Step 3. Notice that even without Heather we have a special set among her neighbors. In particular, consider the four people Alice, Bob, Carol, and George.
+– Alice is friends with Bob, Carol, and George.
+– Bob is friends with Alice, Carol, and George.
+– Carol is friends with Alice, Bob, and George.
+– George, by the given list, is friends with Alice, Bob, and Carol.
+Thus, these four form a complete graph (a K4) meaning that in any proper coloring these four must all have different colors.
+
+Step 4. Since only four colors are available, the four people Alice, Bob, Carol, and George must “use up” all four colors. That is, no color is repeated in that K4.
+
+Step 5. But Heather is friends with each of these four. Therefore, whichever color Heather were to choose from the set {red, green, blue, yellow} would match the color of one of her friends in the K4. This violates the rule that no two friends may wear the same color.
+
+Because of this unavoidable conflict, there is no way to assign the four colors to the eight people so that every pair of friends has different shirt colors.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that no assignment of four shirt‐colors (red, green, blue, yellow) to the eight people—subject to the condition that no pair of friends wears the same color—is possible.
+
+Let us briefly explain one way to see the impossibility.
+
+Step 1. Note the list of people and friendships. (For convenience we label them as follows: 
+ #0, #1, #2, #3, #4, #5, #6, #7.)
+The given pairs of friends are:
+
+ #0–#1, #0–#2, #0–#3, #0–#4, #0–#6, #0–#7  
+ #1–#2, #1–#4, #1–#5, #1–#6, #1–#7  
+ #2–#3, #2–#5, #2–#6, #2–#7  
+ #3–#4, #3–#6, #3–#7  
+ #4–#6, #4–#7  
+ #5–#6, #5–#7
+
+Step 2. Observe that #7 is friends with everyone except herself (that is, with the other seven people). In any assignment her shirt color must differ from each of her seven friends’ colors.
+
+Step 3. Notice that even without #7 we have a special set among her neighbors. In particular, consider the four people #0, #1, #2, and #6.
+– #0 is friends with #1, #2, and #6.
+– #1 is friends with #0, #2, and #6.
+– #2 is friends with #0, #1, and #6.
+– #6, by the given list, is friends with #0, #1, and #2.
+Thus, these four form a complete graph (a K4) meaning that in any proper coloring these four must all have different colors.
+
+Step 4. Since only four colors are available, the four people #0, #1, #2, and #6 must “use up” all four colors. That is, no color is repeated in that K4.
+
+Step 5. But #7 is friends with each of these four. Therefore, whichever color #7 were to choose from the set {red, green, blue, yellow} would match the color of one of her friends in the K4. This violates the rule that no two friends may wear the same color.
+
+Because of this unavoidable conflict, there is no way to assign the four colors to the eight people so that every pair of friends has different shirt colors.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

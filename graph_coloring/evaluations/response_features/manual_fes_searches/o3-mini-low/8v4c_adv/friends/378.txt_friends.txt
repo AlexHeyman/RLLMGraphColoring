@@ -1,0 +1,71 @@
+Edges: [(0, 1), (0, 2), (0, 3), (0, 5), (0, 6), (0, 7), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 4), (1, 2), (1, 3), (3, 5), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that there is no way to “color” the eight people with four shirt‐colors (red, green, blue, and yellow) so that no two friends wear the same color. (You can think of “shirt‐colors” as “colors” and “friendship” as “adjacency” in a graph; what is being asked is whether the graph below is 4‐colorable.)
+
+Let the eight people be vertices A (Alice), B (Bob), C (Carol), D (Dave), E (Ethan), F (Fran), G (George), and H (Heather). The friendships given create the following edges:
+ • A (Alice) is friends with B, C, D, F, G, and H.
+ • B (Bob) is friends with A, E, F, G, and H.
+ • C (Carol) is friends with A, D, E, F, G, and H.
+ • D (Dave) is friends with A, C, E, G, and H.
+ • E (Ethan) is friends with B, C, D, F, G, and H.
+ • F (Fran) is friends with A, B, C, E, G, and H.
+ • G (George) is friends with A, B, C, D, E, and F, and (by symmetry of the description) also with H.
+ • H (Heather) is friends with A, B, C, D, E, and F, and also with G.
+
+An outline of why a solution is impossible is as follows:
+
+1. Notice that vertices F, G, and H form a triangle (each pair among Fran, George, and Heather are friends). In any proper coloring of a triangle the three vertices must get three different colors.
+
+2. Also observe that F (Fran) is friends with four people outside the triangle (namely, A, B, C, and E); likewise, G and H have even more friends outside the triangle. This forces a “pressure” on the colors available for F, G, and H. For example, if one could “force” the four people A, B, C, and E to use only three colors among them, then F’s allowed color (apart from those three) would be the fourth color. But then (because of extra edges – for instance, G and H are friends with D as well – which typically adds a new color into the forbidden list for G and H) all three of F, G, and H would “see” all four colors used by their other friends. In that circumstance no vertex of the triangle would have any available color.
+
+3. Numerous attempts (taking account of the friendship relations among A, B, C, D, and E) lead to the same conclusion: the external neighbors of the triangle F, G, and H “cover” all four colors. (A few trial assignments show that even if one “reuses” a color among some of the vertices {A, B, C, D, E} that are not pairwise all adjacent, the unavoidable extra edge in that set forces an enlargement of the “forbidden palette” seen by vertices G and H.) 
+
+4. Because F, G, and H must each choose a color different from one another (since they form a triangle) and because each one already sees all four colors among his external (non‐triangle) friends, no proper assignment from the set {red, green, blue, yellow} is possible.
+
+After many systematic searches and trial colorings (details of which one can write out as one studies the graph carefully), one finds that every arrangement leads to a conflict along some edge.
+
+Thus, there is no way for the eight people to choose shirt–colors so that no two friends wear the same color.
+
+Impossible
+
+---
+Numericized:
+---
+
+We will show that there is no way to “color” the eight people with four shirt‐colors (red, green, blue, and yellow) so that no two friends wear the same color. (You can think of “shirt‐colors” as “colors” and “friendship” as “adjacency” in a graph; what is being asked is whether the graph below is 4‐colorable.)
+
+Let the eight people be vertices A (#0), B (#1), C (#2), D (#3), E (#4), F (#5), G (#6), and H (#7). The friendships given create the following edges:
+ • A (#0) is friends with B, C, D, F, G, and H.
+ • B (#1) is friends with A, E, F, G, and H.
+ • C (#2) is friends with A, D, E, F, G, and H.
+ • D (#3) is friends with A, C, E, G, and H.
+ • E (#4) is friends with B, C, D, F, G, and H.
+ • F (#5) is friends with A, B, C, E, G, and H.
+ • G (#6) is friends with A, B, C, D, E, and F, and (by symmetry of the description) also with H.
+ • H (#7) is friends with A, B, C, D, E, and F, and also with G.
+
+An outline of why a solution is impossible is as follows:
+
+1. Notice that vertices F, G, and H form a triangle (each pair among #5, #6, and #7 are friends). In any proper coloring of a triangle the three vertices must get three different colors.
+
+2. Also observe that F (#5) is friends with four people outside the triangle (namely, A, B, C, and E); likewise, G and H have even more friends outside the triangle. This forces a “pressure” on the colors available for F, G, and H. For example, if one could “force” the four people A, B, C, and E to use only three colors among them, then F’s allowed color (apart from those three) would be the fourth color. But then (because of extra edges – for instance, G and H are friends with D as well – which typically adds a new color into the forbidden list for G and H) all three of F, G, and H would “see” all four colors used by their other friends. In that circumstance no vertex of the triangle would have any available color.
+
+3. Numerous attempts (taking account of the friendship relations among A, B, C, D, and E) lead to the same conclusion: the external neighbors of the triangle F, G, and H “cover” all four colors. (A few trial assignments show that even if one “reuses” a color among some of the vertices {A, B, C, D, E} that are not pairwise all adjacent, the unavoidable extra edge in that set forces an enlargement of the “forbidden palette” seen by vertices G and H.) 
+
+4. Because F, G, and H must each choose a color different from one another (since they form a triangle) and because each one already sees all four colors among his external (non‐triangle) friends, no proper assignment from the set {red, green, blue, yellow} is possible.
+
+After many systematic searches and trial colorings (details of which one can write out as one studies the graph carefully), one finds that every arrangement leads to a conflict along some edge.
+
+Thus, there is no way for the eight people to choose shirt–colors so that no two friends wear the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

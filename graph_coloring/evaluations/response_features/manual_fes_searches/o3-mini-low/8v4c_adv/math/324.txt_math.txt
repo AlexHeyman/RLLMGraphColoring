@@ -1,0 +1,55 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 7), (3, 5), (3, 6), (3, 7), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7)]
+
+Complement: [(0, 2), (1, 5), (2, 6), (3, 4), (6, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no matter how you try to assign one of the four colors (Red, Green, Blue, Yellow) to the eight vertices so that every edge has differently colored endpoints, the rules “force” a conflict. (In fact, one may prove using a computer‐assisted search or a “hand‐shake” in the induced subgraphs that this graph is not 4–colorable.) 
+
+Below is one attempt to color which eventually leads us into a contradiction.
+
+One might start by “fixing” a color for vertex 0. For example, suppose we set
+
+  0 Red
+
+Because 0 is adjacent to vertices 1, 3, 4, 5, 6, and 7, none of these may then be Red. Next, suppose we choose a color for vertex 1. For instance, let
+
+  1 Green
+
+Vertex 1 is adjacent (besides 0) to 2, 3, 4, 6, and 7 so none of those may be Green. Continuing, one may try
+
+  2 Blue
+
+Now vertex 2 is adjacent to 1, 3, 4, 5, and 7 so (in addition to Blue being forbidden at 2) none of these may be Blue. Next, try
+
+  3 Yellow
+
+Vertex 3 meets 0 (Red), 1 (Green), 2 (Blue) and also is adjacent to 5, 6, and 7. The only “available” color for 3 from our list is Yellow so we set it to Yellow. 
+
+Then consider vertex 4. It touches vertices 0 (Red), 1 (Green), 2 (Blue) and also 5, 6, and 7. Again only Yellow remains and so we set
+
+  4 Yellow
+
+But notice that although 3 and 4 share the same color, the edge (3,4) is not actually in our set. (That is, 3 and 4 are not adjacent.) So far no conflict has been reached. 
+
+Next, for vertex 5, which is adjacent to vertices 0 (Red), 2 (Blue), 3 (Yellow), and 4 (Yellow) (plus also 7), the only possibility is to pick a color different from Red, Blue and Yellow – so we must choose
+
+  5 Green
+
+Then vertex 6 (adjacent to 0 Red, 1 Green, 3 Yellow, 4 Yellow, 5 Green) can be assigned only
+
+  6 Blue
+
+Finally, look at vertex 7. It is adjacent to 0 (Red), 1 (Green), 2 (Blue), 3 (Yellow), 4 (Yellow) and 5 (Green). That means all four colors appear as forbidden on vertex 7. There is no color left for vertex 7. This is a contradiction.
+
+No matter how one “tries to tweak” the assignments (for example, by changing the order in which vertices get colored or by choosing different colors where possible) one is forced into a similar impasse. 
+
+Thus, a proper 4–coloring (with no two adjacent vertices sharing the same color) is impossible.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

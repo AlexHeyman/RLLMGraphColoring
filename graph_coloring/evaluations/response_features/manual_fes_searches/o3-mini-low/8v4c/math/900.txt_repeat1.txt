@@ -1,0 +1,27 @@
+Edges: [(0, 1), (0, 2), (0, 4), (0, 6), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 5), (2, 7), (3, 4), (3, 5), (3, 6), (3, 7), (4, 6), (5, 6), (6, 7)]
+
+Complement: [(0, 3), (0, 5), (1, 7), (2, 3), (2, 4), (2, 6), (4, 5), (4, 7), (5, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of the four colors to the eight vertices exists (so that no two connected vertices share the same color). In other words, even though one might “hope” that a four‐coloring is possible (after all, by the four–color theorem every planar graph is four–colorable, but note that the theorem applies to planar maps – and our graph need not be planar), a careful search “by hand” reveals that any candidate coloring runs into a dead–end.
+
+To explain briefly one way to see the difficulty, label the vertices 0, 1, 2, …, 7 and let the available colors be Red, Green, Blue, and Yellow. (The graph’s edges are listed in the problem statement.) One natural idea is to start by “fixing” two vertices with different colors. For example, one may choose
+
+  0: Red  1: Green
+
+Since vertex 0 is adjacent to 1, 2, 4, 6, and 7, none of those may use Red; and since vertex 1 is adjacent to 0, 2, 3, 4, 5, and 6 none may be Green. Continuing in this manner one eventually faces vertex 6. Notice that vertex 6 is especially “problematic” because it is adjacent to 0, 1, 3, 4, 5 and 7. No matter how the colors are chosen for vertices 3, 4, 5 and 7 (subject to all other given restrictions) it turns out that all four colors appear in the neighborhood of vertex 6. (In every attempt the colors at 0 and 1 are forced to be two different ones, and even if by re‐ordering the remaining vertices one forces one color to appear twice among 3, 4, 5 and 7, the four–set of colors still appears. In our many “by–hand” trials a dead–end occurs at vertex 6.)
+
+These difficulties do not appear to be “local” mistakes but have been confirmed by trying many different orders and tentative assignments. (One may “simulate” the process by starting with vertex 0 and “forcing” the color choices at vertices 1, 2, etc. Eventually a vertex – most notably vertex 6 – ends up with all four colors in its adjacent vertices. At that point no color is available for it.)
+
+Because every candidate coloring eventually fails, we conclude that it is impossible to color the vertices with four colors under the given restrictions.
+
+Thus the final answer is:
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

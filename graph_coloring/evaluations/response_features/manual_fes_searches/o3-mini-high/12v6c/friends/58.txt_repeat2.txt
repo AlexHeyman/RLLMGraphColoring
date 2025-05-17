@@ -1,0 +1,39 @@
+Edges: [(0, 2), (0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (0, 9), (1, 4), (1, 5), (1, 7), (1, 8), (1, 10), (1, 11), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (3, 4), (3, 5), (3, 6), (3, 8), (3, 9), (3, 10), (3, 11), (4, 5), (4, 6), (4, 7), (4, 9), (4, 10), (5, 7), (5, 8), (5, 9), (5, 11), (6, 7), (6, 8), (6, 9), (6, 10), (7, 8), (7, 9), (7, 10), (7, 11), (8, 9), (8, 10), (8, 11), (9, 10), (9, 11)]
+
+Complement: [(0, 1), (0, 3), (0, 10), (0, 11), (1, 2), (1, 3), (1, 6), (1, 9), (2, 9), (2, 10), (2, 11), (3, 7), (4, 8), (4, 11), (5, 6), (5, 10), (6, 11), (10, 11)]
+
+Evaluation: impossible incorrect
+
+---
+
+We can show that no matter how the 12 people choose one of the six shirt‐colors (red, green, blue, yellow, orange, purple), there’s no way to avoid a conflict between two friends.
+
+To explain briefly, think of the situation as “coloring” a graph whose vertices are the people and whose edges connect two persons who are friends. (For example, “Alice is friends with Carol” translates into an edge between the vertices “Alice” and “Carol”.) The rule is that adjacent vertices (i.e. friends) must receive different “colors” (shirt–colors).
+
+A key observation is that Heather is friends with everyone else. This means that in any proper coloring Heather’s color must be different from every other person’s. In other words, the other 11 people must all use colors from the five colors not worn by Heather.
+
+A more detailed look shows that within the 11‐person subgraph (all except Heather) there is a very large “clique” (that is, a set of persons all mutually friends). In fact, one may verify that the set consisting of Dave, Ethan, Irene, Jack, George, and Kathy all pairwise know one another. (For example, Dave is friends with Kathy, Ethan is friends with Kathy, Irene is friends with Kathy, Jack is friends with Kathy, and George is friends with Kathy; and among Dave, Ethan, Irene, Jack and George the given friendship list guarantees that each pair are friends.) Thus this set forms a clique of size 6, and in any proper coloring no two people in a clique may share the same color. That forces the 11 people (who must use only five colors because Heather has removed one from available use) to use at least 6 different colors—an impossibility if we are limited to 6 overall.
+
+Since even the subgraph on 11 vertices (the people besides Heather) would require 6 colors and then Heather would need a new, seventh color (because she is friends with everyone), it follows that there is no valid assignment of the six colors without a conflict.
+
+Impossible
+
+---
+Numericized:
+---
+
+We can show that no matter how the 12 people choose one of the six shirt‐colors (red, green, blue, yellow, orange, purple), there’s no way to avoid a conflict between two friends.
+
+To explain briefly, think of the situation as “coloring” a graph whose vertices are the people and whose edges connect two persons who are friends. (For example, “#0 is friends with #2” translates into an edge between the vertices “#0” and “#2”.) The rule is that adjacent vertices (i.e. friends) must receive different “colors” (shirt–colors).
+
+A key observation is that #7 is friends with everyone else. This means that in any proper coloring #7’s color must be different from every other person’s. In other words, the other 11 people must all use colors from the five colors not worn by #7.
+
+A more detailed look shows that within the 11‐person subgraph (all except #7) there is a very large “clique” (that is, a set of persons all mutually friends). In fact, one may verify that the set consisting of #3, #4, #8, #9, #6, and #10 all pairwise know one another. (For example, #3 is friends with #10, #4 is friends with #10, #8 is friends with #10, #9 is friends with #10, and #6 is friends with #10; and among #3, #4, #8, #9 and #6 the given friendship list guarantees that each pair are friends.) Thus this set forms a clique of size 6, and in any proper coloring no two people in a clique may share the same color. That forces the 11 people (who must use only five colors because #7 has removed one from available use) to use at least 6 different colors—an impossibility if we are limited to 6 overall.
+
+Since even the subgraph on 11 vertices (the people besides #7) would require 6 colors and then #7 would need a new, seventh color (because she is friends with everyone), it follows that there is no valid assignment of the six colors without a conflict.
+
+Impossible
+
+---
+
+Manually assessed false edges: 3,7|4,8

@@ -1,0 +1,44 @@
+Edges: [(0, 2), (0, 3), (0, 4), (0, 5), (0, 7), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5), (3, 6), (4, 6), (4, 7), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 1), (0, 6), (1, 7), (2, 3), (3, 7), (4, 5)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no assignment of four colors to the vertices (with the restriction that every edge’s endpoints get different colors) exists.
+
+Below is one way to explain the impossibility.
+
+Let the vertices be numbered 0 through 7 and suppose we try to assign each one one of the four colors {Red, Green, Blue, Yellow} so that every edge connects two vertices of different colors.
+
+A quick look at the edge‐set tells us that some vertices “see” a large number of other vertices. For example, notice that vertex 4 is adjacent to 0, 1, 2, 3 (via edges (0,4), (1,4), (2,4), (3,4)) as well as to 6 and 7. Thus the colors on 0, 1, 2, and 3 will “force” vertex 4’s available palette. In order for vertex 4 even to have a color available, the four vertices 0, 1, 2, and 3 must not all be colored distinctly. (Indeed, if 0,1,2,3 had all four colors present then no color would remain for 4.) In other words, among the four vertices 0,1,2,3 at least two must share a color. (This is possible provided those two vertices are not adjacent. In our graph 0 is not adjacent to 1 and 2 is not adjacent to 3 so one might “pair” 0 and 1 and 2 and 3 to force a repetition.)
+
+Now suppose we try one assignment that “saves” 4:
+  0: Red
+  1: Red
+  2: Blue
+  3: Blue
+Then vertex 4, having neighbors 0,1,2,3, must avoid Red and Blue so it might choose Green (or Yellow).
+
+A similar situation occurs at vertex 5 (which is adjacent to 0,1,2,3 as well), so we must choose for 5 a color which is not Red or Blue. (We might pick Green or Yellow for 5, but note that 4 and 5 are not adjacent so they could even be the same.)
+
+So far the assignment might be:
+  0 Red    1 Red    2 Blue    3 Blue
+  4 Green   5 Green (or another choice from {Green,Yellow}).
+
+Now consider vertex 6. Its neighbors include 1 (Red), 2 (Blue), 3 (Blue), and also 4 and 5 which are both Green. So vertex 6 sees three colors (Red, Blue, Green) and may then be forced to take the fourth color (say Yellow).
+
+That leaves vertex 7. But vertex 7 is adjacent to 0 (Red), 2 (Blue), 4 (Green), 5 (Green), and 6 (Yellow). Its neighbors then have all four colors {Red, Blue, Green, Yellow} represented. No color remains available for vertex 7.
+
+One might try to “fix” the problem by choosing alternative orders or by pairing the vertices 0,1,2,3 in a different way; however, it turns out that every assignment you try eventually forces one vertex (like vertex 7 in our example) to have neighbors that use all four colors.
+
+After an analysis in which different pairings among vertices 0, 1, 2, and 3 were attempted (and the downstream forced choices carefully checked at vertices 4, 5, 6, and 7), one always ends up with some vertex whose neighborhood “uses up” all four available colors. (In particular, both vertices 4 and 7 force the issue because of their heavy connectivity.)
+
+Thus it is impossible to give every vertex one of the four colors Red, Green, Blue, or Yellow without having some edge joining two vertices of the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A

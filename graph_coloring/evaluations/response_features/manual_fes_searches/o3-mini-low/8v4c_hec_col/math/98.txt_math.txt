@@ -1,0 +1,23 @@
+Edges: [(0, 1), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 4), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (3, 5), (3, 6), (4, 5), (5, 6), (5, 7), (6, 7)]
+
+Complement: [(0, 2), (1, 3), (1, 5), (1, 6), (3, 4), (3, 7), (4, 6), (4, 7)]
+
+Evaluation: impossible incorrect
+
+---
+
+We will show that no valid 4‐coloring (with the four color names red, green, blue, and yellow) exists.
+
+Here is a brief explanation:
+
+Label the vertices 0 through 7. Notice that vertex 0 is adjacent to vertices 1, 3, 4, 5, 6, and 7. Vertex 2 is adjacent to vertices 1, 3, 4, 5, 6, and 7 as well. Whatever color we choose for 0 and 2 must be different. (For example, one might set 0 = Red and 2 = Blue.) Then every other vertex in the set S = {1, 3, 4, 5, 6, 7} is adjacent both to vertex 0 and to vertex 2, and therefore none of these vertices can be colored Red or Blue. That leaves only the two colors Green and Yellow for all six vertices in S.
+
+However, if you look at the induced subgraph on S (which includes edges such as (1,4), (1,7), (3,5), (3,6), (4,5), (5,6), (5,7), and (6,7)), you will find that vertices 5, 6, and 7 form a triangle (since the edges (5,6), (5,7), and (6,7) are all present). It is impossible to properly 2‐color a triangle (since two adjacent vertices would always have the same color).
+
+Therefore no assignment of the four colors to all 8 vertices can satisfy the condition that no two adjacent vertices share the same color.
+
+Impossible
+
+---
+
+Manually assessed false edges: N/A
