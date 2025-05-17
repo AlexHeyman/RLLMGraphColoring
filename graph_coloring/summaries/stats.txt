@@ -619,8 +619,6 @@ Wrong coloring: 0
 False uncolorable: 5
 + including false edges: Unknown
 + correct under false edges: Unknown
-False edge frequencies (top 10 at most):
-(6, 7): 2/2 (1.000)
 
 Frame: Friends
 Problems: 500 (306 colorable)

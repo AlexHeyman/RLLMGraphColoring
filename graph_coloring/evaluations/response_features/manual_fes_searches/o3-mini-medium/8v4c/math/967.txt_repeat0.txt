@@ -36,4 +36,4 @@ Impossible
 
 ---
 
-Manually assessed false edges: 6,7
+Manually assessed false edges: N/A
