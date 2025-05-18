@@ -1,6 +1,6 @@
 # RLLMGraphColoring
 
-This repository hosts a tweaked version of the code used to run the experiments in the paper "Reasoning Large Language Model Errors Arise from Hallucinating Critical Problem Features", as well as records of the problems, prompts, and responses involved in those experiments. This repository is a modified version of [the one for a related previous paper](https://github.com/AlexHeyman/LLMGraphColoring).
+This repository hosts the code used to run the experiments in the paper "Reasoning Large Language Model Errors Arise from Hallucinating Critical Problem Features", as well as records of the problems, prompts, and responses involved in those experiments. This repository is a modified version of [the one for a related previous paper](https://github.com/AlexHeyman/LLMGraphColoring).
 
 ## Requirements
 
