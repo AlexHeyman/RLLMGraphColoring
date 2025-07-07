@@ -12,7 +12,6 @@ plot. If unspecified, it defaults to '4v2c'.
 
 import sys
 from os import path, listdir
-from math import ceil
 import matplotlib.pyplot as plt
 
 from metadata import *
