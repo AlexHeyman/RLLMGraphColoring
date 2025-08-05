@@ -883,7 +883,7 @@ for model in models:
             mfes_file.close()
       
       if es_total - manual_fes_given > 0:
-        makedirs(path.basename(false_es_file_paths[i]), exist_ok=True)
+        makedirs(path.dirname(false_es_file_paths[i]), exist_ok=True)
         false_es_file = open(false_es_file_paths[i], 'w', encoding='utf-8')
         
         for k in range(len(filenames)):
