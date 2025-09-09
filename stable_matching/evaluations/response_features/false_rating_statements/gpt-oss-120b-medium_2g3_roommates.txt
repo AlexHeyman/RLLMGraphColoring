@@ -1,0 +1,3125 @@
+101.txt roommates
+
+Line 192
+F joins room1 (B,E): F->B=3, F->E=4 =>7 (orig 7 same? original F sat 7, new 7 equal). A joins room2 (C,D): A->C=5, A->D=5 =>10 (orig 9 increase). So A increase, F same, both >=, at least one > => blocking. So unstable.
+
+False ratings:
+F -> E: 4 [Manual assessment: N/A]
+
+---
+
+102.txt roommates
+
+Line 162
+- D: C1 + F3 =4
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+Line 205
+- C: B1 + F3 =4
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+---
+
+110.txt roommates
+
+Line 126
+B: A3 + E5 =8
+
+False ratings:
+B -> E: 5 [Manual assessment: N/A]
+
+---
+
+115.txt roommates
+
+Line 173
+B: A2 + E2 =4
+
+False ratings:
+B -> E: 2 [Manual assessment: N/A]
+
+Line 215
+B: A2 + F4 =6
+
+False ratings:
+B -> F: 4 [Manual assessment: N/A]
+
+Line 220
+D: C5 + E3 =8
+
+False ratings:
+D -> E: 3 [Manual assessment: N/A]
+
+Line 302
+C: A5 + E5 =10
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 338
+C: A5 + F1 =6
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 477
+C: B5 + D5 =10
+
+False ratings:
+C -> D: 5 [Manual assessment: N/A]
+
+---
+
+122.txt roommates
+
+Line 235
+F: C4 + D3 =7.
+
+False ratings:
+F -> C: 4 [Manual assessment: N/A]
+
+---
+
+124.txt roommates
+
+Line 384
+C: r(C,A)=1, r(C,B)=2, r(C,F)=1
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 727
+C: r(C,A)=1, r(C,D)=5, r(C,F)=1
+
+False ratings:
+C -> D: 5 [Manual assessment: N/A]
+
+---
+
+126.txt roommates
+
+Line 185
+B with E: New B sat = B->C + B->D =5+2=7 >3. New E sat = E->A + E->F =3+5=8 >3. Both increase! So unstable.
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+Line 262
+- C: C->B + C->F =5+1=6
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 285
+- C: C->B + C->E =5+1=6
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 355
+Swap D with E: new D sat = D->A + D->F =1+2=3 <10.
+
+False ratings:
+D -> A: 1 [Manual assessment: N/A]
+
+---
+
+130.txt roommates
+
+Line 309
+E: C4 + D3 =7
+
+False ratings:
+E -> C: 4 [Manual assessment: N/A]
+
+Line 372
+F: B1 + E3 =4
+
+False ratings:
+F -> B: 1 [Manual assessment: N/A]
+
+---
+
+132.txt roommates
+
+Line 270
+We have earlier for C: rating to A+B =4+4=8 ; to A+E =4+5=9 ; to B+E =4+5=9? Wait C->E=5 (from matrix). Yes C->E=5. So compute:
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 276
+For D: D->A=3, D->B=4, D->E=2.
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+Line 438
+F's ratings: F->A=1, F->C=1, F->D=3.
+
+False ratings:
+F -> D: 3 [Manual assessment: N/A]
+
+Line 720
+C's ratings: C->A=4, C->D=4, C->F=1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+133.txt roommates
+
+Line 185
+- C now with B=5, E=1 => C's ratings B5, E1 => 6 (same as old 6)
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 565
+D new roommates A=2, E=2 => D's ratings A2, E2 => 4 (increase from 2). D increase, F same => blocking (increase one while other same). So grouping 10 unstable.
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+---
+
+152.txt roommates
+
+Line 130
+Room1 D,B,E. D->B=5, D->E=3 =>8 (original sat_D=6) increase. A moves to room2 with C,F: A->C=2, A->F=1 =>3 (original sat_A=6) decrease. Not both >=.
+
+False ratings:
+D -> E: 3 [Manual assessment: N/A]
+
+---
+
+155.txt roommates
+
+Line 134
+- D: C5 + F5 =10
+
+False ratings:
+D -> C: 5 [Manual assessment: N/A]
+
+Line 200
+- F: B4 + E1 =5
+
+False ratings:
+F -> B: 4 [Manual assessment: N/A]
+F -> E: 1 [Manual assessment: N/A]
+
+---
+
+156.txt roommates
+
+Line 234
+F: F->A=2, F->B=2, F->E=4.
+
+False ratings:
+F -> E: 4 [Manual assessment: N/A]
+
+Line 276
+C: C->A=1, C->B=2, C->F=3.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+Line 281
+D: D->A=1, D->B=5, D->F=4.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+Line 286
+E: E->A=2, E->B=4, E->F=2.
+
+False ratings:
+E -> F: 2 [Manual assessment: N/A]
+
+---
+
+157.txt roommates
+
+Line 156
+{C,B,F}: C rates B2 + F4 =6. B rates C2 + F4 =6. F rates C5 + B2 =7.
+
+False ratings:
+C -> B: 2 [Manual assessment: N/A]
+
+---
+
+164.txt roommates
+
+Line 164
+New sat_A in {A,D,F}: A->D=3, A->F=3 =>6 (increase from4). New sat_C in {B,E,C}: C->B=4, C->E=1 =>5 (increase from4). Both increased! So unstable.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+---
+
+172.txt roommates
+
+Line 342
+r(C,B)=2, r(C,F)=1 => BF=3
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 352
+r(E,B)=4, r(E,F)=2 => BF=6
+
+False ratings:
+E -> F: 2 [Manual assessment: N/A]
+
+---
+
+175.txt roommates
+
+Line 109
+- F: C5 + E3 =8
+
+False ratings:
+F -> C: 5 [Manual assessment: N/A]
+
+Line 147
+- B: A3 + E5 =8
+
+False ratings:
+B -> E: 5 [Manual assessment: N/A]
+
+Line 152
+- D: C5 + F4 =9
+
+False ratings:
+D -> C: 5 [Manual assessment: N/A]
+
+Line 187
+- E: C5 + D2 =7
+
+False ratings:
+E -> C: 5 [Manual assessment: N/A]
+
+Line 343
+- E: A2 + F3 =5
+
+False ratings:
+E -> F: 3 [Manual assessment: N/A]
+
+---
+
+182.txt roommates
+
+Line 181
+- New sat_F = with A,D = F->A + F->D =4+1=5 (decrease). Not block.
+
+False ratings:
+F -> D: 1 [Manual assessment: N/A]
+
+---
+
+188.txt roommates
+
+Line 129
+- B: A4 + E2 =6
+
+False ratings:
+B -> E: 2 [Manual assessment: N/A]
+
+---
+
+191.txt roommates
+
+Line 71
+C: A1 + E4 =5
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+Line 77
+C: A1 + F5 =6
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 95
+E: A2 + F3 =5
+
+False ratings:
+E -> F: 3 [Manual assessment: N/A]
+
+---
+
+2.txt roommates
+
+Line 89
+- C: A3 + E5 =8
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 95
+- C: A3 + F4 =7
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 107
+- D: A1 + F3 =4
+
+False ratings:
+D -> F: 3 [Manual assessment: N/A]
+
+Line 113
+- E: A2 + F1 =3
+
+False ratings:
+E -> F: 1 [Manual assessment: N/A]
+
+---
+
+208.txt roommates
+
+Line 178
+- C_new = C->B + C->D =2+2=4
+
+False ratings:
+C -> B: 2 [Manual assessment: N/A]
+
+Line 274
+- E_new = E->B + E->F =2+4=6
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+---
+
+211.txt roommates
+
+Line 128
+- C: B2 + A4 =6
+
+False ratings:
+C -> B: 2 [Manual assessment: N/A]
+
+Line 151
+- F: C3 + B4 =7
+
+False ratings:
+F -> C: 3 [Manual assessment: N/A]
+
+---
+
+218.txt roommates
+
+Line 290
+r(C,A)=2, r(C,B)=4, r(C,F)=5.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 297
+r(D,A)=2, r(D,B)=2, r(D,F)=4.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+Line 304
+r(E,A)=4, r(E,B)=1, r(E,F)=5.
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+---
+
+221.txt roommates
+
+Line 298
+- sat_E = r(E,C)+r(E,D)=4+5=9
+
+False ratings:
+E -> C: 4 [Manual assessment: N/A]
+
+---
+
+224.txt roommates
+
+Line 119
+Now X=B (sat=7). Swap with D: B' = r(B,E)+r(B,F)=5+4=9 (>7). D' = r(D,A)+r(D,C)=2+1=3 (<7). Not allowed.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+---
+
+226.txt roommates
+
+Line 385
+- F: A2 + D2 =4.
+
+False ratings:
+F -> D: 2 [Manual assessment: N/A]
+
+---
+
+23.txt roommates
+
+Line 116
+- B: A3 + E4 =7
+
+False ratings:
+B -> E: 4 [Manual assessment: N/A]
+
+Line 138
+- B: A3 + F1 =4
+
+False ratings:
+B -> F: 1 [Manual assessment: N/A]
+
+Line 257
+- F: A3 + D5 =8
+
+False ratings:
+F -> D: 5 [Manual assessment: N/A]
+
+---
+
+232.txt roommates
+
+Line 143
+(A,F): A to group2 with C,D: A->C=5, A->D=3 => new sat_A=8 (>5). F to group1 with B,E: F->B=4, F->E=1 => new sat_F=5 (<10). Not.
+
+False ratings:
+F -> E: 1 [Manual assessment: N/A]
+
+---
+
+238.txt roommates
+
+Line 213
+C's ratings to A,B,E: C->A=4, C->B=1, C->E=1.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 269
+C's ratings to A,B,F: C->A=4, C->B=1, C->F=1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+240.txt roommates
+
+Line 235
+E: A3 + F1 =4
+
+False ratings:
+E -> F: 1 [Manual assessment: N/A]
+
+Line 1139
+E: D3 + F5 =8
+
+False ratings:
+E -> D: 3 [Manual assessment: N/A]
+
+---
+
+251.txt roommates
+
+Line 322
+A with C: A joins {B,D}. A-B=3, A-D=4 =>7 >5. C joins {E,F}. C-E=4, C-F=5 =>9 >5. Both increase! So unstable.
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+---
+
+255.txt roommates
+
+Line 359
+- C: B1 + E5 =6
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+---
+
+256.txt roommates
+
+Line 148
+- E: C2 + D1 =3
+
+False ratings:
+E -> D: 1 [Manual assessment: N/A]
+
+Line 149
+- D: C2 + E4 =6
+
+False ratings:
+D -> C: 2 [Manual assessment: N/A]
+D -> E: 4 [Manual assessment: N/A]
+
+Line 156
+- F: B5 + D4 =9
+
+False ratings:
+F -> D: 4 [Manual assessment: N/A]
+
+Line 177
+- B: C1 + E1 =2
+
+False ratings:
+B -> E: 1 [Manual assessment: N/A]
+
+Line 217
+- B: E1 + F5 =6
+
+False ratings:
+B -> F: 5 [Manual assessment: N/A]
+
+---
+
+26.txt roommates
+
+Line 136
+- D: C4 + F2 =6
+
+False ratings:
+D -> C: 4 [Manual assessment: N/A]
+
+---
+
+276.txt roommates
+
+Line 219
+C: A1 + F1 =2
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+277.txt roommates
+
+Line 142
+C: E1 + F1 =2? Wait C->E=1, C->F=3 (actually matrix row C: E1, F3). So C sat = 1+3=4. Wait also C's rating of E is 1, F is 3 => total 4.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+280.txt roommates
+
+Line 220
+- New C roommates: B and E. rating C->B=1, C->E=3 =>4 <8 (decrease). Since C worse, not unstable.
+
+False ratings:
+C -> E: 3 [Manual assessment: N/A]
+
+Line 224
+- New D roommates: B and E. rating D->B=5, D->E=5 =>10 >8. Both better => unstable.
+
+False ratings:
+D -> E: 5 [Manual assessment: N/A]
+
+Line 258
+- New C roommates: B and F. rating C->B=1, C->F=2 =>3 (<7) worse. Not unstable.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+Line 262
+- New D roommates: B and F. rating D->B=5, D->F=4 =>9 (>4) D better, A worse => not unstable.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+Line 308
+- New B roommates: C and D. rating B->C=1, B->D=5 =>6 (= old B6) not worse, A worse => not unstable.
+
+False ratings:
+B -> C: 1 [Manual assessment: N/A]
+B -> D: 5 [Manual assessment: N/A]
+
+Line 386
+- New B roommates: C and F. rating B->C=1, B->F=1 =>2 (<7) worse.
+
+False ratings:
+B -> F: 1 [Manual assessment: N/A]
+
+Line 490
+- New E roommates: D and F. rating E->D=5, E->F=4 =>9 >6. Not unstable.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+Line 493
+- New D roommates: C and E. rating D->C=5, D->E=1 =>6 <8 worse.
+
+False ratings:
+D -> C: 5 [Manual assessment: N/A]
+
+---
+
+282.txt roommates
+
+Line 267
+After swap: B moves to room2 (C,D,E) becomes B,D,E. Ratings: B->D=1, B->E=5 =>6 (decrease). C moves to room1 (A,B,F) becomes C,A,F. Ratings: C->A=3, C->F=5 =>8 (increase). Not unstable.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+---
+
+286.txt roommates
+
+Line 166
+E: C5 + D3 =8
+
+False ratings:
+E -> C: 5 [Manual assessment: N/A]
+
+Line 257
+C: A1 + F3 =4
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+---
+
+287.txt roommates
+
+Line 109
+- C: A4 + F4 =8
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+---
+
+288.txt roommates
+
+Line 172
+- B: E4 + D5 =9 (same)
+
+False ratings:
+B -> E: 4 [Manual assessment: N/A]
+
+Line 179
+- F: C2 + A2 =4 (was 6) decrease.
+
+False ratings:
+F -> C: 2 [Manual assessment: N/A]
+
+Line 208
+- C: B2 + E1 =3 (was 3) same.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 444
+- E: F3 + C1 =4 (increase)
+
+False ratings:
+E -> F: 3 [Manual assessment: N/A]
+
+---
+
+29.txt roommates
+
+Line 154
+- new_D = r(D,A)+r(D,B)=2+5=7 >2.
+
+False ratings:
+D -> B: 5 [Manual assessment: N/A]
+
+---
+
+292.txt roommates
+
+Line 120
+- C: A3 + F1 =4
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+293.txt roommates
+
+Line 167
+- B: A2 + E3 =5
+
+False ratings:
+B -> E: 3 [Manual assessment: N/A]
+
+---
+
+302.txt roommates
+
+Line 320
+B-C: new B=5 (increase from4), new C=6 (increase from6? original C=6, new C=6 same). Wait original C satisfaction =6 (room2 with D,F). New C after swapping with B: roommates A,E => rating C->A=5, C->E=1 => total 6. So C stays same, B increases => instability! Because increase one while other stays same. So partition 3 unstable.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+---
+
+324.txt roommates
+
+Line 340
+- C new roommates D,E: C-D + C-E =5+4=9 (decrease from 10)
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+Line 417
+- C new roommates D,F: C-D + C-F =5+1=6 (increase from 6? original C satisfaction =6 (B+E). New =6 same). No increase.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+327.txt roommates
+
+Line 451
+- A new = A->B + A->E =5+4=9.
+
+False ratings:
+A -> B: 5 [Manual assessment: N/A]
+
+---
+
+336.txt roommates
+
+Line 344
+- If X=A, others B,F: R(C,B)+R(C,F)=4+5=9
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+---
+
+344.txt roommates
+
+Line 324
+- C: A4 + F1 =5
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+352.txt roommates
+
+Line 159
+A-E: A new roommates C,D =>5+5=10 (>9). E new roommates B,F => E->B=1, E->F=3 =>4 (<7). Not both increase.
+
+False ratings:
+E -> F: 3 [Manual assessment: N/A]
+
+---
+
+353.txt roommates
+
+Line 91
+B with F: B new room D,E: D1+E4=5 decrease.
+
+False ratings:
+E -> D: 1 [Manual assessment: N/A]
+
+---
+
+355.txt roommates
+
+Line 352
+- New D = D->A? Wait D moves to room2 with C,E (since B swapped). New D = D->C + D->E =1+5=6 (old4) increase.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+---
+
+358.txt roommates
+
+Line 372
+Pair D-C: New sat_D = D->B + D->F =5+5=10 (increase). New sat_C = C->A + C->E =2+4=6 (increase from 5). Both increase => unstable! So grouping 8 unstable.
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+Line 412
+Pair D-B: New sat_D = D->C + D->E =3+3=6 (decrease from 8). Not.
+
+False ratings:
+D -> E: 3 [Manual assessment: N/A]
+
+Line 416
+Pair D-E: New sat_D = D->B + D->C =5+3=8 (same). New sat_E = E->A + E->F =3+1=4 (decrease from 9). Not.
+
+False ratings:
+E -> F: 1 [Manual assessment: N/A]
+
+---
+
+359.txt roommates
+
+Line 300
+F: C3 + E3 =6
+
+False ratings:
+F -> C: 3 [Manual assessment: N/A]
+F -> E: 3 [Manual assessment: N/A]
+
+---
+
+370.txt roommates
+
+Line 83
+- B: A5 + E3 =8
+
+False ratings:
+B -> E: 3 [Manual assessment: N/A]
+
+Line 103
+- B: A5 + F1 =6
+
+False ratings:
+B -> F: 1 [Manual assessment: N/A]
+
+Line 237
+- F: A5 + D2 =7
+
+False ratings:
+F -> D: 2 [Manual assessment: N/A]
+
+Line 268
+- E: A3 + F1 =4
+
+False ratings:
+E -> F: 1 [Manual assessment: N/A]
+
+---
+
+378.txt roommates
+
+Line 132
+B with C,E: B->C=4, B->E=1 sum=5
+
+False ratings:
+B -> E: 1 [Manual assessment: N/A]
+
+---
+
+379.txt roommates
+
+Line 168
+Check A-C: C's group others D,E. New sat_A = r(A,D)=4 + r(A,E)=4 =8 >4 (increase). New sat_C = rating to B and F: r(C,B)=4, r(C,F)=5 =>9 >4 (increase). Both increase => unstable.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+---
+
+385.txt roommates
+
+Line 242
+- C: A3 + E5 =8
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+---
+
+388.txt roommates
+
+Line 41
+Consider high mutual preferences: e.g., C rates B5, B rates C4 (good). E rates C5, C rates E2 (moderate). A rates E5, E rates A5 (very high). D rates C5, C rates D2 (moderate). D rates F4, F rates D1 (low). B rates D4, D rates B4 (good). etc.
+
+False ratings:
+A -> E: 5 [Manual assessment: N/A]
+
+Line 451
+- C: A3 + F2 =5
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+---
+
+389.txt roommates
+
+Line 153
+A-E: new_A = rating A->C + A->F =2+4=6 (decrease). So not.
+
+False ratings:
+A -> C: 2 [Manual assessment: N/A]
+
+---
+
+395.txt roommates
+
+Line 190
+A-F: A' with C,D: A->C 2 + A->D 1 =3 <6. F' with B,E: F->B 1 + F->E 1 =2 <5 (decrease). Both decrease, not unstable.
+
+False ratings:
+F -> E: 1 [Manual assessment: N/A]
+
+---
+
+403.txt roommates
+
+Line 178
+B: A2 + E1 =3
+
+False ratings:
+B -> E: 1 [Manual assessment: N/A]
+
+---
+
+406.txt roommates
+
+Line 120
+- B: A3 + E3 =6
+
+False ratings:
+B -> E: 3 [Manual assessment: N/A]
+
+---
+
+408.txt roommates
+
+Line 210
+- B: A4 + E1 =5
+
+False ratings:
+B -> E: 1 [Manual assessment: N/A]
+
+Line 215
+- D: C3 + F3 =6
+
+False ratings:
+D -> C: 3 [Manual assessment: N/A]
+
+Line 257
+E-C3 + E-F5 =8 (if D leaves)
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+Line 300
+- C's new roommates are B and E (since A leaves). C-B5 + C-E3 =8. Original C=4, increase.
+
+False ratings:
+C -> E: 3 [Manual assessment: N/A]
+
+Line 315
+- E: C4 + D2 =6
+
+False ratings:
+E -> C: 4 [Manual assessment: N/A]
+
+Line 363
+- with A,F (if B leaves): D-A5 + D-F2 =7
+
+False ratings:
+D -> F: 2 [Manual assessment: N/A]
+
+Line 447
+- with A,C (if D leaves): F-A2 + F-C1 =3
+
+False ratings:
+F -> C: 1 [Manual assessment: N/A]
+
+Line 448
+- with A,D (if C leaves): F-A2 + F-D3 =5
+
+False ratings:
+F -> D: 3 [Manual assessment: N/A]
+
+Line 515
+A with B: A decrease, B increase? B new roommates C and D (since A leaves) => B-C5 + B-D3 =8 >5 increase, A decrease.
+
+False ratings:
+B -> C: 5 [Manual assessment: N/A]
+B -> D: 3 [Manual assessment: N/A]
+
+---
+
+41.txt roommates
+
+Line 219
+- D new = r(D,B)+r(D,E)=2+4=6 (>4) but A decreased.
+
+False ratings:
+D -> E: 4 [Manual assessment: N/A]
+
+---
+
+411.txt roommates
+
+Line 149
+- B: A5 + E5 =10
+
+False ratings:
+B -> E: 5 [Manual assessment: N/A]
+
+---
+
+42.txt roommates
+
+Line 145
+- B: A5 + E3 =8
+
+False ratings:
+B -> E: 3 [Manual assessment: N/A]
+
+---
+
+428.txt roommates
+
+Line 85
+- C: A1 + F5 =6
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 95
+- D: A4 + F4 =8
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+---
+
+433.txt roommates
+
+Line 142
+F: D3 + C4 =7 (up from6)
+
+False ratings:
+F -> D: 3 [Manual assessment: N/A]
+
+Line 322
+C: B2 + F4 =6 (up from5)
+
+False ratings:
+C -> B: 2 [Manual assessment: N/A]
+
+Line 323
+B: C3 + F5 =8 (up from3)
+
+False ratings:
+B -> C: 3 [Manual assessment: N/A]
+
+Line 360
+B: A2 + E4 =6
+
+False ratings:
+B -> E: 4 [Manual assessment: N/A]
+
+---
+
+435.txt roommates
+
+Line 224
+D: C4 + E5 =9
+
+False ratings:
+D -> E: 5 [Manual assessment: N/A]
+
+---
+
+448.txt roommates
+
+Line 78
+- C: E1 + B1 =2
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 156
+- E: B5 + D3 =8
+
+False ratings:
+E -> D: 3 [Manual assessment: N/A]
+
+Line 168
+- F: B3 + D5 =8
+
+False ratings:
+F -> D: 5 [Manual assessment: N/A]
+
+Line 230
+- F: B3 + E2 =5
+
+False ratings:
+F -> E: 2 [Manual assessment: N/A]
+
+---
+
+450.txt roommates
+
+Line 261
+E: C4 + D3 =7
+
+False ratings:
+E -> C: 4 [Manual assessment: N/A]
+
+---
+
+454.txt roommates
+
+Line 205
+- New D = rating(D,C)+rating(D,F)=5+1=6 (>4)
+
+False ratings:
+D -> C: 5 [Manual assessment: N/A]
+
+Line 341
+- New C = rating(C,B)+rating(C,F)=1+5=6 (>5) increase
+
+False ratings:
+C -> B: 1 [Manual assessment: N/A]
+
+---
+
+455.txt roommates
+
+Line 170
+- B: A4 + E2 =6
+
+False ratings:
+B -> E: 2 [Manual assessment: N/A]
+
+Line 176
+- D: C2 + F3 =5
+
+False ratings:
+D -> C: 2 [Manual assessment: N/A]
+
+---
+
+464.txt roommates
+
+Line 296
+C's new roommates A,F: C->A=2, C->F=1 =>3 (decrease from 8)
+
+False ratings:
+C -> A: 2 [Manual assessment: N/A]
+
+---
+
+469.txt roommates
+
+Line 288
+C: B4 + F3 =7 (decrease from9)
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+Line 290
+F: C2 + B4 =6 (decrease from7)
+
+False ratings:
+F -> C: 2 [Manual assessment: N/A]
+
+Line 318
+E: B1 + F5 =6 (same as before? originally 6)
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+Line 320
+F: E4 + B4 =8 (increase from7)
+
+False ratings:
+F -> E: 4 [Manual assessment: N/A]
+
+Line 379
+F: C2 + D5 =7 (decrease from9)
+
+False ratings:
+F -> D: 5 [Manual assessment: N/A]
+
+Line 381
+D: F3 + C4 =7 (same as before)
+
+False ratings:
+D -> F: 3 [Manual assessment: N/A]
+
+Line 429
+C: B4 + E5 =9 (increase from9? same)
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 458
+B: D3 + F5 =8 (increase from6)
+
+False ratings:
+B -> D: 3 [Manual assessment: N/A]
+
+---
+
+476.txt roommates
+
+Line 143
+- B: E2 + A5 =7
+
+False ratings:
+B -> E: 2 [Manual assessment: N/A]
+
+Line 145
+- C: D2 + F5 =7
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 147
+- F: C1 + D3 =4
+
+False ratings:
+F -> C: 1 [Manual assessment: N/A]
+
+Line 203
+- E: B2 + D4 =6
+
+False ratings:
+E -> D: 4 [Manual assessment: N/A]
+
+Line 205
+- D: E5 + B2 =7
+
+False ratings:
+D -> E: 5 [Manual assessment: N/A]
+
+Line 359
+- F: C5 + E2 =7
+
+False ratings:
+F -> E: 2 [Manual assessment: N/A]
+
+Line 360
+- E: C1 + F1 =2
+
+False ratings:
+E -> F: 1 [Manual assessment: N/A]
+
+---
+
+482.txt roommates
+
+Line 327
+New group1: A,D,E. A's roommates D,E:4+5=9 (same). D's roommates A,E:2+4=6 (increase from 2). C moves to group2 with C,B,F: C's ratings B=2, F=3 =>5 (decrease from 9). Not.
+
+False ratings:
+C -> B: 2 [Manual assessment: N/A]
+
+---
+
+492.txt roommates
+
+Line 177
+- B: A1 + F1 =2
+
+False ratings:
+B -> F: 1 [Manual assessment: N/A]
+
+Line 305
+- C: A5 + F5 =10
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 417
+- D: A5 + F1 =6
+
+False ratings:
+D -> F: 1 [Manual assessment: N/A]
+
+Line 423
+- C: B1 + E4 =5
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+---
+
+503.txt roommates
+
+Line 294
+F: E2+B3=5
+
+False ratings:
+F -> E: 2 [Manual assessment: N/A]
+
+Line 389
+B: C3 + D3 =6
+
+False ratings:
+B -> C: 3 [Manual assessment: N/A]
+
+Line 390
+C: B1 + D5 =6
+
+False ratings:
+C -> B: 1 [Manual assessment: N/A]
+
+Line 670
+E: C1 + F5 =6
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+Line 704
+C: B1 + E1 =2? Wait E rating for C is 1 (E-C=1). So C: B1 + E1 =2
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+---
+
+504.txt roommates
+
+Line 197
+- C: A3 + F1 =4
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+509.txt roommates
+
+Line 192
+- E new roommates: B,D => E-B + E-D =1+3=4.
+
+False ratings:
+E -> D: 3 [Manual assessment: N/A]
+
+Line 197
+- F new roommates: B,D => F-B + F-D =3+2=5.
+
+False ratings:
+F -> D: 2 [Manual assessment: N/A]
+
+---
+
+517.txt roommates
+
+Line 288
+Case A-D swap: D moves to group1 with A,B,F? Actually after swap, group1 becomes D,B,F (since A leaves). D's new roommates B and F. D's new sat = rating(D,B)+rating(D,F)=2+5=7. Original D sat=7 (in group2 with C,E gave 7). So D stays same, A improves. This is unstable.
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+Line 404
+Case E-B swap: B moves to group1 with A and C. B's new sat = rating(B,A)+rating(B,C)=4+5=9. Original B sat=6 (increase). So both increase => unstable.
+
+False ratings:
+B -> C: 5 [Manual assessment: N/A]
+
+Line 486
+Case A-B swap: B moves to group1 with D and E. B's new sat = rating(B,D)+rating(B,E)=2+5=7. Original B sat=6 (increase). Both increase => unstable.
+
+False ratings:
+B -> D: 2 [Manual assessment: N/A]
+B -> E: 5 [Manual assessment: N/A]
+
+---
+
+53.txt roommates
+
+Line 140
+- C: A5 + E5 =10
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 145
+- C: A5 + F5 =10
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+---
+
+532.txt roommates
+
+Line 153
+i=B, j=C: other room2 members D,F. s_B' = r(B,D)+r(B,F)=5+1=6 (=6). s_C' = r(C,A)+r(C,E)=5+4=9 (>6). So C improves, B unchanged (since B's current is 6). This is unstable.
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+---
+
+536.txt roommates
+
+Line 70
+C->A1, C->B3, C->D5, C->E2, C->F2
+
+False ratings:
+C -> D: 5 [Manual assessment: N/A]
+
+---
+
+538.txt roommates
+
+Line 164
+- E: C5 + D4 =9
+
+False ratings:
+E -> C: 5 [Manual assessment: N/A]
+
+---
+
+539.txt roommates
+
+Line 180
+- F: B5 + D4 =9
+
+False ratings:
+F -> D: 4 [Manual assessment: N/A]
+
+Line 182
+- D: F1 + B3 =4
+
+False ratings:
+D -> F: 1 [Manual assessment: N/A]
+
+Line 211
+- B: A3 + E2 =5
+
+False ratings:
+B -> E: 2 [Manual assessment: N/A]
+
+Line 254
+- F: B5 + E2 =7
+
+False ratings:
+F -> E: 2 [Manual assessment: N/A]
+
+Line 256
+- E: F5 + B2 =7
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+Line 691
+- C: B2 + A4 =6
+
+False ratings:
+C -> A: 4 [Manual assessment: N/A]
+
+---
+
+545.txt roommates
+
+Line 216
+C-B=1, C-E=3, C-F=4
+
+False ratings:
+C -> B: 1 [Manual assessment: N/A]
+
+Line 217
+D-B=4, D-E=5, D-F=2
+
+False ratings:
+D -> B: 4 [Manual assessment: N/A]
+
+Line 270
+C-B=1, C-D=3, C-F=5
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 309
+F-B=3, F-D=5, F-E=1
+
+False ratings:
+F -> B: 3 [Manual assessment: N/A]
+
+---
+
+548.txt roommates
+
+Line 145
+Room1: F,B,E. F->B=4, F->E=1 =>5 (orig F=6, decreased). Not both >=.
+
+False ratings:
+F -> E: 1 [Manual assessment: N/A]
+
+---
+
+553.txt roommates
+
+Line 249
+C: A2 + F3 =5
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+---
+
+564.txt roommates
+
+Line 240
+C to A,B,F: r(C,A)=2, r(C,B)=3, r(C,F)=1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+567.txt roommates
+
+Line 162
+- B: A1 + E3 =4
+
+False ratings:
+B -> E: 3 [Manual assessment: N/A]
+
+Line 208
+- D: C1 + E5 =6
+
+False ratings:
+D -> E: 5 [Manual assessment: N/A]
+
+---
+
+570.txt roommates
+
+Line 89
+C: A5 + B4 =9
+
+False ratings:
+C -> A: 5 [Manual assessment: N/A]
+C -> B: 4 [Manual assessment: N/A]
+
+Line 92
+E: D3 + F3 =6
+
+False ratings:
+E -> D: 3 [Manual assessment: N/A]
+
+Line 93
+F: D1 + E3 =4
+
+False ratings:
+F -> D: 1 [Manual assessment: N/A]
+F -> E: 3 [Manual assessment: N/A]
+
+Line 123
+D: A1 + B1 =2
+
+False ratings:
+D -> A: 1 [Manual assessment: N/A]
+
+Line 127
+F: C4 + E3 =7
+
+False ratings:
+F -> C: 4 [Manual assessment: N/A]
+
+Line 147
+D: C2 + F1 =3
+
+False ratings:
+D -> C: 2 [Manual assessment: N/A]
+
+---
+
+577.txt roommates
+
+Line 145
+- B: E1 + D2 =3
+
+False ratings:
+B -> E: 1 [Manual assessment: N/A]
+
+Line 146
+- D: E2 + B5 =7
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+Line 160
+- F: B3 + D4 =7
+
+False ratings:
+F -> D: 4 [Manual assessment: N/A]
+
+Line 161
+- B: F3 + D2 =5
+
+False ratings:
+B -> F: 3 [Manual assessment: N/A]
+
+Line 228
+- C: B4 + E3 =7
+
+False ratings:
+C -> E: 3 [Manual assessment: N/A]
+
+Line 246
+- E: D4 + B1 =5
+
+False ratings:
+E -> D: 4 [Manual assessment: N/A]
+
+Line 260
+- F: B3 + E3 =6
+
+False ratings:
+F -> E: 3 [Manual assessment: N/A]
+
+Line 262
+- E: F4 + B1 =5
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+Line 530
+- C: A1 + F4 =5
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 666
+- D: A4 + F1 =5
+
+False ratings:
+D -> F: 1 [Manual assessment: N/A]
+
+---
+
+581.txt roommates
+
+Line 26
+Look at high ratings: A likes B5, C4, D3, E2, F1. B likes F5, C5, E4, D3, A3. C likes E5, D4, F4, B3, A2. D likes F4, A2, B2, C2, E1. E likes C5, F5, B4, D4, A4. F likes C5, E1, D3, B2, A1.
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 85
+D's new roommates: E and B. D rates E1, B2 =>3 (old 6) decrease. C's new roommates: A and F. C rates A2, F5 =>7 (old 8) decrease. Not good.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+---
+
+587.txt roommates
+
+Line 218
+C: B4 + E5 =9
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 298
+E: A4 + D4 =8
+
+False ratings:
+E -> D: 4 [Manual assessment: N/A]
+
+---
+
+60.txt roommates
+
+Line 102
+New room1: A,B,E. A: B3+E5=8 (was6) +2. B: A3+E2=5 (was8) -3 (decrease). Not.
+
+False ratings:
+B -> E: 2 [Manual assessment: N/A]
+
+Line 143
+- D: C3 + E5 =8
+
+False ratings:
+D -> E: 5 [Manual assessment: N/A]
+
+Line 202
+New room1: A,C,B. A: C5 + B3 =8 (same). C: A3 + B3 =6 (decrease). B: A3 + C3 =6 (increase from 4). Since C decreases, but only need to consider swapped students D and B. D moves to room2 with E,F: D->E3 + D->F1 =4 (was5) decrease for D. B moves to room1 with A,C: B satisfaction 6 (increase). Since D decreases, not a blocking pair.
+
+False ratings:
+C -> B: 3 [Manual assessment: N/A]
+
+Line 234
+New room1: A,F,E. A: F5 + E5 =10 (same). F: A1 + E5 =6 (decrease from7). Not.
+
+False ratings:
+F -> E: 5 [Manual assessment: N/A]
+
+Line 238
+New room1: B,C,E. B: C5 + E2 =7 (decrease from8). Not.
+
+False ratings:
+B -> C: 5 [Manual assessment: N/A]
+
+---
+
+602.txt roommates
+
+Line 407
+- A: B2+E1=3
+
+False ratings:
+A -> B: 2 [Manual assessment: N/A]
+
+Line 430
+- D: C1+E1=2
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+Line 431
+- C: D5+E1=6
+
+False ratings:
+C -> D: 5 [Manual assessment: N/A]
+
+---
+
+604.txt roommates
+
+Line 250
+- F: B1 + C4 =5 (was 9, decrease)
+
+False ratings:
+F -> B: 1 [Manual assessment: N/A]
+
+Line 261
+- E: A3 + F2 =5 (was 8, decrease)
+
+False ratings:
+E -> F: 2 [Manual assessment: N/A]
+
+---
+
+605.txt roommates
+
+Line 181
+Pair A (8) with C (8): After swap, A's new roommates D,F (since C leaves). A->D=4, A->F=5 =>9 (increase). C's new roommates B,E (since A leaves). C->B=2, C->E=1 =>3 (decrease from 8). So not beneficial for both; need both non-decrease. So not a destabilizing swap.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 183
+Pair A with D: A sat 8, D sat 9. After swap: A joins group with C,F (since D leaves). A->C=4, A->F=5 =>9 (increase). D joins group with B,E. D->B=2, D->E=5 =>7 (decrease from 9). Not both non-decrease.
+
+False ratings:
+D -> E: 5 [Manual assessment: N/A]
+
+Line 185
+Pair A with F: A sat8, F sat4. After swap: A joins group C,D (since F leaves). A->C=4, A->D=4 =>8 (same). F joins group B,E. F->B=4, F->E=5 =>9 (increase). So A same, F increase => qualifies as unstable (increase one while other stays same). So grouping 3 unstable.
+
+False ratings:
+F -> E: 5 [Manual assessment: N/A]
+
+Line 221
+Pair A (8) with C (9): After swap, A joins group D,E (since C leaves). A->D=4, A->E=5 =>9 (increase). C joins group B,F (since A leaves). C->B=2, C->F=1 =>3 (decrease). Not both non-decrease.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 223
+Pair A with D (8 vs 8): After swap, A joins C,E: A->C=4, A->E=5 =>9 (increase). D joins B,F: D->B=2, D->F=3 =>5 (decrease). Not.
+
+False ratings:
+D -> F: 3 [Manual assessment: N/A]
+
+Line 225
+Pair A with E (8 vs 6): After swap, A joins C,D: 4+4=8 (same). E joins B,F: E->B=3, E->F=4 =>7 (increase). So A same, E increase => unstable. So grouping 4 unstable.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+---
+
+611.txt roommates
+
+Line 304
+- D: B4 + E1 =5
+
+False ratings:
+D -> E: 1 [Manual assessment: N/A]
+
+Line 405
+E with D,F: r(E,D)=1, r(E,F)=1 =>2 (decrease from4). A with B,C: r(A,B)=2, r(A,C)=1 =>3 (decrease from9). Not allowed.
+
+False ratings:
+E -> F: 1 [Manual assessment: N/A]
+
+---
+
+618.txt roommates
+
+Line 217
+- E: C5 + D5 =10
+
+False ratings:
+E -> C: 5 [Manual assessment: N/A]
+
+---
+
+623.txt roommates
+
+Line 186
+- C new group with A,B,E? Wait after swap, C joins group1 (A,B,E) with A,B (since E stays). Actually group1 after swap: A,B,E originally; B leaves? No B is swapping with C, so B leaves group1, C joins. So new group1 members: A, E, C. B's new roommates would be A and E? Wait B moves to group2 (C,D,F) with D,F. So B's new roommates D,F as above. C moves to group1 with A,E. So C's new satisfaction = C->A5 + C->E4 =9 (orig 7) increase. B decreases, not unstable.
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+---
+
+634.txt roommates
+
+Line 90
+- C: A5 + E1 =6
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 95
+- C: A5 + F1 =6
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 110
+- E: A1 + F4 =5
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+---
+
+64.txt roommates
+
+Line 144
+Check A with C: Original A=6. New A would be with E,F (since C removed) => A->E5 + A->F4 =9 >6. New C would be with B,D (since A removed) => C->B4 + C->D2 =6 (original C=6). New C equal, A increased => unstable (increase one, other same). So grouping 2 unstable.
+
+False ratings:
+C -> B: 4 [Manual assessment: N/A]
+
+Line 154
+B: A4 + E1 =5
+
+False ratings:
+B -> E: 1 [Manual assessment: N/A]
+
+Line 185
+B with D: New B with C,F => B->C4 + B->F2 =6 >5. New D would be with A,E (since B removed) => D->A5 + D->E5 =10 > original D=6. Both increase => unstable. So grouping 3 unstable.
+
+False ratings:
+D -> E: 5 [Manual assessment: N/A]
+
+Line 259
+Check A with B: Original A=4. New A with E,F => A->E5 + A->F4 =9 >4. New B would be with C,D (since A removed) => B->C5 + B->D3 =8 > original B=7. Both increase => unstable.
+
+False ratings:
+B -> C: 5 [Manual assessment: N/A]
+B -> D: 3 [Manual assessment: N/A]
+
+Line 354
+A with C: New A with B,F => 4+4=8 >7. New C would be with D,E (since A removed) => C->D5 + C->E3 =8 > original C=6. Both increase => unstable.
+
+False ratings:
+C -> D: 5 [Manual assessment: N/A]
+C -> E: 3 [Manual assessment: N/A]
+
+Line 387
+A with C: New A with B,E => 4+5=9 >6. New C would be with D,F => C->D5 + C->F3 =8 < original C=10 (decrease). Not good.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+Line 389
+A with E: New A with B,C => 4+2=6 = original (no increase). New E would be with D,F (since A removed) => E->D5 + E->F5 =10 > original E=4. Increase for E, A same => this qualifies as unstable? Definition: increase one while other's stays same. Yes, that's unstable. So grouping 9 unstable.
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+---
+
+640.txt roommates
+
+Line 243
+- New sat_D = r(D,B)+r(D,E)=1+2=3 (old6 lower) both lower.
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+---
+
+654.txt roommates
+
+Line 227
+- C: A3 + F5 = 8
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 248
+- E: A4 + D2 = 6
+
+False ratings:
+E -> D: 2 [Manual assessment: N/A]
+
+---
+
+655.txt roommates
+
+Line 194
+- D with B,E: D->B=1, D->E=3 =>4 <5 decrease.
+
+False ratings:
+D -> E: 3 [Manual assessment: N/A]
+
+Line 198
+- F with B,E: F->B=2, F->E=1 =>3 <5 decrease.
+
+False ratings:
+F -> E: 1 [Manual assessment: N/A]
+
+Line 233
+- C new roommates: B,F: C->B=1, C->F=4 =>5 <6 decrease.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+---
+
+660.txt roommates
+
+Line 182
+Swap E with A: E joins ACF (C,F): E-C + E-F =4+3=7 (increase from3). A joins BDE (B,D): A-B + A-D =5+5=10 (increase from7). Both increase => unstable. So grouping 7 unstable.
+
+False ratings:
+E -> F: 3 [Manual assessment: N/A]
+
+---
+
+670.txt roommates
+
+Line 249
+- Swap with A: new roommates B and D => F->B=4, F->D=3 =>7.
+
+False ratings:
+F -> D: 3 [Manual assessment: N/A]
+
+Line 307
+- Swap with A: new roommates B,E => C->B=2, C->E=1 =>3.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 312
+- Swap with A: new roommates B,E => D->B=3, D->E=1 =>4.
+
+False ratings:
+D -> E: 1 [Manual assessment: N/A]
+
+---
+
+674.txt roommates
+
+Line 154
+- C: A3 + D5 =8
+
+False ratings:
+C -> D: 5 [Manual assessment: N/A]
+
+---
+
+675.txt roommates
+
+Line 408
+- E: A4 + F5 =9
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+---
+
+680.txt roommates
+
+Line 261
+New room for A: with C and D. A sat = A->C4 + A->D4 =8 (increase from 6). New room for F: with B and E. F sat = F->B5 + F->E1 =6 (original F sat 5, increase). Both increased! So unstable.
+
+False ratings:
+F -> B: 5 [Manual assessment: N/A]
+
+Line 329
+New room for A: with D and E (since C leaves). A sat = A->D4 + A->E5 =9 (increase from 2). New room for C: with B and F. C sat = C->B5 + C->F3 =8 (original C sat 7, increase). Both increased => unstable.
+
+False ratings:
+C -> B: 5 [Manual assessment: N/A]
+
+Line 667
+New room for D: with B and F. D sat = D->B3 + D->F4 =7 (increase from 6). New room for C: with A and E. C sat = C->A3 + C->E4 =7 (original C sat 7, unchanged). Increase one (D) while C unchanged => unstable.
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+Line 735
+New room for A: with C and E (since B leaves). A sat = A->C4 + A->E5 =9 (increase from 5). New room for B: with D and F. B sat = B->D3 + B->F5 =8 (original B sat 9, decrease). Since B decreased, not unstable.
+
+False ratings:
+B -> D: 3 [Manual assessment: N/A]
+
+Line 741
+New room for A: with B and E. A sat = A->B1 + A->E5 =6 (increase). New room for C: with D and F. C sat = C->D2 + C->F3 =5 (original C sat 7, decrease). Not.
+
+False ratings:
+C -> D: 2 [Manual assessment: N/A]
+
+---
+
+681.txt roommates
+
+Line 222
+E: C3 + F4 =7
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+Line 267
+- swap with A: new roommates = B,D. F: B2 + D4 =6.
+
+False ratings:
+F -> D: 4 [Manual assessment: N/A]
+
+Line 463
+- swap with A: new roommates = C,D. B: C4 + D5 =9.
+
+False ratings:
+B -> C: 4 [Manual assessment: N/A]
+
+Line 518
+- with D: new roommates = B,F. C: B1 + F5 =6.
+
+False ratings:
+C -> B: 1 [Manual assessment: N/A]
+
+Line 593
+- swap with A: new roommates = C,F. B: C4 + F2 =6.
+
+False ratings:
+B -> F: 2 [Manual assessment: N/A]
+
+Line 807
+- with F: new roommates = A,E. D: A3 + E2 =5.
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+---
+
+683.txt roommates
+
+Line 237
+E: B5 + F4 =9
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+Line 328
+C: B2 + A1 =3
+
+False ratings:
+C -> A: 1 [Manual assessment: N/A]
+
+Line 332
+D: E2 + F1 =3
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+Line 344
+E: D3 + C2 =5
+
+False ratings:
+E -> D: 3 [Manual assessment: N/A]
+
+---
+
+687.txt roommates
+
+Line 129
+- C with E,F: C->E=2, C->F=2 => sat_C=4.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+---
+
+688.txt roommates
+
+Line 240
+F: B1 + E1 =2
+
+False ratings:
+F -> B: 1 [Manual assessment: N/A]
+
+---
+
+69.txt roommates
+
+Line 175
+- F: C5 + D2 =7
+
+False ratings:
+F -> C: 5 [Manual assessment: N/A]
+
+---
+
+694.txt roommates
+
+Line 327
+- D: B (5) + E (2) =7
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+---
+
+699.txt roommates
+
+Line 329
+- E: A(3)+D(2)=5
+
+False ratings:
+E -> D: 2 [Manual assessment: N/A]
+
+---
+
+701.txt roommates
+
+Line 133
+Swap A with C: New rooms {C,B,F} and {A,D,E}. A new with D,E: A->D=2, A->E=1 =>3 (decrease). C new with B,F: C->B=3, C->F=5 =>8 (decrease from 9). Not.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+---
+
+703.txt roommates
+
+Line 201
+- D: C2 + F1 =3
+
+False ratings:
+D -> C: 2 [Manual assessment: N/A]
+
+---
+
+715.txt roommates
+
+Line 233
+F: B5 + E4 =9
+
+False ratings:
+F -> B: 5 [Manual assessment: N/A]
+
+---
+
+726.txt roommates
+
+Line 283
+E: B1 + D4 =5
+
+False ratings:
+E -> D: 4 [Manual assessment: N/A]
+
+Line 284
+F: B2 + D2 =4
+
+False ratings:
+F -> D: 2 [Manual assessment: N/A]
+
+Line 379
+C: B4 + E1 =5
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 380
+D: B2 + E3 =5
+
+False ratings:
+D -> E: 3 [Manual assessment: N/A]
+
+Line 381
+F: B2 + E5 =7
+
+False ratings:
+F -> E: 5 [Manual assessment: N/A]
+
+Line 465
+C: B4 + F4 =8
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 466
+D: B2 + F3 =5
+
+False ratings:
+D -> F: 3 [Manual assessment: N/A]
+
+Line 467
+E: B1 + F2 =3
+
+False ratings:
+E -> F: 2 [Manual assessment: N/A]
+
+---
+
+732.txt roommates
+
+Line 134
+Pair A-E: A new with C,F: r(A,C)+r(A,F)=3+4=7 >3. E new with B,D: r(E,B)+r(E,D)=5+3=8 > original 3. Both increase => unstable. So grouping 2 unstable.
+
+False ratings:
+E -> D: 3 [Manual assessment: N/A]
+
+Line 164
+Pair A-C: A new with D,F: r(A,D)+r(A,F)=1+4=5 > original 4. C new with B,E: r(C,B)+r(C,E)=4+1=5 < original 10 (decrease). Not both non-decrease.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 168
+Pair A-F: A new with C,D: 3+1=4 = original 4 (no increase). F new with B,E: r(F,B)+r(F,E)=3+2=5 > original 4. So A unchanged, F increased => this qualifies as unstable (increase one while other stays same). Condition: increase one while other's satisfaction stays the same (non-decrease for both, at least one strict). Here A stays same, F increases, so unstable. So grouping 3 unstable.
+
+False ratings:
+F -> E: 2 [Manual assessment: N/A]
+
+---
+
+737.txt roommates
+
+Line 137
+B: A4 + E5 =9
+
+False ratings:
+B -> E: 5 [Manual assessment: N/A]
+
+---
+
+75.txt roommates
+
+Line 178
+B with E: E's other members C,D. B new sat = B->C=1 + B->D=5 =6 >5 increase. E new sat = E->A=2 + E->F=5 =7 = original? Wait original E sat=7 (with C,D). New E sat = 2+5=7 same. So B increased, E unchanged => instability. So grouping 4 unstable.
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+Line 260
+A with E: E's other members B,D. A new sat = A->B=2 + A->D=1 =3 <4. E new sat = E->A=2 + E->C=2 =4 <7 decrease.
+
+False ratings:
+E -> C: 2 [Manual assessment: N/A]
+
+---
+
+754.txt roommates
+
+Line 236
+- D: B2 + E3 =5 (up from4)
+
+False ratings:
+D -> E: 3 [Manual assessment: N/A]
+
+Line 238
+- E: D5 + B3 =8 (up from6)
+
+False ratings:
+E -> D: 5 [Manual assessment: N/A]
+
+Line 282
+- B: C1 + E2 =3 (down from9)
+
+False ratings:
+B -> C: 1 [Manual assessment: N/A]
+
+Line 309
+- D: F5 + E5 =10 (up from6)
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+Line 310
+- F: D5 + E1 =6 (down from8)
+
+False ratings:
+F -> E: 1 [Manual assessment: N/A]
+
+Line 311
+- E: D3 + F2 =5 (down from8)
+
+False ratings:
+E -> F: 2 [Manual assessment: N/A]
+
+---
+
+756.txt roommates
+
+Line 297
+F: A4 + B3 =7 (same as original? F rating to A4 + B3 =7, original F sat 7). So F unchanged.
+
+False ratings:
+F -> A: 4 [Manual assessment: N/A]
+F -> B: 3 [Manual assessment: N/A]
+
+Line 382
+E: A3 + D1 =4 (decrease from 6)
+
+False ratings:
+E -> D: 1 [Manual assessment: N/A]
+
+Line 387
+C: F1 + B1 =2 (decrease from 6)
+
+False ratings:
+C -> B: 1 [Manual assessment: N/A]
+
+Line 398
+E: A3 + C3 =6 (same)
+
+False ratings:
+E -> C: 3 [Manual assessment: N/A]
+
+Line 403
+D: F5 + B5 =10 (same)
+
+False ratings:
+D -> B: 5 [Manual assessment: N/A]
+
+Line 434
+F: A2 + C1 =3 (decrease from 5)
+
+False ratings:
+F -> C: 1 [Manual assessment: N/A]
+
+Line 435
+C: A3 + F5 =8 (same as original 8)
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 457
+F: B3 + E5 =8
+
+False ratings:
+F -> E: 5 [Manual assessment: N/A]
+
+Line 642
+D: B3 + E4 =7
+
+False ratings:
+D -> E: 4 [Manual assessment: N/A]
+
+Line 661
+E: F2 + D4 =6 (decrease)
+
+False ratings:
+E -> F: 2 [Manual assessment: N/A]
+
+Line 857
+C: A3 + E2 =5 (decrease)
+
+False ratings:
+C -> E: 2 [Manual assessment: N/A]
+
+---
+
+761.txt roommates
+
+Line 376
+C: B1 + F1 =2
+
+False ratings:
+C -> B: 1 [Manual assessment: N/A]
+
+Line 422
+F: A3 + D5 =8
+
+False ratings:
+F -> D: 5 [Manual assessment: N/A]
+
+Line 454
+F: A3 + E5 =8
+
+False ratings:
+F -> E: 5 [Manual assessment: N/A]
+
+---
+
+771.txt roommates
+
+Line 460
+E: C5 + D4 =9
+
+False ratings:
+E -> C: 5 [Manual assessment: N/A]
+
+---
+
+795.txt roommates
+
+Line 26
+Look at high ratings: Many 5s: A rates C5? Actually A rates C4, not 5. C rates A5, F5. B rates F5. D rates F5. E rates A5, F5. F rates A5, B4, C4, D5. So F is liked by many (A5, B5, C5, D5, E1). F likes A5, B4, C4, D5, E1. So F and A mutual 5. F and D mutual 5 (F rates D5, D rates F2). Not great. F and B: B rates F5, F rates B4. Good. F and C: C rates F5, F rates C4. Good. F and E: E rates F5, F rates E1 (bad). So maybe group F with A,B,C? But need 3 per room.
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+Line 53
+Swap A with E: new room1: E,B,F. E's new satisfaction: B2 + F1 =3 (was5) decrease. A new with C,D: rating C4 + D1 =5 (decrease). Not.
+
+False ratings:
+E -> F: 1 [Manual assessment: N/A]
+
+---
+
+796.txt roommates
+
+Line 121
+B with E: B joins C,F: C4 + F2 =6 (original 6, same). E joins A,D: A1 + D5 =6 (original 7, decrease). Since E decreases, not block (needs both non-decrease). Even though B same, E worse.
+
+False ratings:
+D -> A: 1 [Manual assessment: N/A]
+
+Line 123
+B with F: B joins C,E: C4 + E3 =7 (increase from 6). F joins A,D: A2 + D1 =3 (original 7, decrease). Not block.
+
+False ratings:
+E -> C: 4 [Manual assessment: N/A]
+
+Line 125
+D with C: D joins E,F: E4 + F3 =7 (original D 5, increase). C joins A,B: A2 + B1 =3 (original 8, decrease). Not block.
+
+False ratings:
+B -> A: 2 [Manual assessment: N/A]
+F -> E: 4 [Manual assessment: N/A]
+
+Line 127
+D with E: D joins C,F: C3 + F3 =6 (increase from 5). E joins A,B: A1 + B3 =4 (decrease from 7). Not block.
+
+False ratings:
+F -> C: 3 [Manual assessment: N/A]
+
+---
+
+799.txt roommates
+
+Line 225
+sA' = r(A,B)+r(A,F)=1+5=6 (decrease). sE' = r(E,C)+r(E,D)=1+4=5 (decrease from7). Not.
+
+False ratings:
+A -> B: 1 [Manual assessment: N/A]
+
+---
+
+80.txt roommates
+
+Line 140
+Swap D with F: F joins ABD => sat_F_new = r(F,A)=5 + r(F,B)=5 =10 (old 8) increase! D moves to CEF: D new sat = r(D,C)=1 + r(D,E)=2 =3 (old 4) decrease. So not both increase.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+---
+
+800.txt roommates
+
+Line 235
+- E: D1 + C3 =4 (down from6)
+
+False ratings:
+E -> D: 1 [Manual assessment: N/A]
+
+Line 248
+- C: E5 + F5 =10 (increase from6)
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 250
+- F: C1 + E1 =2 (down from10)
+
+False ratings:
+F -> C: 1 [Manual assessment: N/A]
+
+---
+
+803.txt roommates
+
+Line 261
+(A,C): A new with D,F (since C leaves). New satisfaction = R(A,D)+R(A,F)=1+4=5 < original 10 (decrease). C new with B,E: R(C,B)+R(C,E)=5+2=7 > original 4 (increase). Since A decreases, not unstable.
+
+False ratings:
+C -> E: 2 [Manual assessment: N/A]
+
+Line 263
+(A,D): A new with C,F: 2+4=6 <10 decrease. D new with B,E: R(D,B)+R(D,E)=2+4=6 < original 7 decrease. Not unstable.
+
+False ratings:
+D -> E: 4 [Manual assessment: N/A]
+
+Line 285
+s_E = R(E,C)+R(E,D)=3+4=7
+
+False ratings:
+E -> C: 3 [Manual assessment: N/A]
+
+---
+
+804.txt roommates
+
+Line 111
+- C: A2 + F5 =7
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 126
+- E: A5 + F3 =8
+
+False ratings:
+E -> F: 3 [Manual assessment: N/A]
+
+---
+
+805.txt roommates
+
+Line 262
+- E: D1 + B5 =6
+
+False ratings:
+E -> D: 1 [Manual assessment: N/A]
+
+Line 276
+- F: B3 + E3 =6
+
+False ratings:
+F -> E: 3 [Manual assessment: N/A]
+
+Line 278
+- E: F4 + B5 =9
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+Line 281
+- C: D2 + A3 =5
+
+False ratings:
+C -> A: 3 [Manual assessment: N/A]
+
+Line 283
+- A: C5 + D1 =6
+
+False ratings:
+A -> C: 5 [Manual assessment: N/A]
+
+---
+
+808.txt roommates
+
+Line 259
+F: B5 + E3 =8
+
+False ratings:
+F -> B: 5 [Manual assessment: N/A]
+
+---
+
+822.txt roommates
+
+Line 430
+C to A,B,F: r(C,A)=2, r(C,B)=3, r(C,F)=4.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+---
+
+831.txt roommates
+
+Line 160
+B: A4 + E1 =5
+
+False ratings:
+B -> E: 1 [Manual assessment: N/A]
+
+---
+
+852.txt roommates
+
+Line 134
+B: A3 + E4 =7
+
+False ratings:
+B -> E: 4 [Manual assessment: N/A]
+
+Line 166
+A to room2 with D,E: A->D=3, A->E=2 =>5 (increase from 4). C to room1 with B,F: C->B=2, C->F=1 =>3 (decrease from 8). Not both increase.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+853.txt roommates
+
+Line 405
+C: r(C,A)=2, r(C,B)=2, r(C,F)=2
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+---
+
+859.txt roommates
+
+Line 396
+- D: A3 + E5 =8
+
+False ratings:
+D -> E: 5 [Manual assessment: N/A]
+
+Line 466
+- D: B4 + C2 =6
+
+False ratings:
+D -> C: 2 [Manual assessment: N/A]
+
+---
+
+860.txt roommates
+
+Line 234
+C: r[C][A]=4, r[C][B]=5, r[C][E]=3
+
+False ratings:
+C -> E: 3 [Manual assessment: N/A]
+
+Line 235
+D: r[D][A]=3, r[D][B]=1, r[D][E]=2
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+Line 270
+C: r[C][A]=4, r[C][B]=5, r[C][F]=5
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 272
+E: r[E][A]=5, r[E][B]=4, r[E][F]=2
+
+False ratings:
+E -> F: 2 [Manual assessment: N/A]
+
+---
+
+862.txt roommates
+
+Line 118
+- F: C3 + E4 =7
+
+False ratings:
+F -> C: 3 [Manual assessment: N/A]
+
+Line 206
+- F: B4 + E1 =5
+
+False ratings:
+F -> E: 1 [Manual assessment: N/A]
+
+Line 305
+- D: E3 + F1 =4 (previously we had 5, now 4)
+
+False ratings:
+D -> F: 1 [Manual assessment: N/A]
+
+Line 306
+- E: D2 + F4 =6 (previously 3, now 6)
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+Line 321
+- C: E4 + F2 =6 (previously 7, now 6)
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+Line 372
+- D: C2 + E2 =4 (previously 5, now 4)
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+---
+
+866.txt roommates
+
+Line 142
+F: C5 + D2 =7
+
+False ratings:
+F -> C: 5 [Manual assessment: N/A]
+
+---
+
+874.txt roommates
+
+Line 227
+r(F,B)=2, r(F,D)=1 =>3 (swap with A)
+
+False ratings:
+F -> D: 1 [Manual assessment: N/A]
+
+Line 333
+Sat E = r(E,C)+r(E,D)=3+3=6
+
+False ratings:
+E -> C: 3 [Manual assessment: N/A]
+
+---
+
+876.txt roommates
+
+Line 89
+- E: C(3)+F(4)=7? Wait earlier I had E with C,F rating: E-C=3, E-F=4 => sum 7, not 4. Let's recalc: matrix row E: A1, B5, C3, D2, F3. Actually E-F rating is 3, not 4. I mis-copied earlier. Let's correct: Row E: ... F=3. So E's rating for F is 3. So E's satisfaction in CEF: C (3) + F (3) =6. Wait rating E-C=3, E-F=3 => sum 6. So earlier I said 4, that's wrong. Let's recompute all.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+---
+
+881.txt roommates
+
+Line 215
+- F: C2 + D5 =7
+
+False ratings:
+F -> D: 5 [Manual assessment: N/A]
+
+Line 273
+- E: C3 + D5 =8
+
+False ratings:
+E -> C: 3 [Manual assessment: N/A]
+E -> D: 5 [Manual assessment: N/A]
+
+---
+
+886.txt roommates
+
+Line 233
+D->A=4, D->B=3, D->E=1
+
+False ratings:
+D -> E: 1 [Manual assessment: N/A]
+
+Line 276
+C->A=2, C->B=2, C->F=1
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 278
+E->A=2, E->B=5, E->F=2
+
+False ratings:
+E -> F: 2 [Manual assessment: N/A]
+
+---
+
+888.txt roommates
+
+Line 184
+- C_new roommates: B and E. C_new = r(C,B)+r(C,E)=5+5=10. C_old=4, increase. So A same, C increase => unstable. So grouping 3 unstable.
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+---
+
+897.txt roommates
+
+Line 145
+- B: A5 + F3 =8
+
+False ratings:
+B -> F: 3 [Manual assessment: N/A]
+
+---
+
+899.txt roommates
+
+Line 123
+- B: A5 + E3 =8
+
+False ratings:
+B -> E: 3 [Manual assessment: N/A]
+
+Line 164
+- E: C4 + D3 =7
+
+False ratings:
+E -> C: 4 [Manual assessment: N/A]
+
+Line 268
+- E: B3 + D5 =8
+
+False ratings:
+E -> D: 5 [Manual assessment: N/A]
+
+---
+
+910.txt roommates
+
+Line 209
+r[C][A]=3, r[C][B]=5, r[C][E]=2
+
+False ratings:
+C -> E: 2 [Manual assessment: N/A]
+
+---
+
+920.txt roommates
+
+Line 243
+- D new roommates: B,E => D->B=1, D->E=1 =>2. Old D=6, decrease. Not unstable.
+
+False ratings:
+D -> E: 1 [Manual assessment: N/A]
+
+---
+
+925.txt roommates
+
+Line 303
+- F: A1 + D5 =6
+
+False ratings:
+F -> D: 5 [Manual assessment: N/A]
+
+---
+
+928.txt roommates
+
+Line 139
+B: A2 + E5 =7
+
+False ratings:
+B -> E: 5 [Manual assessment: N/A]
+
+---
+
+930.txt roommates
+
+Line 285
+- B: A4 + F3 =7
+
+False ratings:
+B -> F: 3 [Manual assessment: N/A]
+
+---
+
+931.txt roommates
+
+Line 550
+C: A3 + F4 =7.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+---
+
+934.txt roommates
+
+Line 64
+r(C,A)=1, C-B=2, C-D=4, C-E=1, C-F=2
+
+False ratings:
+C -> D: 4 [Manual assessment: N/A]
+
+---
+
+94.txt roommates
+
+Line 224
+D: r(D,A)=2, r(D,B)=5, r(D,E)=1.
+
+False ratings:
+D -> E: 1 [Manual assessment: N/A]
+
+Line 227
+F: r(F,A)=2, r(F,B)=5, r(F,E)=1.
+
+False ratings:
+F -> E: 1 [Manual assessment: N/A]
+
+---
+
+945.txt roommates
+
+Line 378
+Swap D with C: D new sat 4 (<10). C new sat with A,E: r(C,A)+r(C,E)=5+5=10 (>5). So C improves, D decreases -> not Pareto.
+
+False ratings:
+C -> A: 5 [Manual assessment: N/A]
+
+---
+
+97.txt roommates
+
+Line 287
+- C: B5 + D3 =8
+
+False ratings:
+C -> D: 3 [Manual assessment: N/A]
+
+---
+
+976.txt roommates
+
+Line 125
+What about D with D's own low liked? Actually D's own rating for others is low, but others' rating for D varies. To avoid others gaining, D's roommates should be those that others rate low. For each potential roommate X, consider how much other students rate X. For B, many rate B? A rates B2, C4, D1, E4, F3. So B is moderately liked. For F, others rate F: A4, B2, C5, D2, E2. So F is liked by C high.
+
+False ratings:
+A -> C: 4 [Manual assessment: N/A]
+A -> D: 1 [Manual assessment: N/A]
+A -> F: 3 [Manual assessment: N/A]
+
+---
+
+977.txt roommates
+
+Line 150
+- B: A3 + E1 =4
+
+False ratings:
+B -> E: 1 [Manual assessment: N/A]
+
+Line 218
+- C: A1 + D5 =6
+
+False ratings:
+C -> D: 5 [Manual assessment: N/A]
+
+---
+
+986.txt roommates
+
+Line 159
+If D swaps with someone in other room, D could improve. So maybe D should be with B and F (who give higher). Let's test Room1: A, C, B? Then A: C5+B5=10, C: A5+B2=7, B: A3+C2=5. B low.
+
+False ratings:
+C -> B: 2 [Manual assessment: N/A]
+
+Line 161
+Room1: A, C, F? A: C5+F2=7, C: A5+F2=7, F: A2+C2=4.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+Line 163
+Room1: A, C, E? A: C5+E4=9, C: A5+E1=6, E: A1+C1=2.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+---
+
+989.txt roommates
+
+Line 253
+C-B:3, C-E:2, C-F:2
+
+False ratings:
+C -> B: 3 [Manual assessment: N/A]
+
+Line 254
+D-B:5, D-E:3, D-F:5
+
+False ratings:
+D -> B: 5 [Manual assessment: N/A]
+
+Line 355
+D-B:5, D-C:3, D-F:5
+
+False ratings:
+D -> C: 3 [Manual assessment: N/A]
+
+Line 356
+E-B:1, E-C:3, E-F:5
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+---
+
+993.txt roommates
+
+Line 30
+Look at mutual high ratings: A likes C5, C likes A1 (low). B likes D5, D likes B1 (low). B likes E5, E likes B3 (moderate). C likes F5, F likes C4 (good). D likes F4, F likes D4 (good). So maybe group (C,F, D?) Let's compute.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+Line 254
+C: A5 + D5 =10 (same as original C's 10? originally C had 5+5=10, yes unchanged)
+
+False ratings:
+C -> A: 5 [Manual assessment: N/A]
+
+Line 255
+A: C1 + D2 =3 (down from6)
+
+False ratings:
+A -> C: 1 [Manual assessment: N/A]
+
+---
+
+999.txt roommates
+
+Line 122
+- C: A4 + F1 =5
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 137
+- E: A1 + F2 =3
+
+False ratings:
+E -> F: 2 [Manual assessment: N/A]
+
+Line 149
+- E: D2 + F5 =7
+
+False ratings:
+E -> D: 2 [Manual assessment: N/A]
+
+---
+

@@ -382,7 +382,7 @@ fig.set_size_inches(max_graph_width, 3 * 2)
 ax1, ax2 = axs
 '''
 fig, ax2 = plt.subplots()
-fig.set_size_inches(max_graph_width, 1.75 * 2)
+fig.set_size_inches(max_graph_width, 1.5 * 2)
 '''
 ax1_bar_x = [[] for _ in range(len(frames_to_plot))]
 ax1_bar_h = [[] for _ in range(len(frames_to_plot))]

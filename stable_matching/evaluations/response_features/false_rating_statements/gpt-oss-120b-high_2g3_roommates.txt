@@ -1,0 +1,2562 @@
+1000.txt roommates
+
+Line 320
+- Swap C with E: new_C_E = R(C,B)+R(C,F) = 4+5 = 9. Old_C = 5. Increase.
+
+False ratings:
+C -> B: 4 [Manual assessment: N/A]
+
+---
+
+102.txt roommates
+
+Line 706
+- If i = A: new_B = r(B,C)+r(B,E) = 1+4 = 5? Wait r(B,C)=2? Actually B's rating for C is 2. B's rating for E is 4. So sum = 2+4 = 6. Wait we need to check: B's rating for C is 2 (from matrix). Yes. So new_B = 2+4 = 6.
+
+False ratings:
+B -> C: 1 [Manual assessment: N/A]
+
+---
+
+107.txt roommates
+
+Line 429
+- For D: r(D,A)=5, r(D,B)=3, r(D,E)=3.
+
+False ratings:
+D -> E: 3 [Manual assessment: N/A]
+
+Line 527
+- For C: r(C,A)=2, r(C,B)=5, r(C,F)=3.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+Line 528
+- For D: r(D,A)=5, r(D,B)=3, r(D,F)=1.
+
+False ratings:
+D -> F: 1 [Manual assessment: N/A]
+
+Line 529
+- For E: r(E,A)=5, r(E,B)=3, r(E,F)=2.
+
+False ratings:
+E -> F: 2 [Manual assessment: N/A]
+
+Line 636
+- For F: r(F,A)=5, r(F,C)=3, r(F,D)=5.
+
+False ratings:
+F -> D: 5 [Manual assessment: N/A]
+
+Line 822
+- For B: r(B,A)=2, r(B,C)=5, r(B,F)=4.
+
+False ratings:
+B -> C: 5 [Manual assessment: N/A]
+
+---
+
+113.txt roommates
+
+Line 449
+- s_C_after = r(C,B) + r(C,E) = 3 + 1 = 4.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 460
+- s_D_after = r(D,B) + r(D,E) = 1 + 2 = 3.
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+Line 538
+- s_C_after = r(C,B) + r(C,F) = 3 + 2 = 5.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+Line 549
+- s_D_after = r(D,B) + r(D,F) = 1 + 4 = 5.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+---
+
+115.txt roommates
+
+Line 311
+- S(D) = r(D,C) + r(D,F) = 3 + 1 = 4.
+
+False ratings:
+D -> C: 3 [Manual assessment: N/A]
+
+---
+
+124.txt roommates
+
+Line 350
+- r(C,A)=1, r(C,B)=2, r(C,E)=1.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 408
+- r(C,A)=1, r(C,B)=2, r(C,F)=1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 409
+- r(D,A)=5, r(D,B)=1, r(D,F)=1.
+
+False ratings:
+D -> F: 1 [Manual assessment: N/A]
+
+Line 410
+- r(E,A)=2, r(E,B)=5, r(E,F)=4.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+Line 574
+- r(B,A)=3, r(B,C)=1, r(B,F)=3.
+
+False ratings:
+B -> F: 3 [Manual assessment: N/A]
+
+---
+
+127.txt roommates
+
+Line 429
+  - r(C,A)=3, r(C,B)=1, r(C,E)=1.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 430
+  - r(D,A)=4, r(D,B)=3, r(D,E)=1.
+
+False ratings:
+D -> E: 1 [Manual assessment: N/A]
+
+Line 521
+  - r(C,A)=3, r(C,B)=1, r(C,F)=3.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+Line 522
+  - r(D,A)=4, r(D,B)=3, r(D,F)=5.
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+Line 523
+  - r(E,A)=4, r(E,B)=4, r(E,F)=2.
+
+False ratings:
+E -> F: 2 [Manual assessment: N/A]
+
+---
+
+128.txt roommates
+
+Line 466
+R(C,A)=1, R(C,B)=1, R(C,F)=1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+133.txt roommates
+
+Line 401
+Ratings from C to A, B, E: C->A=3, C->B=5, C->E=1.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 477
+Ratings from C to A, B, F: C->A=3, C->B=5, C->F=5.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 479
+From E to A, B, F: E->A=5, E->B=5, E->F=4.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+---
+
+134.txt roommates
+
+Line 770
+- For C: r(C,A)=2, r(C,B)=2, r(C,F)=4.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 778
+- For D: r(D,A)=2, r(D,B)=4, r(D,F)=2.
+
+False ratings:
+D -> F: 2 [Manual assessment: N/A]
+
+---
+
+144.txt roommates
+
+Line 556
+   r(C,A)=2, r(C,B)=1, r(C,E)=1.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 563
+   r(D,A)=2, r(D,B)=3, r(D,E)=3.
+
+False ratings:
+D -> E: 3 [Manual assessment: N/A]
+
+Line 657
+   r(D,A)=2, r(D,B)=3, r(D,F)=2.
+
+False ratings:
+D -> F: 2 [Manual assessment: N/A]
+
+---
+
+148.txt roommates
+
+Line 856
+- r(D,A) = 5, r(D,B) = 4, r(D,F) = 2.
+
+False ratings:
+D -> F: 2 [Manual assessment: N/A]
+
+Line 1274
+- r(B,A) = 2, r(B,C) = 5, r(B,F) = 3.
+
+False ratings:
+B -> C: 5 [Manual assessment: N/A]
+
+Line 1705
+Original S_E = r(E,A)+r(E,B) = 4+2 = 6. S_D = r(D,C)+r(D,F) = 5+5 = 10? Wait we computed S_D = r(D,C)+r(D,F) = 5+5 = 10? Actually earlier we computed S_D = r(D,C)+r(D,F) = 5+5 = 10? Let's check: In G3, group2 is {C,D,F}. So D's roommates are C and F. r(D,C)=2? Wait rating D->C is 2 (from matrix). r(D,F)=5. So S_D = 2+5 = 7. Yes earlier we computed S_D = 7. So original S_D = 7.
+
+False ratings:
+D -> C: 5 [Manual assessment: N/A]
+
+---
+
+150.txt roommates
+
+Line 702
+For C: R(C,A)=3, R(C,B)=2, R(C,F)=2.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+---
+
+156.txt roommates
+
+Line 581
+For j = C: R(C,A)=1, R(C,B)=2, R(C,E)=5.
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 701
+For j = C: R(C,A)=1, R(C,B)=2, R(C,F)=3.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+Line 703
+For j = D: R(D,A)=1, R(D,B)=5, R(D,F)=4.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+Line 705
+For j = E: R(E,A)=2, R(E,B)=4, R(E,F)=2.
+
+False ratings:
+E -> F: 2 [Manual assessment: N/A]
+
+---
+
+159.txt roommates
+
+Line 220
+- rating(D,C) = 1, rating(D,F) = 4 => sum = 5.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+---
+
+160.txt roommates
+
+Line 218
+- C's new roommates: B and F (the other two in group1). So S_C' = R(C,B)+R(C,F) = 2+1 = 3.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 236
+- E's new roommates: B and F => S_E' = R(E,B)+R(E,F) = 1+3 = 4.
+
+False ratings:
+E -> F: 3 [Manual assessment: N/A]
+
+Line 994
+  - Swap with B: new roommates = D and F => R(E,D)+R(E,F) = 2+4 = 6.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+Line 1012
+  - Swap with A: new roommates = B and F => 2+2 = 4? Wait D's new roommates after swapping with A are the other two members of G1 (excluding A). G1 members are A, C, E. Excluding A, the other two are C and E. So D's new roommates = C and E => R(D,C)+R(D,E) = 4+2 = 6.
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+Line 1120
+  - Swap with A: new roommates = B and E => 2+2 = 4? Wait D's new roommates after swapping with A are the other two members of G1 (excluding A). G1 members are A, C, F. Excluding A, the other two are C and F. So D's new roommates = C and F => R(D,C)+R(D,F) = 4+2 = 6.
+
+False ratings:
+D -> F: 2 [Manual assessment: N/A]
+
+Line 2544
+- Swap with A: new roommates = E and F => R(B,E)+R(B,F) = 1+2 = 3.
+
+False ratings:
+B -> E: 1 [Manual assessment: N/A]
+B -> F: 2 [Manual assessment: N/A]
+
+Line 2552
+- Swap with A: new roommates = E and F => R(C,E)+R(C,F) = 3+1 = 4.
+
+False ratings:
+C -> E: 3 [Manual assessment: N/A]
+
+---
+
+163.txt roommates
+
+Line 473
+R[C][B] = 4, R[C][E] = 1 => sum_j_BE = 4+1 = 5.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+---
+
+187.txt roommates
+
+Line 692
+R(D,A)=3, R(D,B)=5, R(D,E)=3.
+
+False ratings:
+D -> E: 3 [Manual assessment: N/A]
+
+Line 771
+R(C,A)=1, R(C,B)=5, R(C,F)=1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 773
+R(E,A)=3, R(E,B)=1, R(E,F)=3.
+
+False ratings:
+E -> F: 3 [Manual assessment: N/A]
+
+---
+
+198.txt roommates
+
+Line 402
+- For C: R(C,A)=4, R(C,B)=5, R(C,E)=1.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 463
+- s_E = R(E,C)+R(E,D) = 5+4 = 9.
+
+False ratings:
+E -> C: 5 [Manual assessment: N/A]
+
+Line 498
+- For C: R(C,A)=4, R(C,B)=5, R(C,F)=2.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+---
+
+213.txt roommates
+
+Line 556
+- For D: R(D,A)=1, R(D,B)=5, R(D,E)=1.
+
+False ratings:
+D -> E: 1 [Manual assessment: N/A]
+
+Line 703
+- For D: R(D,A)=1, R(D,B)=5, R(D,F)=4.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+---
+
+218.txt roommates
+
+Line 634
+Compute s_B_new = r(B,A)+r(B,F) = 1+4 = 5. Original s_B = 6. So B decreases.
+
+False ratings:
+B -> A: 1 [Manual assessment: N/A]
+
+---
+
+220.txt roommates
+
+Line 274
+- r(C,B)=4, r(C,D)=2 => sum_BD = 6.
+
+False ratings:
+C -> D: 2 [Manual assessment: N/A]
+
+Line 280
+- r(E,B)=1, r(E,D)=1 => sum_BD = 2.
+
+False ratings:
+E -> D: 1 [Manual assessment: N/A]
+
+Line 286
+- r(F,B)=1, r(F,D)=5 => sum_BD = 6.
+
+False ratings:
+F -> D: 5 [Manual assessment: N/A]
+
+---
+
+238.txt roommates
+
+Line 1411
+10. AEF: A:5+3=8, E:4+4=8, F:2+4=6? Wait, we computed earlier F's satisfaction in AEF as 4. Let's recompute: In triple AEF, members are A, E, F. For F, roommates are A and E. R(F,A)=2, R(F,E)=2. So sum = 2+2 = 4. Wait, earlier we wrote F's satisfaction as 4? Actually earlier we wrote s(F)=4 for AEF. Let's check: In the earlier list, we wrote "Group1 AEF: s(A)=8, s(E)=8, s(F)=4." Yes, we had F=4. But now we wrote "F:2+4=6"? That is wrong: R(F,E) is 2, not 4. Wait, check matrix: Row F: A=2, B=4, C=1, D=3, E=2. So R(F,E)=2. So F's satisfaction in AEF is 2+2=4. So earlier we had correct value 4. The miscalc above (2+4) is wrong because we mistakenly used R(F,E)=4 (but that's B's rating to F? Actually R(E,F)=4, but that's E's rating for F, not F's rating for E). So we need to be careful: The satisfaction for a student is sum of their own ratings for the roommates, not the roommates' ratings for them. So we must use row i for student i.
+
+False ratings:
+F -> E: 4 [Manual assessment: N/A]
+
+---
+
+24.txt roommates
+
+Line 1009
+- r(C, F) = 4
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 2167
+- s_D_new = r(D,E)+r(D,F) = 1+4 = 5.
+
+False ratings:
+D -> E: 1 [Manual assessment: N/A]
+
+Line 2172
+- s_E_new = r(E,C)+r(E,D) = 2+1 = 3.
+
+False ratings:
+E -> C: 2 [Manual assessment: N/A]
+
+---
+
+251.txt roommates
+
+Line 273
+- For C: r(C,A)=2, r(C,B)=4, r(C,F)=2.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+---
+
+253.txt roommates
+
+Line 483
+- r(C,A)=2, r(C,E)=2 => sum_j_AE = 2+2 = 4.
+
+False ratings:
+C -> E: 2 [Manual assessment: N/A]
+
+Line 565
+- r(C,A)=2, r(C,F)=4 => sum_j_AF = 2+4 = 6.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 577
+- r(E,A)=2, r(E,F)=3 => sum_j_AF = 2+3 = 5.
+
+False ratings:
+E -> F: 3 [Manual assessment: N/A]
+
+---
+
+259.txt roommates
+
+Line 544
+- For C: rating(C,A)=4, rating(C,B)=2, rating(C,F)=3.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+Line 946
+- For C: rating(C,A)=4, rating(C,D)=3, rating(C,E)=2.
+
+False ratings:
+C -> E: 2 [Manual assessment: N/A]
+
+---
+
+261.txt roommates
+
+Line 939
+  - Ratings: R(B,A)=1, R(B,C)=4, R(B,F)=5.
+
+False ratings:
+B -> F: 5 [Manual assessment: N/A]
+
+Line 946
+  - Ratings: R(D,A)=4, R(D,C)=2, R(D,F)=2.
+
+False ratings:
+D -> C: 2 [Manual assessment: N/A]
+D -> F: 2 [Manual assessment: N/A]
+
+Line 953
+  - Ratings: R(E,A)=1, R(E,C)=4, R(E,F)=3.
+
+False ratings:
+E -> C: 4 [Manual assessment: N/A]
+E -> F: 3 [Manual assessment: N/A]
+
+---
+
+267.txt roommates
+
+Line 310
+- For C: rating(C,A)=5, rating(C,B)=1, rating(C,F)=5 => sum = 5+1+5 = 11.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+---
+
+268.txt roommates
+
+Line 267
+- For D: r(D,C)=2, r(D,E)=5, r(D,F)=5. Sum = 2+5+5 = 12. So s_D' = 12 - r(D,j). r(D,C)=2, r(D,E)=5, r(D,F)=5. So s_D' values: swap with C: 12-2=10; with E: 12-5=7; with F: 12-5=7.
+
+False ratings:
+D -> C: 2 [Manual assessment: N/A]
+
+---
+
+270.txt roommates
+
+Line 471
+j = C: r(C,A)=3, r(C,B)=1, r(C,E)=3.
+
+False ratings:
+C -> E: 3 [Manual assessment: N/A]
+
+Line 477
+j = D: r(D,A)=3, r(D,B)=5, r(D,E)=1.
+
+False ratings:
+D -> E: 1 [Manual assessment: N/A]
+
+Line 563
+j = C: r(C,A)=3, r(C,B)=1, r(C,F)=1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+275.txt roommates
+
+Line 440
+  - rating(C,B)=3, rating(C,F)=1 => sum_BF = 3+1 = 4.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+277.txt roommates
+
+Line 556
+Ratings: R(C,A)=1, R(C,B)=4, R(C,F)=1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 571
+Ratings: R(D,A)=1, R(D,B)=1, R(D,F)=2.
+
+False ratings:
+D -> F: 2 [Manual assessment: N/A]
+
+Line 1085
+Ratings: R(C,A)=1, R(C,D)=3, R(C,E)=2.
+
+False ratings:
+C -> E: 2 [Manual assessment: N/A]
+
+Line 1441
+Ratings: R(B,A)=1, R(B,E)=1, R(B,F)=5.
+
+False ratings:
+B -> F: 5 [Manual assessment: N/A]
+
+---
+
+278.txt roommates
+
+Line 838
+- For j = D: rating(D,A)=4, rating(D,B)=2, rating(D,E)=1.
+
+False ratings:
+D -> E: 1 [Manual assessment: N/A]
+
+Line 926
+- For j = C: rating(C,A)=1, rating(C,B)=3, rating(C,F)=4.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 934
+- For j = D: rating(D,A)=4, rating(D,B)=2, rating(D,F)=2.
+
+False ratings:
+D -> F: 2 [Manual assessment: N/A]
+
+Line 1222
+- For j = E: rating(E,A)=1, rating(E,C)=3, rating(E,F)=4.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+Line 1578
+E moves to T1, now with A and B. rating(E,A)=1, rating(E,B)=4 => sum = 5. Old_sat_E = rating(E,C)+rating(E,F) = 1+2 = 3? Wait original T2: {C,E,F}, so E's roommates are C and F. rating(E,C)=3, rating(E,F)=2 => sum = 5. Actually old_sat_E = 5 (we computed earlier as 5). Let's recompute: rating(E,C)=3, rating(E,F)=2 => sum = 5. So old_sat_E = 5. New_sat_E = rating(E,A)+rating(E,B) = 1+4 = 5. So new_sat_E = old_sat_E = 5 (no change). So D's satisfaction increases, E's stays same. So (D,E) is a blocking pair.
+
+False ratings:
+E -> C: 1 [Manual assessment: N/A]
+
+Line 1592
+F moves to T1, now with B and E. rating(F,B)=5, rating(F,E)=4 => sum = 9. Old_sat_F = rating(F,C)+rating(F,D) = 5+2 = 7? Wait original T2: {C,D,F}, so F's roommates are C and D. rating(F,C)=4, rating(F,D)=2 => sum = 6? Actually rating(F,C)=4, rating(F,D)=2 => sum = 6. Wait earlier we computed old_sat_F = 6? Let's recompute: rating(F,C)=4, rating(F,D)=2 => sum = 6. Yes old_sat_F = 6. So new_sat_F = 9 > old_sat_F = 6. So F's satisfaction increases, A's stays same. So (A,F) is a blocking pair.
+
+False ratings:
+F -> C: 5 [Manual assessment: N/A]
+
+Line 1750
+We have new_sat_E = 5 (swap with B). Wait we computed new_sat_E for (E,B) as rating(E,D)+rating(E,F) = 5+2 = 7? Let's recompute.
+
+False ratings:
+E -> D: 5 [Manual assessment: N/A]
+
+---
+
+281.txt roommates
+
+Line 278
+  - rating(F,B)=5, rating(F,D)=1 => sum_BD = 6.
+
+False ratings:
+F -> D: 1 [Manual assessment: N/A]
+
+Line 410
+  - rating(C,B)=3, rating(C,F)=4 => sum_BF = 7.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+---
+
+282.txt roommates
+
+Line 1296
+- C: R(C,B)=4 + R(C,F)=5 = 9.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+---
+
+285.txt roommates
+
+Line 441
+- r(C,B)=1, r(C,F)=1 => sum =2 (i=A).
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 888
+- r(E,D)=3, r(E,F)=4 => sum =7 (i=A).
+
+False ratings:
+E -> D: 3 [Manual assessment: N/A]
+
+---
+
+287.txt roommates
+
+Line 1046
+- R(F,B)=1, R(F,C)=2 => sum = 3 (i=A)
+
+False ratings:
+F -> C: 2 [Manual assessment: N/A]
+
+---
+
+30.txt roommates
+
+Line 510
+- For D: ratings: D->C=1, D->E=4, D->F=4.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+Line 635
+- For C: ratings: C->A=2, C->B=4, C->E=4.
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+Line 655
+- For F: ratings: F->A=4, F->B=5, F->E=3.
+
+False ratings:
+F -> E: 3 [Manual assessment: N/A]
+
+Line 763
+- For C: ratings: C->A=2, C->B=4, C->F=5.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 890
+- For F: ratings: F->A=4, F->C=5, F->D=4.
+
+False ratings:
+F -> D: 4 [Manual assessment: N/A]
+
+---
+
+303.txt roommates
+
+Line 222
+- D->C = 1, D->E = 4, D->F = 1.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+---
+
+304.txt roommates
+
+Line 462
+- C->A=1, C->B=3, C->F=3 => sum_j_S = 1+3+3 = 7.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+Line 464
+- E->A=1, E->B=4, E->F=3 => sum_j_S = 1+4+3 = 8.
+
+False ratings:
+E -> F: 3 [Manual assessment: N/A]
+
+---
+
+307.txt roommates
+
+Line 535
+- C: R(C,A)=4, R(C,B)=5, R(C,F)=5.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 537
+- E: R(E,A)=3, R(E,B)=4, R(E,F)=1.
+
+False ratings:
+E -> F: 1 [Manual assessment: N/A]
+
+---
+
+329.txt roommates
+
+Line 570
+- j=C: new_i = sum for D+E = 5 (A-D=1, A-E=4). new_j = sum for B+F = 5 (C-B=4, C-F=1). old_i=7, old_j=10. new_i<old_i, new_j<old_j.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+330.txt roommates
+
+Line 761
+  - R(C,E)=1
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+---
+
+334.txt roommates
+
+Line 824
+- C: A (4) + E (1) = 5.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+---
+
+336.txt roommates
+
+Line 456
+- C's new roommates: A and E => rating(C,A)=3, rating(C,E)=1 => C' = 4 (original 3) increase.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 759
+- D's new roommates: C and F => rating(D,C)=4, rating(D,F)=2 => D' = 6 (original 9) decrease. Not beneficial.
+
+False ratings:
+D -> F: 2 [Manual assessment: N/A]
+
+Line 1297
+- E: D4 + F3 = 7? Wait earlier we computed E: D4 + F3 = 7? Actually rating(E,D)=5, rating(E,F)=3 => sum = 8. Let's recompute: rating(E,D)=5 (E's rating for D is 5), rating(E,F)=3 => sum = 8. So E=8.
+
+False ratings:
+E -> D: 4 [Manual assessment: N/A]
+
+---
+
+338.txt roommates
+
+Line 400
+- For D: R(D,A)=2, R(D,B)=2, R(D,E)=5.
+
+False ratings:
+D -> E: 5 [Manual assessment: N/A]
+
+---
+
+344.txt roommates
+
+Line 384
+- r[C][A] = 4, r[C][B] = 2, r[C][F] = 1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 742
+- r[C][A] = 4, r[C][D] = 5, r[C][E] = 3.
+
+False ratings:
+C -> E: 3 [Manual assessment: N/A]
+
+Line 983
+Group1: Room1: A,B,C. s_A=2+5=7, s_B=2+4=6, s_C=4+2=6. Room2: D,E,F. s_D=2+5=7, s_E=2+2=5? Wait earlier we computed s_E = r[E][D] + r[E][F] = 3 + 2 = 5. Yes. s_F = r[F][D] + r[F][E] = 5 + 3 = 8? Wait earlier we computed s_F = 1+3=4. Let's double-check: r[F][D] = 1 (from matrix: row F: D=1). r[F][E] = 3. So s_F = 1+3 = 4. Yes.
+
+False ratings:
+F -> D: 5 [Manual assessment: N/A]
+
+---
+
+346.txt roommates
+
+Line 338
+- For C: R[C][A]=3, R[C][B]=5, R[C][F]=2.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+---
+
+350.txt roommates
+
+Line 318
+Alternatively, E with A and C: E's satisfaction = 5+4=9, A's satisfaction = 3+3=6, C's satisfaction = 2+4=6 (C rates A=2, E=4). So C's satisfaction is 6 (less than max 8). But maybe stable.
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+Line 320
+Alternatively, E with A and D: E's satisfaction = 5+4=9, A's satisfaction = 3+3=6, D's satisfaction = 2+4=6 (D rates A=2, E=4). So D's satisfaction = 6 (max). So that grouping gives A=6, D=6, E=9.
+
+False ratings:
+D -> E: 4 [Manual assessment: N/A]
+
+---
+
+358.txt roommates
+
+Line 677
+R(E,A)=3, R(E,D)=3, R(E,F)=1.
+
+False ratings:
+E -> F: 1 [Manual assessment: N/A]
+
+---
+
+367.txt roommates
+
+Line 120
+- C: A1 + F4 = 5
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 572
+For C: r(C,A)=1, r(C,B)=3, r(C,E)=2.
+
+False ratings:
+C -> E: 2 [Manual assessment: N/A]
+
+Line 1090
+For E: r(E,A)=5, r(E,C)=2, r(E,F)=4.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+---
+
+377.txt roommates
+
+Line 328
+From E: E->A=5, E->B=4, E->F=4.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+---
+
+402.txt roommates
+
+Line 670
+  - R(C,F) = 1
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+403.txt roommates
+
+Line 555
+- C's new roommates: A and E. So C' = rating(C,A) + rating(C,E) = 2 + 5 = 7.
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+---
+
+408.txt roommates
+
+Line 411
+- For C: r(C,A)=5, r(C,B)=5, r(C,F)=2.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+Line 416
+- For D: r(D,A)=5, r(D,B)=3, r(D,F)=2.
+
+False ratings:
+D -> F: 2 [Manual assessment: N/A]
+
+Line 421
+- For E: r(E,A)=3, r(E,B)=1, r(E,F)=5.
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+Line 486
+- For F: r(F,A)=2, r(F,C)=2, r(F,D)=3.
+
+False ratings:
+F -> D: 3 [Manual assessment: N/A]
+
+Line 583
+- For B: r(B,A)=4, r(B,C)=5, r(B,E)=3.
+
+False ratings:
+B -> C: 5 [Manual assessment: N/A]
+
+---
+
+410.txt roommates
+
+Line 1410
+Compute rating(D, C) + rating(D, E) = 4 + 5 = 9.
+
+False ratings:
+D -> C: 4 [Manual assessment: N/A]
+
+---
+
+411.txt roommates
+
+Line 739
+- rating(C,B) + rating(C,F) = 4 + 1 = 5.
+
+False ratings:
+C -> B: 4 [Manual assessment: N/A]
+
+Line 1014
+- rating(E,C) + rating(E,F) = 1 + 2 = 3.
+
+False ratings:
+E -> C: 1 [Manual assessment: N/A]
+
+---
+
+415.txt roommates
+
+Line 528
+- For C: r(C,A)=2, r(C,B)=3, r(C,E)=2.
+
+False ratings:
+C -> E: 2 [Manual assessment: N/A]
+
+Line 640
+- For C: r(C,A)=2, r(C,B)=3, r(C,F)=3.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+---
+
+421.txt roommates
+
+Line 337
+- r(C,A)=4, r(C,B)=1, r(C,E)=1.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 402
+- r(C,A)=4, r(C,B)=1, r(C,F)=3.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+Line 403
+- r(D,A)=3, r(D,B)=1, r(D,F)=2.
+
+False ratings:
+D -> F: 2 [Manual assessment: N/A]
+
+Line 404
+- r(E,A)=2, r(E,B)=4, r(E,F)=3.
+
+False ratings:
+E -> F: 3 [Manual assessment: N/A]
+
+---
+
+434.txt roommates
+
+Line 160
+- For i = D: r(D,C)=1, r(D,E)=2, r(D,F)=4.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+---
+
+44.txt roommates
+
+Line 680
+- R(F,B) = 5, R(F,D) = 2 => S_F'(swap with C) = 5+2 = 7.
+
+False ratings:
+F -> B: 5 [Manual assessment: N/A]
+
+---
+
+442.txt roommates
+
+Line 692
+- Pair (D,E): i=D, j=E. i's new roommates: C and F => S_D' = R(D,C) + R(D,F) = 1 + 2 = 3. Original S_D = 7 => decrease. j's new roommates: A and B => S_E' = R(E,A) + R(E,B) = 2 + 2 = 4. Original S_E = 8 => decrease. Not.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+---
+
+448.txt roommates
+
+Line 244
+- F's roommates: C, E => old_F = r(F,C)+r(F,E) = 1+3 = 4.
+
+False ratings:
+F -> C: 1 [Manual assessment: N/A]
+
+---
+
+45.txt roommates
+
+Line 503
+- r(C,A)=3, r(C,B)=4, r(C,E)=1.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+---
+
+457.txt roommates
+
+Line 903
+- F: C(1)+E(5)=6? Wait r(F,E)=5, r(F,C)=2? Actually r(F,C)=2, r(F,E)=5. So F: C(2)+E(5)=7. Wait we need to check: r(F,C)=2, r(F,E)=5. So s(F)=2+5=7. Yes.
+
+False ratings:
+F -> C: 1 [Manual assessment: N/A]
+
+---
+
+458.txt roommates
+
+Line 582
+- r(C,A)=1, r(C,B)=5, r(C,F)=2.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+---
+
+479.txt roommates
+
+Line 1019
+   - Swap with A: new_C = R(C,E)+R(C,F) = 4+1 = 5.
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+Line 1868
+   - Swap with A: new_D = R(D,E)+R(D,F) = 4+4 = 8.
+
+False ratings:
+D -> E: 4 [Manual assessment: N/A]
+
+---
+
+481.txt roommates
+
+Line 676
+- For C: R(C,A)=1, R(C,B)=3, R(C,F)=1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 1359
+1. (A,D): A's new roommates = {E,F} => A_after = R(A,E)+R(A,F) = 3+3 = 6. D's new roommates = {B,C} => D_after = R(D,B)+R(D,C) = 5+1 = 6? Wait earlier we computed D_after = 10 (R(D,B)+R(D,C) = 5+5?). Let's check: D's rating to B is 5, to C is 5? Wait we need to check R(D,C). According to matrix: D row: D to C = 5. Yes, R(D,C)=5. So D_after = 5+5 = 10. But earlier we wrote D_before = 3 (R(D,E)+R(D,F) = 2+1 = 3). So D_before = 3. D_after = 10. So delta_D = +7. So earlier we wrote D_after = 10, correct. But we need to verify R(D,C) = 5, not 1. Let's check matrix: Row D: "D 1 5 5 X 2 1". So D to A=1, B=5, C=5, E=2, F=1. So D to C = 5. So D_after = 5+5 = 10. Good.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+Line 1395
+3. (A,F): A's new roommates = {C,E} => A_after = 3+3 = 6. F's new roommates = {B,D} => F_after = R(F,B)+R(F,D) = 2+1 = 3.
+
+False ratings:
+F -> D: 1 [Manual assessment: N/A]
+
+---
+
+483.txt roommates
+
+Line 640
+  - i=A: new roommates = {B,F}: sum = R(C,B)+R(C,F) = 5+2 =7.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+---
+
+495.txt roommates
+
+Line 524
+R(C,A)=4, R(C,B)=1, R(C,E)=1.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 606
+R(C,A)=4, R(C,B)=1, R(C,F)=2.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+---
+
+496.txt roommates
+
+Line 1011
+  - r(D,B) = 3, r(D,E) = 1 => sum_j_BE = 3+1 = 4.
+
+False ratings:
+D -> E: 1 [Manual assessment: N/A]
+
+---
+
+508.txt roommates
+
+Line 251
+R(D,C)=3, R(D,E)=3, R(D,F)=2.
+
+False ratings:
+D -> C: 3 [Manual assessment: N/A]
+
+Line 255
+R(F,A)=1, R(F,B)=3, R(F,D)=2.
+
+False ratings:
+F -> D: 2 [Manual assessment: N/A]
+
+---
+
+517.txt roommates
+
+Line 432
+new_C = r(C,B)+r(C,F) = 1+5 = 6.
+
+False ratings:
+C -> B: 1 [Manual assessment: N/A]
+
+---
+
+525.txt roommates
+
+Line 1143
+- new_D = R(D,C)+R(D,E) = 3+5 = 8.
+
+False ratings:
+D -> C: 3 [Manual assessment: N/A]
+
+---
+
+526.txt roommates
+
+Line 27
+Note: Ratings are symmetric? Not necessarily. Let's check symmetry: A-B =5, B-A=5 symmetric. A-C=2, C-A=2 symmetric. A-D=2, D-A=1 not symmetric. A-E=5, E-A=5 symmetric. A-F=2, F-A=1 not symmetric. B-C=1, C-B=5 not symmetric. B-D=1, D-B=3 not symmetric. B-E=4, E-B=5 not symmetric. B-F=1, F-B=4 not symmetric. C-D=5, D-C=2 not symmetric. C-E=3, E-C=4 not symmetric. C-F=5, F-C=2 not symmetric. D-E=4, E-D=5 not symmetric. D-F=1, F-D=1 symmetric. E-F=1, F-E=4 not symmetric.
+
+False ratings:
+D -> F: 1 [Manual assessment: N/A]
+
+---
+
+53.txt roommates
+
+Line 338
+- For D: rating(D,C)=2, rating(D,E)=5, rating(D,F)=1 => total_to_group2_D = 2+5+1 = 8.
+
+False ratings:
+D -> C: 2 [Manual assessment: N/A]
+
+Line 408
+- For C: rating(C,A)=5, rating(C,B)=4, rating(C,E)=5 => total_to_group1_C = 5+4+5 = 14.
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 472
+- For C: rating(C,A)=5, rating(C,B)=4, rating(C,F)=5 => total_to_group1_C = 5+4+5 = 14.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 624
+- For E: rating(E,A)=5, rating(E,C)=5, rating(E,F)=5 => total_to_group1_E = 5+5+5 = 15.
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+---
+
+530.txt roommates
+
+Line 278
+R(E,A)=2, R(E,B)=4, R(E,F)=4.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+Line 552
+R(D,A)=2, R(D,E)=3, R(D,F)=4.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+---
+
+531.txt roommates
+
+Line 274
+- s_D_new = r(D,C)+r(D,F) = 2+2 = 4.
+
+False ratings:
+D -> C: 2 [Manual assessment: N/A]
+
+---
+
+536.txt roommates
+
+Line 524
+R(F,C)+R(F,D) = 2+1 = 3.
+
+False ratings:
+F -> C: 2 [Manual assessment: N/A]
+
+Line 595
+R(D,C)+R(D,E) = 1+2 = 3.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+Line 668
+R(E,C)+R(E,F) = 2+3 = 5.
+
+False ratings:
+E -> C: 2 [Manual assessment: N/A]
+
+---
+
+547.txt roommates
+
+Line 353
+j = C: r(C,A)=4, r(C,B)=2, r(C,E)=4.
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+Line 421
+j = C: r(C,A)=4, r(C,B)=2, r(C,F)=2.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+Line 427
+j = D: r(D,A)=5, r(D,B)=4, r(D,F)=1.
+
+False ratings:
+D -> F: 1 [Manual assessment: N/A]
+
+---
+
+549.txt roommates
+
+Line 1431
+  - x=A: y_new = R(E,B)+R(E,C) = 1+1=2? Wait, R(E,B)=1, R(E,C)=5? Actually R(E,C)=5. Let's check: E's rating for C is 5. So sum = 1+5=6. Yes earlier we computed 6. So y_new = 6.
+
+False ratings:
+E -> C: 1 [Manual assessment: N/A]
+
+---
+
+551.txt roommates
+
+Line 323
+Ratings of C to A,B,F: R(C,A)=2, R(C,B)=5, R(C,F)=1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+552.txt roommates
+
+Line 196
+- F's roommates: C, E. s_F = R(F,C) + R(F,E) = 4 + 2 = 6.
+
+False ratings:
+F -> C: 4 [Manual assessment: N/A]
+
+---
+
+555.txt roommates
+
+Line 418
+- R(F,A)=3, R(F,B)=1, R(F,D)=3.
+
+False ratings:
+F -> D: 3 [Manual assessment: N/A]
+
+---
+
+56.txt roommates
+
+Line 461
+- For C (now in group1 with B, E): sat_C_new = rating(C,B) + rating(C,E) = 3 + 4 = 7.
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+Line 511
+- For C (now in group1 with B, F): sat_C_new = rating(C,B) + rating(C,F) = 3 + 1 = 4.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+566.txt roommates
+
+Line 475
+  - r(C,A)=3, r(C,B)=1, r(C,F)=4.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 477
+  - r(D,A)=4, r(D,B)=2, r(D,F)=4.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+Line 588
+  - r(F,A)=2, r(F,C)=4, r(F,D)=5.
+
+False ratings:
+F -> D: 5 [Manual assessment: N/A]
+
+Line 781
+  - r(E,A)=2, r(E,C)=5, r(E,F)=2.
+
+False ratings:
+E -> F: 2 [Manual assessment: N/A]
+
+Line 1076
+  - r(C,A)=3, r(C,E)=5, r(C,F)=4.
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 1234
+**j = E**: r(E, B)=4, r(E, C)=4 => sum_{B,C}=8. r(E, A)=2, r(E, C)=4 => sum_{A,C}=6. r(E, A)=2, r(E, B)=4 => sum_{A,B}=6.
+
+False ratings:
+E -> C: 4 [Manual assessment: N/A]
+
+---
+
+570.txt roommates
+
+Line 220
+- D: R(D,C)=2, R(D,E)=3, R(D,F)=1.
+
+False ratings:
+D -> C: 2 [Manual assessment: N/A]
+
+Line 316
+- C: R(C,A)=4, R(C,B)=5, R(C,F)=1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+Line 318
+- E: R(E,A)=1, R(E,B)=4, R(E,F)=4.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+---
+
+573.txt roommates
+
+Line 517
+  - r(C,A)=2, r(C,B)=1, r(C,E)=1.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 523
+  - r(D,A)=5, r(D,B)=4, r(D,E)=3.
+
+False ratings:
+D -> E: 3 [Manual assessment: N/A]
+
+Line 595
+  - r(F,C)=4, r(F,D)=3, r(F,E)=3.
+
+False ratings:
+F -> C: 4 [Manual assessment: N/A]
+
+Line 609
+  - r(D,A)=5, r(D,B)=4, r(D,F)=3.
+
+False ratings:
+D -> F: 3 [Manual assessment: N/A]
+
+Line 615
+  - r(E,A)=4, r(E,B)=5, r(E,F)=3.
+
+False ratings:
+E -> F: 3 [Manual assessment: N/A]
+
+Line 863
+  - r(F,A)=1? Wait r(F,A)=2. Actually r(F,A)=2. r(F,D)=4, r(F,E)=3.
+
+False ratings:
+F -> D: 4 [Manual assessment: N/A]
+
+Line 951
+  - r(C,A)=2, r(C,D)=1, r(C,F)=5.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+---
+
+574.txt roommates
+
+Line 596
+- R(D,A) + R(D,E) = 4 + 2 = 6.
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+---
+
+577.txt roommates
+
+Line 317
+E moves to group1 with B and F. rating(E,B)=1, rating(E,F)=4 => E_after = 5.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+---
+
+590.txt roommates
+
+Line 411
+- For C: R(C,A)=4, R(C,B)=3, R(C,F)=4.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 417
+- For D: R(D,A)=2, R(D,B)=3, R(D,F)=3.
+
+False ratings:
+D -> F: 3 [Manual assessment: N/A]
+
+Line 423
+- For E: R(E,A)=2, R(E,B)=1, R(E,F)=5.
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+Line 577
+- For D: R(D,A)=2, R(D,C)=5, R(D,E)=4.
+
+False ratings:
+D -> E: 4 [Manual assessment: N/A]
+
+---
+
+591.txt roommates
+
+Line 412
+- C's roommates: B (R(C,B)=5), F (R(C,F)=3) => s_C=8? Wait, we need to check: R(C,F) = 3 (from row C: rating for F is 3). Actually earlier we wrote s_C = 6 (5+1). That was wrong: we used R(C,F)=1 incorrectly. Let's correct: Row C: rating for F is 3 (the matrix shows C row: 2 5 X 4 3 3). So C rates F as 3, not 1. So we need to recalc s_C and s_F.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+620.txt roommates
+
+Line 1082
+- G1\{F} = {A, E}. C's new satisfaction = rating(C,A) + rating(C,E) = 2 + 4 = 6.
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+---
+
+623.txt roommates
+
+Line 603
+Group ACE: A: C (1) + E (5) = 6. C: A (5) + E (4) = 9? Wait earlier we wrote C: A (5) + E (1) = 6. Let's double-check: R(C,E) = rating from C to E = 1 (given matrix row C: ... E=1). So C's rating for E is 1, not 4. So C's satisfaction in ACE = R(C,A) + R(C,E) = 5 + 1 = 6. So earlier we wrote 6, correct. D? Not relevant. So group ACE: A=6, C=6, E=9 (E's rating for A=5, for C=4). So group ACE: A=6, C=6, E=9. Good.
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+---
+
+624.txt roommates
+
+Line 445
+- r(C,A)=1, r(C,B)=3, r(C,F)=4.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+---
+
+625.txt roommates
+
+Line 165
+- F: roommates C and E. s(F) = r(F,C)+r(F,E) = 1+1 = 2.
+
+False ratings:
+F -> C: 1 [Manual assessment: N/A]
+
+---
+
+630.txt roommates
+
+Line 332
+- For C: r(C,A)=4, r(C,B)=3, r(C,E)=2 => sum_C_group1 = 4+3+2 = 9.
+
+False ratings:
+C -> E: 2 [Manual assessment: N/A]
+
+Line 394
+- For C: r(C,A)=4, r(C,B)=3, r(C,F)=4 => sum_C_group1 = 4+3+4 = 11.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 1037
+- sum_D_group2 = r(D,C)+r(D,E)+r(D,F) = 1+1+5 = 7? Wait r(D,E)=1, r(D,F)=5, r(D,C)=1. So sum_D_group2 = 1+1+5 = 7. But earlier we computed sum_D_group2 = 8? Let's double-check: In grouping 2, group2 = {C,E,F}. So D's ratings to C, E, F: r(D,C)=1, r(D,E)=1, r(D,F)=5 => sum = 1+1+5 = 7. However earlier we computed sum_D_group2 = 8? Actually earlier we computed sum_D_group2 = 2+1+5 = 8? Wait earlier we had sum_D_group2 = r(D,C)+r(D,E)+r(D,F) = 2+1+5 = 8. But r(D,C) is 2? Let's check matrix: r(D,C) = 2 (since row D: D B 5, D C 2). Indeed r(D,C)=2, not 1. Wait we need to verify: The matrix row D: D A=3, D B=5, D C=2, D E=1, D F=5. So r(D,C)=2. So earlier we incorrectly used 1 for r(D,C). Let's correct: r(D,C)=2. So sum_D_group2 = r(D,C)+r(D,E)+r(D,F) = 2+1+5 = 8. So earlier we had sum_D_group2 = 8, which is correct. Good.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+---
+
+635.txt roommates
+
+Line 551
+- new_C = r(C,B) + r(C,E) = 1 + 2 = 3.
+
+False ratings:
+C -> B: 1 [Manual assessment: N/A]
+
+---
+
+637.txt roommates
+
+Line 642
+Group2: C: E(5)+F(5)=10. E: C(1)+F(2)=3. F: C(5)+E(2)=7.
+
+False ratings:
+F -> C: 5 [Manual assessment: N/A]
+
+---
+
+644.txt roommates
+
+Line 403
+  - C->A = 4, C->B = 3, C->E = 5.
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 475
+  - C->A = 4, C->B = 3, C->F = 5.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+Line 691
+  - B->A = 2, B->C = 1, B->F = 4.
+
+False ratings:
+B -> F: 4 [Manual assessment: N/A]
+
+---
+
+646.txt roommates
+
+Line 439
+- For D: R(D,A)=4, R(D,B)=1, R(D,E)=2.
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+---
+
+650.txt roommates
+
+Line 491
+Original group1: A,C,D. A's roommates: C (1) and D (5) => 6. Group2: B,E,F. F's roommates: B (1) and E (5) => 6? Wait original F's satisfaction in group2: B (1) + E (5) = 6? Actually earlier we computed F's satisfaction as 4? Let's recompute: In partition 5, group2 = {B,E,F}. B's rating for F = 1, E's rating for F = 5. So F's satisfaction = R(F,B) + R(F,E) = 3 + 1? Wait careful: F's rating for B is 3 (R(F,B)=3). F's rating for E is 1 (R(F,E)=1). So F's satisfaction = 3+1 = 4. Yes earlier we computed F=4. So original F satisfaction = 4.
+
+False ratings:
+F -> B: 1 [Manual assessment: N/A]
+F -> E: 5 [Manual assessment: N/A]
+
+---
+
+669.txt roommates
+
+Line 238
+- C: A (2) + F (5) = 7.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+---
+
+674.txt roommates
+
+Line 273
+- For C: r(C,A)=3, r(C,B)=5, r(C,F)=4 => total = 12.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 274
+- For D: r(D,A)=5, r(D,B)=4, r(D,F)=1 => total = 10.
+
+False ratings:
+D -> F: 1 [Manual assessment: N/A]
+
+Line 275
+- For E: r(E,A)=2, r(E,B)=5, r(E,F)=4 => total = 11.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+---
+
+676.txt roommates
+
+Line 375
+- For j = C: R(C,A)=4, R(C,B)=4, R(C,F)=1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+679.txt roommates
+
+Line 696
+- B: A (4) + F (3) = 7? Wait earlier we computed B's satisfaction as 6. Let's recompute: B's rating to A = 4, rating to F = 2? Wait rating(B,F) = 2 (from matrix). Actually B's rating to F is 2, not 3. Let's double-check matrix: Row B: A=4, C=4, D=1, E=4, F=2. Yes B's rating to F is 2. So B's satisfaction = rating(B,A) + rating(B,F) = 4 + 2 = 6. So earlier we had B=6, correct.
+
+False ratings:
+B -> F: 3 [Manual assessment: N/A]
+
+---
+
+680.txt roommates
+
+Line 784
+For C: R(C,B)=4, R(C,D)=4, R(C,E)=4.
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+---
+
+685.txt roommates
+
+Line 355
+R(D,A)=3, R(D,B)=3, R(D,E)=3.
+
+False ratings:
+D -> E: 3 [Manual assessment: N/A]
+
+Line 356
+R(F,A)=5, R(F,B)=3, R(F,E)=4.
+
+False ratings:
+F -> E: 4 [Manual assessment: N/A]
+
+Line 430
+R(C,A)=1, R(C,B)=5, R(C,F)=3.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+---
+
+702.txt roommates
+
+Line 327
+   - Swap with A: new roommates = B,E => R(C,B)+R(C,E) = 1+5 = 6.
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 332
+   - Swap with A: new roommates = B,E => R(D,B)+R(D,E) = 3+3 = 6.
+
+False ratings:
+D -> E: 3 [Manual assessment: N/A]
+
+Line 424
+   - Swap with A: new roommates = B,F => R(C,B)+R(C,F) = 1+4 = 5.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+---
+
+71.txt roommates
+
+Line 463
+- Swap with D: j = D. Original S_D = 6. New S_D = R(D,A)+R(D,E) = 3 + 5 = 8 > 6. So D's satisfaction increases. C's satisfaction unchanged (7 = 7). So (C,D) yields D increase, C unchanged. That meets condition: increase for one, other stays same. So (C,D) is a blocking pair. So grouping 6 is unstable.
+
+False ratings:
+D -> E: 5 [Manual assessment: N/A]
+
+---
+
+713.txt roommates
+
+Line 301
+- r(F,A)=1, r(F,B)=5, r(F,D)=5.
+
+False ratings:
+F -> D: 5 [Manual assessment: N/A]
+
+Line 419
+- r(C,A)=2, r(C,B)=3, r(C,F)=5.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+---
+
+715.txt roommates
+
+Line 490
+New sat_C = r(C,B)+r(C,F) = 4 + 4 = 8. Original sat_C = 7, increase.
+
+False ratings:
+C -> B: 4 [Manual assessment: N/A]
+
+---
+
+720.txt roommates
+
+Line 358
+- For C: r(C,A)=5, r(C,B)=2, r(C,F)=1 => U_C = 5+2+1 = 8.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+727.txt roommates
+
+Line 569
+- With A,F: R(C,A)=3, R(C,F)=3 => sum_AF = 6.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+---
+
+729.txt roommates
+
+Line 566
+- Swap with A: new_B = R(B,C)+R(B,D) = 3 + 4 = 7? Wait B's rating to C is 5? Actually B's rating to C is 5 (R(B,C)=5). B's rating to D is 4 (R(B,D)=4). So new_B = 5 + 4 = 9. Wait we need to double-check: B's rating to C is 5, to D is 4. So new_B = 5+4 = 9.
+
+False ratings:
+B -> C: 3 [Manual assessment: N/A]
+
+---
+
+734.txt roommates
+
+Line 535
+- For j = C: r(C,A)=4, r(C,B)=5, r(C,F)=2.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+---
+
+735.txt roommates
+
+Line 536
+- R(C,B)=4, R(C,F)=1 => sum = 5 (i=A).
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+739.txt roommates
+
+Line 384
+- For j = C: r(C,A)=4, r(C,B)=2, r(C,E)=3.
+
+False ratings:
+C -> E: 3 [Manual assessment: N/A]
+
+Line 512
+- For j = C: r(C,A)=4, r(C,B)=2, r(C,F)=4.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 520
+- For j = D: r(D,A)=5, r(D,B)=3, r(D,F)=2.
+
+False ratings:
+D -> F: 2 [Manual assessment: N/A]
+
+Line 724
+- r(C,D)=4, r(C,F)=2, r(C,B)=4.
+
+False ratings:
+C -> B: 4 [Manual assessment: N/A]
+
+---
+
+750.txt roommates
+
+Line 251
+- R(D,C)=1, R(D,E)=5, R(D,F)=2.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+---
+
+751.txt roommates
+
+Line 1089
+- S_E = R(E,D)+R(E,F) = 1+1 = 2? Wait earlier we computed S_E = R(E,D)+R(E,F) = 1+1 = 2? Actually earlier we computed S_E = 4? Let's check: In partition 1, we computed S_E = R(E,D)+R(E,F) = 1+1 = 2? Wait earlier we wrote S_E = 4? Let's verify.
+
+False ratings:
+E -> D: 1 [Manual assessment: N/A]
+
+---
+
+762.txt roommates
+
+Line 472
+  - i = A: other two B,F: rating(E,B) + rating(E,F) = 4 + 1 = 5.
+
+False ratings:
+E -> F: 1 [Manual assessment: N/A]
+
+---
+
+77.txt roommates
+
+Line 466
+- For C: rating(C,A)=4, rating(C,B)=3, rating(C,E)=1.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 534
+- For C: rating(C,A)=4, rating(C,B)=3, rating(C,F)=1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+79.txt roommates
+
+Line 1344
+- j_after = r(C,E) + r(C,F) = 5 + 1 = 6.
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+---
+
+791.txt roommates
+
+Line 544
+- s_E = r(E,C) + r(E,F) = 4 + 5 = 9.
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+---
+
+794.txt roommates
+
+Line 159
+- Swap with E: new_D = R(D,C)+R(D,F) = 1+1 = 2. Decrease.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+---
+
+820.txt roommates
+
+Line 360
+- For j = F: R[F][B] = 2, R[F][E] = 1 => sum = 3. Original S_F = 4. So F's satisfaction would decrease (4->3). So swapping A and F yields A same (7->7) and F decrease (4->3). Since F decreases, not unstable (the condition requires increase for one while the other's stays same; here one decreases). However we need to check if any pair yields increase for one and same for the other. Here A stays same, F decreases, not unstable.
+
+False ratings:
+F -> E: 1 [Manual assessment: N/A]
+
+Line 1115
+- S_F = R[F][C] + R[F][E] = 4 + 2 = 6.
+
+False ratings:
+F -> C: 4 [Manual assessment: N/A]
+
+---
+
+825.txt roommates
+
+Line 539
+  - R(C,A)+R(C,F) = 5+3 = 8.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+---
+
+828.txt roommates
+
+Line 283
+- S_D = r(D,C) + r(D,F) = 3 + 3 = 6.
+
+False ratings:
+D -> C: 3 [Manual assessment: N/A]
+
+Line 958
+- New group1: D,A,E. S_D' = r(D,A)+r(D,E) = 1+4 = 5 (<6). Decrease.
+
+False ratings:
+D -> E: 4 [Manual assessment: N/A]
+
+---
+
+832.txt roommates
+
+Line 217
+- rating(D,C)=1, D,E=1, D,F=5.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+Line 280
+- C's new roommates: group1 \ {A} = {B, E}. C' = rating(C,B) + rating(C,E) = 4 + 1 = 5.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 321
+- C's new roommates: group1 \ {A} = {B, F}. C' = rating(C,B) + rating(C,F) = 4 + 4 = 8.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 818
+- S_F = F-D + F-E = 5+1=6? Wait rating(F,E)=1, rating(F,D)=4? Actually rating(F,D)=4, rating(F,E)=1, sum = 5? Let's check: rating(F,D)=4, rating(F,E)=1 => sum = 5. But earlier we computed S_F = 5. Let's verify: rating(F,D)=4, rating(F,E)=1 => 5. So S_F = 5. So group2 satisfaction: D=6, E=6, F=5.
+
+False ratings:
+F -> D: 5 [Manual assessment: N/A]
+
+Line 1092
+E: R(E,D)=1 + R(E,F)=4 = 5? Wait earlier we had E's satisfaction as 6 (2+4). Let's recompute: rating(E,D)=2? Wait rating(E,D) = 2 (E rates D as 2). Actually we need to check: In matrix, row E: A=3, B=5, C=1, D=2, F=4. So rating(E,D)=2, rating(E,F)=4 => sum = 6. So earlier we incorrectly used rating(E,D)=1. Let's correct: rating(E,D)=2. So E's satisfaction = 2+4 = 6. Good.
+
+False ratings:
+E -> D: 1 [Manual assessment: N/A]
+
+---
+
+833.txt roommates
+
+Line 308
+- D to A,B,F: R(D,A)=5, R(D,B)=1, R(D,F)=1.
+
+False ratings:
+D -> F: 1 [Manual assessment: N/A]
+
+Line 309
+- E to A,B,F: R(E,A)=4, R(E,B)=1, R(E,F)=1.
+
+False ratings:
+E -> F: 1 [Manual assessment: N/A]
+
+---
+
+843.txt roommates
+
+Line 143
+- S(C) = r(C,A)+r(C,F) = 3+1 = 4
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+846.txt roommates
+
+Line 355
+- i_new = r(D, C) + r(D, F) = 1 + 2 = 3.
+
+False ratings:
+D -> C: 1 [Manual assessment: N/A]
+
+---
+
+850.txt roommates
+
+Line 439
+  - r(C,A)=4, r(C,B)=1, r(C,E)=5.
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 532
+  - r(D,A)=2, r(D,B)=5, r(D,F)=2.
+
+False ratings:
+D -> F: 2 [Manual assessment: N/A]
+
+---
+
+858.txt roommates
+
+Line 441
+- R[C][A] = 4, R[C][B] = 3, R[C][E] = 1.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 536
+- R[C][A] = 4, R[C][B] = 3, R[C][F] = 4.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 542
+- R[D][A] = 1, R[D][B] = 2, R[D][F] = 1.
+
+False ratings:
+D -> F: 1 [Manual assessment: N/A]
+
+---
+
+86.txt roommates
+
+Line 410
+   - Swap with C: s_E' = r(E,D) + r(E,F) = 5 + 4 = 9.
+
+False ratings:
+E -> D: 5 [Manual assessment: N/A]
+
+Line 900
+   - Swap with B: s_D' = r(D,C) + r(D,F) = 2 + 1 = 3.
+
+False ratings:
+D -> C: 2 [Manual assessment: N/A]
+
+---
+
+860.txt roommates
+
+Line 1889
+  - new_j(A) = rating(E,B)+rating(E,D) = 4+1 = 5.
+
+False ratings:
+E -> D: 1 [Manual assessment: N/A]
+
+---
+
+869.txt roommates
+
+Line 424
+- new_C = r(C,B)+r(C,F) = 4 + 1 = 5.
+
+False ratings:
+C -> B: 4 [Manual assessment: N/A]
+
+---
+
+87.txt roommates
+
+Line 834
+- For j = C: r(C,A)=3, r(C,B)=1, r(C,F)=4.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 852
+Now j = D: r(D,A)=3, r(D,B)=3, r(D,F)=2.
+
+False ratings:
+D -> F: 2 [Manual assessment: N/A]
+
+Line 1148
+Now j = D: r(D,A)=3, r(D,C)=2, r(D,E)=2.
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+Line 1746
+Now j = C: r(C,A)=3, r(C,E)=5, r(C,F)=4.
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+---
+
+870.txt roommates
+
+Line 622
+R[C][A]=1, R[C][B]=4, R[C][E]=2.
+
+False ratings:
+C -> E: 2 [Manual assessment: N/A]
+
+Line 760
+R[C][A]=1, R[C][B]=4, R[C][F]=4.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 764
+R[E][A]=1, R[E][B]=5, R[E][F]=1.
+
+False ratings:
+E -> F: 1 [Manual assessment: N/A]
+
+---
+
+872.txt roommates
+
+Line 307
+- For j = C: R(C,A)=3, R(C,B)=2, R(C,E)=3.
+
+False ratings:
+C -> E: 3 [Manual assessment: N/A]
+
+---
+
+874.txt roommates
+
+Line 780
+- E's roommates: B (2), F (5) => E_new = 7? Wait, rating for E for B is 2 (E rates B=2), rating for E for F is 5 (E rates F=5). So E_new = 2+5 = 7. But earlier we computed B_new=4, but we need to compute both B and E? Actually we only need to compute satisfaction for swapped students A and B. But we also need to compute for A after swap (in group2) and B after swap (in group1). However, we also need to compute satisfaction for A after swap (in group2). Let's compute both.
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+---
+
+880.txt roommates
+
+Line 636
+  - rating(D,A)=2, rating(D,E)=1 => sum_AE = 2+1 = 3.
+
+False ratings:
+D -> E: 1 [Manual assessment: N/A]
+
+Line 727
+  - rating(D,A)=2, rating(D,F)=3 => sum_AF = 2+3 = 5.
+
+False ratings:
+D -> F: 3 [Manual assessment: N/A]
+
+Line 732
+  - rating(E,A)=5, rating(E,F)=4 => sum_AF = 5+4 = 9.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+---
+
+883.txt roommates
+
+Line 313
+- C: r(C,A)=2, r(C,B)=3, r(C,E)=1.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+---
+
+891.txt roommates
+
+Line 264
+- For E: rating(E,A)=3, E->B=5, E->F=2 => total_E_G1 = 3+5+2 = 10.
+
+False ratings:
+E -> F: 2 [Manual assessment: N/A]
+
+---
+
+906.txt roommates
+
+Line 414
+  - If i=A, new roommates = A's other two: B and F => r(C,B)=2, r(C,F)=3 => sum = 5.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+---
+
+908.txt roommates
+
+Line 280
+R(E,B)=3, R(E,D)=3 => sum = 6.
+
+False ratings:
+E -> D: 3 [Manual assessment: N/A]
+
+---
+
+909.txt roommates
+
+Line 508
+- C's ratings: R(C,A)=2, R(C,B)=4, R(C,F)=4.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+---
+
+915.txt roommates
+
+Line 731
+- r(C,B) = 1, r(C,E) = 4 => sum_BE = 1+4 = 5.
+
+False ratings:
+C -> E: 4 [Manual assessment: N/A]
+
+---
+
+930.txt roommates
+
+Line 427
+i = A: R(A,C)=2, R(A,D)=2, R(A,F)=2.
+
+False ratings:
+A -> C: 2 [Manual assessment: N/A]
+
+Line 449
+j = C: R(C,A)=1, R(C,B)=2, R(C,E)=5.
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 581
+j = C: R(C,A)=1, R(C,B)=2, R(C,F)=2.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+---
+
+931.txt roommates
+
+Line 366
+R(C,A)=3, R(C,B)=2, R(C,F)=4.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+---
+
+932.txt roommates
+
+Line 311
+j_new = sum of R(C, other group1 members besides A) = R(C,B) + R(C,E) = 2 + 1 = 3.
+
+False ratings:
+C -> B: 2 [Manual assessment: N/A]
+
+---
+
+934.txt roommates
+
+Line 1173
+  - sum_E(A) = R(E,B)+R(E,C) = 4+1 = 5.
+
+False ratings:
+E -> C: 1 [Manual assessment: N/A]
+
+Line 1311
+  - sum_D(A) = R(D,B)+R(D,E) = 1+3 = 4.
+
+False ratings:
+D -> E: 3 [Manual assessment: N/A]
+
+---
+
+943.txt roommates
+
+Line 581
+  - If i = A => new roommates = {D, E}: sum = R(B,D) + R(B,E) = 2 + 2 = 4.
+
+False ratings:
+B -> E: 2 [Manual assessment: N/A]
+
+Line 586
+  - If i = A => new roommates = {D, E}: sum = R(C,D) + R(C,E) = 4 + 2 = 6.
+
+False ratings:
+C -> E: 2 [Manual assessment: N/A]
+
+Line 1030
+  - If i = A => new roommates = {B, E}: sum = R(D,B) + R(D,E) = 1 + 1 = 2.
+
+False ratings:
+D -> E: 1 [Manual assessment: N/A]
+
+---
+
+947.txt roommates
+
+Line 251
+- r(F,A)=1, r(F,B)=2, r(F,D)=2.
+
+False ratings:
+F -> D: 2 [Manual assessment: N/A]
+
+Line 447
+- r(C,A)=3, r(C,B)=3, r(C,F)=3.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+---
+
+973.txt roommates
+
+Line 258
+R[C][A] = 4, R[C][B] = 5, R[C][E] = 2.
+
+False ratings:
+C -> E: 2 [Manual assessment: N/A]
+
+---
+
+974.txt roommates
+
+Line 284
+- For C: r(C,A)=2, r(C,B)=5, r(C,F)=1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+983.txt roommates
+
+Line 296
+- New S(D) = rating(D,B) + rating(D,E) = 3 + 3 = 6.
+
+False ratings:
+D -> E: 3 [Manual assessment: N/A]
+
+Line 349
+- New S(C) = rating(C,B) + rating(C,F) = 2 + 2 = 4.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+Line 354
+- New S(D) = rating(D,B) + rating(D,F) = 3 + 5 = 8.
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+Line 359
+- New S(E) = rating(E,B) + rating(E,F) = 1 + 3 = 4.
+
+False ratings:
+E -> F: 3 [Manual assessment: N/A]
+
+---
+
+986.txt roommates
+
+Line 377
+List r(C,A)=5, r(C,B)=1, r(C,E)=1.
+
+False ratings:
+C -> E: 1 [Manual assessment: N/A]
+
+Line 429
+List r(C,A)=5, r(C,B)=1, r(C,F)=2.
+
+False ratings:
+C -> F: 2 [Manual assessment: N/A]
+
+Line 430
+r(D,A)=2, r(D,B)=4, r(D,F)=3.
+
+False ratings:
+D -> F: 3 [Manual assessment: N/A]
+
+Line 431
+r(E,A)=1, r(E,B)=5, r(E,F)=5.
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+---
+
+99.txt roommates
+
+Line 253
+- New roommates for D: {B, E}. r(D,B)=1, r(D,E)=2 => new sat_D = 3.
+
+False ratings:
+D -> E: 2 [Manual assessment: N/A]
+
+Line 316
+- New roommates for D: {B, F}. r(D,B)=1, r(D,F)=2 => new sat_D = 3.
+
+False ratings:
+D -> F: 2 [Manual assessment: N/A]
+
+Line 321
+- New roommates for E: {B, F}. r(E,B)=3, r(E,F)=4 => new sat_E = 7.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+---
+
+996.txt roommates
+
+Line 1097
+Original S_E = R(E,D)+R(E,F) = 4+4=8? Wait earlier we computed S_E = R(E,D)+R(E,F) = 4+4=8? Let's double-check. In partition 1, room2 is D,E,F. So S_E = R(E,D)+R(E,F) = 4 + 4 = 8. But earlier we wrote S_E = 7. Let's check the matrix: Row E: rating for D = 3? Wait we need to check the matrix again. The matrix given:
+
+False ratings:
+E -> D: 4 [Manual assessment: N/A]
+
+---
+

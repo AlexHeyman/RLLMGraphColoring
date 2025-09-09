@@ -1,0 +1,1886 @@
+1000.txt roommates
+
+Line 108
+A rates E:3, B:5, C:5, D:2, F:4, E himself not rated.
+
+False ratings:
+A -> C: 5 [Manual assessment: N/A]
+A -> D: 2 [Manual assessment: N/A]
+
+---
+
+107.txt roommates
+
+Line 1636
+A and D switch: A new with C and F, A rates C:4,F:1=5, same, D new with A,B,E, D rates A:5,B:4, E:5=14>7, D increase, A same—unstable.
+
+False ratings:
+D -> B: 4 [Manual assessment: N/A]
+
+---
+
+109.txt roommates
+
+Line 132
+A rates E:1, B:2, C:1, all low.
+
+False ratings:
+A -> B: 2 [Manual assessment: N/A]
+A -> C: 1 [Manual assessment: N/A]
+
+---
+
+11.txt roommates
+
+Line 34
+Charlie rates D=4, and C rates D=5, so they like each other a lot.
+
+False ratings:
+C -> D: 5 [Manual assessment: N/A]
+
+---
+
+113.txt roommates
+
+Line 106
+F is rated by others: A rates F as 1, B as 4, C as 3, D as 2, E as 3. So B and C like F moderately, others low.
+
+False ratings:
+A -> B: 4 [Manual assessment: N/A]
+A -> D: 2 [Manual assessment: N/A]
+A -> E: 3 [Manual assessment: N/A]
+
+---
+
+117.txt roommates
+
+Line 82
+Dave rates Fred 5, Fred rates Dave 5. Mutual high.
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+---
+
+121.txt roommates
+
+Line 1492
+F rates B4,E4 sum8>6  F rates B4, E4? F rates E: row F for E is1, oh F rates E1, not 4.
+
+False ratings:
+F -> E: 4 [Manual assessment: N/A]
+
+---
+
+127.txt roommates
+
+Line 72
+Dave likes A=4, E=4, F=5, B=3, C=2.
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+---
+
+131.txt roommates
+
+Line 292
+From the matrix, D rates B:5, and let's see E rates B:2, F rates B:2, A:1, C:1.
+
+False ratings:
+F -> A: 1 [Manual assessment: N/A]
+F -> C: 1 [Manual assessment: N/A]
+
+---
+
+139.txt roommates
+
+Line 210
+A rates E:2, B:1, C:2, D:1, F:2 — B rates E:1, C rates E:3, D rates E:3, F rates E:2.
+
+False ratings:
+A -> B: 1 [Manual assessment: N/A]
+A -> D: 1 [Manual assessment: N/A]
+A -> F: 2 [Manual assessment: N/A]
+
+---
+
+141.txt roommates
+
+Line 78
+Many rate D high: A rates D:3, B:3, C:5, E:5, F:5.
+
+False ratings:
+A -> B: 3 [Manual assessment: N/A]
+A -> C: 5 [Manual assessment: N/A]
+A -> E: 5 [Manual assessment: N/A]
+
+---
+
+157.txt roommates
+
+Line 122
+D rates C:5, E:5, F:4, A:1, B:1 — so D really likes C and E.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+---
+
+16.txt roommates
+
+Line 66
+And others' ratings for F: A rates F:1, B:3, C:5, D:5, E:4.
+
+False ratings:
+A -> B: 3 [Manual assessment: N/A]
+A -> C: 5 [Manual assessment: N/A]
+A -> D: 5 [Manual assessment: N/A]
+A -> E: 4 [Manual assessment: N/A]
+
+---
+
+160.txt roommates
+
+Line 178
+F's roommates: B and E, F rates B:3, E:4, sum=7.
+
+False ratings:
+F -> B: 3 [Manual assessment: N/A]
+
+---
+
+164.txt roommates
+
+Line 100
+- E rates B:5, E rates F:5
+
+False ratings:
+E -> B: 5 [Manual assessment: N/A]
+
+Line 722
+After swap: B in A and D: rates A:3, D:1, sum=4, same.
+
+False ratings:
+D -> A: 3 [Manual assessment: N/A]
+
+Line 724
+E in C and F: rates C:1, F:5, sum=6, same.
+
+False ratings:
+F -> C: 1 [Manual assessment: N/A]
+
+---
+
+170.txt roommates
+
+Line 102
+C rates D and E 5, D rates C 5, E rates C 5 and D 4.
+
+False ratings:
+E -> C: 5 [Manual assessment: N/A]
+
+Line 116
+F rates C 5, C rates F 5, mutual.
+
+False ratings:
+F -> C: 5 [Manual assessment: N/A]
+
+---
+
+172.txt roommates
+
+Line 308
+E to {B,C}, E rates B:2 (E rates B:4? Wait, E rates B:4, C:4, sum8.
+
+False ratings:
+E -> B: 2 [Manual assessment: N/A]
+
+---
+
+176.txt roommates
+
+Line 302
+F rates B:1, D:2, sum=3.
+
+False ratings:
+F -> D: 2 [Manual assessment: N/A]
+
+---
+
+182.txt roommates
+
+Line 82
+Ethan rates Fred 5, Fred rates Ethan 5—mutual 5.
+
+False ratings:
+E -> F: 5 [Manual assessment: N/A]
+
+Line 116
+Fred is liked by few: Alan rates F:1, Bob:1, Charlie:4, Dave:1, Ethan:2. Only Charlie likes Fred moderately.
+
+False ratings:
+A -> B: 1 [Manual assessment: N/A]
+A -> C: 4 [Manual assessment: N/A]
+A -> D: 1 [Manual assessment: N/A]
+A -> E: 2 [Manual assessment: N/A]
+
+---
+
+188.txt roommates
+
+Line 82
+Dave likes A:5, E:5, F:5, C:3, B:1.
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+---
+
+201.txt roommates
+
+Line 186
+B rates A:2 (from B's row, B rates A:1? Matrix row B: A:1, so B rates A:1.
+
+False ratings:
+B -> A: 2 [Manual assessment: N/A]
+
+---
+
+210.txt roommates
+
+Line 1448
+B rates C:1, E:4, sum 5 > old 4
+
+False ratings:
+B -> E: 4 [Manual assessment: N/A]
+
+---
+
+213.txt roommates
+
+Line 1648
+F's new sat: with C and E, F rates C:1, E:4, sum 5 (down from 7)
+
+False ratings:
+F -> E: 4 [Manual assessment: N/A]
+
+---
+
+216.txt roommates
+
+Line 124
+For example, Charlie (C) rates B and F high: C rates B:5, F:5.
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+---
+
+219.txt roommates
+
+Line 58
+F rates A 4, E 5.
+
+False ratings:
+F -> E: 5 [Manual assessment: N/A]
+
+---
+
+247.txt roommates
+
+Line 178
+D is liked by few: A rates D:2, B:3, C:5, E:2, F:1 — C likes D a lot.
+
+False ratings:
+A -> B: 3 [Manual assessment: N/A]
+A -> C: 5 [Manual assessment: N/A]
+A -> E: 2 [Manual assessment: N/A]
+A -> F: 1 [Manual assessment: N/A]
+
+---
+
+256.txt roommates
+
+Line 148
+C is liked by few: A rates C:2, B:1, D:1, E:2, F:1 — all low, and C rates others: A:3, E:4, D:2, B:1, F:1.
+
+False ratings:
+A -> D: 1 [Manual assessment: N/A]
+A -> F: 1 [Manual assessment: N/A]
+
+---
+
+257.txt roommates
+
+Line 254
+Notice that D rates B very high, D rates B=5, but B rates D=5? B rates D=5, yes symmetric.
+
+False ratings:
+D -> B: 5 [Manual assessment: N/A]
+
+Line 616
+F new roommates: A and E, F rates A=2, E=4, sum=6 = original 6 (with B and D: B=4,D=2 sum6), same
+
+False ratings:
+F -> E: 4 [Manual assessment: N/A]
+
+---
+
+271.txt roommates
+
+Line 178
+D is rated by others: A rates D:2, B:1, C:5, D:X, E:1, F:1. C rates D high, others low.
+
+False ratings:
+A -> B: 1 [Manual assessment: N/A]
+A -> C: 5 [Manual assessment: N/A]
+
+Line 186
+A rates F:4, B:5, C:5, D:5, E:5, yes, F is very popular, everyone rates F at least 4.
+
+False ratings:
+A -> B: 5 [Manual assessment: N/A]
+A -> D: 5 [Manual assessment: N/A]
+A -> E: 5 [Manual assessment: N/A]
+
+Line 190
+D rates F:5, E:5, etc.
+
+False ratings:
+D -> E: 5 [Manual assessment: N/A]
+
+---
+
+277.txt roommates
+
+Line 1552
+C rates B=1, F=3, sum=4. Increase from 2.
+
+False ratings:
+C -> B: 1 [Manual assessment: N/A]
+
+---
+
+278.txt roommates
+
+Line 246
+Similarly, Dave rates A 5, A rates D 5, mutual high.
+
+False ratings:
+D -> A: 5 [Manual assessment: N/A]
+
+---
+
+28.txt roommates
+
+Line 314
+F new: D's original A and C, F rates A2, C1, sum3. Original7, dec.
+
+False ratings:
+F -> C: 1 [Manual assessment: N/A]
+
+---
+
+285.txt roommates
+
+Line 534
+E new rm: D and C. E->D:2, E->C:1, sum=3<6, decrease
+
+False ratings:
+E -> C: 1 [Manual assessment: N/A]
+
+---
+
+287.txt roommates
+
+Line 224
+E rates B:1, F:3, sum 4, worse than 10.
+
+False ratings:
+E -> B: 1 [Manual assessment: N/A]
+
+---
+
+291.txt roommates
+
+Line 106
+A rates B=5, D=5, F=5, C=2, E=1.
+
+False ratings:
+A -> D: 5 [Manual assessment: N/A]
+A -> F: 5 [Manual assessment: N/A]
+
+---
+
+292.txt roommates
+
+Line 1332
+E to C and D, E rates C:4,D:5, sum=9>8.
+
+False ratings:
+E -> D: 5 [Manual assessment: N/A]
+
+---
+
+295.txt roommates
+
+Line 76
+Notice that A is liked by many: B rates A:5, D:4, E:5, F:4, C:2
+
+False ratings:
+B -> C: 2 [Manual assessment: N/A]
+B -> D: 4 [Manual assessment: N/A]
+
+---
+
+300.txt roommates
+
+Line 1702
+F new: C and E, F rates C=3, E=2, sum=5, original 7, decrease.
+
+False ratings:
+F -> E: 2 [Manual assessment: N/A]
+
+---
+
+304.txt roommates
+
+Line 174
+F's new sat: with C and D. F rates C:3, D:1, sum=4 (prev 5, with B and E, F rates B:2, E:3, sum=5)
+
+False ratings:
+F -> D: 1 [Manual assessment: N/A]
+
+---
+
+306.txt roommates
+
+Line 1494
+B with A,C: B rates A:4, C:2, sum6<7
+
+False ratings:
+B -> C: 2 [Manual assessment: N/A]
+
+---
+
+322.txt roommates
+
+Line 162
+After swap, E goes to room with B and C, E rates B:1, C:2? E rates C:2, B:1, sum=3, decrease from 7.
+
+False ratings:
+E -> B: 1 [Manual assessment: N/A]
+
+---
+
+333.txt roommates
+
+Line 94
+Dave rates F:5, E:4, A:2, etc.
+
+False ratings:
+D -> E: 4 [Manual assessment: N/A]
+
+---
+
+337.txt roommates
+
+Line 168
+Dave (D) likes E and somewhat B and F? D rates E:4, F:4, others low: A:1,B:2,C:1.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+---
+
+339.txt roommates
+
+Line 120
+Perhaps group D with C and F, since D rates C 5 and F 5, C rates D 3, F rates D 5.
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+Line 418
+C likes B and F: rates B=3, F=5, sum=8 > original 5.
+
+False ratings:
+F -> B: 3 [Manual assessment: N/A]
+
+Line 420
+E likes A and D: rates A=2, D=4, sum=6 > original 4 with B and F (B=3,F=1,sum=4).
+
+False ratings:
+D -> A: 2 [Manual assessment: N/A]
+
+---
+
+340.txt roommates
+
+Line 66
+- D rates A:5, D rates F:5
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+---
+
+341.txt roommates
+
+Line 144
+And is rated: A rates F:5, B:3, C:3, D:1, E:2
+
+False ratings:
+A -> B: 3 [Manual assessment: N/A]
+A -> C: 3 [Manual assessment: N/A]
+A -> D: 1 [Manual assessment: N/A]
+
+---
+
+367.txt roommates
+
+Line 102
+If B: A:3 + E:4 =7
+
+False ratings:
+B -> A: 3 [Manual assessment: N/A]
+
+---
+
+372.txt roommates
+
+Line 204
+F rates D=1 (D rates F=1? Wait F rates D=5? No.
+
+False ratings:
+F -> D: 1 [Manual assessment: N/A]
+
+---
+
+378.txt roommates
+
+Line 260
+Swap: D to {B,F}, new sat D: B:3 + F:1 =4 <10
+
+False ratings:
+D -> B: 3 [Manual assessment: N/A]
+
+---
+
+38.txt roommates
+
+Line 288
+E is liked by few: A rates E=3, B=2, C=1, D=2, F=1, and E rates C=4, others low.
+
+False ratings:
+A -> B: 2 [Manual assessment: N/A]
+A -> D: 2 [Manual assessment: N/A]
+A -> F: 1 [Manual assessment: N/A]
+
+---
+
+382.txt roommates
+
+Line 82
+Dave is liked by: A rates D:4, B:4, C:5, E:2, F:2. So C likes D a lot, A and B moderately, E and F low.
+
+False ratings:
+A -> C: 5 [Manual assessment: N/A]
+
+Line 96
+For E, who rates him: A rates E:2, B:3, C:3, D:5, F:2 (since F rates E:1? No, the matrix for F is row F: A:4, B:1, C:4, D:2, E:1, so F rates E:1.
+
+False ratings:
+A -> B: 3 [Manual assessment: N/A]
+A -> C: 3 [Manual assessment: N/A]
+A -> D: 5 [Manual assessment: N/A]
+
+Line 108
+D is liked by C:5, B:4 or 5? B rates D:4, A:4, C:5.
+
+False ratings:
+B -> A: 4 [Manual assessment: N/A]
+B -> C: 5 [Manual assessment: N/A]
+
+---
+
+390.txt roommates
+
+Line 122
+F rates E:5, E rates F:5, oh, mutual high, F and E both rate each other 5.
+
+False ratings:
+F -> E: 5 [Manual assessment: N/A]
+
+---
+
+395.txt roommates
+
+Line 194
+E rates B as 5, B rates E as 5—oh, mutual high: B and E both rate 5.
+
+False ratings:
+E -> B: 5 [Manual assessment: N/A]
+
+---
+
+40.txt roommates
+
+Line 142
+Others rate Fred: A:1, B:1, C:4, D:3, E:1, so Charlie likes Fred 4, Dave 3, others low.
+
+False ratings:
+C -> D: 3 [Manual assessment: N/A]
+
+Line 342
+So Ethan is liked by few: A:2, B:5, C:5? C rates E:1, D:2, F:1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+403.txt roommates
+
+Line 76
+A rates D:1, B:1, C:1, E:4, F:4. So A,B,C all rate D low (1), E and F rate D high (4).
+
+False ratings:
+A -> B: 1 [Manual assessment: N/A]
+A -> C: 1 [Manual assessment: N/A]
+A -> F: 4 [Manual assessment: N/A]
+
+---
+
+409.txt roommates
+
+Line 74
+Others rate F: A rates F:3, B:2, C:4, D:4, E:2, so C and D rate F high, 4 each.
+
+False ratings:
+A -> B: 2 [Manual assessment: N/A]
+A -> C: 4 [Manual assessment: N/A]
+A -> E: 2 [Manual assessment: N/A]
+
+---
+
+411.txt roommates
+
+Line 186
+F new: A's old B and D, F rates B=2, D=3, sum=5 > old with C and E, F rates C=1, E=4, sum=5, same as new 5.
+
+False ratings:
+F -> D: 3 [Manual assessment: N/A]
+
+---
+
+412.txt roommates
+
+Line 1528
+F new sat: with A and C. F rates A:3, C:4, sum=7 >4
+
+False ratings:
+F -> C: 4 [Manual assessment: N/A]
+
+---
+
+416.txt roommates
+
+Line 146
+A rates B4, C3, so A likes B more than C.
+
+False ratings:
+A -> C: 3 [Manual assessment: N/A]
+
+---
+
+420.txt roommates
+
+Line 134
+Fred rates Charlie 5, Charlie rates Fred 5, oh, mutual 5.
+
+False ratings:
+F -> C: 5 [Manual assessment: N/A]
+
+---
+
+435.txt roommates
+
+Line 94
+A rates C=1, B rates C=1, F rates C=2, D=4, E=4.
+
+False ratings:
+F -> D: 4 [Manual assessment: N/A]
+F -> E: 4 [Manual assessment: N/A]
+
+---
+
+437.txt roommates
+
+Line 160
+New with B and D: F rates B3, D1, sum 4. Decrease.
+
+False ratings:
+F -> D: 1 [Manual assessment: N/A]
+
+---
+
+438.txt roommates
+
+Line 156
+F is rated low by many: A rates F:4, B:1, C:1, D:1, E:5 — E rates F:5, F rates E:3
+
+False ratings:
+A -> C: 1 [Manual assessment: N/A]
+A -> D: 1 [Manual assessment: N/A]
+
+---
+
+456.txt roommates
+
+Line 320
+B rates A:2, C:1, D:4, E:4, F:2.
+
+False ratings:
+B -> C: 1 [Manual assessment: N/A]
+B -> F: 2 [Manual assessment: N/A]
+
+---
+
+464.txt roommates
+
+Line 112
+A rates F:5, B rates D:5 and A:4 (B rates A:4), C rates D:4, E:4, D rates C:5, E:3 (D rates E:4), E rates B:5, C:5, F rates A:5, D:5, B:4, E:4.
+
+False ratings:
+A -> F: 5 [Manual assessment: N/A]
+D -> E: 3 [Manual assessment: N/A]
+
+---
+
+469.txt roommates
+
+Line 1022
+F rates C:3, E:4, sum=7. Old B and D:4+3=7, Δ=0.
+
+False ratings:
+F -> E: 4 [Manual assessment: N/A]
+
+---
+
+477.txt roommates
+
+Line 74
+Dave likes B=5, F=4, E=3, A=2, C=1.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+---
+
+478.txt roommates
+
+Line 84
+B rates E 5, E rates B 5? E rates B 5, yes, B-E mutual 5.
+
+False ratings:
+B -> E: 5 [Manual assessment: N/A]
+
+---
+
+487.txt roommates
+
+Line 208
+D likes E:4, B:3, F:4, A:2, C:1 low.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+---
+
+517.txt roommates
+
+Line 1396
+E to C F: E rates C5,F3=8<9? E original with B D: rates B5,D4=9, new with C F: C5,F3=8<9, decrease.
+
+False ratings:
+D -> B: 5 [Manual assessment: N/A]
+E -> C: 5 [Manual assessment: N/A]
+
+---
+
+522.txt roommates
+
+Line 120
+F likes D:4, E:4, A:3, B:2, C:2.
+
+False ratings:
+F -> E: 4 [Manual assessment: N/A]
+
+---
+
+528.txt roommates
+
+Line 516
+A swapping with C: A new sat=5 (with D,F: D:4+F:1=5), current 8, -3
+
+False ratings:
+F -> D: 4 [Manual assessment: N/A]
+
+---
+
+529.txt roommates
+
+Line 300
+But others rate C low: A=5, B=4? No, A rates C=5, B rates C=4, D=4, E=1, F=3.
+
+False ratings:
+B -> D: 4 [Manual assessment: N/A]
+B -> E: 1 [Manual assessment: N/A]
+B -> F: 3 [Manual assessment: N/A]
+
+---
+
+53.txt roommates
+
+Line 448
+Notice that C is highly rated by many: A:5 by C, but C rates A:3; D:5 by C? C rates D:2, D rates C:5; E rates C:5, C rates E:3; F rates C:5, C rates F:3.
+
+False ratings:
+C -> A: 3 [Manual assessment: N/A]
+
+---
+
+536.txt roommates
+
+Line 272
+F new: B and D, F rates B:1? F rates B:1 (from matrix, F row: A:1,B:4? Wait no, F rates: A:1, B:4, C:4, D:1, E:3
+
+False ratings:
+F -> B: 1 [Manual assessment: N/A]
+
+---
+
+537.txt roommates
+
+Line 1648
+F rates B:1, E:5, sum6
+
+False ratings:
+F -> E: 5 [Manual assessment: N/A]
+
+---
+
+538.txt roommates
+
+Line 476
+B to room with A,D: B rates A:3, D:1, sum=4. Originally 5, decrease to 4.
+
+False ratings:
+B -> A: 3 [Manual assessment: N/A]
+
+---
+
+54.txt roommates
+
+Line 78
+D rates C:1, F:1, so D doesn't like C and F.
+
+False ratings:
+D -> F: 1 [Manual assessment: N/A]
+
+---
+
+557.txt roommates
+
+Line 280
+Charlie likes A=5, E=5, C=3? Wait C rates A=5, E=5, D=2, F=1, B=1
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+---
+
+560.txt roommates
+
+Line 1484
+F rates A3, E2, sum=5, old7 down.
+
+False ratings:
+F -> E: 2 [Manual assessment: N/A]
+
+---
+
+564.txt roommates
+
+Line 196
+B rates A 5, E rates A 5, D rates A 4, F:4, C:2.
+
+False ratings:
+D -> C: 2 [Manual assessment: N/A]
+D -> F: 4 [Manual assessment: N/A]
+
+---
+
+566.txt roommates
+
+Line 2076
+F new: with A and E, F rates A:2, E:3, sum=5<7, worse
+
+False ratings:
+F -> E: 3 [Manual assessment: N/A]
+
+---
+
+567.txt roommates
+
+Line 190
+A's satisfaction: roommates B and E: rates B:4, E:5, sum 9.
+
+False ratings:
+E -> B: 4 [Manual assessment: N/A]
+
+Line 192
+B's satisfaction: A and E: rates A:1, E:5, sum 6.
+
+False ratings:
+E -> A: 1 [Manual assessment: N/A]
+
+Line 194
+E's satisfaction: A and B: rates A:5, B:3, sum 8.
+
+False ratings:
+B -> A: 5 [Manual assessment: N/A]
+
+Line 370
+A's sat: C and F: rates C:4, F:4, sum8.
+
+False ratings:
+F -> C: 4 [Manual assessment: N/A]
+
+Line 372
+C's sat: A and F: rates A:5, F:4, sum9.
+
+False ratings:
+F -> A: 5 [Manual assessment: N/A]
+
+Line 374
+F's sat: A and C: rates A:2, C:2, sum4.
+
+False ratings:
+C -> A: 2 [Manual assessment: N/A]
+
+Line 448
+A's sat: E and C: rates E:5, C:4, sum9.
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+---
+
+570.txt roommates
+
+Line 62
+Alan rates Charlie 5, Fred 5 (wait, Alan rates C=5, and F=2, wait no, A rates C=5, and F rates A=5, mutual high.
+
+False ratings:
+A -> F: 5 [Manual assessment: N/A]
+
+Line 1664
+F with A and  D: rates A=5,D=3 sum=8 >7
+
+False ratings:
+D -> A: 5 [Manual assessment: N/A]
+
+---
+
+572.txt roommates
+
+Line 98
+Dave rates Alan 4, Bob 5, Fred 5, Ethan 3.
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+Line 320
+New room with C and D, F rates C4,D1,sum5. Old7, Delta_F=5-7=-2<0.
+
+False ratings:
+F -> D: 1 [Manual assessment: N/A]
+
+---
+
+578.txt roommates
+
+Line 400
+D likes F: rates F:4, and A:2, sum=6
+
+False ratings:
+F -> A: 2 [Manual assessment: N/A]
+
+---
+
+585.txt roommates
+
+Line 1360
+In that case, A from 7 to 6? No, in {A,C,E} and {B,D,F}, A with C and E sum 5+2=7? A rates C2 E5 sum7, F with B and D sum 2+4=6? F rates B2 D1? F rates B2? Let's check the matrix.
+
+False ratings:
+F -> B: 2 [Manual assessment: N/A]
+
+---
+
+59.txt roommates
+
+Line 66
+Dave likes A:5, B:4, F:5, dislikes C:2
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+---
+
+595.txt roommates
+
+Line 72
+B is liked by many: A rates B:5, D:4, E:5, F:4, C:2, so almost everyone likes B except C who gives 2.
+
+False ratings:
+A -> D: 4 [Manual assessment: N/A]
+A -> E: 5 [Manual assessment: N/A]
+A -> F: 4 [Manual assessment: N/A]
+
+---
+
+604.txt roommates
+
+Line 144
+A rates E:5, F:5
+
+False ratings:
+A -> F: 5 [Manual assessment: N/A]
+
+Line 150
+D rates B:5, F:5
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+---
+
+639.txt roommates
+
+Line 700
+1. A and B: switch, A new sat: with D,F: rates D:3,F:3,sum=6<7 down. B new sat: with A,C: wait no, B new roommates C and E: rates C:3,E:5,sum=8>5 up. A down, B up. Not unstable.
+
+False ratings:
+F -> D: 3 [Manual assessment: N/A]
+
+---
+
+650.txt roommates
+
+Line 202
+Or E: D rates E:4, F rates E:1; E rates D:4, F:1 — F doesn't like E.
+
+False ratings:
+E -> F: 1 [Manual assessment: N/A]
+
+---
+
+654.txt roommates
+
+Line 168
+Similarly, Fred is liked by some: A rates F:3, B:4, C:3, D:5, E:3, F rates others: A:1 (low), B:2, C:5, D:4, E:4.
+
+False ratings:
+A -> B: 4 [Manual assessment: N/A]
+A -> C: 3 [Manual assessment: N/A]
+
+---
+
+655.txt roommates
+
+Line 118
+A is liked by many: B rates A:4, C:5, D:3, E:5, F:4. So almost everyone likes A, except perhaps themselves.
+
+False ratings:
+B -> C: 5 [Manual assessment: N/A]
+B -> D: 3 [Manual assessment: N/A]
+B -> E: 5 [Manual assessment: N/A]
+B -> F: 4 [Manual assessment: N/A]
+
+Line 120
+B rates A:4, C rates A:5, D:3, E:5, F:4. And A rates others lower.
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+C -> F: 4 [Manual assessment: N/A]
+
+---
+
+66.txt roommates
+
+Line 518
+With B and E: B4+E5=9<10.
+
+False ratings:
+E -> B: 4 [Manual assessment: N/A]
+
+Line 934
+To C and D: C4+D2=6<7, worse.
+
+False ratings:
+D -> C: 4 [Manual assessment: N/A]
+
+---
+
+663.txt roommates
+
+Line 676
+A: roommates B,C: rates B:4,C:3,sum=7
+
+False ratings:
+C -> B: 4 [Manual assessment: N/A]
+
+---
+
+665.txt roommates
+
+Line 234
+D rates B=4, F=4, others 2 or 1.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+---
+
+666.txt roommates
+
+Line 130
+D is disliked by many: A rates D:3, B:4, C:2, E:2, F:4. F likes D, B likes D.
+
+False ratings:
+A -> B: 4 [Manual assessment: N/A]
+A -> C: 2 [Manual assessment: N/A]
+A -> E: 2 [Manual assessment: N/A]
+A -> F: 4 [Manual assessment: N/A]
+
+Line 2620
+F to B and C: F rates B:1, C:3=4<6 (F current with D and E: F rates D:4, E:5=9)
+
+False ratings:
+F -> C: 3 [Manual assessment: N/A]
+
+---
+
+669.txt roommates
+
+Line 1660
+Switch: E to B and F, E rates B=1, F=1, sum=2, ΔE= -3<0.
+
+False ratings:
+E -> F: 1 [Manual assessment: N/A]
+
+---
+
+672.txt roommates
+
+Line 1428
+D new B3+E2=5>6? D rates B3, E2, sum5, original D with C and F: C4+F2=6, so 5<6, decrease
+
+False ratings:
+D -> B: 3 [Manual assessment: N/A]
+
+---
+
+675.txt roommates
+
+Line 170
+E rates B:1, D:4, sum=5, previously E had with C and F: sum=5 (E rates C:2, F:3=5), so E same, A decreases.
+
+False ratings:
+E -> B: 1 [Manual assessment: N/A]
+
+---
+
+68.txt roommates
+
+Line 198
+D likes everyone, everyone likes D except perhaps, A rates D:4, B:3, C:2, E:4, F:3, so C and F rate D lower.
+
+False ratings:
+A -> B: 3 [Manual assessment: N/A]
+A -> C: 2 [Manual assessment: N/A]
+A -> E: 4 [Manual assessment: N/A]
+A -> F: 3 [Manual assessment: N/A]
+
+---
+
+682.txt roommates
+
+Line 66
+Many rate D high: A rates D:2, B:2, C:3, E:2, F:4. F rates D:4, which is high.
+
+False ratings:
+A -> B: 2 [Manual assessment: N/A]
+A -> C: 3 [Manual assessment: N/A]
+A -> E: 2 [Manual assessment: N/A]
+A -> F: 4 [Manual assessment: N/A]
+
+Line 92
+A rates F:1, B:1, C:1, E:3, D:4.
+
+False ratings:
+A -> B: 1 [Manual assessment: N/A]
+A -> C: 1 [Manual assessment: N/A]
+A -> D: 4 [Manual assessment: N/A]
+
+---
+
+696.txt roommates
+
+Line 316
+C rates B=1 (C rates B=4? Wait, C's ratings: from matrix, C rates B=4? Wait no.
+
+False ratings:
+C -> B: 1 [Manual assessment: N/A]
+
+---
+
+704.txt roommates
+
+Line 412
+Who rates F high: A rates F=2, B=3, C=2, D=5, E=4, F itself X.
+
+False ratings:
+A -> C: 2 [Manual assessment: N/A]
+A -> D: 5 [Manual assessment: N/A]
+A -> E: 4 [Manual assessment: N/A]
+
+---
+
+707.txt roommates
+
+Line 92
+D rates F:5, F rates D:5, mutual high.
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+---
+
+715.txt roommates
+
+Line 578
+E original: with A,F: rates A:3, F:4, sum7
+
+False ratings:
+F -> A: 3 [Manual assessment: N/A]
+
+---
+
+718.txt roommates
+
+Line 268
+C rates D:3, F:5
+
+False ratings:
+C -> F: 5 [Manual assessment: N/A]
+
+---
+
+72.txt roommates
+
+Line 744
+D original:5, new with B and E, D rates B=3, E=5, sum=8>5
+
+False ratings:
+D -> B: 3 [Manual assessment: N/A]
+
+---
+
+721.txt roommates
+
+Line 192
+D rates F 5, F rates D 5 — mutual high.
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+---
+
+724.txt roommates
+
+Line 538
+Then C goes to room with E and F, sum3 or4? With E and F: rates E:1,F:2,sum3.
+
+False ratings:
+F -> E: 1 [Manual assessment: N/A]
+
+---
+
+746.txt roommates
+
+Line 286
+D's old sum=6 (C and E: rates C=2, E=4, sum=6), delta_D=10-6=4>0
+
+False ratings:
+E -> C: 2 [Manual assessment: N/A]
+
+---
+
+77.txt roommates
+
+Line 74
+D is liked by: A:3, B:5, C:5, E:2? Wait E rates D:2, F:4.
+
+False ratings:
+E -> F: 4 [Manual assessment: N/A]
+
+---
+
+777.txt roommates
+
+Line 180
+Earlier I said F rates D:1, mistake.
+
+False ratings:
+F -> D: 1 [Manual assessment: N/A]
+
+---
+
+783.txt roommates
+
+Line 1024
+In that case, A and E swap: A from {B,C} sum5 to {D,F} sum with D and F: A rates D=3, F=2=5, same, E from {D,F} sum E rates D=5, F=5=10? In D,E,F, E roommates D and F, E rates D=3, F=5, sum8, not 10.
+
+False ratings:
+E -> D: 5 [Manual assessment: N/A]
+
+---
+
+796.txt roommates
+
+Line 324
+A is rated by others: B rates A=1, C=2, D=2, E=1, F=2. So everyone rates A low, except perhaps themselves, but X is not rated.
+
+False ratings:
+B -> C: 2 [Manual assessment: N/A]
+B -> D: 2 [Manual assessment: N/A]
+B -> E: 1 [Manual assessment: N/A]
+
+---
+
+80.txt roommates
+
+Line 110
+C rates A 4, E 4, F 4, but dislikes D and B a bit.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+---
+
+812.txt roommates
+
+Line 80
+D is liked variably: A rates D=2, B=4, C=2, E=1, F=1, so D is not liked by many.
+
+False ratings:
+A -> B: 4 [Manual assessment: N/A]
+A -> F: 1 [Manual assessment: N/A]
+
+---
+
+814.txt roommates
+
+Line 142
+Who else? A rates D4, E rates D4, but D rates A2, E4.
+
+False ratings:
+D -> E: 4 [Manual assessment: N/A]
+
+---
+
+821.txt roommates
+
+Line 410
+Notice that D is liked by many: A rates D=2, B=2, C=5, E=4, F=4, so C,E,F like D a lot.
+
+False ratings:
+A -> B: 2 [Manual assessment: N/A]
+A -> F: 4 [Manual assessment: N/A]
+
+---
+
+829.txt roommates
+
+Line 76
+A rates E:5, F:5
+
+False ratings:
+A -> E: 5 [Manual assessment: N/A]
+A -> F: 5 [Manual assessment: N/A]
+
+---
+
+83.txt roommates
+
+Line 98
+F is liked by many: A rates F:5, C:5, D:5, B:4, E:1.
+
+False ratings:
+A -> B: 4 [Manual assessment: N/A]
+A -> D: 5 [Manual assessment: N/A]
+A -> E: 1 [Manual assessment: N/A]
+
+---
+
+830.txt roommates
+
+Line 146
+- A->C:5, A->F:5
+
+False ratings:
+A -> C: 5 [Manual assessment: N/A]
+A -> F: 5 [Manual assessment: N/A]
+
+---
+
+831.txt roommates
+
+Line 164
+Dave rates B 4, B rates D 4, symmetric.
+
+False ratings:
+D -> B: 4 [Manual assessment: N/A]
+
+---
+
+833.txt roommates
+
+Line 438
+A with D and B: A rates D=5, B=4, sum=9? Wait, sum of ratings for two roommates, yes.
+
+False ratings:
+A -> D: 5 [Manual assessment: N/A]
+
+---
+
+843.txt roommates
+
+Line 148
+Fred likes B=3, C=3, D=2, others low.
+
+False ratings:
+F -> C: 3 [Manual assessment: N/A]
+
+---
+
+849.txt roommates
+
+Line 74
+Charlie likes A:5, F:4, C: X, B:2, D:1, E:1. So Charlie only really likes A and F.
+
+False ratings:
+C -> F: 4 [Manual assessment: N/A]
+
+Line 506
+B has C and E: rates C:2, E:4, sum 6.
+
+False ratings:
+E -> C: 2 [Manual assessment: N/A]
+
+Line 508
+C has B and E: rates B:2, E:1, sum 3.
+
+False ratings:
+E -> B: 2 [Manual assessment: N/A]
+
+Line 510
+E has B and C: rates B:4, C:5, sum 9.
+
+False ratings:
+C -> B: 4 [Manual assessment: N/A]
+
+Line 562
+A has B and E: rates B:5, E:3, sum 8.
+
+False ratings:
+E -> B: 5 [Manual assessment: N/A]
+
+Line 564
+B has A and E: rates A:5, E:4, sum 9.
+
+False ratings:
+E -> A: 5 [Manual assessment: N/A]
+
+Line 566
+E has A and B: rates A:1, B:4, sum 5.
+
+False ratings:
+B -> A: 1 [Manual assessment: N/A]
+
+Line 996
+C has E and F: rates E:1, F:3, sum 4.
+
+False ratings:
+F -> E: 1 [Manual assessment: N/A]
+
+Line 998
+E has C and F: rates C:5, F:2, sum 7.
+
+False ratings:
+F -> C: 5 [Manual assessment: N/A]
+
+Line 1000
+F has C and E: rates C:4, E:4, sum 8.
+
+False ratings:
+E -> C: 4 [Manual assessment: N/A]
+
+---
+
+851.txt roommates
+
+Line 88
+For example, D rates A:5, E:4, C:5? D rates C:5, A:2? No:
+
+False ratings:
+D -> A: 5 [Manual assessment: N/A]
+
+---
+
+854.txt roommates
+
+Line 1100
+New D: roommates A and B, D rates A:3, B:1, sum=4. Original 6, decrease.
+
+False ratings:
+D -> B: 1 [Manual assessment: N/A]
+
+---
+
+855.txt roommates
+
+Line 328
+F new sat: rates C:4, D:5? F rates D:1? F's ratings: D is 1, yes F rates D:1.
+
+False ratings:
+F -> D: 1 [Manual assessment: N/A]
+
+---
+
+856.txt roommates
+
+Line 66
+F rates B 5, B rates F 5—oh, mutual 5 between B and F.
+
+False ratings:
+F -> B: 5 [Manual assessment: N/A]
+
+---
+
+86.txt roommates
+
+Line 134
+D rates C:5, E:5, B:4, F:4, A:3.
+
+False ratings:
+D -> F: 4 [Manual assessment: N/A]
+
+---
+
+863.txt roommates
+
+Line 274
+A rates E:2, B:2, C:2, D:4, F:3 for E's ratings of others? No, ratings of E.
+
+False ratings:
+A -> B: 2 [Manual assessment: N/A]
+A -> C: 2 [Manual assessment: N/A]
+A -> D: 4 [Manual assessment: N/A]
+A -> F: 3 [Manual assessment: N/A]
+
+---
+
+873.txt roommates
+
+Line 336
+A: roommates E and C: rates E=5, C=5, sum=10
+
+False ratings:
+C -> E: 5 [Manual assessment: N/A]
+
+Line 344
+B: roommates D and F: rates D=4, F=4, sum=8
+
+False ratings:
+F -> D: 4 [Manual assessment: N/A]
+
+Line 346
+D: roommates B and F: rates B=3, F=3, sum=6
+
+False ratings:
+F -> B: 3 [Manual assessment: N/A]
+
+Line 348
+F: roommates B and D: rates B=2, D=3, sum=5
+
+False ratings:
+D -> B: 2 [Manual assessment: N/A]
+
+---
+
+876.txt roommates
+
+Line 116
+For example, Fred (F) is liked by many: A rates F:4, B:1, C:5, D:2, E:3, so C likes F a lot (5), A likes 4, E:3, D:2, B:1.
+
+False ratings:
+A -> B: 1 [Manual assessment: N/A]
+A -> C: 5 [Manual assessment: N/A]
+A -> D: 2 [Manual assessment: N/A]
+A -> E: 3 [Manual assessment: N/A]
+
+---
+
+883.txt roommates
+
+Line 288
+F rates C:5, D:2, sum=7? F rates C:5, D:2, yes sum=7
+
+False ratings:
+F -> D: 2 [Manual assessment: N/A]
+
+---
+
+892.txt roommates
+
+Line 364
+Swap: C to room2 with B and F. C rates B:5, F:2, sum=7. Original C:4, delta_C=3>0.
+
+False ratings:
+C -> B: 5 [Manual assessment: N/A]
+
+---
+
+903.txt roommates
+
+Line 160
+Alan is liked by: B rates A=5, C=5, D=1, E=4, F=4. So many like Alan.
+
+False ratings:
+B -> E: 4 [Manual assessment: N/A]
+B -> F: 4 [Manual assessment: N/A]
+
+---
+
+905.txt roommates
+
+Line 426
+F and C dislike each other: F rates C:1, C rates F:1.
+
+False ratings:
+C -> F: 1 [Manual assessment: N/A]
+
+---
+
+915.txt roommates
+
+Line 1116
+In that case, A from {A,C,E} sat=4, F from {B,D,F} sat=2, after swap, A with D and F? No, when swap A and F, new rooms: {F,C,E} and {A,B,D}, A sat with B and D: A rates B=1, D=5, sum=6>4, F with C and E: F rates C=1, E=5, sum=6>2? In first attempt, F rates C=3, not 1.
+
+False ratings:
+F -> C: 1 [Manual assessment: N/A]
+
+---
+
+916.txt roommates
+
+Line 966
+D new S_D = rates B and C: B1 + C3=4 < old7.
+
+False ratings:
+C -> B: 1 [Manual assessment: N/A]
+
+Line 968
+F new S_F = rates A and E: A4 + E2=6 < old7.
+
+False ratings:
+E -> A: 4 [Manual assessment: N/A]
+
+---
+
+92.txt roommates
+
+Line 1328
+F with B,E: F rates B:3, E:3, sum6<8.
+
+False ratings:
+F -> E: 3 [Manual assessment: N/A]
+
+---
+
+931.txt roommates
+
+Line 328
+F is rated high by A:1? A rates F:1, B:5, C:2, D:1, E:4, F:4 (F rates himself X, but others: A:4, B:2, C:4, D:1, E:1)
+
+False ratings:
+A -> C: 2 [Manual assessment: N/A]
+A -> D: 1 [Manual assessment: N/A]
+A -> E: 4 [Manual assessment: N/A]
+A -> F: 4 [Manual assessment: N/A]
+
+---
+
+932.txt roommates
+
+Line 600
+Now, pairs: earlier A and F can swap: A new with D E: rates D:2, E:4, sum=6>4, F new with B C: rates B:2, C:3, sum=5=same.
+
+False ratings:
+C -> B: 2 [Manual assessment: N/A]
+E -> D: 2 [Manual assessment: N/A]
+
+Line 616
+And A and D can swap: A new with C F: rates C:3, F:3, sum=6>5, D new with B E: rates B:2, E:5, sum=7=same.
+
+False ratings:
+E -> B: 2 [Manual assessment: N/A]
+
+---
+
+936.txt roommates
+
+Line 140
+D likes F:5, F likes D:5.
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+---
+
+957.txt roommates
+
+Line 138
+D likes E4, F3, A4, but A is already in, D rates B1, C2 low.
+
+False ratings:
+D -> F: 3 [Manual assessment: N/A]
+
+---
+
+960.txt roommates
+
+Line 120
+A's satisfaction: sum of ratings for B and C: rates B 3, C 1, sum 4.
+
+False ratings:
+C -> B: 3 [Manual assessment: N/A]
+
+---
+
+963.txt roommates
+
+Line 110
+B is liked by many: A:5, B: himself, C:2, D:5? D rates B:4, E:5, F:5.
+
+False ratings:
+D -> E: 5 [Manual assessment: N/A]
+
+---
+
+979.txt roommates
+
+Line 82
+Fred is liked by many: A rates F:5, B rates F:5, C rates F:4, D rates F:5, E rates F:4.
+
+False ratings:
+D -> F: 5 [Manual assessment: N/A]
+
+---
+
+98.txt roommates
+
+Line 350
+After A and D swap: new Room1: D,C,E: D with C and E, D rates C3, E3, sum6 (same as before), C with D and E, C rates D3, E5, sum8 (original was A and E: A2+E5=7, so C increases from 7 to 8), wait no!
+
+False ratings:
+E -> A: 2 [Manual assessment: N/A]
+
+---
+
+983.txt roommates
+
+Line 174
+For E: originally with B,F: rates B1 + F2=3
+
+False ratings:
+F -> B: 1 [Manual assessment: N/A]
+
+Line 200
+For F: originally with B,E: rates B3 + E3=6
+
+False ratings:
+E -> B: 3 [Manual assessment: N/A]
+
+Line 452
+B satisfaction: orig with E,F: rates E1 + F5=6
+
+False ratings:
+F -> E: 1 [Manual assessment: N/A]
+
+---
+
+985.txt roommates
+
+Line 204
+And others rate C low: A rates C:2, B:3, D:2, E:1, F:2 — wait, B rates C:3, which is medium, others low.
+
+False ratings:
+A -> B: 3 [Manual assessment: N/A]
+A -> D: 2 [Manual assessment: N/A]
+A -> E: 1 [Manual assessment: N/A]
+A -> F: 2 [Manual assessment: N/A]
+
+---
+
+987.txt roommates
+
+Line 76
+And others rate E: A rates E:1, B:1, C:5, D:2, F:4.
+
+False ratings:
+A -> B: 1 [Manual assessment: N/A]
+A -> C: 5 [Manual assessment: N/A]
+A -> D: 2 [Manual assessment: N/A]
+A -> F: 4 [Manual assessment: N/A]
+
+---
+
+991.txt roommates
+
+Line 112
+B rates F:5, D:5, E:5 rates F:5.
+
+False ratings:
+B -> D: 5 [Manual assessment: N/A]
+
+---
+
+996.txt roommates
+
+Line 108
+F is rated low by some: A rates F=3, B=3, C=3, D=3, E=4, F himself.
+
+False ratings:
+A -> C: 3 [Manual assessment: N/A]
+A -> D: 3 [Manual assessment: N/A]
+A -> E: 4 [Manual assessment: N/A]
+
+---
+
