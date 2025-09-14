@@ -78,7 +78,7 @@ class FireworksAIModelConversation(Conversation):
 
 class OpenAIModel(LanguageModel):
   
-  def __init__(self, model_name, base_url=None, api_key=None, timeout=600,
+  def __init__(self, model_name, base_url=None, api_key=None, timeout=900,
                reasoning_effort=None):
     self.client = OpenAI(base_url=base_url, api_key=api_key,
                          timeout=httpx.Timeout(timeout))
@@ -116,7 +116,8 @@ class OpenAIModelConversation(Conversation):
       message = response.choices[0].message
       output_blocks = []
       
-      if hasattr(message, 'reasoning_content'):
+      if hasattr(message, 'reasoning_content')\
+      and isinstance(message.reasoning_content, str):
         output_blocks.append(['<think>', message.reasoning_content, '</think>'])
       
       output_blocks.append([message.content])

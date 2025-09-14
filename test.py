@@ -66,6 +66,22 @@ def get_model_from_arg(model_arg):
     return models.OpenAIModel('o3-mini-2025-01-31', reasoning_effort='medium')
   elif model_arg == 'o3-mini-high': # temperature must not be specified
     return models.OpenAIModel('o3-mini-2025-01-31', reasoning_effort='high')
+  elif model_arg == 'gpt-oss-120b-low':
+    return models.OpenAIModel('openai/gpt-oss-120b', reasoning_effort='low',
+                              base_url='https://api.deepinfra.com/v1/openai',
+                              api_key=deepinfra_api_key)
+  elif model_arg == 'gpt-oss-120b-medium':
+    return models.OpenAIModel('openai/gpt-oss-120b', reasoning_effort='medium',
+                              base_url='https://api.deepinfra.com/v1/openai',
+                              api_key=deepinfra_api_key)
+  elif model_arg == 'gpt-oss-120b-high':
+    return models.OpenAIModel('openai/gpt-oss-120b', reasoning_effort='high',
+                              base_url='https://api.deepinfra.com/v1/openai',
+                              api_key=deepinfra_api_key)
+  elif model_arg == 'deepseek-v3-0324':
+    return models.OpenAIModel('deepseek-ai/DeepSeek-V3-0324',
+                              base_url='https://api.deepinfra.com/v1/openai',
+                              api_key=deepinfra_api_key)
   elif model_arg == 'deepseek-r1-fireworks':
     return models.FireworksAIModel(
       'accounts/fireworks/models/deepseek-r1', max_tokens=32768)
