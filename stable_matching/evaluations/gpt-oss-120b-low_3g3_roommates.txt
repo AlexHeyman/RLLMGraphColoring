@@ -160,7 +160,7 @@
 241.txt roommates 1 impossible incorrect
 242.txt roommates 4 impossible incorrect
 243.txt roommates 0 impossible correct
-244.txt roommates 1 impossible incorrect
+244.txt roommates 1 ACD-BFG-EHI incorrect
 245.txt roommates 0 impossible correct
 246.txt roommates 0 impossible correct
 247.txt roommates 0 impossible correct
@@ -180,7 +180,7 @@
 26.txt roommates 1 impossible incorrect
 260.txt roommates 1 impossible incorrect
 261.txt roommates 2 impossible incorrect
-262.txt roommates 1 impossible incorrect
+262.txt roommates 1 ADG-BHI-CEF incorrect
 263.txt roommates 1 impossible incorrect
 264.txt roommates 0 impossible correct
 265.txt roommates 3 impossible incorrect
@@ -191,12 +191,12 @@
 27.txt roommates 0 impossible correct
 270.txt roommates 1 impossible incorrect
 271.txt roommates 0 impossible correct
-272.txt roommates 0 impossible correct
+272.txt roommates 0 AFG-BDH-CEI incorrect
 273.txt roommates 1 impossible incorrect
 274.txt roommates 0 impossible correct
 275.txt roommates 5 impossible incorrect
 276.txt roommates 3 impossible incorrect
-277.txt roommates 0 impossible correct
+277.txt roommates 0 ADI-BFH-CEG incorrect
 278.txt roommates 1 impossible incorrect
 279.txt roommates 1 impossible incorrect
 28.txt roommates 1 impossible incorrect
@@ -204,7 +204,7 @@
 281.txt roommates 0 impossible correct
 282.txt roommates 0 impossible correct
 283.txt roommates 0 impossible correct
-284.txt roommates 0 impossible correct
+284.txt roommates 0 ABE-CDG-FHI incorrect
 285.txt roommates 0 impossible correct
 286.txt roommates 1 impossible incorrect
 287.txt roommates 1 impossible incorrect
@@ -282,7 +282,7 @@
 351.txt roommates 2 impossible incorrect
 352.txt roommates 1 impossible incorrect
 353.txt roommates 1 impossible incorrect
-354.txt roommates 3 impossible incorrect
+354.txt roommates 3 ACG-BEI-DFH incorrect
 355.txt roommates 0 impossible correct
 356.txt roommates 2 impossible incorrect
 357.txt roommates 1 impossible incorrect
@@ -315,7 +315,7 @@
 381.txt roommates 0 impossible correct
 382.txt roommates 0 impossible correct
 383.txt roommates 2 impossible incorrect
-384.txt roommates 1 impossible incorrect
+384.txt roommates 1 AEI-BDH-CFG incorrect
 385.txt roommates 0 impossible correct
 386.txt roommates 0 impossible correct
 387.txt roommates 4 impossible incorrect
@@ -332,7 +332,7 @@
 397.txt roommates 2 impossible incorrect
 398.txt roommates 1 impossible incorrect
 399.txt roommates 0 impossible correct
-4.txt roommates 0 impossible correct
+4.txt roommates 0 ABI-CEG-DFH incorrect
 40.txt roommates 2 impossible incorrect
 400.txt roommates 0 impossible correct
 401.txt roommates 0 impossible correct
@@ -383,13 +383,13 @@
 442.txt roommates 1 impossible incorrect
 443.txt roommates 0 impossible correct
 444.txt roommates 4 impossible incorrect
-445.txt roommates 0 impossible correct
+445.txt roommates 0 AFG-BHI-CDE incorrect
 446.txt roommates 2 impossible incorrect
 447.txt roommates 3 impossible incorrect
 448.txt roommates 0 impossible correct
 449.txt roommates 0 impossible correct
 45.txt roommates 2 impossible incorrect
-450.txt roommates 1 impossible incorrect
+450.txt roommates 1 AHI-BDE-CFG incorrect
 451.txt roommates 2 impossible incorrect
 452.txt roommates 1 impossible incorrect
 453.txt roommates 0 impossible correct
@@ -453,14 +453,14 @@
 505.txt roommates 2 impossible incorrect
 506.txt roommates 2 impossible incorrect
 507.txt roommates 2 impossible incorrect
-508.txt roommates 0 impossible correct
+508.txt roommates 0 AEF-BGH-CDI incorrect
 509.txt roommates 1 impossible incorrect
 51.txt roommates 0 impossible correct
 510.txt roommates 0 impossible correct
 511.txt roommates 0 impossible correct
 512.txt roommates 1 impossible incorrect
 513.txt roommates 2 impossible incorrect
-514.txt roommates 0 impossible correct
+514.txt roommates 0 AHI-BDG-CEF incorrect
 515.txt roommates 2 impossible incorrect
 516.txt roommates 1 impossible incorrect
 517.txt roommates 3 impossible incorrect
@@ -477,7 +477,7 @@
 527.txt roommates 1 impossible incorrect
 528.txt roommates 1 impossible incorrect
 529.txt roommates 0 impossible correct
-53.txt roommates 5 impossible incorrect
+53.txt roommates 5 ABC-DEF-GHI correct
 530.txt roommates 0 impossible correct
 531.txt roommates 1 impossible incorrect
 532.txt roommates 3 impossible incorrect
@@ -494,7 +494,7 @@
 542.txt roommates 0 impossible correct
 543.txt roommates 4 impossible incorrect
 544.txt roommates 0 impossible correct
-545.txt roommates 0 impossible correct
+545.txt roommates 0 AEH-BDG-CFI incorrect
 546.txt roommates 0 impossible correct
 547.txt roommates 0 impossible correct
 548.txt roommates 0 impossible correct
@@ -683,7 +683,7 @@
 712.txt roommates 0 impossible correct
 713.txt roommates 1 impossible incorrect
 714.txt roommates 2 impossible incorrect
-715.txt roommates 4 impossible incorrect
+715.txt roommates 4 ABH-CGI-DEF incorrect
 716.txt roommates 1 impossible incorrect
 717.txt roommates 1 impossible incorrect
 718.txt roommates 1 impossible incorrect
@@ -773,7 +773,7 @@
 794.txt roommates 1 impossible incorrect
 795.txt roommates 0 impossible correct
 796.txt roommates 0 impossible correct
-797.txt roommates 2 impossible incorrect
+797.txt roommates 2 ABI-CEF-DGH incorrect
 798.txt roommates 4 impossible incorrect
 799.txt roommates 2 impossible incorrect
 8.txt roommates 1 impossible incorrect
@@ -781,7 +781,7 @@
 800.txt roommates 2 impossible incorrect
 801.txt roommates 3 impossible incorrect
 802.txt roommates 1 impossible incorrect
-803.txt roommates 0 impossible correct
+803.txt roommates 0 AHI-BDG-CEF incorrect
 804.txt roommates 2 impossible incorrect
 805.txt roommates 0 impossible correct
 806.txt roommates 0 impossible correct
@@ -832,7 +832,7 @@
 847.txt roommates 0 impossible correct
 848.txt roommates 1 impossible incorrect
 849.txt roommates 1 impossible incorrect
-85.txt roommates 1 impossible incorrect
+85.txt roommates 1 ABC-DEF-GHI incorrect
 850.txt roommates 4 impossible incorrect
 851.txt roommates 2 impossible incorrect
 852.txt roommates 1 impossible incorrect
@@ -906,7 +906,7 @@
 913.txt roommates 0 impossible correct
 914.txt roommates 0 impossible correct
 915.txt roommates 1 impossible incorrect
-916.txt roommates 0 impossible correct
+916.txt roommates 0 ADE-BGH-CFI incorrect
 917.txt roommates 1 impossible incorrect
 918.txt roommates 1 impossible incorrect
 919.txt roommates 4 impossible incorrect
@@ -923,8 +923,8 @@
 929.txt roommates 1 impossible incorrect
 93.txt roommates 4 impossible incorrect
 930.txt roommates 0 impossible correct
-931.txt roommates 0 impossible correct
-932.txt roommates 1 impossible incorrect
+931.txt roommates 0 ADI-BFH-CEG incorrect
+932.txt roommates 1 ABC-DEF-GHI incorrect
 933.txt roommates 0 impossible correct
 934.txt roommates 0 impossible correct
 935.txt roommates 1 impossible incorrect

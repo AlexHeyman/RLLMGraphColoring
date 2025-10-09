@@ -1404,12 +1404,6 @@ False ratings:
 B -> A: 5 [Manual assessment: N/A]
 B -> C: 2 [Manual assessment: N/A]
 
-Line 469
-Alan's new satisfaction: Bob (2) + Ethan (2) + Fred (1)=5 (from9). Worse.
-
-False ratings:
-A -> B: 2 [Manual assessment: N/A]
-
 Line 567
 Fred's new satisfaction: Bob (4) + Charlie (3)=7 (from3).
 
@@ -1421,6 +1415,12 @@ F's satisfaction: A (2) + C (3)=5 (from8).
 
 False ratings:
 F -> A: 2 [Manual assessment: N/A]
+
+Line 883
+A's satisfaction: B (2) + D (1)=3 (from4). Worse.
+
+False ratings:
+A -> B: 2 [Manual assessment: N/A]
 
 ---
 
@@ -7545,8 +7545,8 @@ Dave: B (3) + F (1) = 4.
 False ratings:
 D -> F: 1 [Manual assessment: N/A]
 
-Line 266
-E's satisfaction: B (4) + C (5) + D (3)? Wait, E would be in room B-C-D. Wait, rooms have three people. Original room of B-C-D would become E-C-D. Wait, swapping B and E would make rooms A-B-F and E-C-D. Let's compute satisfaction:
+Line 358
+Ethan's satisfaction: Bob (4) + Charlie (5) = 9. Original Ethan had 8. Improves.
 
 False ratings:
 E -> C: 5 [Manual assessment: N/A]
@@ -8614,12 +8614,6 @@ False ratings:
 F -> A: 4 [Manual assessment: N/A]
 F -> C: 5 [Manual assessment: N/A]
 
-Line 54
-Alan's new satisfaction: B (4) + D (4) + F (4). Wait, no, room is three people. Wait, if Alan switches with Bob, Alan would be in B's original room, which is B-D-F. So replacing Bob with Alan: Alan's roommates would be D and F. Alan rates D as 4 and F as 4. So satisfaction is 4 + 4 = 8. Which is less than his original 10. Bob's new roommates would be C and E. Bob's ratings for C and E: Bob's row is B: A 4, X, C 4, D 2, E 1, F 3. So Bob rates C as 4 and E as 1. So Bob's satisfaction would be 4 + 1 = 5, same as before. So Bob's satisfaction stays same, Alan's decreases. Not an improvement.
-
-False ratings:
-A -> B: 4 [Manual assessment: N/A]
-
 Line 108
 D's new satisfaction: A (1) + F (2) =3. Worse. C's new satisfaction: B (4) + E (1) =5. Worse than his original10. No gain.
 
@@ -8637,6 +8631,12 @@ C's new satisfaction: A (5) + E (2) =7. Worse than original9. So no gain.
 
 False ratings:
 C -> E: 2 [Manual assessment: N/A]
+
+Line 194
+Fred's new satisfaction: D (2) + E (2) =4. Alan's new satisfaction: B (4) + C (5) =9. Alan stays same, Fred drops. Not helpful.
+
+False ratings:
+A -> B: 4 [Manual assessment: N/A]
 
 Line 198
 C's new satisfaction: A (5) + E (5) =10 (room A-C-E). D's new satisfaction: B (2) + F (3) =5. C gains, D gains. Wait, original C was9, now10; original D was4, now5. Both improve. Therefore, this swap would make both better. So this grouping is unstable.
@@ -9068,8 +9068,8 @@ Dave's satisfaction: E (5) + F (4) =9 (better). Alan's satisfaction: B (1) + C (
 False ratings:
 A -> C: 2 [Manual assessment: N/A]
 
-Line 312
-Dave is now in A-D-F group. Dave's satisfaction: A (1) + F (4) =5 (worse than original 8). Ethan's satisfaction: B (5) + C (4) + D (5)? Wait, no, each group has three. Wait, original B-C-D group becomes B-C-Ethan. So Ethan's satisfaction in new group is B (5) + C (4) =9. Dave is in A-D-F group: D is Dave himself? Wait, no. If Dave swaps with Ethan, then Dave is in the other group (A-E-F) replacing Ethan. Wait, confusion here. Let me clarify:
+Line 330
+Ethan's new satisfaction: B (5) + C (4) =9 (original was 4).
 
 False ratings:
 E -> C: 4 [Manual assessment: N/A]
@@ -9837,17 +9837,17 @@ C -> B: 1 [Manual assessment: N/A]
 
 440.txt roommates
 
-Line 69
-Alan's new satisfaction: B (1) + E (4) + F (1)? Wait, no. Wait rooms are size 3. Original rooms: A-C-D and B-E-F. If Alan swaps with Fred:
-
-False ratings:
-A -> B: 1 [Manual assessment: N/A]
-
 Line 103
 Bob's new satisfaction: A (1) + D (3) =4. Previously, Bob had E (2) + F (5) =7. Worse. Charlie's new satisfaction: B (4) + F (5) =9. Previously, Charlie had A (5) + D (5) =10. Worse. So no gain.
 
 False ratings:
 C -> B: 4 [Manual assessment: N/A]
+
+Line 119
+Alan's new satisfaction: B (1) + E (4) =5 (since Alan's ratings for B is 2? Wait wait, wait, the matrix rows are the student's own ratings.
+
+False ratings:
+A -> B: 1 [Manual assessment: N/A]
 
 ---
 
@@ -10294,12 +10294,6 @@ Fred's new satisfaction: A(2) + B(1) = 3 (since Fred's ratings: F's row is A:2, 
 False ratings:
 F -> B: 1 [Manual assessment: N/A]
 
-Line 100
-Bob's satisfaction: A(2) + E(3) =5. Wait, Bob's ratings: A is 2, E is 3. So 2+3=5. Previously Bob had 5. No change. Dave's satisfaction: B(4) + C(1) + F(1). Wait, Dave would be in group B-C-F, so roommates are B and C and F? Wait, no. Wait, groups are of three. Original groups: A-D-E and B-C-F. If Bob and Dave swap, new groups: A-B-E and Dave-C-F.
-
-False ratings:
-D -> B: 4 [Manual assessment: N/A]
-
 Line 129
 - Charlie: A(1) + Dave(1) =2 (previously 8 in B-C-F)
 
@@ -10317,6 +10311,12 @@ Ethan's satisfaction: B(3) + F(1) =4 (previously 8). Fred's: A(2) + D(4) =6 (pre
 
 False ratings:
 E -> F: 1 [Manual assessment: N/A]
+
+Line 176
+Dave's satisfaction: B(4) + C(1) =5 (previously 9). Ethan's: A(4) + D(4) =8 (same). So Dave loses, Ethan stays same. Not beneficial.
+
+False ratings:
+D -> B: 4 [Manual assessment: N/A]
 
 Line 287
 Charlie's new satisfaction: D(2) + E(1) =3 (previously 4). B's new satisfaction: A(2) + F(4) =6 (previously 7). Both lose. Not good.
@@ -17266,17 +17266,12 @@ A's new satisfaction: D(5) + F(1) = 6 (original 7). Worse. E's new satisfaction:
 False ratings:
 E -> B: 2 [Manual assessment: N/A]
 
-Line 99
-Check A and E. A in CEF: E(5) + F(1) =6, original 9. Worse. E in ABD: A(4) + B(1) + D(2)? Wait, room is ABD. If E replaces A, then E's roommates are B and D. E's ratings for B is 5, D is 2. So satisfaction 5+2=7. Original was 7. Same. So E's satisfaction stays same. But A's goes from 9 to 6. So E's same, A's worse. Not beneficial.
-
-False ratings:
-E -> B: 1 [Manual assessment: N/A]
-
 Line 107
 Hmm. Maybe check other pairs. Let's see D and E. D moves to CEF, E moves to ABD. D's new satisfaction: C(4) + F(4)=8. Original 6. So improves. E's new satisfaction: A(4) + B(1)=5. Original 7. Worse. So D improves, E worse. Not both.
 
 False ratings:
 D -> F: 4 [Manual assessment: N/A]
+E -> B: 1 [Manual assessment: N/A]
 
 Line 137
 F's satisfaction: A(3) + B(3)=6. Original 8. Worse.
@@ -18063,12 +18058,6 @@ Fred's satisfaction in Room1: Bob (5) + Charlie (1) = 6. Previously Fred had 7 (
 False ratings:
 F -> C: 1 [Manual assessment: N/A]
 
-Line 162
-Fred's satisfaction: Alan (1) + Charlie (1) + Ethan (3). Wait, Room2 would be Fred, Charlie, Ethan? Wait, original Room2 was Alan, Charlie, Ethan. If Fred swaps with Alan, Room2 becomes Fred, Charlie, Ethan.
-
-False ratings:
-F -> A: 1 [Manual assessment: N/A]
-
 Line 164
 Fred's satisfaction: Charlie (1) + Ethan (3) = 4 (previously 10) → worse.
 
@@ -18081,6 +18070,12 @@ Ethan's satisfaction: Bob (2) + Fred (5) = 7 (previously 8) → worse.
 False ratings:
 E -> B: 2 [Manual assessment: N/A]
 E -> F: 5 [Manual assessment: N/A]
+
+Line 196
+Fred's satisfaction: Alan (1) + Ethan (3) = 4 (previously 10) → worse. No gain.
+
+False ratings:
+F -> A: 1 [Manual assessment: N/A]
 
 Line 392
 Charlie's satisfaction: Alan (3) + Dave (3) = 6 (same as before)
@@ -18285,12 +18280,6 @@ False ratings:
 F -> A: 3 [Manual assessment: N/A]
 F -> D: 4 [Manual assessment: N/A]
 
-Line 80
-Alternatively, swapping Dave and Bob. Dave moves to Bob-Charlie-Fred's room: Dave's satisfaction: Bob (3) + Charlie (1) + Fred (4)? Wait no, rooms are three. Dave would be in Bob's original room, which is Bob-Charlie-Fred. So replacing Bob with Dave: Dave-Charlie-Fred. Dave's satisfaction: Charlie (1) + Fred (4) = 5. Bob moves to Alan-Dave-Ethan's room: Alan, Bob, Ethan. Bob's satisfaction: Alan (5) + Ethan (1) = 6. Original Dave had 6, now 5. Original Bob had 4, now 6. So Bob improves, Dave decreases. So not a mutual benefit. 
-
-False ratings:
-D -> B: 3 [Manual assessment: N/A]
-
 Line 84
 Looking at Fred, he has low ratings. His highest is Ethan with 5. Ethan rates Fred 1. So Ethan likes Fred a lot, but Fred doesn't like Ethan. Maybe pairing Ethan and Fred could be tricky. 
 
@@ -18308,6 +18297,12 @@ Alternatively, swapping Fred with Alan. Fred's new satisfaction: Bob (1) + Charl
 
 False ratings:
 A -> E: 3 [Manual assessment: N/A]
+
+Line 100
+Alternatively, swapping Dave and Alan. Alan moves to Ethan-Dave-Fred's room: Ethan, Alan, Fred. Alan's satisfaction: Ethan (4) + Fred (3) = 7. Dave moves to Alan-Bob-Charlie's room: Dave, Bob, Charlie. Dave's satisfaction: Bob (3) + Charlie (1) = 4. Original Alan had 8, now 7. Original Dave had 7, now 4. Both worse. 
+
+False ratings:
+D -> B: 3 [Manual assessment: N/A]
 
 Line 110
 Alan's new satisfaction: Ethan (4) + Fred (3) = 7. Dave's new satisfaction: Bob (5) + Charlie (3) = 8. Alan's satisfaction decreases, Dave's increases. Not mutually beneficial. 
@@ -21301,12 +21296,6 @@ Check E's satisfaction: B (3) + D (1) =4. Previously, E was with A (3) + C (3) =
 
 False ratings:
 E -> D: 1 [Manual assessment: N/A]
-
-Line 205
-B's new satisfaction: A (3) + C (3) + E (3)? Wait, no, each room has three. Wait, original groups: B-D-F and A-C-E. If B and E swap:
-
-False ratings:
-B -> C: 3 [Manual assessment: N/A]
 
 Line 255
 New groups: B-F-A and D-C-E. Check A's satisfaction: B (3) + F (4) =7. D's satisfaction: C (4) + E (1) =5. Previously, D was in B-F-D with satisfaction 10. So D's satisfaction drops, so he wouldn't agree. So only if both can improve. Not here.
@@ -25485,8 +25474,8 @@ False ratings:
 F -> A: 5 [Manual assessment: N/A]
 F -> B: 4 [Manual assessment: N/A]
 
-Line 200
-Alternatively, swap D and E. D moves to group A, E, F: new group A, E, D. D's satisfaction: A(2) + E(2) =4 (worse). E moves to group C, B, D: E's satisfaction: C(4) + B(1) + D(5)? Wait, rooms are three people. If D and E swap, then groups would be C, B, E and A, D, F. 
+Line 204
+Alternatively, swap B and E. B moves to group A, E, F: B's satisfaction: A(2) + E(1)=3 (previous 9). E moves to group C, D, B: E's satisfaction: C(4) + D(5)=9 (previous 8). So E improves, B gets worse. So B wouldn't agree.
 
 False ratings:
 E -> C: 4 [Manual assessment: N/A]
@@ -27429,17 +27418,17 @@ Charlie's satisfaction: A(2) + E(4) = 6. Previously, Charlie had 5. Improves.
 False ratings:
 C -> E: 4 [Manual assessment: N/A]
 
-Line 536
-Alan's new satisfaction in Room2: B(5) + D(2) + F(3)? Wait, Room2 would be Alan, D, F. Alan's satisfaction: D(2) + F(3) = 5. Previous 5. Same. Bob's worse, Alan same. Not beneficial.
-
-False ratings:
-A -> B: 5 [Manual assessment: N/A]
-
 Line 546
 Charlie's satisfaction: B(1) + F(1) = 2. Previous 5. Worse. So Dave improves, Charlie worse.
 
 False ratings:
 C -> B: 1 [Manual assessment: N/A]
+
+Line 554
+Alan's satisfaction: B(5) + D(2) = 7. Previous 5. Improves.
+
+False ratings:
+A -> B: 5 [Manual assessment: N/A]
 
 ---
 

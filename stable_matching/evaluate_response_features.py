@@ -139,18 +139,20 @@ re2 = re.compile(r"(\[#\d+\] ?(:|a|as|=|-)? ?\d+,? ?)+(and \[#\d+\] ?(:|a|as|=|-
 re3 = re.compile(r"\b([A-Za-z]+)(\d+)")
 re4 = re.compile(r"(\[#\d+\])([A-Za-z]| |')* (to|with|from|roommates|new:) (\[#\d+\])( ?, ?| and )(\[#\d+\]):")
 re5 = re.compile(r"\b(to|with) (\[#\d+\]) and (\[#\d+\]):")
-re6_rating_block = r"(\[#\d+\]( ?->? ?| rates )\[#\d+\]|\b(R|r)(ating)?(\(|\[) ?\[#\d+\] ?(,|(\)|\])(\(|\[)) ?\[#\d+\] ?(\)|\]))"
+re6_rating_block = r"((rating )?\[#\d+\]( ?->? ?| rates )\[#\d+\]|\b(R|r)(ating)?(\(|\[) ?\[#\d+\] ?(,|(\)|\])(\(|\[)) ?\[#\d+\] ?(\)|\]))"
 re6 = re.compile(re6_rating_block + r" ?\+ ?" + re6_rating_block + r" ?= ?\d+ ?\+ ?\d+")
 re6_left_side = re.compile(re6_rating_block + r" ?\+ ?" + re6_rating_block)
 re6_multiple = re.compile(r"(" + re6_rating_block + r" ?\+ ?){2,}" + re6_rating_block)
 re7 = re.compile(r"\[#\d+\] ?-> ?\[#\d+\] \d+|" + re6_rating_block + r" ?(:|=) ?\d+")
-re8 = re.compile(r"\[#\d+\]('s )?((new )?satisfaction)?( ?in [A-Za-z]+ ?\d*)?: ?\[#\d+\] ?(: ?\d+|\(\d+\)) ?\+ ?\[#\d+\] ?(: ?\d+|\(\d+\))")
+re8_rating_block = r"\[#\d+\] ?(: ?\d+|\(\d+\))"
+re8 = re.compile(r"\[#\d+\]('s )?((new )?satisfaction)?( ?in [A-Za-z]+ ?\d*)?: ?" + re8_rating_block + r" ?\+ ?" + re8_rating_block)
+re8_multiple = re.compile(r"(" + re8_rating_block + r" ?\+ ?){2,}" + re8_rating_block)
 re9 = re.compile(r"\[#\d+\]('s)?( rating)? for \[#\d+\] ?(\+|and) ?\[#\d+\] ?(=|:) ?\d+ ?\+ ?\d+")
 re10 = re.compile(r" ?(-|\+) ?\d+")
-re11 = re.compile(r"pair|edge|comb(o|ination)|high(est)? mutual|mutual (rating|score|total|sum|contribution|high)|\bMR\b|\bw( value|_\{)|weight|satisfaction sum", re.IGNORECASE)
-re12 = re.compile(r"sum|others|etc|\[#\d+\] ?(,|-)? ?(\[#\d+\]|X|\?)")
+re11 = re.compile(r"pair|edge|comb(o|ination)|high(est)? mutual|mutual (rating|score|total|sum|contribution|high)|\bMR\b|\b(w|s)( value|_\{|\(([A-Z]|\[#\d+\]),)|weight|satisfaction sum", re.IGNORECASE)
+re12 = re.compile(r"sum|others|etc|R\d+-R\d+|(For |- ?)[A-Z]=\[#\d+\]|\[#\d+\] ?(,|-)? ?(\[#\d+\]|X|\?)")
 re13 = re.compile(r"(T|t)riple|\[#\d+\], ?\[#\d+\], ?(\[#\d+\]|X|\?)|\[#\d+\] ?- ?\[#\d+\] ?- ?(\[#\d+\]|X|\?)|\[#\d+\] \[#\d+\] (\[#\d+\]|X|\?)")
-re14 = re.compile(r"\b([A-Z])([A-Z])\b")
+re14 = re.compile(r"(\b|_)([A-Z])([A-Z])\b")
 re15 = re.compile(r"\[#\d+\] ?- ?\[#\d+\]")
 
 def _add_statement(statements, e1, e2, value, line_index):
@@ -181,14 +183,16 @@ def frs_roommates(n, k, lines):
     
     line = re3.sub(lambda match: match.group(1) + ':' + match.group(2)\
                    if match.group(1) in names_replace else match.group(), line)
-    line = re14.sub(lambda match: names_replace[match.group(1)]\
+    line = re14.sub(lambda match: match.group(1)\
                     + names_replace[match.group(2)]\
-                    if match.group(1) in names_replace and match.group(2)\
+                    + names_replace[match.group(3)]\
+                    if match.group(2) in names_replace and match.group(3)\
                     in names_replace else match.group(), line)
     line = replace_each_whole_word(line, names_replace)
     line = re4.sub(lambda match: match.group(1), line)
     line = re5.sub('', line)
     line = re6_multiple.sub('', line)
+    line = re8_multiple.sub('', line)
     
     if re11.search(line) is None and re13.search(line) is None:
       if pair_discussion_state >= 0:
@@ -259,11 +263,16 @@ def frs_roommates(n, k, lines):
           continue
         
         e1 = int(digits_re.search(line, e1_start, e1_end).group())
-        e2_list = [int(m.group())\
-                   for m in digits_re.finditer(line[e2m_start:e2m_end])]
+        e2v_list = [int(m.group())\
+                    for m in digits_re.finditer(line[e2m_start:e2m_end])]
+        e2_set = set()
         
-        for a in range(0, len(e2_list), 2):
-          _add_statement(statements, e1, e2_list[a], e2_list[a + 1], i)
+        for a in range(0, len(e2v_list), 2):
+          e2 = e2v_list[a]
+          v = e2v_list[a + 1]
+          if e2 not in e2_set:
+            e2_set.add(e2)
+            _add_statement(statements, e1, e2, v, i)
     
     re7_locs = [m.span() for m in re7.finditer(line)]
     
@@ -271,7 +280,7 @@ def frs_roommates(n, k, lines):
       start, end = re7_locs[j]
       if line[end:].startswith('?')\
       or re10.match(line, end) is not None\
-      or ends_with_any(line[:start], [']-', 'pair ', 'with ']):
+      or ends_with_any(line[:start], [']', ']-', 'pair ', 'with ', '+', '+ ']):
         continue
       numbers = [int(m.group()) for m in digits_re.finditer(line[start:end])]
       _add_statement(statements, numbers[0], numbers[1], numbers[2], i)

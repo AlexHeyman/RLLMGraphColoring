@@ -126,7 +126,7 @@
 210.txt roommates 24 False [empty] [empty] True
 211.txt roommates 24 False [empty] [empty] True
 212.txt roommates 24 False [empty] [empty] True
-213.txt roommates 305 False BF4|EA1|EC4|CF1|DC1|BC2|FC1|DB5|EB5|CB2|CA4|AB5|DF5|AD2|BE1|DE3|BD2|CE1|BA5|FD4|CD4|DA1|AE5|AF4 EF3 False
+213.txt roommates 305 False BD2|EA1|EC4|DC1|BC2|FC1|CB2|CD4|AB5|CA4|DA1|AD2|BA5 [empty] True
 214.txt roommates 24 False [empty] [empty] True
 215.txt roommates 24 False [empty] [empty] True
 216.txt roommates 24 False [empty] [empty] True

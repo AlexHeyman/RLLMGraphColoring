@@ -131,16 +131,6 @@ D -> E: 5 [Manual assessment: N/A]
 
 ---
 
-213.txt roommates
-
-Line 14
-Check E and D swap: E to room2 with C,F: E->C4 + E->F3=7 (up from 6). D to room1 with A,B: D->A1 + D->B5=6 (up from 6? same). One up, other same => this is considered unstable (increase one while other's stays same). Condition: increase one while other's stays same counts as unstable. Here D stays same (6), E increases (7) => unstable. So this grouping unstable.
-
-False ratings:
-E -> F: 3 [Manual assessment: N/A]
-
----
-
 244.txt roommates
 
 Line 28

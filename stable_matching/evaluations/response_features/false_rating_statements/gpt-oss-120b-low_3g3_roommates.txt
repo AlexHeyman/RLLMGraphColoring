@@ -1,0 +1,147 @@
+244.txt roommates
+
+Line 2
+We need check if any stable grouping exists. Likely yes? Need quick reasoning maybe impossible. Hard to compute manually. Probably there is stable grouping. Try guess grouping that maximizes mutual preferences. Look at high ratings: A likes C5, G5, I3. B likes D5, F5, G3. C likes D5, B4, E4, H4. D likes I5, B4, C3, E5? actually D rating for E is5. E likes G4, F4, C4. F likes B4, E4, I4. G likes B5, F4, I4. H likes I5, C3, G3. I likes A5, B4, G4, H5.
+
+False ratings:
+C -> B: 4 [Manual assessment: N/A]
+E -> G: 4 [Manual assessment: N/A]
+F -> I: 4 [Manual assessment: N/A]
+G -> I: 4 [Manual assessment: N/A]
+H -> I: 5 [Manual assessment: N/A]
+
+---
+
+262.txt roommates
+
+Line 2
+We need check if any stable grouping exists. Likely impossible? Hard to compute manually. Probably there is stable. Quick guess? Might be possible. I'll assume possible and give grouping maybe based on high mutual ratings: Look at high pairs: A-G 4? actually A-G=4, G-A=5 good. A-H=5, H-A=2 moderate. B-I=4, I-B=3. C-E=5, E-C=5. D-G=5, G-D=5. So maybe rooms: A-G-D (A likes G5? actually A-G=4, G-A=5, D likes G5, G-D=5, D-A=4) good. C-E-F? C-E=5, E-C=5, F-C=4, C-F=4, E-F=2, F-E=2 moderate. B-H-I? B-I=4, I-B=3, H-I=3, I-H=2, B-H=2, H-B=2. Might be stable? Not sure. I'll output that.
+
+False ratings:
+D -> G: 5 [Manual assessment: N/A]
+
+---
+
+308.txt roommates
+
+Line 4
+Consider A-F-G: A rates F5,G4; F rates A4,G4; G rates A4,F4. Good.
+
+False ratings:
+G -> F: 4 [Manual assessment: N/A]
+
+---
+
+327.txt roommates
+
+Line 2
+We need check if any stable grouping exists. Likely impossible? Hard to compute manually. Probably there is stable. Quick guess? Might be possible. I'll output a grouping maybe based on high mutual ratings: Look at clusters: A likes C5, B5 D5, etc. Try grouping A-C-E? A-C rating5, A-E2, C-E2 sum A:5+2=7, C:5+2=7, E:2+2=4. Might be okay. Need check stability but time low. Probably impossible? I'll answer Impossible.
+
+False ratings:
+A -> B: 5 [Manual assessment: N/A]
+A -> D: 5 [Manual assessment: N/A]
+
+---
+
+331.txt roommates
+
+Line 2
+We need check if any stable grouping exists. Likely impossible? Hard to compute manually. Probably there is stable. Quick guess? Might be stable exists. Provide one grouping maybe based on mutual high ratings. Let's try groups: A-C-F? A rates C2, F1 sum3 low. Maybe better: B-D-G? B rates D5, G3 sum8; D rates B2, G4 sum6; G rates B3, D4 sum7. Others: C-E-H? C rates E2, H4 sum6; E rates C4, H5 sum9; H rates C5, E1 sum6. Remaining I-A? Wait used A already. Need 9 total groups of 3. Let's try grouping: A-B-E? A rates B1, E1 sum2 low. Not good.
+
+False ratings:
+G -> B: 3 [Manual assessment: N/A]
+
+---
+
+422.txt roommates
+
+Line 2
+We need check if any stable grouping exists. Likely impossible? Hard to compute manually. Probably there is stable. Quick guess? Might be possible. I'll assume possible and give grouping maybe based on high mutual ratings. Let's try grouping: A-D-G? A rates D5, G2; D rates A4, G5; G rates A5, D1 sum: A:5+2=7, D:4+5=9, G:5+1=6. Others: B-E-H? B-E2? actually B rates E2, H1 sum3; E rates B4, H5 sum9; H rates B2, E5 sum7. I-F-C? I-F4, C1 sum5; F rates I1, C4 sum5; C rates I1, F2 sum3. Might be unstable. Hard.
+
+False ratings:
+E -> H: 5 [Manual assessment: N/A]
+
+---
+
+464.txt roommates
+
+Line 2
+We need check if any stable grouping exists. Likely impossible? Quick reasoning: small. Might be possible. Hard to compute manually. Probably there is stable grouping. Try guess grouping: maybe high mutual ratings: A-H (5), B-G (5), etc. Try rooms: A-H-E? A likes H5, E4 sum9; H likes A5, E2 sum7; E likes A4, H2 sum6. Others: B-G-F? B likes G5, F4 sum9; G likes B3, F5 sum8; F likes B1, G1 sum2 low. Might be unstable with swaps. Probably impossible? I'll answer Impossible.
+
+False ratings:
+E -> H: 2 [Manual assessment: N/A]
+
+---
+
+545.txt roommates
+
+Line 2
+We need check if any stable grouping exists. Likely impossible? Hard to compute manually. Probably there is stable. Quick guess? Might be possible. I'll assume possible and give grouping maybe based on high mutual ratings: Look at matrix symmetric? Not necessarily. Choose groups: A-F-I? A rates F4,I5 sum9; F rates A2,I5 sum7; I rates A1,F2 sum3 low. maybe not.
+
+False ratings:
+A -> F: 4 [Manual assessment: N/A]
+
+---
+
+643.txt roommates
+
+Line 2
+We need check if any stable grouping exists. Likely yes? Hard to compute manually. Probably impossible? I'd guess there is stable grouping. Quick try: maybe group high mutual ratings: A-F-G? A rates F5,G5; F rates A5,G1; G rates A3,F3. sums: A:5+5=10, F:5+1=6, G:3+3=6. Others... Hard.
+
+False ratings:
+A -> F: 5 [Manual assessment: N/A]
+
+---
+
+653.txt roommates
+
+Line 2
+We need check if any stable grouping exists. Likely impossible? Hard to compute manually. Probably there is stable. Quick guess? Might be possible. I'll assume possible and give grouping maybe based on high mutual ratings: Look at clusters: C-E-F? C rates E5, F4, E rates C5, F4, F rates C1 low. maybe not. Try grouping: A-G-H (A rates G4,H2; G rates A4,H5; H rates A4,G4) decent. B-C-I (B rates C5,I5; C rates B5,I1; I rates B1,C1) not good. Might be unstable. Probably impossible.
+
+False ratings:
+C -> I: 1 [Manual assessment: N/A]
+E -> F: 4 [Manual assessment: N/A]
+
+---
+
+715.txt roommates
+
+Line 2
+We need check if any stable grouping exists. Likely impossible? Hard to compute manually. Probably there is stable. Quick guess? Might be possible. I'll assume stable exists and give grouping maybe based on mutual high ratings: Look at high pairs: A-H 5, B-H5, C-G5, D-I5, E-H5, F-G5, G-H5, I-G5. Try rooms: A-H-B? A likes H5, B likes H5, H likes A5, B5. Good. So room1: Alan, Bob, Henry. Room2: Charlie, George, Ian (C-G5, G-I5, I-G5). Room3: Dave, Ethan, Fred (D-F1 low though). maybe swap D with someone else. But time. I'll output that grouping.
+
+False ratings:
+H -> A: 5 [Manual assessment: N/A]
+H -> B: 5 [Manual assessment: N/A]
+
+---
+
+74.txt roommates
+
+Line 2
+We need check if any stable grouping exists. Likely yes? Hard to compute manually. Probably impossible? I'd guess there is stable grouping. Quick try: maybe group high mutual ratings: H-I-F? H rates I=5, I rates H=4 good. F rates H=3, H rates F=3 moderate. Another group: A-E-D? A-E=5, E-A=5, D-A=5, A-D=1 low. Not great. Hard.
+
+False ratings:
+F -> H: 3 [Manual assessment: N/A]
+
+---
+
+814.txt roommates
+
+Line 2
+We need check if any stable grouping exists. Likely impossible? Hard to compute manually. Probably there is stable. Quick guess? Might be stable exists. Provide one grouping maybe based on mutual high ratings. Let's try groups: A-C-F? A rates C5, F4 sum9. C rates A4,F3 sum7. F rates A1,C3 sum4 total low. maybe not.
+
+False ratings:
+C -> F: 3 [Manual assessment: N/A]
+
+---
+
+912.txt roommates
+
+Line 2
+We need check if any stable grouping exists. Likely yes? Hard to compute manually. Probably impossible? I'd guess there is stable grouping. Quick try: maybe group high mutual ratings: H with G and I? H rates G5, I4; G rates H5, I5; I rates G5, H1. Not great. Might be complex. Probably impossible? I'll answer Impossible.
+
+False ratings:
+H -> G: 5 [Manual assessment: N/A]
+
+---
+

@@ -699,16 +699,6 @@ C -> F: 4 [Manual assessment: N/A]
 
 ---
 
-282.txt roommates
-
-Line 1296
-- C: R(C,B)=4 + R(C,F)=5 = 9.
-
-False ratings:
-C -> F: 5 [Manual assessment: N/A]
-
----
-
 285.txt roommates
 
 Line 441
@@ -2547,6 +2537,16 @@ Line 321
 
 False ratings:
 E -> F: 4 [Manual assessment: N/A]
+
+---
+
+992.txt roommates
+
+Line 690
+- New satisfaction_D = rating D->E + rating D->F = 4 + 4 = 8.
+
+False ratings:
+D -> E: 4 [Manual assessment: N/A]
 
 ---
 

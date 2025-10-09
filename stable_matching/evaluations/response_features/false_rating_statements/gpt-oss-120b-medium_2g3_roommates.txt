@@ -966,16 +966,6 @@ A -> C: 2 [Manual assessment: N/A]
 
 ---
 
-395.txt roommates
-
-Line 190
-A-F: A' with C,D: A->C 2 + A->D 1 =3 <6. F' with B,E: F->B 1 + F->E 1 =2 <5 (decrease). Both decrease, not unstable.
-
-False ratings:
-F -> E: 1 [Manual assessment: N/A]
-
----
-
 403.txt roommates
 
 Line 178
@@ -1010,48 +1000,29 @@ Line 215
 False ratings:
 D -> C: 3 [Manual assessment: N/A]
 
-Line 257
-E-C3 + E-F5 =8 (if D leaves)
-
-False ratings:
-E -> F: 5 [Manual assessment: N/A]
-
-Line 300
-- C's new roommates are B and E (since A leaves). C-B5 + C-E3 =8. Original C=4, increase.
-
-False ratings:
-C -> E: 3 [Manual assessment: N/A]
-
 Line 315
 - E: C4 + D2 =6
 
 False ratings:
 E -> C: 4 [Manual assessment: N/A]
 
-Line 363
-- with A,F (if B leaves): D-A5 + D-F2 =7
+Line 393
+- E: B1 + F5 =6
 
 False ratings:
-D -> F: 2 [Manual assessment: N/A]
+E -> F: 5 [Manual assessment: N/A]
 
-Line 447
-- with A,C (if D leaves): F-A2 + F-C1 =3
+Line 449
+- with C,D (if A leaves): F-C1 + F-D3 =4
 
 False ratings:
 F -> C: 1 [Manual assessment: N/A]
-
-Line 448
-- with A,D (if C leaves): F-A2 + F-D3 =5
-
-False ratings:
-F -> D: 3 [Manual assessment: N/A]
 
 Line 515
 A with B: A decrease, B increase? B new roommates C and D (since A leaves) => B-C5 + B-D3 =8 >5 increase, A decrease.
 
 False ratings:
 B -> C: 5 [Manual assessment: N/A]
-B -> D: 3 [Manual assessment: N/A]
 
 ---
 
@@ -1874,16 +1845,6 @@ E -> C: 5 [Manual assessment: N/A]
 
 ---
 
-623.txt roommates
-
-Line 186
-- C new group with A,B,E? Wait after swap, C joins group1 (A,B,E) with A,B (since E stays). Actually group1 after swap: A,B,E originally; B leaves? No B is swapping with C, so B leaves group1, C joins. So new group1 members: A, E, C. B's new roommates would be A and E? Wait B moves to group2 (C,D,F) with D,F. So B's new roommates D,F as above. C moves to group1 with A,E. So C's new satisfaction = C->A5 + C->E4 =9 (orig 7) increase. B decreases, not unstable.
-
-False ratings:
-C -> E: 4 [Manual assessment: N/A]
-
----
-
 634.txt roommates
 
 Line 90
@@ -1920,37 +1881,23 @@ B: A4 + E1 =5
 False ratings:
 B -> E: 1 [Manual assessment: N/A]
 
-Line 185
-B with D: New B with C,F => B->C4 + B->F2 =6 >5. New D would be with A,E (since B removed) => D->A5 + D->E5 =10 > original D=6. Both increase => unstable. So grouping 3 unstable.
-
-False ratings:
-D -> E: 5 [Manual assessment: N/A]
-
 Line 259
 Check A with B: Original A=4. New A with E,F => A->E5 + A->F4 =9 >4. New B would be with C,D (since A removed) => B->C5 + B->D3 =8 > original B=7. Both increase => unstable.
 
 False ratings:
 B -> C: 5 [Manual assessment: N/A]
-B -> D: 3 [Manual assessment: N/A]
 
 Line 354
 A with C: New A with B,F => 4+4=8 >7. New C would be with D,E (since A removed) => C->D5 + C->E3 =8 > original C=6. Both increase => unstable.
 
 False ratings:
 C -> D: 5 [Manual assessment: N/A]
-C -> E: 3 [Manual assessment: N/A]
 
-Line 387
-A with C: New A with B,E => 4+5=9 >6. New C would be with D,F => C->D5 + C->F3 =8 < original C=10 (decrease). Not good.
-
-False ratings:
-C -> F: 3 [Manual assessment: N/A]
-
-Line 389
-A with E: New A with B,C => 4+2=6 = original (no increase). New E would be with D,F (since A removed) => E->D5 + E->F5 =10 > original E=4. Increase for E, A same => this qualifies as unstable? Definition: increase one while other's stays same. Yes, that's unstable. So grouping 9 unstable.
+Line 385
+Check A with B: Original A=6. New A with C,E => A->C2 + A->E5 =7 >6. New B would be with D,F (since A removed) => B->D3 + B->F2 =5 < original B=9 (decrease). Not both non-decrease.
 
 False ratings:
-E -> F: 5 [Manual assessment: N/A]
+B -> D: 3 [Manual assessment: N/A]
 
 ---
 
@@ -2067,12 +2014,6 @@ New room for A: with D and E (since C leaves). A sat = A->D4 + A->E5 =9 (increas
 
 False ratings:
 C -> B: 5 [Manual assessment: N/A]
-
-Line 667
-New room for D: with B and F. D sat = D->B3 + D->F4 =7 (increase from 6). New room for C: with A and E. C sat = C->A3 + C->E4 =7 (original C sat 7, unchanged). Increase one (D) while C unchanged => unstable.
-
-False ratings:
-C -> E: 4 [Manual assessment: N/A]
 
 Line 735
 New room for A: with C and E (since B leaves). A sat = A->C4 + A->E5 =9 (increase from 5). New room for B: with D and F. B sat = B->D3 + B->F5 =8 (original B sat 9, decrease). Since B decreased, not unstable.
@@ -2317,22 +2258,6 @@ B: A4 + E5 =9
 
 False ratings:
 B -> E: 5 [Manual assessment: N/A]
-
----
-
-75.txt roommates
-
-Line 178
-B with E: E's other members C,D. B new sat = B->C=1 + B->D=5 =6 >5 increase. E new sat = E->A=2 + E->F=5 =7 = original? Wait original E sat=7 (with C,D). New E sat = 2+5=7 same. So B increased, E unchanged => instability. So grouping 4 unstable.
-
-False ratings:
-E -> F: 5 [Manual assessment: N/A]
-
-Line 260
-A with E: E's other members B,D. A new sat = A->B=2 + A->D=1 =3 <4. E new sat = E->A=2 + E->C=2 =4 <7 decrease.
-
-False ratings:
-E -> C: 2 [Manual assessment: N/A]
 
 ---
 

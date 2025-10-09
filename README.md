@@ -4,7 +4,7 @@ This repository hosts the code used to run the experiments in the paper "Reasoni
 
 ## Requirements
 
-This codebase was developed for Python 3.11.7, with the packages Anthropic 0.49.0, Fireworks AI 0.15.3, Google Generative AI 0.7.2, and OpenAI 1.70.0 used for interfacing with RLLMs (see `models.py`), and SciPy 1.16.0 and Matplotlib 3.9.2 used for generating plots (see `plot_problem_set.py` and `summarize.py` in both the `graph_coloring` and `stable_matching` directories). Earlier or later versions of the requirements may or may not work.
+This codebase was developed for Python 3.11.7, with the packages Anthropic 0.49.0, Fireworks AI 0.15.3, Google Generative AI 0.7.2, and OpenAI 1.70.0 used for interfacing with RLLMs (see `models.py`), NumPy 2.3.1 used for managing stable matching preference matrices, and SciPy 1.16.0 and Matplotlib 3.9.2 used for generating plots (see `plot_problem_set.py` and `summarize.py` in both the `graph_coloring` and `stable_matching` directories). Earlier or later versions of the requirements may or may not work.
 
 ## Usage
 

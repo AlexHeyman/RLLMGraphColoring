@@ -112,10 +112,7 @@ for problem_set in problem_sets:
       prefs_str = preference_matrix_to_string(prefs, names)
       example_str = '\n'.join('-'.join(names[k*i:k*(i+1)]) for i in range(n))
       
-      # The last "n" on this line should logically be "k - 1"; this is why the
-      # 3g3 prompts we generated for our paper erroneously talked about the sum
-      # of a student's ratings for "their 3 roommates".
-      prompt = roommates_template % (nk, names_str, n, k, prefs_str, n,
+      prompt = roommates_template % (nk, names_str, n, k, prefs_str, k - 1,
                                      example_str)
       frame_file.write(prompt)
       

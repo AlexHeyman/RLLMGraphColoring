@@ -15,42 +15,42 @@ False solvable: 53
 Wrong grouping: 37
 False unsolvable: 223
 False rating frequencies (top 10 at most):
-FB: 338/4747 (0.071)
-ED: 302/4747 (0.064)
-CB: 261/4747 (0.055)
-EF: 259/4747 (0.055)
-EB: 256/4747 (0.054)
-EC: 239/4747 (0.050)
-FD: 235/4747 (0.050)
-CF: 233/4747 (0.049)
-CD: 218/4747 (0.046)
-FC: 206/4747 (0.043)
-Mean false rating index: 2.763 (vs. 2.500, t=15.658, p=0.000000)
+FB: 338/4746 (0.071)
+ED: 302/4746 (0.064)
+CB: 261/4746 (0.055)
+EF: 259/4746 (0.055)
+EB: 256/4746 (0.054)
+EC: 239/4746 (0.050)
+FD: 235/4746 (0.050)
+CF: 233/4746 (0.049)
+CD: 218/4746 (0.046)
+FC: 206/4746 (0.043)
+Mean false rating index: 2.763 (vs. 2.500, t=15.671, p=0.000000)
 
 - Problem set: 3 groups of 3 -
 
 Frame: Roommates
 Problems: 1000 (616 solvable)
 Trials: 1000
-With false ratings: 819
-Incorrect: 584
-+ including false ratings: 479
-+ correct under false ratings: 55
-False solvable: 54
-Wrong grouping: 74
-False unsolvable: 456
+With false ratings: 857
+Incorrect: 578
++ including false ratings: 498
++ correct under false ratings: 59
+False solvable: 57
+Wrong grouping: 78
+False unsolvable: 443
 False rating frequencies (top 10 at most):
-FG: 268/4991 (0.054)
-EG: 170/4991 (0.034)
-EH: 168/4991 (0.034)
-DG: 127/4991 (0.025)
-CG: 126/4991 (0.025)
-IB: 119/4991 (0.024)
-IF: 118/4991 (0.024)
-CF: 114/4991 (0.023)
-IC: 110/4991 (0.022)
-FH: 102/4991 (0.020)
-Mean false rating index: 4.345 (vs. 4.000, t=13.902, p=0.000000)
+FG: 286/5304 (0.054)
+EH: 190/5304 (0.036)
+EG: 182/5304 (0.034)
+CG: 158/5304 (0.030)
+IB: 146/5304 (0.028)
+DG: 144/5304 (0.027)
+IF: 130/5304 (0.025)
+FI: 124/5304 (0.023)
+CF: 121/5304 (0.023)
+FH: 117/5304 (0.022)
+Mean false rating index: 4.405 (vs. 4.000, t=16.941, p=0.000000)
 
 ---
 Model: Grok 3 Mini Beta (low)
@@ -86,25 +86,25 @@ Mean false rating index: 2.818 (vs. 2.500, t=6.347, p=0.000000)
 Frame: Roommates
 Problems: 1000 (616 solvable)
 Trials: 1000
-With false ratings: 827
-Incorrect: 754
-+ including false ratings: 625
-+ correct under false ratings: 43
-False solvable: 285
-Wrong grouping: 375
-False unsolvable: 94
+With false ratings: 852
+Incorrect: 752
++ including false ratings: 639
++ correct under false ratings: 49
+False solvable: 286
+Wrong grouping: 378
+False unsolvable: 88
 False rating frequencies (top 10 at most):
-DB: 106/2970 (0.036)
-BA: 103/2970 (0.035)
-EB: 100/2970 (0.034)
-IC: 92/2970 (0.031)
-IE: 83/2970 (0.028)
-DG: 81/2970 (0.027)
-IB: 80/2970 (0.027)
-FH: 78/2970 (0.026)
-EH: 78/2970 (0.026)
-CD: 73/2970 (0.025)
-Mean false rating index: 4.117 (vs. 4.000, t=3.564, p=0.000368)
+EB: 129/3040 (0.042)
+DB: 101/3040 (0.033)
+IB: 98/3040 (0.032)
+DG: 90/3040 (0.030)
+IE: 89/3040 (0.029)
+IC: 89/3040 (0.029)
+IG: 85/3040 (0.028)
+EG: 85/3040 (0.028)
+FB: 77/3040 (0.025)
+FC: 66/3040 (0.022)
+Mean false rating index: 4.105 (vs. 4.000, t=3.305, p=0.000955)
 
 ---
 Model: Grok 3 Mini Beta (high)
@@ -123,42 +123,42 @@ False solvable: 14
 Wrong grouping: 5
 False unsolvable: 1
 False rating frequencies (top 10 at most):
-AC: 26/286 (0.091)
-AB: 26/286 (0.091)
-AD: 23/286 (0.080)
-DF: 21/286 (0.073)
-AF: 21/286 (0.073)
-AE: 18/286 (0.063)
-FE: 16/286 (0.056)
-FD: 13/286 (0.045)
-EB: 12/286 (0.042)
-FC: 11/286 (0.038)
-Mean false rating index: 2.365 (vs. 2.500, t=-1.754, p=0.080031)
+AC: 26/285 (0.091)
+AB: 26/285 (0.091)
+AD: 23/285 (0.081)
+DF: 21/285 (0.074)
+AF: 20/285 (0.070)
+AE: 18/285 (0.063)
+FE: 16/285 (0.056)
+FD: 13/285 (0.046)
+EB: 12/285 (0.042)
+FC: 11/285 (0.039)
+Mean false rating index: 2.365 (vs. 2.500, t=-1.759, p=0.079054)
 
 - Problem set: 3 groups of 3 -
 
 Frame: Roommates
 Problems: 1000 (616 solvable)
 Trials: 1000
-With false ratings: 779
-Incorrect: 537
-+ including false ratings: 437
-+ correct under false ratings: 46
+With false ratings: 845
+Incorrect: 544
++ including false ratings: 480
++ correct under false ratings: 69
 False solvable: 263
-Wrong grouping: 231
-False unsolvable: 43
+Wrong grouping: 232
+False unsolvable: 49
 False rating frequencies (top 10 at most):
-IE: 114/3014 (0.038)
-FH: 85/3014 (0.028)
-GF: 78/3014 (0.026)
-CA: 78/3014 (0.026)
-DG: 71/3014 (0.024)
-AE: 66/3014 (0.022)
-FI: 66/3014 (0.022)
-DB: 61/3014 (0.020)
-AC: 58/3014 (0.019)
-EH: 58/3014 (0.019)
-Mean false rating index: 3.979 (vs. 4.000, t=-0.632, p=0.527597)
+IE: 124/3601 (0.034)
+CD: 102/3601 (0.028)
+FH: 92/3601 (0.026)
+CH: 87/3601 (0.024)
+IB: 86/3601 (0.024)
+DG: 81/3601 (0.022)
+CB: 75/3601 (0.021)
+AB: 73/3601 (0.020)
+DH: 73/3601 (0.020)
+DB: 73/3601 (0.020)
+Mean false rating index: 3.902 (vs. 4.000, t=-3.193, p=0.001415)
 
 ---
 Model: gpt-oss-120b (medium)
@@ -169,50 +169,50 @@ Model: gpt-oss-120b (medium)
 Frame: Roommates
 Problems: 1000 (712 solvable)
 Trials: 1000
-With false ratings: 173
+With false ratings: 170
 Incorrect: 144
-+ including false ratings: 43
++ including false ratings: 42
 + correct under false ratings: 14
 False solvable: 63
 Wrong grouping: 34
 False unsolvable: 47
 False rating frequencies (top 10 at most):
-CF: 54/418 (0.129)
-EF: 42/418 (0.100)
-CE: 40/418 (0.096)
-DE: 32/418 (0.077)
-BE: 30/418 (0.072)
-FE: 26/418 (0.062)
-FD: 21/418 (0.050)
-ED: 21/418 (0.050)
-DC: 17/418 (0.041)
-DF: 17/418 (0.041)
-Mean false rating index: 3.200 (vs. 2.500, t=14.173, p=0.000000)
+CF: 53/405 (0.131)
+EF: 40/405 (0.099)
+CE: 36/405 (0.089)
+DE: 31/405 (0.077)
+BE: 30/405 (0.074)
+FE: 25/405 (0.062)
+ED: 21/405 (0.052)
+FD: 20/405 (0.049)
+DC: 17/405 (0.042)
+CB: 17/405 (0.042)
+Mean false rating index: 3.190 (vs. 2.500, t=13.700, p=0.000000)
 
 - Problem set: 3 groups of 3 -
 
 Frame: Roommates
 Problems: 1000 (616 solvable)
 Trials: 1000
-With false ratings: 512
-Incorrect: 608
-+ including false ratings: 309
-+ correct under false ratings: 34
-False solvable: 47
-Wrong grouping: 55
-False unsolvable: 506
+With false ratings: 550
+Incorrect: 571
++ including false ratings: 313
++ correct under false ratings: 46
+False solvable: 57
+Wrong grouping: 70
+False unsolvable: 444
 False rating frequencies (top 10 at most):
-EI: 67/1487 (0.045)
-FG: 67/1487 (0.045)
-GF: 62/1487 (0.042)
-CF: 59/1487 (0.040)
-HG: 55/1487 (0.037)
-FI: 51/1487 (0.034)
-FH: 45/1487 (0.030)
-HI: 42/1487 (0.028)
-EH: 42/1487 (0.028)
-EF: 41/1487 (0.028)
-Mean false rating index: 4.797 (vs. 4.000, t=18.889, p=0.000000)
+GF: 90/1933 (0.047)
+EI: 73/1933 (0.038)
+FI: 62/1933 (0.032)
+FH: 59/1933 (0.031)
+FG: 57/1933 (0.029)
+CF: 56/1933 (0.029)
+HI: 54/1933 (0.028)
+CG: 53/1933 (0.027)
+GI: 52/1933 (0.027)
+IH: 52/1933 (0.027)
+Mean false rating index: 4.732 (vs. 4.000, t=19.473, p=0.000000)
 
 ---
 Model: gpt-oss-120b (high)
@@ -231,40 +231,40 @@ False solvable: 14
 Wrong grouping: 5
 False unsolvable: 10
 False rating frequencies (top 10 at most):
-CF: 77/323 (0.238)
+CF: 76/323 (0.235)
 CE: 52/323 (0.161)
 EF: 36/323 (0.111)
 DF: 32/323 (0.099)
-DE: 28/323 (0.087)
+DE: 29/323 (0.090)
 DC: 24/323 (0.074)
 FD: 14/323 (0.043)
 ED: 10/323 (0.031)
 FC: 10/323 (0.031)
 EC: 9/323 (0.028)
-Mean false rating index: 3.410 (vs. 2.500, t=18.027, p=0.000000)
+Mean false rating index: 3.410 (vs. 2.500, t=18.061, p=0.000000)
 
 - Problem set: 3 groups of 3 -
 
 Frame: Roommates
 Problems: 1000 (616 solvable)
 Trials: 1000
-With false ratings: 692
-Incorrect: 403
-+ including false ratings: 282
-+ correct under false ratings: 78
-False solvable: 115
-Wrong grouping: 118
-False unsolvable: 170
+With false ratings: 673
+Incorrect: 424
++ including false ratings: 280
++ correct under false ratings: 89
+False solvable: 128
+Wrong grouping: 105
+False unsolvable: 191
 False rating frequencies (top 10 at most):
-GF: 161/2248 (0.072)
-EI: 114/2248 (0.051)
-GE: 105/2248 (0.047)
-HI: 101/2248 (0.045)
-GH: 98/2248 (0.044)
-EH: 87/2248 (0.039)
-FG: 84/2248 (0.037)
-FH: 78/2248 (0.035)
-IH: 73/2248 (0.032)
-EG: 71/2248 (0.032)
-Mean false rating index: 5.074 (vs. 4.000, t=34.794, p=0.000000)
+GF: 163/2067 (0.079)
+GE: 131/2067 (0.063)
+HI: 125/2067 (0.060)
+EI: 112/2067 (0.054)
+GH: 91/2067 (0.044)
+FH: 87/2067 (0.042)
+EG: 72/2067 (0.035)
+EH: 71/2067 (0.034)
+EF: 69/2067 (0.033)
+FI: 63/2067 (0.030)
+Mean false rating index: 5.172 (vs. 4.000, t=37.206, p=0.000000)
 

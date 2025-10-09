@@ -1733,7 +1733,6 @@ False ratings:
 A -> C: 2 [Manual assessment: N/A]
 A -> D: 1 [Manual assessment: N/A]
 A -> E: 4 [Manual assessment: N/A]
-A -> F: 4 [Manual assessment: N/A]
 
 ---
 
